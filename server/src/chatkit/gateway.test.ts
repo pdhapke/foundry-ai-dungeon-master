@@ -176,7 +176,7 @@ void describe("ChatKit gateway (mock sidecar)", () => {
       }),
     )
       .post("/chatkit")
-      .send({});
+      .send({ type: "threads.list", params: {} });
     assert.equal(response.status, 503);
     assert.doesNotMatch(response.text, /server-secret/);
   });
@@ -309,4 +309,98 @@ void describe("ChatKit bridge lifecycle (mock sidecar, real HTTP)", () => {
     assert.equal(runSignal?.aborted, true);
     assert.equal(releases, 1);
   });
+});
+
+void it("authenticated HTTP ingress serializes streams and rejects replay across multiple clients (mock sidecar)", async () => {
+  const { DatabaseSync } = await import("node:sqlite");
+  const { ChatKitTurns } = await import("./turns.js");
+  const db = new DatabaseSync(":memory:");
+  let calls = 0;
+  let end!: () => void;
+  let started!: () => void;
+  const ready = new Promise<void>((resolve) => {
+    started = resolve;
+  });
+  const app = fixture({
+    turns: new ChatKitTurns(db),
+    fetch: () => {
+      calls++;
+      if (calls > 1) return Promise.resolve(new Response("data: second\n\n"));
+      return Promise.resolve(
+        new Response(
+          new ReadableStream<Uint8Array>({
+            start(controller) {
+              end = () => controller.close();
+              controller.enqueue(new TextEncoder().encode("data: first\n\n"));
+              started();
+            },
+          }),
+          { headers: { "content-type": "text/event-stream" } },
+        ),
+      );
+    },
+  });
+  const first = request(app)
+    .post("/chatkit")
+    .set("x-ai-dm-event", "event1")
+    .send({ type: "threads.add_user_message", params: { thread_id: "t" } })
+    .then((response) => response);
+  await ready;
+  const second = request(app)
+    .post("/chatkit")
+    .set("x-ai-dm-event", "event2")
+    .send({
+      type: "threads.custom_action",
+      params: { thread_id: "t", action: { payload: { requestId: "event2" } } },
+    })
+    .then((response) => response);
+  await new Promise((resolve) => setTimeout(resolve, 20));
+  assert.equal(calls, 1);
+  end();
+  assert.equal((await first).status, 200);
+  assert.equal((await second).status, 200);
+  assert.equal(calls, 2);
+  const replay = await request(app)
+    .post("/chatkit")
+    .set("x-ai-dm-event", "event1")
+    .send({ type: "threads.add_user_message", params: { thread_id: "t" } });
+  assert.equal(replay.status, 409);
+  assert.equal(calls, 2);
+  db.close();
+});
+
+void it("fails closed on unreviewed SDK inference before credentials/capability/provider dispatch", async () => {
+  let credentials = 0,
+    capabilities = 0,
+    dispatched = 0;
+  const app = fixture({
+    resolveAuthorization: () => {
+      credentials++;
+      return Promise.resolve({ apiKey: "mock", model: "mock" });
+    },
+    beginReadRun: () => {
+      capabilities++;
+      return { token: "mock", release() {} };
+    },
+    fetch: () => {
+      dispatched++;
+      return Promise.resolve(new Response("mock"));
+    },
+  });
+  for (const type of [
+    "threads.add_client_tool_output",
+    "threads.add_structured_input",
+    "threads.sync_custom_action",
+    "input.transcribe",
+    "attachments.create",
+    "future.inference",
+    null,
+  ]) {
+    const response = await request(app).post("/chatkit").send({ type, params: {} });
+    assert.equal(response.status, 400);
+    assert.match(response.text, /Unsupported ChatKit operation/);
+  }
+  assert.equal(credentials, 0);
+  assert.equal(capabilities, 0);
+  assert.equal(dispatched, 0);
 });

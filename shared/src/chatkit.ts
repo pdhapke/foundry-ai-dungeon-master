@@ -22,3 +22,25 @@ export const AI_DM_CHATKIT_HEADERS = {
   version: "x-ai-dm-version",
   browserSession: "x-ai-dm-browser-session",
 } as const;
+
+/** Reviewed SDK operations. New SDK routes fail closed until their effects are reviewed. */
+export const CHATKIT_INFERENCE_OPERATIONS: readonly string[] = [
+  "threads.create",
+  "threads.add_user_message",
+  "threads.custom_action",
+  "threads.retry_after_item",
+];
+export const CHATKIT_STORAGE_OPERATIONS: readonly string[] = [
+  "threads.get_by_id",
+  "threads.list",
+  "items.list",
+  "items.feedback",
+  "threads.update",
+  "threads.delete",
+];
+export function supportedChatKitOperation(value: unknown): value is string {
+  return (
+    typeof value === "string" &&
+    (CHATKIT_INFERENCE_OPERATIONS.includes(value) || CHATKIT_STORAGE_OPERATIONS.includes(value))
+  );
+}

@@ -274,13 +274,17 @@ def create_app(store=None, server=None, secret=None):
         if not isinstance(body, dict) or not isinstance(body.get("params", {}), dict):
             raise HTTPException(400, "Invalid ChatKit request")
         operation, params = body.get("type"), body.get("params", {})
+        allowed_inference = {"threads.create", "threads.add_user_message", "threads.custom_action", "threads.retry_after_item"}
+        allowed_storage = {"threads.get_by_id", "threads.list", "items.list", "items.feedback", "threads.update", "threads.delete"}
+        if not isinstance(operation, str) or operation not in allowed_inference | allowed_storage:
+            raise HTTPException(400, "Unsupported ChatKit operation")
         thread_id = params.get("thread_id")
         if thread_id:
             try:
                 await store.load_thread(thread_id, context)
             except NotFoundError:
                 raise HTTPException(404, "Conversation not found") from None
-        inference = operation in {"threads.create", "threads.add_user_message", "threads.custom_action", "threads.retry_after_item"}
+        inference = operation in allowed_inference
         key = (store.owner(context), thread_id or "new")
         request_id = None
         if operation == "threads.custom_action":

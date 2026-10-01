@@ -7,6 +7,7 @@ void describe("ChatKit context and trigger boundary (mocked Foundry)", () => {
     assert.throws(() => boundedContext({ controlledTokenIds: Array(21).fill("token") }), /20/);
     assert.throws(() => boundedContext({ sceneName: "x".repeat(201) }), /long/);
     assert.throws(() => boundedContext({ round: Number.NaN }), /combat/);
+    assert.deepEqual(boundedContext({ round: -1, turn: -1 }), {});
     assert.deepEqual(
       boundedContext({ sceneId: "scene", controlledTokenIds: ["token", "token"], round: 2 }),
       { sceneId: "scene", controlledTokenIds: ["token"], round: 2 },

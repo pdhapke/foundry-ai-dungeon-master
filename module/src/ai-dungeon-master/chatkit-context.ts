@@ -53,7 +53,7 @@ export function boundedContext(value: unknown): ChatKitContext {
     if (item !== undefined) {
       if (typeof item !== "number" || !Number.isSafeInteger(item) || item < -1 || item > 100000)
         throw new Error("Invalid combat value.");
-      output[key] = item;
+      if (item >= 0) output[key] = item;
     }
   }
   return output;

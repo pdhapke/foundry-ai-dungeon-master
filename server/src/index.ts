@@ -1,3 +1,4 @@
+import { ChatKitTurns } from "./chatkit/turns.js";
 import { createServer } from "node:http";
 import { randomBytes, randomUUID } from "node:crypto";
 import { spawn } from "node:child_process";
@@ -231,6 +232,7 @@ async function main(): Promise<void> {
   const app = createAiDmApp({
     ...(readTools ? { chatkitReadHandler: readTools.handler } : {}),
     chatkitHandler: createChatKitGateway({
+      turns: new ChatKitTurns(database.connection),
       sidecarUrl: `http://127.0.0.1:${config.chatkitPort}`,
       internalSecret: chatkitSecret,
       ...(nativeActions

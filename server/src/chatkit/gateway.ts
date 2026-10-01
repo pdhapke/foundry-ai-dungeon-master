@@ -1,7 +1,9 @@
 import type { RequestHandler } from "express";
 import type { AiDmAuthenticatedIdentity } from "@foundry-ai-dungeon-master/shared";
+import { TurnConflict, type ChatKitTurns } from "./turns.js";
 import { bounded } from "./read-tools.js";
 import type { AiDmJsonValue } from "@foundry-ai-dungeon-master/shared";
+import { supportedChatKitOperation } from "@foundry-ai-dungeon-master/shared";
 
 const diagnostics = {
   requests: 0,
@@ -18,6 +20,7 @@ function stage(value: string, errorCode: string | null = null): void {
 }
 
 export interface ChatKitGatewayOptions {
+  turns?: ChatKitTurns;
   sidecarUrl: string;
   internalSecret: string;
   allowedOrigins: readonly string[];
@@ -73,7 +76,7 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
       response.set({
         "Access-Control-Allow-Methods": "POST, OPTIONS",
         "Access-Control-Allow-Headers":
-          "content-type, chatkit-frame-instance-id, x-ai-dm-session, x-ai-dm-client, x-ai-dm-version, x-ai-dm-browser-session",
+          "content-type, chatkit-frame-instance-id, x-ai-dm-session, x-ai-dm-client, x-ai-dm-version, x-ai-dm-browser-session, x-ai-dm-event",
       });
       response.status(204).end();
       return;
@@ -122,6 +125,7 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
       return;
     }
     if (abort.signal.aborted) return;
+    let finishTurn: (() => void) | undefined;
     let readRun: { token: string; release(): void } | undefined;
     const runTimeout = setTimeout(() => abort.abort(), options.runTimeoutMs ?? 300_000);
     try {
@@ -133,6 +137,20 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
         });
         return;
       }
+      if (
+        !request.path.endsWith("/thread") &&
+        !supportedChatKitOperation((request.body as { type?: unknown } | null)?.type)
+      ) {
+        response.status(400).json({ error: "Unsupported ChatKit operation." });
+        return;
+      }
+      finishTurn = await options.turns?.enter(
+        identity,
+        request.body,
+        abort.signal,
+        request.get("x-ai-dm-event"),
+      );
+      await bounded(options.authorize(identity, abort.signal), abort.signal);
       stage("resolving-authorization");
       const credentials = await bounded(options.resolveAuthorization(identity), abort.signal);
       if (!request.path.endsWith("/thread"))
@@ -207,7 +225,11 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
       }
       response.end();
       if (upstream.ok) stage("completed");
-    } catch {
+    } catch (error) {
+      if (error instanceof TurnConflict) {
+        response.status(409).json({ error: error.message });
+        return;
+      }
       if (abort.signal.aborted) {
         if (!response.destroyed && !response.headersSent) {
           stage("failed", "SIDECAR_TIMEOUT");
@@ -230,6 +252,7 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
           .json({ error: "ChatKit service or authorized OpenAI credentials are unavailable." });
       else response.end();
     } finally {
+      finishTurn?.();
       readRun?.release();
       clearTimeout(runTimeout);
       request.off("aborted", disconnected);

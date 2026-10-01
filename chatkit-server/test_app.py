@@ -261,6 +261,17 @@ class ProtocolTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertNotIn("mock-key", response.text)
 
+    def test_unreviewed_sdk_inference_routes_fail_before_process(self):
+        class ForbiddenServer:
+            async def process(self, raw, context):
+                raise AssertionError("Unsupported route reached ChatKit process")
+        self.client.close()
+        self.client = TestClient(create_app(self.store, ForbiddenServer(), "secret"))
+        for operation in ("threads.add_client_tool_output", "threads.add_structured_input", "threads.sync_custom_action", "input.transcribe", "attachments.create", "future.inference", None):
+            response = self.client.post("/chatkit", headers=self.headers, json={"type": operation, "params": {}})
+            self.assertEqual(response.status_code, 400, operation)
+            self.assertIn("Unsupported ChatKit operation", response.text)
+
     def test_action_stream_and_duplicate_trigger(self):
         thread = self.client.post("/chatkit/thread", headers=self.headers).json()["threadId"]
         body = {"type": "threads.custom_action", "params": {"thread_id": thread, "action": {"type": "foundry.context-response", "payload": {"requestId": "event1", "prompt": "Describe", "context": {"sceneName": "Hall"}}}}}

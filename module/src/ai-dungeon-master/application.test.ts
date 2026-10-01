@@ -94,11 +94,36 @@ void it("mounted ChatKit uses one owner-scoped thread for actions, aborts stream
   await app.trigger({ prompt: "Duplicate", requestId: "first" });
   await app.trigger({ prompt: "Second", requestId: "second" });
   assert.equal(AiDungeonMasterApplication.open(), app);
-  assert.equal(renderCount, 2, "triggers and repeated opens preserve the already mounted frame");
+  assert.equal(renderCount, 1, "queued triggers wait for initial mount and preserve its frame");
   assert.equal(fetches.length, 1);
   assert.equal(components.length, 1);
   assert.equal(components[0]?.actions.length, 2);
   assert.equal(components[0]?.thread, "thread_one");
+  for (const type of [
+    "threads.add_client_tool_output",
+    "threads.add_structured_input",
+    "threads.sync_custom_action",
+    "future.inference",
+  ]) {
+    await assert.rejects(
+      app.authenticatedFetch("http://127.0.0.1:3940/chatkit", {
+        method: "POST",
+        headers: { "x-ai-dm-event": "caller-id" },
+        body: JSON.stringify({ type, params: {} }),
+      }),
+      /Unsupported ChatKit operation/,
+    );
+  }
+  assert.equal(fetches.length, 1, "unreviewed SDK routes never dispatch from browser");
+  await Promise.all([
+    app.trigger({ prompt: "Queued one", requestId: "queue-one" }),
+    app.trigger({ prompt: "Queued two", requestId: "queue-two" }),
+  ]);
+  assert.equal(
+    components[0]?.actions.length,
+    4,
+    "simultaneous custom actions run in order without remount",
+  );
   assert.equal(new Headers(fetches[0]?.init?.headers).get("x-ai-dm-session"), "memory-only");
   assert.equal(
     storage.get("foundry-ai-dungeon-master.chatkit.thread.world-one.gm-one"),

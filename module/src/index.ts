@@ -24,7 +24,7 @@ Hooks.once("init", () => {
   });
   game.settings.register(MODULE_ID, "automaticEventsEnabled", {
     name: "Enable AI Dungeon Master automatic events",
-    hint: "Enable reviewed combat, door, Region, Item, and Scene event adapters. Movement remains disabled.",
+    hint: "Enable door-open, combat-turn and explicitly keyed area entry signals. Raw movement does not trigger turns.",
     scope: "world",
     config: true,
     type: Boolean,

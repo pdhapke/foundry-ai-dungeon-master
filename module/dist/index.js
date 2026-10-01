@@ -4,204 +4,6 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 
-// src/ai-dungeon-master/store.ts
-var AiDmClientStore = class {
-  #state = {
-    connection: "disconnected",
-    connectionMessage: "AI Dungeon Master server is disconnected.",
-    authenticatedLane: null,
-    messages: [],
-    outputStreams: /* @__PURE__ */ new Map(),
-    approvals: /* @__PURE__ */ new Map(),
-    runStatuses: /* @__PURE__ */ new Map(),
-    runFailures: /* @__PURE__ */ new Map(),
-    activeThreadId: null,
-    lastRecipientSequence: 0,
-    chatGpt: {
-      state: "signed-out",
-      identityConnected: false,
-      planUsageAuthorized: false,
-      modelDiscoveryState: "not-authorized",
-      availableModels: [],
-      selectedModel: null,
-      modelSelectionPending: false
-    },
-    allowAllPlayerRequests: false,
-    playerRequests: []
-  };
-  #listeners = /* @__PURE__ */ new Set();
-  #messageIds = /* @__PURE__ */ new Set();
-  get state() {
-    return this.#state;
-  }
-  subscribe(listener) {
-    this.#listeners.add(listener);
-    listener(this.#state);
-    return () => this.#listeners.delete(listener);
-  }
-  setConnection(connection, connectionMessage) {
-    this.#replace({
-      ...this.#state,
-      connection,
-      connectionMessage,
-      ...connection === "connected" ? {} : { authenticatedLane: null }
-    });
-  }
-  setAuthenticated(lane, connectionMessage) {
-    this.#replace({
-      ...this.#state,
-      connection: "connected",
-      connectionMessage,
-      authenticatedLane: lane
-    });
-  }
-  setModelSelectionPending(pending) {
-    this.#replace({
-      ...this.#state,
-      chatGpt: { ...this.#state.chatGpt, modelSelectionPending: pending }
-    });
-  }
-  applyControlMessage(message) {
-    if (message.type === "aiDm.chatgpt.status") {
-      this.#replace({
-        ...this.#state,
-        chatGpt: {
-          state: !message.payload.identityConnected ? "signed-out" : !message.payload.planUsageAuthorized ? "identity-only" : message.payload.modelDiscoveryState === "available" && message.payload.selectedModel !== null && message.payload.availableModels.some(
-            ({ slug }) => slug === message.payload.selectedModel
-          ) ? "ready" : "model-unavailable",
-          identityConnected: message.payload.identityConnected,
-          planUsageAuthorized: message.payload.identityConnected && message.payload.planUsageAuthorized,
-          modelDiscoveryState: message.payload.modelDiscoveryState,
-          availableModels: message.payload.availableModels,
-          selectedModel: message.payload.selectedModel,
-          modelSelectionPending: false,
-          ...message.payload.email ? { email: message.payload.email } : {}
-        }
-      });
-    } else if (message.type === "aiDm.player-requests.state") {
-      this.#replace({
-        ...this.#state,
-        allowAllPlayerRequests: message.payload.allowAll,
-        playerRequests: message.payload.requests
-      });
-    }
-  }
-  applyDelivery(delivery) {
-    if (delivery.recipientSequence <= this.#state.lastRecipientSequence) return "duplicate";
-    if (delivery.recipientSequence !== this.#state.lastRecipientSequence + 1 && delivery.message.type !== "aiDm.history.result")
-      return "gap";
-    const statuses = new Map(this.#state.runStatuses);
-    const outputStreams = new Map(this.#state.outputStreams);
-    const approvals = new Map(this.#state.approvals);
-    const runFailures = new Map(this.#state.runFailures);
-    let messages = this.#state.messages;
-    const { message } = delivery;
-    if (message.type === "aiDm.message.created") {
-      if (!this.#messageIds.has(message.payload.messageId)) {
-        this.#messageIds.add(message.payload.messageId);
-        messages = [...messages, message.payload].sort(
-          (left, right) => left.threadId === right.threadId ? left.threadSequence - right.threadSequence : left.createdAt.localeCompare(right.createdAt)
-        );
-      }
-      outputStreams.delete(message.payload.messageId);
-    } else if (message.type === "aiDm.run.status") {
-      statuses.set(message.payload.runId, message.payload.status);
-      if (["complete", "failed", "cancelled"].includes(message.payload.status)) {
-        this.#deleteOutputStreamsForRun(outputStreams, message.payload.runId);
-      }
-      if (message.payload.status !== "failed") runFailures.delete(message.payload.runId);
-    } else if (message.type === "aiDm.run.completed") {
-      statuses.set(message.payload.runId, "complete");
-      runFailures.delete(message.payload.runId);
-      this.#deleteOutputStreamsForRun(outputStreams, message.payload.runId);
-    } else if (message.type === "aiDm.run.failed") {
-      statuses.set(message.payload.runId, "failed");
-      runFailures.set(message.payload.runId, {
-        code: message.payload.code,
-        message: message.payload.message,
-        retryable: message.payload.retryable,
-        ...message.payload.diagnostics ? { diagnostics: message.payload.diagnostics } : {}
-      });
-      if (message.payload.code === "PROVIDER_RECONNECT_REQUIRED") {
-        this.#state = {
-          ...this.#state,
-          chatGpt: {
-            state: "signed-out",
-            identityConnected: false,
-            planUsageAuthorized: false,
-            modelDiscoveryState: "not-authorized",
-            availableModels: [],
-            selectedModel: null,
-            modelSelectionPending: false
-          }
-        };
-      }
-      this.#deleteOutputStreamsForRun(outputStreams, message.payload.runId);
-    } else if (message.type === "aiDm.output.delta") {
-      const current = outputStreams.get(message.payload.messageId);
-      const valid = !current && message.payload.offset === 0 && message.payload.deltaSequence === 1 || current && message.payload.offset === current.text.length && message.payload.deltaSequence === current.deltaSequence + 1 && message.payload.messageRevision >= current.messageRevision;
-      if (!valid) return "gap";
-      {
-        outputStreams.set(message.payload.messageId, {
-          messageId: message.payload.messageId,
-          runId: message.payload.runId,
-          text: `${current?.text ?? ""}${message.payload.delta}`,
-          deltaSequence: message.payload.deltaSequence,
-          messageRevision: message.payload.messageRevision,
-          final: message.payload.final
-        });
-      }
-    } else if (message.type === "aiDm.approval.required") {
-      approvals.set(message.payload.proposalId, message.payload);
-    } else if (message.type === "aiDm.history.result") {
-      for (const item of message.payload.messages) this.#messageIds.add(item.messageId);
-      const merged = new Map(messages.map((item) => [item.messageId, item]));
-      for (const item of message.payload.messages) merged.set(item.messageId, item);
-      messages = [...merged.values()].sort(
-        (left, right) => left.threadId === right.threadId ? left.threadSequence - right.threadSequence : left.createdAt.localeCompare(right.createdAt)
-      );
-      for (const run of message.payload.runs ?? []) {
-        statuses.set(run.runId, run.status);
-        if (run.status === "failed") {
-          runFailures.set(run.runId, {
-            code: run.failureCode ?? "RUN_FAILED",
-            message: "This run failed safely. Submit a new prompt only after resolving the cause.",
-            retryable: false
-          });
-        } else {
-          runFailures.delete(run.runId);
-        }
-        if (["complete", "failed", "cancelled"].includes(run.status)) {
-          this.#deleteOutputStreamsForRun(outputStreams, run.runId);
-        }
-      }
-    }
-    this.#replace({
-      ...this.#state,
-      messages,
-      outputStreams,
-      approvals,
-      runStatuses: statuses,
-      runFailures,
-      activeThreadId: this.#state.activeThreadId ?? (message.type === "aiDm.history.result" ? message.payload.threadId : delivery.threadId),
-      lastRecipientSequence: delivery.recipientSequence
-    });
-    return "applied";
-  }
-  resetRecipientSequence(sequence = 0) {
-    this.#replace({ ...this.#state, lastRecipientSequence: sequence });
-  }
-  #deleteOutputStreamsForRun(outputStreams, runId) {
-    for (const [messageId, stream] of outputStreams) {
-      if (stream.runId === runId) outputStreams.delete(messageId);
-    }
-  }
-  #replace(state) {
-    this.#state = state;
-    for (const listener of this.#listeners) listener(state);
-  }
-};
-
 // ../shared/dist/ai-dungeon-master.js
 var AI_DM_PROTOCOL_VERSION = 2;
 
@@ -20308,6 +20110,223 @@ var aiDmTransportServerMessageSchema = external_exports.discriminatedUnion("type
   }).strict()
 ]);
 
+// ../shared/dist/chatkit.js
+var CHATKIT_INFERENCE_OPERATIONS = [
+  "threads.create",
+  "threads.add_user_message",
+  "threads.custom_action",
+  "threads.retry_after_item"
+];
+var CHATKIT_STORAGE_OPERATIONS = [
+  "threads.get_by_id",
+  "threads.list",
+  "items.list",
+  "items.feedback",
+  "threads.update",
+  "threads.delete"
+];
+function supportedChatKitOperation(value) {
+  return typeof value === "string" && (CHATKIT_INFERENCE_OPERATIONS.includes(value) || CHATKIT_STORAGE_OPERATIONS.includes(value));
+}
+
+// src/ai-dungeon-master/store.ts
+var AiDmClientStore = class {
+  #state = {
+    connection: "disconnected",
+    connectionMessage: "AI Dungeon Master server is disconnected.",
+    authenticatedLane: null,
+    messages: [],
+    outputStreams: /* @__PURE__ */ new Map(),
+    approvals: /* @__PURE__ */ new Map(),
+    runStatuses: /* @__PURE__ */ new Map(),
+    runFailures: /* @__PURE__ */ new Map(),
+    activeThreadId: null,
+    lastRecipientSequence: 0,
+    chatGpt: {
+      state: "signed-out",
+      identityConnected: false,
+      planUsageAuthorized: false,
+      modelDiscoveryState: "not-authorized",
+      availableModels: [],
+      selectedModel: null,
+      modelSelectionPending: false
+    },
+    allowAllPlayerRequests: false,
+    playerRequests: []
+  };
+  #listeners = /* @__PURE__ */ new Set();
+  #messageIds = /* @__PURE__ */ new Set();
+  get state() {
+    return this.#state;
+  }
+  subscribe(listener) {
+    this.#listeners.add(listener);
+    listener(this.#state);
+    return () => this.#listeners.delete(listener);
+  }
+  setConnection(connection, connectionMessage) {
+    this.#replace({
+      ...this.#state,
+      connection,
+      connectionMessage,
+      ...connection === "connected" ? {} : { authenticatedLane: null }
+    });
+  }
+  setAuthenticated(lane, connectionMessage) {
+    this.#replace({
+      ...this.#state,
+      connection: "connected",
+      connectionMessage,
+      authenticatedLane: lane
+    });
+  }
+  setModelSelectionPending(pending) {
+    this.#replace({
+      ...this.#state,
+      chatGpt: { ...this.#state.chatGpt, modelSelectionPending: pending }
+    });
+  }
+  applyControlMessage(message) {
+    if (message.type === "aiDm.chatgpt.status") {
+      this.#replace({
+        ...this.#state,
+        chatGpt: {
+          state: !message.payload.identityConnected ? "signed-out" : !message.payload.planUsageAuthorized ? "identity-only" : message.payload.modelDiscoveryState === "available" && message.payload.selectedModel !== null && message.payload.availableModels.some(
+            ({ slug }) => slug === message.payload.selectedModel
+          ) ? "ready" : "model-unavailable",
+          identityConnected: message.payload.identityConnected,
+          planUsageAuthorized: message.payload.identityConnected && message.payload.planUsageAuthorized,
+          modelDiscoveryState: message.payload.modelDiscoveryState,
+          availableModels: message.payload.availableModels,
+          selectedModel: message.payload.selectedModel,
+          modelSelectionPending: false,
+          ...message.payload.email ? { email: message.payload.email } : {}
+        }
+      });
+    } else if (message.type === "aiDm.player-requests.state") {
+      this.#replace({
+        ...this.#state,
+        allowAllPlayerRequests: message.payload.allowAll,
+        playerRequests: message.payload.requests
+      });
+    }
+  }
+  applyDelivery(delivery) {
+    if (delivery.recipientSequence <= this.#state.lastRecipientSequence) return "duplicate";
+    if (delivery.recipientSequence !== this.#state.lastRecipientSequence + 1 && delivery.message.type !== "aiDm.history.result")
+      return "gap";
+    const statuses = new Map(this.#state.runStatuses);
+    const outputStreams = new Map(this.#state.outputStreams);
+    const approvals = new Map(this.#state.approvals);
+    const runFailures = new Map(this.#state.runFailures);
+    let messages = this.#state.messages;
+    const { message } = delivery;
+    if (message.type === "aiDm.message.created") {
+      if (!this.#messageIds.has(message.payload.messageId)) {
+        this.#messageIds.add(message.payload.messageId);
+        messages = [...messages, message.payload].sort(
+          (left, right) => left.threadId === right.threadId ? left.threadSequence - right.threadSequence : left.createdAt.localeCompare(right.createdAt)
+        );
+      }
+      outputStreams.delete(message.payload.messageId);
+    } else if (message.type === "aiDm.run.status") {
+      statuses.set(message.payload.runId, message.payload.status);
+      if (["complete", "failed", "cancelled"].includes(message.payload.status)) {
+        this.#deleteOutputStreamsForRun(outputStreams, message.payload.runId);
+      }
+      if (message.payload.status !== "failed") runFailures.delete(message.payload.runId);
+    } else if (message.type === "aiDm.run.completed") {
+      statuses.set(message.payload.runId, "complete");
+      runFailures.delete(message.payload.runId);
+      this.#deleteOutputStreamsForRun(outputStreams, message.payload.runId);
+    } else if (message.type === "aiDm.run.failed") {
+      statuses.set(message.payload.runId, "failed");
+      runFailures.set(message.payload.runId, {
+        code: message.payload.code,
+        message: message.payload.message,
+        retryable: message.payload.retryable,
+        ...message.payload.diagnostics ? { diagnostics: message.payload.diagnostics } : {}
+      });
+      if (message.payload.code === "PROVIDER_RECONNECT_REQUIRED") {
+        this.#state = {
+          ...this.#state,
+          chatGpt: {
+            state: "signed-out",
+            identityConnected: false,
+            planUsageAuthorized: false,
+            modelDiscoveryState: "not-authorized",
+            availableModels: [],
+            selectedModel: null,
+            modelSelectionPending: false
+          }
+        };
+      }
+      this.#deleteOutputStreamsForRun(outputStreams, message.payload.runId);
+    } else if (message.type === "aiDm.output.delta") {
+      const current = outputStreams.get(message.payload.messageId);
+      const valid = !current && message.payload.offset === 0 && message.payload.deltaSequence === 1 || current && message.payload.offset === current.text.length && message.payload.deltaSequence === current.deltaSequence + 1 && message.payload.messageRevision >= current.messageRevision;
+      if (!valid) return "gap";
+      {
+        outputStreams.set(message.payload.messageId, {
+          messageId: message.payload.messageId,
+          runId: message.payload.runId,
+          text: `${current?.text ?? ""}${message.payload.delta}`,
+          deltaSequence: message.payload.deltaSequence,
+          messageRevision: message.payload.messageRevision,
+          final: message.payload.final
+        });
+      }
+    } else if (message.type === "aiDm.approval.required") {
+      approvals.set(message.payload.proposalId, message.payload);
+    } else if (message.type === "aiDm.history.result") {
+      for (const item of message.payload.messages) this.#messageIds.add(item.messageId);
+      const merged = new Map(messages.map((item) => [item.messageId, item]));
+      for (const item of message.payload.messages) merged.set(item.messageId, item);
+      messages = [...merged.values()].sort(
+        (left, right) => left.threadId === right.threadId ? left.threadSequence - right.threadSequence : left.createdAt.localeCompare(right.createdAt)
+      );
+      for (const run of message.payload.runs ?? []) {
+        statuses.set(run.runId, run.status);
+        if (run.status === "failed") {
+          runFailures.set(run.runId, {
+            code: run.failureCode ?? "RUN_FAILED",
+            message: "This run failed safely. Submit a new prompt only after resolving the cause.",
+            retryable: false
+          });
+        } else {
+          runFailures.delete(run.runId);
+        }
+        if (["complete", "failed", "cancelled"].includes(run.status)) {
+          this.#deleteOutputStreamsForRun(outputStreams, run.runId);
+        }
+      }
+    }
+    this.#replace({
+      ...this.#state,
+      messages,
+      outputStreams,
+      approvals,
+      runStatuses: statuses,
+      runFailures,
+      activeThreadId: this.#state.activeThreadId ?? (message.type === "aiDm.history.result" ? message.payload.threadId : delivery.threadId),
+      lastRecipientSequence: delivery.recipientSequence
+    });
+    return "applied";
+  }
+  resetRecipientSequence(sequence = 0) {
+    this.#replace({ ...this.#state, lastRecipientSequence: sequence });
+  }
+  #deleteOutputStreamsForRun(outputStreams, runId) {
+    for (const [messageId, stream] of outputStreams) {
+      if (stream.runId === runId) outputStreams.delete(messageId);
+    }
+  }
+  #replace(state) {
+    this.#state = state;
+    for (const listener of this.#listeners) listener(state);
+  }
+};
+
 // src/ai-dungeon-master/transport.ts
 var MODULE_ID = "foundry-ai-dungeon-master";
 var RECIPIENT_CURSOR_KEY = `${MODULE_ID}.recipient-cursor.v1`;
@@ -20855,7 +20874,7 @@ function boundedContext(value) {
     if (item !== void 0) {
       if (typeof item !== "number" || !Number.isSafeInteger(item) || item < -1 || item > 1e5)
         throw new Error("Invalid combat value.");
-      output2[key] = item;
+      if (item >= 0) output2[key] = item;
     }
   }
   return output2;
@@ -20951,6 +20970,11 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
           context: currentGameContext()
         }).catch((error62) => this.#instance?.fail(error62));
       },
+      resolveAction: () => {
+        void this.#instance?.trigger({
+          prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action."
+        }).catch((error62) => this.#instance?.fail(error62));
+      },
       cancelResponse: () => this.#instance?.cancel(),
       reviewNativeActions: () => {
         void this.#instance?.reviewNativeActions().catch((error62) => this.#instance?.fail(error62));
@@ -20970,6 +20994,8 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
   #listeners = null;
   #requests = /* @__PURE__ */ new Set();
   #guard = new TriggerGuard();
+  #triggerTail = Promise.resolve();
+  #triggerGeneration = 0;
   #closed = false;
   #threadId = null;
   #status = "Connecting to ChatKit\u2026";
@@ -21176,6 +21202,19 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
     const auth = aiDmController.transport.chatKitHeaders?.();
     if (!auth) throw new Error("Foundry authentication is unavailable.");
     for (const [key, value] of Object.entries(auth)) headers.set(key, value);
+    let pendingKey;
+    const rawBody = typeof init?.body === "string" ? init.body : void 0;
+    if (destination.pathname === "/chatkit" && rawBody) {
+      const operation = JSON.parse(rawBody).type;
+      if (!supportedChatKitOperation(operation)) throw new Error("Unsupported ChatKit operation.");
+      if (CHATKIT_INFERENCE_OPERATIONS.includes(operation) && !headers.has("x-ai-dm-event")) {
+        const hash2 = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(rawBody));
+        pendingKey = `${pointerKey()}.pending.${Array.from(new Uint8Array(hash2), (byte) => byte.toString(16).padStart(2, "0")).join("")}`;
+        const eventId = localStorage.getItem(pendingKey) ?? crypto.randomUUID();
+        localStorage.setItem(pendingKey, eventId);
+        headers.set("x-ai-dm-event", eventId);
+      }
+    }
     const abort = new AbortController();
     this.#requests.add(abort);
     const signal = AbortSignal.any([
@@ -21192,6 +21231,7 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
       }
       if (!response.body) {
         this.#requests.delete(abort);
+        if (pendingKey) localStorage.removeItem(pendingKey);
         return response;
       }
       const reader = response.body.getReader();
@@ -21202,6 +21242,7 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
             const item = await reader.read();
             if (item.done) {
               requests.delete(abort);
+              if (pendingKey) localStorage.removeItem(pendingKey);
               controller.close();
             } else controller.enqueue(item.value);
           } catch (error62) {
@@ -21279,7 +21320,18 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
     }
     if (!data.result.length) panel.textContent = "No native actions in this conversation.";
   }
-  async trigger(request) {
+  trigger(request) {
+    const generation = this.#triggerGeneration;
+    const pending = this.#triggerTail.then(() => {
+      if (generation !== this.#triggerGeneration || this.#closed)
+        throw new Error("Queued response cancelled.");
+      return this.dispatchTrigger(request);
+    });
+    this.#triggerTail = pending.catch(() => {
+    });
+    return pending;
+  }
+  async dispatchTrigger(request) {
     if (!game.user.isGM) throw new Error("ChatKit currently requires a Foundry GM.");
     const prompt = request.prompt?.trim();
     if (!prompt || prompt.length > 4e3) throw new Error("Enter a prompt of 1\u20134000 characters.");
@@ -21318,6 +21370,7 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
     }
   }
   cancel() {
+    this.#triggerGeneration++;
     for (const request of this.#requests) request.abort();
     this.#requests.clear();
     this.#guard.finish();
@@ -21335,6 +21388,38 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
     this.#mounting = null;
     _AiDungeonMasterApplication.#instance = null;
     await super.close(options);
+  }
+};
+
+// src/ai-dungeon-master/automatic-triggers.ts
+var AutomaticTriggers = class {
+  constructor(dispatch, delay = 250) {
+    this.dispatch = dispatch;
+    this.delay = delay;
+  }
+  dispatch;
+  delay;
+  #pending = /* @__PURE__ */ new Map();
+  accept(signal) {
+    if (signal.origin === "ai-dungeon-master" || !/^[A-Za-z0-9_-]{1,64}$/.test(signal.documentId) || !Number.isSafeInteger(signal.revision) || signal.revision < 0)
+      return;
+    if (signal.kind === "area" && (!signal.key || !/^[A-Za-z0-9_-]{1,48}$/.test(signal.key)))
+      return;
+    const slot = `${signal.kind}-${signal.documentId}`;
+    const old = this.#pending.get(slot);
+    if (old) clearTimeout(old.timer);
+    const timer = setTimeout(() => {
+      this.#pending.delete(slot);
+      this.dispatch({
+        requestId: `${slot}-${signal.revision}`,
+        prompt: signal.kind === "area" ? `A player entered keyed area ${signal.key}. Retrieve the relevant campaign section and narrate only observable information.` : signal.kind === "door" ? "A player opened this scene's door. Describe observable consequences using current authorized state." : "A player completed a combat turn. Review current combat state and describe the next situation without inventing actions or rolls."
+      });
+    }, this.delay);
+    this.#pending.set(slot, { signal, timer });
+  }
+  cancel() {
+    for (const value of this.#pending.values()) clearTimeout(value.timer);
+    this.#pending.clear();
   }
 };
 
@@ -21365,6 +21450,50 @@ var registered = false;
 function registerAiDungeonMasterHooks() {
   if (registered) return;
   registered = true;
+  const automatic = new AutomaticTriggers((request) => {
+    void AiDungeonMasterApplication.open().trigger(request).catch((error62) => ui.notifications.error(String(error62)));
+  });
+  const accept = (signal) => {
+    if (!game.user.isGM || game.settings.get("foundry-ai-dungeon-master", "automaticEventsEnabled") !== true)
+      return;
+    automatic.accept(signal);
+  };
+  Hooks.on(
+    "foundry-ai-dungeon-master.keyedAreaEntered",
+    (signal) => accept({ ...signal, kind: "area" })
+  );
+  Hooks.on(
+    "updateWall",
+    (wall, change, options) => {
+      if (change.ds === 1 && wall.id && wall._stats?.modifiedTime !== void 0)
+        accept({
+          kind: "door",
+          documentId: wall.id,
+          revision: wall._stats.modifiedTime,
+          origin: options?.aiDmOrigin
+        });
+    }
+  );
+  const completedPlayerTurns = /* @__PURE__ */ new Set();
+  Hooks.on(
+    "preUpdateCombat",
+    (combat, change) => {
+      if (combat.id && change.turn !== void 0 && combat.turn !== void 0 && combat.turn >= 0 && combat.turns?.[combat.turn]?.actor?.hasPlayerOwner === true)
+        completedPlayerTurns.add(combat.id);
+    }
+  );
+  Hooks.on(
+    "updateCombat",
+    (combat, change, options) => {
+      if (change.turn !== void 0 && change.turn >= 0 && combat.id && completedPlayerTurns.delete(combat.id) && combat._stats?.modifiedTime !== void 0)
+        accept({
+          kind: "turn",
+          documentId: combat.id,
+          revision: combat._stats.modifiedTime,
+          origin: options?.aiDmOrigin
+        });
+    }
+  );
   Hooks.on("getSceneControlButtons", addAiDungeonMasterSceneControl);
   Hooks.on("chatMessage", (_chatLog, message) => {
     const match = message.match(/^\/ai(?:\s+([\s\S]+))?$/i);
@@ -21411,7 +21540,7 @@ Hooks.once("init", () => {
   });
   game.settings.register(MODULE_ID3, "automaticEventsEnabled", {
     name: "Enable AI Dungeon Master automatic events",
-    hint: "Enable reviewed combat, door, Region, Item, and Scene event adapters. Movement remains disabled.",
+    hint: "Enable door-open, combat-turn and explicitly keyed area entry signals. Raw movement does not trigger turns.",
     scope: "world",
     config: true,
     type: Boolean,

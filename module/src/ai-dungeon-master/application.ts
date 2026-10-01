@@ -1,4 +1,8 @@
 import type { OpenAIChatKit } from "@openai/chatkit";
+import {
+  CHATKIT_INFERENCE_OPERATIONS,
+  supportedChatKitOperation,
+} from "@foundry-ai-dungeon-master/shared";
 import { aiDmController } from "./controller.js";
 import { chatGptPanelStatus } from "./chatgpt-panel.js";
 import { chatKitDomainKey } from "./chatkit-domain.js";
@@ -65,6 +69,14 @@ export class AiDungeonMasterApplication extends Base {
           })
           .catch((error) => this.#instance?.fail(error));
       },
+      resolveAction: () => {
+        void this.#instance
+          ?.trigger({
+            prompt:
+              "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action.",
+          })
+          .catch((error) => this.#instance?.fail(error));
+      },
       cancelResponse: () => this.#instance?.cancel(),
       reviewNativeActions: () => {
         void this.#instance?.reviewNativeActions().catch((error) => this.#instance?.fail(error));
@@ -86,6 +98,8 @@ export class AiDungeonMasterApplication extends Base {
   #listeners: AbortController | null = null;
   #requests = new Set<AbortController>();
   #guard = new TriggerGuard();
+  #triggerTail: Promise<void> = Promise.resolve();
+  #triggerGeneration = 0;
   #closed = false;
   #threadId: string | null = null;
   #status = "Connecting to ChatKit…";
@@ -304,6 +318,19 @@ export class AiDungeonMasterApplication extends Base {
     const auth = aiDmController.transport.chatKitHeaders?.();
     if (!auth) throw new Error("Foundry authentication is unavailable.");
     for (const [key, value] of Object.entries(auth)) headers.set(key, value);
+    let pendingKey: string | undefined;
+    const rawBody = typeof init?.body === "string" ? init.body : undefined;
+    if (destination.pathname === "/chatkit" && rawBody) {
+      const operation = (JSON.parse(rawBody) as { type?: string }).type;
+      if (!supportedChatKitOperation(operation)) throw new Error("Unsupported ChatKit operation.");
+      if (CHATKIT_INFERENCE_OPERATIONS.includes(operation) && !headers.has("x-ai-dm-event")) {
+        const hash = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(rawBody));
+        pendingKey = `${pointerKey()}.pending.${Array.from(new Uint8Array(hash), (byte) => byte.toString(16).padStart(2, "0")).join("")}`;
+        const eventId = localStorage.getItem(pendingKey) ?? crypto.randomUUID();
+        localStorage.setItem(pendingKey, eventId);
+        headers.set("x-ai-dm-event", eventId);
+      }
+    }
     const abort = new AbortController();
     this.#requests.add(abort);
     const signal = AbortSignal.any([
@@ -328,6 +355,7 @@ export class AiDungeonMasterApplication extends Base {
       }
       if (!response.body) {
         this.#requests.delete(abort);
+        if (pendingKey) localStorage.removeItem(pendingKey);
         return response;
       }
       const reader = response.body.getReader();
@@ -338,6 +366,7 @@ export class AiDungeonMasterApplication extends Base {
             const item = await reader.read();
             if (item.done) {
               requests.delete(abort);
+              if (pendingKey) localStorage.removeItem(pendingKey);
               controller.close();
             } else controller.enqueue(item.value);
           } catch (error) {
@@ -426,7 +455,17 @@ export class AiDungeonMasterApplication extends Base {
     }
     if (!data.result.length) panel.textContent = "No native actions in this conversation.";
   }
-  async trigger(request: ChatKitTrigger): Promise<void> {
+  trigger(request: ChatKitTrigger): Promise<void> {
+    const generation = this.#triggerGeneration;
+    const pending = this.#triggerTail.then(() => {
+      if (generation !== this.#triggerGeneration || this.#closed)
+        throw new Error("Queued response cancelled.");
+      return this.dispatchTrigger(request);
+    });
+    this.#triggerTail = pending.catch(() => {});
+    return pending;
+  }
+  private async dispatchTrigger(request: ChatKitTrigger): Promise<void> {
     if (!game.user.isGM) throw new Error("ChatKit currently requires a Foundry GM.");
     const prompt = request.prompt?.trim();
     if (!prompt || prompt.length > 4000) throw new Error("Enter a prompt of 1–4000 characters.");
@@ -466,6 +505,7 @@ export class AiDungeonMasterApplication extends Base {
     }
   }
   cancel(): void {
+    this.#triggerGeneration++;
     for (const request of this.#requests) request.abort();
     this.#requests.clear();
     this.#guard.finish();
