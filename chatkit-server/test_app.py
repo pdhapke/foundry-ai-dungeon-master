@@ -1,0 +1,208 @@
+"""Independent local protocol/store tests; inference uses an explicitly mocked ChatKit server."""
+import base64
+import json
+import tempfile
+import unittest
+import asyncio
+from datetime import datetime, timezone
+from pathlib import Path
+from unittest.mock import patch
+import httpx2 as httpx
+from openai import AsyncOpenAI
+
+from fastapi.testclient import TestClient
+from fastapi import HTTPException
+from chatkit.server import StreamingResult
+from chatkit.store import NotFoundError
+from chatkit.types import ThreadMetadata, HiddenContextItem, AssistantMessageItem, AssistantMessageContent, ThreadItemDoneEvent
+from app import SqliteStore, FoundryChatKit, create_app, validate_action, build_agent
+
+
+class StoreTests(unittest.IsolatedAsyncioTestCase):
+    async def test_serialized_plan_request_uses_oauth_and_supported_fields(self):
+        captured = []
+        def capture(request):
+            captured.append(request)
+            return httpx.Response(200, headers={"content-type": "text/event-stream"}, content=b"data: [DONE]\n\n")
+        client = AsyncOpenAI(api_key="mock-current-refreshed-oauth-token", max_retries=0, http_client=httpx.AsyncClient(transport=httpx.MockTransport(capture)))
+        with patch("app.AsyncOpenAI", return_value=client):
+            agent = build_agent({"apiKey": "mock-current-refreshed-oauth-token", "model": "account-selected-model"})
+        history = [{"role": "user", "content": "Remember the Hall"}, {"role": "assistant", "content": "The Hall is remembered"}, {"role": "user", "content": "Describe it"}]
+        stream = await agent.model._fetch_response(agent.instructions, history, agent.model_settings, [], None, [], stream=True)
+        async for _ in stream:
+            pass
+        self.assertEqual(len(captured), 1)
+        request = captured[0]
+        self.assertEqual(str(request.url), "https://api.openai.com/v1/responses")
+        self.assertEqual(request.headers["authorization"], "Bearer mock-current-refreshed-oauth-token")
+        body = json.loads(request.content)
+        self.assertIs(body["store"], False)
+        self.assertIs(body["stream"], True)
+        self.assertEqual(body["model"], "account-selected-model")
+        self.assertEqual(len(body["input"]), 3)
+        self.assertEqual(body["input"][0]["content"], "Remember the Hall")
+        self.assertEqual(body["instructions"], agent.instructions)
+        forbidden = {"background", "conversation", "max_output_tokens", "max_tool_calls", "metadata", "moderation", "multi_agent", "prompt", "prompt_cache_retention", "safety_identifier", "temperature", "top_logprobs", "top_p", "truncation", "user", "previous_response_id"}
+        self.assertFalse(forbidden.intersection(body))
+        self.assertFalse(any(item.get("role") == "system" for item in body["input"]))
+        self.assertEqual(body.get("tools", []), [])
+        await client.close()
+
+    async def test_response_close_cancels_agents_run(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = SqliteStore(str(Path(directory) / "test.sqlite"))
+            context = {"worldId": "w", "userId": "gm", "apiKey": "mock", "model": "mock"}
+            thread = ThreadMetadata(id="t", created_at=datetime.now(timezone.utc))
+            await store.save_thread(thread, context)
+            class FakeRun:
+                cancelled = False
+                def cancel(self):
+                    self.cancelled = True
+            run = FakeRun()
+            async def fake_events(*args):
+                yield "mock incremental event"
+                await asyncio.Event().wait()
+            with patch("app.Runner.run_streamed", return_value=run), patch("app.build_agent", return_value=object()), patch("app.stream_agent_response", fake_events):
+                generator = FoundryChatKit(store).respond(thread, None, context)
+                self.assertEqual(await anext(generator), "mock incremental event")
+                await generator.aclose()
+            self.assertTrue(run.cancelled)
+            store.db.close()
+
+    async def test_durable_history_and_owner_boundary(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = str(Path(directory) / "chatkit.sqlite")
+            store = SqliteStore(path)
+            owner = {"worldId": "w", "userId": "gm"}
+            thread = ThreadMetadata(id="t", created_at=datetime.now(timezone.utc))
+            await store.save_thread(thread, owner)
+            item = HiddenContextItem(id="i", thread_id="t", created_at=datetime.now(timezone.utc), content="context")
+            await store.add_thread_item("t", item, owner)
+            restored = SqliteStore(path)
+            self.assertEqual((await restored.load_item("t", "i", owner)).content, "context")
+            with self.assertRaises(NotFoundError):
+                await restored.load_thread("t", {"worldId": "w", "userId": "player"})
+            with self.assertRaises(NotFoundError):
+                await restored.save_thread(thread, {"worldId": "other", "userId": "gm"})
+            store.db.close()
+            restored.db.close()
+
+    async def test_overlap_disconnect_and_process_error_release_guard(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = SqliteStore(str(Path(directory) / "chatkit.sqlite"))
+            context = {"worldId": "w", "userId": "gm"}
+            await store.save_thread(ThreadMetadata(id="t", created_at=datetime.now(timezone.utc)), context)
+            closed = []
+            class HeldServer:
+                fail = False
+                async def process(self, raw, context):
+                    if self.fail:
+                        raise ValueError("invalid request")
+                    async def events():
+                        try:
+                            yield b'data: first\n\n'
+                            await asyncio.Event().wait()
+                        finally:
+                            closed.append(True)
+                    return StreamingResult(events())
+            class FakeRequest:
+                headers = {"x-chatkit-secret": "secret", "x-chatkit-principal": base64.b64encode(json.dumps({**context, "isGm": True}).encode()).decode(), "x-chatkit-api-key": "mock", "x-chatkit-model": "mock"}
+                async def body(self):
+                    return json.dumps({"type": "threads.add_user_message", "params": {"thread_id": "t", "input": {}}}).encode()
+                async def is_disconnected(self):
+                    return False
+            server = HeldServer()
+            application = create_app(store, server, "secret")
+            endpoint = next(r.endpoint for r in application.routes if r.path == "/chatkit")
+            first = await endpoint(FakeRequest())
+            self.assertIn(b"first", await anext(first.body_iterator))
+            with self.assertRaises(HTTPException) as caught:
+                await endpoint(FakeRequest())
+            self.assertEqual(caught.exception.status_code, 409)
+            await first.body_iterator.aclose()
+            self.assertEqual(closed, [True])
+            second = await endpoint(FakeRequest())
+            await anext(second.body_iterator)
+            await second.body_iterator.aclose()
+            server.fail = True
+            with self.assertRaises(HTTPException) as caught:
+                await endpoint(FakeRequest())
+            self.assertEqual(caught.exception.status_code, 400)
+            server.fail = False
+            third = await endpoint(FakeRequest())
+            await anext(third.body_iterator)
+            await third.body_iterator.aclose()
+            store.db.close()
+
+
+class MockServer:
+    async def process(self, raw, context):
+        async def events():
+            yield b'data: {"type":"thread.item.added"}\n\n'
+            yield b'data: {"type":"thread.item.updated"}\n\n'
+        return StreamingResult(events())
+
+
+class MockInferenceChatKit(FoundryChatKit):
+    """Real SDK protocol/store; only inference output is mocked."""
+    async def respond(self, thread, input, context):
+        yield ThreadItemDoneEvent(item=AssistantMessageItem(id=self.store.generate_item_id("message", thread, context), thread_id=thread.id, created_at=datetime.now(timezone.utc), content=[AssistantMessageContent(text="Mock assistant response")]))
+
+
+class ProtocolTests(unittest.TestCase):
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory()
+        self.store = SqliteStore(str(Path(self.directory.name) / "test.sqlite"))
+        self.client = TestClient(create_app(self.store, MockServer(), "secret"))
+        self.headers = {
+            "x-chatkit-secret": "secret",
+            "x-chatkit-principal": base64.b64encode(json.dumps({"worldId": "w", "userId": "gm", "isGm": True}).encode()).decode(),
+            "x-chatkit-api-key": "mock-key", "x-chatkit-model": "mock-model",
+        }
+
+    def tearDown(self):
+        self.client.close()
+        self.store.db.close()
+        self.directory.cleanup()
+
+    def test_requires_gateway_auth_and_never_exposes_key(self):
+        self.assertEqual(self.client.post("/chatkit/thread").status_code, 401)
+        response = self.client.post("/chatkit/thread", headers=self.headers)
+        self.assertEqual(response.status_code, 200)
+        self.assertNotIn("mock-key", response.text)
+
+    def test_action_stream_and_duplicate_trigger(self):
+        thread = self.client.post("/chatkit/thread", headers=self.headers).json()["threadId"]
+        body = {"type": "threads.custom_action", "params": {"thread_id": thread, "action": {"type": "foundry.context-response", "payload": {"requestId": "event1", "prompt": "Describe", "context": {"sceneName": "Hall"}}}}}
+        response = self.client.post("/chatkit", headers=self.headers, json=body)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("text/event-stream", response.headers["content-type"])
+        self.assertEqual(response.text.count("data:"), 2)
+        self.assertEqual(self.client.post("/chatkit", headers=self.headers, json=body).status_code, 409)
+
+    def test_cross_user_thread_and_untrusted_context_rejected(self):
+        thread = self.client.post("/chatkit/thread", headers=self.headers).json()["threadId"]
+        headers = {**self.headers, "x-chatkit-principal": base64.b64encode(json.dumps({"worldId": "w", "userId": "other", "isGm": True}).encode()).decode()}
+        self.assertEqual(self.client.post("/chatkit", headers=headers, json={"type": "threads.get_by_id", "params": {"thread_id": thread}}).status_code, 404)
+        with self.assertRaises(Exception):
+            validate_action("foundry.context-response", {"requestId": "id", "prompt": "hello", "context": {"journal": "secret"}})
+
+    def test_actual_sdk_manual_action_continuity_and_history(self):
+        self.client.close()
+        self.client = TestClient(create_app(self.store, MockInferenceChatKit(self.store), "secret"))
+        thread = self.client.post("/chatkit/thread", headers=self.headers).json()["threadId"]
+        user_input = {"content": [{"type": "input_text", "text": "Remember the Hall"}], "attachments": [], "inference_options": {}}
+        response = self.client.post("/chatkit", headers=self.headers, json={"type": "threads.add_user_message", "params": {"thread_id": thread, "input": user_input}})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("Mock assistant response", response.text)
+        response = self.client.post("/chatkit", headers=self.headers, json={"type": "threads.custom_action", "params": {"thread_id": thread, "action": {"type": "foundry.context-response", "payload": {"requestId": "context1", "prompt": "Describe the Hall", "context": {"sceneName": "Hall"}}}}})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("Mock assistant response", response.text)
+        rows = self.store.db.execute("SELECT body FROM items WHERE thread_id=?", (thread,)).fetchall()
+        self.assertEqual(len(rows), 4)
+        self.assertIn("Remember the Hall", rows[0][0])
+        self.assertIn("untrusted_game_context", rows[2][0])
+
+
+if __name__ == "__main__":
+    unittest.main()

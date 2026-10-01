@@ -1,0 +1,23 @@
+{
+  "name": "@foundry-ai-dungeon-master/module",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --format=esm --outfile=dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test --test-concurrency=1 \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@foundry-ai-dungeon-master/shared": "*",
+    "@openai/chatkit": "1.9.0",
+    "dompurify": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.28.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}

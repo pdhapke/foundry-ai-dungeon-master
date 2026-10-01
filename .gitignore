@@ -1,0 +1,25 @@
+# Dependencies and disposable build products
+node_modules/
+server/dist/
+shared/dist/
+*.tsbuildinfo
+coverage/
+# module/dist/index.js is required by module.json and is distributed intentionally.
+
+# Credentials and local/runtime data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.runtime/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/

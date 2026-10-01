@@ -1,0 +1,24 @@
+{
+  "id": "foundry-ai-dungeon-master",
+  "title": "AI Dungeon Master",
+  "description": "Event-driven, context-bounded AI Dungeon Master for Foundry VTT.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "esmodules": ["module/dist/index.js"],
+  "styles": ["module/styles/ai-dungeon-master.css"],
+  "relationships": {
+    "requires": [
+      {
+        "id": "foundry-local-api",
+        "type": "module",
+        "compatibility": {
+          "minimum": "0.1.0"
+        },
+        "reason": "Provides the authenticated Foundry bridge and bounded operational capabilities used by the local AI Dungeon Master server."
+      }
+    ]
+  }
+}
