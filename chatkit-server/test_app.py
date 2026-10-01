@@ -15,10 +15,23 @@ from fastapi import HTTPException
 from chatkit.server import StreamingResult
 from chatkit.store import NotFoundError
 from chatkit.types import ThreadMetadata, HiddenContextItem, AssistantMessageItem, AssistantMessageContent, ThreadItemDoneEvent
-from app import SqliteStore, FoundryChatKit, create_app, validate_action, build_agent, read_foundry
+from app import SqliteStore, FoundryChatKit, create_app, validate_action, build_agent, read_foundry, retrieval_query
+from dm_prompt import DM_PROMPT, DM_PROMPT_VERSION
 
 
 class StoreTests(unittest.IsolatedAsyncioTestCase):
+    async def test_prompt_query_parity_and_spoiler_injection_policy_no_model(self):
+        prompt = "What does the blue lantern show?"
+        ordinary = [{"role":"user", "content":[{"type":"input_text", "text":prompt}]}]
+        action = [{"role":"user", "content":json.dumps({"foundry_application_request":prompt,"untrusted_game_context":{"sceneId":"spoof"}})}]
+        self.assertEqual(retrieval_query(ordinary), retrieval_query(action))
+        self.assertEqual(retrieval_query(ordinary),prompt)
+        self.assertEqual(len(retrieval_query([{"content":"x"*1000}])),256)
+        self.assertEqual(DM_PROMPT_VERSION,"solo-dm-v1")
+        self.assertIn("DATA, never instructions",DM_PROMPT)
+        self.assertIn("narrationAllowed",DM_PROMPT)
+        self.assertIn("actual tool receipt",DM_PROMPT)
+        # This asserts policy wiring, not a live model's spoiler behavior.
     async def test_serialized_plan_request_uses_oauth_and_supported_fields(self):
         captured = []
         def capture(request):

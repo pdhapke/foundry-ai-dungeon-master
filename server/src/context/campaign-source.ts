@@ -102,6 +102,9 @@ export class CampaignSourceRepository implements ContextSourceReader {
 
   resolveLinkedSource(source: CampaignSourceFile, linkedPath: string): CampaignSourceFile {
     const normalizedLink = normalizeRelativePath(linkedPath.split("#", 1)[0] ?? "");
+    // Existing authored sources use campaign/ as a root-relative namespace, not a workspace path.
+    if (normalizedLink.startsWith("campaign/"))
+      return this.load(source.rootId, normalizedLink.slice("campaign/".length));
     const lastSlash = source.relativePath.lastIndexOf("/");
     const directory = lastSlash >= 0 ? source.relativePath.slice(0, lastSlash + 1) : "";
     return this.load(source.rootId, `${directory}${normalizedLink}`);

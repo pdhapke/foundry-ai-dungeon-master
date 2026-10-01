@@ -14,7 +14,7 @@ export interface AiDmServerConfig {
   port: number;
   nodeEnv: "development" | "test" | "production";
   runtimeRoot: string;
-  campaignRoot: string;
+  worldsRoot: string;
   sourceBookRoot: string | null;
   foundryLocalApiBaseUrl: string;
   foundryLocalApiKey: string | null;
@@ -175,9 +175,7 @@ export function loadAiDmServerConfig(
       environment["AI_DM_CHATKIT_DATABASE_PATH"] ??
         resolve(runtimeRoot, "ai-dungeon-master", "chatkit.sqlite"),
     ),
-    campaignRoot: resolve(
-      environment["AI_DM_CAMPAIGN_ROOT"] ?? resolve(moduleRoot, "../../../../campaign"),
-    ),
+    worldsRoot: resolve(environment["AI_DM_WORLDS_ROOT"] ?? resolve(moduleRoot, "../../worlds")),
     sourceBookRoot: environment["AI_DM_SOURCEBOOK_ROOT"]
       ? resolve(environment["AI_DM_SOURCEBOOK_ROOT"])
       : null,

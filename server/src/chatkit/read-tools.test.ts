@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import request from "supertest";
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { WorldCampaignContext } from "../context/world-campaign.js";
 import type { AiDmAuthenticatedIdentity, AiDmJsonValue } from "@foundry-ai-dungeon-master/shared";
 import { ChatKitReadTools, type ChatKitReadOptions } from "./read-tools.js";
 import {
@@ -41,6 +45,11 @@ function fixture(options: Partial<ChatKitReadOptions> = {}) {
       if (hold) return new Promise(() => {});
       let result: AiDmJsonValue;
       if (name === "foundry_list_scenes") result = [{ _id: "s", active: true }];
+      else if (name === "foundry_get_world") result = { id: "w", system: "dnd5e" };
+      else if (name === "foundry_get_system")
+        result = { id: "dnd5e", version: "5.3.2", title: "D&D 5e" };
+      else if (name === "foundry_list_combats")
+        result = [{ _id: "combat", active: true, scene: "s", round: 1, turn: 0 }];
       else if (name === "foundry_get_scene")
         result = {
           _id: "s",
@@ -49,7 +58,14 @@ function fixture(options: Partial<ChatKitReadOptions> = {}) {
           tokens: [{ _id: "token", actorId: "a", hidden: false }],
           secret: "not-exposed",
         };
-      else result = { _id: "a", name: "Hero", type: "character", secret: "not-exposed" };
+      else
+        result = {
+          _id: "a",
+          name: "Hero",
+          type: "character",
+          system: { attributes: { hp: { value: 10, max: 12 }, ac: { value: 14 } } },
+          secret: "not-exposed",
+        };
       after?.();
       return result;
     },
@@ -89,6 +105,64 @@ function fixture(options: Partial<ChatKitReadOptions> = {}) {
   };
 }
 void describe("ChatKit bounded adapter (controlled MCP fixture; no model)", () => {
+  void it("builds equivalent authorized campaign/rules/character/combat context for prompts and actions", async () => {
+    const root = mkdtempSync(join(tmpdir(), "ai-dm-adapter-"));
+    try {
+      const path = join(root, "w", "data", "campaign");
+      mkdirSync(path, { recursive: true });
+      writeFileSync(
+        join(path, "room.md"),
+        "---\nfoundry_scene_id: s\n---\n# Hall\n## PLAYER-VISIBLE\nA blue lantern shines.\n## GM-ONLY\nSecret dragon password.",
+      );
+      const f = fixture({ campaign: new WorldCampaignContext(root) });
+      const ordinary = f.begin();
+      const action = f.begin({
+        params: {
+          thread_id: "t",
+          action: { payload: { prompt: "blue lantern", context: { sceneId: "spoof" } } },
+        },
+      });
+      const read = (token: string) =>
+        f.adapter.execute(
+          token,
+          scope,
+          "context",
+          { query: "blue lantern" },
+          new AbortController().signal,
+        );
+      const a = await read(ordinary.token);
+      assert.deepEqual(a, await read(action.token));
+      const result = JSON.parse(JSON.stringify(a));
+      assert.equal(result.rulesSystem.id, "dnd5e");
+      assert.equal(result.combat.round, 1);
+      assert.equal(result.characters[0].state.hp.value, 10);
+      assert.ok(
+        result.campaign.excerpts.some((v: { narrationAllowed: boolean }) => v.narrationAllowed),
+      );
+      assert.doesNotMatch(JSON.stringify(result), /not-exposed/);
+      const utility = await f.adapter.execute(
+        ordinary.token,
+        scope,
+        "campaign_validate_sources",
+        {},
+        new AbortController().signal,
+      );
+      assert.match(JSON.stringify(utility), /campaign_validate_sources/);
+      await assert.rejects(
+        f.adapter.execute(
+          ordinary.token,
+          scope,
+          "campaign",
+          { query: "x".repeat(257) },
+          new AbortController().signal,
+        ),
+      );
+      f.switchWorld();
+      await assert.rejects(read(ordinary.token));
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  });
   void it("reads selected scene and actor through reviewed catalog and projects results", async () => {
     const f = fixture();
     const run = f.begin();

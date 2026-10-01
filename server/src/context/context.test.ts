@@ -153,6 +153,21 @@ function setup(markdown: string): {
   return { root, repository, parser, graph };
 }
 
+void test("rejects a source excerpt whose filesystem hash changed after graph indexing", () => {
+  const { root, repository, graph } = setup("# Room\n## GM-ONLY\nOld secret.\n");
+  const record = graph.allRecords().find((value) => value.sectionKind === "gm-only")!;
+  const service = new ContextService(graph, repository);
+  service.startRun(seed({ principal: { ...principal(), isGm: true, lane: "gm", role: 4 } }));
+  writeFixture(root, "rooms/current.md", "# Room\n## GM-ONLY\nChanged secret.\n");
+  const result = service.execute(
+    request("context_get_source", "resolver", [record.node.nodeId], {
+      sourceSpan: record.node.sourceSpan!,
+    }),
+  );
+  assert.equal(result.denialCode, "CONTEXT_STALE");
+  assert.deepEqual(result.nodes, []);
+});
+
 void test("parses fail-closed semantic sections and creates conditional non-auto-follow NEXT-LOAD edges", () => {
   const { graph } = setup(`---
 id: ROOM-CURRENT

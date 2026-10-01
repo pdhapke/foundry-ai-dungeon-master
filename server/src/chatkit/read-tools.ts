@@ -11,6 +11,7 @@ import {
   type FoundryLocalApiMcpClient,
   type TrustedToolCatalog,
 } from "../tool-catalog/index.js";
+import type { WorldCampaignContext } from "../context/world-campaign.js";
 
 type RecordValue = Record<string, AiDmJsonValue>;
 function object(value: unknown): RecordValue {
@@ -48,6 +49,7 @@ export interface ChatKitReadOptions {
   timeoutMs?: number;
   ttlMs?: number;
   now?: () => number;
+  campaign?: WorldCampaignContext;
 }
 
 /** Ephemeral run-scoped adapter. Python sees only scene/actor summaries, never the administrative catalog. */
@@ -122,9 +124,11 @@ export class ChatKitReadTools {
     run.threadId ??= principal.threadId;
     const input = object(args);
     if (
-      !["context", "scene", "actor"].includes(operation) ||
-      Object.keys(input).some((key) => key !== "id") ||
-      (operation !== "actor" && Object.keys(input).length)
+      !["context", "scene", "actor", "campaign", "campaign_validate_sources"].includes(operation) ||
+      Object.keys(input).some((key) => key !== (operation === "actor" ? "id" : "query")) ||
+      (!["actor", "context", "campaign"].includes(operation) && Object.keys(input).length) ||
+      (input["query"] !== undefined &&
+        (typeof input["query"] !== "string" || input["query"].length > 256))
     )
       throw new Error("Unsupported read");
     const actorId = operation === "actor" ? identifier(input["id"]) : null;
@@ -147,7 +151,7 @@ export class ChatKitReadTools {
       signal.throwIfAborted();
       const record = this.catalog.record(tool);
       if (
-        !["foundry_list_scenes", "foundry_get_scene", "foundry_get_actor"].includes(tool) ||
+        !CHATKIT_ALLOWED_READS.includes(tool) ||
         !record ||
         record.descriptor.availability !== "available" ||
         !record.metadata.effects.includes("read") ||
@@ -172,18 +176,41 @@ export class ChatKitReadTools {
       if (run.expires <= this.now() || !this.runs.has(token)) throw new Error("Read run expired");
       return value;
     };
+    const world = this.options.campaign ? object(await call("foundry_get_world", {})) : null;
+    if (world && identifier(world["_id"] ?? world["id"]) !== run.identity.worldId)
+      throw new Error("World changed");
     // Hints are untrusted: both typed messages and actions use the current authoritative active scene.
     const scenes = await call("foundry_list_scenes", {});
     if (!Array.isArray(scenes)) throw new Error("Invalid scene list");
     const active = scenes.map(object).find((scene) => scene["active"] === true);
-    if (!active)
-      return {
+    if (!active) {
+      if (this.options.campaign && ["campaign", "campaign_validate_sources"].includes(operation)) {
+        const result = this.options.campaign.retrieve(
+          policyPrincipal,
+          String(input["query"] ?? ""),
+          null,
+        );
+        await bounded(this.authorize(run.identity, signal), signal);
+        return operation === "campaign_validate_sources"
+          ? (object(result)["utility"] ?? result)
+          : result;
+      }
+      const data: RecordValue = {
         schemaVersion: 1,
         worldId: run.identity.worldId,
         scene: null,
         actorIds: [],
         reason: "No active scene",
       };
+      if (this.options.campaign && operation === "context")
+        data["campaign"] = this.options.campaign.retrieve(
+          policyPrincipal,
+          String(input["query"] ?? ""),
+          null,
+        );
+      await bounded(this.authorize(run.identity, signal), signal);
+      return data;
+    }
     const sceneId = identifier(active["_id"] ?? active["id"]);
     const scene = object(await call("foundry_get_scene", { id: sceneId }));
     if (identifier(scene["_id"] ?? scene["id"]) !== sceneId || scene["active"] !== true)
@@ -197,6 +224,18 @@ export class ChatKitReadTools {
       ),
     ];
     let data: AiDmJsonValue;
+    if (operation === "campaign" || operation === "campaign_validate_sources") {
+      if (!this.options.campaign) throw new Error("Campaign source unavailable");
+      const result = this.options.campaign.retrieve(
+        policyPrincipal,
+        String(input["query"] ?? ""),
+        sceneId,
+      );
+      await bounded(this.authorize(run.identity, signal), signal);
+      return operation === "campaign_validate_sources"
+        ? (object(result)["utility"] ?? result)
+        : result;
+    }
     if (actorId !== null) {
       if (!actors.includes(actorId)) throw new Error("Actor is outside the current scene");
       const actor = object(await call("foundry_get_actor", { id: actorId }));
@@ -207,6 +246,7 @@ export class ChatKitReadTools {
         id: actorId,
         name: name(actor["name"]),
         type: name(actor["type"]),
+        state: actorState(actor),
       };
     } else {
       data = {
@@ -221,7 +261,49 @@ export class ChatKitReadTools {
         })),
         actorIds: actors,
       };
+      if (operation === "context" && this.options.campaign) {
+        const output = object(data);
+        const system = object(await call("foundry_get_system", {}));
+        output["rulesSystem"] = {
+          id: name(system["id"]),
+          version: name(system["version"]),
+          title: name(system["title"]),
+        };
+        const combats = await call("foundry_list_combats", {});
+        if (!Array.isArray(combats)) throw new Error("Invalid combat list");
+        const combat = combats
+          .map(object)
+          .find(
+            (value) => value["active"] === true && (!value["scene"] || value["scene"] === sceneId),
+          );
+        output["combat"] = combat
+          ? {
+              id: identifier(combat["_id"] ?? combat["id"]),
+              round: combat["round"] ?? null,
+              turn: combat["turn"] ?? null,
+            }
+          : null;
+        output["characters"] = [];
+        for (const id of actors.slice(0, 4)) {
+          const actor = object(await call("foundry_get_actor", { id }));
+          if (identifier(actor["_id"] ?? actor["id"]) !== id) throw new Error("Actor changed");
+          (output["characters"] as AiDmJsonValue[]).push({
+            id,
+            name: name(actor["name"]),
+            type: name(actor["type"]),
+            state: actorState(actor),
+          });
+        }
+        output["campaign"] = this.options.campaign.retrieve(
+          policyPrincipal,
+          String(input["query"] ?? ""),
+          sceneId,
+        );
+        output["recentActionsPolicy"] =
+          "Conversation history contains recent actions; no completed action is inferred from untrusted trigger hints.";
+      }
     }
+    await bounded(this.authorize(run.identity, signal), signal);
     if (Buffer.byteLength(JSON.stringify(data)) > 24_000)
       throw new Error("Read result exceeds budget");
     return data;
@@ -262,18 +344,48 @@ export class ChatKitReadTools {
       if (!abort.signal.aborted) response.json({ ok: true, result });
     } catch {
       if (!response.destroyed)
-        response
-          .status(403)
-          .json({
-            ok: false,
-            error: {
-              code: "READ_UNAVAILABLE",
-              message: "Authorized bounded Foundry read unavailable",
-            },
-          });
+        response.status(403).json({
+          ok: false,
+          error: {
+            code: "READ_UNAVAILABLE",
+            message: "Authorized bounded Foundry read unavailable",
+          },
+        });
     } finally {
       response.off("close", close);
       request.off("aborted", close);
     }
   };
+}
+
+const CHATKIT_ALLOWED_READS = [
+  "foundry_list_scenes",
+  "foundry_get_scene",
+  "foundry_get_actor",
+  "foundry_get_world",
+  "foundry_get_system",
+  "foundry_list_combats",
+];
+function actorState(actor: RecordValue): AiDmJsonValue {
+  const system =
+    actor["system"] && typeof actor["system"] === "object" && !Array.isArray(actor["system"])
+      ? (actor["system"] as RecordValue)
+      : {};
+  const attributes =
+    system["attributes"] &&
+    typeof system["attributes"] === "object" &&
+    !Array.isArray(system["attributes"])
+      ? (system["attributes"] as RecordValue)
+      : {};
+  const output: RecordValue = {};
+  for (const key of ["hp", "ac", "movement"]) {
+    const value = attributes[key];
+    if (value && typeof value === "object" && !Array.isArray(value)) {
+      const values: RecordValue = {};
+      for (const [field, number] of Object.entries(value))
+        if (typeof number === "number" && Number.isFinite(number)) values[field] = number;
+      output[key] = values;
+    }
+  }
+  return output;
 }

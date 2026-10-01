@@ -312,6 +312,8 @@ export class ContextService {
       return this.result(request, [], false, "SOURCE_NOT_ALLOWED");
     }
     const excerpt = this.sourceReader.readSource(sourceUri, request.sourceSpan);
+    if (excerpt.sourceHash !== record.node.sourceHash)
+      return this.result(request, [], false, "CONTEXT_STALE");
     const node: AiDmContextNode = {
       nodeId: `excerpt:${revisionOf({ nodeId, span: excerpt.span, hash: excerpt.sourceHash }).slice(0, 32)}`,
       kind: "derived-summary",

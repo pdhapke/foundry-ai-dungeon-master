@@ -130,6 +130,9 @@ export const CHATKIT_READ_TOOL_METADATA: readonly ToolMetadataOverlay[] = [
   ["foundry_list_scenes", "Locate active scene"],
   ["foundry_get_scene", "Read active scene"],
   ["foundry_get_actor", "Read current-scene actor"],
+  ["foundry_get_world", "Read active world"],
+  ["foundry_get_system", "Read active rules system"],
+  ["foundry_list_combats", "Read active combat state"],
 ].map(([toolId, displayName]) => ({
   toolId: toolId!,
   displayName: displayName!,

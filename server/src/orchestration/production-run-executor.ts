@@ -128,6 +128,7 @@ export interface ProductionRunExecutorOptions {
   catalog: TrustedToolCatalog;
   context: ContextService;
   directNodeIds: string[];
+  contextForWorld?: (worldId: string) => { service: ContextService; directNodeIds: string[] };
   capsuleSigner: ContinuationCapsuleSigner;
   now?: () => Date;
 }
@@ -154,14 +155,18 @@ export class ProductionRunExecutor implements AiDmRunExecutor {
         input.run.principal.isGm &&
         input.effectiveAudience.scope.userIds.length === 1 &&
         input.effectiveAudience.scope.userIds[0] === input.run.principal.userId);
-    const root = this.options.context.startRun({
+    const context = this.options.contextForWorld?.(input.run.principal.worldId) ?? {
+      service: this.options.context,
+      directNodeIds: this.options.directNodeIds,
+    };
+    const root = context.service.startRun({
       runId: input.run.runId,
       threadId: input.run.threadId,
       event: input.event,
       principal: input.run.principal,
       projection: input.projection,
       budget: input.run.budgets.context,
-      directNodeIds: this.options.directNodeIds,
+      directNodeIds: context.directNodeIds,
       activeConditionRefs: [
         ...(input.projection.activeSceneId ? [`scene:${input.projection.activeSceneId}`] : []),
         ...input.projection.controlledTokenIds.map((id) => `token:${id}`),
@@ -180,7 +185,7 @@ export class ProductionRunExecutor implements AiDmRunExecutor {
     });
     const proposals: AiDmActionProposal[] = [];
     const tools = new AiDmRunBootstrapExecutor(
-      this.options.context,
+      context.service,
       session,
       proposalCreator(this.options.store, snapshot, proposals, this.#now),
       gmOnlyResolution ? "resolver" : "presenter",
@@ -211,7 +216,7 @@ export class ProductionRunExecutor implements AiDmRunExecutor {
     for (const definition of tools.loadedDefinitions) {
       this.options.store.recordLoadedToolDefinition(definition);
     }
-    const receipt = this.options.context.receipt(input.run.runId);
+    const receipt = context.service.receipt(input.run.runId);
     const dependencyMap = new Map(
       receipt.entries.map(({ nodeId, revision }) => [nodeId, { nodeId, revision }]),
     );
@@ -240,17 +245,34 @@ export class ProductionRunExecutor implements AiDmRunExecutor {
   }
 }
 
-export function createCampaignContext(campaignRoot: string): {
+export function createCampaignContext(campaignRoot?: string): {
   service: ContextService;
   directNodeIds: string[];
 } {
+  if (!campaignRoot)
+    return {
+      service: new ContextService(new RevisionedContextGraph(), {
+        readSource: () => {
+          throw new Error("No active-world campaign source available");
+        },
+      }),
+      directNodeIds: [],
+    };
   const repository = new CampaignSourceRepository([{ rootId: "campaign", path: campaignRoot }]);
   const parser = new CampaignMarkdownParser(repository);
   const graph = new RevisionedContextGraph();
-  const seeds = ["campaign-state.md", "izzycampaign.md"];
-  for (const path of seeds) graph.replaceDocument(parser.parse("campaign", path));
+  const seeds = ["campaign-state.md"];
+  const loaded: string[] = [];
+  for (const path of seeds) {
+    try {
+      graph.replaceDocument(parser.parse("campaign", path));
+      loaded.push(path);
+    } catch {
+      /* Missing campaign state is unavailable, never a workspace fallback. */
+    }
+  }
   return {
     service: new ContextService(graph, repository),
-    directNodeIds: seeds.map((path) => sourceNodeId("campaign", path)),
+    directNodeIds: loaded.map((path) => sourceNodeId("campaign", path)),
   };
 }

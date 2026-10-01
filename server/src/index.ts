@@ -24,6 +24,7 @@ import { loadAiDmServerConfig } from "./config.js";
 import { ChatKitReadTools } from "./chatkit/read-tools.js";
 import { createChatKitGateway } from "./chatkit/gateway.js";
 import { ContinuationCapsuleSigner } from "./context/index.js";
+import { WorldCampaignContext, worldCampaignRoot } from "./context/world-campaign.js";
 import { FoundryWorldGateway, StreamableFoundryLocalApiMcpClient } from "./integrations/index.js";
 import {
   createCampaignContext,
@@ -106,7 +107,8 @@ async function main(): Promise<void> {
     validateLocalSessionProof: (proof) => foundrySessions.validateProof(proof),
   });
   await chatGptAuth.initialize();
-  const context = createCampaignContext(config.campaignRoot);
+  const context = createCampaignContext();
+  const campaign = new WorldCampaignContext(config.worldsRoot);
   const catalogProvider = mcpClient
     ? new FoundryLocalApiProviderAdapter({
         providerVersion: "0.1.0",
@@ -135,6 +137,13 @@ async function main(): Promise<void> {
     catalog,
     context: context.service,
     directNodeIds: context.directNodeIds,
+    contextForWorld: (worldId) => {
+      try {
+        return createCampaignContext(worldCampaignRoot(config.worldsRoot, worldId));
+      } catch {
+        return createCampaignContext();
+      }
+    },
     capsuleSigner: new ContinuationCapsuleSigner(config.signingKey),
   });
 
@@ -175,6 +184,7 @@ async function main(): Promise<void> {
   const readTools = mcpClient
     ? new ChatKitReadTools(mcpClient, authorizeChatKit, readCatalog, {
         internalSecret: chatkitSecret,
+        campaign,
       })
     : null;
   const chatkitDirectory = fileURLToPath(new URL("../../chatkit-server/", import.meta.url));
