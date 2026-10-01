@@ -9,6 +9,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 from agents import Agent, Runner, RunConfig, ModelSettings, function_tool
 import httpx2 as httpx
@@ -107,16 +108,17 @@ class SqliteStore(Store[dict]):
 async def read_foundry(context, operation, arguments=None):
     """Only Node-issued response capabilities may access the bounded read adapter."""
     url = os.environ.get("AI_DM_CHATKIT_READ_URL", "")
-    if not url.startswith("http://127.0.0.1:") or not context.get("readRun"):
-        return {"error": "Authorized Foundry reads unavailable"}
+    target = urlparse(url)
+    if target.scheme != "http" or target.hostname != "127.0.0.1" or target.username or target.password or target.path != "/internal/chatkit/read" or target.query or target.fragment or not context.get("readRun"):
+        return {"ok": False, "error": {"code": "READ_UNAVAILABLE", "message": "Authorized Foundry reads unavailable"}}
     try:
         async with httpx.AsyncClient(timeout=12.0) as client:
-            response = await client.post(url, headers={"x-chatkit-read-run": context["readRun"]}, json={"operation": operation, "arguments": arguments or {}})
+            response = await client.post(url, headers={"x-chatkit-read-run": context["readRun"], "x-chatkit-secret": context["internalSecret"], "x-chatkit-world": context["worldId"], "x-chatkit-user": context["userId"], "x-chatkit-thread": context["threadId"]}, json={"operation": operation, "arguments": arguments or {}})
             if response.status_code != 200 or len(response.content) > 32768:
-                return {"error": "Authorized Foundry read failed"}
-            return response.json()["result"]
+                return {"ok": False, "error": {"code": "READ_UNAVAILABLE", "message": "Authorized Foundry read failed"}}
+            return response.json()
     except (httpx.HTTPError, ValueError, KeyError):
-        return {"error": "Authorized Foundry read failed"}
+        return {"ok": False, "error": {"code": "READ_UNAVAILABLE", "message": "Authorized Foundry read failed"}}
 
 
 def build_agent(context):
@@ -141,6 +143,7 @@ def build_agent(context):
 
 class FoundryChatKit(ChatKitServer[dict]):
     async def respond(self, thread, input, context):
+        context = {**context, "threadId": thread.id}
         items = await self.store.load_thread_items(thread.id, None, 100, "desc", context)
         agent_context = AgentContext(thread=thread, store=self.store, request_context=context)
         agent_input = await simple_to_agent_input(list(reversed(items.data)))
@@ -199,7 +202,7 @@ def create_app(store=None, server=None, secret=None):
             principal = json.loads(base64.b64decode(request.headers["x-chatkit-principal"]))
             if principal.get("isGm") is not True or not all(isinstance(principal.get(k), str) and 0 < len(principal[k]) <= 128 for k in ("worldId", "userId")):
                 raise ValueError()
-            return {**principal, "apiKey": request.headers.get("x-chatkit-api-key", ""), "model": request.headers.get("x-chatkit-model", ""), "readRun": request.headers.get("x-chatkit-read-run", "")}
+            return {**principal, "apiKey": request.headers.get("x-chatkit-api-key", ""), "model": request.headers.get("x-chatkit-model", ""), "readRun": request.headers.get("x-chatkit-read-run", ""), "internalSecret": secret}
         except Exception:
             raise HTTPException(403, "Invalid gateway principal") from None
 
@@ -224,6 +227,8 @@ def create_app(store=None, server=None, secret=None):
             body = json.loads(raw)
         except Exception:
             raise HTTPException(400, "Invalid ChatKit request") from None
+        if not isinstance(body, dict) or not isinstance(body.get("params", {}), dict):
+            raise HTTPException(400, "Invalid ChatKit request")
         operation, params = body.get("type"), body.get("params", {})
         thread_id = params.get("thread_id")
         if thread_id:
@@ -236,6 +241,8 @@ def create_app(store=None, server=None, secret=None):
         request_id = None
         if operation == "threads.custom_action":
             action = params.get("action", {})
+            if not isinstance(action, dict):
+                raise HTTPException(400, "Invalid Foundry action")
             payload = validate_action(action.get("type"), action.get("payload"))
             request_id = (key, payload["requestId"])
         if inference:

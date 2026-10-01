@@ -40,6 +40,7 @@ import {
 import { AiDmOperationalStore, openStorageDatabase } from "./storage/index.js";
 import {
   DEFAULT_FOUNDRY_LOCAL_API_METADATA,
+  CHATKIT_READ_TOOL_METADATA,
   FoundryLocalApiProviderAdapter,
   TrustedToolCatalog,
   type ProviderToolSnapshot,
@@ -137,34 +138,45 @@ async function main(): Promise<void> {
     capsuleSigner: new ContinuationCapsuleSigner(config.signingKey),
   });
 
-  const authorizeChatKit = async (identity: AiDmAuthenticatedIdentity, signal?: AbortSignal): Promise<void> => {
-        if (!mcpClient) throw new Error("Foundry capability provider unavailable.");
-        const values = await Promise.all(
-          ["foundry_get_world", "foundry_get_user_by_id"].map((name) =>
-            mcpClient.callTool(
-              {
-                name,
-                arguments: name === "foundry_get_world" ? {} : { userId: identity.userId },
-                idempotencyKey: null,
-              },
-              { ...(signal ? { signal } : {}), timeout: 10_000, maxTotalTimeout: 10_000 },
-            ),
-          ),
-        );
-        const world = values[0] as Record<string, AiDmJsonValue>;
-        const user = values[1] as Record<string, AiDmJsonValue>;
-        if (
-          !world ||
-          !user ||
-          (world["_id"] ?? world["id"]) !== identity.worldId ||
-          (user["_id"] ?? user["id"]) !== identity.userId ||
-          !(user["isGM"] === true || Number(user["role"]) >= 4)
-        )
-          throw new Error("Current Foundry GM authorization required.");
-      };
-  const readTools = mcpClient ? new ChatKitReadTools(mcpClient, authorizeChatKit) : null;
-
+  const authorizeChatKit = async (
+    identity: AiDmAuthenticatedIdentity,
+    signal?: AbortSignal,
+  ): Promise<void> => {
+    if (!mcpClient) throw new Error("Foundry capability provider unavailable.");
+    const values = await Promise.all(
+      ["foundry_get_world", "foundry_get_user_by_id"].map((name) =>
+        mcpClient.callTool(
+          {
+            name,
+            arguments: name === "foundry_get_world" ? {} : { userId: identity.userId },
+            idempotencyKey: null,
+          },
+          { ...(signal ? { signal } : {}), timeout: 10_000, maxTotalTimeout: 10_000 },
+        ),
+      ),
+    );
+    const world = values[0] as Record<string, AiDmJsonValue>;
+    const user = values[1] as Record<string, AiDmJsonValue>;
+    if (
+      !world ||
+      !user ||
+      (world["_id"] ?? world["id"]) !== identity.worldId ||
+      (user["_id"] ?? user["id"]) !== identity.userId ||
+      !(user["isGM"] === true || Number(user["role"]) >= 4)
+    )
+      throw new Error("Current Foundry GM authorization required.");
+  };
   const chatkitSecret = randomBytes(32).toString("hex");
+  const readCatalog = new TrustedToolCatalog(
+    catalogProvider,
+    CHATKIT_READ_TOOL_METADATA,
+    "chatkit-read-v1",
+  );
+  const readTools = mcpClient
+    ? new ChatKitReadTools(mcpClient, authorizeChatKit, readCatalog, {
+        internalSecret: chatkitSecret,
+      })
+    : null;
   const chatkitDirectory = fileURLToPath(new URL("../../chatkit-server/", import.meta.url));
   const chatkitChild = spawn(
     config.chatkitPython,

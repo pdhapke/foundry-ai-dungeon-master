@@ -1,4 +1,5 @@
 import type { AiDmJsonValue } from "@foundry-ai-dungeon-master/shared";
+import type { RequestOptions } from "@modelcontextprotocol/sdk/shared/protocol.js";
 
 import { digestJson } from "./canonical.js";
 import type {
@@ -23,11 +24,14 @@ export interface FoundryLocalApiMcpTool {
  */
 export interface FoundryLocalApiMcpClient {
   listTools(): Promise<readonly FoundryLocalApiMcpTool[]>;
-  callTool(request: {
-    name: string;
-    arguments: AiDmJsonValue;
-    idempotencyKey: string | null;
-  }): Promise<AiDmJsonValue>;
+  callTool(
+    request: {
+      name: string;
+      arguments: AiDmJsonValue;
+      idempotencyKey: string | null;
+    },
+    options?: RequestOptions,
+  ): Promise<AiDmJsonValue>;
 }
 
 export interface FoundryLocalApiProviderOptions {

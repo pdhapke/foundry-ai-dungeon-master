@@ -1,5 +1,6 @@
 import type { RequestHandler } from "express";
 import type { AiDmAuthenticatedIdentity } from "@foundry-ai-dungeon-master/shared";
+import { bounded } from "./read-tools.js";
 
 const diagnostics = {
   requests: 0,
@@ -30,7 +31,13 @@ export interface ChatKitGatewayOptions {
     identity: AiDmAuthenticatedIdentity,
   ): Promise<{ apiKey: string; model: string }>;
   fetch?: typeof globalThis.fetch;
-  beginReadRun?(identity: AiDmAuthenticatedIdentity, body: unknown, signal: AbortSignal): { token: string; release(): void };
+  timeoutMs?: number;
+  runTimeoutMs?: number;
+  beginReadRun?(
+    identity: AiDmAuthenticatedIdentity,
+    body: unknown,
+    signal: AbortSignal,
+  ): { token: string; release(): void };
 }
 
 /** Authentication and transparent ChatKit transport; model credentials never reach the browser. */
@@ -91,7 +98,10 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
     response.on("close", disconnected);
     try {
       stage("verifying-current-gm");
-      await options.authorize(identity, abort.signal);
+      await bounded(
+        options.authorize(identity, abort.signal),
+        AbortSignal.any([abort.signal, AbortSignal.timeout(options.timeoutMs ?? 10_000)]),
+      );
     } catch {
       request.off("aborted", disconnected);
       response.off("close", disconnected);
@@ -107,32 +117,37 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
     }
     if (abort.signal.aborted) return;
     let readRun: { token: string; release(): void } | undefined;
+    const runTimeout = setTimeout(() => abort.abort(), options.runTimeoutMs ?? 300_000);
     try {
       stage("resolving-authorization");
-      const credentials = await options.resolveAuthorization(identity);
-      if (!request.path.endsWith("/thread")) readRun = options.beginReadRun?.(identity, request.body, abort.signal);
+      const credentials = await bounded(options.resolveAuthorization(identity), abort.signal);
+      if (!request.path.endsWith("/thread"))
+        readRun = options.beginReadRun?.(identity, request.body, abort.signal);
       stage("proxying");
       const upstreamEndpoint = request.path.endsWith("/thread")
         ? new URL("/chatkit/thread", endpoint)
         : endpoint;
-      const headerTimeout = setTimeout(() => abort.abort(), 15_000);
+      const headerTimeout = setTimeout(() => abort.abort(), options.timeoutMs ?? 15_000);
       let upstream: Response;
       try {
-        upstream = await (options.fetch ?? globalThis.fetch)(upstreamEndpoint, {
-          method: "POST",
-          signal: abort.signal,
-          headers: {
-            "content-type": "application/json",
-            "x-chatkit-secret": options.internalSecret,
-            "x-chatkit-principal": Buffer.from(
-              JSON.stringify({ worldId: identity.worldId, userId: identity.userId, isGm: true }),
-            ).toString("base64"),
-            "x-chatkit-api-key": credentials.apiKey,
-            "x-chatkit-model": credentials.model,
-            ...(readRun ? { "x-chatkit-read-run": readRun.token } : {}),
-          },
-          body: JSON.stringify(request.body),
-        });
+        upstream = await bounded(
+          (options.fetch ?? globalThis.fetch)(upstreamEndpoint, {
+            method: "POST",
+            signal: abort.signal,
+            headers: {
+              "content-type": "application/json",
+              "x-chatkit-secret": options.internalSecret,
+              "x-chatkit-principal": Buffer.from(
+                JSON.stringify({ worldId: identity.worldId, userId: identity.userId, isGm: true }),
+              ).toString("base64"),
+              "x-chatkit-api-key": credentials.apiKey,
+              "x-chatkit-model": credentials.model,
+              ...(readRun ? { "x-chatkit-read-run": readRun.token } : {}),
+            },
+            body: JSON.stringify(request.body),
+          }),
+          abort.signal,
+        );
       } finally {
         clearTimeout(headerTimeout);
       }
@@ -148,18 +163,33 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
       const reader = upstream.body.getReader();
       try {
         while (!abort.signal.aborted) {
-          const chunk = (await reader.read()) as { done: boolean; value?: Uint8Array };
+          const chunk = (await bounded(reader.read(), abort.signal)) as {
+            done: boolean;
+            value?: Uint8Array;
+          };
           const { done, value } = chunk;
           if (done) break;
           if (!value) continue;
+          await bounded(
+            options.authorize(identity, abort.signal),
+            AbortSignal.any([abort.signal, AbortSignal.timeout(options.timeoutMs ?? 10_000)]),
+          );
           if (!response.write(Buffer.from(value)))
             await new Promise<void>((resolve) => {
-              response.once("drain", resolve);
-              response.once("close", resolve);
+              const finish = () => {
+                response.off("drain", finish);
+                response.off("close", finish);
+                abort.signal.removeEventListener("abort", finish);
+                resolve();
+              };
+              response.once("drain", finish);
+              response.once("close", finish);
+              abort.signal.addEventListener("abort", finish, { once: true });
+              if (abort.signal.aborted) finish();
             });
         }
       } finally {
-        await reader.cancel().catch(() => {});
+        await bounded(reader.cancel(), AbortSignal.timeout(1000)).catch(() => {});
       }
       response.end();
       if (upstream.ok) stage("completed");
@@ -168,7 +198,10 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
         if (!response.destroyed && !response.headersSent) {
           stage("failed", "SIDECAR_TIMEOUT");
           response.status(504).json({ error: "ChatKit service did not respond in time." });
-        } else stage("cancelled");
+        } else {
+          stage("cancelled");
+          if (!response.destroyed && !response.writableEnded) response.end();
+        }
         return;
       }
       stage(
@@ -184,6 +217,7 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
       else response.end();
     } finally {
       readRun?.release();
+      clearTimeout(runTimeout);
       request.off("aborted", disconnected);
       response.off("close", disconnected);
     }

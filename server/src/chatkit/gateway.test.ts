@@ -153,3 +153,108 @@ void describe("ChatKit gateway (mock sidecar)", () => {
     assert.equal(forbidden.status, 403);
   });
 });
+
+void describe("ChatKit bridge lifecycle (mock sidecar, real HTTP)", () => {
+  void it("issues capability only internally and releases after streamed response", async () => {
+    let releases = 0;
+    const app = fixture({
+      beginReadRun: (_identity, body, signal) => {
+        assert.equal((body as { type: string }).type, "threads.create");
+        assert.equal(signal.aborted, false);
+        return {
+          token: "internal-capability",
+          release: () => {
+            releases++;
+          },
+        };
+      },
+      fetch: (_url, init) => {
+        assert.equal(new Headers(init?.headers).get("x-chatkit-read-run"), "internal-capability");
+        return Promise.resolve(
+          new Response("data: first\n\n", { headers: { "content-type": "text/event-stream" } }),
+        );
+      },
+    });
+    const result = await request(app).post("/chatkit").send({ type: "threads.create", params: {} });
+    assert.equal(result.status, 200);
+    assert.equal(releases, 1);
+    assert.doesNotMatch(result.text, /internal-capability/);
+  });
+  void it("does not forward a chunk after live GM authorization is revoked", async () => {
+    let authorizations = 0;
+    const app = fixture({
+      authorize: async () => {
+        if (++authorizations > 1) throw new Error("revoked");
+      },
+    });
+    const result = await request(app).post("/chatkit").send({ type: "threads.create", params: {} });
+    assert.doesNotMatch(result.text, /thread.item.updated/);
+  });
+  void it("bounds unresponsive headers and stalled stream; releases capabilities", async () => {
+    let releases = 0;
+    for (const fetch of [
+      () => new Promise<Response>(() => {}),
+      () =>
+        Promise.resolve(
+          new Response(new ReadableStream<Uint8Array>({ pull: () => new Promise(() => {}) }), {
+            headers: { "content-type": "text/event-stream" },
+          }),
+        ),
+    ]) {
+      const app = fixture({
+        timeoutMs: 30,
+        runTimeoutMs: 60,
+        fetch,
+        beginReadRun: () => ({
+          token: "cap",
+          release: () => {
+            releases++;
+          },
+        }),
+      });
+      const result = await request(app)
+        .post("/chatkit")
+        .send({ type: "threads.create", params: {} });
+      assert.equal(result.status, 504);
+    }
+    assert.equal(releases, 2);
+  });
+  void it("closes a stream that stalls after its first chunk and cancels the run capability", async () => {
+    let releases = 0;
+    let cancelled = false;
+    let runSignal: AbortSignal | undefined;
+    const app = fixture({
+      runTimeoutMs: 40,
+      beginReadRun: (_identity, _body, signal) => {
+        runSignal = signal;
+        return {
+          token: "cap",
+          release: () => {
+            releases++;
+          },
+        };
+      },
+      fetch: async () =>
+        new Response(
+          new ReadableStream<Uint8Array>({
+            start(controller) {
+              controller.enqueue(new TextEncoder().encode("data: first\n\n"));
+            },
+            cancel() {
+              cancelled = true;
+            },
+          }),
+          { headers: { "content-type": "text/event-stream" } },
+        ),
+    });
+    const result = await request(app)
+      .post("/chatkit")
+      .send({ type: "threads.create", params: {} })
+      .timeout({ deadline: 500 });
+    assert.equal(result.status, 200);
+    assert.equal(result.text, "data: first\n\n");
+    assert.equal(cancelled, true);
+    assert.equal(runSignal?.aborted, true);
+    assert.equal(releases, 1);
+  });
+});

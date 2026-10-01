@@ -124,3 +124,27 @@ export const DEFAULT_FOUNDRY_LOCAL_API_METADATA: readonly ToolMetadataOverlay[] 
     keywords: ["narrate", "announce", "chat", "arrival", "table"],
   },
 ];
+
+/** Reviewed ChatKit reads. Results are projected by the adapter and restricted to the active scene. */
+export const CHATKIT_READ_TOOL_METADATA: readonly ToolMetadataOverlay[] = [
+  ["foundry_list_scenes", "Locate active scene"],
+  ["foundry_get_scene", "Read active scene"],
+  ["foundry_get_actor", "Read current-scene actor"],
+].map(([toolId, displayName]) => ({
+  toolId: toolId!,
+  displayName: displayName!,
+  purpose: "Bounded authorized ChatKit observation",
+  useCases: ["current scene context"],
+  effects: ["read"],
+  acceptsEntityTypes: [],
+  producesEntityTypes: [],
+  relatedToolIds: [],
+  risk: "low",
+  approvalPolicy: "none",
+  requiredPermissions: ["current GM", "current world", "run capability"],
+  discoverableBy: ["gm"],
+  executableBy: ["gm"],
+  idempotency: "not-applicable",
+  guarantees: { expectedRevision: false, idempotentCommit: true },
+  keywords: ["scene", "actor"],
+}));

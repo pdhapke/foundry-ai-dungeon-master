@@ -15,7 +15,7 @@ from fastapi import HTTPException
 from chatkit.server import StreamingResult
 from chatkit.store import NotFoundError
 from chatkit.types import ThreadMetadata, HiddenContextItem, AssistantMessageItem, AssistantMessageContent, ThreadItemDoneEvent
-from app import SqliteStore, FoundryChatKit, create_app, validate_action, build_agent
+from app import SqliteStore, FoundryChatKit, create_app, validate_action, build_agent, read_foundry
 
 
 class StoreTests(unittest.IsolatedAsyncioTestCase):
@@ -132,6 +132,70 @@ class StoreTests(unittest.IsolatedAsyncioTestCase):
             third = await endpoint(FakeRequest())
             await anext(third.body_iterator)
             await third.body_iterator.aclose()
+            store.db.close()
+
+
+class AdapterTests(unittest.IsolatedAsyncioTestCase):
+    """Real sidecar HTTP client/Agents tool construction; Node provider/model are mocked here."""
+    async def test_adapter_headers_scope_structured_results_and_failures(self):
+        captured = []
+        def capture(request):
+            captured.append(request)
+            return httpx.Response(200, json={"ok": True, "result": {"schemaVersion": 1, "scene": {"name": "Hall"}}})
+        client = httpx.AsyncClient(transport=httpx.MockTransport(capture))
+        context = {"readRun": "capability", "internalSecret": "internal", "worldId": "w", "userId": "gm", "threadId": "t"}
+        with patch.dict("os.environ", {"AI_DM_CHATKIT_READ_URL": "http://127.0.0.1:3940/internal/chatkit/read"}), patch("app.httpx.AsyncClient", return_value=client):
+            result = await read_foundry(context, "actor", {"id": "a"})
+        self.assertTrue(result["ok"])
+        self.assertEqual(result["result"]["scene"]["name"], "Hall")
+        request = captured[0]
+        for header, value in [("x-chatkit-secret", "internal"), ("x-chatkit-world", "w"), ("x-chatkit-user", "gm"), ("x-chatkit-thread", "t"), ("x-chatkit-read-run", "capability")]:
+            self.assertEqual(request.headers[header], value)
+        self.assertEqual(json.loads(request.content), {"operation": "actor", "arguments": {"id": "a"}})
+        for status in (403, 504):
+            client = httpx.AsyncClient(transport=httpx.MockTransport(lambda request: httpx.Response(status)))
+            with patch.dict("os.environ", {"AI_DM_CHATKIT_READ_URL": "http://127.0.0.1:3940/internal/chatkit/read"}), patch("app.httpx.AsyncClient", return_value=client):
+                self.assertFalse((await read_foundry(context, "scene"))["ok"])
+        with patch.dict("os.environ", {"AI_DM_CHATKIT_READ_URL": "https://untrusted.example/read"}):
+            self.assertFalse((await read_foundry(context, "scene"))["ok"])
+
+    async def test_adapter_cancellation_propagates(self):
+        async def held(request):
+            await asyncio.Event().wait()
+        client = httpx.AsyncClient(transport=httpx.MockTransport(held))
+        context = {"readRun": "capability", "internalSecret": "internal", "worldId": "w", "userId": "gm", "threadId": "t"}
+        with patch.dict("os.environ", {"AI_DM_CHATKIT_READ_URL": "http://127.0.0.1:3940/internal/chatkit/read"}), patch("app.httpx.AsyncClient", return_value=client):
+            task = asyncio.create_task(read_foundry(context, "scene"))
+            await asyncio.sleep(0)
+            task.cancel()
+            with self.assertRaises(asyncio.CancelledError):
+                await task
+
+    async def test_typed_and_custom_action_share_authorized_snapshot(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = SqliteStore(str(Path(directory) / "test.sqlite"))
+            context = {"worldId": "w", "userId": "gm", "apiKey": "mock", "model": "mock", "readRun": "cap"}
+            thread = ThreadMetadata(id="t", created_at=datetime.now(timezone.utc))
+            await store.save_thread(thread, context)
+            server = FoundryChatKit(store)
+            captured, reads = [], []
+            class FakeRun:
+                def cancel(self): pass
+            def runner(agent, inputs, **kwargs):
+                captured.append(inputs[-1])
+                return FakeRun()
+            async def fake_events(*args):
+                yield "mock event"
+            async def read(request_context, operation, arguments=None):
+                reads.append((request_context["threadId"], operation))
+                return {"ok": True, "result": {"scene": {"name": "Authoritative Hall"}}}
+            with patch("app.Runner.run_streamed", runner), patch("app.build_agent", return_value=object()), patch("app.stream_agent_response", fake_events), patch("app.read_foundry", read):
+                self.assertEqual([v async for v in server.respond(thread, None, context)], ["mock event"])
+                from types import SimpleNamespace
+                action = SimpleNamespace(type="foundry.context-response", payload={"requestId": "r", "prompt": "Describe", "context": {"sceneName": "Spoofed"}})
+                self.assertEqual([v async for v in server.action(thread, action, None, context)], ["mock event"])
+            self.assertEqual(captured[0], captured[1])
+            self.assertEqual(reads, [("t", "context"), ("t", "context")])
             store.db.close()
 
 
