@@ -66,6 +66,9 @@ export class AiDungeonMasterApplication extends Base {
           .catch((error) => this.#instance?.fail(error));
       },
       cancelResponse: () => this.#instance?.cancel(),
+      reviewNativeActions: () => {
+        void this.#instance?.reviewNativeActions().catch((error) => this.#instance?.fail(error));
+      },
       chatGptSignIn: () =>
         this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()),
       chatGptRefresh: () =>
@@ -290,7 +293,7 @@ export class AiDungeonMasterApplication extends Base {
     const gateway = new URL(gatewayUrl());
     if (
       destination.origin !== gateway.origin ||
-      !["/chatkit", "/chatkit/thread"].includes(destination.pathname)
+      !["/chatkit", "/chatkit/thread", "/chatkit/actions"].includes(destination.pathname)
     ) {
       throw new Error("Refused to send Foundry authentication outside the ChatKit gateway.");
     }
@@ -359,6 +362,70 @@ export class AiDungeonMasterApplication extends Base {
       throw error;
     }
   };
+  async reviewNativeActions(): Promise<void> {
+    if (!this.#threadId) {
+      this.status("Open a conversation before reviewing actions.");
+      return;
+    }
+    const panel = this.element.querySelector<HTMLElement>(".ai-dm-native-actions");
+    if (!panel) return;
+    const response = await this.authenticatedFetch(`${gatewayUrl()}/actions`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ threadId: this.#threadId }),
+    });
+    const data = (await response.json()) as {
+      result: Array<{
+        actionId: string;
+        kind: string;
+        status: string;
+        input: { title?: string; text?: string; formula?: string };
+        receipt: { total?: number } | null;
+      }>;
+    };
+    panel.replaceChildren();
+    for (const action of data.result) {
+      const row = document.createElement("section");
+      const label = document.createElement("p");
+      label.textContent = `${action.kind === "note" ? action.input.title : action.input.formula}: ${action.status}${action.receipt?.total !== undefined ? `, total ${action.receipt.total}` : ""}`;
+      row.append(label);
+      if (action.kind === "note") {
+        const preview = document.createElement("p");
+        preview.textContent = action.input.text ?? "";
+        row.append(preview);
+        if (action.status === "pending")
+          for (const choice of ["approve", "reject"] as const) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.textContent =
+              choice === "approve" ? "Approve private session journal" : "Reject";
+            button.addEventListener("click", () => {
+              button.disabled = true;
+              void this.authenticatedFetch(`${gatewayUrl()}/actions`, {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify({
+                  threadId: this.#threadId,
+                  actionId: action.actionId,
+                  decision: choice,
+                }),
+              })
+                .then(async (response) => {
+                  await response.json();
+                  await this.reviewNativeActions();
+                })
+                .catch((error) => {
+                  this.fail(error);
+                  button.disabled = false;
+                });
+            });
+            row.append(button);
+          }
+      }
+      panel.append(row);
+    }
+    if (!data.result.length) panel.textContent = "No native actions in this conversation.";
+  }
   async trigger(request: ChatKitTrigger): Promise<void> {
     if (!game.user.isGM) throw new Error("ChatKit currently requires a Foundry GM.");
     const prompt = request.prompt?.trim();

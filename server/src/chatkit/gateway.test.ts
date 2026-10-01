@@ -28,6 +28,55 @@ function fixture(overrides: Partial<ChatKitGatewayOptions> = {}) {
   });
 }
 void describe("ChatKit gateway (mock sidecar)", () => {
+  void it("native confirmation endpoint authenticates and verifies current GM without model credentials or provider calls", async () => {
+    let called = 0;
+    const app = fixture({
+      resolveAuthorization: () => {
+        throw new Error("Must not obtain billable credentials");
+      },
+      fetch: () => {
+        throw new Error("Must not invoke sidecar/model");
+      },
+      nativeActions: (principal, body) => {
+        assert.equal(principal.worldId, "world");
+        assert.deepEqual(body, { threadId: "thread" });
+        called++;
+        return Promise.resolve([]);
+      },
+    });
+    assert.equal(
+      (await request(app).post("/chatkit/actions").send({ threadId: "thread" })).status,
+      200,
+    );
+    assert.equal(called, 1);
+    assert.equal(
+      (
+        await request(
+          fixture({
+            authorize: () => Promise.reject(new Error("revoked")),
+            nativeActions: () => {
+              called++;
+              return Promise.resolve([]);
+            },
+          }),
+        )
+          .post("/chatkit/actions")
+          .send({ threadId: "thread" })
+      ).status,
+      403,
+    );
+    assert.equal(called, 1);
+    assert.equal(
+      (
+        await request(app)
+          .post("/chatkit/actions")
+          .set("Origin", "http://evil.invalid")
+          .send({ threadId: "thread" })
+      ).status,
+      403,
+    );
+    assert.equal(called, 1);
+  });
   void it("rejects expired sessions and players before resolving credentials", async () => {
     let called = false;
     const credentials = () => {
@@ -184,6 +233,7 @@ void describe("ChatKit bridge lifecycle (mock sidecar, real HTTP)", () => {
     let authorizations = 0;
     const app = fixture({
       authorize: async () => {
+        await Promise.resolve();
         if (++authorizations > 1) throw new Error("revoked");
       },
     });
@@ -234,17 +284,19 @@ void describe("ChatKit bridge lifecycle (mock sidecar, real HTTP)", () => {
           },
         };
       },
-      fetch: async () =>
-        new Response(
-          new ReadableStream<Uint8Array>({
-            start(controller) {
-              controller.enqueue(new TextEncoder().encode("data: first\n\n"));
-            },
-            cancel() {
-              cancelled = true;
-            },
-          }),
-          { headers: { "content-type": "text/event-stream" } },
+      fetch: () =>
+        Promise.resolve(
+          new Response(
+            new ReadableStream<Uint8Array>({
+              start(controller) {
+                controller.enqueue(new TextEncoder().encode("data: first\n\n"));
+              },
+              cancel() {
+                cancelled = true;
+              },
+            }),
+            { headers: { "content-type": "text/event-stream" } },
+          ),
         ),
     });
     const result = await request(app)

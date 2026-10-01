@@ -1,6 +1,7 @@
 import type { RequestHandler } from "express";
 import type { AiDmAuthenticatedIdentity } from "@foundry-ai-dungeon-master/shared";
 import { bounded } from "./read-tools.js";
+import type { AiDmJsonValue } from "@foundry-ai-dungeon-master/shared";
 
 const diagnostics = {
   requests: 0,
@@ -33,6 +34,11 @@ export interface ChatKitGatewayOptions {
   fetch?: typeof globalThis.fetch;
   timeoutMs?: number;
   runTimeoutMs?: number;
+  nativeActions?(
+    identity: AiDmAuthenticatedIdentity,
+    body: unknown,
+    signal: AbortSignal,
+  ): Promise<AiDmJsonValue>;
   beginReadRun?(
     identity: AiDmAuthenticatedIdentity,
     body: unknown,
@@ -119,6 +125,14 @@ export function createChatKitGateway(options: ChatKitGatewayOptions): RequestHan
     let readRun: { token: string; release(): void } | undefined;
     const runTimeout = setTimeout(() => abort.abort(), options.runTimeoutMs ?? 300_000);
     try {
+      if (request.path.endsWith("/actions")) {
+        if (!options.nativeActions) throw new Error("Native actions unavailable");
+        response.json({
+          ok: true,
+          result: await options.nativeActions(identity, request.body, abort.signal),
+        });
+        return;
+      }
       stage("resolving-authorization");
       const credentials = await bounded(options.resolveAuthorization(identity), abort.signal);
       if (!request.path.endsWith("/thread"))

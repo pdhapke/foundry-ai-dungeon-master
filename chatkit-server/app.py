@@ -124,6 +124,16 @@ async def read_foundry(context, operation, arguments=None):
 
 def build_agent(context):
     @function_tool
+    async def foundry_roll_dice(action_id: str, formula: str) -> str:
+        """Automatic native dice, no chat posting. Stable action_id for retries. Formula NdS plus optional integer modifier; N 1..99, S 4/6/8/10/12/20/100. Only completed receipt is an actual roll; uncertain must never be repeated under a new ID."""
+        return json.dumps(await read_foundry(context, "native_roll", {"actionId": action_id, "formula": formula}))
+
+    @function_tool
+    async def foundry_propose_session_note(action_id: str, title: str, text: str) -> str:
+        """Propose one private GM session journal (title max120, plain text max4000). No mutation until user explicitly approves in Review native actions. Stable action_id; pending is not success. Actor HP/doors/inventory/arbitrary actions are unavailable."""
+        return json.dumps(await read_foundry(context, "native_propose_note", {"actionId": action_id, "title": title, "text": text}))
+
+    @function_tool
     async def campaign_search(query: str) -> str:
         """Search active-world Markdown and retrieve bounded, hashed, attributed sections; query max 256 characters."""
         return json.dumps(await read_foundry(context, "campaign", {"query": query}))
@@ -148,7 +158,7 @@ def build_agent(context):
         instructions=DM_PROMPT,
         model=OpenAIResponsesModel(model=context["model"], openai_client=AsyncOpenAI(api_key=context["apiKey"], max_retries=0)),
         model_settings=ModelSettings(store=False),
-        tools=[foundry_read_scene, foundry_read_actor, campaign_search, campaign_validate_sources] if context.get("readRun") else [],
+        tools=[foundry_read_scene, foundry_read_actor, campaign_search, campaign_validate_sources, foundry_roll_dice, foundry_propose_session_note] if context.get("readRun") else [],
     )
 
 

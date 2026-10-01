@@ -12,6 +12,7 @@ import {
   type TrustedToolCatalog,
 } from "../tool-catalog/index.js";
 import type { WorldCampaignContext } from "../context/world-campaign.js";
+import type { ChatKitNativeActions } from "./native-actions.js";
 
 type RecordValue = Record<string, AiDmJsonValue>;
 function object(value: unknown): RecordValue {
@@ -34,7 +35,7 @@ export async function bounded<T>(work: Promise<T>, signal: AbortSignal): Promise
   signal.throwIfAborted();
   let cancel: () => void = () => {};
   const stopped = new Promise<never>((_, reject) => {
-    cancel = () => reject(signal.reason ?? new Error("Cancelled"));
+    cancel = () => reject(signal.reason instanceof Error ? signal.reason : new Error("Cancelled"));
     signal.addEventListener("abort", cancel, { once: true });
   });
   try {
@@ -50,6 +51,7 @@ export interface ChatKitReadOptions {
   ttlMs?: number;
   now?: () => number;
   campaign?: WorldCampaignContext;
+  actions?: ChatKitNativeActions;
 }
 
 /** Ephemeral run-scoped adapter. Python sees only scene/actor summaries, never the administrative catalog. */
@@ -122,6 +124,16 @@ export class ChatKitReadTools {
     identifier(principal.threadId);
     // New ChatKit threads are assigned inside Python; only the authenticated sidecar may bind once.
     run.threadId ??= principal.threadId;
+    if (operation.startsWith("native_")) {
+      if (++run.calls > 12 || !this.options.actions)
+        throw new Error("Native action budget unavailable");
+      const signal = AbortSignal.any([
+        run.signal,
+        disconnected,
+        AbortSignal.timeout(this.options.timeoutMs ?? 10_000),
+      ]);
+      return this.options.actions.request(run.identity, principal, operation, args, signal);
+    }
     const input = object(args);
     if (
       !["context", "scene", "actor", "campaign", "campaign_validate_sources"].includes(operation) ||
@@ -287,7 +299,7 @@ export class ChatKitReadTools {
         for (const id of actors.slice(0, 4)) {
           const actor = object(await call("foundry_get_actor", { id }));
           if (identifier(actor["_id"] ?? actor["id"]) !== id) throw new Error("Actor changed");
-          (output["characters"] as AiDmJsonValue[]).push({
+          output["characters"].push({
             id,
             name: name(actor["name"]),
             type: name(actor["type"]),
@@ -304,6 +316,8 @@ export class ChatKitReadTools {
       }
     }
     await bounded(this.authorize(run.identity, signal), signal);
+    if (operation === "context" && this.options.actions)
+      object(data)["nativeActions"] = this.options.actions.recent(principal);
     if (Buffer.byteLength(JSON.stringify(data)) > 24_000)
       throw new Error("Read result exceeds budget");
     return data;
@@ -337,7 +351,7 @@ export class ChatKitReadTools {
       const result = await this.execute(
         request.get("x-chatkit-read-run") ?? "",
         principal,
-        String(body["operation"]),
+        typeof body["operation"] === "string" ? body["operation"] : "",
         body["arguments"] ?? {},
         abort.signal,
       );
@@ -369,13 +383,13 @@ const CHATKIT_ALLOWED_READS = [
 function actorState(actor: RecordValue): AiDmJsonValue {
   const system =
     actor["system"] && typeof actor["system"] === "object" && !Array.isArray(actor["system"])
-      ? (actor["system"] as RecordValue)
+      ? actor["system"]
       : {};
   const attributes =
     system["attributes"] &&
     typeof system["attributes"] === "object" &&
     !Array.isArray(system["attributes"])
-      ? (system["attributes"] as RecordValue)
+      ? system["attributes"]
       : {};
   const output: RecordValue = {};
   for (const key of ["hp", "ac", "movement"]) {

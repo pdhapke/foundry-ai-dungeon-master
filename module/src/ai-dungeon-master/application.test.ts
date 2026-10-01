@@ -128,6 +128,79 @@ void it("mounted ChatKit uses one owner-scoped thread for actions, aborts stream
   assert.equal(fetches.length, 2);
   assert.equal(components.length, 2);
   assert.equal((components[1]?.options as { initialThread: string }).initialThread, "thread_one");
+  class NativeElement extends EventTarget {
+    children: NativeElement[] = [];
+    textContent = "";
+    type = "";
+    disabled = false;
+    append(...nodes: NativeElement[]) {
+      this.children.push(...nodes);
+    }
+    replaceChildren() {
+      this.children = [];
+    }
+  }
+  const panel = new NativeElement();
+  const previousQuery = reopened.element.querySelector.bind(reopened.element);
+  Object.assign(reopened.element, {
+    querySelector: (query: string) =>
+      query === ".ai-dm-native-actions" ? panel : previousQuery(query),
+  });
+  const previousCreate = document.createElement.bind(document);
+  Object.assign(document, {
+    createElement: (tag: string) =>
+      tag === "openai-chatkit" ? previousCreate(tag) : new NativeElement(),
+  });
+  const decisions: unknown[] = [];
+  let noteState = "pending";
+  let refreshed: () => void = () => {};
+  const refreshComplete = new Promise<void>((resolve) => {
+    refreshed = resolve;
+  });
+  Object.assign(globalThis, {
+    fetch: (_input: unknown, init?: RequestInit) => {
+      assert.equal(typeof init?.body, "string");
+      const body = JSON.parse(init?.body as string) as Record<string, unknown>;
+      assert.equal(body["threadId"], "thread_one");
+      assert.equal(new Headers(init?.headers).get("x-ai-dm-session"), "memory-only");
+      if (body["decision"]) {
+        decisions.push(body);
+        noteState = "completed";
+      } else if (noteState === "completed") refreshed();
+      return Promise.resolve(
+        new Response(
+          JSON.stringify({
+            result: [
+              {
+                actionId: "note-one",
+                kind: "note",
+                status: noteState,
+                input: { title: "A session note", text: "<script>untrusted</script>" },
+                receipt: null,
+              },
+            ],
+          }),
+          { headers: { "content-type": "application/json" } },
+        ),
+      );
+    },
+  });
+  const beforeReviewRenderCount = renderCount;
+  await reopened.reviewNativeActions();
+  assert.equal(
+    panel.children[0]?.children[1]?.textContent,
+    "<script>untrusted</script>",
+    "preview uses textContent",
+  );
+  const approve = panel.children[0]?.children[2];
+  assert.equal(approve?.textContent, "Approve private session journal");
+  approve?.dispatchEvent(new Event("click"));
+  await refreshComplete;
+  assert.deepEqual(decisions, [
+    { threadId: "thread_one", actionId: "note-one", decision: "approve" },
+  ]);
+  assert.equal(renderCount, beforeReviewRenderCount, "review preserves mounted ChatKit");
+  Object.assign(document, { createElement: previousCreate });
   Object.assign(globalThis, {
     fetch: (_input: unknown, init?: RequestInit) => {
       fetches.push({ input: "stream", init });

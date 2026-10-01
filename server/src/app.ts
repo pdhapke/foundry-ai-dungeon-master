@@ -22,6 +22,8 @@ export function createAiDmApp(options: {
     app.post("/chatkit", options.chatkitHandler);
     app.options("/chatkit/thread", options.chatkitHandler);
     app.post("/chatkit/thread", options.chatkitHandler);
+    app.options("/chatkit/actions", options.chatkitHandler);
+    app.post("/chatkit/actions", options.chatkitHandler);
   }
   app.get("/health", async (_request, response) => {
     const readiness = await options.readiness();

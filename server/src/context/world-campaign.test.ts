@@ -5,6 +5,18 @@ import { join } from "node:path";
 import { it } from "node:test";
 import type { AiDmRunPrincipal } from "@foundry-ai-dungeon-master/shared";
 import { WorldCampaignContext, worldCampaignRoot } from "./world-campaign.js";
+interface RetrievedFixture {
+  excerpts: Array<{
+    narrationAllowed: boolean;
+    text: string;
+    sourceUri: string;
+    sourceHash: string;
+    span: { startLine: number; endLine: number };
+  }>;
+  characters: number;
+  partial: boolean;
+  utility: { effects: string[] };
+}
 const principal: AiDmRunPrincipal = {
   clientId: "fixture",
   lane: "gm",
@@ -31,7 +43,7 @@ function fixture() {
     cleanup: () => rmSync(root, { recursive: true, force: true }),
   };
 }
-it("searches relevant sections, attributes hashes/spans and keeps GM instructions private (no model)", () => {
+void it("searches relevant sections, attributes hashes/spans and keeps GM instructions private (no model)", () => {
   const f = fixture();
   try {
     writeFileSync(
@@ -42,31 +54,36 @@ it("searches relevant sections, attributes hashes/spans and keeps GM instruction
       join(f.campaign, "unrelated.md"),
       "# Elsewhere\n## GM-ONLY\nThe desert city has a vault.",
     );
-    const result = JSON.parse(
-      JSON.stringify(f.context.retrieve(principal, "blue lantern", "scene")),
-    );
+    const result = f.context.retrieve(
+      principal,
+      "blue lantern",
+      "scene",
+    ) as unknown as RetrievedFixture;
     assert.ok(result.excerpts.length >= 2); // same current-scene document, with distinct disclosure labels
     const publicExcerpt = result.excerpts.find(
       (v: { narrationAllowed: boolean }) => v.narrationAllowed,
     );
+    assert.ok(publicExcerpt);
     assert.match(publicExcerpt.text, /blue lantern/);
     assert.match(publicExcerpt.sourceUri, /campaign:\/\/one\/arrival.md/);
     assert.match(publicExcerpt.sourceHash, /^[a-f0-9]{64}$/);
     assert.deepEqual(publicExcerpt.span, { startLine: 6, endLine: 7 });
     assert.equal(
-      result.excerpts.find((v: { text: string }) => v.text.includes("password")).narrationAllowed,
+      result.excerpts.find((v: { text: string }) => v.text.includes("password"))?.narrationAllowed,
       false,
     );
     assert.doesNotMatch(JSON.stringify(result), /desert city/);
-    const inactive = JSON.parse(
-      JSON.stringify(f.context.retrieve(principal, "lantern", "elsewhere")),
-    );
+    const inactive = f.context.retrieve(
+      principal,
+      "lantern",
+      "elsewhere",
+    ) as unknown as RetrievedFixture;
     assert.ok(inactive.excerpts.every((v: { narrationAllowed: boolean }) => !v.narrationAllowed));
   } finally {
     f.cleanup();
   }
 });
-it("rebinding worlds never reuses another world's context, rejects malformed IDs and refreshes source hashes", () => {
+void it("rebinding worlds never reuses another world's context, rejects malformed IDs and refreshes source hashes", () => {
   const f = fixture();
   try {
     const path = join(f.campaign, "room.md");
@@ -94,7 +111,7 @@ it("rebinding worlds never reuses another world's context, rejects malformed IDs
     f.cleanup();
   }
 });
-it("keeps index/excerpt budgets bounded and validates sources without invoking campaign scripts", () => {
+void it("keeps index/excerpt budgets bounded and validates sources without invoking campaign scripts", () => {
   const f = fixture();
   try {
     for (let i = 0; i < 10; i++)
@@ -104,7 +121,7 @@ it("keeps index/excerpt budgets bounded and validates sources without invoking c
       );
     mkdirSync(join(f.campaign, "tools"));
     writeFileSync(join(f.campaign, "tools", "evil.mjs"), "throw new Error('must not run');");
-    const result = JSON.parse(JSON.stringify(f.context.retrieve(principal, "lantern", null)));
+    const result = f.context.retrieve(principal, "lantern", null) as unknown as RetrievedFixture;
     assert.ok(result.characters <= 10000);
     assert.ok(result.excerpts.length <= 6);
     assert.equal(result.partial, true);
@@ -118,7 +135,7 @@ it("keeps index/excerpt budgets bounded and validates sources without invoking c
     f.cleanup();
   }
 });
-it("rejects campaign junction escapes (real filesystem, no mocked containment)", () => {
+void it("rejects campaign junction escapes (real filesystem, no mocked containment)", () => {
   const f = fixture();
   const outside = mkdtempSync(join(tmpdir(), "ai-dm-outside-"));
   try {

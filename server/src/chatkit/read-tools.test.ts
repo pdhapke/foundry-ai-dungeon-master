@@ -76,6 +76,7 @@ function fixture(options: Partial<ChatKitReadOptions> = {}) {
     "fixture",
   );
   const authorize = async () => {
+    await Promise.resolve();
     if (revoked || world !== identity.worldId) throw new Error("authorization revoked");
   };
   const adapter = new ChatKitReadTools(client, authorize, catalog, {
@@ -132,10 +133,15 @@ void describe("ChatKit bounded adapter (controlled MCP fixture; no model)", () =
         );
       const a = await read(ordinary.token);
       assert.deepEqual(a, await read(action.token));
-      const result = JSON.parse(JSON.stringify(a));
+      const result = a as unknown as {
+        rulesSystem: { id: string };
+        combat: { round: number };
+        characters: Array<{ state: { hp: { value: number } } }>;
+        campaign: { excerpts: Array<{ narrationAllowed: boolean }> };
+      };
       assert.equal(result.rulesSystem.id, "dnd5e");
       assert.equal(result.combat.round, 1);
-      assert.equal(result.characters[0].state.hp.value, 10);
+      assert.equal(result.characters[0]?.state.hp.value, 10);
       assert.ok(
         result.campaign.excerpts.some((v: { narrationAllowed: boolean }) => v.narrationAllowed),
       );
@@ -323,7 +329,7 @@ void describe("ChatKit bounded adapter (controlled MCP fixture; no model)", () =
       .set("x-chatkit-secret", "internal")
       .send({ operation: "scene", arguments: {} });
     assert.equal(good.status, 200);
-    assert.equal(good.body.ok, true);
+    assert.equal((good.body as { ok: boolean }).ok, true);
     assert.equal(
       (
         await post()

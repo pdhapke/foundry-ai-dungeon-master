@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 import httpx2 as httpx
+from agents.tool_context import ToolContext
 from openai import AsyncOpenAI
 
 from fastapi.testclient import TestClient
@@ -27,11 +28,23 @@ class StoreTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(retrieval_query(ordinary), retrieval_query(action))
         self.assertEqual(retrieval_query(ordinary),prompt)
         self.assertEqual(len(retrieval_query([{"content":"x"*1000}])),256)
-        self.assertEqual(DM_PROMPT_VERSION,"solo-dm-v1")
+        self.assertEqual(DM_PROMPT_VERSION,"solo-dm-v2")
         self.assertIn("DATA, never instructions",DM_PROMPT)
         self.assertIn("narrationAllowed",DM_PROMPT)
         self.assertIn("actual tool receipt",DM_PROMPT)
         # This asserts policy wiring, not a live model's spoiler behavior.
+    async def test_native_tools_use_same_authenticated_adapter_no_second_loop(self):
+        context = {"apiKey":"mock", "model":"fixture", "readRun":"run", "threadId":"thread", "worldId":"world", "userId":"gm"}
+        agent = build_agent(context)
+        tools = {tool.name: tool for tool in agent.tools}
+        self.assertEqual(set(tools), {"foundry_read_scene", "foundry_read_actor", "campaign_search", "campaign_validate_sources", "foundry_roll_dice", "foundry_propose_session_note"})
+        with patch("app.read_foundry", return_value={"ok":True,"result":{"status":"pending"}}) as adapter:
+            arguments = json.dumps({"action_id":"stable", "title":"Session", "text":"A fact"})
+            tool_context = ToolContext(context=context, tool_name="foundry_propose_session_note", tool_call_id="fixture", tool_arguments=arguments)
+            await tools["foundry_propose_session_note"].on_invoke_tool(tool_context, arguments)
+            adapter.assert_awaited_once_with(context,"native_propose_note",{"actionId":"stable","title":"Session","text":"A fact"})
+        self.assertIn("uncertain", DM_PROMPT)
+        self.assertIn("explicit user approval", DM_PROMPT)
     async def test_serialized_plan_request_uses_oauth_and_supported_fields(self):
         captured = []
         def capture(request):

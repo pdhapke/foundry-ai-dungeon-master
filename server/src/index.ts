@@ -22,6 +22,7 @@ import {
 } from "./auth/index.js";
 import { loadAiDmServerConfig } from "./config.js";
 import { ChatKitReadTools } from "./chatkit/read-tools.js";
+import { ChatKitNativeActions } from "./chatkit/native-actions.js";
 import { createChatKitGateway } from "./chatkit/gateway.js";
 import { ContinuationCapsuleSigner } from "./context/index.js";
 import { WorldCampaignContext, worldCampaignRoot } from "./context/world-campaign.js";
@@ -176,6 +177,9 @@ async function main(): Promise<void> {
       throw new Error("Current Foundry GM authorization required.");
   };
   const chatkitSecret = randomBytes(32).toString("hex");
+  const nativeActions = mcpClient
+    ? new ChatKitNativeActions(mcpClient, database.connection, authorizeChatKit)
+    : null;
   const readCatalog = new TrustedToolCatalog(
     catalogProvider,
     CHATKIT_READ_TOOL_METADATA,
@@ -185,6 +189,7 @@ async function main(): Promise<void> {
     ? new ChatKitReadTools(mcpClient, authorizeChatKit, readCatalog, {
         internalSecret: chatkitSecret,
         campaign,
+        ...(nativeActions ? { actions: nativeActions } : {}),
       })
     : null;
   const chatkitDirectory = fileURLToPath(new URL("../../chatkit-server/", import.meta.url));
@@ -228,6 +233,15 @@ async function main(): Promise<void> {
     chatkitHandler: createChatKitGateway({
       sidecarUrl: `http://127.0.0.1:${config.chatkitPort}`,
       internalSecret: chatkitSecret,
+      ...(nativeActions
+        ? {
+            nativeActions: (
+              identity: AiDmAuthenticatedIdentity,
+              body: unknown,
+              signal: AbortSignal,
+            ) => nativeActions.browser(identity, body, signal),
+          }
+        : {}),
       allowedOrigins: config.allowedFoundryOrigins,
       authenticate: (input) =>
         foundrySessions.validateProof(foundrySessions.authenticate(input)).identity,
