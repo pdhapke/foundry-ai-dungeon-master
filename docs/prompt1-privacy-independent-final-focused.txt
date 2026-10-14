@@ -1,0 +1,69 @@
+Γ£ö asset-only legacy tree permits source-copy gate without asserting image secrecy (20.5626ms)
+Γ£ö authored files, receipts, unknown files, SVG and incorrectly located media keep source gate closed (101.3241ms)
+Γ£ö unexpected empty directories, links and bounded traversal overflow fail closed (62.4473ms)
+Γ£ö absent legacy source and invalid world identifier are distinguished (7.0452ms)
+{"type":"pause-timing","traceId":"21e3ad80-b57b-443b-9e95-fc42da4aed7f","stage":"request-arrival","atMs":1791069525407,"requestArrivedAtMs":1791069525407,"elapsedMs":0.18610000000001037}
+{"type":"pause-timing","traceId":"21e3ad80-b57b-443b-9e95-fc42da4aed7f","stage":"initial-authorization-finished","atMs":1791069525409,"requestArrivedAtMs":1791069525407,"elapsedMs":2.7045000000000528}
+{"type":"pause-timing","traceId":"f28048d9-346d-4553-bf5e-5613c9708a61","stage":"request-arrival","atMs":1791069525411,"requestArrivedAtMs":1791069525411,"elapsedMs":0.02390000000002601}
+{"type":"pause-timing","traceId":"f28048d9-346d-4553-bf5e-5613c9708a61","stage":"initial-authorization-finished","atMs":1791069525412,"requestArrivedAtMs":1791069525411,"elapsedMs":0.5170000000000528}
+{"type":"pause-timing","traceId":"21e3ad80-b57b-443b-9e95-fc42da4aed7f","stage":"preparation-finished","atMs":1791069525416,"requestArrivedAtMs":1791069525407,"elapsedMs":9.707500000000095,"durationMs":6.7549000000000206}
+{"type":"pause-timing","traceId":"21e3ad80-b57b-443b-9e95-fc42da4aed7f","stage":"queue-exit","atMs":1791069525416,"requestArrivedAtMs":1791069525407,"elapsedMs":9.806300000000078}
+{"type":"pause-timing","traceId":"f28048d9-346d-4553-bf5e-5613c9708a61","stage":"preparation-finished","atMs":1791069525417,"requestArrivedAtMs":1791069525411,"elapsedMs":6.062900000000013,"durationMs":5.389099999999985}
+{"type":"pause-timing","traceId":"f28048d9-346d-4553-bf5e-5613c9708a61","stage":"queue-exit","atMs":1791069525417,"requestArrivedAtMs":1791069525411,"elapsedMs":6.134900000000016}
+Γ£ö preparation shares concurrent work, retains authorization, and exposes no credential (79.1867ms)
+{"type":"pause-timing","traceId":"3a72f616-b5a8-495d-95ca-71de542092d7","stage":"request-arrival","atMs":1791069525432,"requestArrivedAtMs":1791069525432,"elapsedMs":0.017900000000054206}
+{"type":"pause-timing","traceId":"a7b5a44d-50eb-41f9-af2a-b62483591df2","stage":"request-arrival","atMs":1791069525438,"requestArrivedAtMs":1791069525438,"elapsedMs":0.041200000000003456}
+Γ£ö expired browser credentials and current role changes cannot prepare (15.8629ms)
+{"type":"pause-timing","traceId":"cac2a699-13ac-424f-bc98-6c2287bd4187","stage":"request-arrival","atMs":1791069525447,"requestArrivedAtMs":1791069525447,"elapsedMs":0.01850000000001728}
+{"type":"pause-timing","traceId":"cac2a699-13ac-424f-bc98-6c2287bd4187","stage":"initial-authorization-finished","atMs":1791069525447,"requestArrivedAtMs":1791069525447,"elapsedMs":0.4054999999999609}
+{"type":"pause-timing","traceId":"cac2a699-13ac-424f-bc98-6c2287bd4187","stage":"preparation-failed","atMs":1791069525448,"requestArrivedAtMs":1791069525447,"elapsedMs":1.3070000000000164,"durationMs":0.7822999999999638}
+{"type":"pause-timing","traceId":"cac2a699-13ac-424f-bc98-6c2287bd4187","stage":"queue-exit","atMs":1791069525448,"requestArrivedAtMs":1791069525447,"elapsedMs":1.3555000000000064}
+{"type":"pause-timing","traceId":"926bd18f-b24e-4927-8411-16222b3c23a1","stage":"request-arrival","atMs":1791069525454,"requestArrivedAtMs":1791069525454,"elapsedMs":0.014800000000036562}
+{"type":"pause-timing","traceId":"926bd18f-b24e-4927-8411-16222b3c23a1","stage":"initial-authorization-finished","atMs":1791069525454,"requestArrivedAtMs":1791069525454,"elapsedMs":0.3390000000000555}
+{"type":"pause-timing","traceId":"926bd18f-b24e-4927-8411-16222b3c23a1","stage":"preparation-failed","atMs":1791069525454,"requestArrivedAtMs":1791069525454,"elapsedMs":0.8215000000000146,"durationMs":0.3813000000000102}
+{"type":"pause-timing","traceId":"926bd18f-b24e-4927-8411-16222b3c23a1","stage":"queue-exit","atMs":1791069525454,"requestArrivedAtMs":1791069525454,"elapsedMs":0.8687999999999647}
+Γ£ö failed preparation is actionable and retries are backed off without sidecar calls (14.8539ms)
+{"type":"pause-timing","traceId":"2a810d47-af82-4ca4-a8fd-6bd96691187a","stage":"request-arrival","atMs":1791069525461,"requestArrivedAtMs":1791069525461,"elapsedMs":0.011099999999942156}
+{"type":"pause-timing","traceId":"2a810d47-af82-4ca4-a8fd-6bd96691187a","stage":"initial-authorization-finished","atMs":1791069525461,"requestArrivedAtMs":1791069525461,"elapsedMs":0.2280999999999267}
+{"type":"pause-timing","traceId":"2a810d47-af82-4ca4-a8fd-6bd96691187a","stage":"preparation-failed","atMs":1791069525462,"requestArrivedAtMs":1791069525461,"elapsedMs":0.8786999999999807,"durationMs":0.5891000000000304}
+{"type":"pause-timing","traceId":"2a810d47-af82-4ca4-a8fd-6bd96691187a","stage":"queue-exit","atMs":1791069525462,"requestArrivedAtMs":1791069525461,"elapsedMs":0.9194999999999709}
+Γ£ö privacy preparation failure gives action required and never discloses path (8.2623ms)
+{"type":"pause-timing","traceId":"3e916691-14e0-4cf8-bc7b-287a6e3cb1bb","stage":"request-arrival","atMs":1791069525469,"requestArrivedAtMs":1791069525469,"elapsedMs":0.01209999999991851}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"request-arrival","atMs":1791069525475,"requestArrivedAtMs":1791069525475,"elapsedMs":0.020599999999944885}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"initial-authorization-finished","atMs":1791069525476,"requestArrivedAtMs":1791069525475,"elapsedMs":0.3351000000000113}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"request-arrival","atMs":1791069525482,"requestArrivedAtMs":1791069525482,"elapsedMs":0.01969999999994343}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"initial-authorization-finished","atMs":1791069525482,"requestArrivedAtMs":1791069525482,"elapsedMs":0.3184999999999718}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"queue-entered","atMs":1791069525483,"requestArrivedAtMs":1791069525482,"elapsedMs":1.3401999999999816,"queueWaitMs":0.02830000000005839,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"queued-authorization-finished","atMs":1791069525484,"requestArrivedAtMs":1791069525482,"elapsedMs":1.4769000000000005,"durationMs":0.057999999999992724}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"credentials-resolved","atMs":1791069525484,"requestArrivedAtMs":1791069525482,"elapsedMs":1.5733999999999924,"model":"test","durationMs":0.045600000000035834}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"stream-authorization","atMs":1791069525503,"requestArrivedAtMs":1791069525482,"elapsedMs":20.537999999999897,"durationMs":0.09219999999993433}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"first-visible-stream-chunk","atMs":1791069525503,"requestArrivedAtMs":1791069525482,"elapsedMs":20.624399999999923}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"final-response-finished","atMs":1791069525504,"requestArrivedAtMs":1791069525482,"elapsedMs":21.435500000000047}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"queue-exit","atMs":1791069525504,"requestArrivedAtMs":1791069525482,"elapsedMs":21.530499999999847}
+{"type":"pause-timing","traceId":"4c7df91d-4586-4f59-89f8-cd72d264e7cb","stage":"request-arrival","atMs":1791069525509,"requestArrivedAtMs":1791069525509,"elapsedMs":0.018499999999903594}
+{"type":"pause-timing","traceId":"4c7df91d-4586-4f59-89f8-cd72d264e7cb","stage":"initial-authorization-finished","atMs":1791069525509,"requestArrivedAtMs":1791069525509,"elapsedMs":0.3091999999999189}
+{"type":"pause-timing","traceId":"4c7df91d-4586-4f59-89f8-cd72d264e7cb","stage":"queue-entered","atMs":1791069525509,"requestArrivedAtMs":1791069525509,"elapsedMs":0.47929999999996653,"queueWaitMs":0.01209999999991851,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"4c7df91d-4586-4f59-89f8-cd72d264e7cb","stage":"queued-authorization-finished","atMs":1791069525509,"requestArrivedAtMs":1791069525509,"elapsedMs":0.5734999999999673,"durationMs":0.04469999999992069}
+{"type":"pause-timing","traceId":"4c7df91d-4586-4f59-89f8-cd72d264e7cb","stage":"credentials-resolved","atMs":1791069525509,"requestArrivedAtMs":1791069525509,"elapsedMs":0.6440999999999804,"model":"test","durationMs":0.035899999999855936}
+{"type":"pause-timing","traceId":"4c7df91d-4586-4f59-89f8-cd72d264e7cb","stage":"stream-authorization","atMs":1791069525510,"requestArrivedAtMs":1791069525509,"elapsedMs":1.4441999999999098,"durationMs":0.07530000000019754}
+{"type":"pause-timing","traceId":"4c7df91d-4586-4f59-89f8-cd72d264e7cb","stage":"first-visible-stream-chunk","atMs":1791069525510,"requestArrivedAtMs":1791069525509,"elapsedMs":1.5170000000000528}
+{"type":"pause-timing","traceId":"4c7df91d-4586-4f59-89f8-cd72d264e7cb","stage":"final-response-finished","atMs":1791069525511,"requestArrivedAtMs":1791069525509,"elapsedMs":1.8167000000000826}
+{"type":"pause-timing","traceId":"4c7df91d-4586-4f59-89f8-cd72d264e7cb","stage":"queue-exit","atMs":1791069525511,"requestArrivedAtMs":1791069525509,"elapsedMs":1.8709000000001197}
+Γ£ö only exact server-configured scoped fixture budgets reach loopback; spoofing is rejected (47.4191ms)
+Γû╢ AI Dungeon Master server configuration
+  Γ£ö keeps private conversation outside served Data and rejects junction bypasses (15.4079ms)
+  Γ£ö is loopback-only and remains testable without live provider keys (8.2929ms)
+  Γ£ö rejects remote provider URLs and remote server binds (5.4594ms)
+  Γ£ö requires persistent signing and process-tree broker keys in production (2.4508ms)
+  Γ£ö keeps the API-key provider disabled unless fallback is explicitly enabled (4.4068ms)
+Γ£ö AI Dungeon Master server configuration (37.3107ms)
+Γ£ö protects per-world campaign root with default outside Data and no public override (4.999ms)
+Γ£ö fixture budgets are immutable startup-only scoped configuration (2.5285ms)
+Γä╣ tests 16
+Γä╣ suites 1
+Γä╣ pass 16
+Γä╣ fail 0
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 1191.891

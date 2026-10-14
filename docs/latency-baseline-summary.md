@@ -1,0 +1,11 @@
+# Current latency baseline
+
+Independent evidence: latency-baseline-independent.md/JSON. Captured before instrumentation edits. Correctness and durable conversation are accepted; speed is not accepted.
+
+Implemented and loaded at baseline: compact overview/current snapshot, parallel independent reads, lazy actor/campaign detail, exact-source-validated overview parsing cache, immediate durable factual receipt path, model-free authenticated direct controls, and conservative sole-command completion for nine explicit command types. Initial context retains one catalog refresh and five fresh MCP data reads; adapter authorization checks were reduced12→3 in offline operation-count tests. Gateway and execution-time checks remain. The world queue still covers the response; no narration concurrency change is enabled.
+
+Thirty baseline startup hashes and Python code/prompt match the checkpoint manifest f3a828… and code a5be9…; startup2026-10-02T15:42:31.108Z. Running Python maxModelTurns1, provider retries0. The cap is absent in server/.env; source default8 would apply at a future restart unless separately configured. AutomaticEventsEnabledfalse was independently reread; it was not changed. API fallbackfalse. Browser initially displayed selected GPT-5.6-Sol and old durable history; zero-inference Refresh status then reported AI service disconnected. Current embedded readiness is blocked, distinct from MCP GM readiness and provider validity.
+
+Previous six mixed command observations each used a single loaded cap1 turn and retry0; those configurations bound requests but are not observed provider traces. Stored complete calls/results and receipts validate mechanics/history, not request-count telemetry. SQLite created_at is item creation, not transaction completion or delivery. Browser samples are visibility upper bounds. Cross-process wall timestamp differences cannot establish synchronized elapsed latency. There is no comparable before/after speed result, reliable cold/warm distribution, or demonstrated2–3s response.
+
+Next instrumentation will label monotonic durations by clock/process, correlate stages without subtracting unsynchronized clocks, record actual persistence/emission/count events and privacy-safe completeness. No new model requests, fixture mutations, settings changes or process lifecycle work have occurred in this investigation.

@@ -1,0 +1,40 @@
+{
+  "capturedAt": "2026-10-03T20:31:51.125Z",
+  "scope": "Read-only snapshot audit. Geometric perimeter classification is not live light collision validation.",
+  "wallCount": 6,
+  "lightBlockingConfigured": 6,
+  "perimeterSegmentCount": 6,
+  "interiorSegmentCount": 0,
+  "doorCount": 1,
+  "gridUnits": "ft",
+  "movement": {
+    "from": {
+      "x": 450,
+      "y": 1000,
+      "elevation": 0
+    },
+    "to": {
+      "x": 500,
+      "y": 300,
+      "elevation": 0
+    }
+  },
+  "returnedToBaseline": false,
+  "lightPreserved": true,
+  "elevationPreserved": true,
+  "actorPreserved": true,
+  "pausePreserved": true,
+  "combatPreserved": true,
+  "eventsPreserved": true,
+  "sceneWallsPreserved": true,
+  "fogSnapshotChanged": false,
+  "userFeedback": "Light does not really respect walls; user suspects no walls on this map and considers it probably fine.",
+  "acceptance": {
+    "lightFollowingMovement": "Awaiting explicit human confirmation; radii unchanged after human movement.",
+    "wallClipping": "UNTESTED: no calibrated interior obstruction crossing was exercised.",
+    "fogPersistence": "UNTESTED: no explicit human confirmation of retained exploration.",
+    "restoration": "Human left token at new position; agent did not return it or alter fog."
+  },
+  "inferenceRequests": 0,
+  "agentMutations": 0
+}

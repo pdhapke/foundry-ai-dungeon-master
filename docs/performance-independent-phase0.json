@@ -1,0 +1,2193 @@
+{
+  "capturedAt": "2026-10-02T14:12:36.9855961Z",
+  "inventories": [
+    {
+      "root": "Data/Data/modules/foundry-ai-dungeon-master",
+      "head": "77b4516f5593b0bea6d914b6cad5c313bd7488c8",
+      "status": [
+        " M README.md",
+        " M chatkit-server/app.py",
+        " M chatkit-server/dm_prompt.py",
+        " M chatkit-server/test_app.py",
+        " M docs/configuration.md",
+        " M docs/phase3-campaign-context.md",
+        " M module/dist/index.js",
+        " M module/src/ai-dungeon-master/application.test.ts",
+        " M module/src/ai-dungeon-master/application.ts",
+        " M module/src/ai-dungeon-master/automatic-triggers.test.ts",
+        " M module/src/ai-dungeon-master/automatic-triggers.ts",
+        " M module/src/ai-dungeon-master/hooks.ts",
+        " M module/src/index.ts",
+        " M module/styles/ai-dungeon-master.css",
+        " M module/templates/ai-dungeon-master/application.hbs",
+        " M server/src/app.ts",
+        " M server/src/chatkit/gateway.ts",
+        " M server/src/chatkit/native-actions.ts",
+        " M server/src/chatkit/read-tools.test.ts",
+        " M server/src/chatkit/read-tools.ts",
+        " M server/src/chatkit/turns.test.ts",
+        " M server/src/chatkit/turns.ts",
+        " M server/src/context/campaign-source.ts",
+        " M server/src/context/world-campaign.test.ts",
+        " M server/src/context/world-campaign.ts",
+        " M server/src/index.ts",
+        " M server/src/tool-catalog/runtime.ts",
+        " M shared/src/ai-dungeon-master.ts",
+        " M shared/src/chatkit.ts",
+        "?? .recovery/app-exact-checkpoint.py",
+        "?? .recovery/app-recovered-stage.py",
+        "?? .recovery/ps-2026-10-01T20-12-58.767Z-37.txt",
+        "?? .recovery/ps-2026-10-01T21-42-51.193Z-651.txt",
+        "?? .recovery/ps-2026-10-02T00-54-53.076Z-147.txt",
+        "?? .recovery/ps-2026-10-02T00-55-28.236Z-154.txt",
+        "?? .recovery/ps-2026-10-02T01-00-42.936Z-278.txt",
+        "?? .recovery/ps-2026-10-02T01-11-46.211Z-1135.txt",
+        "?? .recovery/ps-2026-10-02T01-33-15.906Z-725.txt",
+        "?? chatkit-server/discovery_contract_probe.py",
+        "?? chatkit-server/test_attack_independent.py",
+        "?? chatkit-server/test_automatic_actions.py",
+        "?? chatkit-server/test_build_identity_independent.py",
+        "?? chatkit-server/test_campaign_tools.py",
+        "?? chatkit-server/test_discovery_tools.py",
+        "?? chatkit-server/test_prompt.py",
+        "?? chatkit-server/test_routine_speed_independent.py",
+        "?? docs/attack-vision-evidence/ai-attack-workflow.md",
+        "?? docs/attack-vision-evidence/attack-implementation.md",
+        "?? docs/attack-vision-evidence/embedded-chat-readiness.json",
+        "?? docs/attack-vision-evidence/embedded-chat-readiness.mjs",
+        "?? docs/attack-vision-evidence/independent-direct-timings.json",
+        "?? docs/attack-vision-evidence/independent-live-readback.json",
+        "?? docs/attack-vision-evidence/independent-sdk-inspect.json",
+        "?? docs/attack-vision-evidence/independent-sdk-restore.json",
+        "?? docs/attack-vision-evidence/live-direct-receipts.json",
+        "?? docs/attack-vision-evidence/live-fixture-plan.md",
+        "?? docs/attack-vision-evidence/live-fixture.json",
+        "?? docs/attack-vision-evidence/live-light-dark.json",
+        "?? docs/attack-vision-evidence/live-light-local.json",
+        "?? docs/attack-vision-evidence/live-results.md",
+        "?? docs/attack-vision-evidence/runtime-before.json",
+        "?? docs/attack-vision-evidence/runtime-build-verified.json",
+        "?? docs/attack-vision-evidence/runtime-native-marker.json",
+        "?? docs/attack-vision-evidence/runtime-native-marker.mjs",
+        "?? docs/attack-vision-evidence/tv-after-walk.jpg",
+        "?? docs/attack-vision-evidence/tv-dark-fog.jpg",
+        "?? docs/attack-vision-evidence/tv-door-closed.jpg",
+        "?? docs/attack-vision-evidence/tv-door-open.jpg",
+        "?? docs/attack-vision-evidence/tv-local-light.jpg",
+        "?? docs/attack-vision-ledger.md",
+        "?? docs/attack-vision-validation.md",
+        "?? docs/baseline-evidence/build.txt",
+        "?? docs/baseline-evidence/digital-tabletops-dirty.txt",
+        "?? docs/baseline-evidence/dnd5e-dirty.txt",
+        "?? docs/baseline-evidence/lint.txt",
+        "?? docs/baseline-evidence/local-api-dirty.txt",
+        "?? docs/baseline-evidence/manifest.txt",
+        "?? docs/baseline-evidence/npm-test.txt",
+        "?? docs/baseline-evidence/parent-dirty.txt",
+        "?? docs/baseline-evidence/python-test.txt",
+        "?? docs/baseline-evidence/trails-dirty.txt",
+        "?? docs/baseline-evidence/typecheck.txt",
+        "?? docs/core-rollout-acceptance.md",
+        "?? docs/core-rollout-evidence/FoundryVtt-start-hashes.txt",
+        "?? docs/core-rollout-evidence/FoundryVtt-start-head.txt",
+        "?? docs/core-rollout-evidence/FoundryVtt-start-status.txt",
+        "?? docs/core-rollout-evidence/confirmed-actions.png",
+        "?? docs/core-rollout-evidence/direct-shortcut.json",
+        "?? docs/core-rollout-evidence/foundry-ai-dungeon-master-preservation-changes.json",
+        "?? docs/core-rollout-evidence/foundry-ai-dungeon-master-start-hashes.txt",
+        "?? docs/core-rollout-evidence/foundry-ai-dungeon-master-start-head.txt",
+        "?? docs/core-rollout-evidence/foundry-ai-dungeon-master-start-status.txt",
+        "?? docs/core-rollout-evidence/foundry-local-api-preservation-changes.json",
+        "?? docs/core-rollout-evidence/foundry-local-api-start-hashes.txt",
+        "?? docs/core-rollout-evidence/foundry-local-api-start-head.txt",
+        "?? docs/core-rollout-evidence/foundry-local-api-start-status.txt",
+        "?? docs/core-rollout-evidence/independent-final-loaded-build.json",
+        "?? docs/core-rollout-evidence/independent-live-final-inspect.json",
+        "?? docs/core-rollout-evidence/independent-live-inspect.json",
+        "?? docs/core-rollout-evidence/independent-live-receipts.json",
+        "?? docs/core-rollout-evidence/independent-restored-active-scene.json",
+        "?? docs/core-rollout-evidence/independent-restored-inspect.json",
+        "?? docs/core-rollout-evidence/live-fixture.json",
+        "?? docs/core-rollout-evidence/live-receipts.json",
+        "?? docs/core-rollout-evidence/live-traces.json",
+        "?? docs/core-rollout-evidence/loaded-build.json",
+        "?? docs/core-rollout-evidence/runtime-current.json",
+        "?? docs/core-rollout-evidence/runtime-loaded.json",
+        "?? docs/core-rollout-ledger.md",
+        "?? docs/core-rollout-validation.md",
+        "?? docs/final-evidence/ai-dirty.txt",
+        "?? docs/final-evidence/build.txt",
+        "?? docs/final-evidence/capability-inventory-format.txt",
+        "?? docs/final-evidence/capability-inventory-lint.txt",
+        "?? docs/final-evidence/check-manifest.txt",
+        "?? docs/final-evidence/digital-tabletops-dirty.txt",
+        "?? docs/final-evidence/dnd5e-dirty.txt",
+        "?? docs/final-evidence/expanded-ai-tests.txt",
+        "?? docs/final-evidence/expanded-bridge-current-diff.txt",
+        "?? docs/final-evidence/expanded-digital-tabletops-dirty.txt",
+        "?? docs/final-evidence/expanded-dnd5e-dirty.txt",
+        "?? docs/final-evidence/expanded-local-api-dirty.txt",
+        "?? docs/final-evidence/expanded-parent-dirty.txt",
+        "?? docs/final-evidence/expanded-trails-dirty.txt",
+        "?? docs/final-evidence/lint.txt",
+        "?? docs/final-evidence/local-api-build.txt",
+        "?? docs/final-evidence/local-api-dirty.txt",
+        "?? docs/final-evidence/local-api-tests.txt",
+        "?? docs/final-evidence/local-api-typecheck.txt",
+        "?? docs/final-evidence/npm-test.txt",
+        "?? docs/final-evidence/parent-dirty.txt",
+        "?? docs/final-evidence/privacy-head.json",
+        "?? docs/final-evidence/python-tests.txt",
+        "?? docs/final-evidence/trails-dirty.txt",
+        "?? docs/final-evidence/typecheck.txt",
+        "?? docs/final-evidence/validator-regressions.txt",
+        "?? docs/pause-experiment-checkpoint.md",
+        "?? docs/pause-experiment-evidence/foundry-ai-dungeon-master-current-changes.json",
+        "?? docs/pause-experiment-evidence/foundry-ai-dungeon-master-starting-hashes.json",
+        "?? docs/pause-experiment-evidence/foundry-ai-dungeon-master-starting-head.txt",
+        "?? docs/pause-experiment-evidence/foundry-ai-dungeon-master-starting-status.txt",
+        "?? docs/pause-experiment-evidence/foundry-local-api-current-changes.json",
+        "?? docs/pause-experiment-evidence/foundry-local-api-starting-hashes.json",
+        "?? docs/pause-experiment-evidence/foundry-local-api-starting-head.txt",
+        "?? docs/pause-experiment-evidence/foundry-local-api-starting-status.txt",
+        "?? docs/pause-experiment-evidence/running-health-before.json",
+        "?? docs/pause-experiment-ledger.md",
+        "?? docs/pause-experiment-validation.md",
+        "?? docs/routine-speed-checkpoint.md",
+        "?? docs/routine-speed-evidence/checkpoint-build.json",
+        "?? docs/routine-speed-evidence/phase1-and-context.md",
+        "?? docs/routine-speed-evidence/phase1-existing-timings.json",
+        "?? docs/routine-speed-evidence/phase2-receipt-results.md",
+        "?? docs/routine-speed-ledger.md",
+        "?? docs/routine-speed-validation.md",
+        "?? docs/session-action-backend.md",
+        "?? docs/solo-dm-acceptance-journey.md",
+        "?? docs/solo-dm-acceptance-summary.md",
+        "?? docs/solo-dm-baseline.md",
+        "?? docs/solo-dm-campaign-authoring-plan.md",
+        "?? docs/solo-dm-capability-coverage.md",
+        "?? docs/solo-dm-capability-inventory.json",
+        "?? docs/solo-dm-capability-validation.md",
+        "?? docs/solo-dm-catalog-plan.md",
+        "?? docs/solo-dm-contract-plan.md",
+        "?? docs/solo-dm-expanded-evidence.md",
+        "?? docs/solo-dm-latency-live.md",
+        "?? docs/solo-dm-latency-source.md",
+        "?? docs/solo-dm-latency-validation.md",
+        "?? docs/solo-dm-ledger.md",
+        "?? docs/solo-dm-live-acceptance.md",
+        "?? docs/solo-dm-panel-revalidation.md",
+        "?? docs/solo-dm-panel-validation.md",
+        "?? docs/solo-dm-panel.md",
+        "?? docs/solo-dm-pause-runtime.md",
+        "?? docs/solo-dm-pause-validation.md",
+        "?? docs/solo-dm-phase0-validation.md",
+        "?? docs/solo-dm-phase1-validation.md",
+        "?? docs/solo-dm-phase2-validation.md",
+        "?? docs/solo-dm-phase2.md",
+        "?? docs/solo-dm-phase3-validation.md",
+        "?? docs/solo-dm-phase3.md",
+        "?? docs/solo-dm-phase4-validation.md",
+        "?? docs/solo-dm-phase4.md",
+        "?? docs/solo-dm-phase5-validation.md",
+        "?? docs/solo-dm-phase6-validation.md",
+        "?? docs/solo-dm-privacy-validation.md",
+        "?? docs/solo-dm-privacy.md",
+        "?? docs/solo-dm-prompt-validation.md",
+        "?? docs/solo-dm-prompt.md",
+        "?? docs/solo-dm-python-campaign.md",
+        "?? docs/solo-dm-python-triggers.md",
+        "?? docs/solo-dm-routine-actions.md",
+        "?? docs/solo-dm-runtime-tools.json",
+        "?? docs/solo-dm-storage.md",
+        "?? docs/solo-dm-tool-audit-validation.md",
+        "?? docs/solo-dm-triggers-plan.md",
+        "?? docs/solo-dm-triggers.md",
+        "?? docs/solo-dm-world-control.md",
+        "?? docs/solo-dm-world-files.md",
+        "?? docs/world-document-backend.md",
+        "?? docs/world-file-actions.md",
+        "?? module/src/ai-dungeon-master/application-cancellation.test.ts",
+        "?? module/src/ai-dungeon-master/application.panel-revalidation.test.ts",
+        "?? module/src/ai-dungeon-master/application.validation.test.ts",
+        "?? module/src/ai-dungeon-master/campaign-review.test.ts",
+        "?? module/src/ai-dungeon-master/campaign-review.ts",
+        "?? module/src/ai-dungeon-master/core-command.test.ts",
+        "?? module/src/ai-dungeon-master/core-command.ts",
+        "?? module/src/ai-dungeon-master/core-rollout.validation.test.ts",
+        "?? module/src/ai-dungeon-master/hooks.test.ts",
+        "?? module/src/ai-dungeon-master/mutation-origin.test.ts",
+        "?? module/src/ai-dungeon-master/mutation-origin.ts",
+        "?? module/src/ai-dungeon-master/world-review.test.ts",
+        "?? module/src/ai-dungeon-master/world-review.ts",
+        "?? scripts/attack-vision-fixtures.mjs",
+        "?? scripts/attack-vision-independent-read.mjs",
+        "?? scripts/attack-vision-light-check.mjs",
+        "?? scripts/core-rollout-fixtures.mjs",
+        "?? scripts/core-rollout-runtime-inspect.mjs",
+        "?? scripts/core-rollout-trace-summary.mjs",
+        "?? scripts/inspect-pause-runtime.mjs",
+        "?? scripts/inventory-solo-dm-capabilities.mjs",
+        "?? scripts/summarize-routine-traces.mjs",
+        "?? scripts/validate-direct-timings.py",
+        "?? server/src/build-identity-independent.test.ts",
+        "?? server/src/build-identity.test.ts",
+        "?? server/src/build-identity.ts",
+        "?? server/src/chatkit/attack-actions.test.ts",
+        "?? server/src/chatkit/attack-actions.ts",
+        "?? server/src/chatkit/attack.attack-vision.validation.test.ts",
+        "?? server/src/chatkit/bounded-call.ts",
+        "?? server/src/chatkit/campaign-actions.test.ts",
+        "?? server/src/chatkit/campaign-actions.ts",
+        "?? server/src/chatkit/campaign-actions.validation.test.ts",
+        "?? server/src/chatkit/catalog-tools.test.ts",
+        "?? server/src/chatkit/catalog-tools.ts",
+        "?? server/src/chatkit/context.routine-speed.validation.test.ts",
+        "?? server/src/chatkit/core-actions.ts",
+        "?? server/src/chatkit/core-rollout.validation.test.ts",
+        "?? server/src/chatkit/gateway.pause.test.ts",
+        "?? server/src/chatkit/pause-actions.test.ts",
+        "?? server/src/chatkit/pause-actions.ts",
+        "?? server/src/chatkit/pause-actions.validation.test.ts",
+        "?? server/src/chatkit/pause-experiment.validation.test.ts",
+        "?? server/src/chatkit/pause-request.ts",
+        "?? server/src/chatkit/pause-request.validation.test.ts",
+        "?? server/src/chatkit/session-actions.independent.test.ts",
+        "?? server/src/chatkit/session-actions.test.ts",
+        "?? server/src/chatkit/session-actions.ts",
+        "?? server/src/chatkit/solo-dm-acceptance.test.ts",
+        "?? server/src/chatkit/tool-audit-independent.test.ts",
+        "?? server/src/chatkit/tool-audit.test.ts",
+        "?? server/src/chatkit/tool-audit.ts",
+        "?? server/src/chatkit/world-document-actions.independent.test.ts",
+        "?? server/src/chatkit/world-document-actions.test.ts",
+        "?? server/src/chatkit/world-document-actions.ts",
+        "?? server/src/chatkit/world-file-actions.independent.test.ts",
+        "?? server/src/chatkit/world-file-actions.test.ts",
+        "?? server/src/chatkit/world-file-actions.ts",
+        "?? server/src/chatkit/world-files.independent.test.ts",
+        "?? server/src/chatkit/world-files.test.ts",
+        "?? server/src/chatkit/world-files.ts",
+        "?? server/src/chatkit/world-request.test.ts",
+        "?? server/src/chatkit/world-request.ts",
+        "?? server/src/chatkit/world-tool-policy.test.ts",
+        "?? server/src/chatkit/world-tool-policy.ts",
+        "?? server/src/context/campaign-storage.test.ts",
+        "?? server/src/context/campaign-storage.ts",
+        "?? server/src/context/campaign-storage.validation.test.ts",
+        "?? server/src/context/core-rollout.validation.test.ts",
+        "?? server/src/context/world-campaign.validation.test.ts",
+        "?? server/src/tool-catalog/session-policy.test.ts",
+        "?? server/src/tool-catalog/world-proposal-policy.test.ts"
+      ],
+      "changedFileHashes": [
+        {
+          "path": "README.md",
+          "sha256": "93fa739fd4bfa0b440c1b1742d14d79c805898367662dc46c7579f276634014c"
+        },
+        {
+          "path": "chatkit-server/app.py",
+          "sha256": "ebec816ea7725c1f906d1830933e014c40f68fee1b4656dad49f96466cbe399d"
+        },
+        {
+          "path": "chatkit-server/dm_prompt.py",
+          "sha256": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2"
+        },
+        {
+          "path": "chatkit-server/test_app.py",
+          "sha256": "8127489af382dbbe80d4075d0246d2fee47d90b52fb2797c4230809c551ad4f9"
+        },
+        {
+          "path": "docs/configuration.md",
+          "sha256": "7ea4bb281dad2199736c555316a0f84cc738b84763f26ffe47ca4da91c7af22f"
+        },
+        {
+          "path": "docs/phase3-campaign-context.md",
+          "sha256": "73c71b14a240e68fac14cb91173ef228c83b492c111e17567ba57293230b345c"
+        },
+        {
+          "path": "module/dist/index.js",
+          "sha256": "2ebe449bc2ddb3c92a3dbb1767e3956a1acb1daf6a75d64cde170640a4a3dfaa"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/application.test.ts",
+          "sha256": "0ad1f3200c2bc9853ec194864067f0c7ad7edb42ea4ec4c54bd0b4134e019f4b"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/application.ts",
+          "sha256": "bde562f3e8cb9649c7ed2618f6e04eecc02c6a6f2390789749711e0d2b643951"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/automatic-triggers.test.ts",
+          "sha256": "a95d1359d0655ecc11a5d24c36b2111d187e50f017ea18a4b052c1d7636b0b93"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/automatic-triggers.ts",
+          "sha256": "4ef7b62694e42bee55ae976e768f5cb2f878e3c3c3c2a3b712a7822fd3309736"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/hooks.ts",
+          "sha256": "933e95a0118b2c41ffccbfcf4d7c67f6730d77edd7b67957bfa7c06634a13a83"
+        },
+        {
+          "path": "module/src/index.ts",
+          "sha256": "23157a5674d02e3c64d5f4c942995a73cdebd24f32587c23a79005c603359e3b"
+        },
+        {
+          "path": "module/styles/ai-dungeon-master.css",
+          "sha256": "be11baa68a67e73eb30fa630373fd265b8c5a7edcb6bb542b00bf0494ac8e77b"
+        },
+        {
+          "path": "module/templates/ai-dungeon-master/application.hbs",
+          "sha256": "c358d85b25d4138008e824a29fffdf5f932fc7005775b2fe62d17a0f032320de"
+        },
+        {
+          "path": "server/src/app.ts",
+          "sha256": "a3042f5e90ccee3d3fdf4e80e7d3655eb56c00a47c65a88aee736a82d5cc1d6d"
+        },
+        {
+          "path": "server/src/chatkit/gateway.ts",
+          "sha256": "e9e81eedf6a6adeddaea96f971173fce2275fe395cca90fab25f27f130390317"
+        },
+        {
+          "path": "server/src/chatkit/native-actions.ts",
+          "sha256": "d9a390694d67cb236ecd88e03b19094d6efc8c01c438cf595c9b26075cff8618"
+        },
+        {
+          "path": "server/src/chatkit/read-tools.test.ts",
+          "sha256": "e8da5602823a9a4c58f2f6779b8c3a1fa7e7f54fa243978e9c7041aed0c61f90"
+        },
+        {
+          "path": "server/src/chatkit/read-tools.ts",
+          "sha256": "b578a0ef182e265a42a4f3817aca562762c538ad7c9ce1ae7a34723b57f03c59"
+        },
+        {
+          "path": "server/src/chatkit/turns.test.ts",
+          "sha256": "42d193f4623219c74495d482df2df1e6bd5fae09fdb44bd78bba933ebfc33af0"
+        },
+        {
+          "path": "server/src/chatkit/turns.ts",
+          "sha256": "bf8427d2c5e8a56a992f6108ce7d88ffe1011a1c00152466a347238897ce8461"
+        },
+        {
+          "path": "server/src/context/campaign-source.ts",
+          "sha256": "3a7557573d76d382167bb616ea8ac85bb9a03eecefb12a2112d119c213cd413a"
+        },
+        {
+          "path": "server/src/context/world-campaign.test.ts",
+          "sha256": "139778ed4214be74165a7707e7c55edfaf77aaf2718f52420a4e8ed55c268898"
+        },
+        {
+          "path": "server/src/context/world-campaign.ts",
+          "sha256": "e90aaec041fddde52caa4e2a28d01ec4aa333522f56e70023010784fea94adba"
+        },
+        {
+          "path": "server/src/index.ts",
+          "sha256": "171127dc6f5289885193ea16782970187a7b6bf8852124833f9f7970b8846237"
+        },
+        {
+          "path": "server/src/tool-catalog/runtime.ts",
+          "sha256": "3186901256aedaaeef57e8b43e2bccd4f59435a0dbe15da640302b2ea10d6d7f"
+        },
+        {
+          "path": "shared/src/ai-dungeon-master.ts",
+          "sha256": "d936aefd400d9d65d2b299451623f3b3ae7a1252a0550475cf4ba38a392c5d81"
+        },
+        {
+          "path": "shared/src/chatkit.ts",
+          "sha256": "cb9bc25ed9ec639f4439fd267ec409271ee6b466463f2e3847c0a2dadaeec413"
+        },
+        {
+          "path": ".recovery/app-exact-checkpoint.py",
+          "sha256": "ba3e4b0af911ae6e637bc906b5c3b900fc7db6d40e01dfb9bae598878629c409"
+        },
+        {
+          "path": ".recovery/app-recovered-stage.py",
+          "sha256": "428de95ca88ae5dac29da60ec598b870877e8b28c561c6c5d00b6fc979f741b4"
+        },
+        {
+          "path": ".recovery/ps-2026-10-01T20-12-58.767Z-37.txt",
+          "sha256": "0a5686f94e13056657f5e1ba9dd1af3aad6d59183336737241028016c3e21574"
+        },
+        {
+          "path": ".recovery/ps-2026-10-01T21-42-51.193Z-651.txt",
+          "sha256": "2c0ce1bf06c2608eefd9e8134be043fa61987b5367ce56bbd92a284f95d1942e"
+        },
+        {
+          "path": ".recovery/ps-2026-10-02T00-54-53.076Z-147.txt",
+          "sha256": "e7a6fbc1cd5b70cca849c8feacd80b245a7551ce440307c05a37273d0d5c847c"
+        },
+        {
+          "path": ".recovery/ps-2026-10-02T00-55-28.236Z-154.txt",
+          "sha256": "0e2bb41711286170e64e002340174135f2255320f9ad637f20d5550e6ca2d00c"
+        },
+        {
+          "path": ".recovery/ps-2026-10-02T01-00-42.936Z-278.txt",
+          "sha256": "ce070168a849a2f26d6568fde96a0c4e4cb7000e046bd360730d25517952f3d0"
+        },
+        {
+          "path": ".recovery/ps-2026-10-02T01-11-46.211Z-1135.txt",
+          "sha256": "f6e32373b066f5187f477bac436b4c977a64dddeb62ef1a7c512a9a709824cca"
+        },
+        {
+          "path": ".recovery/ps-2026-10-02T01-33-15.906Z-725.txt",
+          "sha256": "7552c00111f5bffb2ae0ea58f6efb2368b99557f512bb0f41940a1740d73bdfa"
+        },
+        {
+          "path": "chatkit-server/discovery_contract_probe.py",
+          "sha256": "12dfd76d011873c699e418cc63e09830235126031c29e286c6998ec2a2396a6f"
+        },
+        {
+          "path": "chatkit-server/test_attack_independent.py",
+          "sha256": "8699450cba12e72bc3e65df212d593ec440de87deec3768d1b143c289ac4a817"
+        },
+        {
+          "path": "chatkit-server/test_automatic_actions.py",
+          "sha256": "51ff78c579ab444cebf5e7a90fc465143b964a516caaeb05dd819d58a6b237e0"
+        },
+        {
+          "path": "chatkit-server/test_build_identity_independent.py",
+          "sha256": "8deb68cec930750794cae00d59f398ffd846c6ee3ede8771def10bef6176d960"
+        },
+        {
+          "path": "chatkit-server/test_campaign_tools.py",
+          "sha256": "7c754b3fc9918eccb943b241e92480ad545cf76f68d8b8f4bfeb256eb024209e"
+        },
+        {
+          "path": "chatkit-server/test_discovery_tools.py",
+          "sha256": "e1a331072a6479b89d548997dc496da02af561c3906621439362c603a7b20e31"
+        },
+        {
+          "path": "chatkit-server/test_prompt.py",
+          "sha256": "8e42546878a6371ae31f31478c72c70c55308ebe3ed645fded528d7bc761f7a3"
+        },
+        {
+          "path": "chatkit-server/test_routine_speed_independent.py",
+          "sha256": "bdb750941489227e0d0a1f09ee83d137f7dffb288885fcd9189f3ff9fa532639"
+        },
+        {
+          "path": "docs/attack-vision-evidence/ai-attack-workflow.md",
+          "sha256": "5b8333bf339cc6d8025ba04c1b32aa20fd768fef569138f151478a7665dbfbbe"
+        },
+        {
+          "path": "docs/attack-vision-evidence/attack-implementation.md",
+          "sha256": "0f0666569e684b4b394b387074777a882766dbff8b3232a75da3f18781cae60a"
+        },
+        {
+          "path": "docs/attack-vision-evidence/embedded-chat-readiness.json",
+          "sha256": "a02c8506701bf76e094bc936e8e596216ff2be86c23a21465766b84aa9420329"
+        },
+        {
+          "path": "docs/attack-vision-evidence/embedded-chat-readiness.mjs",
+          "sha256": "5b4274878b603817aa4f7870ba41b86944d8f4776656373e87380c192ccebe47"
+        },
+        {
+          "path": "docs/attack-vision-evidence/independent-direct-timings.json",
+          "sha256": "325a9a21ce9c6817884e2fc257a376f5228a85685e35c286f0d0e03d73fedd95"
+        },
+        {
+          "path": "docs/attack-vision-evidence/independent-live-readback.json",
+          "sha256": "b26be83a2529d40758f4e1b9649dd02c0a50ed9e0d847f5b83bde796fb13e37f"
+        },
+        {
+          "path": "docs/attack-vision-evidence/independent-sdk-inspect.json",
+          "sha256": "7818d2c57f4042576bed6bff5fcff337d507afd1e75729e99b93dc33ce16bdaf"
+        },
+        {
+          "path": "docs/attack-vision-evidence/independent-sdk-restore.json",
+          "sha256": "35b6f7be5da1cc7ff3477b5ca89d580421d17586e93fa00cc87dc03d61e6650b"
+        },
+        {
+          "path": "docs/attack-vision-evidence/live-direct-receipts.json",
+          "sha256": "5d85fd57db08057837a246babee8f470befab69d5625b968852bb03a21f95ba0"
+        },
+        {
+          "path": "docs/attack-vision-evidence/live-fixture-plan.md",
+          "sha256": "e37ddde6cb0cbdbf7663e25b4979fbb31857d56e322685ba0f9c9e704b7be1c4"
+        },
+        {
+          "path": "docs/attack-vision-evidence/live-fixture.json",
+          "sha256": "29cd3eeccd95dc95b28164ff5c86afb2aadfae5d515d64126e69b88bfce8a7d9"
+        },
+        {
+          "path": "docs/attack-vision-evidence/live-light-dark.json",
+          "sha256": "4126dc4fe569916a0bcf3ab0f3d727640300c0b05e5d820ac11f0f48aaa4f8e2"
+        },
+        {
+          "path": "docs/attack-vision-evidence/live-light-local.json",
+          "sha256": "a49d4ae005da8ba6d2edd4c9ede0449f7b780b8e0c9d6ba8c799605052bb2d13"
+        },
+        {
+          "path": "docs/attack-vision-evidence/live-results.md",
+          "sha256": "47b183892045b5d1c5f1a401c40eb4affa6f80fe5fd0a5d6f1795315e556c2f3"
+        },
+        {
+          "path": "docs/attack-vision-evidence/runtime-before.json",
+          "sha256": "2fd932f40250b0768d3450c041486f50347a1418dbbb1ee53a73c61341d994e4"
+        },
+        {
+          "path": "docs/attack-vision-evidence/runtime-build-verified.json",
+          "sha256": "dfe0d4fc41f63bb19fc625900c8db6d65233ad591814d7475d53e916116717b2"
+        },
+        {
+          "path": "docs/attack-vision-evidence/runtime-native-marker.json",
+          "sha256": "07821f0c96bc09c1434c0873e2b40ce7c2be2237e1187a16e738552af7e6faf9"
+        },
+        {
+          "path": "docs/attack-vision-evidence/runtime-native-marker.mjs",
+          "sha256": "9508838720b65ad5215c7197196c3ea10d79ea2545aefa0ca7ab802a4ec1ac34"
+        },
+        {
+          "path": "docs/attack-vision-evidence/tv-after-walk.jpg",
+          "sha256": "e0eda2faa7e2d715f4e8ebb290e8911c81bc55308c376f779d0eead1047a12d4"
+        },
+        {
+          "path": "docs/attack-vision-evidence/tv-dark-fog.jpg",
+          "sha256": "8a7da15732d3455bf925f829aa1253110fe0ab38c7f5fd1ccc6eef52e28747e5"
+        },
+        {
+          "path": "docs/attack-vision-evidence/tv-door-closed.jpg",
+          "sha256": "fe8bfb554beef6ef971014819f3be7f0d2522a265e76649338e0e0bb15a7e015"
+        },
+        {
+          "path": "docs/attack-vision-evidence/tv-door-open.jpg",
+          "sha256": "178ce9443f6811b4642621e99b92de82168ea14487aaefd6ffe3e25e9a6602e9"
+        },
+        {
+          "path": "docs/attack-vision-evidence/tv-local-light.jpg",
+          "sha256": "aef71d128f5bbf8e10f35fd633b4953b6c34cf4753a6286818bf7030ba0a6323"
+        },
+        {
+          "path": "docs/attack-vision-ledger.md",
+          "sha256": "d41bb7fcfd0ace702d858ce0cec697ba3e0920ab3271c7c63d21ee27475d1ea8"
+        },
+        {
+          "path": "docs/attack-vision-validation.md",
+          "sha256": "8bb4f46e2e2ead57aa0791d92e21f3911ff3396ec38a21d3b908a500ff633b17"
+        },
+        {
+          "path": "docs/baseline-evidence/build.txt",
+          "sha256": "645e34417c2b4c387fc4f39a073c02803782299ef511d8baddb0a9194e6e2bec"
+        },
+        {
+          "path": "docs/baseline-evidence/digital-tabletops-dirty.txt",
+          "sha256": "1cf3364599df737a54f96e1294e250ac9dda16a01a2830da599c30b31000b1a6"
+        },
+        {
+          "path": "docs/baseline-evidence/dnd5e-dirty.txt",
+          "sha256": "880a3b67ab350578d9a68326ee6708c9442cd9601787af16a776bc170845f720"
+        },
+        {
+          "path": "docs/baseline-evidence/lint.txt",
+          "sha256": "fcdf8f9d279e1491274f89e498c190c1becf1bf9df92f628938d609afcb37c30"
+        },
+        {
+          "path": "docs/baseline-evidence/local-api-dirty.txt",
+          "sha256": "786fc4aacc215dc68fa244634d818d18062f88409807c209ef544454240e81fb"
+        },
+        {
+          "path": "docs/baseline-evidence/manifest.txt",
+          "sha256": "29f1149ead6d1456f773eeca8429d3b1763be030d70ae505143d1b0e02068266"
+        },
+        {
+          "path": "docs/baseline-evidence/npm-test.txt",
+          "sha256": "f584a5386e3ae0ccafafec61d78bddecc4d0e050971e9ff51071c166a7267d80"
+        },
+        {
+          "path": "docs/baseline-evidence/parent-dirty.txt",
+          "sha256": "afb7f2ca5264fea428b4d8ac61c02c9a88af414d4ed23817c3fc4c4759cf9d39"
+        },
+        {
+          "path": "docs/baseline-evidence/python-test.txt",
+          "sha256": "badaa0c7664d42790241cb9f7fa8f7cc9de0a23ddd665a5a950d0a22ec2cffbb"
+        },
+        {
+          "path": "docs/baseline-evidence/trails-dirty.txt",
+          "sha256": "34764921688bd36ce94cb17fcb2e9c23e151b5b89f74056e38a7a40f0f41005e"
+        },
+        {
+          "path": "docs/baseline-evidence/typecheck.txt",
+          "sha256": "09921867e58c42faf9d67c6a494b9eb94741b9f88dd21486f984a0619a03dec5"
+        },
+        {
+          "path": "docs/core-rollout-acceptance.md",
+          "sha256": "d59953ec723884094e1b342a9d4dfa2b31ba4cde54ead3618ee0aed67554d017"
+        },
+        {
+          "path": "docs/core-rollout-evidence/FoundryVtt-start-hashes.txt",
+          "sha256": "0dbb51d198e00a6532b152368c925e375b96e915bab79e9a884cf37da2eb0035"
+        },
+        {
+          "path": "docs/core-rollout-evidence/FoundryVtt-start-head.txt",
+          "sha256": "fb8388b595ece16bcdab8ea9bcb77f1d4567b23372a930af0d93b802c361a92c"
+        },
+        {
+          "path": "docs/core-rollout-evidence/FoundryVtt-start-status.txt",
+          "sha256": "afb7f2ca5264fea428b4d8ac61c02c9a88af414d4ed23817c3fc4c4759cf9d39"
+        },
+        {
+          "path": "docs/core-rollout-evidence/confirmed-actions.png",
+          "sha256": "17503ce896ffc4993c90181c6ac36b66f0075f99cbea4ad644e687b4bff2c0a3"
+        },
+        {
+          "path": "docs/core-rollout-evidence/direct-shortcut.json",
+          "sha256": "3f960aecc668cd3ef1d6cd3d2b828128a8816133947b6ba134207ae9f5e451d0"
+        },
+        {
+          "path": "docs/core-rollout-evidence/foundry-ai-dungeon-master-preservation-changes.json",
+          "sha256": "c792053f5c624ced74097268cf471c0ca2d8076a4cde87f12e340a0412dce8e0"
+        },
+        {
+          "path": "docs/core-rollout-evidence/foundry-ai-dungeon-master-start-hashes.txt",
+          "sha256": "dd33cd640f1ee7fcc5939a2b7490c3e502bcb9c8d9269c3bdbc7b8fff7902c0d"
+        },
+        {
+          "path": "docs/core-rollout-evidence/foundry-ai-dungeon-master-start-head.txt",
+          "sha256": "b6107bde87a8ddf01fc883d05516c3a8aa93473fc0e081e3721bf72cf72134b2"
+        },
+        {
+          "path": "docs/core-rollout-evidence/foundry-ai-dungeon-master-start-status.txt",
+          "sha256": "20d1eba28f57446a5dbe27902a8f79015c344d2ff32f9c4b3bddf991e637d74c"
+        },
+        {
+          "path": "docs/core-rollout-evidence/foundry-local-api-preservation-changes.json",
+          "sha256": "c00968b5d9808a07fd502033d9909c47ae93252551b3fd4ad382d8ca67010094"
+        },
+        {
+          "path": "docs/core-rollout-evidence/foundry-local-api-start-hashes.txt",
+          "sha256": "9f507be1cee3f31fdb0fb73ed284c945f3d12f5da49546ab9469090608f6baa1"
+        },
+        {
+          "path": "docs/core-rollout-evidence/foundry-local-api-start-head.txt",
+          "sha256": "63f32f6d039c441cffe8a70a484481323ba8f3f084314ab031c564e8f7af28c7"
+        },
+        {
+          "path": "docs/core-rollout-evidence/foundry-local-api-start-status.txt",
+          "sha256": "9b14a32b72c1d00c743923ab0c141f56770ab050ef463d4a1933a8a94744fb03"
+        },
+        {
+          "path": "docs/core-rollout-evidence/independent-final-loaded-build.json",
+          "sha256": "854d7cfd57c21b3675998bcb78ff7b10152069f8efec245107ebd4260e6e8dd7"
+        },
+        {
+          "path": "docs/core-rollout-evidence/independent-live-final-inspect.json",
+          "sha256": "62f26d09f91a795c956cfdd6b28f6cf6f3eee69bc1269a6f863c86c870d59760"
+        },
+        {
+          "path": "docs/core-rollout-evidence/independent-live-inspect.json",
+          "sha256": "1d9f0369fdf3dbb73220656c790c9f28e711a7a5b216ce0f4a91d3c93f4cdd1d"
+        },
+        {
+          "path": "docs/core-rollout-evidence/independent-live-receipts.json",
+          "sha256": "e0dee8efdf41946dfa45f6ffc4070fcf2105062829260883c59d07271d25a9a0"
+        },
+        {
+          "path": "docs/core-rollout-evidence/independent-restored-active-scene.json",
+          "sha256": "093323743823a2548d7679c61577934ec01f065acc2c2cf0640317f603b624e6"
+        },
+        {
+          "path": "docs/core-rollout-evidence/independent-restored-inspect.json",
+          "sha256": "3708b0309066d52ec4264a683460caa275c412da43832dfaf9eaad6488ed530a"
+        },
+        {
+          "path": "docs/core-rollout-evidence/live-fixture.json",
+          "sha256": "8861a22ee58498bd1a7cfff2782d440c277c17a2de0ef85bffd0b57928eb39e1"
+        },
+        {
+          "path": "docs/core-rollout-evidence/live-receipts.json",
+          "sha256": "656474c77550fbc5c8bcf87845f8b6403e4d9525176cd26b405635ba20e63d62"
+        },
+        {
+          "path": "docs/core-rollout-evidence/live-traces.json",
+          "sha256": "15f803c6d9fc2ba7930de381906c15f5aeffd7355ff464c2f7125894052e45c5"
+        },
+        {
+          "path": "docs/core-rollout-evidence/loaded-build.json",
+          "sha256": "5a1093c276f09ede945f1638c7f397b6750ecb57ad77ed466e32187382983b53"
+        },
+        {
+          "path": "docs/core-rollout-evidence/runtime-current.json",
+          "sha256": "90c0478af3ad170b83e9697939a4f52d38db8561b9851358415950131d90db8a"
+        },
+        {
+          "path": "docs/core-rollout-evidence/runtime-loaded.json",
+          "sha256": "9f688622cfb9f956bd177536627972607187c2b0bb448a834ca0bebf99ea652b"
+        },
+        {
+          "path": "docs/core-rollout-ledger.md",
+          "sha256": "b6c8fb476ab9e24a5e5ddd78915660e72a74aa368b71720462191681e1c5215b"
+        },
+        {
+          "path": "docs/core-rollout-validation.md",
+          "sha256": "a467fe5508cc1b8a599165c55d06455171309d27bef08b853de549b3622ef767"
+        },
+        {
+          "path": "docs/final-evidence/ai-dirty.txt",
+          "sha256": "82824af42b4f7737022deea181237a3013fe3b1f8e54b97a2204bffb44892eb2"
+        },
+        {
+          "path": "docs/final-evidence/build.txt",
+          "sha256": "ec6168e58e8059a08138f728b75295dda336cbf7d9835dda9b25e077e9a98d59"
+        },
+        {
+          "path": "docs/final-evidence/capability-inventory-format.txt",
+          "sha256": "3307094016ef17bf6a25a5aab21db0e0697b230710a6489065789cad16259a7b"
+        },
+        {
+          "path": "docs/final-evidence/capability-inventory-lint.txt",
+          "sha256": "e2aa5f4bf523deadee504bcb558ff2d02699f0c829b6091b97ba302a838b68b4"
+        },
+        {
+          "path": "docs/final-evidence/check-manifest.txt",
+          "sha256": "29f1149ead6d1456f773eeca8429d3b1763be030d70ae505143d1b0e02068266"
+        },
+        {
+          "path": "docs/final-evidence/digital-tabletops-dirty.txt",
+          "sha256": "1cf3364599df737a54f96e1294e250ac9dda16a01a2830da599c30b31000b1a6"
+        },
+        {
+          "path": "docs/final-evidence/dnd5e-dirty.txt",
+          "sha256": "880a3b67ab350578d9a68326ee6708c9442cd9601787af16a776bc170845f720"
+        },
+        {
+          "path": "docs/final-evidence/expanded-ai-tests.txt",
+          "sha256": "ebb1d385720e7f3360bd44d5aca554160a056867ea0d8c8b1b88d02741acb266"
+        },
+        {
+          "path": "docs/final-evidence/expanded-bridge-current-diff.txt",
+          "sha256": "9cadcc571c4bfedaff3a5d59e0aab904f60a0105ebe659424c97084c21325d36"
+        },
+        {
+          "path": "docs/final-evidence/expanded-digital-tabletops-dirty.txt",
+          "sha256": "1cf3364599df737a54f96e1294e250ac9dda16a01a2830da599c30b31000b1a6"
+        },
+        {
+          "path": "docs/final-evidence/expanded-dnd5e-dirty.txt",
+          "sha256": "0510e851af80d6b9f20d6e77131f48d0a288068216ba2903c40b052758e96a29"
+        },
+        {
+          "path": "docs/final-evidence/expanded-local-api-dirty.txt",
+          "sha256": "cbb7e9fceec9249f509a246c3811bd71945fa88c90368d7eb91458ee062f5f86"
+        },
+        {
+          "path": "docs/final-evidence/expanded-parent-dirty.txt",
+          "sha256": "afb7f2ca5264fea428b4d8ac61c02c9a88af414d4ed23817c3fc4c4759cf9d39"
+        },
+        {
+          "path": "docs/final-evidence/expanded-trails-dirty.txt",
+          "sha256": "34764921688bd36ce94cb17fcb2e9c23e151b5b89f74056e38a7a40f0f41005e"
+        },
+        {
+          "path": "docs/final-evidence/lint.txt",
+          "sha256": "fcdf8f9d279e1491274f89e498c190c1becf1bf9df92f628938d609afcb37c30"
+        },
+        {
+          "path": "docs/final-evidence/local-api-build.txt",
+          "sha256": "19a124a69a0942cb950209f8f8b95ff1bbb40a2f74bd833a531aff0553d14444"
+        },
+        {
+          "path": "docs/final-evidence/local-api-dirty.txt",
+          "sha256": "190742d131f2eeb80c03593b1bcd56e6577cb4f7ef1833ff53cd81120e269a20"
+        },
+        {
+          "path": "docs/final-evidence/local-api-tests.txt",
+          "sha256": "59e33e74e25134b48acb8516dfc43655b7a5f365592f5984a5734c19198d5ab5"
+        },
+        {
+          "path": "docs/final-evidence/local-api-typecheck.txt",
+          "sha256": "5bb4698e9180f792dab4832c686eb360785762cba9df786c3403cc213830b580"
+        },
+        {
+          "path": "docs/final-evidence/npm-test.txt",
+          "sha256": "55e23bf1519b7c63ecafe246d728c89dd0c1a5993258278d7391db1ec4f18894"
+        },
+        {
+          "path": "docs/final-evidence/parent-dirty.txt",
+          "sha256": "afb7f2ca5264fea428b4d8ac61c02c9a88af414d4ed23817c3fc4c4759cf9d39"
+        },
+        {
+          "path": "docs/final-evidence/privacy-head.json",
+          "sha256": "e2db6c43776c2598c1f1e40da364c0e988126efe89f1be23fe943a38caed96d3"
+        },
+        {
+          "path": "docs/final-evidence/python-tests.txt",
+          "sha256": "8c44d9ecf664274c2ac91b6d1f167d448eee42b5b80eef546226adc8d238f746"
+        },
+        {
+          "path": "docs/final-evidence/trails-dirty.txt",
+          "sha256": "34764921688bd36ce94cb17fcb2e9c23e151b5b89f74056e38a7a40f0f41005e"
+        },
+        {
+          "path": "docs/final-evidence/typecheck.txt",
+          "sha256": "09921867e58c42faf9d67c6a494b9eb94741b9f88dd21486f984a0619a03dec5"
+        },
+        {
+          "path": "docs/final-evidence/validator-regressions.txt",
+          "sha256": "be3738d3d949e94ab7f28f266686dbd802898de55cf1da739083de9b62595059"
+        },
+        {
+          "path": "docs/pause-experiment-checkpoint.md",
+          "sha256": "147e4f40ef2cdb8e65d2a4686ccb2039b88dcb14321aac00de4f3aba57bca619"
+        },
+        {
+          "path": "docs/pause-experiment-evidence/foundry-ai-dungeon-master-current-changes.json",
+          "sha256": "7c04b671dba8608790caf8c5ee500ad47931c62caeadb29f4e0f16a198a6b639"
+        },
+        {
+          "path": "docs/pause-experiment-evidence/foundry-ai-dungeon-master-starting-hashes.json",
+          "sha256": "1e8b621eb39bd02e01c042fe797b2b9809620bd10fece35ff3309c8a0339ec19"
+        },
+        {
+          "path": "docs/pause-experiment-evidence/foundry-ai-dungeon-master-starting-head.txt",
+          "sha256": "b6107bde87a8ddf01fc883d05516c3a8aa93473fc0e081e3721bf72cf72134b2"
+        },
+        {
+          "path": "docs/pause-experiment-evidence/foundry-ai-dungeon-master-starting-status.txt",
+          "sha256": "79456e0231f76dd2dac8f83d91f6a83694bded1ee6197ce1885cc4b40cfc3907"
+        },
+        {
+          "path": "docs/pause-experiment-evidence/foundry-local-api-current-changes.json",
+          "sha256": "72ee15c6a3b029d77ea71890748177d0b0646d13da0b856755c2098165dba42e"
+        },
+        {
+          "path": "docs/pause-experiment-evidence/foundry-local-api-starting-hashes.json",
+          "sha256": "fcd23f66bf70c7675fb58cc11495a07801380b37e4aa2ed4b35e44fe58cc746f"
+        },
+        {
+          "path": "docs/pause-experiment-evidence/foundry-local-api-starting-head.txt",
+          "sha256": "63f32f6d039c441cffe8a70a484481323ba8f3f084314ab031c564e8f7af28c7"
+        },
+        {
+          "path": "docs/pause-experiment-evidence/foundry-local-api-starting-status.txt",
+          "sha256": "cbb7e9fceec9249f509a246c3811bd71945fa88c90368d7eb91458ee062f5f86"
+        },
+        {
+          "path": "docs/pause-experiment-evidence/running-health-before.json",
+          "sha256": "ba625c800089d368c32b5c6d78bf3b8cbe570962baded246dd4b34f8d45183d7"
+        },
+        {
+          "path": "docs/pause-experiment-ledger.md",
+          "sha256": "3347b266c72a4875899579a59e34df4b3bbb9232665f1511b53619ea2227ac93"
+        },
+        {
+          "path": "docs/pause-experiment-validation.md",
+          "sha256": "69e511a4798dd5d1b689dc915fff40070c436b06600f30f5855d55c1f221889e"
+        },
+        {
+          "path": "docs/routine-speed-checkpoint.md",
+          "sha256": "038dc651bd71903eb2d4b89cf1a79fa21583a6544852d2457b4e8dca4f39ff58"
+        },
+        {
+          "path": "docs/routine-speed-evidence/checkpoint-build.json",
+          "sha256": "32ce1570ee23207d9054a18a3d0765038ca82c94f524d7ecd1ec51bf2c886bac"
+        },
+        {
+          "path": "docs/routine-speed-evidence/phase1-and-context.md",
+          "sha256": "103ac83f0946aec15ae4ca81b0e966e950071ea752c8f42338cd5c423addd74b"
+        },
+        {
+          "path": "docs/routine-speed-evidence/phase1-existing-timings.json",
+          "sha256": "ce845ed73537cc58908c37a94cd0b389cb56a844875fc1d0e1eae1830b2e672a"
+        },
+        {
+          "path": "docs/routine-speed-evidence/phase2-receipt-results.md",
+          "sha256": "bee17130baeefc9cb162d82943104d051eef568db0c423636acd6a5eb99c8e5c"
+        },
+        {
+          "path": "docs/routine-speed-ledger.md",
+          "sha256": "6318e570d87f32c30a5f4bd3bd607b6f7fc976168835f54ab0f18e9d434ce7e9"
+        },
+        {
+          "path": "docs/routine-speed-validation.md",
+          "sha256": "aa6f2c34ec72459313dc543b33fd6a27bad05d666b64e02a9f06b5f413b0c5ec"
+        },
+        {
+          "path": "docs/session-action-backend.md",
+          "sha256": "e9734f870afe95b656892a0cc7ca3f80549dc14e3a85d188ff6063eb3cfcd9ee"
+        },
+        {
+          "path": "docs/solo-dm-acceptance-journey.md",
+          "sha256": "a1bc66e5ea07157ea7eac3170eb146c053a79990a58d49140ffd36b3c71fc4a9"
+        },
+        {
+          "path": "docs/solo-dm-acceptance-summary.md",
+          "sha256": "ffd09aac1901fb11f45be132171e60326fa873da5b54ce3176e12194121d84ea"
+        },
+        {
+          "path": "docs/solo-dm-baseline.md",
+          "sha256": "4a58a8f85a8b17b53831a83ffa223cc193345c391b09b5d3ceab1ce91da7be1d"
+        },
+        {
+          "path": "docs/solo-dm-campaign-authoring-plan.md",
+          "sha256": "d891644de40df5815b58912495e944a9319c3da6af18740fe0005594e0f03be2"
+        },
+        {
+          "path": "docs/solo-dm-capability-coverage.md",
+          "sha256": "12d3bd76e30f82c4b64acbe76c84a7d7e54b32dab6a3115a8eec19303c7bba7c"
+        },
+        {
+          "path": "docs/solo-dm-capability-inventory.json",
+          "sha256": "0b6f4f24303400c9799313061cd2b2d49c811031a009416c532cd3347a2ad321"
+        },
+        {
+          "path": "docs/solo-dm-capability-validation.md",
+          "sha256": "31698a56e6c24bb81736a8c12eb937c8800d1dc5fb5e5944483c579135017464"
+        },
+        {
+          "path": "docs/solo-dm-catalog-plan.md",
+          "sha256": "e4651ddc650fae5dfc0f506c86fc0e177b2f256d099852acfd35cd20d579fb73"
+        },
+        {
+          "path": "docs/solo-dm-contract-plan.md",
+          "sha256": "0fd065d014cc764e522f08a2c52144202ae78c85c2f300125e352d5d5ee1ca21"
+        },
+        {
+          "path": "docs/solo-dm-expanded-evidence.md",
+          "sha256": "5a03c8d005e2ace7eef61e5bc317eb3905d66be72ef0eabcf4d5962eb81645c3"
+        },
+        {
+          "path": "docs/solo-dm-latency-live.md",
+          "sha256": "26099e887b28cdbff832224d8586661e2c3971b3174caafc49c604da0d9e2c36"
+        },
+        {
+          "path": "docs/solo-dm-latency-source.md",
+          "sha256": "8c8b95a2ba325a72cdfa5cc70a1db54c8c6acbfbac9a1078eab3472d80007558"
+        },
+        {
+          "path": "docs/solo-dm-latency-validation.md",
+          "sha256": "0e618d073b8e4f268010a4921e1e3492595748ba1c1955e7d468597d0945cba9"
+        },
+        {
+          "path": "docs/solo-dm-ledger.md",
+          "sha256": "50571b256423c39e717d31a1054fae4ceab3e3d9b406514ef672598d6fae380e"
+        },
+        {
+          "path": "docs/solo-dm-live-acceptance.md",
+          "sha256": "618960d74fe00011a7b40e0130ac34d3e37fac932b1aa0b765eb6f8cf292a1a4"
+        },
+        {
+          "path": "docs/solo-dm-panel-revalidation.md",
+          "sha256": "8b53e111391a07446ca568b20875c28b60cacb1444371ee190ee3de461ccf3e7"
+        },
+        {
+          "path": "docs/solo-dm-panel-validation.md",
+          "sha256": "e66426cc12be16a363749c641b4e8570b9351cec9717366d41ff5e87828ac95c"
+        },
+        {
+          "path": "docs/solo-dm-panel.md",
+          "sha256": "48edc2c4682b99a6552e1c2e4bdb94a2d6a5e268d60dc376c2d4dfffe86bd7d3"
+        },
+        {
+          "path": "docs/solo-dm-pause-runtime.md",
+          "sha256": "015eff6f67b73deb88039a9c9261822d560392456b080f5dc45e47ea90c6ccd4"
+        },
+        {
+          "path": "docs/solo-dm-pause-validation.md",
+          "sha256": "782657b2afbcd508f45f616c69adab093d85abf35b63fd55b8672b7d35af5f2a"
+        },
+        {
+          "path": "docs/solo-dm-phase0-validation.md",
+          "sha256": "3d4062f9467c925b21c0b1778a3e523fd5ae470b639b8e483b3b68c85828da62"
+        },
+        {
+          "path": "docs/solo-dm-phase1-validation.md",
+          "sha256": "0c50be852ffbfb8b1418d3a3731e272a774927d97c9b9a47549fe82e4793a197"
+        },
+        {
+          "path": "docs/solo-dm-phase2-validation.md",
+          "sha256": "92894feb2b6a5508b5245dbc53b4e9476727bc46c7936f88657d6943dcc1bffe"
+        },
+        {
+          "path": "docs/solo-dm-phase2.md",
+          "sha256": "80f36dc4893c10a8888046ee02f717e3e1f2c0d30c6bba7c23f008b3b01c6e84"
+        },
+        {
+          "path": "docs/solo-dm-phase3-validation.md",
+          "sha256": "36befa7c9d344e34a6069932e47012861c23bd83875fe3fc33ffdd5401554ae1"
+        },
+        {
+          "path": "docs/solo-dm-phase3.md",
+          "sha256": "9b0873cded33562257333f416d19e693127522370c9a89d05bd52022842cd343"
+        },
+        {
+          "path": "docs/solo-dm-phase4-validation.md",
+          "sha256": "ebf1215f0323423ebc95d1a0eae13af968fc0447285367a968d8e441abe862a7"
+        },
+        {
+          "path": "docs/solo-dm-phase4.md",
+          "sha256": "d3fb1e5137c3b7ea440365e6f38e2bb9e8a2d92f47121dc82f2ac4938e757904"
+        },
+        {
+          "path": "docs/solo-dm-phase5-validation.md",
+          "sha256": "2650846306e99ccb1e21d132fd2bd9e315dcb961edd0479889a08958a6a01e17"
+        },
+        {
+          "path": "docs/solo-dm-phase6-validation.md",
+          "sha256": "ddc5bcd3fc62b74f2600563ffd7a84b4f20920157e970083dbf13abdc7b3425f"
+        },
+        {
+          "path": "docs/solo-dm-privacy-validation.md",
+          "sha256": "3aeba0bd7fb2ce4469b972500a24b49fe120be761ecf8f694499be913f4d2809"
+        },
+        {
+          "path": "docs/solo-dm-privacy.md",
+          "sha256": "b447759343c740a3f9da552c2c6c96222a9c9c1064226e4c41ea83ea57ac8a75"
+        },
+        {
+          "path": "docs/solo-dm-prompt-validation.md",
+          "sha256": "da966d8e1dc45d90770c79cd08b40c8efccf56b3311f492ab90cee454e817c9d"
+        },
+        {
+          "path": "docs/solo-dm-prompt.md",
+          "sha256": "2f38709f454c9565f9b3927e696ea5d930e37940f9f2fd97b1faa75779aaec6c"
+        },
+        {
+          "path": "docs/solo-dm-python-campaign.md",
+          "sha256": "34c55830ad936ef4dc6483592563733caeadb9acfe31e0c64ed7c5ce3b625028"
+        },
+        {
+          "path": "docs/solo-dm-python-triggers.md",
+          "sha256": "277eb6547a68a12a1ac00d7f64af8f7f3b2c01b29f4976306ea34e1311346c9a"
+        },
+        {
+          "path": "docs/solo-dm-routine-actions.md",
+          "sha256": "c779c628dc4e6ed9616ec085aa4e9051cfb502d58b1b64b4f29704f1003a9585"
+        },
+        {
+          "path": "docs/solo-dm-runtime-tools.json",
+          "sha256": "1511a787e77bafcd9fe7c9afe9643ce44805ac2bcbceb22a169801f0ad917464"
+        },
+        {
+          "path": "docs/solo-dm-storage.md",
+          "sha256": "fe5b75fd8dbb99d1f00336d970ab3ff82398c4021da580df083ff30b296bda99"
+        },
+        {
+          "path": "docs/solo-dm-tool-audit-validation.md",
+          "sha256": "24505ae34f0e2d8db4181f243861583123869616174eeec8fb08bc27b3d2524a"
+        },
+        {
+          "path": "docs/solo-dm-triggers-plan.md",
+          "sha256": "9e42b5b680d425ba5e02ccf6db82e131b952fbb6108540ce9e407a73071cdce9"
+        },
+        {
+          "path": "docs/solo-dm-triggers.md",
+          "sha256": "22c078966fc23b1659d03f65fc108fa6c83cb9c4064ce93b944c16f796d880ac"
+        },
+        {
+          "path": "docs/solo-dm-world-control.md",
+          "sha256": "401f3df352dc80e1aa68d3f41fc6f21ff33c50edde3e175a16c629f7d32856da"
+        },
+        {
+          "path": "docs/solo-dm-world-files.md",
+          "sha256": "8d7b91ce26c987d6df0e370970db82ca6a04818d218afde754ff66a1c6bc0615"
+        },
+        {
+          "path": "docs/world-document-backend.md",
+          "sha256": "47492da67bcb3494adcbeef36deb922d8cbe617e6431202ef703f173661ac150"
+        },
+        {
+          "path": "docs/world-file-actions.md",
+          "sha256": "2058745e71209df6fcef7b46637b103cb26a17bfb10633e31394a26b98bfd90a"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/application-cancellation.test.ts",
+          "sha256": "3a443f8dba433300e452ea5aa53464e2a298a77557f00b92b7c6cb0b0bd50a15"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/application.panel-revalidation.test.ts",
+          "sha256": "c1f91186f6260fcd1e1142875a469c100620affc378b0335308e30ba1efad491"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/application.validation.test.ts",
+          "sha256": "a117d43652659fc6929edede6a14321eb37cb94e2e3fc353d0e1359fb6eb5ac8"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/campaign-review.test.ts",
+          "sha256": "01b53a901b836f493753b321a5a01b61d8c696a3fbd70ceb3c7830a24531f593"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/campaign-review.ts",
+          "sha256": "67f28bf68b563e2135517cae715b6b764c434632f6f0445ed9658d9fdafea96e"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/core-command.test.ts",
+          "sha256": "5781a4f28f40155d9105bd6d5f705daae65c64a27f072c1b230be5f1f9096711"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/core-command.ts",
+          "sha256": "5af0724037c797dd11aec11d5fea3cf421cf5fc917cf33bfe7efe5fc0b026463"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/core-rollout.validation.test.ts",
+          "sha256": "fd95f170c51cd2464d54bc8dfecc559523b074bca81809f2c3d32c37913284d4"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/hooks.test.ts",
+          "sha256": "af76952b786d874b31f0b539e34d11336a3afa935303015c7352e6e35159c47e"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/mutation-origin.test.ts",
+          "sha256": "8d63dc623d96fae48576c14dd3c7ea32f65e54d7dbfcca5b5d54f00efc60ed94"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/mutation-origin.ts",
+          "sha256": "143cb6fa3c11ef3ebd1137102712983e3a5b39073f8fdf5784f9846e7bce7afb"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/world-review.test.ts",
+          "sha256": "ead56393c96381a42ce8dd3cb02dccaf617c8067eb18add1cbe0bad58a6d0783"
+        },
+        {
+          "path": "module/src/ai-dungeon-master/world-review.ts",
+          "sha256": "3e4e5dafdd6e3707b1977b10879084a24e754aeaf8e3c678fc2a436cb85756a6"
+        },
+        {
+          "path": "scripts/attack-vision-fixtures.mjs",
+          "sha256": "de5ef67fb42fbb69be3838ea0b7976f85cb7a3f0b0228ce65de0cf8f2aae1718"
+        },
+        {
+          "path": "scripts/attack-vision-independent-read.mjs",
+          "sha256": "b9f45702f6778131fe73618a4dace5bd38bc773a126fe31310841d568ca5e212"
+        },
+        {
+          "path": "scripts/attack-vision-light-check.mjs",
+          "sha256": "fe9834c9bb507afefc917e9b37d75685010b20b8693f5d4c1e0fe5e6d843b253"
+        },
+        {
+          "path": "scripts/core-rollout-fixtures.mjs",
+          "sha256": "22d9770f0fffdbc0ba02eacf5d55293faa1710473b1ee7f8510ccb10c73c88d4"
+        },
+        {
+          "path": "scripts/core-rollout-runtime-inspect.mjs",
+          "sha256": "cb0f766e710e87e0c874636886f96041001d2452832f131e3ad77ba71ce02e62"
+        },
+        {
+          "path": "scripts/core-rollout-trace-summary.mjs",
+          "sha256": "70335ece6edea80233ea9cfcda3ab959cc8257250ec314df721452c27f131543"
+        },
+        {
+          "path": "scripts/inspect-pause-runtime.mjs",
+          "sha256": "566fbcf2d031fedae2b592c95a1fa267153b50aeacf710ac325ca6164b1c53b0"
+        },
+        {
+          "path": "scripts/inventory-solo-dm-capabilities.mjs",
+          "sha256": "60b077fcd598e869844d829fefcbb17b6a86020ad320a849dcabe87bae9149d6"
+        },
+        {
+          "path": "scripts/summarize-routine-traces.mjs",
+          "sha256": "726f87b1643624fd1bb0c00c269ed06f0ac35b873339c6fa9f9a0446cd054c4f"
+        },
+        {
+          "path": "scripts/validate-direct-timings.py",
+          "sha256": "fd2c8e7ea6241987c61eecf37f03607fd13dee3966f6b9d2a0af14b2b97023b9"
+        },
+        {
+          "path": "server/src/build-identity-independent.test.ts",
+          "sha256": "3293c18e1dfd4af8632722d532d640295a9c74fdfb712aa5bb0b7c047668bc3e"
+        },
+        {
+          "path": "server/src/build-identity.test.ts",
+          "sha256": "9bf30b77360a6ffd615199f49112b95b62826a262404d06fed4a59a24a67bf70"
+        },
+        {
+          "path": "server/src/build-identity.ts",
+          "sha256": "0b427b13d489c02894641527b25a8ca75e79523b513d1d467541a862408afabe"
+        },
+        {
+          "path": "server/src/chatkit/attack-actions.test.ts",
+          "sha256": "08a5d94d67b6c0bbe1722a4215b6bb3e70d7b20be5716a2cac27b11de97735f1"
+        },
+        {
+          "path": "server/src/chatkit/attack-actions.ts",
+          "sha256": "7d4aacc60571ffb59321be5d7c92df1897b8c5ab69a41542041a54f6070c896f"
+        },
+        {
+          "path": "server/src/chatkit/attack.attack-vision.validation.test.ts",
+          "sha256": "4bffcb35cf97caf4d165dda3fd045f4051b16cb0a529dc39655e565115da6574"
+        },
+        {
+          "path": "server/src/chatkit/bounded-call.ts",
+          "sha256": "2668b776a47b7dc9542f639c57067d96789438a4a2973db323065a37b30d1408"
+        },
+        {
+          "path": "server/src/chatkit/campaign-actions.test.ts",
+          "sha256": "721d63e0458812e1ed136fe6d15bd1725a90ac0638ef3929c145c0eee877d213"
+        },
+        {
+          "path": "server/src/chatkit/campaign-actions.ts",
+          "sha256": "1efe1253fdd6d6e681d094d13dc67ac789a142b6b1e17310e9a30d975d87cc22"
+        },
+        {
+          "path": "server/src/chatkit/campaign-actions.validation.test.ts",
+          "sha256": "d969d7ba2bfb3546ca1be5b3321a6d06b4a7385320f2a822340dd53ce6154c36"
+        },
+        {
+          "path": "server/src/chatkit/catalog-tools.test.ts",
+          "sha256": "efa3a2d68dcaf92a210b03afb2048685c6fedc35a8e0ac6a74334bd246a3f910"
+        },
+        {
+          "path": "server/src/chatkit/catalog-tools.ts",
+          "sha256": "807e7fb44edadcea53001f42cda7b79550701828ccc23c30b56007a903ec0131"
+        },
+        {
+          "path": "server/src/chatkit/context.routine-speed.validation.test.ts",
+          "sha256": "5d1fba0c0904b7f429853c99c87e9a61f56de444d2fb98ebfe85a08b7031c95d"
+        },
+        {
+          "path": "server/src/chatkit/core-actions.ts",
+          "sha256": "c4a8d4f8d23c846d1157f9474b14a916921cc4e58612d89c7b7411a62d6e794c"
+        },
+        {
+          "path": "server/src/chatkit/core-rollout.validation.test.ts",
+          "sha256": "0aecf4b7c9a38da818016d51c0e4ab99f54577db820f78e0a1332f2080bea7d9"
+        },
+        {
+          "path": "server/src/chatkit/gateway.pause.test.ts",
+          "sha256": "3df34332c5f4e83787a4ba11adc293dbefb8cfc45e0170c94e1b5fcf8732c3d9"
+        },
+        {
+          "path": "server/src/chatkit/pause-actions.test.ts",
+          "sha256": "f7d9e792f0c8134e86345e93d589035be4c87720fb645a860be0f684b1e211a6"
+        },
+        {
+          "path": "server/src/chatkit/pause-actions.ts",
+          "sha256": "fb71fad0a06f66aeeff749c4985e8b03d82d55e46bd85b9de287c8ef933304d8"
+        },
+        {
+          "path": "server/src/chatkit/pause-actions.validation.test.ts",
+          "sha256": "a55d2db296277ece8a1c40d47cf5f0253a67fc4c76bc5db4e306d994f1d3ff34"
+        },
+        {
+          "path": "server/src/chatkit/pause-experiment.validation.test.ts",
+          "sha256": "1c4ab70912484782f6d20c5a7d0b6eae0f99d30f1fb7a7573ce112fa3415af00"
+        },
+        {
+          "path": "server/src/chatkit/pause-request.ts",
+          "sha256": "6d903cfb3fa3c4ffbf8e3a2ec7e1423b2bf8397ca2b1415a249cc9af1e5ffead"
+        },
+        {
+          "path": "server/src/chatkit/pause-request.validation.test.ts",
+          "sha256": "f01dee2d91b2fc3e2a10700a9515e04ab6e571a7c080a255c1bfbc1f8a9cdf8b"
+        },
+        {
+          "path": "server/src/chatkit/session-actions.independent.test.ts",
+          "sha256": "ba7e32aea16727f9f9b2eb65c110a3cb2490b00f4359d9ff6340626e57740e88"
+        },
+        {
+          "path": "server/src/chatkit/session-actions.test.ts",
+          "sha256": "8234e60caeda9a1d42ba9507fead043e39beb8a68b35347cedb5160eb17c926b"
+        },
+        {
+          "path": "server/src/chatkit/session-actions.ts",
+          "sha256": "44a8ea92a47c4375677949ec933908734c91f2aeeda654ebcc66d9751ea80447"
+        },
+        {
+          "path": "server/src/chatkit/solo-dm-acceptance.test.ts",
+          "sha256": "7a7b4c089f1fc9e760f7973116786fd4084a0f4553b9b7021371133619c92de8"
+        },
+        {
+          "path": "server/src/chatkit/tool-audit-independent.test.ts",
+          "sha256": "0206528e0ddc401a7e8be19e64e8716b9712e4b4d487233c6af62826e960527a"
+        },
+        {
+          "path": "server/src/chatkit/tool-audit.test.ts",
+          "sha256": "a2ac0ccee6e19c9f3513025dd8bdb1b8aa0797af2ca4278637a32758cbf9077f"
+        },
+        {
+          "path": "server/src/chatkit/tool-audit.ts",
+          "sha256": "a25f10697c620b3b2b34c9a85178ad78b0ac0afef2af0b20f031f46520d4f1af"
+        },
+        {
+          "path": "server/src/chatkit/world-document-actions.independent.test.ts",
+          "sha256": "39a3d30b8ba72998480f9a9560f8b71bb5235033a2c10b8c5b0cff4ecf129661"
+        },
+        {
+          "path": "server/src/chatkit/world-document-actions.test.ts",
+          "sha256": "b7c4e1a17b9e8eb4bbcda2a6c6a08cf88043e90143ca1da0335b8ca1cfcfb18d"
+        },
+        {
+          "path": "server/src/chatkit/world-document-actions.ts",
+          "sha256": "0f64de490307f70eb9b4fee8b4fbbf0f52e3b653d5798f600e5bd22517689cb3"
+        },
+        {
+          "path": "server/src/chatkit/world-file-actions.independent.test.ts",
+          "sha256": "bb9ae119f9145f9dbd14acf3bfb5fde8ce05b6e500fe424bc814b9dbaaf8c9de"
+        },
+        {
+          "path": "server/src/chatkit/world-file-actions.test.ts",
+          "sha256": "2003f993c33e02bf82563629acdce2a7f188806e95d6d43fef2204d51538a986"
+        },
+        {
+          "path": "server/src/chatkit/world-file-actions.ts",
+          "sha256": "b7ced917985622002833f0ac153f9e52b56410d2f2179e2a3159692dcbc62f2f"
+        },
+        {
+          "path": "server/src/chatkit/world-files.independent.test.ts",
+          "sha256": "5b9784272d40ff278574e7d0efad3e0b196cb2325bfed297860cafc9a6af389e"
+        },
+        {
+          "path": "server/src/chatkit/world-files.test.ts",
+          "sha256": "bf31522de064ab5eb820c78ea40b0564b07fa7de5e5d65d5d85fbe46cf984c04"
+        },
+        {
+          "path": "server/src/chatkit/world-files.ts",
+          "sha256": "7f5b5645353060e35168f36277d464547a489b8c8380866c7046c7ecbaf036e6"
+        },
+        {
+          "path": "server/src/chatkit/world-request.test.ts",
+          "sha256": "810fa556ef45f2d58db4e9ad50abce3230566a9ca248476cc2f000c5df4b2c47"
+        },
+        {
+          "path": "server/src/chatkit/world-request.ts",
+          "sha256": "e0a468601bab914be096b3726d80f4f9723b7743ff23b724bffd486dbc33a6d6"
+        },
+        {
+          "path": "server/src/chatkit/world-tool-policy.test.ts",
+          "sha256": "1c2c2622fd5e6a9269fbb5287ddd0361612e39a3cffb7567b991527de3f2f8bc"
+        },
+        {
+          "path": "server/src/chatkit/world-tool-policy.ts",
+          "sha256": "4afea24c66c5c87e904292bdec7875358fc5b57bab4b7fbcc877736281535bed"
+        },
+        {
+          "path": "server/src/context/campaign-storage.test.ts",
+          "sha256": "0316b98f232d06b6355504c0b7fad580ed1f396f3c2df4b71fb85cf94bffce9a"
+        },
+        {
+          "path": "server/src/context/campaign-storage.ts",
+          "sha256": "970ea26b60aef8d8f595b85db4d7157cd58e1dd57651f91c8bc33a7e4f3ca530"
+        },
+        {
+          "path": "server/src/context/campaign-storage.validation.test.ts",
+          "sha256": "4e6eff719a3c4553b02e1989dd4bafaac5daeaab1af26d0198d5949db8869deb"
+        },
+        {
+          "path": "server/src/context/core-rollout.validation.test.ts",
+          "sha256": "a07d5c7b3f4a9d4e0751b4f0092a3d7b06ac337ea09941923338a12ffba58d1e"
+        },
+        {
+          "path": "server/src/context/world-campaign.validation.test.ts",
+          "sha256": "04f27b9824a7b7166442d647a6302e4a52b7f82b90fb6707a630cfda003d7f16"
+        },
+        {
+          "path": "server/src/tool-catalog/session-policy.test.ts",
+          "sha256": "2d5ea688a946046db917a2a8ff9bbb9ec4ddbe5bea2e3236b5b6ce43afa09b01"
+        },
+        {
+          "path": "server/src/tool-catalog/world-proposal-policy.test.ts",
+          "sha256": "43e98addf2cc66e64bf7eaa621b6ffed32e4611c61a6273606c28b44834331ac"
+        }
+      ]
+    },
+    {
+      "root": "Data/Data/modules/foundry-local-api",
+      "head": "bff36c0afcded6ab5ceeff0d7b0b4e217f583ca5",
+      "status": [
+        " M PLAN.md",
+        " M README.md",
+        " M docs/mcp-tools.md",
+        " M docs/openapi.json",
+        " M docs/trails-integration/server-architecture-audit.md",
+        " M module/src/bridge-client.test.ts",
+        " M module/src/bridge-client.ts",
+        " M module/src/bridge-enrollment.test.ts",
+        " M module/src/commands/client-readiness.test.ts",
+        " M module/src/commands/collision-topology.test.ts",
+        " M module/src/commands/collision-topology.ts",
+        " M module/src/commands/game-state.ts",
+        " M module/src/commands/reference-audit.test.ts",
+        " M module/src/commands/reference-audit.ts",
+        " M module/src/commands/scene-render.test.ts",
+        " M module/src/commands/scene-render.ts",
+        " M module/src/commands/transactions.ts",
+        " M module/src/commands/users.ts",
+        " M module/src/index.ts",
+        " M module/src/movement-event-hooks.ts",
+        " M module/src/types/foundry-globals.d.ts",
+        " M package-lock.json",
+        " M package.json",
+        " M scripts/foundry-child-bootstrap.mjs",
+        " M server/.env.example",
+        " M server/package.json",
+        " M server/src/app.ts",
+        " M server/src/bridge/foundry-client.ts",
+        " M server/src/bridge/gateway.test.ts",
+        " M server/src/bridge/gateway.ts",
+        " M server/src/config.ts",
+        " M server/src/endpoints/ai-gm-delivery.test.ts",
+        " M server/src/endpoints/ai-gm-delivery.ts",
+        " M server/src/endpoints/bridge-enrollment.test.ts",
+        " M server/src/endpoints/client-readiness.test.ts",
+        " M server/src/endpoints/client-readiness.ts",
+        " M server/src/endpoints/collision-topology.ts",
+        " M server/src/endpoints/game-state.ts",
+        " M server/src/endpoints/index.ts",
+        " M server/src/endpoints/movement-events.test.ts",
+        " M server/src/endpoints/movement-events.ts",
+        " M server/src/endpoints/reference-audit.test.ts",
+        " M server/src/endpoints/reference-audit.ts",
+        " M server/src/endpoints/requirement-output-schemas.ts",
+        " M server/src/endpoints/requirements-registration.test.ts",
+        " M server/src/endpoints/scene-render.test.ts",
+        " M server/src/endpoints/scene-render.ts",
+        " M server/src/endpoints/users.test.ts",
+        " M server/src/events/movement-event-store.test.ts",
+        " M server/src/events/movement-event-store.ts",
+        " M server/src/index.ts",
+        " M server/src/scripts/generate-docs.ts",
+        " M server/src/services/ai-gm-delivery.test.ts",
+        " M server/src/services/ai-gm-delivery.ts",
+        " M server/src/services/asset-lifecycle.test.ts",
+        " M server/src/services/asset-lifecycle.ts",
+        " M shared/src/client-readiness.test.ts",
+        " M shared/src/client-readiness.ts",
+        " M shared/src/collision-topology.test.ts",
+        " M shared/src/collision-topology.ts",
+        " M shared/src/enrollment.ts",
+        " M shared/src/foundations.test.ts",
+        " M shared/src/foundations.ts",
+        " M shared/src/game-state.ts",
+        " M shared/src/index.ts",
+        " M shared/src/movement-events.ts",
+        " M shared/src/scene-render.ts",
+        "?? module/src/commands/attack-actions.test.ts",
+        "?? module/src/commands/attack-actions.ts",
+        "?? module/src/commands/attack.attack-vision.validation.test.ts",
+        "?? module/src/commands/client-identity.test.ts",
+        "?? module/src/commands/client-identity.ts",
+        "?? module/src/commands/core-rollout.validation.test.ts",
+        "?? module/src/commands/movement-policy.test.ts",
+        "?? module/src/commands/movement-policy.ts",
+        "?? module/src/commands/movement.attack-vision.validation.test.ts",
+        "?? module/src/commands/pause-experiment.validation.test.ts",
+        "?? module/src/commands/session-actions.independent.test.ts",
+        "?? module/src/commands/session-actions.test.ts",
+        "?? module/src/commands/session-actions.ts",
+        "?? module/src/commands/system.attack-vision.validation.test.ts",
+        "?? module/src/commands/transactions-origin.test.ts",
+        "?? module/src/commands/users.test.ts",
+        "?? module/src/commands/world-documents.independent.test.ts",
+        "?? module/src/commands/world-documents.test.ts",
+        "?? module/src/commands/world-documents.ts",
+        "?? scripts/foundry-ai-auth-broker.mjs",
+        "?? scripts/foundry-ai-auth-broker.test.mjs",
+        "?? scripts/foundry-companion-credential.mjs",
+        "?? scripts/foundry-companion-credential.test.mjs",
+        "?? server/src/bridge/foundry-session-verifier.test.ts",
+        "?? server/src/bridge/foundry-session-verifier.ts",
+        "?? server/src/endpoints/acceptance-validation.test.ts",
+        "?? server/src/endpoints/acceptance-validation.ts",
+        "?? server/src/endpoints/attack-actions.ts",
+        "?? server/src/endpoints/attack.attack-vision.validation.test.ts",
+        "?? server/src/endpoints/core-rollout.validation.test.ts",
+        "?? server/src/endpoints/pause-experiment.validation.test.ts",
+        "?? server/src/endpoints/routine-mutation-lane.ts",
+        "?? server/src/endpoints/session-actions.test.ts",
+        "?? server/src/endpoints/session-actions.ts",
+        "?? server/src/endpoints/world-documents.test.ts",
+        "?? server/src/endpoints/world-documents.ts",
+        "?? server/src/scripts/generate-docs.test.ts",
+        "?? server/src/services/movement-generation-rollover.test.ts",
+        "?? server/src/services/movement-generation-rollover.ts",
+        "?? server/src/services/production-asset-roots.test.ts",
+        "?? server/src/services/production-asset-roots.ts",
+        "?? shared/src/attack-actions.ts",
+        "?? shared/src/session-actions.ts",
+        "?? shared/src/world-documents.ts"
+      ],
+      "changedFileHashes": [
+        {
+          "path": "PLAN.md",
+          "sha256": "ab29cb583404f2b844041096026f4374d37e72af3444599babaf602e663d753f"
+        },
+        {
+          "path": "README.md",
+          "sha256": "8b9622dd205772ea397f290051d52f48cd10759836f1fdb0f305a2e3645a3648"
+        },
+        {
+          "path": "docs/mcp-tools.md",
+          "sha256": "2090e0a6934840f7fff60511c89ea6baadbe848c41713b08c02a3e38bbebf654"
+        },
+        {
+          "path": "docs/openapi.json",
+          "sha256": "2060a57f324ff8557809a34bf8e410ce957636bb06f8f39c8c123908ac473acf"
+        },
+        {
+          "path": "docs/trails-integration/server-architecture-audit.md",
+          "sha256": "e019eb8d7d22e198dfe0de77e8f6c29a71fcfcc86a1b300b6c2ef54c6c64aee6"
+        },
+        {
+          "path": "module/src/bridge-client.test.ts",
+          "sha256": "2e2a8bcd5a71dbe100bf21e90b01c2e386090992f14a53dea838822dd5ce57d7"
+        },
+        {
+          "path": "module/src/bridge-client.ts",
+          "sha256": "0f1cc610d1c1bc01e68d929d737ed7d31cf7548ed3606c1b95682b1ee391b4bc"
+        },
+        {
+          "path": "module/src/bridge-enrollment.test.ts",
+          "sha256": "e9eb3899bf66c5d5d6892b51a38406b4645e9968d90991866ad467a5e157fd94"
+        },
+        {
+          "path": "module/src/commands/client-readiness.test.ts",
+          "sha256": "839ba0e56614afa47d2ac5c76775755a71fbd74712d3f98c35b93f3f69c2ee48"
+        },
+        {
+          "path": "module/src/commands/collision-topology.test.ts",
+          "sha256": "3554349e8d7467e1b23e6039a13b963e5dc983542a008deace21920635e18b92"
+        },
+        {
+          "path": "module/src/commands/collision-topology.ts",
+          "sha256": "65de737e787bdf55f085cc08dbe9212a12bd918d566d322ce1dfe8fc5a9d2be7"
+        },
+        {
+          "path": "module/src/commands/game-state.ts",
+          "sha256": "c21bf43ff8f90d9921d85a6150954d8e07a3fe95ff3ca219d529f6153fb0c142"
+        },
+        {
+          "path": "module/src/commands/reference-audit.test.ts",
+          "sha256": "315a6f01ebc378031bbccbf01ff08af79df7fc8bef24596292d18781122021a6"
+        },
+        {
+          "path": "module/src/commands/reference-audit.ts",
+          "sha256": "8e90892d93cd5ec911141fed4e1b38813c53c86071e2697aa4de05ed2c76cd09"
+        },
+        {
+          "path": "module/src/commands/scene-render.test.ts",
+          "sha256": "6192c0b61b95fb8f7d4ba720945f609b5223c8c51d0ad365b8a55107eaa73d9c"
+        },
+        {
+          "path": "module/src/commands/scene-render.ts",
+          "sha256": "a65b180275413488273ab58bb0c6cd1114f00f2a4367d30922f3f505c2caafc7"
+        },
+        {
+          "path": "module/src/commands/transactions.ts",
+          "sha256": "61e6175f164002d3b2cb1244bc7d1126fe45f66892ed18950ff6eb5990d8c0c4"
+        },
+        {
+          "path": "module/src/commands/users.ts",
+          "sha256": "1f913b700ce7fdb38fa9cc4d0792f95be03ad636cfca44a65bea6e1d4f0ab7d8"
+        },
+        {
+          "path": "module/src/index.ts",
+          "sha256": "27fac6dbab92456447d6bee5abcb9c9a4124f34ebe9f6685795b2592bacdd506"
+        },
+        {
+          "path": "module/src/movement-event-hooks.ts",
+          "sha256": "ff34d4f42c4ec49a8b965b98ee0c019f81a6f4730405c7978a8f3d916ddfc8f5"
+        },
+        {
+          "path": "module/src/types/foundry-globals.d.ts",
+          "sha256": "7732d269648d53c8895137c2a7198a4f7bac01bce6d7d1cb71c13dceb22f03a2"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "47ebe7589c241d96eec187b682bbccb6805341a5bffe48524bb005d67c243dce"
+        },
+        {
+          "path": "package.json",
+          "sha256": "3285cd2a917c4363ae32c2f7d7ef4db16338b4b5f4b63c7735f8561dc3371c3c"
+        },
+        {
+          "path": "scripts/foundry-child-bootstrap.mjs",
+          "sha256": "df1a1500913f0756993514eaaaf9ee8a9909dd8f2d51190fd785e7624d9ff8a0"
+        },
+        {
+          "path": "server/.env.example",
+          "sha256": "7fd0d352bb50dccdfef76fd3e9ac349215d2b74d72ed54acfa45cde8d4c7a9df"
+        },
+        {
+          "path": "server/package.json",
+          "sha256": "e01025363d2b5933522de34d69157aa249bc5220e29a2bf99b9cba197c042de9"
+        },
+        {
+          "path": "server/src/app.ts",
+          "sha256": "d037dd43f8229cbc0c9c06fa943220e9b2ac031986b21c7a773dc4b997e080b3"
+        },
+        {
+          "path": "server/src/bridge/foundry-client.ts",
+          "sha256": "78d20f3223e41bd49f75fd7de1bfcb4ce3bafa69503eaea29f6dc1ddad5a1c3d"
+        },
+        {
+          "path": "server/src/bridge/gateway.test.ts",
+          "sha256": "e014358804cc1e01c1afcab155bf38a03421fc839cb963c369c47c6d2ae83dd8"
+        },
+        {
+          "path": "server/src/bridge/gateway.ts",
+          "sha256": "ba03fb36630a4e5e939e2942237bc9c309acbebf13f1d7d44a067c86dc179b52"
+        },
+        {
+          "path": "server/src/config.ts",
+          "sha256": "721b4e4c9b39b7535944640030d68d2151e17e7a07b20aae51189599bbd2545c"
+        },
+        {
+          "path": "server/src/endpoints/ai-gm-delivery.test.ts",
+          "sha256": "48b41fce73619041e5c8f1f1ef337aeaa9573f8acbf1ad41562a82077b9787ec"
+        },
+        {
+          "path": "server/src/endpoints/ai-gm-delivery.ts",
+          "sha256": "7394c034be08e9dc56702ad1f2555b68ccb5a1356faab5f94291df228b339f22"
+        },
+        {
+          "path": "server/src/endpoints/bridge-enrollment.test.ts",
+          "sha256": "b75eab077eb959ecb6143dc674d38cf74088274731769a4fb0eed0405319bf8c"
+        },
+        {
+          "path": "server/src/endpoints/client-readiness.test.ts",
+          "sha256": "75cf04e7f8b3fcef86c22d8c6314fbd28ab8107568f48973daa3f10eed60015a"
+        },
+        {
+          "path": "server/src/endpoints/client-readiness.ts",
+          "sha256": "aa4fb53dbb46e787386f261a890fd21e5baab9932d346b11d7786b8333354122"
+        },
+        {
+          "path": "server/src/endpoints/collision-topology.ts",
+          "sha256": "e74e6ad0b777a00ac801cb0e487a26ad59bea126efb65a1d1a10b758b7c6c18b"
+        },
+        {
+          "path": "server/src/endpoints/game-state.ts",
+          "sha256": "7f1cd4d4b5ffd7c9f4dac148435ee58a9456f11385cb21bbcf7d78c77aa860f4"
+        },
+        {
+          "path": "server/src/endpoints/index.ts",
+          "sha256": "34a6cb17cba16f12a42fee903a9458c40db1cc3920ac73078c80244af7a46361"
+        },
+        {
+          "path": "server/src/endpoints/movement-events.test.ts",
+          "sha256": "eff41f5c4e78faaed9679dd9b9fab93886e3f8347ef83f42f1d1e824f1850d12"
+        },
+        {
+          "path": "server/src/endpoints/movement-events.ts",
+          "sha256": "4fb55f0ad5e2ee7d3cf812625a126e06c6ae3ba917a77a8856b6b4b3d5f59b73"
+        },
+        {
+          "path": "server/src/endpoints/reference-audit.test.ts",
+          "sha256": "4d458b1e30448bd6154bf82f3e688ec59b350c50f7079039f55d01193fb8e147"
+        },
+        {
+          "path": "server/src/endpoints/reference-audit.ts",
+          "sha256": "eca4bd78d4e2f362212409b9c582cda793c53f68ea1e99b67a0347195761b896"
+        },
+        {
+          "path": "server/src/endpoints/requirement-output-schemas.ts",
+          "sha256": "07f021f9a95fed56f20377d8976e5833e05b342237fdf1c3ff85c318fd4b453f"
+        },
+        {
+          "path": "server/src/endpoints/requirements-registration.test.ts",
+          "sha256": "ac450c4f6091cabd8f78efae7463e12324ff1ec5153030e96a04da4739cf4efb"
+        },
+        {
+          "path": "server/src/endpoints/scene-render.test.ts",
+          "sha256": "55483b040422dda90fd1748c36b2b7b911fc717d98b439092a891e2194210074"
+        },
+        {
+          "path": "server/src/endpoints/scene-render.ts",
+          "sha256": "1e8142bb44540063bcb5a3ae8522f9ccb05ef8a567f0c86d22241f39f60827b8"
+        },
+        {
+          "path": "server/src/endpoints/users.test.ts",
+          "sha256": "bf7d147e18652a6def5698f2c589342425882d95c81aa669a64e255ed971d29e"
+        },
+        {
+          "path": "server/src/events/movement-event-store.test.ts",
+          "sha256": "14148f100a51f3b080a3f21a2754f3e14f5973241625ccb39a9c7184f3619180"
+        },
+        {
+          "path": "server/src/events/movement-event-store.ts",
+          "sha256": "271938b19785a1dd2bea48f83ed1729ccdf066be18c14dcfb58d2bba6c6eecbb"
+        },
+        {
+          "path": "server/src/index.ts",
+          "sha256": "65cd8376a2457299978324afdf00b2823314200903518912912f039bef6e8ea4"
+        },
+        {
+          "path": "server/src/scripts/generate-docs.ts",
+          "sha256": "77be07d3e334af8ddf30bf601b72ff468ec2a6aff35c1e83ea46627a369e64a8"
+        },
+        {
+          "path": "server/src/services/ai-gm-delivery.test.ts",
+          "sha256": "2a1bc99c67c0f9670022b22a007d582d4210923a96ba45a7ff5ade10fc341cec"
+        },
+        {
+          "path": "server/src/services/ai-gm-delivery.ts",
+          "sha256": "2ec55ebfd06538fa2155c94f35c2a825cb50ecd10ab843be84a79c6b425a9e92"
+        },
+        {
+          "path": "server/src/services/asset-lifecycle.test.ts",
+          "sha256": "527381f62079c7c2f09b51fc699bfbb70821b6bdbdc25fbf6bf042972e4f68ec"
+        },
+        {
+          "path": "server/src/services/asset-lifecycle.ts",
+          "sha256": "876849707c36ca900e018027c3e587f9875ea18855c954c62cab5e0832cb1fd1"
+        },
+        {
+          "path": "shared/src/client-readiness.test.ts",
+          "sha256": "ac50aacd45a3e87e0cc530f4a4a7b0e583d0fdd470465b6e0302c12dc2b0bd90"
+        },
+        {
+          "path": "shared/src/client-readiness.ts",
+          "sha256": "03d62d48f0933b898edb2755b5b860191f7fc15392a44793aeb2f0ed7a261193"
+        },
+        {
+          "path": "shared/src/collision-topology.test.ts",
+          "sha256": "eb038c10e5c7bac54e181505670eccf29126cdce96445c9decf147c61587ce37"
+        },
+        {
+          "path": "shared/src/collision-topology.ts",
+          "sha256": "a8e879a87be9950cc23cd86e79d4f0a4648bdb341ba8738764bcff1ec7880a8f"
+        },
+        {
+          "path": "shared/src/enrollment.ts",
+          "sha256": "e3053a470eb74ff1d83dc495c76dcab36aafaa11fa2f0aa9fc8fec1a64b8afba"
+        },
+        {
+          "path": "shared/src/foundations.test.ts",
+          "sha256": "d7b199c620e1bac76ece0b40c76dfcaab11e3745a4a40e62f6e7d21876de1f71"
+        },
+        {
+          "path": "shared/src/foundations.ts",
+          "sha256": "f799d8444700d474fa9f47814b5171f28953aa94a57f954e8e799502ad855987"
+        },
+        {
+          "path": "shared/src/game-state.ts",
+          "sha256": "1596eec765e73231ccc936a023320f6125b7fd25bce164ded7cd2197a95898c9"
+        },
+        {
+          "path": "shared/src/index.ts",
+          "sha256": "d43feb38b6c91b2451f88829226a3c8288cac64c291388e9ccdfcea10d25e2f8"
+        },
+        {
+          "path": "shared/src/movement-events.ts",
+          "sha256": "d7f4eb965ff399c281f99520403c40af4dd61e077436d2bb7e35a160ef849f26"
+        },
+        {
+          "path": "shared/src/scene-render.ts",
+          "sha256": "9409dd4a5a7937ce1365eea293727eb22223ea2bcb7528f86de8fc0a66615693"
+        },
+        {
+          "path": "module/src/commands/attack-actions.test.ts",
+          "sha256": "b4e36ba756a5b166fa6f3abfa78ed8cc523b61ee81869cadb3ec131fff5d5e93"
+        },
+        {
+          "path": "module/src/commands/attack-actions.ts",
+          "sha256": "8ee529b78cef582420ec243fa1af0c83c87e7fed3a9d397cbe5d7fb70eea65ec"
+        },
+        {
+          "path": "module/src/commands/attack.attack-vision.validation.test.ts",
+          "sha256": "7cc036e694ef04c3dbdee1584beee915a0e2351e7d258aadc7533e55e76bd9b4"
+        },
+        {
+          "path": "module/src/commands/client-identity.test.ts",
+          "sha256": "52cadacb2ee8a60ebb19b89aebf194e694c3bde1433b81f640aed779a2f54835"
+        },
+        {
+          "path": "module/src/commands/client-identity.ts",
+          "sha256": "ce233ba4212d5cf70724bb796d87e3ba9e7971f4caad2e8bb2d646ac1d0619f2"
+        },
+        {
+          "path": "module/src/commands/core-rollout.validation.test.ts",
+          "sha256": "23561f7bc44f8b68e214c241ddc9e374ca26e4fa95ec387aebf386d245ca491a"
+        },
+        {
+          "path": "module/src/commands/movement-policy.test.ts",
+          "sha256": "5f48ada1df9e9275e70d94ffeb6afaf66e37886086d5f767c6710584ddce6e16"
+        },
+        {
+          "path": "module/src/commands/movement-policy.ts",
+          "sha256": "433204e5b64f4b13478231764e1f4721b5858bd583caca71da8d10b6d3c0304c"
+        },
+        {
+          "path": "module/src/commands/movement.attack-vision.validation.test.ts",
+          "sha256": "244e6d3a6aa09e6c0aa116a9b9c46e3e4cf0c85054a837505a25e5add9790479"
+        },
+        {
+          "path": "module/src/commands/pause-experiment.validation.test.ts",
+          "sha256": "4372c0c615c7dcc2ecce29bc8d5bb1c6ffad0d06a70f17393a23a390ae50914e"
+        },
+        {
+          "path": "module/src/commands/session-actions.independent.test.ts",
+          "sha256": "702875c7abca3dfb9138603021eb162e12bdaa324400197792b2e0ed33e0d993"
+        },
+        {
+          "path": "module/src/commands/session-actions.test.ts",
+          "sha256": "309a267bf6e4e5d852fea99319ecd387c350400e368c764fe20598b49bd10469"
+        },
+        {
+          "path": "module/src/commands/session-actions.ts",
+          "sha256": "ca7cfe05ff9710bd511c38d94cb32064ddc121e24c08b82281e08c6909466ae9"
+        },
+        {
+          "path": "module/src/commands/system.attack-vision.validation.test.ts",
+          "sha256": "5a1842e2af468f56742fb27b9d453b40ce13b830c286980ea69fe725cca0a10a"
+        },
+        {
+          "path": "module/src/commands/transactions-origin.test.ts",
+          "sha256": "f5c8247868f03b9943c7c2388aa08c70171bb650799bd4ec7c8fd0fb1a1e2f63"
+        },
+        {
+          "path": "module/src/commands/users.test.ts",
+          "sha256": "a3932c19f775636335a9bc81264d93a4af35eff0679128c95ceb923f7f71fd70"
+        },
+        {
+          "path": "module/src/commands/world-documents.independent.test.ts",
+          "sha256": "286131f502be188589c3cf8a42158ff12ce1aeb5baa99548f9a413c8d661c556"
+        },
+        {
+          "path": "module/src/commands/world-documents.test.ts",
+          "sha256": "62c18c4f40abdc8df9f830c9197e37199ed4a0fdcdf4f346f1dbc4de923b5534"
+        },
+        {
+          "path": "module/src/commands/world-documents.ts",
+          "sha256": "0c89c928348dcfc33f36063003755e2ab105f8ada9854d14cbf1ec57e7cce0d7"
+        },
+        {
+          "path": "scripts/foundry-ai-auth-broker.mjs",
+          "sha256": "15f95b0818feba254abde169caab9f813d92f07e5a008894a2f43af2b5b22fb6"
+        },
+        {
+          "path": "scripts/foundry-ai-auth-broker.test.mjs",
+          "sha256": "1dc38a237e228b72e08a40bb09c5129252258a36bc2eab3209e739e9421bd230"
+        },
+        {
+          "path": "scripts/foundry-companion-credential.mjs",
+          "sha256": "9e9809a64c0af294fa5f97764ca36fdb26571b7c5a1e36b92c89a276a3ea7505"
+        },
+        {
+          "path": "scripts/foundry-companion-credential.test.mjs",
+          "sha256": "ac77455ac1ad8d82ba769d42241aa980fea79993cbcd6ac454a89ab8b7e14587"
+        },
+        {
+          "path": "server/src/bridge/foundry-session-verifier.test.ts",
+          "sha256": "58624dfd7dfc6146770610b2795305515a96965bc332730a9c9d7a38c67f7f0c"
+        },
+        {
+          "path": "server/src/bridge/foundry-session-verifier.ts",
+          "sha256": "0124aa9ea753de8dfa045363061d229c662050d0cff00ba8294e666f398f8147"
+        },
+        {
+          "path": "server/src/endpoints/acceptance-validation.test.ts",
+          "sha256": "eb53c1f1b5f9e92cf39dcc5802800d56ef9e2cb55de998d84a12ea1f43e74214"
+        },
+        {
+          "path": "server/src/endpoints/acceptance-validation.ts",
+          "sha256": "b8c6ca5d86dabaf087eb237e12b1f3b812f42ba6452c4892776429a0ffab6189"
+        },
+        {
+          "path": "server/src/endpoints/attack-actions.ts",
+          "sha256": "97f81b2ac1cc85513437b0c2934a9608fedb75f01baa9a95bbf580d0b9053ab8"
+        },
+        {
+          "path": "server/src/endpoints/attack.attack-vision.validation.test.ts",
+          "sha256": "c2f94b3311e50ef90b042963659de9e96d486a94c9ea0507086ba9fb95fb3691"
+        },
+        {
+          "path": "server/src/endpoints/core-rollout.validation.test.ts",
+          "sha256": "a18ddd6359409ffe542a74cc62371efeb40fffb8804daa65980f79303cbe91d9"
+        },
+        {
+          "path": "server/src/endpoints/pause-experiment.validation.test.ts",
+          "sha256": "10bf50955021ef05750ab68f5f25055a6129384d52ec1a11abd59cdd63161c72"
+        },
+        {
+          "path": "server/src/endpoints/routine-mutation-lane.ts",
+          "sha256": "be2b957507958962fefbad03ee4e38f2c736bcaf7bf308dd4d1aa1cf180df8d8"
+        },
+        {
+          "path": "server/src/endpoints/session-actions.test.ts",
+          "sha256": "4cd826e72c3a81c5d3e6c435776cc3d5f7e8dca5a9a7723663c7395cf77da4cb"
+        },
+        {
+          "path": "server/src/endpoints/session-actions.ts",
+          "sha256": "3f7223bb9c98a689b6f0f41e67013f30b66503846135a20564015ee7e4acff39"
+        },
+        {
+          "path": "server/src/endpoints/world-documents.test.ts",
+          "sha256": "41bd2f9b6badfc6435b7c2e2ec8e20456b004e53e6969e4d538b582c610de39f"
+        },
+        {
+          "path": "server/src/endpoints/world-documents.ts",
+          "sha256": "fc108bdb20b096b3d685326880861ef5dc31cbabc2ff0fa36dce493118b1aad8"
+        },
+        {
+          "path": "server/src/scripts/generate-docs.test.ts",
+          "sha256": "22b4b0c63cdbbdd40b81f89000fe512e409c5855163acd105270d39a37c95769"
+        },
+        {
+          "path": "server/src/services/movement-generation-rollover.test.ts",
+          "sha256": "358d74785029790b864825c3885620534368ca0d0c9bcc162fa24bf3e3759deb"
+        },
+        {
+          "path": "server/src/services/movement-generation-rollover.ts",
+          "sha256": "16a4d7044220051483ddef0a0262483708f6437747960848ecd7a7b1e7f555f3"
+        },
+        {
+          "path": "server/src/services/production-asset-roots.test.ts",
+          "sha256": "55a283b8eabe6112df2324a624ea7e506ac0e7e2cace0c5faeeed69e3d381d2c"
+        },
+        {
+          "path": "server/src/services/production-asset-roots.ts",
+          "sha256": "9ae5f0931d37bfa248a2fff8e107bd188dba46dd82cc7d29c19625a2c24c3ec7"
+        },
+        {
+          "path": "shared/src/attack-actions.ts",
+          "sha256": "c960d312aed1433a546ec45abbb683dbe5d15957103aa2fdadbee23d73662e7e"
+        },
+        {
+          "path": "shared/src/session-actions.ts",
+          "sha256": "1a3ac111aa9ffc278ccde865b053c3b954c628a64d67d99ec529844fa7b14ecd"
+        },
+        {
+          "path": "shared/src/world-documents.ts",
+          "sha256": "24d2ec0a777aca77cdd0ac292034ba6d9d01c6f62c8bbd1d8293c756284013d1"
+        }
+      ]
+    }
+  ],
+  "aiHealth": {
+    "status": "ready",
+    "module": "foundry-ai-dungeon-master",
+    "version": "0.1.0",
+    "details": {
+      "processLive": true,
+      "foundryDependencyConfigured": true,
+      "foundryDependencyReady": true,
+      "localAuthenticationReady": true,
+      "chatGptPlanAuthorizationPresent": true,
+      "openAiApiKeyFallbackConfigured": false,
+      "signingKeyPersistent": true
+    },
+    "chatkit": {
+      "requests": 0,
+      "stage": "idle",
+      "errorCode": null,
+      "upstreamStatus": null
+    },
+    "build": {
+      "policy": "core-actions-v1",
+      "startedAt": "2026-10-02T14:09:57.122Z",
+      "manifestDigest": "0dc8ab9e4bea9b3a1c099f83452ea6bef061b5c55867e497ce790a93c3f0543a",
+      "artifactHashes": {
+        "server/dist/index.js": "0d4d081e9bea37f06cfdb5440231affbc88aad97fdebf393c32e74f74651982f",
+        "server/dist/app.js": "c5f7909ec4cc2c6035cdf9c1260ed99f1b9f49fbaadfdfab208678480f74d353",
+        "server/dist/chatkit/gateway.js": "e9fc8ac9a0e68ce44cb0968ba358bfaf634c06d0fb422a118f01f6fb78f7b7f4",
+        "server/dist/chatkit/read-tools.js": "9891d3a2840feb40e70bf8e4b9f35fe2ad6a6e39bd4c17dfeeb911c014391339",
+        "server/dist/chatkit/catalog-tools.js": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+        "server/dist/chatkit/pause-actions.js": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+        "server/dist/chatkit/core-actions.js": "3f76a839180d4f184483959801369d778c3aa83d6cd6296b3c01eb2981c34f5e",
+        "server/dist/chatkit/attack-actions.js": "3c4476145b65ca6b70f4843267df8a098e1f98f0bb95164449a8e2ca4554f6a6",
+        "server/dist/chatkit/session-actions.js": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614",
+        "server/dist/chatkit/pause-request.js": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+        "server/dist/chatkit/tool-audit.js": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+        "server/dist/chatkit/world-request.js": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+        "server/dist/chatkit/world-document-actions.js": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+        "server/dist/chatkit/world-tool-policy.js": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+        "server/dist/chatkit/world-file-actions.js": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+        "server/dist/chatkit/world-files.js": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+        "server/dist/chatkit/native-actions.js": "ab0e3316363c7800c0f5a83e043eb1a66ac480ff2478326e34e456574c8f539e",
+        "server/dist/chatkit/campaign-actions.js": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+        "server/dist/chatkit/turns.js": "fa0f853ae27d672bd875a7ae2eaa95c7142a31ee794444687dcc338a8c4ec929",
+        "server/dist/chatkit/bounded-call.js": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+        "server/dist/tool-catalog/runtime.js": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+        "server/dist/tool-catalog/catalog.js": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+        "server/dist/tool-catalog/canonical.js": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+        "server/dist/tool-catalog/foundry-local-api-adapter.js": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+        "shared/dist/ai-dungeon-master.js": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+        "shared/dist/chatkit.js": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+        "chatkit-server/app.py": "ebec816ea7725c1f906d1830933e014c40f68fee1b4656dad49f96466cbe399d",
+        "chatkit-server/dm_prompt.py": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2",
+        "module/dist/index.js": "2ebe449bc2ddb3c92a3dbb1767e3956a1acb1daf6a75d64cde170640a4a3dfaa"
+      },
+      "scope": "startup artifacts; verify Python health and browser module separately"
+    }
+  },
+  "pythonHealth": {
+    "status": "ready",
+    "protocol": "openai-chatkit",
+    "promptVersion": "solo-dm-v8-core-actions",
+    "promptDigest": "becbafcadb3c69b6352e0e71df60901c1869839f44bd6c721cd7d373293eea13",
+    "codeDigest": "ebec816ea7725c1f906d1830933e014c40f68fee1b4656dad49f96466cbe399d"
+  },
+  "artifactChecks": [
+    {
+      "path": "server/dist/index.js",
+      "startup": "0d4d081e9bea37f06cfdb5440231affbc88aad97fdebf393c32e74f74651982f",
+      "disk": "0d4d081e9bea37f06cfdb5440231affbc88aad97fdebf393c32e74f74651982f",
+      "matches": true
+    },
+    {
+      "path": "server/dist/app.js",
+      "startup": "c5f7909ec4cc2c6035cdf9c1260ed99f1b9f49fbaadfdfab208678480f74d353",
+      "disk": "c5f7909ec4cc2c6035cdf9c1260ed99f1b9f49fbaadfdfab208678480f74d353",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/gateway.js",
+      "startup": "e9fc8ac9a0e68ce44cb0968ba358bfaf634c06d0fb422a118f01f6fb78f7b7f4",
+      "disk": "e9fc8ac9a0e68ce44cb0968ba358bfaf634c06d0fb422a118f01f6fb78f7b7f4",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/read-tools.js",
+      "startup": "9891d3a2840feb40e70bf8e4b9f35fe2ad6a6e39bd4c17dfeeb911c014391339",
+      "disk": "9891d3a2840feb40e70bf8e4b9f35fe2ad6a6e39bd4c17dfeeb911c014391339",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/catalog-tools.js",
+      "startup": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+      "disk": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/pause-actions.js",
+      "startup": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+      "disk": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/core-actions.js",
+      "startup": "3f76a839180d4f184483959801369d778c3aa83d6cd6296b3c01eb2981c34f5e",
+      "disk": "3f76a839180d4f184483959801369d778c3aa83d6cd6296b3c01eb2981c34f5e",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/attack-actions.js",
+      "startup": "3c4476145b65ca6b70f4843267df8a098e1f98f0bb95164449a8e2ca4554f6a6",
+      "disk": "3c4476145b65ca6b70f4843267df8a098e1f98f0bb95164449a8e2ca4554f6a6",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/session-actions.js",
+      "startup": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614",
+      "disk": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/pause-request.js",
+      "startup": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+      "disk": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/tool-audit.js",
+      "startup": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+      "disk": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-request.js",
+      "startup": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+      "disk": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-document-actions.js",
+      "startup": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+      "disk": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-tool-policy.js",
+      "startup": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+      "disk": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-file-actions.js",
+      "startup": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+      "disk": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-files.js",
+      "startup": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+      "disk": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/native-actions.js",
+      "startup": "ab0e3316363c7800c0f5a83e043eb1a66ac480ff2478326e34e456574c8f539e",
+      "disk": "ab0e3316363c7800c0f5a83e043eb1a66ac480ff2478326e34e456574c8f539e",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/campaign-actions.js",
+      "startup": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+      "disk": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/turns.js",
+      "startup": "fa0f853ae27d672bd875a7ae2eaa95c7142a31ee794444687dcc338a8c4ec929",
+      "disk": "fa0f853ae27d672bd875a7ae2eaa95c7142a31ee794444687dcc338a8c4ec929",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/bounded-call.js",
+      "startup": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+      "disk": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+      "matches": true
+    },
+    {
+      "path": "server/dist/tool-catalog/runtime.js",
+      "startup": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+      "disk": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+      "matches": true
+    },
+    {
+      "path": "server/dist/tool-catalog/catalog.js",
+      "startup": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+      "disk": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+      "matches": true
+    },
+    {
+      "path": "server/dist/tool-catalog/canonical.js",
+      "startup": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+      "disk": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+      "matches": true
+    },
+    {
+      "path": "server/dist/tool-catalog/foundry-local-api-adapter.js",
+      "startup": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+      "disk": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+      "matches": true
+    },
+    {
+      "path": "shared/dist/ai-dungeon-master.js",
+      "startup": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+      "disk": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+      "matches": true
+    },
+    {
+      "path": "shared/dist/chatkit.js",
+      "startup": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+      "disk": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+      "matches": true
+    },
+    {
+      "path": "chatkit-server/app.py",
+      "startup": "ebec816ea7725c1f906d1830933e014c40f68fee1b4656dad49f96466cbe399d",
+      "disk": "ebec816ea7725c1f906d1830933e014c40f68fee1b4656dad49f96466cbe399d",
+      "matches": true
+    },
+    {
+      "path": "chatkit-server/dm_prompt.py",
+      "startup": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2",
+      "disk": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2",
+      "matches": true
+    },
+    {
+      "path": "module/dist/index.js",
+      "startup": "2ebe449bc2ddb3c92a3dbb1767e3956a1acb1daf6a75d64cde170640a4a3dfaa",
+      "disk": "2ebe449bc2ddb3c92a3dbb1767e3956a1acb1daf6a75d64cde170640a4a3dfaa",
+      "matches": true
+    }
+  ],
+  "listeners": [
+    "TCP    0.0.0.0:30000          0.0.0.0:0              LISTENING       22296",
+    "TCP    127.0.0.1:3939         0.0.0.0:0              LISTENING       32880",
+    "TCP    127.0.0.1:3940         0.0.0.0:0              LISTENING       2700",
+    "TCP    127.0.0.1:3941         0.0.0.0:0              LISTENING       23204"
+  ],
+  "limits": "No inference or mutation; auth-present does not prove authorization validity or selected model; frontend identity pending browser. Inventory captured before this validator evidence file."
+}

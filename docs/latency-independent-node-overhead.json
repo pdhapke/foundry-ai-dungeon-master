@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "sampleCount": 200,
+  "enqueueMs": 1.9610000000000127,
+  "meanEnqueueMs": 0.009805000000000064,
+  "flushMs": 8.669299999999907,
+  "dropped": 0,
+  "errors": 0,
+  "limits": "Local temp file diagnostics; not live action latency or benchmark."
+}

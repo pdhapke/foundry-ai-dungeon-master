@@ -1,0 +1,5175 @@
+{
+  "modelRequests": 2,
+  "models": [
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-stream-invocation",
+      "elapsedMs": 1280.77470001881,
+      "request": 1
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-stream-invocation",
+      "elapsedMs": 11188.507500017295,
+      "request": 2
+    }
+  ],
+  "threadId": "thr_74e3c7f8",
+  "completePair": true,
+  "factualReceiptPersisted": true,
+  "result": {
+    "schemaVersion": "attack-sequence-v1",
+    "worldId": "izzy-campaign",
+    "userId": "X7X4KK7zca5U2Ics",
+    "requestId": "77dded44b5d8595d3052eec4809fea56ed0a7e8142f267a1cc8ee3df4559ba5e",
+    "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+    "action": {
+      "mode": "execute",
+      "steps": [
+        {
+          "stepId": "first",
+          "attack": {
+            "mode": "roll",
+            "sceneId": "xj5praphJhGr6mxL",
+            "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+            "actorId": "7Omg3czrr0z94iw4",
+            "itemId": "v6aPlCpfDEZdyhvB",
+            "activityId": "AttackFixture001",
+            "targetTokenId": "z2oFZhuQdL4GQ793",
+            "advantage": "normal"
+          }
+        },
+        {
+          "stepId": "second",
+          "attack": {
+            "mode": "roll",
+            "sceneId": "xj5praphJhGr6mxL",
+            "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+            "actorId": "7Omg3czrr0z94iw4",
+            "itemId": "v6aPlCpfDEZdyhvB",
+            "activityId": "AttackFixture001",
+            "targetTokenId": "z2oFZhuQdL4GQ793",
+            "advantage": "normal"
+          }
+        }
+      ],
+      "maxDurationMs": 8000
+    },
+    "outcome": "confirmed",
+    "mutated": true,
+    "state": {
+      "sequenceRequestId": "77dded44b5d8595d3052eec4809fea56ed0a7e8142f267a1cc8ee3df4559ba5e",
+      "plan": [
+        {
+          "stepId": "first",
+          "attack": {
+            "mode": "roll",
+            "sceneId": "xj5praphJhGr6mxL",
+            "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+            "actorId": "7Omg3czrr0z94iw4",
+            "itemId": "v6aPlCpfDEZdyhvB",
+            "activityId": "AttackFixture001",
+            "targetTokenId": "z2oFZhuQdL4GQ793",
+            "advantage": "normal"
+          }
+        },
+        {
+          "stepId": "second",
+          "attack": {
+            "mode": "roll",
+            "sceneId": "xj5praphJhGr6mxL",
+            "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+            "actorId": "7Omg3czrr0z94iw4",
+            "itemId": "v6aPlCpfDEZdyhvB",
+            "activityId": "AttackFixture001",
+            "targetTokenId": "z2oFZhuQdL4GQ793",
+            "advantage": "normal"
+          }
+        }
+      ],
+      "completedStepCount": 2,
+      "steps": [
+        {
+          "stepId": "first",
+          "rollReceipt": {
+            "schemaVersion": "attack-actions-v1",
+            "worldId": "izzy-campaign",
+            "userId": "X7X4KK7zca5U2Ics",
+            "requestId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235",
+            "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+            "action": {
+              "mode": "roll",
+              "sceneId": "xj5praphJhGr6mxL",
+              "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+              "actorId": "7Omg3czrr0z94iw4",
+              "itemId": "v6aPlCpfDEZdyhvB",
+              "activityId": "AttackFixture001",
+              "targetTokenId": "z2oFZhuQdL4GQ793",
+              "advantage": "normal"
+            },
+            "mutated": true,
+            "state": {
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.3",
+              "attackRequestId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235",
+              "source": {
+                "sceneId": "xj5praphJhGr6mxL",
+                "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                "actorId": "7Omg3czrr0z94iw4",
+                "itemId": "v6aPlCpfDEZdyhvB",
+                "activityId": "AttackFixture001",
+                "targetTokenId": "z2oFZhuQdL4GQ793"
+              },
+              "hpBefore": {
+                "value": 40,
+                "temp": 4,
+                "max": 40
+              },
+              "hpAfter": null,
+              "damageApplied": null,
+              "targetAC": 10,
+              "targetActorId": "uwyaFQurD4uFZCKC",
+              "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+              "attackerPosition": {
+                "x": 300,
+                "y": 400,
+                "elevation": 0
+              },
+              "targetPosition": {
+                "x": 700,
+                "y": 400,
+                "elevation": 0
+              },
+              "sourceItemRevision": 1790914890592,
+              "rulesLimitations": [
+                "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+              ],
+              "resourcesBefore": [
+                {
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "quantity": 1,
+                  "uses": {
+                    "max": null,
+                    "spent": 0
+                  }
+                },
+                {
+                  "itemId": "xfCubW10VwZVTVSI",
+                  "quantity": 1,
+                  "uses": {
+                    "max": 3,
+                    "spent": 0
+                  }
+                }
+              ],
+              "attackRoll": {
+                "rollId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235:attack",
+                "formula": "1d20 + 3 + 2",
+                "total": 22,
+                "result": "17 + 3 + 2",
+                "isCritical": false,
+                "isFumble": false
+              },
+              "hit": true,
+              "critical": false,
+              "damageRolls": [
+                {
+                  "rollId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235:damage:0",
+                  "formula": "1d4 + 3",
+                  "total": 7,
+                  "result": "4 + 3",
+                  "isCritical": false,
+                  "isFumble": false,
+                  "type": "bludgeoning",
+                  "properties": []
+                }
+              ],
+              "damageRolled": 7,
+              "decisions": [],
+              "resourcesAfter": [
+                {
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "quantity": 1,
+                  "uses": {
+                    "max": null,
+                    "spent": 0
+                  }
+                },
+                {
+                  "itemId": "xfCubW10VwZVTVSI",
+                  "quantity": 1,
+                  "uses": {
+                    "max": 3,
+                    "spent": 0
+                  }
+                }
+              ],
+              "stage": "damage-rolled"
+            },
+            "outcome": "confirmed"
+          },
+          "applyReceipt": {
+            "schemaVersion": "attack-actions-v1",
+            "worldId": "izzy-campaign",
+            "userId": "X7X4KK7zca5U2Ics",
+            "requestId": "ec0bfdeebac6ca51a3501386679f80004881abb5d317d99c3a2c6d7ca3f3e529",
+            "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+            "action": {
+              "mode": "apply",
+              "priorAttackRequestId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235"
+            },
+            "mutated": true,
+            "state": {
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.3",
+              "attackRequestId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235",
+              "source": {
+                "sceneId": "xj5praphJhGr6mxL",
+                "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                "actorId": "7Omg3czrr0z94iw4",
+                "itemId": "v6aPlCpfDEZdyhvB",
+                "activityId": "AttackFixture001",
+                "targetTokenId": "z2oFZhuQdL4GQ793"
+              },
+              "hpBefore": {
+                "value": 40,
+                "temp": 4,
+                "max": 40
+              },
+              "hpAfter": {
+                "value": 37,
+                "temp": 0,
+                "max": 40
+              },
+              "damageApplied": 7,
+              "targetAC": 10,
+              "targetActorId": "uwyaFQurD4uFZCKC",
+              "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+              "attackerPosition": {
+                "x": 300,
+                "y": 400,
+                "elevation": 0
+              },
+              "targetPosition": {
+                "x": 700,
+                "y": 400,
+                "elevation": 0
+              },
+              "sourceItemRevision": 1790914890592,
+              "rulesLimitations": [
+                "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+              ],
+              "resourcesBefore": [
+                {
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "quantity": 1,
+                  "uses": {
+                    "max": null,
+                    "spent": 0
+                  }
+                },
+                {
+                  "itemId": "xfCubW10VwZVTVSI",
+                  "quantity": 1,
+                  "uses": {
+                    "max": 3,
+                    "spent": 0
+                  }
+                }
+              ],
+              "attackRoll": {
+                "rollId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235:attack",
+                "formula": "1d20 + 3 + 2",
+                "total": 22,
+                "result": "17 + 3 + 2",
+                "isCritical": false,
+                "isFumble": false
+              },
+              "hit": true,
+              "critical": false,
+              "damageRolls": [
+                {
+                  "rollId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235:damage:0",
+                  "formula": "1d4 + 3",
+                  "total": 7,
+                  "result": "4 + 3",
+                  "isCritical": false,
+                  "isFumble": false,
+                  "type": "bludgeoning",
+                  "properties": []
+                }
+              ],
+              "damageRolled": 7,
+              "decisions": [],
+              "resourcesAfter": [
+                {
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "quantity": 1,
+                  "uses": {
+                    "max": null,
+                    "spent": 0
+                  }
+                },
+                {
+                  "itemId": "xfCubW10VwZVTVSI",
+                  "quantity": 1,
+                  "uses": {
+                    "max": 3,
+                    "spent": 0
+                  }
+                }
+              ],
+              "stage": "damage-applied",
+              "adjustedDamage": [
+                {
+                  "type": "bludgeoning",
+                  "value": 7,
+                  "active": {
+                    "multiplier": 1
+                  }
+                }
+              ]
+            },
+            "outcome": "confirmed"
+          }
+        },
+        {
+          "stepId": "second",
+          "rollReceipt": {
+            "schemaVersion": "attack-actions-v1",
+            "worldId": "izzy-campaign",
+            "userId": "X7X4KK7zca5U2Ics",
+            "requestId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0",
+            "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+            "action": {
+              "mode": "roll",
+              "sceneId": "xj5praphJhGr6mxL",
+              "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+              "actorId": "7Omg3czrr0z94iw4",
+              "itemId": "v6aPlCpfDEZdyhvB",
+              "activityId": "AttackFixture001",
+              "targetTokenId": "z2oFZhuQdL4GQ793",
+              "advantage": "normal"
+            },
+            "mutated": true,
+            "state": {
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.3",
+              "attackRequestId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0",
+              "source": {
+                "sceneId": "xj5praphJhGr6mxL",
+                "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                "actorId": "7Omg3czrr0z94iw4",
+                "itemId": "v6aPlCpfDEZdyhvB",
+                "activityId": "AttackFixture001",
+                "targetTokenId": "z2oFZhuQdL4GQ793"
+              },
+              "hpBefore": {
+                "value": 37,
+                "temp": 0,
+                "max": 40
+              },
+              "hpAfter": null,
+              "damageApplied": null,
+              "targetAC": 10,
+              "targetActorId": "uwyaFQurD4uFZCKC",
+              "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+              "attackerPosition": {
+                "x": 300,
+                "y": 400,
+                "elevation": 0
+              },
+              "targetPosition": {
+                "x": 700,
+                "y": 400,
+                "elevation": 0
+              },
+              "sourceItemRevision": 1790914890592,
+              "rulesLimitations": [
+                "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+              ],
+              "resourcesBefore": [
+                {
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "quantity": 1,
+                  "uses": {
+                    "max": null,
+                    "spent": 0
+                  }
+                },
+                {
+                  "itemId": "xfCubW10VwZVTVSI",
+                  "quantity": 1,
+                  "uses": {
+                    "max": 3,
+                    "spent": 0
+                  }
+                }
+              ],
+              "attackRoll": {
+                "rollId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0:attack",
+                "formula": "1d20 + 3 + 2",
+                "total": 18,
+                "result": "13 + 3 + 2",
+                "isCritical": false,
+                "isFumble": false
+              },
+              "hit": true,
+              "critical": false,
+              "damageRolls": [
+                {
+                  "rollId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0:damage:0",
+                  "formula": "1d4 + 3",
+                  "total": 5,
+                  "result": "2 + 3",
+                  "isCritical": false,
+                  "isFumble": false,
+                  "type": "bludgeoning",
+                  "properties": []
+                }
+              ],
+              "damageRolled": 5,
+              "decisions": [],
+              "resourcesAfter": [
+                {
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "quantity": 1,
+                  "uses": {
+                    "max": null,
+                    "spent": 0
+                  }
+                },
+                {
+                  "itemId": "xfCubW10VwZVTVSI",
+                  "quantity": 1,
+                  "uses": {
+                    "max": 3,
+                    "spent": 0
+                  }
+                }
+              ],
+              "stage": "damage-rolled"
+            },
+            "outcome": "confirmed"
+          },
+          "applyReceipt": {
+            "schemaVersion": "attack-actions-v1",
+            "worldId": "izzy-campaign",
+            "userId": "X7X4KK7zca5U2Ics",
+            "requestId": "93d83482400d4f72e32c5255ae42cfc16d043baf2bb97a8c9de880253d9159ef",
+            "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+            "action": {
+              "mode": "apply",
+              "priorAttackRequestId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0"
+            },
+            "mutated": true,
+            "state": {
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.3",
+              "attackRequestId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0",
+              "source": {
+                "sceneId": "xj5praphJhGr6mxL",
+                "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                "actorId": "7Omg3czrr0z94iw4",
+                "itemId": "v6aPlCpfDEZdyhvB",
+                "activityId": "AttackFixture001",
+                "targetTokenId": "z2oFZhuQdL4GQ793"
+              },
+              "hpBefore": {
+                "value": 37,
+                "temp": 0,
+                "max": 40
+              },
+              "hpAfter": {
+                "value": 32,
+                "temp": 0,
+                "max": 40
+              },
+              "damageApplied": 5,
+              "targetAC": 10,
+              "targetActorId": "uwyaFQurD4uFZCKC",
+              "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+              "attackerPosition": {
+                "x": 300,
+                "y": 400,
+                "elevation": 0
+              },
+              "targetPosition": {
+                "x": 700,
+                "y": 400,
+                "elevation": 0
+              },
+              "sourceItemRevision": 1790914890592,
+              "rulesLimitations": [
+                "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+              ],
+              "resourcesBefore": [
+                {
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "quantity": 1,
+                  "uses": {
+                    "max": null,
+                    "spent": 0
+                  }
+                },
+                {
+                  "itemId": "xfCubW10VwZVTVSI",
+                  "quantity": 1,
+                  "uses": {
+                    "max": 3,
+                    "spent": 0
+                  }
+                }
+              ],
+              "attackRoll": {
+                "rollId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0:attack",
+                "formula": "1d20 + 3 + 2",
+                "total": 18,
+                "result": "13 + 3 + 2",
+                "isCritical": false,
+                "isFumble": false
+              },
+              "hit": true,
+              "critical": false,
+              "damageRolls": [
+                {
+                  "rollId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0:damage:0",
+                  "formula": "1d4 + 3",
+                  "total": 5,
+                  "result": "2 + 3",
+                  "isCritical": false,
+                  "isFumble": false,
+                  "type": "bludgeoning",
+                  "properties": []
+                }
+              ],
+              "damageRolled": 5,
+              "decisions": [],
+              "resourcesAfter": [
+                {
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "quantity": 1,
+                  "uses": {
+                    "max": null,
+                    "spent": 0
+                  }
+                },
+                {
+                  "itemId": "xfCubW10VwZVTVSI",
+                  "quantity": 1,
+                  "uses": {
+                    "max": 3,
+                    "spent": 0
+                  }
+                }
+              ],
+              "stage": "damage-applied",
+              "adjustedDamage": [
+                {
+                  "type": "bludgeoning",
+                  "value": 5,
+                  "active": {
+                    "multiplier": 1
+                  }
+                }
+              ]
+            },
+            "outcome": "confirmed"
+          }
+        }
+      ],
+      "continuation": null,
+      "limitations": [
+        "Explicit GM-authorized list; no inferred Multiattack entitlement or action economy.",
+        "Non-atomic. Budget checked between awaited native stages; in-flight native work cannot be cancelled.",
+        "Reaction and uncertain outcomes require manual reconciliation."
+      ]
+    }
+  },
+  "traceRows": [
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369478.5847,
+      "traceId": "e3fcd524-f3c1-410a-be0f-d9d4098a8c4e",
+      "component": "ai-node",
+      "stage": "request-arrival",
+      "elapsedMs": 0.021000000007916242
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369487.1828,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "request-arrival",
+      "elapsedMs": 0.04549999994924292
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369517.1986,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 30.012300000002142,
+      "durationMs": 28.08179999998538,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369520.909,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 33.75499999994645,
+      "durationMs": 31.78039999998873,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369524.8345,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 37.681899999966845,
+      "durationMs": 35.70539999997709,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369525.2232,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "initial-authorization-finished",
+      "elapsedMs": 38.08159999997588
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369539.1754,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "queue-entered",
+      "elapsedMs": 52.01089999999385,
+      "durationMs": 8.040500000002794
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369570.9396,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 83.79299999994691,
+      "durationMs": 31.070000000006985,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369573.1414,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 85.99549999996088,
+      "durationMs": 33.257099999987986,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369575.6364,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 88.47399999998743,
+      "durationMs": 35.7219000000041,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 369575.9334,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "queued-authorization-finished",
+      "elapsedMs": 88.79660000000149,
+      "durationMs": 36.114500000025146
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370149.936,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "credentials-resolved",
+      "elapsedMs": 662.8018999999622
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370228.1488,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 741.0104999999749,
+      "durationMs": 10.962600000028033,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370228.9076,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 741.7753999999841,
+      "durationMs": 11.720800000010058,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370229.716,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 742.5826999999699,
+      "durationMs": 12.527100000006612,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370229.8162,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 742.687799999956,
+      "durationMs": 12.661000000021886
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370230.2002,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "first-visible-stream-chunk",
+      "elapsedMs": 743.0699999999488
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "575f9c67-c797-49b2-a15d-c247559438f4",
+      "stage": "store-item-commit-complete",
+      "elapsedMs": 0,
+      "itemHash": "31d6a593308b875695bbb4b0"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "python-response-start",
+      "elapsedMs": 0.05970001802779734
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370293.8215,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 806.67849999998,
+      "durationMs": 32.166099999973085,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370295.1942,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 808.0576000000001,
+      "durationMs": 33.525699999998324,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370298.0505,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 810.9073999999673,
+      "durationMs": 36.367599999997765,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370298.2559,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 811.1212999999989,
+      "durationMs": 36.63949999999022
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370318.0441,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 830.8959000000032,
+      "durationMs": 18.933999999950174,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370322.5636,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 835.4062999999733,
+      "durationMs": 23.431900000025053,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370326.5239,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 839.3673999999883,
+      "durationMs": 27.38760000001639,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370326.8521,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 839.7157000000007,
+      "durationMs": 27.774000000033993
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370621.831,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 36.69010000000708,
+      "durationMs": 31.224999999976717,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370624.4131,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 39.29320000001462,
+      "durationMs": 33.928599999984726,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370626.657,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 41.53549999999814,
+      "durationMs": 36.16169999999693,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 370627.0861,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:authorization",
+      "elapsedMs": 41.960000000020955,
+      "durationMs": 36.74910000001546,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371295.6271,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:catalog-list",
+      "elapsedMs": 710.5091000000248,
+      "durationMs": 666.6258999999845,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371319.3973,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:catalog-refresh",
+      "elapsedMs": 734.2856000000029,
+      "durationMs": 691.4762000000337,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371322.9395,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:campaign-overview-source-hash-and-parse",
+      "elapsedMs": 737.8277000000235,
+      "durationMs": 3.1616999999969266,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371332.7008,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 747.5926000000327,
+      "durationMs": 8.729999999981374,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371332.769,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:foundry_get_world:mcp-read",
+      "elapsedMs": 747.6650999999838,
+      "durationMs": 8.848699999973178,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371341.0796,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 755.9706000000006,
+      "durationMs": 17.036699999996927,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371341.1975,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:foundry_get_system:mcp-read",
+      "elapsedMs": 756.0920000000042,
+      "durationMs": 17.162400000030175,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371342.2257,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 757.0440999999992,
+      "durationMs": 17.987900000007357,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371342.4731,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:foundry_list_combats:mcp-read",
+      "elapsedMs": 757.366399999999,
+      "durationMs": 18.42349999997532,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371344.4567,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 759.3484000000171,
+      "durationMs": 20.43699999997625,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371349.2321,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:foundry_list_scenes:mcp-read",
+      "elapsedMs": 764.1079000000027,
+      "durationMs": 25.195899999991525,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371361.8329,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 776.7210000000196,
+      "durationMs": 12.083699999959208,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371362.715,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 777.6060000000289,
+      "durationMs": 12.967299999960233,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371363.6828,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 778.5737000000081,
+      "durationMs": 13.929500000027474,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371363.8108,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:authorization-between-read-phases",
+      "elapsedMs": 778.7014000000199,
+      "durationMs": 14.147200000006706,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371374.6254,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 789.5069999999832,
+      "durationMs": 10.23679999995511,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371376.2498,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:foundry_get_scene:mcp-read",
+      "elapsedMs": 791.125,
+      "durationMs": 11.870700000028592,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371405.097,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 819.97570000001,
+      "durationMs": 27.523899999971036,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371406.9466,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 821.8283999999985,
+      "durationMs": 29.368699999991804,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371414.3522,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 829.2294000000111,
+      "durationMs": 36.76480000000447,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371414.5865,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:authorization-final",
+      "elapsedMs": 829.4725999999791,
+      "durationMs": 37.085599999991246,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371416.2771,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "context:serialization-and-budget-validation",
+      "elapsedMs": 831.1442999999854,
+      "durationMs": 0.657999999995809,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 371416.907,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "adapter:operation",
+      "elapsedMs": 831.7930000000051,
+      "durationMs": 831.632900000026,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "context-prepared",
+      "elapsedMs": 1157.9389999969862,
+      "durationMs": 1157.9290000081528
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-request",
+      "elapsedMs": 1278.2069999957457,
+      "request": 1,
+      "transportRetryLimit": 0
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-stream-invocation",
+      "elapsedMs": 1280.77470001881,
+      "request": 1
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-first-event",
+      "elapsedMs": 3067.605200019898,
+      "eventType": "response.created"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-provider-response",
+      "elapsedMs": 3068.7358000141103,
+      "eventType": "response.created",
+      "providerResponseHash": "38f1a35784041da6b0e9c3b6"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-provider-response",
+      "elapsedMs": 3078.18720000796,
+      "eventType": "response.in_progress",
+      "providerResponseHash": "38f1a35784041da6b0e9c3b6"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-complete-arguments-event",
+      "elapsedMs": 10238.035799993668,
+      "callHash": "278e3483ed67399454d42730"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-provider-response",
+      "elapsedMs": 10251.283299992792,
+      "eventType": "response.completed",
+      "providerResponseHash": "38f1a35784041da6b0e9c3b6"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-provider-request-id-unavailable",
+      "elapsedMs": 10252.860000007786
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-response",
+      "elapsedMs": 10415.945200016722,
+      "request": 1,
+      "providerResponseHash": "38f1a35784041da6b0e9c3b6",
+      "durationMs": 9137.756899988744
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-actionable-arguments",
+      "elapsedMs": 10431.87990001752,
+      "request": 1,
+      "callHash": "c1d1b92a711b337b35e75127"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "tool-start",
+      "elapsedMs": 10433.326099999249,
+      "toolCalls": 1,
+      "request": 1,
+      "sinceModelRequestMs": 9155.139000009513
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 380732.6108,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 29.894400000048336,
+      "durationMs": 24.570000000006985,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 380734.5838,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 31.865500000014435,
+      "durationMs": 26.533500000019558,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 380738.9297,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 36.209500000055414,
+      "durationMs": 30.87430000002496,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 380777.5222,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 74.79870000004303,
+      "durationMs": 32.25,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 380779.5684,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 76.85120000003371,
+      "durationMs": 34.28429999999935,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 380782.0091,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 79.28760000003967,
+      "durationMs": 36.711899999994785,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 381313.5469,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 610.8400000000256,
+      "durationMs": 531.1424000000115,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 381326.5512,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 623.8309000000008,
+      "durationMs": 12.428799999994226,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 381328.1397,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 625.4243000000133,
+      "durationMs": 14.020399999979418,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 381331.4166,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 628.6988000000129,
+      "durationMs": 17.290600000007544,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 381352.4175,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "adapter:operation",
+      "elapsedMs": 649.6892000000225,
+      "durationMs": 649.6608000000124,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "tool-result",
+      "elapsedMs": 11093.597099999897,
+      "toolCalls": 1,
+      "durationMs": 660.2680000069086
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "tool-exchange-persist-start",
+      "elapsedMs": 11095.671899995068,
+      "itemHash": "6f5fc45eca062f3c3d2ffd0c"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "store-item-commit-complete",
+      "elapsedMs": 11108.766000019386,
+      "itemHash": "6f5fc45eca062f3c3d2ffd0c"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "tool-exchange-persist-complete",
+      "elapsedMs": 11111.928300000727,
+      "itemHash": "6f5fc45eca062f3c3d2ffd0c"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "receipt-created",
+      "elapsedMs": 11126.877200003946,
+      "itemHash": "481e82179af51cff4d0c433b",
+      "outcome": "confirmed"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "store-item-commit-complete",
+      "elapsedMs": 11144.224100018619,
+      "itemHash": "481e82179af51cff4d0c433b"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "receipt-store-commit-complete",
+      "elapsedMs": 11148.760100011714,
+      "itemHash": "481e82179af51cff4d0c433b",
+      "durationMs": 19.89660001709126
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "receipt-stream-enqueued",
+      "elapsedMs": 11153.232000011485,
+      "itemHash": "481e82179af51cff4d0c433b"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "receipt-summary-persisted",
+      "elapsedMs": 11156.912800011924,
+      "outcome": "confirmed"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "confirmed-action-result",
+      "elapsedMs": 11160.648899996886,
+      "outcome": "confirmed"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "first-stream-event",
+      "elapsedMs": 11162.707000010414,
+      "durationMs": 11162.701199995354
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "receipt-server-event-yield",
+      "elapsedMs": 11167.019500018796,
+      "itemHash": "481e82179af51cff4d0c433b"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "575f9c67-c797-49b2-a15d-c247559438f4",
+      "stage": "store-item-commit-complete",
+      "elapsedMs": 11200.813400006155,
+      "itemHash": "481e82179af51cff4d0c433b"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-request",
+      "elapsedMs": 11182.64199999976,
+      "request": 2,
+      "transportRetryLimit": 0
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-stream-invocation",
+      "elapsedMs": 11188.507500017295,
+      "request": 2
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 381462.9074,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 11975.759699999995,
+      "durationMs": 26.321199999947567,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 381465.4183,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 11978.274599999946,
+      "durationMs": 28.82700000004843,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 381467.9798,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 11980.834099999978,
+      "durationMs": 31.384599999990314,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 381468.3241,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 11981.132199999993,
+      "durationMs": 31.618100000021514
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-first-event",
+      "elapsedMs": 12794.84849999426,
+      "eventType": "response.created"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-provider-response",
+      "elapsedMs": 12796.607199998107,
+      "eventType": "response.created",
+      "providerResponseHash": "7b70d1eb23d4246d246ec2d4"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-provider-response",
+      "elapsedMs": 12807.917199999793,
+      "eventType": "response.in_progress",
+      "providerResponseHash": "7b70d1eb23d4246d246ec2d4"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-first-text-event",
+      "elapsedMs": 13236.254899995402
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383548.9296,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14061.778399999952,
+      "durationMs": 22.803399999975227,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383551.2676,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14064.11009999999,
+      "durationMs": 25.131899999978486,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383553.7894,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14066.638199999987,
+      "durationMs": 27.666299999982584,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383554.1115,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14066.97139999998,
+      "durationMs": 28.006800000031944
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383579.9382,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14092.791799999948,
+      "durationMs": 23.630100000009406,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383586.1893,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14099.042099999962,
+      "durationMs": 29.87469999998575,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383589.5414,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14102.389199999976,
+      "durationMs": 33.21599999995669,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383589.8685,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14102.727399999974,
+      "durationMs": 33.56509999994887
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383628.6889,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14141.480899999966,
+      "durationMs": 37.54389999998966,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383630.6134,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14143.455999999947,
+      "durationMs": 39.507800000021234,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383632.5324,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14145.3934,
+      "durationMs": 41.44780000002356,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383632.6927,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14145.56229999999,
+      "durationMs": 41.65759999997681
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383666.1261,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14178.9804,
+      "durationMs": 32.621499999950174,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383668.2862,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14181.140399999975,
+      "durationMs": 34.770200000028126,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383670.6838,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14183.533999999985,
+      "durationMs": 37.15789999999106,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383670.9297,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14183.7941,
+      "durationMs": 37.44670000002952
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383704.5452,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14217.396599999978,
+      "durationMs": 32.334700000006706,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383707.0167,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14219.869699999981,
+      "durationMs": 34.7951999999932,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383709.7596,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14222.609299999953,
+      "durationMs": 37.52939999999944,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383709.9617,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14222.827299999946,
+      "durationMs": 37.7848000000231
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383738.9492,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14251.801299999992,
+      "durationMs": 28.07850000000326,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383742.0615,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14254.903899999976,
+      "durationMs": 31.167200000025332,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383745.8383,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14258.6826,
+      "durationMs": 34.944500000041444,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383746.2564,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14259.096299999976,
+      "durationMs": 35.39120000001276
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383777.6368,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14290.4853,
+      "durationMs": 30.38930000003893,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383780.448,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14293.297999999952,
+      "durationMs": 33.1931999999797,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383783.5325,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14296.376999999979,
+      "durationMs": 36.271300000022165,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383783.7775,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14296.644799999951,
+      "durationMs": 36.5739000000176
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383819.1341,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14331.986799999955,
+      "durationMs": 31.96929999999702,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383821.0358,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14333.889599999995,
+      "durationMs": 33.85450000001583,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383823.6405,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14336.49549999996,
+      "durationMs": 36.455700000049546,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383823.9092,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14336.773599999957,
+      "durationMs": 36.80009999999311
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383857.3073,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14370.15519999998,
+      "durationMs": 32.45130000001518,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383859.5156,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14372.365699999966,
+      "durationMs": 34.64930000004824,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383861.7895,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14374.629099999962,
+      "durationMs": 36.90590000001248,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383862.1278,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14374.992799999949,
+      "durationMs": 37.32589999999618
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383891.8743,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14404.723799999978,
+      "durationMs": 28.644700000004377,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383894.525,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14407.372899999958,
+      "durationMs": 31.23439999995753,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383897.2066,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14410.056599999953,
+      "durationMs": 33.959600000001956,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383897.4281,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14410.292399999977,
+      "durationMs": 34.24729999998817
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383932.2921,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14445.131399999955,
+      "durationMs": 33.71549999999115,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383935.4731,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14448.320299999963,
+      "durationMs": 36.89590000000317,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383937.8041,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14450.65519999998,
+      "durationMs": 39.22750000003725,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383938.0745,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14450.93909999996,
+      "durationMs": 39.54470000002766
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383968.2131,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14481.066699999967,
+      "durationMs": 29.0002000000095,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383969.9704,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14482.825699999987,
+      "durationMs": 30.745400000014342,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383971.8262,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14484.680599999963,
+      "durationMs": 32.59480000002077,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 383972.0114,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14484.875699999975,
+      "durationMs": 32.832900000037625
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384003.7538,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14516.613499999978,
+      "durationMs": 30.810799999977462,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384005.8637,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14518.715199999977,
+      "durationMs": 32.93280000000959,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384007.5833,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14520.442599999951,
+      "durationMs": 34.64749999996275,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384007.9028,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14520.771699999983,
+      "durationMs": 35.01390000001993
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384039.9151,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14552.772599999967,
+      "durationMs": 31.129000000015367,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384043.2445,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14556.089599999948,
+      "durationMs": 34.43440000002738,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384046.56,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14559.41479999997,
+      "durationMs": 37.76339999999618,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384046.7656,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14559.63089999999,
+      "durationMs": 37.99930000002496
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384070.1633,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14583.016799999983,
+      "durationMs": 22.257600000011735,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384072.1085,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14584.964899999963,
+      "durationMs": 24.193900000012945,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384073.8541,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14586.711899999995,
+      "durationMs": 25.93839999998454,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384074.0153,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14586.877899999963,
+      "durationMs": 26.143900000024587
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384095.6972,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14608.556899999967,
+      "durationMs": 20.988200000021607,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384096.8431,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14609.706599999976,
+      "durationMs": 22.130700000037905,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384100.2272,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14613.085599999991,
+      "durationMs": 25.50389999995241,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384100.4266,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14613.297899999947,
+      "durationMs": 25.741199999989476
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384123.6325,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14636.49549999996,
+      "durationMs": 15.758000000030734,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384124.474,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14637.33859999996,
+      "durationMs": 16.59749999997439,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384125.1019,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14637.967899999989,
+      "durationMs": 17.193700000003446,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384125.1826,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14638.054799999984,
+      "durationMs": 17.332899999979418
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384144.6005,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14657.440799999982,
+      "durationMs": 17.20679999998538,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384145.7378,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14658.604899999977,
+      "durationMs": 18.377100000041537,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384146.2841,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14659.154099999985,
+      "durationMs": 18.926100000040606,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384146.3497,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14659.222499999974,
+      "durationMs": 19.013199999986682
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384165.4307,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14678.292199999967,
+      "durationMs": 15.59409999998752,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384166.4908,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14679.354599999962,
+      "durationMs": 16.652000000001863,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384168.1068,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14680.970499999996,
+      "durationMs": 18.26620000001276,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384168.2153,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14681.086199999962,
+      "durationMs": 18.400699999998324
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384197.2336,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14710.082199999946,
+      "durationMs": 14.073399999993853,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384198.612,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14711.476599999995,
+      "durationMs": 15.465700000000652,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384199.8783,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14712.735599999956,
+      "durationMs": 16.71929999999702,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384200.1742,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14713.01139999996,
+      "durationMs": 17.00309999997262
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384219.5044,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14732.36009999999,
+      "durationMs": 18.526199999963865,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384221.396,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14734.25629999995,
+      "durationMs": 20.417499999981374,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384222.3912,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14735.254299999971,
+      "durationMs": 21.414600000018254,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384222.4992,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14735.369799999986,
+      "durationMs": 21.54719999997178
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384239.8513,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14752.711899999995,
+      "durationMs": 16.856399999989662,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384241.1239,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14753.98789999995,
+      "durationMs": 18.128000000026077,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384241.9225,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14754.788099999947,
+      "durationMs": 18.927499999990687,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384242.0111,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14754.882599999954,
+      "durationMs": 19.036800000001676
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384262.1053,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14774.968200000003,
+      "durationMs": 15.260699999984354,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384265.6999,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14778.55349999998,
+      "durationMs": 18.834299999987707,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384267.8392,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14780.680499999959,
+      "durationMs": 20.953200000047218,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384268.3484,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14781.205399999977,
+      "durationMs": 21.49660000001313
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384301.1348,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14813.97199999995,
+      "durationMs": 12.348899999982677,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384302.2331,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14815.097699999984,
+      "durationMs": 13.480999999970663,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384304.6227,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14817.467899999989,
+      "durationMs": 15.840499999991152,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384304.8911,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14817.756099999999,
+      "durationMs": 16.15450000000419
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384330.3291,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14843.178099999961,
+      "durationMs": 24.667000000015832,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384331.8394,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14844.690000000002,
+      "durationMs": 26.168099999951664,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384334.754,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14847.600399999996,
+      "durationMs": 29.07719999999972,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384335.1342,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14847.991299999994,
+      "durationMs": 29.37469999998575
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384366.1651,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14879.016599999974,
+      "durationMs": 29.792399999976624,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384367.9012,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14880.757899999968,
+      "durationMs": 31.521400000026915,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384369.0978,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14881.960199999972,
+      "durationMs": 32.72320000000764,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384369.2394,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14882.108899999992,
+      "durationMs": 32.91139999998268
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384402.1847,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14915.031199999969,
+      "durationMs": 31.84000000002561,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384404.8431,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14917.697799999965,
+      "durationMs": 34.491900000022724,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384407.6916,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14920.548299999966,
+      "durationMs": 37.33960000000661,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384407.8496,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14920.719999999972,
+      "durationMs": 37.56200000003446
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384432.8388,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14945.687399999995,
+      "durationMs": 23.67689999996219,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384435.0859,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14947.936899999972,
+      "durationMs": 25.917900000000373,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384436.8422,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14949.695999999996,
+      "durationMs": 27.67489999998361,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384437.031,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14949.897399999958,
+      "durationMs": 27.92320000001928
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384461.1915,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14974.046099999978,
+      "durationMs": 23.09659999998985,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384463.1079,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14975.947599999956,
+      "durationMs": 24.982499999983702,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384465.5196,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 14978.365599999961,
+      "durationMs": 27.399499999999534,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384465.7214,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 14978.586199999962,
+      "durationMs": 27.65420000004815
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384494.9757,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15007.82759999996,
+      "durationMs": 28.06469999998808,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384497.8663,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15010.71829999995,
+      "durationMs": 30.931900000025053,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384500.471,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15013.325899999996,
+      "durationMs": 33.540199999988545,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384500.6586,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15013.525399999984,
+      "durationMs": 33.79629999998724
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384532.0499,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15044.893499999947,
+      "durationMs": 30.417599999986123,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384534.2384,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15047.091399999976,
+      "durationMs": 32.61060000001453,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384537.2102,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15050.064799999993,
+      "durationMs": 35.584600000001956,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384537.4069,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15050.274799999956,
+      "durationMs": 35.82529999996768
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384569.9413,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15082.791899999953,
+      "durationMs": 31.42410000000382,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384572.4792,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15085.333199999994,
+      "durationMs": 33.95079999999143,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384574.2016,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15087.063999999955,
+      "durationMs": 35.68270000000484,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384574.2988,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15087.170699999959,
+      "durationMs": 35.83650000003399
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384607.128,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15119.980899999966,
+      "durationMs": 32.15799999999581,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384609.1387,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15121.98509999999,
+      "durationMs": 34.150799999944866,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384611.9713,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15124.818299999984,
+      "durationMs": 36.976299999980256,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384612.5837,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15125.337699999975,
+      "durationMs": 37.51539999997476
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384639.1306,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15151.975299999991,
+      "durationMs": 25.395799999998417,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384640.8453,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15153.700799999991,
+      "durationMs": 27.10910000000149,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384644.2509,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15157.091799999995,
+      "durationMs": 30.491900000022724,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384644.7165,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15157.570299999963,
+      "durationMs": 31.01250000001164
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384673.5508,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15186.404099999985,
+      "durationMs": 27.690400000021327,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384676.1793,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15189.033199999947,
+      "durationMs": 30.306800000020303,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384679.1395,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15191.99179999996,
+      "durationMs": 33.2609999999986,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384679.513,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15192.372999999963,
+      "durationMs": 33.6762999999919
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384710.3622,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15223.204299999983,
+      "durationMs": 29.87739999999758,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384712.5426,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15225.388500000001,
+      "durationMs": 32.052700000000186,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384714.5097,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15227.36289999995,
+      "durationMs": 34.02179999998771,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384714.706,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15227.57189999998,
+      "durationMs": 34.26370000001043
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384742.8479,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15255.696799999976,
+      "durationMs": 27.089299999992363,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384744.7302,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15257.584600000002,
+      "durationMs": 28.964299999992363,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384746.33,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15259.188699999999,
+      "durationMs": 30.567299999995157,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384746.4726,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15259.340799999947,
+      "durationMs": 30.763799999956973
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384770.4715,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15283.322199999995,
+      "durationMs": 23.03000000002794,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384772.481,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15285.336699999985,
+      "durationMs": 24.941400000010617,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384774.5182,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15287.37149999995,
+      "durationMs": 26.96410000004107,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384774.7285,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15287.594499999948,
+      "durationMs": 27.32589999999618
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384799.7637,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15312.617399999988,
+      "durationMs": 23.89609999995446,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384800.913,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15313.773899999971,
+      "durationMs": 25.03059999999823,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384802.1655,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15315.023399999947,
+      "durationMs": 26.275200000032783,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384802.3947,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15315.201399999962,
+      "durationMs": 26.507099999987986
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384840.0057,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15352.85799999995,
+      "durationMs": 26.954200000036508,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384842.2664,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15355.121400000004,
+      "durationMs": 29.20639999996638,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384846.0562,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15358.900800000003,
+      "durationMs": 32.9769999999553,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384846.4994,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15359.352199999965,
+      "durationMs": 33.446699999971315
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384873.3322,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15386.18399999995,
+      "durationMs": 25.84260000003269,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384875.5061,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15388.360499999952,
+      "durationMs": 28.013799999956973,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384878.3109,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15391.16379999998,
+      "durationMs": 30.81150000001071,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384878.5264,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15391.389599999995,
+      "durationMs": 31.06070000003092
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384901.3035,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15414.143699999957,
+      "durationMs": 21.928899999998976,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384903.4288,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15416.281499999983,
+      "durationMs": 24.059000000008382,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384905.2263,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15418.084299999988,
+      "durationMs": 25.86050000000978,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384905.3554,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15418.22649999999,
+      "durationMs": 26.03299999999581
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384927.1112,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15439.967399999965,
+      "durationMs": 20.90520000003744,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384928.7144,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15441.567099999986,
+      "durationMs": 22.493000000016764,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384930.4686,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15443.329999999958,
+      "durationMs": 24.255100000009406,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384930.5966,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15443.467999999993,
+      "durationMs": 24.427900000009686
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384953.1151,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15465.964500000002,
+      "durationMs": 21.783400000014808,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384954.3216,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15467.185999999987,
+      "durationMs": 23.003300000040326,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384957.3934,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15470.249099999957,
+      "durationMs": 26.06099999998696,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384957.5695,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15470.435999999987,
+      "durationMs": 26.263799999956973
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384974.2451,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15487.095399999991,
+      "durationMs": 16.008099999977276,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384976.1642,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15489.021899999992,
+      "durationMs": 17.935799999977462,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384977.7982,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15490.648499999952,
+      "durationMs": 19.558699999994133,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384977.9542,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15490.825499999977,
+      "durationMs": 19.75329999998212
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384995.2974,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15508.155499999993,
+      "durationMs": 16.585999999952037,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384996.7245,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15509.584399999992,
+      "durationMs": 18.005299999960698,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384998.0305,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15510.891499999969,
+      "durationMs": 19.30910000001313,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 384998.2221,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15511.08859999996,
+      "durationMs": 19.53310000000056
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385015.2092,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15528.066299999948,
+      "durationMs": 16.289099999994505,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385016.0997,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15528.960599999991,
+      "durationMs": 17.178200000023935,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385018.1522,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15531.00549999997,
+      "durationMs": 19.2158000000054,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385018.3683,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15531.236499999999,
+      "durationMs": 19.462599999969825
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385033.0544,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15545.905399999989,
+      "durationMs": 14.031199999968521,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385034.0246,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15546.888999999966,
+      "durationMs": 15.006999999983236,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385035.8309,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15548.695999999996,
+      "durationMs": 16.81140000000596,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385035.9263,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15548.796899999958,
+      "durationMs": 16.941999999980908
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385050.3003,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15563.157799999986,
+      "durationMs": 13.9662000000244,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385051.6902,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15564.550599999959,
+      "durationMs": 15.355400000000373,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385052.7901,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15565.654699999955,
+      "durationMs": 16.457999999984168,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385052.8909,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15565.76119999995,
+      "durationMs": 16.58009999996284
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385070.8925,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15583.751499999955,
+      "durationMs": 17.087400000018533,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385072.0136,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15584.876099999994,
+      "durationMs": 18.206000000005588,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385072.905,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15585.770699999994,
+      "durationMs": 19.103699999977835,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385073.1538,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15586.013299999991,
+      "durationMs": 19.34399999998277
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385091.0846,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15603.945599999977,
+      "durationMs": 15.753500000049826,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385092.2938,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15605.158499999961,
+      "durationMs": 16.959200000041164,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385093.0874,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15605.955499999982,
+      "durationMs": 17.754700000048615,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385093.1572,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15606.030299999984,
+      "durationMs": 17.86060000001453
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385116.1515,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15629.014899999951,
+      "durationMs": 8.847599999979138,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385117.8726,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15630.723499999964,
+      "durationMs": 10.54780000000028,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385119.5973,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15632.447999999975,
+      "durationMs": 12.270299999974668,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385119.7554,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15632.62579999998,
+      "durationMs": 12.47119999997085
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385160.3312,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15673.18359999999,
+      "durationMs": 17.87200000003213,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385162.3099,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15675.167299999972,
+      "durationMs": 19.848300000012387,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385164.3018,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15677.156199999969,
+      "durationMs": 21.834499999997206,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385164.5303,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15677.392200000002,
+      "durationMs": 22.086400000029244
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385190.7614,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15703.61659999995,
+      "durationMs": 24.449499999987893,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385193.7996,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15706.647999999986,
+      "durationMs": 27.464800000016112,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385196.0335,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15708.892599999963,
+      "durationMs": 29.70569999999134,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385196.2166,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15709.080699999991,
+      "durationMs": 29.919999999983702
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385222.4022,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15735.255399999965,
+      "durationMs": 25.244799999985844,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385224.5083,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15737.36289999995,
+      "durationMs": 27.338699999963865,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385226.775,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15739.630099999951,
+      "durationMs": 29.605500000005122,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385226.9475,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15739.81839999999,
+      "durationMs": 29.82690000004368
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385267.2943,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15780.142699999968,
+      "durationMs": 20.74989999999525,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385268.9036,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15781.746400000004,
+      "durationMs": 22.338299999944866,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385272.4549,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15785.30819999997,
+      "durationMs": 25.90710000001127,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385272.6429,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15785.51059999998,
+      "durationMs": 26.134199999971315
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385295.295,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15808.146299999964,
+      "durationMs": 22.09270000003744,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385296.5192,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15809.379599999986,
+      "durationMs": 23.322000000043772,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385299.1969,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15812.057799999951,
+      "durationMs": 25.99960000003921,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385299.3259,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15812.195399999968,
+      "durationMs": 26.150800000003073
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385330.4397,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15843.290500000003,
+      "durationMs": 30.145900000003166,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385332.5843,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15845.432099999976,
+      "durationMs": 32.27679999999236,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385334.8645,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15847.711699999985,
+      "durationMs": 34.553799999994226,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385335.1365,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15847.998699999996,
+      "durationMs": 34.8642000000109
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385362.1702,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15875.033499999961,
+      "durationMs": 26.070799999986775,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385364.2227,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15876.98669999995,
+      "durationMs": 28.005100000009406,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385367.9074,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15880.719499999948,
+      "durationMs": 31.730299999995623,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385368.2423,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15881.10799999995,
+      "durationMs": 32.16099999996368
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385396.9244,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15909.777899999986,
+      "durationMs": 27.50209999998333,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385399.2688,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15912.124399999972,
+      "durationMs": 29.834499999997206,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385403.5607,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15916.406999999948,
+      "durationMs": 34.11190000001807,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385403.8043,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15916.667599999986,
+      "durationMs": 34.412300000025425
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385428.4723,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15941.315899999987,
+      "durationMs": 23.630000000004657,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385431.7762,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15944.631999999983,
+      "durationMs": 26.93910000001779,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385433.4229,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15946.280099999974,
+      "durationMs": 28.583800000022165,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385433.5786,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15946.448499999999,
+      "durationMs": 28.792799999995623
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385460.327,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15973.179899999988,
+      "durationMs": 26.129100000020117,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385462.4892,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15975.344199999992,
+      "durationMs": 28.285900000017136,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385464.3318,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 15977.19809999998,
+      "durationMs": 30.141800000041258,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385464.4392,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 15977.30799999996,
+      "durationMs": 30.275300000037532
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385489.7061,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16002.565999999992,
+      "durationMs": 24.81020000000717,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385491.9532,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16004.805999999982,
+      "durationMs": 27.040900000021793,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385495.0123,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16007.864599999972,
+      "durationMs": 30.098300000012387,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385495.4101,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16008.272299999953,
+      "durationMs": 30.508200000040233
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385521.9811,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16034.829599999997,
+      "durationMs": 25.21769999997923,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385523.7636,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16036.624199999962,
+      "durationMs": 27.003900000010617,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385525.3996,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16038.226999999955,
+      "durationMs": 28.58810000005178,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385525.8081,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16038.671299999987,
+      "durationMs": 29.081300000019837
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385554.5531,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16067.407999999996,
+      "durationMs": 27.82809999998426,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385557.1816,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16070.033199999947,
+      "durationMs": 30.43320000002859,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385559.0456,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16071.824599999993,
+      "durationMs": 32.22330000001239,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385559.2639,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16072.127500000002,
+      "durationMs": 32.56100000004517
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385586.415,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16099.266399999964,
+      "durationMs": 26.325499999977183,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385588.7365,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16101.591099999961,
+      "durationMs": 28.640099999960512,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385591.185,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16104.032399999967,
+      "durationMs": 31.075699999986682,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385591.4187,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16104.281999999948,
+      "durationMs": 31.35720000002766
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385621.2147,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16134.068099999975,
+      "durationMs": 28.834800000011455,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385623.421,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16136.278799999971,
+      "durationMs": 31.03220000001602,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385625.2271,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16138.080599999987,
+      "durationMs": 32.83069999999134,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385625.4252,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16138.288899999985,
+      "durationMs": 33.071599999966566
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385657.8424,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16170.69689999998,
+      "durationMs": 30.868299999972805,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385660.1443,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16172.996999999974,
+      "durationMs": 33.1530999999959,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385661.6285,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16174.485499999952,
+      "durationMs": 34.63929999998072,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385661.7849,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16174.650800000003,
+      "durationMs": 34.85340000002179
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385684.1127,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16196.966599999985,
+      "durationMs": 21.21769999997923,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385685.7354,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16198.589099999983,
+      "durationMs": 22.824999999953434,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385688.3607,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16201.209499999997,
+      "durationMs": 25.43910000001779,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385688.5557,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16201.418199999956,
+      "durationMs": 25.68780000001425
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385710.7897,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16223.622499999998,
+      "durationMs": 21.035900000017136,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385712.9195,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16225.776699999988,
+      "durationMs": 23.181200000050012,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385715.4834,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16228.344799999963,
+      "durationMs": 25.74720000004163,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385715.5822,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16228.453999999969,
+      "durationMs": 25.897200000006706
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385734.2023,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16247.060899999982,
+      "durationMs": 18.193799999949988,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385735.3565,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16248.133600000001,
+      "durationMs": 19.261400000017602,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385737.7148,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16250.564299999969,
+      "durationMs": 21.680900000035763,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385737.9493,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16250.814199999964,
+      "durationMs": 21.955900000000838
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385761.6946,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16274.553099999961,
+      "durationMs": 22.841399999975692,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385763.5937,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16276.43829999998,
+      "durationMs": 24.714500000001863,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385764.6758,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16277.541700000002,
+      "durationMs": 25.815400000021327,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385764.7636,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16277.633299999987,
+      "durationMs": 25.956000000005588
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385784.1761,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16297.03389999998,
+      "durationMs": 18.567799999960698,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385785.9679,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16298.82859999995,
+      "durationMs": 20.351900000008754,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385787.8397,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16300.699699999997,
+      "durationMs": 22.21899999998277,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385787.9836,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16300.85129999998,
+      "durationMs": 22.40719999995781
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385801.1893,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16313.959699999948,
+      "durationMs": 12.467599999974482,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385802.9767,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16315.836099999957,
+      "durationMs": 14.337300000013784,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385804.8517,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16317.66069999995,
+      "durationMs": 16.160900000017136,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385805.0661,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16317.928599999985,
+      "durationMs": 16.446899999980815
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385830.7485,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16343.609899999981,
+      "durationMs": 17.369699999981094,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385832.6446,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16345.50469999999,
+      "durationMs": 19.256099999998696,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385834.5869,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16347.42339999997,
+      "durationMs": 21.166299999982584,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385834.801,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16347.671399999992,
+      "durationMs": 21.447199999995064
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385855.7567,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16368.62149999995,
+      "durationMs": 14.316400000010617,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385856.6556,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16369.516899999988,
+      "durationMs": 15.202900000032969,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385858.1663,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16371.026699999988,
+      "durationMs": 16.694600000046194,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385858.3752,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16371.234999999986,
+      "durationMs": 16.93619999999646
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385881.1429,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16394.000699999975,
+      "durationMs": 13.805599999963306,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385883.1478,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16396.005799999984,
+      "durationMs": 15.804599999974016,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385885.5255,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16398.383199999982,
+      "durationMs": 18.180299999949057,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385885.6589,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16398.52799999999,
+      "durationMs": 18.366500000003725
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385970.216,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16483.082599999965,
+      "durationMs": 65.66259999998147,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385972.386,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16485.25279999996,
+      "durationMs": 67.82459999999264,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385973.1441,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16486.012099999993,
+      "durationMs": 68.58250000001863,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385973.1906,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16486.064399999974,
+      "durationMs": 68.66229999996722
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385987.285,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16500.14889999997,
+      "durationMs": 13.73389999999199,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385988.6377,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16501.502500000002,
+      "durationMs": 15.080900000000838,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385989.5116,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16502.377999999968,
+      "durationMs": 15.956000000005588,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 385989.6412,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16502.510499999975,
+      "durationMs": 16.10700000001816
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386230.032,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16742.884899999946,
+      "durationMs": 27.35940000001574,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386232.3243,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16745.178599999985,
+      "durationMs": 29.634000000020023,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386234.4864,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16747.33309999999,
+      "durationMs": 31.78139999997802,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386234.702,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16747.56699999998,
+      "durationMs": 32.0905999999959
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "575f9c67-c797-49b2-a15d-c247559438f4",
+      "stage": "store-item-commit-complete",
+      "elapsedMs": 16041.293999995105,
+      "itemHash": "05ff226fbbc2374e9144176e"
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-provider-response",
+      "elapsedMs": 16037.645400007023,
+      "eventType": "response.completed",
+      "providerResponseHash": "7b70d1eb23d4246d246ec2d4"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386300.5698,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16813.40619999997,
+      "durationMs": 22.665999999968335,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386302.6564,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16815.508899999957,
+      "durationMs": 24.75419999996666,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386304.2865,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "elapsedMs": 16817.14419999998,
+      "durationMs": 26.38770000002114,
+      "outcome": "returned"
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386304.3985,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "elapsedMs": 16817.268499999947,
+      "durationMs": 26.56469999998808
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-provider-request-id-unavailable",
+      "elapsedMs": 16042.156000010436
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "model-response",
+      "elapsedMs": 16053.81509999279,
+      "request": 2,
+      "providerResponseHash": "7b70d1eb23d4246d246ec2d4",
+      "durationMs": 4871.211599995149
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "python",
+      "scopeId": "91b6626d-7891-41a9-8640-7c378c4891bc",
+      "stage": "assistant-stream-finished",
+      "elapsedMs": 16065.10760000674,
+      "durationMs": 16065.104200009955
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386334.3221,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "final-response-finished",
+      "elapsedMs": 16847.176599999948
+    },
+    {
+      "schemaVersion": 1,
+      "processRunId": "cee09dcc-52e2-40cd-865a-937f45980aec",
+      "monotonicMs": 386334.8327,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "ai-node",
+      "stage": "queue-exit",
+      "elapsedMs": 16847.69499999995
+    }
+  ]
+}

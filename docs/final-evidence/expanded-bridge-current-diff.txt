@@ -1,0 +1,339 @@
+diff --git a/module/src/commands/transactions.ts b/module/src/commands/transactions.ts
+index 8141eca..923a112 100644
+--- a/module/src/commands/transactions.ts
++++ b/module/src/commands/transactions.ts
+@@ -18,6 +18,7 @@ import { registerCommand } from "../command-registry.js";
+ import { validateDocumentSchema } from "./schema-discovery.js";
+ 
+ interface MutableDocument extends FoundryDocument {
++  delete(options?: Record<string, unknown>): Promise<FoundryDocument>;
+   update(
+     changes: Record<string, unknown>,
+     options?: Record<string, unknown>,
+@@ -696,6 +697,13 @@ async function compensateCurrentAndRethrow(
+   throw cause;
+ }
+ 
++/** Provenance is produced by the validated bridge executor, never copied from document data.
++ * This is an event echo marker, not an authorization grant. Every compensation keeps correlation.
++ */
++export function transactionMutationOptions(manifest: TransactionManifest, phase: "apply" | "compensate"): Record<string, unknown> {
++  return { correlationId: manifest.correlationId, foundryLocalApiOrigin: { source: "foundry-local-api.transaction", phase, correlationId: manifest.correlationId } };
++}
++
+ async function apply(
+   prepared: PreparedOperation,
+   manifest: TransactionManifest,
+@@ -707,6 +715,7 @@ async function apply(
+     try {
+       created = (await documentClass(operation.documentType).create(prepared.normalizedData!, {
+         keepId: true,
++        ...transactionMutationOptions(manifest, "apply"),
+       })) as MutableDocument | undefined;
+     } catch (cause) {
+       const escaped = collection(operation.documentType).get(
+@@ -717,7 +726,7 @@ async function apply(
+           result: placeholderResult(operation, escaped.id, prepared.validationWarnings),
+           recovery: recovery(operation, escaped.id, "delete-created"),
+           compensate: async () => {
+-            await escaped.delete();
++            await escaped.delete(transactionMutationOptions(manifest, "compensate"));
+             if (collection(operation.documentType).has(escaped.id))
+               throw new Error("Created document survived compensation.");
+           },
+@@ -731,7 +740,7 @@ async function apply(
+       result: placeholderResult(operation, created.id, prepared.validationWarnings),
+       recovery: recovery(operation, created.id, "delete-created"),
+       compensate: async () => {
+-        await created.delete();
++        await created.delete(transactionMutationOptions(manifest, "compensate"));
+         if (collection(operation.documentType).has(created.id)) {
+           throw new Error(`Created ${operation.documentType} ${created.id} survived compensation.`);
+         }
+@@ -761,15 +770,16 @@ async function apply(
+       target,
+       prepared.beforeImage!,
+       prepared.validationWarnings,
++      manifest,
+     );
+     try {
+-      await target.update(prepared.normalizedData!);
++      await target.update(prepared.normalizedData!, transactionMutationOptions(manifest, "apply"));
+     } catch (cause) {
+       return compensateCurrentAndRethrow(planned, cause);
+     }
+     try {
+       return maybeInjectPostWrite(
+-        await restoreApplied(operation, target, prepared.beforeImage!, prepared.validationWarnings),
++        await restoreApplied(operation, target, prepared.beforeImage!, prepared.validationWarnings, manifest),
+         manifest,
+       );
+     } catch (cause) {
+@@ -791,6 +801,7 @@ async function apply(
+       compensate: async () => {
+         const restored = await documentClass(operation.documentType).create(beforeImage, {
+           keepId: true,
++          ...transactionMutationOptions(manifest, "compensate"),
+         });
+         if (
+           !restored ||
+@@ -804,7 +815,7 @@ async function apply(
+       },
+     };
+     try {
+-      await target.delete();
++      await target.delete(transactionMutationOptions(manifest, "apply"));
+     } catch (cause) {
+       if (!collection(operation.documentType).has(operation.documentId)) {
+         return compensateCurrentAndRethrow(planned, cause);
+@@ -825,7 +836,7 @@ async function apply(
+       [created] = await parent.createEmbeddedDocuments(
+         operation.embeddedType,
+         [prepared.normalizedData!],
+-        { keepId: true },
++        { keepId: true, ...transactionMutationOptions(manifest, "apply") },
+       );
+     } catch (cause) {
+       const escaped = parent
+@@ -836,7 +847,7 @@ async function apply(
+           result: placeholderResult(operation, escaped.id, prepared.validationWarnings),
+           recovery: recovery(operation, escaped.id, "delete-created"),
+           compensate: async () => {
+-            await escaped.delete();
++            await escaped.delete(transactionMutationOptions(manifest, "compensate"));
+             if (parent.getEmbeddedCollection(operation.embeddedType).has(escaped.id))
+               throw new Error("Created embedded document survived compensation.");
+           },
+@@ -850,7 +861,7 @@ async function apply(
+       result: placeholderResult(operation, created.id, prepared.validationWarnings),
+       recovery: recovery(operation, created.id, "delete-created"),
+       compensate: async () => {
+-        await created.delete();
++        await created.delete(transactionMutationOptions(manifest, "compensate"));
+         if (parent.getEmbeddedCollection(operation.embeddedType).has(created.id)) {
+           throw new Error(`Created ${operation.embeddedType} ${created.id} survived compensation.`);
+         }
+@@ -880,15 +891,16 @@ async function apply(
+       target,
+       prepared.beforeImage!,
+       prepared.validationWarnings,
++      manifest,
+     );
+     try {
+-      await target.update(prepared.normalizedData!);
++      await target.update(prepared.normalizedData!, transactionMutationOptions(manifest, "apply"));
+     } catch (cause) {
+       return compensateCurrentAndRethrow(planned, cause);
+     }
+     try {
+       return maybeInjectPostWrite(
+-        await restoreApplied(operation, target, prepared.beforeImage!, prepared.validationWarnings),
++        await restoreApplied(operation, target, prepared.beforeImage!, prepared.validationWarnings, manifest),
+         manifest,
+       );
+     } catch (cause) {
+@@ -905,7 +917,7 @@ async function apply(
+       const [restored] = await parent.createEmbeddedDocuments(
+         operation.embeddedType,
+         [beforeImage],
+-        { keepId: true },
++        { keepId: true, ...transactionMutationOptions(manifest, "compensate") },
+       );
+       if (
+         !restored ||
+@@ -919,7 +931,7 @@ async function apply(
+     },
+   };
+   try {
+-    await target.delete();
++    await target.delete(transactionMutationOptions(manifest, "apply"));
+   } catch (cause) {
+     if (!parent.getEmbeddedCollection(operation.embeddedType).has(operation.embeddedId)) {
+       return compensateCurrentAndRethrow(planned, cause);
+@@ -934,6 +946,7 @@ async function restoreApplied(
+   target: MutableDocument,
+   beforeImage: Record<string, unknown>,
+   validationWarnings: Array<{ code: string; path: string; message: string }>,
++  manifest: TransactionManifest,
+ ): Promise<AppliedOperation> {
+   const data = target.toObject();
+   if (!("documentId" in operation) && !("embeddedId" in operation)) {
+@@ -944,7 +957,7 @@ async function restoreApplied(
+     result: await result(operation, id, data, validationWarnings),
+     recovery: recovery(operation, id, "restore-before-image"),
+     compensate: async () => {
+-      await target.update(beforeImage, { diff: false, recursive: false });
++      await target.update(beforeImage, { diff: false, recursive: false, ...transactionMutationOptions(manifest, "compensate") });
+       if (
+         (await transactionRevision(target.toObject())) !== (await transactionRevision(beforeImage))
+       ) {
+diff --git a/module/src/index.ts b/module/src/index.ts
+index 0ca60bf..c58c9e2 100644
+--- a/module/src/index.ts
++++ b/module/src/index.ts
+@@ -1,17 +1,13 @@
+ // Entrypoint for the Foundry module's client-side esmodule.
+ //
+-// Registers the bridge URL setting on `init`, then starts the WebSocket
+-// bridge client on `ready`, per PLAN.md Phase 2 (Foundry Module Bridge
++// Registers the bounded player/TV opt-in on `init`, then starts the WebSocket
++// bridge client automatically on `ready`, per PLAN.md Phase 2 (Foundry Module Bridge
+ // Client). Real Foundry API command handlers beyond the `ping` proof-of-life
+ // start with Phase 6's core meta/introspection handlers (./commands/meta.ts).
+ 
+ import {
+   BridgeClient,
+-  clearLegacyNonGmApiKey,
+-  configureBridgeAdminSettingVisibility,
+-  MODULE_ID,
+-  getConfiguredApiKey,
+-  getConfiguredBridgeUrl,
++  getBridgeUrlForCurrentPage,
+   registerBridgeSettings,
+ } from "./bridge-client.js";
+ import { registerBridgeEnrollmentQuery } from "./bridge-enrollment.js";
+@@ -56,6 +52,7 @@ import "./commands/transactions.js";
+ import "./commands/fog-exploration.js";
+ import "./commands/scene-render.js";
+ import "./commands/client-readiness.js";
++import "./commands/client-identity.js";
+ import "./commands/embedded-children.js";
+ import "./commands/asset-lifecycle.js";
+ import "./commands/reference-audit.js";
+@@ -76,15 +73,16 @@ Hooks.once("init", () => {
+ });
+ 
+ Hooks.once("ready", () => {
+-  configureBridgeAdminSettingVisibility();
+-  void clearLegacyNonGmApiKey().then((cleared) => {
+-    if (!cleared) console.error(`[${MODULE_ID}] failed to clear legacy client API key`);
+-  });
+-  client = new BridgeClient(getConfiguredBridgeUrl, getConfiguredApiKey);
+-  client.connect();
+-  registerHookForwarding(client);
+-  registerMovementEventHooks(client);
+-  // Registered unconditionally — must fire on every client (including
+-  // players, who never open a bridge connection) per PLAN.md's Phase 47/42.
+   registerModuleSocketListener();
++  try {
++    const bridgeUrl = getBridgeUrlForCurrentPage();
++    client = new BridgeClient(() => bridgeUrl);
++    client.connect();
++    registerHookForwarding(client);
++    registerMovementEventHooks(client);
++  } catch {
++    console.error("[foundry-local-api] failed to initialize the bridge client");
++  }
+ });
++import "./commands/session-actions.js";
++import "./commands/world-documents.js";
+diff --git a/server/src/endpoints/index.ts b/server/src/endpoints/index.ts
+index 63c713a..e0dda4e 100644
+--- a/server/src/endpoints/index.ts
++++ b/server/src/endpoints/index.ts
+@@ -1,9 +1,9 @@
+ // Full list of endpoint descriptors, REST+MCP shared infrastructure (moved
+ // out of mcp/ in Phase 6 — see registry.ts). Every later phase appends its
+ // own descriptor array here.
+-import { fileURLToPath } from "node:url";
+ import { createAssetLifecycleEndpointDescriptors } from "./asset-lifecycle.js";
+-import { aiGmDeliveryEndpointDescriptors } from "./ai-gm-delivery.js";
++import { createAcceptanceValidationEndpointDescriptors } from "./acceptance-validation.js";
++import { aiGmDeliveryEndpointDescriptors, getAiGmDeliveryHealth } from "./ai-gm-delivery.js";
+ import { activeEffectEndpointDescriptors } from "./active-effects.js";
+ import { actorEndpointDescriptors } from "./actors.js";
+ import { adventureEndpointDescriptors } from "./adventures.js";
+@@ -37,7 +37,10 @@ import { rollEndpointDescriptors } from "./rolls.js";
+ import { rollTableEndpointDescriptors } from "./roll-tables.js";
+ import { dnd5eSimulationEndpointDescriptors } from "./dnd5e-simulation.js";
+ import { fogExplorationEndpointDescriptors } from "./fog-exploration.js";
+-import { movementEventEndpointDescriptors } from "./movement-events.js";
++import {
++  getMovementEventStoreDiagnostics,
++  movementEventEndpointDescriptors,
++} from "./movement-events.js";
+ import { sceneEndpointDescriptors } from "./scenes.js";
+ import { schemaDiscoveryEndpointDescriptors } from "./schema-discovery.js";
+ import { sceneRenderEndpointDescriptors } from "./scene-render.js";
+@@ -50,12 +53,14 @@ import { userEndpointDescriptors } from "./users.js";
+ import { worldTimeEndpointDescriptors } from "./world-time.js";
+ import { productionFixtureRegistry, productionTransactionJournal } from "../foundations/runtime.js";
+ import { AssetLifecycleService } from "../services/asset-lifecycle.js";
++import { resolveProductionAssetRoots } from "../services/production-asset-roots.js";
+ 
+ const transactionEndpointDescriptors = createTransactionEndpointDescriptors(
+   productionTransactionJournal,
+ );
++const productionAssetRoots = resolveProductionAssetRoots();
+ const assetLifecycleService = new AssetLifecycleService({
+-  roots: { data: fileURLToPath(new URL("../../../../../", import.meta.url)) },
++  roots: productionAssetRoots.lifecycle,
+   protectedPrefixes: {
+     data: [
+       "modules",
+@@ -69,13 +74,38 @@ const assetLifecycleService = new AssetLifecycleService({
+   fixtureOwnedPrefixes: { data: ["worlds/izzy-campaign/assets/mcp-test"] },
+   isFixtureTestRunId: (testRunId) => productionFixtureRegistry.has(testRunId),
+ });
++const referenceAuditAssetService = new AssetLifecycleService({
++  roots: productionAssetRoots.referenceAudit,
++});
+ const assetLifecycleEndpointDescriptors =
+   createAssetLifecycleEndpointDescriptors(assetLifecycleService);
+-const referenceAuditEndpointDescriptors =
+-  createReferenceAuditEndpointDescriptors(assetLifecycleService);
++const referenceAuditEndpointDescriptors = createReferenceAuditEndpointDescriptors(
++  referenceAuditAssetService,
++);
++const acceptanceValidationEndpointDescriptors = createAcceptanceValidationEndpointDescriptors({
++  readiness: clientReadinessEndpointDescriptors.find(
++    ({ name }) => name === "foundry_get_client_readiness",
++  )!,
++  fog: fogExplorationEndpointDescriptors.find(({ name }) => name === "foundry_get_scene_fog")!,
++  visibility: sceneRenderEndpointDescriptors.find(
++    ({ name }) => name === "foundry_get_token_visibility",
++  )!,
++  references: referenceAuditEndpointDescriptors.find(
++    ({ name }) => name === "foundry_audit_campaign_references",
++  )!,
++  topology: collisionTopologyEndpointDescriptors.find(
++    ({ name }) => name === "foundry_validate_wall_topology",
++  )!,
++  collision: collisionTopologyEndpointDescriptors.find(
++    ({ name }) => name === "foundry_validate_token_path",
++  )!,
++  movementDiagnostics: getMovementEventStoreDiagnostics,
++  deliveryHealth: getAiGmDeliveryHealth,
++});
+ 
+ export const allEndpointDescriptors: AnyEndpointDescriptor[] = [
+   healthEndpointDescriptor,
++  ...acceptanceValidationEndpointDescriptors,
+   ...aiGmDeliveryEndpointDescriptors,
+   ...bridgeEnrollmentEndpointDescriptors,
+   ...foundationEndpointDescriptors,
+@@ -118,6 +148,8 @@ export const allEndpointDescriptors: AnyEndpointDescriptor[] = [
+   ...eventEndpointDescriptors,
+   ...bulkEndpointDescriptors,
+   ...gameStateEndpointDescriptors,
++  ...sessionActionEndpointDescriptors,
++  ...worldDocumentEndpointDescriptors,
+   ...worldTimeEndpointDescriptors,
+   ...notificationEndpointDescriptors,
+ ];
+@@ -125,3 +157,5 @@ export const allEndpointDescriptors: AnyEndpointDescriptor[] = [
+ export { makeDocumentEndpoints } from "./documents.js";
+ export type { DocumentEndpointConfig } from "./documents.js";
+ export type { AnyEndpointDescriptor, EndpointContext, EndpointDescriptor } from "./types.js";
++import { sessionActionEndpointDescriptors } from "./session-actions.js";
++import { worldDocumentEndpointDescriptors } from "./world-documents.js";
+diff --git a/shared/src/index.ts b/shared/src/index.ts
+index aff6f8c..dce6c3e 100644
+--- a/shared/src/index.ts
++++ b/shared/src/index.ts
+@@ -366,3 +366,5 @@ export type {
+   TrailsBuilderItemPreview,
+   TrailsBuilderPreviewResult,
+ } from "./trails-of-destiny.js";
++export * from "./session-actions.js";
++export * from "./world-documents.js";

@@ -1,0 +1,132 @@
+{
+  "capturedAt": "2026-10-03T03:45:04.887Z",
+  "expectedBuild": "b810440a5c12f4aceea6e5347b4e5312360ef8ce8735e47bceebce7065ccd2f2",
+  "receivers": [
+    {
+      "target": {
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "userId": "edtBL96Yu3058QAT",
+        "isGM": false,
+        "lane": "player",
+        "optedIn": true
+      },
+      "traceId": "f1e44dc7-5547-4d1a-a8c0-9f8447c5f477",
+      "ack": {
+        "correlationId": "3caaa4ac-f1b7-41a4-a109-7547f57330b9",
+        "acknowledged": true,
+        "replayed": false,
+        "acknowledgedAt": "2026-10-03T03:45:04.792Z",
+        "clientUserId": "edtBL96Yu3058QAT",
+        "executingClientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "expectedSceneId": null,
+        "activeSceneId": "Nbj38PEdvw1zX1J9",
+        "scenePreloaded": false,
+        "activeSceneMatches": true,
+        "sceneReady": false,
+        "assets": [],
+        "viewport": {
+          "x": 475,
+          "y": 875,
+          "scale": 1
+        },
+        "applied": {
+          "preload": false,
+          "viewport": false
+        },
+        "warnings": [],
+        "incomplete": false,
+        "client": {
+          "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+          "userId": "edtBL96Yu3058QAT",
+          "lane": "player",
+          "isGM": false,
+          "foundryVersion": "14.368",
+          "systemId": "dnd5e",
+          "systemVersion": "6.0.3",
+          "moduleVersion": "0.1.0"
+        }
+      },
+      "native": [
+        {
+          "schemaVersion": 1,
+          "processRunId": "ea3feeb5-0c42-4b5b-85a8-2ed26e4db500",
+          "monotonicMs": 1982272.5853,
+          "traceId": "f1e44dc7-5547-4d1a-a8c0-9f8447c5f477",
+          "component": "foundry-native",
+          "stage": "native:clientReadinessGet:clock",
+          "elapsedMs": 0,
+          "durationMs": 0.30000001192092896,
+          "clockId": "3ab4fce0-658b-45cb-a6cf-ab17aee03bca",
+          "nativeStartMs": 976418.900000006,
+          "nativeEndMs": 976419.2000000179,
+          "instrumentationBuild": "b810440a5c12f4aceea6e5347b4e5312360ef8ce8735e47bceebce7065ccd2f2"
+        }
+      ],
+      "loadedBuildMatches": true
+    },
+    {
+      "target": {
+        "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+        "userId": "X7X4KK7zca5U2Ics",
+        "isGM": true,
+        "lane": "gm",
+        "optedIn": true
+      },
+      "traceId": "ee780af0-31bd-4930-b26b-01657ec9aee8",
+      "ack": {
+        "correlationId": "955cfba5-85aa-430d-a63c-851f72bd551a",
+        "acknowledged": true,
+        "replayed": false,
+        "acknowledgedAt": "2026-10-03T03:45:04.810Z",
+        "clientUserId": "X7X4KK7zca5U2Ics",
+        "executingClientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+        "expectedSceneId": null,
+        "activeSceneId": "Nbj38PEdvw1zX1J9",
+        "scenePreloaded": false,
+        "activeSceneMatches": true,
+        "sceneReady": false,
+        "assets": [],
+        "viewport": {
+          "x": 3625,
+          "y": 4875,
+          "scale": 1
+        },
+        "applied": {
+          "preload": false,
+          "viewport": false
+        },
+        "warnings": [],
+        "incomplete": false,
+        "client": {
+          "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+          "userId": "X7X4KK7zca5U2Ics",
+          "lane": "gm",
+          "isGM": true,
+          "foundryVersion": "14.368",
+          "systemId": "dnd5e",
+          "systemVersion": "6.0.3",
+          "moduleVersion": "0.1.0"
+        }
+      },
+      "native": [
+        {
+          "schemaVersion": 1,
+          "processRunId": "ea3feeb5-0c42-4b5b-85a8-2ed26e4db500",
+          "monotonicMs": 1982287.3749,
+          "traceId": "ee780af0-31bd-4930-b26b-01657ec9aee8",
+          "component": "foundry-native",
+          "stage": "native:clientReadinessGet:clock",
+          "elapsedMs": 0,
+          "durationMs": 1.300000011920929,
+          "clockId": "7960fe45-bc77-4305-8699-114568027fbd",
+          "nativeStartMs": 993681.5,
+          "nativeEndMs": 993682.8000000119,
+          "instrumentationBuild": "b810440a5c12f4aceea6e5347b4e5312360ef8ce8735e47bceebce7065ccd2f2"
+        }
+      ],
+      "loadedBuildMatches": true
+    }
+  ],
+  "gate": "PASS",
+  "scope": "Read-only exact receiver acknowledgement plus native loaded instrumentation marker. Readiness sceneReady reflects last preload bookkeeping, not canvas paint completion."
+}

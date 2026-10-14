@@ -1,0 +1,86 @@
+{
+  "samples": [
+    {
+      "command": "pause",
+      "sampleCount": 1,
+      "submitAt": "2026-10-02T15:45:31.577Z",
+      "toolExchangeCreatedAt": "2026-10-02T15:45:38.323422Z",
+      "receiptCreatedAt": "2026-10-02T15:45:38.338504Z",
+      "browserReadyReceiptObservedAt": "2026-10-02T15:45:40.740Z",
+      "submitToToolExchangeCreatedMs": 6746.422,
+      "submitToReceiptCreatedMs": 6761.504000000001,
+      "submitToBrowserReadyReceiptObservedUpperBoundMs": 9163.0,
+      "confirmedActionAtMs": 1790955938281,
+      "outcome": "confirmed"
+    },
+    {
+      "command": "door",
+      "sampleCount": 1,
+      "submitAt": "2026-10-02T15:46:20.569Z",
+      "toolExchangeCreatedAt": "2026-10-02T15:46:26.154274Z",
+      "receiptCreatedAt": "2026-10-02T15:46:26.175553Z",
+      "browserReadyReceiptObservedAt": "2026-10-02T15:46:34.092Z",
+      "submitToToolExchangeCreatedMs": 5585.274,
+      "submitToReceiptCreatedMs": 5606.553,
+      "submitToBrowserReadyReceiptObservedUpperBoundMs": 13523.0,
+      "confirmedActionAtMs": null,
+      "outcome": "confirmed"
+    },
+    {
+      "command": "movement",
+      "sampleCount": 1,
+      "submitAt": "2026-10-02T15:47:32.195Z",
+      "toolExchangeCreatedAt": "2026-10-02T15:47:41.947321Z",
+      "receiptCreatedAt": "2026-10-02T15:47:41.957954Z",
+      "browserReadyReceiptObservedAt": "2026-10-02T15:47:50.457Z",
+      "submitToToolExchangeCreatedMs": 9752.321,
+      "submitToReceiptCreatedMs": 9762.954,
+      "submitToBrowserReadyReceiptObservedUpperBoundMs": 18262.0,
+      "confirmedActionAtMs": null,
+      "outcome": "confirmed"
+    },
+    {
+      "command": "HP",
+      "sampleCount": 1,
+      "submitAt": "2026-10-02T15:48:34.032Z",
+      "toolExchangeCreatedAt": "2026-10-02T15:48:47.275065Z",
+      "receiptCreatedAt": "2026-10-02T15:48:47.284212Z",
+      "browserReadyReceiptObservedAt": "2026-10-02T15:48:50.633Z",
+      "submitToToolExchangeCreatedMs": 13243.065,
+      "submitToReceiptCreatedMs": 13252.212,
+      "submitToBrowserReadyReceiptObservedUpperBoundMs": 16601.0,
+      "confirmedActionAtMs": null,
+      "outcome": "confirmed"
+    },
+    {
+      "command": "roll",
+      "sampleCount": 1,
+      "submitAt": "2026-10-02T15:49:08.931Z",
+      "toolExchangeCreatedAt": "2026-10-02T15:49:15.042730Z",
+      "receiptCreatedAt": "2026-10-02T15:49:15.064555Z",
+      "browserReadyReceiptObservedAt": "2026-10-02T15:49:21.679Z",
+      "submitToToolExchangeCreatedMs": 6111.73,
+      "submitToReceiptCreatedMs": 6133.555,
+      "submitToBrowserReadyReceiptObservedUpperBoundMs": 12748.0,
+      "confirmedActionAtMs": null,
+      "outcome": "confirmed"
+    },
+    {
+      "command": "combat advancement",
+      "sampleCount": 1,
+      "submitAt": "2026-10-02T15:49:42.252Z",
+      "toolExchangeCreatedAt": "2026-10-02T15:49:52.919404Z",
+      "receiptCreatedAt": "2026-10-02T15:49:52.930899Z",
+      "browserReadyReceiptObservedAt": "2026-10-02T15:49:54.736Z",
+      "submitToToolExchangeCreatedMs": 10667.403999999999,
+      "submitToReceiptCreatedMs": 10678.899,
+      "submitToBrowserReadyReceiptObservedUpperBoundMs": 12484.0,
+      "confirmedActionAtMs": null,
+      "outcome": "confirmed"
+    }
+  ],
+  "modelRequestLimit": 1,
+  "submittedPrompts": 6,
+  "automaticEventsEnabled": false,
+  "limits": "Mixed commands one sample each; no distributions. Pair/receipt creation timestamps precede DB commit/delivery. Browser observations are upper bounds, not exact paint. No queue/context/model-to-tool/execution duration traces captured; no separate narration requested."
+}

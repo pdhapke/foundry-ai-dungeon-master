@@ -5,6 +5,8 @@ import type { RequestOptions } from "@modelcontextprotocol/sdk/shared/protocol.j
 import type { AiDmJsonValue } from "@foundry-ai-dungeon-master/shared";
 
 import type { FoundryLocalApiMcpClient, FoundryLocalApiMcpTool } from "../tool-catalog/index.js";
+import { currentTraceId, latencySpan, latencyEvent } from "../latency-trace.js";
+import { preparationErrorCode } from '../preparation/outcome.js';
 
 export interface FoundryLocalApiMcpOptions {
   baseUrl: string;
@@ -16,6 +18,14 @@ function json(value: unknown): AiDmJsonValue {
   return structuredClone(value) as AiDmJsonValue;
 }
 
+/** Only typed transport codes cross this boundary; private error prose never does. */
+export function selectedCapabilityError(structured: unknown): Error {
+  const value = structured && typeof structured === "object" ? structured as Record<string, unknown> : {};
+  const error = value["error"] && typeof value["error"] === "object" ? value["error"] as Record<string, unknown> : {};
+  const code = typeof error["code"] === "string" && ["NOT_CONNECTED", "TIMEOUT", "PERMISSION_DENIED", "INVALID_PAYLOAD", "UNSUPPORTED"].includes(error["code"]) ? error["code"] : "CAPABILITY_UNAVAILABLE";
+  return Object.assign(new Error("The selected Foundry capability returned an error."), { code, retryable: error["retryable"] === true });
+}
+
 /** Server-only authenticated MCP connection; credentials never cross the browser bridge. */
 export class StreamableFoundryLocalApiMcpClient implements FoundryLocalApiMcpClient {
   #client: Client | null = null;
@@ -24,7 +34,7 @@ export class StreamableFoundryLocalApiMcpClient implements FoundryLocalApiMcpCli
   constructor(private readonly options: FoundryLocalApiMcpOptions) {}
 
   async listTools(): Promise<readonly FoundryLocalApiMcpTool[]> {
-    const result = await (await this.#connected()).listTools();
+    const result = await latencySpan("mcp:catalog-list", async () => (await this.#connected()).listTools());
     return result.tools.map((tool) => ({
       name: tool.name,
       ...(tool.description ? { description: tool.description } : {}),
@@ -51,37 +61,42 @@ export class StreamableFoundryLocalApiMcpClient implements FoundryLocalApiMcpCli
     ) {
       throw new Error("MCP tool arguments must be an object.");
     }
-    const result = await (
-      await this.#connected()
-    ).callTool(
-      {
-        name: request.name,
-        arguments: request.arguments,
-        ...(request.idempotencyKey
-          ? { _meta: { "foundry-ai-dungeon-master/idempotency-key": request.idempotencyKey } }
-          : {}),
-      },
-      undefined,
-      options,
-    );
-    if (result.isError) throw new Error("The selected Foundry capability returned an error.");
-    if (result.structuredContent !== undefined) return json(result.structuredContent);
-    const content = Array.isArray(result.content) ? result.content : [];
-    const text = content
-      .filter(
-        (item): item is { type: "text"; text: string } =>
-          typeof item === "object" &&
-          item !== null &&
-          (item as { type?: unknown }).type === "text" &&
-          typeof (item as { text?: unknown }).text === "string",
-      )
-      .map((item) => item.text)
-      .join("\n");
-    if (!text) return null;
     try {
-      return json(JSON.parse(text));
-    } catch {
-      return text;
+      const result = await latencySpan("mcp:tool-roundtrip", async () => (
+        await this.#connected()
+      ).callTool(
+        {
+          name: request.name,
+          arguments: request.arguments as Record<string, AiDmJsonValue>,
+          _meta: { ...(request.idempotencyKey ? { "foundry-ai-dungeon-master/idempotency-key": request.idempotencyKey } : {}),
+            ...(currentTraceId() ? { "foundry-ai-dungeon-master/trace-id": currentTraceId() } : {}) },
+        },
+        undefined,
+        options,
+      ));
+      if (result.isError) throw selectedCapabilityError(result.structuredContent);
+      if (result.structuredContent !== undefined) return json(result.structuredContent);
+      const content = Array.isArray(result.content) ? result.content : [];
+      const text = content
+        .filter(
+          (item): item is { type: "text"; text: string } =>
+            typeof item === "object" &&
+            item !== null &&
+            (item as { type?: unknown }).type === "text" &&
+            typeof (item as { text?: unknown }).text === "string",
+        )
+        .map((item) => item.text)
+        .join("\n");
+      if (!text) return null;
+      try {
+        return json(JSON.parse(text));
+      } catch {
+        return text;
+      }
+    } catch(error) {
+      const tool=['foundry_get_world','foundry_get_user_by_id','foundry_get_user_status'].includes(request.name)?request.name:'tool';
+      latencyEvent(`mcp:${tool}:error:${preparationErrorCode(error).toLowerCase()}`,undefined,'error');
+      throw error;
     }
   }
 

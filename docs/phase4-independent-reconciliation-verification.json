@@ -1,0 +1,33 @@
+{
+  "capturedAt": "2026-10-02T22:03:13.211Z",
+  "entries": [
+    {
+      "flag": "attackLedger",
+      "pendingFalse": true,
+      "uncertainPreserved": true,
+      "inputPreserved": true,
+      "statePreserved": true,
+      "audit": true
+    },
+    {
+      "flag": "attackSequenceLedger",
+      "pendingFalse": true,
+      "uncertainPreserved": true,
+      "inputPreserved": true,
+      "statePreserved": true,
+      "audit": true
+    }
+  ],
+  "checks": {
+    "beforePinned": true,
+    "onlyApprovedFlagsChanged": true,
+    "freshEqualsRootReadback": true,
+    "actorHp": true,
+    "targetHp": true,
+    "resourceRemoved": true,
+    "pause": true,
+    "auto": true
+  },
+  "pass": true,
+  "scope": "Read-only; no duplicate workflow submitted, no mechanics executed, no in-memory fence clear"
+}

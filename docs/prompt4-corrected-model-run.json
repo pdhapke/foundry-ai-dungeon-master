@@ -1,0 +1,30 @@
+{
+  "preparedAt": "2026-10-03T04:01:56.368Z",
+  "approval": "User approved immediately after exact final proposal",
+  "prompt": "Read only. For Izzy, set effective_user_id to \"edtBL96Yu3058QAT\", token_id to \"5afpFlCHHnclifNw\", scene_id to \"Nbj38PEdvw1zX1J9\", and client_id to exactly \"80f7f865-6ebf-4a83-ad44-33ab0c0747f2\". Request foundry_read_token_perception with those four exact values; the word client is not part of the client_id value. Never substitute a GM client. Give a brief description using only the confirmed player observation. Keep unconfirmed threats, secret doors, trap outcomes and environmental causes unknown. If perception is unavailable or unsupported, say no player description is confirmed and stop. Do not move, roll, reveal, change pause/combat/doors, write records or mutate the world. Do not use private world context, retrieval or prior history as narration evidence.",
+  "provider": "current ChatGPT authorization",
+  "model": "gpt-5.6-sol",
+  "maxModelRequests": 15,
+  "providerRetries": 0,
+  "commandRetries": 0,
+  "extraNarratorCalls": 0,
+  "status": "completed-once-no-retry",
+  "aiTraceLineBaseline": 2456,
+  "mcpTraceLineBaseline": 6986,
+  "submissionObservedAt": "2026-10-03T04:02:57.076Z",
+  "traceId": "23dee24a-f780-4322-812e-f2e9a863055f",
+  "browserObservation": {
+    "observedAt": "2026-10-03T04:03:20.160Z",
+    "text": "Izzy sees only herself in deep darkness. No other creatures, notes, or visible features are confirmed.",
+    "surface": "Actual embedded ordinary GM SDK frame",
+    "limit": "Private GM response; ordinary GM context, not a strict player narrator"
+  },
+  "afterState": "prompt4-corrected-model-after.json",
+  "noRetry": true,
+  "preflightLeaseExpiry": "2026-10-03T04:11:28.611Z",
+  "modelRequestsObserved": 2,
+  "independentGate": "prompt4-corrected-model-independent-gate.md",
+  "restoration": "All12capturedstatecomparisons true; originalGMwindow closed",
+  "manualPlayerFeedback": "Requested, pending",
+  "narrationCoverage": "Token-only summary; actual player canvas shows illuminated corridor terrain; comprehensive surroundings unaccepted"
+}

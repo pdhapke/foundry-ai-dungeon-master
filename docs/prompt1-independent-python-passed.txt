@@ -1,0 +1,116 @@
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067917746.7502, "itemHash": "2f58b7d7725eac66c32ab446"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 9.616099996492267, "stage": "store-item-commit-complete", "atMs": 1791067917756.3232, "itemHash": "32012c4c32888ee2c4ba4331"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 20.42559999972582, "stage": "store-item-commit-complete", "atMs": 1791067917767.1306, "itemHash": "6a9722cdf589a2a068832c95"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 31.619599991245195, "stage": "store-item-commit-complete", "atMs": 1791067917778.325, "itemHash": "4a317b6972e2f18340504854"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 42.779100011102855, "stage": "store-item-commit-complete", "atMs": 1791067917789.4841, "itemHash": "57dbfc296665f072254d1534"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 52.44269999093376, "stage": "store-item-commit-complete", "atMs": 1791067917799.1455, "itemHash": "9462965f2002ffb6e5ebf84d"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 62.06490000477061, "stage": "store-item-commit-complete", "atMs": 1791067917808.768, "itemHash": "919299b8b8860441036a08b8"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 73.81380000151694, "stage": "store-item-commit-complete", "atMs": 1791067917820.519, "itemHash": "3f21b4ea2fbe67cd553dbcfa"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 85.66300000529736, "stage": "store-item-commit-complete", "atMs": 1791067917832.368, "itemHash": "f4fdd034b54297294baf2c69"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 97.65050001442432, "stage": "store-item-commit-complete", "atMs": 1791067917844.3552, "itemHash": "cfc5c391b5ba915c081c7d09"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 110.10920000262558, "stage": "store-item-commit-complete", "atMs": 1791067917856.815, "itemHash": "a26c6de8780e4e792e8ad6df"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 122.73570001707412, "stage": "store-item-commit-complete", "atMs": 1791067917869.441, "itemHash": "00bf463c9d57c76acacd039e"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 134.0304000186734, "stage": "store-item-commit-complete", "atMs": 1791067917880.733, "itemHash": "fcf995ce3ce15e435101e7a4"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 143.9879999961704, "stage": "store-item-commit-complete", "atMs": 1791067917890.6914, "itemHash": "b40ee9c64c8028e7786be4b1"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 153.91950000775978, "stage": "store-item-commit-complete", "atMs": 1791067917900.6216, "itemHash": "9d348a4243d4ca091c5a70d9"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 163.46100001828745, "stage": "store-item-commit-complete", "atMs": 1791067917910.1619, "itemHash": "8fdb99dc4306238c16aab4f1"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 174.81739999493584, "stage": "store-item-commit-complete", "atMs": 1791067917921.5212, "itemHash": "e241483af4c21cbfcc6e68ae"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 183.22040000930429, "stage": "store-item-commit-complete", "atMs": 1791067917929.9214, "itemHash": "e1902b31f7e09e008d96a92f"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 193.28170001972467, "stage": "store-item-commit-complete", "atMs": 1791067917939.9827, "itemHash": "111a11f0a4b2ceb2499abe39"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 202.60449999477714, "stage": "store-item-commit-complete", "atMs": 1791067917949.3054, "itemHash": "be69c5a839df95e18f4fbffc"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 210.2045000065118, "stage": "store-item-commit-complete", "atMs": 1791067917956.9053, "itemHash": "2c5045d5190611b3eb37d5d5"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 217.4265999929048, "stage": "store-item-commit-complete", "atMs": 1791067917964.1272, "itemHash": "921057339c51aef35e50f5a3"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 225.31639999942854, "stage": "store-item-commit-complete", "atMs": 1791067917972.0176, "itemHash": "5d1318a2390ba826af509c23"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 232.93950001243502, "stage": "store-item-commit-complete", "atMs": 1791067917979.6394, "itemHash": "7d66ca22e709db74ec441e02"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 243.24670000351034, "stage": "store-item-commit-complete", "atMs": 1791067917989.9502, "itemHash": "bb4291cf37c0a6d0e1cb5ef6"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 255.61970000853762, "stage": "store-item-commit-complete", "atMs": 1791067918002.3237, "itemHash": "6ac556a6269c4d3e0ade7570"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 269.2201000172645, "stage": "store-item-commit-complete", "atMs": 1791067918015.925, "itemHash": "9bec092e8d8a0d6a12f2aae2"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 284.40930001670495, "stage": "store-item-commit-complete", "atMs": 1791067918031.1135, "itemHash": "09b5f6d070427defa3985c9c"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 302.23709999700077, "stage": "store-item-commit-complete", "atMs": 1791067918048.9417, "itemHash": "e5bd7b57eaaa2b60dd0b5bcb"}
+{"type": "pause-timing", "traceId": "", "scopeId": "8897a38d-6d84-4e9c-bb9c-68da4e2f87f1", "elapsedMs": 328.0203000176698, "stage": "store-item-commit-complete", "atMs": 1791067918074.7256, "itemHash": "86edccdb0893cfbe11b5376e"}
+.Executing <Task finished name='Task-6' coro=<MemoryTests.test_full_history_and_isolation() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:31> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 1.065 seconds
+.Executing <Task finished name='Task-10' coro=<MemoryTests.asyncSetUp() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:15> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.102 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "4d38ed04-04bb-4e0b-a598-d45fba62735b", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067918983.6294, "itemHash": "2f58b7d7725eac66c32ab446"}
+..Executing <Task finished name='Task-19' coro=<MemoryTests.asyncSetUp() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:15> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.103 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "bea455a7-2407-4518-ad69-25bd05ccedf2", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067919904.299, "itemHash": "2f58b7d7725eac66c32ab446"}
+{"type": "pause-timing", "traceId": "", "scopeId": "bea455a7-2407-4518-ad69-25bd05ccedf2", "elapsedMs": 12.898399989353493, "stage": "store-item-commit-complete", "atMs": 1791067919917.147, "itemHash": "32012c4c32888ee2c4ba4331"}
+{"type": "pause-timing", "traceId": "", "scopeId": "bea455a7-2407-4518-ad69-25bd05ccedf2", "elapsedMs": 136.73309999285266, "stage": "store-item-commit-complete", "atMs": 1791067920040.983, "itemHash": "2f58b7d7725eac66c32ab446"}
+Executing <Task finished name='Task-20' coro=<MemoryTests.test_summary_cas_tail_correction_restart() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:41> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.206 seconds
+...EC:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\.venv\Lib\site-packages\fastapi\utils.py:44: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x000001EDF4C2DD50>
+  return set(re.findall("{(.*?)}", path))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{"type": "pause-timing", "traceId": "", "scopeId": "c237e4f3-ed9c-4706-9af3-743512b2582e", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067920826.7163, "itemHash": "4104677bea27914fadb6f4f6"}
+{"type": "pause-timing", "traceId": "", "scopeId": "c237e4f3-ed9c-4706-9af3-743512b2582e", "elapsedMs": 36.8159000063315, "stage": "store-item-commit-complete", "atMs": 1791067920863.4585, "itemHash": "7c29907731ed6edfee8ee028"}
+{"type": "pause-timing", "traceId": "", "scopeId": "ef5f2f54-c114-4546-ba48-02d0eab7e7bf", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067920904.7603, "itemHash": "77a5a6f35b04b71a2b6bd6bb"}
+{"type": "pause-timing", "traceId": "", "scopeId": "ef5f2f54-c114-4546-ba48-02d0eab7e7bf", "elapsedMs": 12.355499988188967, "stage": "store-item-commit-complete", "atMs": 1791067920917.063, "itemHash": "136e068de19f0a7809cd6d8a"}
+{"type": "pause-timing", "traceId": "", "scopeId": "e69d64cf-085b-4a45-8f80-a6bb2da9feca", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067921499.6875, "itemHash": "de7d1b721a1e0632b7cf04ed"}
+.....Executing <Task finished name='Task-92' coro=<StoreTests.test_durable_history_and_owner_boundary() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:99> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.207 seconds
+..Executing <Task finished name='Task-102' coro=<StoreTests.test_overlap_disconnect_and_process_error_release_guard() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:117> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.114 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "a9f25bb2-23cf-4c47-b984-2fda4532d34e", "elapsedMs": 0.06130000110715628, "stage": "python-response-start", "atMs": 1791067922141.128}
+{"type": "pause-timing", "traceId": "", "scopeId": "a9f25bb2-23cf-4c47-b984-2fda4532d34e", "elapsedMs": 3.0036999960429966, "stage": "context-prepared", "atMs": 1791067922144.0688, "durationMs": 2.9996999946888536}
+{"type": "pause-timing", "traceId": "", "scopeId": "a9f25bb2-23cf-4c47-b984-2fda4532d34e", "elapsedMs": 3.475600009551272, "stage": "first-stream-event", "atMs": 1791067922144.5413, "durationMs": 3.4718000097200274}
+{"type": "pause-timing", "traceId": "", "scopeId": "a9f25bb2-23cf-4c47-b984-2fda4532d34e", "elapsedMs": 5.204299988690764, "stage": "assistant-stream-finished", "atMs": 1791067922146.2693, "durationMs": 5.198700004257262}
+..Executing <Task finished name='Task-118' coro=<StoreTests.test_response_close_cancels_agents_run() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:78> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.111 seconds
+.Executing <Task pending name='Task-124' coro=<StoreTests.test_serialized_plan_request_uses_oauth_and_supported_fields() running at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:58> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\futures.py:384, Task.task_wakeup()] created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py:459> cb=[_run_until_complete_cb() at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py:181] created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.510 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "9a6f5c0e-b127-470e-8fa7-3b7ac4c5992b", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067922891.2659, "itemHash": "6f58061d71bd4eddcaaa66fe"}
+{"type": "pause-timing", "traceId": "", "scopeId": "9a6f5c0e-b127-470e-8fa7-3b7ac4c5992b", "elapsedMs": 1.9712000212166458, "stage": "store-item-commit-complete", "atMs": 1791067922893.1963, "itemHash": "416c4c8bcdc3963b3d9b09e5"}
+{"type": "pause-timing", "traceId": "", "scopeId": "9a6f5c0e-b127-470e-8fa7-3b7ac4c5992b", "elapsedMs": 3.7478000158444047, "stage": "store-item-commit-complete", "atMs": 1791067922894.972, "itemHash": "4419ae859eef7c8123d6e7fa"}
+{"type": "pause-timing", "traceId": "", "scopeId": "9a6f5c0e-b127-470e-8fa7-3b7ac4c5992b", "elapsedMs": 5.48190000699833, "stage": "store-item-commit-complete", "atMs": 1791067922896.7058, "itemHash": "40f2d8fd9435dbaa91d63006"}
+{"type": "pause-timing", "traceId": "", "scopeId": "9a6f5c0e-b127-470e-8fa7-3b7ac4c5992b", "elapsedMs": 7.130600017262623, "stage": "store-item-commit-complete", "atMs": 1791067922898.3555, "itemHash": "6a006d20564a963ab6511fa3"}
+{"type": "pause-timing", "traceId": "", "scopeId": "84bab151-2e2d-4fbf-a38b-dfd193a9228b", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067922962.2786, "itemHash": "a19ab09e7d83e6c8308ae5c9"}
+{"type": "pause-timing", "traceId": "", "scopeId": "62b954e7-f662-49f1-9135-5d59edccb2d2", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067923049.5417, "itemHash": "ee6ebec9f091ee8849bafa24"}
+{"type": "pause-timing", "traceId": "", "scopeId": "66d1f2bb-464e-4388-80e5-18dc9e36c6d1", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067923133.365, "itemHash": "e751d203db86579f06aaf71e"}
+.............Executing <Task finished name='Task-162' coro=<PlayerPerceptionTests.test_typed_player_read_preserves_explicit_unavailable_and_never_queries_gm_fallback() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_player_perception.py:9> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.117 seconds
+.
+======================================================================
+ERROR: test_typed_and_custom_action_share_authorized_snapshot (test_app.AdapterTests.test_typed_and_custom_action_share_authorized_snapshot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py", line 219, in test_typed_and_custom_action_share_authorized_snapshot
+    with patch("app.Runner.run_streamed", runner), patch("app.build_agent", return_value=SimpleNamespace(tools=[])), patch("app.stream_agent_response", fake_events), patch("app.read_foundry", read):
+                                                                                         ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'SimpleNamespace' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\shutil.py", line 625, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\peter\\AppData\\Local\\Temp\\tmp6io6tnkc\\test.sqlite'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py", line 202, in test_typed_and_custom_action_share_authorized_snapshot
+    with tempfile.TemporaryDirectory() as directory:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "C:\Users\peter\scoop\apps\python\current\Lib\shutil.py", line 629, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 905, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\peter\\AppData\\Local\\Temp\\tmp6io6tnkc\\test.sqlite'
+
+----------------------------------------------------------------------
+Ran 32 tests in 5.919s
+
+FAILED (errors=1)

@@ -1,0 +1,10 @@
+{
+  "cachePath": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17909-343d6890183d52b33ec92b3fdb2dcc1ed8de0de4",
+  "equivalent": false,
+  "cacheLength": 33105,
+  "bundleLength": 33175,
+  "firstDifference": 420,
+  "cacheExcerpt": "ibe the current game situation using the supplied context.\", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, resolveAction: () => { void this.#instance?.trigger({ prompt: \"Resolve the selected player action using curr",
+  "bundleExcerpt": "ibe the current game situation using the supplied context.\", context: currentGameContext() }).catch((error) => this.#instance?.fail(error)); }, resolveAction: () => { void this.#instance?.trigger({ prompt: \"Resolve the selected player action using cu",
+  "normalization": "AST: remove __name wrappers/static name blocks; normalize bundler numeric identifier suffix and class alias; printer whitespace"
+}

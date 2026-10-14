@@ -1,0 +1,13 @@
+# Phase 3 independent ordering inspection — provisional
+
+Read REPOSITORY.md; user manual runtimeownership remains overriding. Fresh MCP dirty/untracked inventory saved phase3-start-mcp-inventory.txt; significant existing dirty work preserved. Some Phase3 worker edits are already current source, so source findings below are preliminary, not loaded runtime proof.
+
+AI ChatKit turn manager currently owns a per-world FIFO queue through responsecompletion, with durable queued/running/interrupted replay statuses. Core/attackservices persist dispatchclaims and receipts independently; reviewed request executor must remain tied to oldrun authority.
+
+MCP server reviewed pause/core calls share enqueueRoutineMutation keyed by authenticatedbridge instance; current attack endpoint source also uses this lane and shares uncertain fence. Bridge-instance key conservatively serializes worlds; world/user/connection checks occur per operation before/afterdispatch. Native core has pergame WeakMaptail; native attacks use separate moduleglobaltail, and native sessionApply/genericcombat/HP endpoints have independent dispatch. Thus source-level serverserialization is the strongest reviewed overlap barrier presently; claim cannot extend to arbitrarynativeAPI/user interactions.
+
+Required shared ordering contract before concurrency: restrict participating paths to authenticatedreviewed pause/core/attack/damage/batch operations; shared FIFO should hold mechanicsexecution/readback/uncertain fencing and durable receipt boundary. Specify batch stepordering/non-atomic semantics and prohibit nestedacquisition when helpers call oneanother. Native separatequeues must be reviewed against bypassedpaths; genericMCPtools may not smuggle writes after narrationboundary. Crossfamily uncertain result must fence subsequent conflictingactions. Reconnect/clientgeneration/worldswitch must not reset oldrun mutationgrant or redispatch uncertain actions.
+
+Required narration boundary: authoritativeNode permanentlyrevokes runmutations beforeworldslotrelease; all outstandingtools drained or rejected; discovery tool_execute and native/campaign/filewrites fenced; any oldrun attempt cannot reacquire grant. Only complete confirmed action satisfaction may cross; compounds/retrieval/choices/partialfailures continue/stop honestly. Persist receipt/state provenance so narration makes historical claims, not assumed currentstate. Mutationlane release separate from narration final status and cancellation/replaydurability.
+
+Gate pendingworkerimplementation and independenttests. No productionedits, modelrequests, fixturemutations, refreshes, services/lifecycle actions by validator. Runtime still historical and must not be conflated with laterbuilt source.

@@ -1,0 +1,370 @@
+{
+  "capturedAt": "2026-10-03T03:45:02.963Z",
+  "inferenceRequests": 0,
+  "services": {
+    "ai": {
+      "status": "ready",
+      "manifestDigest": "667f8f02e40ed0943fce1385af26aa9ee441bd040928372297606b7e5f31d18a",
+      "startedAt": "2026-10-03T03:12:19.926Z",
+      "artifacts": [
+        {
+          "path": "server/dist/latency-trace.js",
+          "startupHash": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4",
+          "diskHash": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4"
+        },
+        {
+          "path": "server/dist/context/world-campaign.js",
+          "startupHash": "82a8b62e5e07ddd584125ada9dc6971fad7e3552c0514b7234fcfbb85bcdc20e",
+          "diskHash": "82a8b62e5e07ddd584125ada9dc6971fad7e3552c0514b7234fcfbb85bcdc20e"
+        },
+        {
+          "path": "server/dist/index.js",
+          "startupHash": "e2e68e5c74641f6ec1fa6dd1d98c72a27ded4a0807b9ed3b116fb2fa7ca15b5c",
+          "diskHash": "e2e68e5c74641f6ec1fa6dd1d98c72a27ded4a0807b9ed3b116fb2fa7ca15b5c"
+        },
+        {
+          "path": "server/dist/app.js",
+          "startupHash": "5c4eab30a36dd8dbb8c2dd7343b5a390ebeb2fb47ee72d487bd6777474ff5c61",
+          "diskHash": "5c4eab30a36dd8dbb8c2dd7343b5a390ebeb2fb47ee72d487bd6777474ff5c61"
+        },
+        {
+          "path": "server/dist/chatkit/gateway.js",
+          "startupHash": "c56be79d4c81ca4638b6a0d9faa1ae119c6c8e78ca4a21c1cae7e6ec214deb9a",
+          "diskHash": "c56be79d4c81ca4638b6a0d9faa1ae119c6c8e78ca4a21c1cae7e6ec214deb9a"
+        },
+        {
+          "path": "server/dist/chatkit/read-tools.js",
+          "startupHash": "a70cc9e44a3121d3ddf7f4c09174668783c8d813f2b009ef1884f8ad2c70ae33",
+          "diskHash": "a70cc9e44a3121d3ddf7f4c09174668783c8d813f2b009ef1884f8ad2c70ae33"
+        },
+        {
+          "path": "server/dist/chatkit/player-perception.js",
+          "startupHash": "b003825cfa28f820e5bee64e954711725d8e5ce6b1ae8747efa924f7efd210d3",
+          "diskHash": "b003825cfa28f820e5bee64e954711725d8e5ce6b1ae8747efa924f7efd210d3"
+        },
+        {
+          "path": "server/dist/chatkit/player-readiness.js",
+          "startupHash": "082bc1cd63623e35b88ec44f525be3c9f5158a3292e065ef72018a8529c841f3",
+          "diskHash": "082bc1cd63623e35b88ec44f525be3c9f5158a3292e065ef72018a8529c841f3"
+        },
+        {
+          "path": "server/dist/integrations/foundry-local-api-mcp.js",
+          "startupHash": "97ba6c3cab7c51d03c6af8328a32d3a4a87c85975e09759ddcf4b5eddb9a6242",
+          "diskHash": "97ba6c3cab7c51d03c6af8328a32d3a4a87c85975e09759ddcf4b5eddb9a6242"
+        },
+        {
+          "path": "server/dist/tool-catalog/metadata.js",
+          "startupHash": "e6c0e57681ac102aa894726a3aabb50a81d4d105b3e22d72c7e56a0565a128c0",
+          "diskHash": "e6c0e57681ac102aa894726a3aabb50a81d4d105b3e22d72c7e56a0565a128c0"
+        },
+        {
+          "path": "server/dist/chatkit/catalog-tools.js",
+          "startupHash": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+          "diskHash": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918"
+        },
+        {
+          "path": "server/dist/chatkit/pause-actions.js",
+          "startupHash": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+          "diskHash": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22"
+        },
+        {
+          "path": "server/dist/chatkit/core-actions.js",
+          "startupHash": "6e9b23d025e0609788e0f801f7f26a5019c090e3cb33b9168e0daff63c8d6730",
+          "diskHash": "6e9b23d025e0609788e0f801f7f26a5019c090e3cb33b9168e0daff63c8d6730"
+        },
+        {
+          "path": "server/dist/chatkit/attack-actions.js",
+          "startupHash": "835173fd3782b3af9100ef3cea2ba873ad6136ae22a7a2c051830442c57977f0",
+          "diskHash": "835173fd3782b3af9100ef3cea2ba873ad6136ae22a7a2c051830442c57977f0"
+        },
+        {
+          "path": "server/dist/chatkit/attack-sequences.js",
+          "startupHash": "4d7eebe31b67667af1792068701195f1d05563762281454b8161ac685f40cf8e",
+          "diskHash": "4d7eebe31b67667af1792068701195f1d05563762281454b8161ac685f40cf8e"
+        },
+        {
+          "path": "server/dist/chatkit/session-actions.js",
+          "startupHash": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614",
+          "diskHash": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614"
+        },
+        {
+          "path": "server/dist/chatkit/pause-request.js",
+          "startupHash": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+          "diskHash": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383"
+        },
+        {
+          "path": "server/dist/chatkit/routine-completion.js",
+          "startupHash": "027f7ce0304f2625fc30934af49b65ff2390d9a9e163657ab00bacab529eee0a",
+          "diskHash": "027f7ce0304f2625fc30934af49b65ff2390d9a9e163657ab00bacab529eee0a"
+        },
+        {
+          "path": "server/dist/chatkit/narration-request.js",
+          "startupHash": "721fbf7029e94fe95944eaeb6860ee59e0764e5a4864c0d647e80df1b9b49f33",
+          "diskHash": "721fbf7029e94fe95944eaeb6860ee59e0764e5a4864c0d647e80df1b9b49f33"
+        },
+        {
+          "path": "server/dist/chatkit/tool-audit.js",
+          "startupHash": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+          "diskHash": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712"
+        },
+        {
+          "path": "server/dist/chatkit/world-request.js",
+          "startupHash": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+          "diskHash": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294"
+        },
+        {
+          "path": "server/dist/chatkit/world-document-actions.js",
+          "startupHash": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+          "diskHash": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20"
+        },
+        {
+          "path": "server/dist/chatkit/world-tool-policy.js",
+          "startupHash": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+          "diskHash": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf"
+        },
+        {
+          "path": "server/dist/chatkit/world-file-actions.js",
+          "startupHash": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+          "diskHash": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58"
+        },
+        {
+          "path": "server/dist/chatkit/world-files.js",
+          "startupHash": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+          "diskHash": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00"
+        },
+        {
+          "path": "server/dist/chatkit/native-actions.js",
+          "startupHash": "01fcfb8bc1e8468fdcdaafaaa56420871cf0e24bd649ed12f5257a0a4e290cc2",
+          "diskHash": "01fcfb8bc1e8468fdcdaafaaa56420871cf0e24bd649ed12f5257a0a4e290cc2"
+        },
+        {
+          "path": "server/dist/chatkit/campaign-actions.js",
+          "startupHash": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+          "diskHash": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0"
+        },
+        {
+          "path": "server/dist/chatkit/turns.js",
+          "startupHash": "cdd6a3fb18e7d79e94d45f50dc5940adb04bafaa23631e1ffd58b43772906e63",
+          "diskHash": "cdd6a3fb18e7d79e94d45f50dc5940adb04bafaa23631e1ffd58b43772906e63"
+        },
+        {
+          "path": "server/dist/chatkit/bounded-call.js",
+          "startupHash": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+          "diskHash": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3"
+        },
+        {
+          "path": "server/dist/tool-catalog/runtime.js",
+          "startupHash": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+          "diskHash": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe"
+        },
+        {
+          "path": "server/dist/tool-catalog/catalog.js",
+          "startupHash": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+          "diskHash": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e"
+        },
+        {
+          "path": "server/dist/tool-catalog/canonical.js",
+          "startupHash": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+          "diskHash": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73"
+        },
+        {
+          "path": "server/dist/tool-catalog/foundry-local-api-adapter.js",
+          "startupHash": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+          "diskHash": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051"
+        },
+        {
+          "path": "shared/dist/ai-dungeon-master.js",
+          "startupHash": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+          "diskHash": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f"
+        },
+        {
+          "path": "shared/dist/chatkit.js",
+          "startupHash": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+          "diskHash": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299"
+        },
+        {
+          "path": "shared/dist/player-observation.js",
+          "startupHash": "bc5d6b5ee9884528b51b4c0851a86c598f6da1b1465fd635ed074d4d14ff3d27",
+          "diskHash": "bc5d6b5ee9884528b51b4c0851a86c598f6da1b1465fd635ed074d4d14ff3d27"
+        },
+        {
+          "path": "chatkit-server/app.py",
+          "startupHash": "a2296acb034408e5374a52f5b6d904bdbd64abaf5337a02d4d052a9c8aedad33",
+          "diskHash": "a2296acb034408e5374a52f5b6d904bdbd64abaf5337a02d4d052a9c8aedad33"
+        },
+        {
+          "path": "chatkit-server/player_observation.py",
+          "startupHash": "ac1ab034a61a351112ea65d6665af05ec040f00c88885f258061f6484cafaa73",
+          "diskHash": "ac1ab034a61a351112ea65d6665af05ec040f00c88885f258061f6484cafaa73"
+        },
+        {
+          "path": "chatkit-server/dm_prompt.py",
+          "startupHash": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2",
+          "diskHash": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2"
+        },
+        {
+          "path": "module/dist/index.js",
+          "startupHash": "b1900d8f5d35fff0884c338fbcb17e479556c4535440ce322e322941465a1515",
+          "diskHash": "b1900d8f5d35fff0884c338fbcb17e479556c4535440ce322e322941465a1515"
+        }
+      ]
+    },
+    "mcp": {
+      "status": "ok",
+      "manifestDigest": "a38d56ec356a7dd87b62421e9eee6b69777d3fb3b4adc2e6b9de61236626ff5f",
+      "startedAt": "2026-10-03T03:12:12.983Z",
+      "artifacts": [
+        {
+          "path": "server/dist/index.js",
+          "startupHash": "9dae0d12ba8f139fe64d29b25593cc7fc35c27e60dad83069c5ee186e789a710",
+          "diskHash": "9dae0d12ba8f139fe64d29b25593cc7fc35c27e60dad83069c5ee186e789a710"
+        },
+        {
+          "path": "server/dist/app.js",
+          "startupHash": "395c60c7fe13a3a82c47f532a73199874cc75d2b302699fddd5f6a9ddec16aed",
+          "diskHash": "395c60c7fe13a3a82c47f532a73199874cc75d2b302699fddd5f6a9ddec16aed"
+        },
+        {
+          "path": "server/dist/latency-trace.js",
+          "startupHash": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4",
+          "diskHash": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4"
+        },
+        {
+          "path": "server/dist/endpoints/registry.js",
+          "startupHash": "3a3f070bbfc18c39517e3639370668744f3e4c49a29d4e793a8e5507353154cc",
+          "diskHash": "3a3f070bbfc18c39517e3639370668744f3e4c49a29d4e793a8e5507353154cc"
+        },
+        {
+          "path": "server/dist/mcp/http-tool-client.js",
+          "startupHash": "eb413d74512691807019fd55ee52a2f0a19944b990b1b2468a7e9e980a4ca1e0",
+          "diskHash": "eb413d74512691807019fd55ee52a2f0a19944b990b1b2468a7e9e980a4ca1e0"
+        },
+        {
+          "path": "server/dist/endpoints/attack-actions.js",
+          "startupHash": "94d5d9242663f58bc37651275a745450ce4455e9a0fab42605c7e1c0b3657997",
+          "diskHash": "94d5d9242663f58bc37651275a745450ce4455e9a0fab42605c7e1c0b3657997"
+        },
+        {
+          "path": "server/dist/endpoints/scene-render.js",
+          "startupHash": "e03869fd84a03d85b07ed3b92e14fc5364d836360f4a37add343d6f119085f52",
+          "diskHash": "e03869fd84a03d85b07ed3b92e14fc5364d836360f4a37add343d6f119085f52"
+        },
+        {
+          "path": "server/dist/endpoints/requirement-output-schemas.js",
+          "startupHash": "7a204d15a5e79a16c579b7330b3cba25c9308f101bb3fd6085fec2b7ad80a9b0",
+          "diskHash": "7a204d15a5e79a16c579b7330b3cba25c9308f101bb3fd6085fec2b7ad80a9b0"
+        },
+        {
+          "path": "server/dist/bridge/foundry-client.js",
+          "startupHash": "9673c13bc8c5c12e629268ef83d597c0224fe58005c87bbe69d1bd5ccbaee3a5",
+          "diskHash": "9673c13bc8c5c12e629268ef83d597c0224fe58005c87bbe69d1bd5ccbaee3a5"
+        },
+        {
+          "path": "server/dist/endpoints/routine-mutation-lane.js",
+          "startupHash": "1eb7b3bdaf4a5513f929787b5f73da09b06b261f1daf3ceaaa3bd10ce4dc8067",
+          "diskHash": "1eb7b3bdaf4a5513f929787b5f73da09b06b261f1daf3ceaaa3bd10ce4dc8067"
+        },
+        {
+          "path": "shared/dist/protocol.js",
+          "startupHash": "b440adc961681f5e853e95bbd843f14fb156929965818a6000f537bbd8712eac",
+          "diskHash": "b440adc961681f5e853e95bbd843f14fb156929965818a6000f537bbd8712eac"
+        },
+        {
+          "path": "shared/dist/attack-actions.js",
+          "startupHash": "8279d3c04dbae5f13476f4409e98ece66509a6069c419adecf2196ecd6cb63c5",
+          "diskHash": "8279d3c04dbae5f13476f4409e98ece66509a6069c419adecf2196ecd6cb63c5"
+        },
+        {
+          "path": "shared/dist/scene-render.js",
+          "startupHash": "cf081612ca5087e26c10ecc13dec908718f8cde8ec5533a2ff719bb6f839b109",
+          "diskHash": "cf081612ca5087e26c10ecc13dec908718f8cde8ec5533a2ff719bb6f839b109"
+        },
+        {
+          "path": "module/dist/index.js",
+          "startupHash": "6fe2430703d95a581dd82be57317249bcc39541283768eb08d22fcef58464fd0",
+          "diskHash": "ac4e57acc53addfaef4984400c39f122d3d4a5102ab71354f85f5850abb0e0fa"
+        },
+        {
+          "path": "module/src/latency-build.ts",
+          "startupHash": "f8f395bb342711a947b94c444f2267174d9e423c6a40bfbfee2b28ee26ed98b3",
+          "diskHash": "df99d375c0d1af8c1c835a796c1aa52bb22183467b4cea26f66298e580fecca1"
+        }
+      ]
+    },
+    "python": {
+      "status": "ready",
+      "codeDigest": "a2296acb034408e5374a52f5b6d904bdbd64abaf5337a02d4d052a9c8aedad33",
+      "playerObservationDigest": "ac1ab034a61a351112ea65d6665af05ec040f00c88885f258061f6484cafaa73",
+      "diskPlayerObservationDigest": "ac1ab034a61a351112ea65d6665af05ec040f00c88885f258061f6484cafaa73",
+      "diskCodeDigest": "a2296acb034408e5374a52f5b6d904bdbd64abaf5337a02d4d052a9c8aedad33",
+      "promptVersion": "solo-dm-v8-core-actions",
+      "maxModelTurns": 15
+    }
+  },
+  "clients": [
+    {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "userId": "X7X4KK7zca5U2Ics",
+      "lane": "gm",
+      "isGM": true,
+      "optedIn": true,
+      "connectedAt": 1790998117124
+    },
+    {
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "userId": "edtBL96Yu3058QAT",
+      "lane": "player",
+      "isGM": false,
+      "optedIn": true,
+      "connectedAt": 1790999101921
+    }
+  ],
+  "readiness": [
+    {
+      "target": {
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "userId": "edtBL96Yu3058QAT",
+        "lane": "player",
+        "isGM": false,
+        "optedIn": true,
+        "connectedAt": 1790999101921
+      },
+      "result": {
+        "correlationId": "624d5d22-fcec-451f-a8d5-10c79f4be670",
+        "acknowledged": true,
+        "replayed": false,
+        "acknowledgedAt": "2026-10-03T03:45:03.784Z",
+        "clientUserId": "edtBL96Yu3058QAT",
+        "executingClientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "expectedSceneId": null,
+        "activeSceneId": "Nbj38PEdvw1zX1J9",
+        "scenePreloaded": false,
+        "activeSceneMatches": true,
+        "sceneReady": false,
+        "assets": [],
+        "viewport": {
+          "x": 475,
+          "y": 875,
+          "scale": 1
+        },
+        "applied": {
+          "preload": false,
+          "viewport": false
+        },
+        "warnings": [],
+        "incomplete": false,
+        "client": {
+          "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+          "userId": "edtBL96Yu3058QAT",
+          "lane": "player",
+          "isGM": false,
+          "foundryVersion": "14.368",
+          "systemId": "dnd5e",
+          "systemVersion": "6.0.3",
+          "moduleVersion": "0.1.0"
+        }
+      }
+    }
+  ],
+  "scope": "Fresh read-only identity check. Startup native hashes are historical, receiver markers are current. No fixture mutations."
+}

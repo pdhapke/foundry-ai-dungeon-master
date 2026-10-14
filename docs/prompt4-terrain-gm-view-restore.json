@@ -1,0 +1,35 @@
+{
+  "correlationId": "dfc55573-7302-48f9-a72a-4d808f2db28d",
+  "acknowledged": true,
+  "replayed": false,
+  "acknowledgedAt": "2026-10-03T22:09:10.923Z",
+  "clientUserId": "X7X4KK7zca5U2Ics",
+  "executingClientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+  "expectedSceneId": "Nbj38PEdvw1zX1J9",
+  "activeSceneId": "Nbj38PEdvw1zX1J9",
+  "scenePreloaded": false,
+  "activeSceneMatches": true,
+  "sceneReady": false,
+  "assets": [],
+  "viewport": {
+    "x": 1226.713310827855,
+    "y": 941.190654131177,
+    "scale": 1
+  },
+  "applied": {
+    "preload": false,
+    "viewport": true
+  },
+  "warnings": [],
+  "incomplete": false,
+  "client": {
+    "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+    "userId": "X7X4KK7zca5U2Ics",
+    "lane": "gm",
+    "isGM": true,
+    "foundryVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.3",
+    "moduleVersion": "0.1.0"
+  }
+}

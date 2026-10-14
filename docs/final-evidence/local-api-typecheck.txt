@@ -1,0 +1,16 @@
+
+> typecheck
+> npm run typecheck --workspaces --if-present
+
+
+> @foundry-local-api/shared@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @foundry-local-api/server@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @foundry-local-api/module@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+

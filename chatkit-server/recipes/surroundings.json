@@ -1,0 +1,14 @@
+{
+  "id":"surroundings","version":"prompt1-recipes-v1","schema_version":1,"status":"partly-supported",
+  "systems":"Native vision/perception adapter for supported Foundry build; rules-specific checks require native system support.",
+  "preconditions":["Exact intended authenticated connected opted-in non-GM player client","Owned intended token","Fresh scene/source/permission/client revisions","Authorized facts with narrationAllowed provenance"],
+  "minimum_reads":["foundry_read_token_perception(scene_id,token_id,effective_user_id,client_id)","Bounded attributed campaign facts when relevant"],
+  "steps":["Keep native walls/lighting/vision updates immediate without model invocation.","Bind perception to intended player, never unrestricted GM canvas. Missing/disconnected evidence returns limitation, not description.","Describe only permitted current observations and established revealed facts; compare revisions with last observation.","Assess separately character noticing and NPC noticing: sight/light/cover, hearing/noise, stealth, passive/active perception and supported senses. Unknown is not negative evidence.","Use only established traps and actual movement path. Separate noticing, activation and effects. Never invent trap or roll on every move.","A warranted check needs trigger event, actors, state revision, DC/opposition and player-roll preference; persist resolved outcome to avoid duplicate checks. Changed circumstances may warrant new checks.","No supported authoritative interruption semantics means stop with limitation; never teleport/rollback completed movement to invent a trap interrupt."],
+  "trigger_candidates":["movement complete","door/light changes","scene changes","combat transitions"],
+  "event_contract":"Coalesce related revisions, resync missed events, deduplicate by trigger/actor/revision, prevent recursive DM-originated triggers. Automatic activation remains disabled absent approval.",
+  "evidence":"Native visibility and structured player observation separately; narration requires grounded reveal evidence. Threat/being-noticed/trap unknown stays unknown.",
+  "acceptance_boundary":"Prior acceptance only the deterministic sentence A section of corridor floor is visible here. in one localized Sargauth observation. Current resume gate has only GM connected; player renewal deferred. No broad narration secrecy/detection/trap acceptance.",
+  "round_trips":"On-demand perception read plus warranted native checks; no model per frame or refresh.",
+  "gaps":["No general NPC detection/trap evaluator or durable event outcome engine","Fresh player readiness required","No current supported complete-path trap interruption guarantee"],
+  "invalidation":["scene/token/source/native clock revisions","player ownership/permission/client reconnect","missed movement/door/light events"]
+}

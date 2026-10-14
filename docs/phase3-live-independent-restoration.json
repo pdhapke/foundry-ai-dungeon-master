@@ -1,0 +1,63 @@
+{
+  "capturedAt": "2026-10-02T20:00:04.063Z",
+  "before": {
+    "paused": {
+      "paused": true
+    },
+    "actorHp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0,
+      "tempmax": 0,
+      "formula": ""
+    },
+    "door": 0,
+    "token": {
+      "id": "gHxvFbZTMoim2tYp",
+      "x": 200,
+      "y": 200,
+      "elevation": 0
+    },
+    "combat": {
+      "id": "F72hDz6efnhuYqKb",
+      "active": false,
+      "round": 1,
+      "turn": 0
+    },
+    "activeScenes": [
+      "Nbj38PEdvw1zX1J9"
+    ],
+    "activeCombats": []
+  },
+  "after": {
+    "paused": {
+      "paused": true
+    },
+    "actorHp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0,
+      "tempmax": 0,
+      "formula": ""
+    },
+    "door": 0,
+    "token": {
+      "id": "gHxvFbZTMoim2tYp",
+      "x": 200,
+      "y": 200,
+      "elevation": 0
+    },
+    "combat": {
+      "id": "F72hDz6efnhuYqKb",
+      "active": false,
+      "round": 1,
+      "turn": 0
+    },
+    "activeScenes": [
+      "Nbj38PEdvw1zX1J9"
+    ],
+    "activeCombats": []
+  },
+  "matches": true,
+  "diskCap": null
+}

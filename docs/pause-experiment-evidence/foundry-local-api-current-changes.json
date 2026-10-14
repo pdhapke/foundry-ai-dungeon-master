@@ -1,0 +1,18 @@
+[
+  {
+    "path": "module/src/commands/game-state.ts",
+    "state": "changed"
+  },
+  {
+    "path": "server/src/endpoints/game-state.ts",
+    "state": "changed"
+  },
+  {
+    "path": "shared/src/game-state.ts",
+    "state": "changed"
+  },
+  {
+    "path": "shared/src/index.ts",
+    "state": "changed"
+  }
+]

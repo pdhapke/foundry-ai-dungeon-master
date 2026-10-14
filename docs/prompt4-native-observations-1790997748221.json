@@ -1,0 +1,272 @@
+{
+  "worldId": "izzy-campaign",
+  "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "userId": "edtBL96Yu3058QAT",
+  "observations": [
+    {
+      "capturedAt": "2026-10-03T03:22:28.151Z",
+      "observation": {
+        "version": 1,
+        "id": "24fa1a85-1266-4ab8-b8a7-7565cc96f9ad",
+        "worldId": "izzy-campaign",
+        "sceneId": "cbyniU1p5punoUkD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "yG5NYzuzG5YgBslE",
+        "actorId": "cACt3U8e0cCanb1b",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T03:22:28.151Z",
+        "stateRevision": "dfda8c748060e0d3fa98f3c4c6c85bb83e791568b1039825ca40d097dc8fb260",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "sceneId": "cbyniU1p5punoUkD",
+      "effectiveUserId": "edtBL96Yu3058QAT",
+      "tokenId": "yG5NYzuzG5YgBslE",
+      "status": "incomplete",
+      "issues": [
+        {
+          "code": "QUERY_FAILED",
+          "message": "Visibility failure could not be attributed to a player-visible wall; range, fog or lighting may be responsible.",
+          "retryable": true,
+          "subjectId": "beyond-door"
+        }
+      ],
+      "context": {
+        "selectedUser": true,
+        "selectedToken": true,
+        "tokenOwned": true,
+        "sceneLoaded": true
+      },
+      "visible": {
+        "tokens": [
+          "yG5NYzuzG5YgBslE"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "redaction": {
+        "occludedEntities": true,
+        "hiddenRegions": true,
+        "barrierDocumentIds": true,
+        "barrierCoordinates": true,
+        "secretDoors": true,
+        "exitDestinations": true
+      },
+      "queryPoints": [
+        {
+          "id": "near-primary",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "beyond-door",
+          "visible": false,
+          "regions": [],
+          "blockerAttribution": "environment-ambiguous",
+          "blockerKeys": []
+        }
+      ],
+      "effectiveSources": {
+        "vision": 1,
+        "light": 1
+      },
+      "isolation": {
+        "status": "complete",
+        "method": "foundry-v14-detection-modes",
+        "detectionModes": 2,
+        "unrelatedVisionSourcesIgnored": 1,
+        "visionProvidingLightsIgnored": 0
+      },
+      "environment": {
+        "fog": "complete",
+        "lighting": "complete",
+        "darkness": "complete",
+        "vision": "complete",
+        "regions": "complete",
+        "fogExplorationEnabled": true,
+        "tokenVisionEnabled": true,
+        "globalLight": true,
+        "darknessLevel": 0
+      },
+      "regions": [],
+      "visibleBarriers": [],
+      "coveragePolygons": [
+        {
+          "source": "selected-token",
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 600,
+              "y": 0
+            },
+            {
+              "x": 600,
+              "y": 800
+            },
+            {
+              "x": 0,
+              "y": 800
+            }
+          ]
+        }
+      ],
+      "fogRevision": "feade8e8eec08d8603df0db1f7cb270b9d6bedb412f4298427268bd86fd69aef",
+      "persistence": {
+        "beforeRevision": "dfda8c748060e0d3fa98f3c4c6c85bb83e791568b1039825ca40d097dc8fb260",
+        "afterRevision": "dfda8c748060e0d3fa98f3c4c6c85bb83e791568b1039825ca40d097dc8fb260",
+        "unchanged": true
+      },
+      "bounds": {
+        "truncated": false,
+        "visiblePerKind": 500,
+        "regions": 250,
+        "barriers": 500,
+        "coverageSources": 100,
+        "coveragePointsPerSource": 512,
+        "issues": 50
+      }
+    },
+    {
+      "capturedAt": "2026-10-03T03:22:28.183Z",
+      "observation": {
+        "version": 1,
+        "id": "36d81852-6cd7-40e1-be7d-27dc98139d38",
+        "worldId": "izzy-campaign",
+        "sceneId": "cbyniU1p5punoUkD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "294DANfBmpTBeRHG",
+        "actorId": "cACt3U8e0cCanb1b",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T03:22:28.183Z",
+        "stateRevision": "dfda8c748060e0d3fa98f3c4c6c85bb83e791568b1039825ca40d097dc8fb260",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "sceneId": "cbyniU1p5punoUkD",
+      "effectiveUserId": "edtBL96Yu3058QAT",
+      "tokenId": "294DANfBmpTBeRHG",
+      "status": "incomplete",
+      "issues": [
+        {
+          "code": "QUERY_FAILED",
+          "message": "Visibility failure could not be attributed to a player-visible wall; range, fog or lighting may be responsible.",
+          "retryable": true,
+          "subjectId": "near-primary"
+        }
+      ],
+      "context": {
+        "selectedUser": true,
+        "selectedToken": true,
+        "tokenOwned": true,
+        "sceneLoaded": true
+      },
+      "visible": {
+        "tokens": [
+          "294DANfBmpTBeRHG",
+          "PR3cfHYQ9msHXmBX"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "redaction": {
+        "occludedEntities": true,
+        "hiddenRegions": true,
+        "barrierDocumentIds": true,
+        "barrierCoordinates": true,
+        "secretDoors": true,
+        "exitDestinations": true
+      },
+      "queryPoints": [
+        {
+          "id": "near-primary",
+          "visible": false,
+          "regions": [],
+          "blockerAttribution": "environment-ambiguous",
+          "blockerKeys": []
+        },
+        {
+          "id": "beyond-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "effectiveSources": {
+        "vision": 1,
+        "light": 1
+      },
+      "isolation": {
+        "status": "complete",
+        "method": "foundry-v14-detection-modes",
+        "detectionModes": 2,
+        "unrelatedVisionSourcesIgnored": 1,
+        "visionProvidingLightsIgnored": 0
+      },
+      "environment": {
+        "fog": "complete",
+        "lighting": "complete",
+        "darkness": "complete",
+        "vision": "complete",
+        "regions": "complete",
+        "fogExplorationEnabled": true,
+        "tokenVisionEnabled": true,
+        "globalLight": true,
+        "darknessLevel": 0
+      },
+      "regions": [],
+      "visibleBarriers": [],
+      "coveragePolygons": [
+        {
+          "source": "selected-token",
+          "points": [
+            {
+              "x": 600,
+              "y": 0
+            },
+            {
+              "x": 1200,
+              "y": 0
+            },
+            {
+              "x": 1200,
+              "y": 800
+            },
+            {
+              "x": 600,
+              "y": 800
+            }
+          ]
+        }
+      ],
+      "fogRevision": "feade8e8eec08d8603df0db1f7cb270b9d6bedb412f4298427268bd86fd69aef",
+      "persistence": {
+        "beforeRevision": "dfda8c748060e0d3fa98f3c4c6c85bb83e791568b1039825ca40d097dc8fb260",
+        "afterRevision": "dfda8c748060e0d3fa98f3c4c6c85bb83e791568b1039825ca40d097dc8fb260",
+        "unchanged": true
+      },
+      "bounds": {
+        "truncated": false,
+        "visiblePerKind": 500,
+        "regions": 250,
+        "barriers": 500,
+        "coverageSources": 100,
+        "coveragePointsPerSource": 512,
+        "issues": 50
+      }
+    }
+  ],
+  "evidenceScope": "native MCP only; not authenticated AI adapter or browser observation",
+  "inferenceCalls": 0
+}

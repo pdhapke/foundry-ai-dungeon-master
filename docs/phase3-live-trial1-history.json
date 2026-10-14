@@ -1,0 +1,56 @@
+{
+  "readOnly": true,
+  "items": [
+    {
+      "rowid": 96,
+      "item": {
+        "id": "msg_tool_77dec4f0b6971d98a6b9de722a12a1a3",
+        "thread_id": "thr_731753d3",
+        "created_at": "2026-10-02T19:54:48.302424Z",
+        "type": "hidden_context_item",
+        "content": {
+          "type": "authoritative_tool_exchange_v1",
+          "items": [
+            {
+              "type": "function_call",
+              "call_id": "call_tdespppwTwJvUOpkUa9udXbS",
+              "name": "foundry_set_actor_hp",
+              "arguments": "{\"scene_id\":\"2RJeJKqdpEE4VZPh\",\"actor_id\":\"QvhdPrU8dHE1nm4h\",\"value\":18}"
+            },
+            {
+              "type": "function_call_output",
+              "call_id": "call_tdespppwTwJvUOpkUa9udXbS",
+              "output": "{\"worldId\": \"izzy-campaign\", \"correlationId\": \"aidm-07704140-3d3a-4aec-8f3a-69a4c68809f8\", \"schemaVersion\": \"core-actions-v1\", \"action\": {\"kind\": \"actor.hp\", \"sceneId\": \"2RJeJKqdpEE4VZPh\", \"targetId\": \"QvhdPrU8dHE1nm4h\", \"value\": 18}, \"state\": {\"value\": 18, \"max\": 20}, \"mutated\": true, \"outcome\": \"confirmed\"}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "rowid": 97,
+      "item": {
+        "id": "msg_receipt_5fb55f9f170d899379150abee990bea9",
+        "thread_id": "thr_731753d3",
+        "created_at": "2026-10-02T19:54:48.342111Z",
+        "type": "assistant_message",
+        "content": [
+          {
+            "annotations": [],
+            "text": "HP set to 18.",
+            "type": "output_text"
+          }
+        ]
+      }
+    },
+    {
+      "rowid": 98,
+      "item": {
+        "id": "msg_narration_a0291d092af36cc2835acd7b58afbf78",
+        "thread_id": "thr_731753d3",
+        "created_at": "2026-10-02T19:54:48.438414Z",
+        "type": "hidden_context_item",
+        "content": "{\"type\": \"narration_boundary_v1\", \"status\": \"confirmed\", \"receiptSummary\": \"HP set to 18.\", \"basis\": \"confirmed receipt observation; later controls may supersede it\", \"receiptDigest\": \"428829838f9b71d37bab87d78ae095232c513b8a78287bd6a4fe3a883ff9e3c2\", \"stateRevision\": \"6610a33f5ce34e4a4a98b561701840e0ca4b371a6d3d2b23a0339382ea7e9aa3\"}"
+      }
+    }
+  ]
+}

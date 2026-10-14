@@ -1,0 +1,493 @@
+{
+  "capturedAt": "2026-10-03T01:00:49.291Z",
+  "rows": [
+    {
+      "file": "phase5-extras-read-1790989085782.json",
+      "observation": {
+        "version": 1,
+        "id": "965c7152-72e9-4098-b47e-fe76928ab269",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:58:05.773Z",
+        "stateRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "rectangle-ground",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "rectangle-above",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ]
+    },
+    {
+      "file": "phase5-live-read-1790988353774.json",
+      "observation": {
+        "version": 1,
+        "id": "83305987-7844-45ee-8b7b-aa15866c3c3e",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:45:53.751Z",
+        "stateRevision": "7f1f93afb730ddad53a1728cfc1f3a2dc57fdc0057e6e321c8cc90a4082a0efc",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": false,
+          "regions": [],
+          "blockerAttribution": "out-of-range",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete"
+    },
+    {
+      "file": "phase5-live-read-1790988490596.json",
+      "observation": {
+        "version": 1,
+        "id": "ba759edf-d229-48f0-a1ce-51aff0db1189",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:48:10.578Z",
+        "stateRevision": "ae4e79417d514d727306524a6b7511d96bedddac368005d8ac7ed6b2176add59",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete"
+    },
+    {
+      "file": "phase5-live-read-1790988518694.json",
+      "observation": {
+        "version": 1,
+        "id": "06abb9cb-dce5-4394-8893-24dbf819858b",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:48:38.679Z",
+        "stateRevision": "9e6384070c70dacea8612a2059c10bcbc93af6b7baff27c42ba61d63dcb21211",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete"
+    },
+    {
+      "file": "phase5-live-read-1790988540955.json",
+      "observation": {
+        "version": 1,
+        "id": "066c5e7a-4f35-4ffc-96bd-e01ea50026ba",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:49:00.937Z",
+        "stateRevision": "228fdf64cc939a470eb569b761f92e29589ce9bf13fe710d090f9d7813c91c0a",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete"
+    },
+    {
+      "file": "phase5-live-read-1790988565579.json",
+      "observation": {
+        "version": 1,
+        "id": "ada42513-95d0-4edb-b2b2-94409de0a109",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:49:25.566Z",
+        "stateRevision": "34abc521256feabe150ddc75befcf4d9ca0c9020c5f07c3b9a1235311bdfb4f2",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete"
+    },
+    {
+      "file": "phase5-live-read-1790988817336.json",
+      "observation": {
+        "version": 1,
+        "id": "4cd8c452-e75a-4d66-b687-bea60428c124",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:53:37.321Z",
+        "stateRevision": "02ef11d3b20e62f9ef9b99d0ed6947d8c51fd745dde491e2c2fe759a50a4b522",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": false,
+          "regions": [],
+          "blockerAttribution": "visible-wall",
+          "blockerKeys": [
+            "blocker-1"
+          ]
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete"
+    },
+    {
+      "file": "phase5-live-read-1790988977483.json",
+      "observation": {
+        "version": 1,
+        "id": "2fe07fc0-d988-4842-833a-e9c67b0a9b34",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:56:17.468Z",
+        "stateRevision": "136a0e731ba05311f98b76bb0b5162261e84de79cd62119af39f25ad3e4af7d6",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": false,
+          "regions": [],
+          "blockerAttribution": "visible-wall",
+          "blockerKeys": [
+            "blocker-1"
+          ]
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete"
+    },
+    {
+      "file": "phase5-live-read-1790988997021.json",
+      "observation": {
+        "version": 1,
+        "id": "e22b465e-c6b1-453f-af59-958021189678",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:56:37.003Z",
+        "stateRevision": "f3ba8ec33af1f26590bfa0039772e37e0993078cff3d3d4cc356ea03042577e8",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete"
+    },
+    {
+      "file": "phase5-live-read-1790989089247.json",
+      "observation": {
+        "version": 1,
+        "id": "82a0f941-da75-4a6d-8f94-9cabaa35e0c6",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "mb4UqhWbVwmKj47w",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:58:09.231Z",
+        "stateRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "status": "complete",
+      "issues": [],
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "hiddenTokenExcluded": true,
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete"
+    }
+  ],
+  "limitations": [
+    "Old closed-door out-of-range attribution superseded by later repaired report",
+    "Positive visible-region containment not proven",
+    "Compiled disk projector is distinct from actual authenticated AI adapter dispatch",
+    "Browser observations root-owned; specialmodes only exercised modes",
+    "Secret-door/multiple-source fixtures blocked native validation; no bypass"
+  ],
+  "inferenceRequests": 0
+}

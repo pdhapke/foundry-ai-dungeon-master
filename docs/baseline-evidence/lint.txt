@@ -1,0 +1,4 @@
+
+> foundry-ai-dungeon-master@0.1.0 lint
+> eslint .
+

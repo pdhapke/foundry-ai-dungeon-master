@@ -1,0 +1,161 @@
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067629826.1887, "itemHash": "2f58b7d7725eac66c32ab446"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 12.339899985818192, "stage": "store-item-commit-complete", "atMs": 1791067629838.4783, "itemHash": "32012c4c32888ee2c4ba4331"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 21.32459997665137, "stage": "store-item-commit-complete", "atMs": 1791067629847.456, "itemHash": "6a9722cdf589a2a068832c95"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 29.736299999058247, "stage": "store-item-commit-complete", "atMs": 1791067629855.87, "itemHash": "4a317b6972e2f18340504854"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 38.099999976111576, "stage": "store-item-commit-complete", "atMs": 1791067629864.236, "itemHash": "57dbfc296665f072254d1534"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 47.14609999791719, "stage": "store-item-commit-complete", "atMs": 1791067629873.2805, "itemHash": "9462965f2002ffb6e5ebf84d"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 55.7142999896314, "stage": "store-item-commit-complete", "atMs": 1791067629881.8499, "itemHash": "919299b8b8860441036a08b8"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 64.66699999873526, "stage": "store-item-commit-complete", "atMs": 1791067629890.8005, "itemHash": "3f21b4ea2fbe67cd553dbcfa"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 72.88039999548346, "stage": "store-item-commit-complete", "atMs": 1791067629899.016, "itemHash": "f4fdd034b54297294baf2c69"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 81.2001999875065, "stage": "store-item-commit-complete", "atMs": 1791067629907.336, "itemHash": "cfc5c391b5ba915c081c7d09"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 90.3919999836944, "stage": "store-item-commit-complete", "atMs": 1791067629916.5264, "itemHash": "a26c6de8780e4e792e8ad6df"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 99.99819999211468, "stage": "store-item-commit-complete", "atMs": 1791067629926.1323, "itemHash": "00bf463c9d57c76acacd039e"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 108.58479997841641, "stage": "store-item-commit-complete", "atMs": 1791067629934.7185, "itemHash": "fcf995ce3ce15e435101e7a4"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 117.93690000195056, "stage": "store-item-commit-complete", "atMs": 1791067629944.071, "itemHash": "b40ee9c64c8028e7786be4b1"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 127.35729999258183, "stage": "store-item-commit-complete", "atMs": 1791067629953.493, "itemHash": "9d348a4243d4ca091c5a70d9"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 136.08089997433126, "stage": "store-item-commit-complete", "atMs": 1791067629962.2153, "itemHash": "8fdb99dc4306238c16aab4f1"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 144.87199997529387, "stage": "store-item-commit-complete", "atMs": 1791067629971.0073, "itemHash": "e241483af4c21cbfcc6e68ae"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 153.2580999773927, "stage": "store-item-commit-complete", "atMs": 1791067629979.3938, "itemHash": "e1902b31f7e09e008d96a92f"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 162.58489998290315, "stage": "store-item-commit-complete", "atMs": 1791067629988.7205, "itemHash": "111a11f0a4b2ceb2499abe39"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 170.73620000155643, "stage": "store-item-commit-complete", "atMs": 1791067629996.8708, "itemHash": "be69c5a839df95e18f4fbffc"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 180.05869997432455, "stage": "store-item-commit-complete", "atMs": 1791067630006.2234, "itemHash": "2c5045d5190611b3eb37d5d5"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 188.7218999909237, "stage": "store-item-commit-complete", "atMs": 1791067630014.8557, "itemHash": "921057339c51aef35e50f5a3"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 197.681299992837, "stage": "store-item-commit-complete", "atMs": 1791067630023.8154, "itemHash": "5d1318a2390ba826af509c23"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 205.90780000202358, "stage": "store-item-commit-complete", "atMs": 1791067630032.04, "itemHash": "7d66ca22e709db74ec441e02"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 215.08899997570552, "stage": "store-item-commit-complete", "atMs": 1791067630041.2222, "itemHash": "bb4291cf37c0a6d0e1cb5ef6"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 223.57999999076128, "stage": "store-item-commit-complete", "atMs": 1791067630049.713, "itemHash": "6ac556a6269c4d3e0ade7570"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 232.27169999154285, "stage": "store-item-commit-complete", "atMs": 1791067630058.4045, "itemHash": "9bec092e8d8a0d6a12f2aae2"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 241.1722999822814, "stage": "store-item-commit-complete", "atMs": 1791067630067.3076, "itemHash": "09b5f6d070427defa3985c9c"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 250.19549997523427, "stage": "store-item-commit-complete", "atMs": 1791067630076.3315, "itemHash": "e5bd7b57eaaa2b60dd0b5bcb"}
+{"type": "pause-timing", "traceId": "", "scopeId": "32f5062c-82a4-45e2-b91b-844e68fa72ff", "elapsedMs": 261.7209999880288, "stage": "store-item-commit-complete", "atMs": 1791067630087.8572, "itemHash": "86edccdb0893cfbe11b5376e"}
+.Executing <Task finished name='Task-6' coro=<MemoryTests.test_full_history_and_isolation() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:29> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 1.146 seconds
+.Executing <Task finished name='Task-10' coro=<MemoryTests.asyncSetUp() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:13> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.110 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "84df7833-ab33-4058-943b-f8ac8b4812d7", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067631153.4033, "itemHash": "2f58b7d7725eac66c32ab446"}
+{"type": "pause-timing", "traceId": "", "scopeId": "84df7833-ab33-4058-943b-f8ac8b4812d7", "elapsedMs": 12.849199993070215, "stage": "store-item-commit-complete", "atMs": 1791067631166.2026, "itemHash": "32012c4c32888ee2c4ba4331"}
+{"type": "pause-timing", "traceId": "", "scopeId": "84df7833-ab33-4058-943b-f8ac8b4812d7", "elapsedMs": 110.45290000038221, "stage": "store-item-commit-complete", "atMs": 1791067631263.805, "itemHash": "2f58b7d7725eac66c32ab446"}
+Executing <Task finished name='Task-11' coro=<MemoryTests.test_summary_cas_tail_correction_restart() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:39> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.161 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "dcba33bb-ba38-4eeb-8630-2feaafe233dd", "elapsedMs": 0.04919999628327787, "stage": "python-response-start", "atMs": 1791067631603.5708}
+{"type": "pause-timing", "traceId": "", "scopeId": "dcba33bb-ba38-4eeb-8630-2feaafe233dd", "elapsedMs": 2.838200016412884, "stage": "context-prepared", "atMs": 1791067631606.3572, "durationMs": 2.8344000165816396}
+{"type": "pause-timing", "traceId": "", "scopeId": "dcba33bb-ba38-4eeb-8630-2feaafe233dd", "elapsedMs": 3.1509000109508634, "stage": "first-stream-event", "atMs": 1791067631606.669, "durationMs": 3.1484999926760793}
+{"type": "pause-timing", "traceId": "", "scopeId": "dcba33bb-ba38-4eeb-8630-2feaafe233dd", "elapsedMs": 3.2654000096954405, "stage": "assistant-stream-finished", "atMs": 1791067631606.7825, "durationMs": 3.263199992943555}
+{"type": "pause-timing", "traceId": "", "scopeId": "c774d978-a7ed-4248-90fe-0cef75b57c25", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067631618.2664, "itemHash": "ee766611a0f9d69c84da9baf"}
+{"type": "pause-timing", "traceId": "", "scopeId": "40afef5a-878b-4d29-beb5-569612ef935f", "elapsedMs": 0.036299985367804766, "stage": "python-response-start", "atMs": 1791067631618.8071}
+{"type": "pause-timing", "traceId": "", "scopeId": "40afef5a-878b-4d29-beb5-569612ef935f", "elapsedMs": 27.80079998774454, "stage": "context-prepared", "atMs": 1791067631646.5718, "durationMs": 27.797399990959093}
+{"type": "pause-timing", "traceId": "", "scopeId": "40afef5a-878b-4d29-beb5-569612ef935f", "elapsedMs": 28.085199999623, "stage": "first-stream-event", "atMs": 1791067631646.8545, "durationMs": 28.083299985155463}
+{"type": "pause-timing", "traceId": "", "scopeId": "40afef5a-878b-4d29-beb5-569612ef935f", "elapsedMs": 28.193599981023, "stage": "assistant-stream-finished", "atMs": 1791067631646.9622, "durationMs": 28.19179999642074}
+...Executing <Task finished name='Task-27' coro=<AdapterTests.test_typed_and_custom_action_share_authorized_snapshot() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:200> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.145 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "5cda053e-d760-4553-8525-27d28492c634", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067632018.8738, "itemHash": "63b02f13a6554e900379da6a"}
+{"type": "pause-timing", "traceId": "", "scopeId": "5cda053e-d760-4553-8525-27d28492c634", "elapsedMs": 39.8503000033088, "stage": "store-item-commit-complete", "atMs": 1791067632058.6714, "itemHash": "1c278c568c4cc6ae745da9de"}
+{"type": "pause-timing", "traceId": "", "scopeId": "cdc21776-53dc-4511-aa27-73da83d43535", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067632098.927, "itemHash": "02ce62219f7f821252c43ae8"}
+{"type": "pause-timing", "traceId": "", "scopeId": "cdc21776-53dc-4511-aa27-73da83d43535", "elapsedMs": 12.201900011859834, "stage": "store-item-commit-complete", "atMs": 1791067632111.0845, "itemHash": "7ead39526e845e1021fffaab"}
+{"type": "pause-timing", "traceId": "", "scopeId": "133d7f60-b94e-4698-b009-c34b0614c1a2", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067632597.9893, "itemHash": "de7d1b721a1e0632b7cf04ed"}
+......Executing <Task finished name='Task-83' coro=<StoreTests.test_durable_history_and_owner_boundary() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:98> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.135 seconds
+.Executing <Task finished name='Task-88' coro=<StoreTests.test_native_tools_use_same_authenticated_adapter_no_second_loop() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:36> exception=AssertionError("Items in the first set but not the second:\n'dm_recipe_read'\n'dm_history_search'") created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.460 seconds
+FExecuting <Task finished name='Task-93' coro=<StoreTests.test_overlap_disconnect_and_process_error_release_guard() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:116> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.138 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "275cc7fe-fa18-43fc-9aa7-cd5709a83e63", "elapsedMs": 0.06350001785904169, "stage": "python-response-start", "atMs": 1791067633684.3892}
+{"type": "pause-timing", "traceId": "", "scopeId": "275cc7fe-fa18-43fc-9aa7-cd5709a83e63", "elapsedMs": 2.8159999928902835, "stage": "context-prepared", "atMs": 1791067633687.14, "durationMs": 2.81209999229759}
+{"type": "pause-timing", "traceId": "", "scopeId": "275cc7fe-fa18-43fc-9aa7-cd5709a83e63", "elapsedMs": 3.2105999998748302, "stage": "first-stream-event", "atMs": 1791067633687.532, "durationMs": 3.2087000145111233}
+{"type": "pause-timing", "traceId": "", "scopeId": "275cc7fe-fa18-43fc-9aa7-cd5709a83e63", "elapsedMs": 5.619900010060519, "stage": "assistant-stream-finished", "atMs": 1791067633689.9438, "durationMs": 5.614599998807535}
+..Executing <Task finished name='Task-109' coro=<StoreTests.test_response_close_cancels_agents_run() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:77> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.108 seconds
+.Executing <Task pending name='Task-115' coro=<StoreTests.test_serialized_plan_request_uses_oauth_and_supported_fields() running at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:57> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\futures.py:384, Task.task_wakeup()] created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py:459> cb=[_run_until_complete_cb() at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py:181] created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.528 seconds
+.EEEE......E.Executing <Task finished name='Task-142' coro=<PlayerPerceptionTests.test_typed_player_read_preserves_explicit_unavailable_and_never_queries_gm_fallback() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_player_perception.py:9> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.101 seconds
+.
+======================================================================
+ERROR: test_async_player_world_and_native_state_mismatch_cannot_publish_ready (test_prompt4_privacy_independent.IndependentIntegratedLane.test_async_player_world_and_native_state_mismatch_cannot_publish_ready)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt4_privacy_independent.py", line 63, in asyncSetUp
+    self.store=SqliteStore(":memory:")
+               ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\app.py", line 61, in __init__
+    raise ValueError("Conversation database must be outside Foundry static Data storage")
+ValueError: Conversation database must be outside Foundry static Data storage
+
+======================================================================
+ERROR: test_historical_private_tool_pairs_cannot_enter_safe_thread (test_prompt4_privacy_independent.IndependentIntegratedLane.test_historical_private_tool_pairs_cannot_enter_safe_thread)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt4_privacy_independent.py", line 63, in asyncSetUp
+    self.store=SqliteStore(":memory:")
+               ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\app.py", line 61, in __init__
+    raise ValueError("Conversation database must be outside Foundry static Data storage")
+ValueError: Conversation database must be outside Foundry static Data storage
+
+======================================================================
+ERROR: test_no_model_history_or_retrieval_path_with_gm_auxiliary_context (test_prompt4_privacy_independent.IndependentIntegratedLane.test_no_model_history_or_retrieval_path_with_gm_auxiliary_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt4_privacy_independent.py", line 63, in asyncSetUp
+    self.store=SqliteStore(":memory:")
+               ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\app.py", line 61, in __init__
+    raise ValueError("Conversation database must be outside Foundry static Data storage")
+ValueError: Conversation database must be outside Foundry static Data storage
+
+======================================================================
+ERROR: test_safe_reconnect_denies_changed_selected_player (test_prompt4_privacy_independent.IndependentIntegratedLane.test_safe_reconnect_denies_changed_selected_player)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt4_privacy_independent.py", line 63, in asyncSetUp
+    self.store=SqliteStore(":memory:")
+               ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\app.py", line 61, in __init__
+    raise ValueError("Conversation database must be outside Foundry static Data storage")
+ValueError: Conversation database must be outside Foundry static Data storage
+
+======================================================================
+ERROR: test_health_contract_digest_is_loaded_snapshot (test_player_observation_identity.PlayerObservationIdentityTests.test_health_contract_digest_is_loaded_snapshot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_player_observation_identity.py", line 12, in test_health_contract_digest_is_loaded_snapshot
+    store = loaded.SqliteStore(':memory:')
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\app.py", line 61, in __init__
+    raise ValueError("Conversation database must be outside Foundry static Data storage")
+ValueError: Conversation database must be outside Foundry static Data storage
+
+======================================================================
+FAIL: test_native_tools_use_same_authenticated_adapter_no_second_loop (test_app.StoreTests.test_native_tools_use_same_authenticated_adapter_no_second_loop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py", line 40, in test_native_tools_use_same_authenticated_adapter_no_second_loop
+    self.assertEqual(set(tools), {"foundry_read_play_state", "foundry_roll_actor", "foundry_move_token", "foundry_move_tokens", "foundry_set_door_state", "foundry_set_actor_hp", "foundry_set_actor_condition", "foundry_advance_combat_turn", "foundry_set_initiative", "foundry_set_pause_state", "foundry_read_scene", "foundry_read_actor", "foundry_read_token_perception", "foundry_read_attack_state", "foundry_roll_attack", "foundry_apply_attack_damage", "foundry_attack_sequence", "foundry_resume_attack_sequence", "campaign_search", "campaign_validate_sources", "campaign_read", "campaign_propose", "campaign_proposals", "tool_search", "tool_load", "tool_execute", "foundry_roll_dice", "foundry_propose_session_note"})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the first set but not the second:
+'dm_recipe_read'
+'dm_history_search'
+
+----------------------------------------------------------------------
+Ran 30 tests in 5.353s
+
+FAILED (failures=1, errors=5)

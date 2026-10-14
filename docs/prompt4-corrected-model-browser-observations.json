@@ -1,0 +1,13 @@
+{
+  "scope": "Root observed actual Chrome GM SDK frame and exact non-GM player canvas; sanitized text observations, not screenshot-file or paint instrumentation",
+  "traceId": "23dee24a-f780-4322-812e-f2e9a863055f",
+  "gmEmbeddedText": "Izzy sees only herself in deep darkness. No other creatures, notes, or visible features are confirmed.",
+  "playerCanvas": "Original viewport unchanged. Own token outline partially covered by existing pause overlay; mostly dark area with illuminated corridor floor and walls visible north. No additional creature observed. This is a browser observation, not native terrain attribution or manual player feedback.",
+  "coverageLimit": "Selected token-only result does not establish absence of visible terrain; full surroundings narration remains incomplete",
+  "originalUiRestored": "Opened ordinary GM window closed again; unrelated tabs/scenes/views left unchanged",
+  "manualFeedback": "Requested asynchronously; pending",
+  "modelRequestsThisSubmission": 2,
+  "modelRequestsBothSeparatelyApprovedSubmissions": 4,
+  "commandRetries": 0,
+  "extraNarratorCalls": 0
+}

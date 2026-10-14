@@ -241,9 +241,9 @@ export interface AiDmContinuationCapsule {
   signature: string;
 }
 
-export type AiDmToolEffect = "read" | "simulate" | "present" | "propose" | "commit";
+export type AiDmToolEffect = "read" | "simulate" | "present" | "propose" | "commit" | "session";
 export type AiDmToolRisk = "none" | "low" | "consequential" | "destructive";
-export type AiDmApprovalPolicy = "none" | "player-confirmation" | "gm-approval" | "always-refuse";
+export type AiDmApprovalPolicy = "none" | "player-confirmation" | "gm-approval" | "always-refuse" | "gm-request";
 
 export interface AiDmToolDiscoveryDescriptor {
   toolId: AiDmId;

@@ -1,0 +1,46 @@
+{
+  "capturedAt": "2026-10-02T04:23:16.869Z",
+  "boundary": "Independent read-only connector reads; no paid inference/mutation",
+  "sceneId": "xj5praphJhGr6mxL",
+  "active": true,
+  "tokenVision": true,
+  "environment": {
+    "darkness": 0,
+    "globalLight": true,
+    "fogMode": 1
+  },
+  "tokens": [
+    {
+      "id": "4Jgz4kpyTaMpkdHn",
+      "actorId": "7Omg3czrr0z94iw4",
+      "x": 600,
+      "y": 400,
+      "elevation": 0,
+      "sight": true,
+      "visionMode": "basic"
+    },
+    {
+      "id": "z2oFZhuQdL4GQ793",
+      "actorId": "uwyaFQurD4uFZCKC",
+      "x": 700,
+      "y": 400,
+      "elevation": 0,
+      "sight": false,
+      "visionMode": "basic"
+    }
+  ],
+  "door": [
+    {
+      "id": "Axtn1UK6lEYcRz5d",
+      "ds": 1
+    }
+  ],
+  "targetActorId": "uwyaFQurD4uFZCKC",
+  "hp": {
+    "value": 40,
+    "max": 40,
+    "temp": 0,
+    "tempmax": 0,
+    "formula": ""
+  }
+}

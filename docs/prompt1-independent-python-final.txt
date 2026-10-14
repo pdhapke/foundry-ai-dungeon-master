@@ -1,0 +1,170 @@
+Executing <Task finished name='Task-1' coro=<MemoryTests.asyncSetUp() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:13> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.110 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067752280.3337, "itemHash": "2f58b7d7725eac66c32ab446"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 14.714899996761233, "stage": "store-item-commit-complete", "atMs": 1791067752294.9814, "itemHash": "32012c4c32888ee2c4ba4331"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 27.771499997470528, "stage": "store-item-commit-complete", "atMs": 1791067752308.0354, "itemHash": "6a9722cdf589a2a068832c95"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 41.07189999194816, "stage": "store-item-commit-complete", "atMs": 1791067752321.336, "itemHash": "4a317b6972e2f18340504854"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 53.64009999902919, "stage": "store-item-commit-complete", "atMs": 1791067752333.904, "itemHash": "57dbfc296665f072254d1534"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 66.9917999766767, "stage": "store-item-commit-complete", "atMs": 1791067752347.2563, "itemHash": "9462965f2002ffb6e5ebf84d"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 79.42219998221844, "stage": "store-item-commit-complete", "atMs": 1791067752359.6848, "itemHash": "919299b8b8860441036a08b8"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 91.9788999890443, "stage": "store-item-commit-complete", "atMs": 1791067752372.2412, "itemHash": "3f21b4ea2fbe67cd553dbcfa"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 105.37679999833927, "stage": "store-item-commit-complete", "atMs": 1791067752385.6416, "itemHash": "f4fdd034b54297294baf2c69"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 117.76139997527935, "stage": "store-item-commit-complete", "atMs": 1791067752398.0256, "itemHash": "cfc5c391b5ba915c081c7d09"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 129.8903999850154, "stage": "store-item-commit-complete", "atMs": 1791067752410.1543, "itemHash": "a26c6de8780e4e792e8ad6df"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 142.40029998472892, "stage": "store-item-commit-complete", "atMs": 1791067752422.678, "itemHash": "00bf463c9d57c76acacd039e"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 154.32370000053197, "stage": "store-item-commit-complete", "atMs": 1791067752434.5876, "itemHash": "fcf995ce3ce15e435101e7a4"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 167.65199997462332, "stage": "store-item-commit-complete", "atMs": 1791067752447.916, "itemHash": "b40ee9c64c8028e7786be4b1"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 180.10249998769723, "stage": "store-item-commit-complete", "atMs": 1791067752460.3677, "itemHash": "9d348a4243d4ca091c5a70d9"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 192.68469998496585, "stage": "store-item-commit-complete", "atMs": 1791067752472.9463, "itemHash": "8fdb99dc4306238c16aab4f1"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 204.52329999534413, "stage": "store-item-commit-complete", "atMs": 1791067752484.7854, "itemHash": "e241483af4c21cbfcc6e68ae"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 217.18219999456778, "stage": "store-item-commit-complete", "atMs": 1791067752497.444, "itemHash": "e1902b31f7e09e008d96a92f"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 228.75519999070093, "stage": "store-item-commit-complete", "atMs": 1791067752509.016, "itemHash": "111a11f0a4b2ceb2499abe39"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 240.85799997556023, "stage": "store-item-commit-complete", "atMs": 1791067752521.1199, "itemHash": "be69c5a839df95e18f4fbffc"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 252.3835999891162, "stage": "store-item-commit-complete", "atMs": 1791067752532.6448, "itemHash": "2c5045d5190611b3eb37d5d5"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 265.04519997979514, "stage": "store-item-commit-complete", "atMs": 1791067752545.3076, "itemHash": "921057339c51aef35e50f5a3"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 278.04869998362847, "stage": "store-item-commit-complete", "atMs": 1791067752558.3118, "itemHash": "5d1318a2390ba826af509c23"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 290.7368999731261, "stage": "store-item-commit-complete", "atMs": 1791067752571.0078, "itemHash": "7d66ca22e709db74ec441e02"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 304.53719999059103, "stage": "store-item-commit-complete", "atMs": 1791067752584.8032, "itemHash": "bb4291cf37c0a6d0e1cb5ef6"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 319.4941999972798, "stage": "store-item-commit-complete", "atMs": 1791067752599.7617, "itemHash": "6ac556a6269c4d3e0ade7570"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 334.7238999849651, "stage": "store-item-commit-complete", "atMs": 1791067752614.991, "itemHash": "9bec092e8d8a0d6a12f2aae2"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 350.44539999216795, "stage": "store-item-commit-complete", "atMs": 1791067752630.7114, "itemHash": "09b5f6d070427defa3985c9c"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 365.67609998746775, "stage": "store-item-commit-complete", "atMs": 1791067752645.9402, "itemHash": "e5bd7b57eaaa2b60dd0b5bcb"}
+{"type": "pause-timing", "traceId": "", "scopeId": "7fd2051a-65c5-4f48-942e-cc1a3e3aeaf8", "elapsedMs": 379.6993999858387, "stage": "store-item-commit-complete", "atMs": 1791067752659.9644, "itemHash": "86edccdb0893cfbe11b5376e"}
+.Executing <Task finished name='Task-6' coro=<MemoryTests.test_full_history_and_isolation() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:29> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 1.205 seconds
+.Executing <Task finished name='Task-10' coro=<MemoryTests.asyncSetUp() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:13> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.109 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "f97a6020-c0cc-4257-a62e-609f68cc05f3", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067753664.0422, "itemHash": "2f58b7d7725eac66c32ab446"}
+{"type": "pause-timing", "traceId": "", "scopeId": "f97a6020-c0cc-4257-a62e-609f68cc05f3", "elapsedMs": 17.09479998680763, "stage": "store-item-commit-complete", "atMs": 1791067753681.0247, "itemHash": "32012c4c32888ee2c4ba4331"}
+{"type": "pause-timing", "traceId": "", "scopeId": "f97a6020-c0cc-4257-a62e-609f68cc05f3", "elapsedMs": 167.74229999282397, "stage": "store-item-commit-complete", "atMs": 1791067753831.6716, "itemHash": "2f58b7d7725eac66c32ab446"}
+Executing <Task finished name='Task-11' coro=<MemoryTests.test_summary_cas_tail_correction_restart() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_prompt1_memory.py:39> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.239 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "8a938ce2-ff7a-483d-8882-7836c6e55edc", "elapsedMs": 0.05299999611452222, "stage": "python-response-start", "atMs": 1791067754247.6008}
+...Executing <Task finished name='Task-27' coro=<AdapterTests.test_typed_and_custom_action_share_authorized_snapshot() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:200> exception=PermissionError(13, 'The process cannot access the file because it is being used by another process') created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.113 seconds
+E<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x00000194E87DD6C0>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{"type": "pause-timing", "traceId": "", "scopeId": "3cd853db-138b-4c4e-8d1a-8893fdc62779", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067754683.1042, "itemHash": "6166b5f7f28a2b56e43c081f"}
+{"type": "pause-timing", "traceId": "", "scopeId": "3cd853db-138b-4c4e-8d1a-8893fdc62779", "elapsedMs": 36.28259999095462, "stage": "store-item-commit-complete", "atMs": 1791067754719.3345, "itemHash": "9d39a819dddc74aadb8a9c43"}
+{"type": "pause-timing", "traceId": "", "scopeId": "1729c3fc-eeb6-4f78-9417-3416648a323d", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067754759.1797, "itemHash": "c125d243acef2502013ccfb6"}
+{"type": "pause-timing", "traceId": "", "scopeId": "1729c3fc-eeb6-4f78-9417-3416648a323d", "elapsedMs": 11.26030000159517, "stage": "store-item-commit-complete", "atMs": 1791067754770.382, "itemHash": "1e776d59ae64afb73213de28"}
+{"type": "pause-timing", "traceId": "", "scopeId": "892e6e80-eb86-4637-97e3-d394ceb51d09", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067755288.6475, "itemHash": "de7d1b721a1e0632b7cf04ed"}
+.....Executing <Task finished name='Task-83' coro=<StoreTests.test_durable_history_and_owner_boundary() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:98> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.145 seconds
+.Executing <Task finished name='Task-88' coro=<StoreTests.test_native_tools_use_same_authenticated_adapter_no_second_loop() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:36> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.453 seconds
+.Executing <Task finished name='Task-93' coro=<StoreTests.test_overlap_disconnect_and_process_error_release_guard() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:116> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.111 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "5f1b10c3-8cec-4ceb-ad59-85d58417112f", "elapsedMs": 0.045599997974932194, "stage": "python-response-start", "atMs": 1791067756308.1675}
+..Executing <Task finished name='Task-109' coro=<StoreTests.test_response_close_cancels_agents_run() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:77> exception=PermissionError(13, 'The process cannot access the file because it is being used by another process') created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.105 seconds
+EC:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\.venv\Lib\site-packages\pydantic\json_schema.py:1737: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x00000194E8D297B0>
+  for name, field in schema['fields'].items()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Executing <Task pending name='Task-115' coro=<StoreTests.test_serialized_plan_request_uses_oauth_and_supported_fields() running at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:57> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\futures.py:384, Task.task_wakeup()] created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py:459> cb=[_run_until_complete_cb() at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py:181] created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.553 seconds
+{"type": "pause-timing", "traceId": "", "scopeId": "1ed1e3a3-7265-4468-bb18-22d51add041f", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067757153.791, "itemHash": "b562c5baa283629495a4cb69"}
+{"type": "pause-timing", "traceId": "", "scopeId": "1ed1e3a3-7265-4468-bb18-22d51add041f", "elapsedMs": 1.9752000225707889, "stage": "store-item-commit-complete", "atMs": 1791067757155.7324, "itemHash": "9e06d5118df014675e49f0fb"}
+{"type": "pause-timing", "traceId": "", "scopeId": "1ed1e3a3-7265-4468-bb18-22d51add041f", "elapsedMs": 3.781800012802705, "stage": "store-item-commit-complete", "atMs": 1791067757157.539, "itemHash": "7c3828f7797489e30ec10325"}
+{"type": "pause-timing", "traceId": "", "scopeId": "1ed1e3a3-7265-4468-bb18-22d51add041f", "elapsedMs": 5.5151999986264855, "stage": "store-item-commit-complete", "atMs": 1791067757159.2722, "itemHash": "8dc3e74f36b1c4f67023753c"}
+{"type": "pause-timing", "traceId": "", "scopeId": "1ed1e3a3-7265-4468-bb18-22d51add041f", "elapsedMs": 7.681600021896884, "stage": "store-item-commit-complete", "atMs": 1791067757161.4412, "itemHash": "d7d954dc20b06202999df181"}
+{"type": "pause-timing", "traceId": "", "scopeId": "69c491a5-4f46-44ef-a64d-dfb692574a7c", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067757240.7327, "itemHash": "a19ab09e7d83e6c8308ae5c9"}
+{"type": "pause-timing", "traceId": "", "scopeId": "054c1b73-2012-4c4d-b24f-4e3d35031ec5", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067757342.9358, "itemHash": "5e1ccc4625d24c65e5346f17"}
+{"type": "pause-timing", "traceId": "", "scopeId": "f0c83d91-c9ce-43a0-adf8-7cc739176839", "elapsedMs": 0, "stage": "store-item-commit-complete", "atMs": 1791067757432.6902, "itemHash": "6f19287eeb3760978f8a0f72"}
+..............
+======================================================================
+ERROR: test_typed_and_custom_action_share_authorized_snapshot (test_app.AdapterTests.test_typed_and_custom_action_share_authorized_snapshot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py", line 219, in test_typed_and_custom_action_share_authorized_snapshot
+    self.assertEqual([v async for v in server.respond(thread, None, context)], ["mock event"])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\app.py", line 989, in respond
+    schemas = [{"name": tool.name, "description": tool.description, "parameters": tool.params_json_schema} for tool in agent.tools]
+                                                                                                                       ^^^^^^^^^^^
+AttributeError: 'object' object has no attribute 'tools'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\shutil.py", line 625, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\peter\\AppData\\Local\\Temp\\tmpzr99dn7u\\test.sqlite'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py", line 201, in test_typed_and_custom_action_share_authorized_snapshot
+    with tempfile.TemporaryDirectory() as directory:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "C:\Users\peter\scoop\apps\python\current\Lib\shutil.py", line 629, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 905, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\peter\\AppData\\Local\\Temp\\tmpzr99dn7u\\test.sqlite'
+
+======================================================================
+ERROR: test_response_close_cancels_agents_run (test_app.StoreTests.test_response_close_cancels_agents_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py", line 93, in test_response_close_cancels_agents_run
+    self.assertEqual(await anext(generator), "mock incremental event")
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\app.py", line 989, in respond
+    schemas = [{"name": tool.name, "description": tool.description, "parameters": tool.params_json_schema} for tool in agent.tools]
+                                                                                                                       ^^^^^^^^^^^
+AttributeError: 'object' object has no attribute 'tools'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\shutil.py", line 625, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\peter\\AppData\\Local\\Temp\\tmp1_85e2kb\\test.sqlite'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py", line 78, in test_response_close_cancels_agents_run
+    with tempfile.TemporaryDirectory() as directory:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "C:\Users\peter\scoop\apps\python\current\Lib\shutil.py", line 629, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\peter\scoop\apps\python\current\Lib\tempfile.py", line 905, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\peter\\AppData\\Local\\Temp\\tmp1_85e2kb\\test.sqlite'
+
+----------------------------------------------------------------------
+Ran 30 tests in 5.743s
+
+FAILED (errors=2)

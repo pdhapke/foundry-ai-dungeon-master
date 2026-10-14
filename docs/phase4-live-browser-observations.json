@@ -1,0 +1,28 @@
+{
+  "browser": "Chrome existing GM tab 1958919288; unrelated tabs preserved",
+  "prompt1": {
+    "submittedOnce": true,
+    "toolClickClockMs": 16890056.4135,
+    "receiptObservedToolClockMs": 16907240.4164,
+    "renderObservationUpperBoundMs": 17184.01,
+    "clockScope": "cua tool runtime monotonic clock, includes orchestration and sampling gaps; not synchronized to browser/server",
+    "observedReceipt": "confirmed two steps, attacks22/18, damage7+5, HP40/temp4 to32/temp0",
+    "finalSummaryObserved": true,
+    "browserReceiptArrivalMs": 11997.4,
+    "browserStreamEndMs": 16861.6,
+    "browserEvidence": "phase4-live-prompt1-browser-latency.json",
+    "exportIssue": "Download event wait timed out after export click; downloaded file independently found and copied. No inference resubmission."
+  },
+  "prompt2": {
+    "browserStreamEndMs": 12637.4,
+    "submittedOnce": true,
+    "clockScope": "cua runtime monotonic after kernel reset; includes orchestration/sampling gaps; unsynchronized with browser/server",
+    "receiptObservedToolClockMs": 115479.9433,
+    "toolClickClockMs": 98879.285,
+    "finalSummaryObserved": true,
+    "browserReceiptArrivalMs": 8586.3,
+    "browserEvidence": "phase4-live-final-browser-latency.json",
+    "renderObservationUpperBoundMs": 16600.6712,
+    "observedReceipt": "confirmed1step attack20 damage7applied7 HP40temp4 to37temp0 resource spent0 to1 verified"
+  }
+}

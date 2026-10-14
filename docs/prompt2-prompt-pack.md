@@ -1,0 +1,39 @@
+# Prompt 2 on-demand preparation pack
+
+`chatkit-server/preparation` supplies version `prompt2-preparation-v1`. It does not add permanent DM prose or tool schemas. The DM identity remains in the existing permanent assignment. Every template is retrieved individually and contains an explicit input/output contract, source bounds, stop conditions and no-mutation default.
+
+The passes are inventory, interview, records, retrieval, validation, area, map, population and scene-validation. `template_resource(id)` returns a trusted template; `build_request(id, inputs)` wraps source content and excerpts under `untrustedInput`. This is a request envelope, not an executed preparation model loop. Provider requests, embeddings, generated summaries/images and canonical publication remain separately gated.
+
+## Internal guided entry
+
+`create_preparation_router(authenticate, store)` exposes `POST /preparation` through the existing secret/principal authenticator. Root integration includes this router inside `create_app`; no new credential or access enrollment is introduced. Inputs bind to the authenticated world. Interview storage uses the existing private SQLite connection and keys every session by world, authenticated user and session ID. No interview content is written beneath public Data. The table is `preparation_interviews`; source records, published versions and retrieval remain owned by the campaign service, not this package.
+
+Actions:
+
+- `template`: `{action, passId}` retrieves one trusted resource.
+- `request`: `{action, passId, inputs}` validates and returns an offline request envelope.
+- `validate`: `{action, passId, inputs, output}` checks a mocked candidate and returns an allowlisted player-safe report. This never publishes.
+- `interview`: `{action, sessionId, operation}` supports start/read/answer/pause/resume. Answer/pause/resume require `expectedRevision`; answer also requires `questionId`, `text`, optional `approved`, and out-of-character `mode`.
+- `pipeline`: `{action, sessionId, operation}` supports create/status/request/submit/pause/resume/cancel. Create requires original `inputs`; submit requires the same original `inputs`, `passId`, candidate `output` and `expectedRevision`; controls require `expectedRevision`. Request needs only session ID and composes stored sources plus completed candidates under `untrustedInput.priorOutputs`.
+
+The reusable private pipeline enforces inventory → interview → records → retrieval → validation dependency order without invoking a provider. Submitted mocked results are schema/provenance validated. Completed results persist privately and their integrity is rechecked while constructing the next-stage request. Prior candidates retain producing pass, field, visibility and source references. Oversized composition refuses without trimming. Status returns step states/digests and source/answer manifests without narrative outputs. Completion remains a draft and never authorizes canon publication.
+
+Instances live in `preparation_pipelines` within the existing private database, scoped by world/user/session. Source revisions, exact content hashes and setup-answer digest form an immutable manifest. Changed submitted content under an unchanged revision marks the job stale. Delayed CAS writes are rejected. Blocked steps may be retried; pause/resume preserves completed steps. Cancelled/stale/completed jobs cannot resume silently. Use a new session ID and reviewed source set for revised preparation. Repeated create with identical inputs returns the existing job; changed inputs under an existing ID are rejected. The Node gateway must verify source references against current authenticated campaign content before creating/submitting or consuming an envelope; caller source claims cannot establish authentication or approval.
+
+Start returns at most three unanswered setup questions concerning premise, characters, tone, rules, boundaries and starting situation. Known answers are reused. Answers remain proposed or approved setup intent; they never automatically become campaign canon. Private source mysteries are never interpolated into questions. Interrupted sessions restore from the private table, and compare-and-swap revisions prevent delayed edits replacing newer answers. A new session ID is the explicit way to begin another interview.
+
+## Bounds and validation
+
+Requests admit at most 40 explicit source objects, each with ID, revision, visibility and content, within 16,000 UTF-8 bytes. Outputs admit at most 24,000 bytes. Area planning requires one to eight destinations. Candidates require draft/proposed status, GM/player visibility, matching source references/revisions, or explicit `generated-proposed` origin. GM-derived candidates cannot claim player visibility. The checker rejects self-authorization of publication, scene activation or spending.
+
+Every template exposes a Draft 2020-12 JSON Schema; the emitted type/enum/bounds/required-field/additional-field subset is enforced locally without a new dependency. All narrative-bearing output fields are structured candidates or arrays of candidates, including overview, index, unknowns, contradictions, questions, answers, checks, decisions, calibration and geometry. Raw prose in those fields is rejected. Each candidate carries `visibility`, `status`, and `sourceRefs`; its optional `text`, headings, aliases and relationships remain within that access classification. Readiness admits only the five named booleans. Input/output fields outside their schemas are rejected.
+
+`audience` defaults to GM and accepts only GM/player. A player preparation request cannot include any private source or GM candidate. A generated player candidate cannot be admitted from a context containing any GM source, even when it omits private provenance. This conservative rule avoids a generated-prose bypass; deliberately declassified content needs a separately reviewed publication workflow. Input records and answers use the same structured candidate schema, not raw interview snapshots. Template schemas are on-demand resources; none are added to permanent context.
+
+The mock checker is a structural/provenance gate. It cannot establish that arbitrary natural language is semantically grounded, assess narrative quality, or guarantee a model never paraphrases a secret into a purported player source. Those require independent review and a separately budgeted real trial. Player readiness is constructed from a fixed message and allowlisted booleans; arbitrary readiness prose and decisions are withheld.
+
+Relationship resolution, alias deduplication, rumor reconciliation and semantic section boundaries are template requirements reviewed against source records; they are not claimed as a deterministic summarizer. The campaign service owns the canonical schema and disposable retrieval index. The map template points to Prompt 1's existing battlemap primitives and requires a licensed asset or separate generation budget, draft scenes, preserved aspect ratio, and independent grid/TV acceptance. Population/scene validation explicitly distinguish annotations from operational trap mechanics and missing geometry from visibility readiness.
+
+## Offline checks and safe rerun
+
+Run `.venv/Scripts/python.exe -m unittest test_preparation_workflow test_preparation_router test_preparation_pipeline` from `chatkit-server`. The current package gate passes 22 tests. Coverage includes every template's no-inference contract, malicious imported instructions as inert data, unknowns/contradictions, provenance, private visibility, world/owner isolation, bounded input, interrupted interviews, persisted answers, stale edits, player-safe output, ordered pipeline dependencies, manifest/content edits, pause/resume/cancel, prior-result integrity and no-truncation composition. No provider calls or Foundry document changes are made. A passing offline check does not establish loaded runtime or player/TV acceptance.

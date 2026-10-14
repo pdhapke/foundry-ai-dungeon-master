@@ -1,0 +1,47 @@
+{
+  "testRunId": "test-ai-core-20261001-1790902644995",
+  "worldId": "izzy-campaign",
+  "userId": "X7X4KK7zca5U2Ics",
+  "original": {
+    "sceneId": "Nbj38PEdvw1zX1J9",
+    "paused": true,
+    "activeCombatIds": []
+  },
+  "created": [
+    {
+      "documentType": "Scene",
+      "id": "2RJeJKqdpEE4VZPh"
+    },
+    {
+      "documentType": "Actor",
+      "id": "QvhdPrU8dHE1nm4h"
+    },
+    {
+      "documentType": "Token",
+      "id": "gHxvFbZTMoim2tYp",
+      "parentType": "Scene",
+      "parentId": "2RJeJKqdpEE4VZPh"
+    },
+    {
+      "documentType": "Wall",
+      "id": "RsB12oN5v3LYI1XR",
+      "parentType": "Scene",
+      "parentId": "2RJeJKqdpEE4VZPh"
+    },
+    {
+      "documentType": "Combat",
+      "id": "F72hDz6efnhuYqKb"
+    }
+  ],
+  "setupComplete": true,
+  "sceneId": "2RJeJKqdpEE4VZPh",
+  "actorId": "QvhdPrU8dHE1nm4h",
+  "tokenId": "gHxvFbZTMoim2tYp",
+  "doorId": "RsB12oN5v3LYI1XR",
+  "combatId": "F72hDz6efnhuYqKb",
+  "combatantIds": [
+    "Jp6aMv7V2dmc8sfI",
+    "pGdbfi4CEeu8FTrJ"
+  ],
+  "restoredAt": "2026-10-02T01:26:48.085Z"
+}

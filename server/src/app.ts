@@ -3,11 +3,13 @@ import { z } from "zod";
 
 import type { ChatGptPlanAuth } from "./auth/index.js";
 import { chatKitDiagnostics } from "./chatkit/gateway.js";
+import { latencyDiagnostics } from "./latency-trace.js";
 
 export function createAiDmApp(options: {
   chatGptAuth?: ChatGptPlanAuth;
   chatkitHandler?: RequestHandler;
   chatkitReadHandler?: RequestHandler;
+  buildIdentity?: Readonly<Record<string, unknown>>;
   callbackPostMessageOrigins?: readonly string[];
   readiness: () =>
     | { ready: boolean; details: Record<string, boolean> }
@@ -22,8 +24,12 @@ export function createAiDmApp(options: {
     app.post("/chatkit", options.chatkitHandler);
     app.options("/chatkit/thread", options.chatkitHandler);
     app.post("/chatkit/thread", options.chatkitHandler);
+    app.options("/chatkit/prepare", options.chatkitHandler);
+    app.post("/chatkit/prepare", options.chatkitHandler);
     app.options("/chatkit/actions", options.chatkitHandler);
     app.post("/chatkit/actions", options.chatkitHandler);
+    app.options("/chatkit/preparation", options.chatkitHandler);
+    app.post("/chatkit/preparation", options.chatkitHandler);
   }
   app.get("/health", async (_request, response) => {
     const readiness = await options.readiness();
@@ -33,6 +39,8 @@ export function createAiDmApp(options: {
       version: "0.1.0",
       details: readiness.details,
       chatkit: chatKitDiagnostics(),
+      latency: latencyDiagnostics(),
+      ...(options.buildIdentity ? { build: options.buildIdentity } : {}),
     });
   });
   app.get("/auth/callback", async (request, response) => {

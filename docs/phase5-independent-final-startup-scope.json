@@ -1,0 +1,27 @@
+{
+  "capturedAt": "2026-10-03T01:06:34.016Z",
+  "identities": {
+    "ai": {
+      "manifestDigest": "ab66e909567822d5abc044e081ffc7a5c0f91b764d425ae6384dca91591c7883",
+      "startedAt": "2026-10-03T00:24:48.535Z",
+      "diskDifferent": []
+    },
+    "mcp": {
+      "manifestDigest": "f65497dd4f7a67a6049bc32ae568d40b6f95776dc190d965d4774963b22c9ef7",
+      "startedAt": "2026-10-03T00:24:48.164Z",
+      "diskDifferent": [
+        {
+          "path": "module/dist/index.js",
+          "loadedStartup": "a0fa2956243898bdbee5e323af0c9e7f6ce1842c6ee5a7dad80814f167ae96ef",
+          "currentDisk": "0726ae77854ced42ee1d1c4081807c67607be1dc60fcc3b043d633e0c4570b17"
+        },
+        {
+          "path": "module/src/latency-build.ts",
+          "loadedStartup": "ef438e2bda0918effee2d37c1dcc61a32d17301691d2063baa1285bb6406256e",
+          "currentDisk": "6ae024bf9cceec19f54f4160d7fe514d768b3bd80b3e0fafaacafcc857116372"
+        }
+      ]
+    }
+  },
+  "scope": "Startup hashes remain historical after native-only rebuild; receiver marker separately binds perception inputs"
+}

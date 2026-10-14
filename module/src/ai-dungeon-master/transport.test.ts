@@ -162,6 +162,111 @@ function authenticate(transport: AiDmTransport, store: AiDmClientStore): FakeWeb
 void describe("AI Dungeon Master browser authentication", () => {
   beforeEach(installBrowserGlobals);
 
+  void it("provider mutations fence an older in-flight discovery response", async () => {
+    for (const mutation of ["aiDm.chatgpt.signout", "aiDm.chatgpt.model.select", "aiDm.chatgpt.signin.begin"] as const) {
+      installBrowserGlobals();
+      const store = new AiDmClientStore(), transport = new AiDmTransport(store), socket = authenticate(transport, store);
+      const status = parsedMessages(socket).find(message => (message["payload"] as { type?: string })?.type === "aiDm.chatgpt.status")!;
+      const oldId = (status["payload"] as { payload: { requestId: string } }).payload.requestId;
+      transport.send(mutation === "aiDm.chatgpt.model.select" ? { type: mutation, payload: { requestId: "new-mutation", model: "new-model" } } : { type: mutation, payload: { requestId: "new-mutation" } });
+      const reply = (requestId: string, connected: boolean) => socket.message({ type: "aiDm.chatgpt.status", payload: { requestId, state: connected ? "connected" : "signed-out", identityConnected: connected, planUsageAuthorized: connected, modelDiscoveryState: connected ? "available" : "not-authorized", availableModels: connected ? [{ slug: "old-model", displayName: "Old model" }] : [], selectedModel: connected ? "old-model" : null } });
+      reply("new-mutation", false); reply(oldId, true);
+      assert.equal(store.state.chatGpt.state, "signed-out"); assert.equal(store.state.chatGpt.selectedModel, null);
+      transport.disconnect();
+      for (let i = 0; i < 6; i++) await Promise.resolve();
+    }
+  });
+
+  void it("OAuth status fallback stops after six checks and never installs an interval", async () => {
+    const popup = { closed: false, document: { title: "", body: { textContent: "" } }, location: { replace: () => undefined }, focus: () => undefined, close: () => undefined };
+    Object.assign(window, { open: () => popup, setInterval: () => { throw new Error("Unbounded interval forbidden"); } });
+    const store = new AiDmClientStore(), transport = new AiDmTransport(store);
+    const socket = authenticate(transport, store);
+    const replyLatest = async () => {
+      const messages = parsedMessages(socket).filter(message => (message["payload"] as { type?: string })?.type === "aiDm.chatgpt.status");
+      const requestId = (messages.at(-1)!["payload"] as { payload: { requestId: string } }).payload.requestId;
+      socket.message({ type: "aiDm.chatgpt.status", payload: { requestId, state: "signed-out", identityConnected: false, planUsageAuthorized: false, modelDiscoveryState: "not-authorized", availableModels: [], selectedModel: null } });
+      for (let i = 0; i < 6; i++) await Promise.resolve();
+    };
+    await replyLatest(); assert.equal(transport.beginChatGptSignIn(), true);
+    socket.message({ type: "aiDm.chatgpt.signin.started", payload: { requestId: "oauth-start", authorizationUrl: "https://auth.example.test/authorize" } });
+    let next = scheduled.find(timer => timer.delay === 1500)!;
+    for (let i = 0; i < 6; i++) {
+      assert.ok(next);
+      const before = scheduled.length;
+      next.callback(); await replyLatest();
+      const future = scheduled.slice(before).find(timer => timer.delay !== 5000);
+      if (i < 5) { assert.ok(future); next = future; } else assert.equal(future, undefined);
+    }
+    transport.disconnect();
+  });
+
+  void it("panel open and concurrent recovery share one status until its matching reply; close/reopen refreshes", async () => {
+    const store = new AiDmClientStore(), transport = new AiDmTransport(store);
+    store.subscribe(() => { if (store.state.connection === "connected") transport.openStatusPanel(); });
+    const socket = authenticate(transport, store);
+    const statuses = () => parsedMessages(socket).filter(message => (message["payload"] as { type?: string })?.type === "aiDm.chatgpt.status");
+    assert.equal(statuses().length, 1);
+    transport.openStatusPanel(); transport.openStatusPanel();
+    assert.equal(statuses().length, 1);
+    const requestId = ((statuses()[0]!["payload"] as { payload: { requestId: string } }).payload.requestId);
+    const reply = (id: string) => socket.message({ type: "aiDm.chatgpt.status", payload: { requestId: id, state: "signed-out", identityConnected: false, planUsageAuthorized: false, modelDiscoveryState: "not-authorized", availableModels: [], selectedModel: null } });
+    reply("unrelated-status"); await Promise.resolve(); transport.openStatusPanel(); assert.equal(statuses().length, 1);
+    reply(requestId); for (let i = 0; i < 6; i++) await Promise.resolve();
+    transport.openStatusPanel(); assert.equal(statuses().length, 1);
+    transport.closeStatusPanel(); transport.openStatusPanel(); assert.equal(statuses().length, 2);
+    transport.disconnect();
+  });
+
+  void it("renews before expiry through a fresh bound challenge without replaying commands", () => {
+    const store = new AiDmClientStore(), transport = new AiDmTransport(store);
+    const old = authenticate(transport, store), original = transport.chatKitHeaders();
+    const renewal = scheduled.find(t => t.delay > 25_000 && t.delay <= 30_000);
+    assert.ok(renewal);
+    renewal.callback();
+    assert.equal(old.closeCode, 1000);
+    assert.equal(store.state.connection, "authenticating");
+    assert.throws(() => transport.chatKitHeaders(), /Renewing/);
+    const fresh = FakeWebSocket.instances[1]; assert.ok(fresh); fresh.open();
+    const identify = parsedMessages(fresh)[0]?.["payload"] as Record<string, unknown>;
+    assert.equal(identify["clientId"], original["x-ai-dm-client"]);
+    assert.equal(identify["browserSessionId"], original["x-ai-dm-browser-session"]);
+    fresh.message({ type: "aiDm.auth.challenge", payload: { challengeId: "challenge-new", challenge: "d".repeat(43), connectionId: "connection-new", expiresAt: new Date(Date.now() + 30_000).toISOString() } });
+    fresh.message({ type: "aiDm.auth.accepted", payload: { clientId: identify["clientId"], sessionCredential: "n".repeat(43), expiresAt: new Date(Date.now() + 600_000).toISOString() } });
+    fresh.message({ type: "aiDm.connected", payload: { clientId: identify["clientId"], userId: "user-1", worldId: "world-1", lane: "gm", sessionExpiresAt: new Date(Date.now() + 600_000).toISOString() } });
+    assert.equal(transport.chatKitHeaders()["x-ai-dm-session"], "n".repeat(43));
+    assert.deepEqual(parsedMessages(fresh).map(m => m["type"]), ["aiDm.auth.identify", "aiDm.auth.assertion", "aiDm.connect"]);
+    // Late old-socket data cannot overwrite the fresh session.
+    old.message({ type: "aiDm.auth.accepted", payload: { clientId: identify["clientId"], sessionCredential: "x".repeat(43), expiresAt: new Date(Date.now() + 600_000).toISOString() } });
+    assert.equal(transport.chatKitHeaders()["x-ai-dm-session"], "n".repeat(43));
+    transport.disconnect();
+  });
+
+  void it("expired submit requests renewal and sends no action; renewal failure has an explicit message", () => {
+    const store = new AiDmClientStore(), transport = new AiDmTransport(store);
+    const old = authenticate(transport, store), sent = old.sent.length;
+    const actualNow = Date.now;
+    try { Date.now = () => actualNow() + 120_000; assert.throws(() => transport.chatKitHeaders(), /expired/); }
+    finally { Date.now = actualNow; }
+    assert.equal(old.sent.length, sent);
+    const fresh = FakeWebSocket.instances[1]; assert.ok(fresh); fresh.open();
+    foundryAck = { ok: false };
+    fresh.message({ type: "aiDm.auth.challenge", payload: { challengeId: "challenge-new", challenge: "d".repeat(43), connectionId: "connection-new", expiresAt: new Date(Date.now() + 30_000).toISOString() } });
+    assert.equal(store.state.connection, "authentication-failed");
+    assert.match(store.state.connectionMessage, /credential renewal failed/);
+    assert.throws(() => transport.chatKitHeaders(), /credential renewal failed/);
+    assert.equal(parsedMessages(fresh).some(m => m["type"] === "aiDm.command"), false);
+    transport.disconnect();
+  });
+
+  void it("disconnect cancels renewal and a late renewal callback cannot reconnect", () => {
+    const store = new AiDmClientStore(), transport = new AiDmTransport(store);
+    authenticate(transport, store);
+    const renewal = scheduled.find(t => t.delay > 25_000 && t.delay <= 30_000); assert.ok(renewal);
+    transport.disconnect(); renewal.callback();
+    assert.equal(FakeWebSocket.instances.length, 1);
+  });
+
   void it("supplies ChatKit headers only for a current authenticated GM without persisting credentials", () => {
     const store = new AiDmClientStore();
     const transport = new AiDmTransport(store);

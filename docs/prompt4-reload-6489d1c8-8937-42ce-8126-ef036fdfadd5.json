@@ -1,0 +1,57 @@
+{
+  "before": {
+    "correlationId": "578ee550-314f-4187-8a80-da18de48ffc6",
+    "acknowledged": true,
+    "replayed": false,
+    "acknowledgedAt": "2026-10-03T20:17:42.361Z",
+    "clientUserId": "X7X4KK7zca5U2Ics",
+    "executingClientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+    "expectedSceneId": null,
+    "activeSceneId": "Nbj38PEdvw1zX1J9",
+    "scenePreloaded": false,
+    "activeSceneMatches": true,
+    "sceneReady": false,
+    "assets": [],
+    "viewport": {
+      "x": 3625,
+      "y": 4875,
+      "scale": 1
+    },
+    "applied": {
+      "preload": false,
+      "viewport": false
+    },
+    "warnings": [],
+    "incomplete": false,
+    "client": {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "userId": "X7X4KK7zca5U2Ics",
+      "lane": "gm",
+      "isGM": true,
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0"
+    }
+  },
+  "receipt": {
+    "correlationId": "c122bd2e-d789-4206-866a-7151077d39e3",
+    "acknowledged": true,
+    "replayed": false,
+    "acknowledgedAt": "2026-10-03T20:17:42.384Z",
+    "clientUserId": "X7X4KK7zca5U2Ics",
+    "executingClientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+    "reloadScheduled": true,
+    "reloadAfterMs": 500,
+    "client": {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "userId": "X7X4KK7zca5U2Ics",
+      "lane": "gm",
+      "isGM": true,
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0"
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "capturedAt": "2026-10-02T19:38:41.343Z",
+  "kind": "read-only-pre-restart",
+  "artifactCount": 42,
+  "artifactsMatch": true,
+  "diskMaxModelTurns": "2",
+  "rows": [
+    {
+      "module": "ai",
+      "path": "server/dist/latency-trace.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/context/world-campaign.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/index.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/app.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/gateway.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/read-tools.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/catalog-tools.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/pause-actions.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/core-actions.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/attack-actions.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/session-actions.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/pause-request.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/routine-completion.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/narration-request.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/tool-audit.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-request.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-document-actions.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-tool-policy.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-file-actions.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-files.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/native-actions.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/campaign-actions.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/turns.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/bounded-call.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/tool-catalog/runtime.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/tool-catalog/catalog.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/tool-catalog/canonical.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/tool-catalog/foundry-local-api-adapter.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "shared/dist/ai-dungeon-master.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "shared/dist/chatkit.js",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "chatkit-server/app.py",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "chatkit-server/dm_prompt.py",
+      "matches": true
+    },
+    {
+      "module": "ai",
+      "path": "module/dist/index.js",
+      "matches": true
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/index.js",
+      "matches": true
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/app.js",
+      "matches": true
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/latency-trace.js",
+      "matches": true
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/endpoints/registry.js",
+      "matches": true
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/bridge/foundry-client.js",
+      "matches": true
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/endpoints/routine-mutation-lane.js",
+      "matches": true
+    },
+    {
+      "module": "mcp",
+      "path": "shared/dist/protocol.js",
+      "matches": true
+    },
+    {
+      "module": "mcp",
+      "path": "module/dist/index.js",
+      "matches": true
+    },
+    {
+      "module": "mcp",
+      "path": "module/src/latency-build.ts",
+      "matches": true
+    }
+  ]
+}

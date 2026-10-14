@@ -1,0 +1,11 @@
+{"type": "pause-timing", "traceId": "", "scopeId": "1d475377-5ecd-4072-9c87-c3f7adc01240", "elapsedMs": 0, "stage": "model-request", "atMs": 1791068771848.7075, "request": 1, "transportRetryLimit": 0, "model": "fixture", "reasoning": null, "toolNames": []}
+{"type": "pause-timing", "traceId": "", "scopeId": "99960498-d1f9-468b-87bb-2c6bb4687c5f", "elapsedMs": 0, "stage": "model-request", "atMs": 1791068771849.5432, "request": 1, "transportRetryLimit": 0, "model": "fixture", "reasoning": null, "toolNames": []}
+{"type": "pause-timing", "traceId": "", "scopeId": "99960498-d1f9-468b-87bb-2c6bb4687c5f", "elapsedMs": 0.2046999870799482, "stage": "model-request", "atMs": 1791068771849.7112, "request": 2, "transportRetryLimit": 0, "model": "fixture", "reasoning": null, "toolNames": []}
+{"type": "pause-timing", "traceId": "", "scopeId": "a7f3ac1a-cb38-450c-8e24-3f3067cabfff", "elapsedMs": 0, "stage": "model-request", "atMs": 1791068771850.1304, "request": 1, "transportRetryLimit": 0, "model": "fixture", "reasoning": null, "toolNames": []}
+{"type": "pause-timing", "traceId": "", "scopeId": "a7f3ac1a-cb38-450c-8e24-3f3067cabfff", "elapsedMs": 0.28630002634599805, "stage": "model-request", "atMs": 1791068771850.3806, "request": 2, "transportRetryLimit": 0, "model": "fixture", "reasoning": null, "toolNames": []}
+{"type": "pause-timing", "traceId": "", "scopeId": "a7f3ac1a-cb38-450c-8e24-3f3067cabfff", "elapsedMs": 0.5508000031113625, "stage": "model-request", "atMs": 1791068771850.6448, "request": 3, "transportRetryLimit": 0, "model": "fixture", "reasoning": null, "toolNames": []}
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.294s
+
+OK

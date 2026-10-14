@@ -1,0 +1,13 @@
+{
+  "samples": 1000,
+  "condition": "offline temp filesystem, stdout redirected, warm repeated append",
+  "totalMs": 1620.4062000033446,
+  "meanMs": 1.6204062000033446,
+  "diagnostics": {
+    "writes": 1000,
+    "dropped": 0,
+    "writeDurationMs": 1598.6883002042305,
+    "maxWriteDurationMs": 7.140200003050268
+  },
+  "liveLatency": false
+}

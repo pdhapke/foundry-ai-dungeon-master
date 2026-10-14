@@ -1,0 +1,623 @@
+[
+  {
+    "threadId": "thr_74e3c7f8",
+    "pairId": "msg_tool_460b626d25fb6d167cb6b5775c2e2307",
+    "callId": "call_5vmLgG6MFHT9PXUOll4iGvhX",
+    "tool": "foundry_attack_sequence",
+    "arguments": {
+      "action_id": "phase4-live-sequence-one",
+      "steps": [
+        {
+          "step_id": "first",
+          "scene_id": "xj5praphJhGr6mxL",
+          "attacker_token_id": "4Jgz4kpyTaMpkdHn",
+          "actor_id": "7Omg3czrr0z94iw4",
+          "item_id": "v6aPlCpfDEZdyhvB",
+          "activity_id": "AttackFixture001",
+          "target_token_id": "z2oFZhuQdL4GQ793",
+          "advantage": "normal",
+          "attack_mode": null,
+          "ammunition_id": null,
+          "ability_id": null
+        },
+        {
+          "step_id": "second",
+          "scene_id": "xj5praphJhGr6mxL",
+          "attacker_token_id": "4Jgz4kpyTaMpkdHn",
+          "actor_id": "7Omg3czrr0z94iw4",
+          "item_id": "v6aPlCpfDEZdyhvB",
+          "activity_id": "AttackFixture001",
+          "target_token_id": "z2oFZhuQdL4GQ793",
+          "advantage": "normal",
+          "attack_mode": null,
+          "ammunition_id": null,
+          "ability_id": null
+        }
+      ],
+      "max_duration_ms": 8000
+    },
+    "receipt": {
+      "schemaVersion": "attack-sequence-v1",
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "requestId": "77dded44b5d8595d3052eec4809fea56ed0a7e8142f267a1cc8ee3df4559ba5e",
+      "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+      "action": {
+        "mode": "execute",
+        "steps": [
+          {
+            "stepId": "first",
+            "attack": {
+              "mode": "roll",
+              "sceneId": "xj5praphJhGr6mxL",
+              "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+              "actorId": "7Omg3czrr0z94iw4",
+              "itemId": "v6aPlCpfDEZdyhvB",
+              "activityId": "AttackFixture001",
+              "targetTokenId": "z2oFZhuQdL4GQ793",
+              "advantage": "normal"
+            }
+          },
+          {
+            "stepId": "second",
+            "attack": {
+              "mode": "roll",
+              "sceneId": "xj5praphJhGr6mxL",
+              "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+              "actorId": "7Omg3czrr0z94iw4",
+              "itemId": "v6aPlCpfDEZdyhvB",
+              "activityId": "AttackFixture001",
+              "targetTokenId": "z2oFZhuQdL4GQ793",
+              "advantage": "normal"
+            }
+          }
+        ],
+        "maxDurationMs": 8000
+      },
+      "outcome": "confirmed",
+      "mutated": true,
+      "state": {
+        "sequenceRequestId": "77dded44b5d8595d3052eec4809fea56ed0a7e8142f267a1cc8ee3df4559ba5e",
+        "plan": [
+          {
+            "stepId": "first",
+            "attack": {
+              "mode": "roll",
+              "sceneId": "xj5praphJhGr6mxL",
+              "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+              "actorId": "7Omg3czrr0z94iw4",
+              "itemId": "v6aPlCpfDEZdyhvB",
+              "activityId": "AttackFixture001",
+              "targetTokenId": "z2oFZhuQdL4GQ793",
+              "advantage": "normal"
+            }
+          },
+          {
+            "stepId": "second",
+            "attack": {
+              "mode": "roll",
+              "sceneId": "xj5praphJhGr6mxL",
+              "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+              "actorId": "7Omg3czrr0z94iw4",
+              "itemId": "v6aPlCpfDEZdyhvB",
+              "activityId": "AttackFixture001",
+              "targetTokenId": "z2oFZhuQdL4GQ793",
+              "advantage": "normal"
+            }
+          }
+        ],
+        "completedStepCount": 2,
+        "steps": [
+          {
+            "stepId": "first",
+            "rollReceipt": {
+              "schemaVersion": "attack-actions-v1",
+              "worldId": "izzy-campaign",
+              "userId": "X7X4KK7zca5U2Ics",
+              "requestId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235",
+              "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+              "action": {
+                "mode": "roll",
+                "sceneId": "xj5praphJhGr6mxL",
+                "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                "actorId": "7Omg3czrr0z94iw4",
+                "itemId": "v6aPlCpfDEZdyhvB",
+                "activityId": "AttackFixture001",
+                "targetTokenId": "z2oFZhuQdL4GQ793",
+                "advantage": "normal"
+              },
+              "mutated": true,
+              "state": {
+                "systemId": "dnd5e",
+                "systemVersion": "6.0.3",
+                "attackRequestId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235",
+                "source": {
+                  "sceneId": "xj5praphJhGr6mxL",
+                  "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                  "actorId": "7Omg3czrr0z94iw4",
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "activityId": "AttackFixture001",
+                  "targetTokenId": "z2oFZhuQdL4GQ793"
+                },
+                "hpBefore": {
+                  "value": 40,
+                  "temp": 4,
+                  "max": 40
+                },
+                "hpAfter": null,
+                "damageApplied": null,
+                "targetAC": 10,
+                "targetActorId": "uwyaFQurD4uFZCKC",
+                "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+                "attackerPosition": {
+                  "x": 300,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "targetPosition": {
+                  "x": 700,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "sourceItemRevision": 1790914890592,
+                "rulesLimitations": [
+                  "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+                ],
+                "resourcesBefore": [
+                  {
+                    "itemId": "v6aPlCpfDEZdyhvB",
+                    "quantity": 1,
+                    "uses": {
+                      "max": null,
+                      "spent": 0
+                    }
+                  },
+                  {
+                    "itemId": "xfCubW10VwZVTVSI",
+                    "quantity": 1,
+                    "uses": {
+                      "max": 3,
+                      "spent": 0
+                    }
+                  }
+                ],
+                "attackRoll": {
+                  "rollId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235:attack",
+                  "formula": "1d20 + 3 + 2",
+                  "total": 22,
+                  "result": "17 + 3 + 2",
+                  "isCritical": false,
+                  "isFumble": false
+                },
+                "hit": true,
+                "critical": false,
+                "damageRolls": [
+                  {
+                    "rollId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235:damage:0",
+                    "formula": "1d4 + 3",
+                    "total": 7,
+                    "result": "4 + 3",
+                    "isCritical": false,
+                    "isFumble": false,
+                    "type": "bludgeoning",
+                    "properties": []
+                  }
+                ],
+                "damageRolled": 7,
+                "decisions": [],
+                "resourcesAfter": [
+                  {
+                    "itemId": "v6aPlCpfDEZdyhvB",
+                    "quantity": 1,
+                    "uses": {
+                      "max": null,
+                      "spent": 0
+                    }
+                  },
+                  {
+                    "itemId": "xfCubW10VwZVTVSI",
+                    "quantity": 1,
+                    "uses": {
+                      "max": 3,
+                      "spent": 0
+                    }
+                  }
+                ],
+                "stage": "damage-rolled"
+              },
+              "outcome": "confirmed"
+            },
+            "applyReceipt": {
+              "schemaVersion": "attack-actions-v1",
+              "worldId": "izzy-campaign",
+              "userId": "X7X4KK7zca5U2Ics",
+              "requestId": "ec0bfdeebac6ca51a3501386679f80004881abb5d317d99c3a2c6d7ca3f3e529",
+              "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+              "action": {
+                "mode": "apply",
+                "priorAttackRequestId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235"
+              },
+              "mutated": true,
+              "state": {
+                "systemId": "dnd5e",
+                "systemVersion": "6.0.3",
+                "attackRequestId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235",
+                "source": {
+                  "sceneId": "xj5praphJhGr6mxL",
+                  "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                  "actorId": "7Omg3czrr0z94iw4",
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "activityId": "AttackFixture001",
+                  "targetTokenId": "z2oFZhuQdL4GQ793"
+                },
+                "hpBefore": {
+                  "value": 40,
+                  "temp": 4,
+                  "max": 40
+                },
+                "hpAfter": {
+                  "value": 37,
+                  "temp": 0,
+                  "max": 40
+                },
+                "damageApplied": 7,
+                "targetAC": 10,
+                "targetActorId": "uwyaFQurD4uFZCKC",
+                "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+                "attackerPosition": {
+                  "x": 300,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "targetPosition": {
+                  "x": 700,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "sourceItemRevision": 1790914890592,
+                "rulesLimitations": [
+                  "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+                ],
+                "resourcesBefore": [
+                  {
+                    "itemId": "v6aPlCpfDEZdyhvB",
+                    "quantity": 1,
+                    "uses": {
+                      "max": null,
+                      "spent": 0
+                    }
+                  },
+                  {
+                    "itemId": "xfCubW10VwZVTVSI",
+                    "quantity": 1,
+                    "uses": {
+                      "max": 3,
+                      "spent": 0
+                    }
+                  }
+                ],
+                "attackRoll": {
+                  "rollId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235:attack",
+                  "formula": "1d20 + 3 + 2",
+                  "total": 22,
+                  "result": "17 + 3 + 2",
+                  "isCritical": false,
+                  "isFumble": false
+                },
+                "hit": true,
+                "critical": false,
+                "damageRolls": [
+                  {
+                    "rollId": "e19e4a448cc587d0e0c563a6e3c8b6f15b0e217ad1531fb9c378607f2361e235:damage:0",
+                    "formula": "1d4 + 3",
+                    "total": 7,
+                    "result": "4 + 3",
+                    "isCritical": false,
+                    "isFumble": false,
+                    "type": "bludgeoning",
+                    "properties": []
+                  }
+                ],
+                "damageRolled": 7,
+                "decisions": [],
+                "resourcesAfter": [
+                  {
+                    "itemId": "v6aPlCpfDEZdyhvB",
+                    "quantity": 1,
+                    "uses": {
+                      "max": null,
+                      "spent": 0
+                    }
+                  },
+                  {
+                    "itemId": "xfCubW10VwZVTVSI",
+                    "quantity": 1,
+                    "uses": {
+                      "max": 3,
+                      "spent": 0
+                    }
+                  }
+                ],
+                "stage": "damage-applied",
+                "adjustedDamage": [
+                  {
+                    "type": "bludgeoning",
+                    "value": 7,
+                    "active": {
+                      "multiplier": 1
+                    }
+                  }
+                ]
+              },
+              "outcome": "confirmed"
+            }
+          },
+          {
+            "stepId": "second",
+            "rollReceipt": {
+              "schemaVersion": "attack-actions-v1",
+              "worldId": "izzy-campaign",
+              "userId": "X7X4KK7zca5U2Ics",
+              "requestId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0",
+              "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+              "action": {
+                "mode": "roll",
+                "sceneId": "xj5praphJhGr6mxL",
+                "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                "actorId": "7Omg3czrr0z94iw4",
+                "itemId": "v6aPlCpfDEZdyhvB",
+                "activityId": "AttackFixture001",
+                "targetTokenId": "z2oFZhuQdL4GQ793",
+                "advantage": "normal"
+              },
+              "mutated": true,
+              "state": {
+                "systemId": "dnd5e",
+                "systemVersion": "6.0.3",
+                "attackRequestId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0",
+                "source": {
+                  "sceneId": "xj5praphJhGr6mxL",
+                  "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                  "actorId": "7Omg3czrr0z94iw4",
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "activityId": "AttackFixture001",
+                  "targetTokenId": "z2oFZhuQdL4GQ793"
+                },
+                "hpBefore": {
+                  "value": 37,
+                  "temp": 0,
+                  "max": 40
+                },
+                "hpAfter": null,
+                "damageApplied": null,
+                "targetAC": 10,
+                "targetActorId": "uwyaFQurD4uFZCKC",
+                "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+                "attackerPosition": {
+                  "x": 300,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "targetPosition": {
+                  "x": 700,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "sourceItemRevision": 1790914890592,
+                "rulesLimitations": [
+                  "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+                ],
+                "resourcesBefore": [
+                  {
+                    "itemId": "v6aPlCpfDEZdyhvB",
+                    "quantity": 1,
+                    "uses": {
+                      "max": null,
+                      "spent": 0
+                    }
+                  },
+                  {
+                    "itemId": "xfCubW10VwZVTVSI",
+                    "quantity": 1,
+                    "uses": {
+                      "max": 3,
+                      "spent": 0
+                    }
+                  }
+                ],
+                "attackRoll": {
+                  "rollId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0:attack",
+                  "formula": "1d20 + 3 + 2",
+                  "total": 18,
+                  "result": "13 + 3 + 2",
+                  "isCritical": false,
+                  "isFumble": false
+                },
+                "hit": true,
+                "critical": false,
+                "damageRolls": [
+                  {
+                    "rollId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0:damage:0",
+                    "formula": "1d4 + 3",
+                    "total": 5,
+                    "result": "2 + 3",
+                    "isCritical": false,
+                    "isFumble": false,
+                    "type": "bludgeoning",
+                    "properties": []
+                  }
+                ],
+                "damageRolled": 5,
+                "decisions": [],
+                "resourcesAfter": [
+                  {
+                    "itemId": "v6aPlCpfDEZdyhvB",
+                    "quantity": 1,
+                    "uses": {
+                      "max": null,
+                      "spent": 0
+                    }
+                  },
+                  {
+                    "itemId": "xfCubW10VwZVTVSI",
+                    "quantity": 1,
+                    "uses": {
+                      "max": 3,
+                      "spent": 0
+                    }
+                  }
+                ],
+                "stage": "damage-rolled"
+              },
+              "outcome": "confirmed"
+            },
+            "applyReceipt": {
+              "schemaVersion": "attack-actions-v1",
+              "worldId": "izzy-campaign",
+              "userId": "X7X4KK7zca5U2Ics",
+              "requestId": "93d83482400d4f72e32c5255ae42cfc16d043baf2bb97a8c9de880253d9159ef",
+              "correlationId": "aidm-56d58e4f-1239-46e9-922e-cebe018d52e8",
+              "action": {
+                "mode": "apply",
+                "priorAttackRequestId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0"
+              },
+              "mutated": true,
+              "state": {
+                "systemId": "dnd5e",
+                "systemVersion": "6.0.3",
+                "attackRequestId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0",
+                "source": {
+                  "sceneId": "xj5praphJhGr6mxL",
+                  "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                  "actorId": "7Omg3czrr0z94iw4",
+                  "itemId": "v6aPlCpfDEZdyhvB",
+                  "activityId": "AttackFixture001",
+                  "targetTokenId": "z2oFZhuQdL4GQ793"
+                },
+                "hpBefore": {
+                  "value": 37,
+                  "temp": 0,
+                  "max": 40
+                },
+                "hpAfter": {
+                  "value": 32,
+                  "temp": 0,
+                  "max": 40
+                },
+                "damageApplied": 5,
+                "targetAC": 10,
+                "targetActorId": "uwyaFQurD4uFZCKC",
+                "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+                "attackerPosition": {
+                  "x": 300,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "targetPosition": {
+                  "x": 700,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "sourceItemRevision": 1790914890592,
+                "rulesLimitations": [
+                  "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+                ],
+                "resourcesBefore": [
+                  {
+                    "itemId": "v6aPlCpfDEZdyhvB",
+                    "quantity": 1,
+                    "uses": {
+                      "max": null,
+                      "spent": 0
+                    }
+                  },
+                  {
+                    "itemId": "xfCubW10VwZVTVSI",
+                    "quantity": 1,
+                    "uses": {
+                      "max": 3,
+                      "spent": 0
+                    }
+                  }
+                ],
+                "attackRoll": {
+                  "rollId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0:attack",
+                  "formula": "1d20 + 3 + 2",
+                  "total": 18,
+                  "result": "13 + 3 + 2",
+                  "isCritical": false,
+                  "isFumble": false
+                },
+                "hit": true,
+                "critical": false,
+                "damageRolls": [
+                  {
+                    "rollId": "8df79cfa74aca0fa72191fb9f4ea551870bcbe89d4ce04963387bf36cd3d12e0:damage:0",
+                    "formula": "1d4 + 3",
+                    "total": 5,
+                    "result": "2 + 3",
+                    "isCritical": false,
+                    "isFumble": false,
+                    "type": "bludgeoning",
+                    "properties": []
+                  }
+                ],
+                "damageRolled": 5,
+                "decisions": [],
+                "resourcesAfter": [
+                  {
+                    "itemId": "v6aPlCpfDEZdyhvB",
+                    "quantity": 1,
+                    "uses": {
+                      "max": null,
+                      "spent": 0
+                    }
+                  },
+                  {
+                    "itemId": "xfCubW10VwZVTVSI",
+                    "quantity": 1,
+                    "uses": {
+                      "max": 3,
+                      "spent": 0
+                    }
+                  }
+                ],
+                "stage": "damage-applied",
+                "adjustedDamage": [
+                  {
+                    "type": "bludgeoning",
+                    "value": 5,
+                    "active": {
+                      "multiplier": 1
+                    }
+                  }
+                ]
+              },
+              "outcome": "confirmed"
+            }
+          }
+        ],
+        "continuation": null,
+        "limitations": [
+          "Explicit GM-authorized list; no inferred Multiattack entitlement or action economy.",
+          "Non-atomic. Budget checked between awaited native stages; in-flight native work cannot be cancelled.",
+          "Reaction and uncertain outcomes require manual reconciliation."
+        ]
+      }
+    },
+    "assistantItems": [
+      {
+        "id": "msg_receipt_04650c18407947c2b0b04d0ae53dc8be",
+        "text": [
+          "Attack sequence: 2 completed step(s); confirmed. Step 1: Attack: 22 (17 + 3 + 2). Hit. Damage rolled: 7 (7 bludgeoning (4 + 3)). Damage applied: 7; HP 40 \u2192 37, temporary HP 4 \u2192 0. Step 2: Attack: 18 (13 + 3 + 2). Hit. Damage rolled: 5 (5 bludgeoning (2 + 3)). Damage applied: 5; HP 37 \u2192 32, temporary HP 0 \u2192 0."
+        ]
+      },
+      {
+        "id": "msg_076a7134c4ce29f2016ac03b54193887d280b9a7b172997461",
+        "text": [
+          "- **First:** Attack **22** vs AC 10 \u2014 hit. Damage **7 rolled / 7 applied**. HP: **40 + 4 temp \u2192 37 + 0 temp**.\n- **Second:** Attack **18** vs AC 10 \u2014 hit. Damage **5 rolled / 5 applied**. HP: **37 \u2192 32**.\n- **Total:** **12 rolled / 12 applied**. Final HP: **32/40**, **0 temp**."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "capturedAt": "2026-10-02T21:55:23.312Z",
+  "checks": {
+    "resourceItemRemoved": true,
+    "actorHpRestored": true,
+    "targetHpRestored": true,
+    "pauseRestored": true,
+    "autoFalse": true,
+    "attackPendingPreserved": true,
+    "sequencePendingPreserved": true
+  },
+  "activeScenes": [
+    "Nbj38PEdvw1zX1J9"
+  ],
+  "beforeKeys": [
+    "capabilities",
+    "status",
+    "automaticEvents",
+    "actor",
+    "target",
+    "scene",
+    "scenes",
+    "combats",
+    "pause"
+  ],
+  "pass": true
+}

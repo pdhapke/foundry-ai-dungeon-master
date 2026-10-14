@@ -1,0 +1,155 @@
+{
+  "capturedAt": "2026-10-03T21:44:46.294Z",
+  "scope": "Native model-free query of proposed local public description point; no description approved or published by this preflight.",
+  "observation": {
+    "capturedAt": "2026-10-03T21:44:46.274Z",
+    "observation": {
+      "version": 1,
+      "id": "5a90de9f-86e1-49c8-97ba-1732b3e75b0a",
+      "worldId": "izzy-campaign",
+      "sceneId": "Nbj38PEdvw1zX1J9",
+      "userId": "edtBL96Yu3058QAT",
+      "tokenId": "5afpFlCHHnclifNw",
+      "actorId": "P9YnTVjX8thvZ8eM",
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "isGM": false,
+      "optedIn": true,
+      "capturedAt": "2026-10-03T21:44:46.274Z",
+      "stateRevision": "a610aa342ed471889056c8bc6d177919259d2d5617ab566b495c7ddc2bc03c66",
+      "readiness": "ready",
+      "basis": "request-local-native-render-flags",
+      "pendingRenderFlags": 0
+    },
+    "sceneId": "Nbj38PEdvw1zX1J9",
+    "effectiveUserId": "edtBL96Yu3058QAT",
+    "tokenId": "5afpFlCHHnclifNw",
+    "status": "complete",
+    "issues": [],
+    "context": {
+      "selectedUser": true,
+      "selectedToken": true,
+      "tokenOwned": true,
+      "sceneLoaded": true
+    },
+    "visible": {
+      "tokens": [
+        "5afpFlCHHnclifNw"
+      ],
+      "notes": [],
+      "tiles": []
+    },
+    "redaction": {
+      "occludedEntities": true,
+      "hiddenRegions": true,
+      "barrierDocumentIds": true,
+      "barrierCoordinates": true,
+      "secretDoors": true,
+      "exitDestinations": true
+    },
+    "queryPoints": [
+      {
+        "id": "terrain-calibration",
+        "visible": true,
+        "regions": [],
+        "blockerAttribution": "none",
+        "blockerKeys": []
+      }
+    ],
+    "effectiveSources": {
+      "vision": 1,
+      "light": 2
+    },
+    "isolation": {
+      "status": "complete",
+      "method": "foundry-v14-detection-modes",
+      "detectionModes": 2,
+      "unrelatedVisionSourcesIgnored": 0,
+      "visionProvidingLightsIgnored": 0
+    },
+    "environment": {
+      "fog": "complete",
+      "lighting": "complete",
+      "darkness": "complete",
+      "vision": "complete",
+      "regions": "complete",
+      "fogExplorationEnabled": true,
+      "tokenVisionEnabled": true,
+      "globalLight": false,
+      "darknessLevel": 0.82
+    },
+    "regions": [],
+    "visibleBarriers": [],
+    "coveragePolygons": [
+      {
+        "source": "selected-token",
+        "points": [
+          {
+            "x": 450,
+            "y": 675
+          },
+          {
+            "x": 446.65063509461095,
+            "y": 687.5
+          },
+          {
+            "x": 437.5,
+            "y": 696.650635094611
+          },
+          {
+            "x": 425,
+            "y": 700
+          },
+          {
+            "x": 412.5,
+            "y": 696.650635094611
+          },
+          {
+            "x": 403.34936490538905,
+            "y": 687.5
+          },
+          {
+            "x": 400,
+            "y": 675
+          },
+          {
+            "x": 403.34936490538905,
+            "y": 662.5
+          },
+          {
+            "x": 412.5,
+            "y": 653.349364905389
+          },
+          {
+            "x": 425,
+            "y": 650
+          },
+          {
+            "x": 437.5,
+            "y": 653.349364905389
+          },
+          {
+            "x": 446.65063509461095,
+            "y": 662.5
+          }
+        ]
+      }
+    ],
+    "fogRevision": "39157ad7e8bb67039061c86855a71f5102113850cac6137f6d53413cfd66537a",
+    "persistence": {
+      "beforeRevision": "a610aa342ed471889056c8bc6d177919259d2d5617ab566b495c7ddc2bc03c66",
+      "afterRevision": "a610aa342ed471889056c8bc6d177919259d2d5617ab566b495c7ddc2bc03c66",
+      "unchanged": true
+    },
+    "bounds": {
+      "truncated": false,
+      "visiblePerKind": 500,
+      "regions": 250,
+      "barriers": 500,
+      "coverageSources": 100,
+      "coveragePointsPerSource": 512,
+      "issues": 50
+    }
+  },
+  "inferenceRequests": 0,
+  "mutations": 0
+}

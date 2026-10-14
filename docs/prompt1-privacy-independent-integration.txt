@@ -1,0 +1,195 @@
+Γ£ö scripted setup ΓåÆ exact approval ΓåÆ persisted canon ΓåÆ prep ΓåÆ refreshed recall (real filesystem/SQLite, no model) (389.0118ms)
+Γ£ö digest, stale revisions, reject/cancel, metadata and cross-scope policies (346.3815ms)
+Γ£ö privacy denial and cancelled run cannot persist drafts/canon (15.8692ms)
+Γ£ö expired proposals, revoked approval and interrupted draft checkpoint remain safe (118.3323ms)
+Γ£ö overview and indexed retrieval withhold context during interrupted writes (178.0844ms)
+Γ£ö restart reconciles durable filesystem receipt after missing SQLite completion checkpoint (169.5709ms)
+Γ£ö partial commit is rolled back on authorized inspection and never redispatched (155.5168ms)
+Γ£ö authenticated adapter exposes campaign wrappers but no model approval (99.4051ms)
+Γ£ö campaign decisions wait for manual turn and cancellation releases their queue position (2.8677ms)
+Γ£ö a separate process winning rejection prevents parent approval dispatch (622.8306ms)
+{"type":"pause-timing","traceId":"ae90c3db-d357-4782-93e9-000862e27d5b","stage":"request-arrival","atMs":1791069059910,"requestArrivedAtMs":1791069059909,"elapsedMs":0.11249999999995453}
+{"type":"pause-timing","traceId":"ae90c3db-d357-4782-93e9-000862e27d5b","stage":"initial-authorization-finished","atMs":1791069059910,"requestArrivedAtMs":1791069059909,"elapsedMs":1.0447000000000344}
+{"type":"pause-timing","traceId":"ae90c3db-d357-4782-93e9-000862e27d5b","stage":"direct-action-result","atMs":1791069059911,"requestArrivedAtMs":1791069059909,"elapsedMs":1.9987999999999602,"durationMs":0.7991000000000668}
+{"type":"pause-timing","traceId":"ae90c3db-d357-4782-93e9-000862e27d5b","stage":"direct-response-written","atMs":1791069059914,"requestArrivedAtMs":1791069059909,"elapsedMs":4.799600000000055}
+{"type":"pause-timing","traceId":"ae90c3db-d357-4782-93e9-000862e27d5b","stage":"queue-exit","atMs":1791069059914,"requestArrivedAtMs":1791069059909,"elapsedMs":4.877200000000016}
+{"type":"pause-timing","traceId":"a517c3fc-173b-48e3-ab6e-a45b23a8c8dc","stage":"request-arrival","atMs":1791069059925,"requestArrivedAtMs":1791069059925,"elapsedMs":0.026000000000067303}
+{"type":"pause-timing","traceId":"eda2906c-122e-4b21-a985-8ad275c4c7a0","stage":"request-arrival","atMs":1791069059931,"requestArrivedAtMs":1791069059931,"elapsedMs":0.016799999999989268}
+Γû╢ ChatKit gateway (mock sidecar)
+  Γ£ö native confirmation endpoint authenticates and verifies current GM without model credentials or provider calls (75.6251ms)
+{"type":"pause-timing","traceId":"e257f687-7ff9-4d0e-8efd-6bc8af64b568","stage":"request-arrival","atMs":1791069059939,"requestArrivedAtMs":1791069059939,"elapsedMs":0.01599999999996271}
+{"type":"pause-timing","traceId":"9b5833ee-fd72-4533-b913-cbe8c3bc801f","stage":"request-arrival","atMs":1791069059945,"requestArrivedAtMs":1791069059945,"elapsedMs":0.016899999999964166}
+  Γ£ö rejects expired sessions and players before resolving credentials (12.9505ms)
+{"type":"pause-timing","traceId":"40628061-5dde-4627-ab17-9bb19f5b3eb3","stage":"request-arrival","atMs":1791069059953,"requestArrivedAtMs":1791069059953,"elapsedMs":0.04949999999996635}
+{"type":"pause-timing","traceId":"40628061-5dde-4627-ab17-9bb19f5b3eb3","stage":"initial-authorization-finished","atMs":1791069059954,"requestArrivedAtMs":1791069059953,"elapsedMs":0.4352999999999838}
+{"type":"pause-timing","traceId":"40628061-5dde-4627-ab17-9bb19f5b3eb3","stage":"queue-entered","atMs":1791069059955,"requestArrivedAtMs":1791069059953,"elapsedMs":1.1271000000000413,"queueWaitMs":0.018000000000029104,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"40628061-5dde-4627-ab17-9bb19f5b3eb3","stage":"queued-authorization-finished","atMs":1791069059955,"requestArrivedAtMs":1791069059953,"elapsedMs":1.2449000000000296,"durationMs":0.058300000000031105}
+{"type":"pause-timing","traceId":"40628061-5dde-4627-ab17-9bb19f5b3eb3","stage":"credentials-resolved","atMs":1791069059955,"requestArrivedAtMs":1791069059953,"elapsedMs":1.3754000000000133,"model":"test-model","durationMs":0.06770000000005894}
+{"type":"pause-timing","traceId":"40628061-5dde-4627-ab17-9bb19f5b3eb3","stage":"stream-authorization","atMs":1791069059974,"requestArrivedAtMs":1791069059953,"elapsedMs":20.72230000000002,"durationMs":0.19410000000004857}
+{"type":"pause-timing","traceId":"40628061-5dde-4627-ab17-9bb19f5b3eb3","stage":"first-visible-stream-chunk","atMs":1791069059974,"requestArrivedAtMs":1791069059953,"elapsedMs":20.799999999999955}
+{"type":"pause-timing","traceId":"40628061-5dde-4627-ab17-9bb19f5b3eb3","stage":"final-response-finished","atMs":1791069059975,"requestArrivedAtMs":1791069059953,"elapsedMs":21.41840000000002}
+{"type":"pause-timing","traceId":"40628061-5dde-4627-ab17-9bb19f5b3eb3","stage":"queue-exit","atMs":1791069059975,"requestArrivedAtMs":1791069059953,"elapsedMs":21.46479999999997}
+  Γ£ö preserves native SSE and confines credentials to authenticated loopback (29.1113ms)
+{"type":"pause-timing","traceId":"8b6031d0-857b-4182-8b2f-2943f8d5735e","stage":"request-arrival","atMs":1791069059981,"requestArrivedAtMs":1791069059981,"elapsedMs":0.016100000000051296}
+{"type":"pause-timing","traceId":"c8fce9c8-3829-4250-9eff-7546afc8cd08","stage":"request-arrival","atMs":1791069059987,"requestArrivedAtMs":1791069059987,"elapsedMs":0.01310000000000855}
+{"type":"pause-timing","traceId":"9a4d8479-e8b9-4e60-8f27-ae40494d9bf6","stage":"request-arrival","atMs":1791069059994,"requestArrivedAtMs":1791069059994,"elapsedMs":0.03590000000008331}
+  Γ£ö checks current GM authorization and origin; preflight does not request credentials (19.3424ms)
+{"type":"pause-timing","traceId":"9e8321e7-81ea-4f0c-9cb0-3943b4709190","stage":"request-arrival","atMs":1791069060001,"requestArrivedAtMs":1791069060001,"elapsedMs":0.013999999999896318}
+{"type":"pause-timing","traceId":"9e8321e7-81ea-4f0c-9cb0-3943b4709190","stage":"initial-authorization-finished","atMs":1791069060001,"requestArrivedAtMs":1791069060001,"elapsedMs":0.32950000000005275}
+{"type":"pause-timing","traceId":"9e8321e7-81ea-4f0c-9cb0-3943b4709190","stage":"queue-entered","atMs":1791069060001,"requestArrivedAtMs":1791069060001,"elapsedMs":0.4313999999999396,"queueWaitMs":0.0079000000000633,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"9e8321e7-81ea-4f0c-9cb0-3943b4709190","stage":"queued-authorization-finished","atMs":1791069060002,"requestArrivedAtMs":1791069060001,"elapsedMs":0.5241000000000895,"durationMs":0.03530000000000655}
+{"type":"pause-timing","traceId":"9e8321e7-81ea-4f0c-9cb0-3943b4709190","stage":"credentials-resolved","atMs":1791069060002,"requestArrivedAtMs":1791069060001,"elapsedMs":0.567299999999932,"model":"test-model","durationMs":0.02140000000008513}
+{"type":"pause-timing","traceId":"9e8321e7-81ea-4f0c-9cb0-3943b4709190","stage":"queue-exit","atMs":1791069060002,"requestArrivedAtMs":1791069060001,"elapsedMs":1.1911999999999807}
+  Γ£ö reports unavailable service without leaking errors (7.6571ms)
+{"type":"pause-timing","traceId":"11f43370-b655-4894-acad-7f53594daf30","stage":"request-arrival","atMs":1791069060008,"requestArrivedAtMs":1791069060008,"elapsedMs":0.01290000000017244}
+{"type":"pause-timing","traceId":"25dd772e-1373-45a5-8070-77e4cc60709f","stage":"request-arrival","atMs":1791069060015,"requestArrivedAtMs":1791069060015,"elapsedMs":0.029199999999946158}
+  Γ£ö permits the observed official ChatKit frame header on browser preflight (13.2709ms)
+Γ£ö ChatKit gateway (mock sidecar) (159.7976ms)
+{"type":"pause-timing","traceId":"123a8346-b282-457c-bbf8-8a9bb1ecec41","stage":"request-arrival","atMs":1791069060023,"requestArrivedAtMs":1791069060023,"elapsedMs":0.019199999999955253}
+{"type":"pause-timing","traceId":"123a8346-b282-457c-bbf8-8a9bb1ecec41","stage":"initial-authorization-finished","atMs":1791069060024,"requestArrivedAtMs":1791069060023,"elapsedMs":0.3389999999999418}
+{"type":"pause-timing","traceId":"123a8346-b282-457c-bbf8-8a9bb1ecec41","stage":"queue-entered","atMs":1791069060024,"requestArrivedAtMs":1791069060023,"elapsedMs":0.49939999999992324,"queueWaitMs":0.011799999999993815,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"123a8346-b282-457c-bbf8-8a9bb1ecec41","stage":"queued-authorization-finished","atMs":1791069060024,"requestArrivedAtMs":1791069060023,"elapsedMs":0.5849000000000615,"durationMs":0.050700000000006185}
+{"type":"pause-timing","traceId":"123a8346-b282-457c-bbf8-8a9bb1ecec41","stage":"credentials-resolved","atMs":1791069060024,"requestArrivedAtMs":1791069060023,"elapsedMs":0.6456000000000586,"model":"test-model","durationMs":0.03170000000000073}
+{"type":"pause-timing","traceId":"123a8346-b282-457c-bbf8-8a9bb1ecec41","stage":"stream-authorization","atMs":1791069060025,"requestArrivedAtMs":1791069060023,"elapsedMs":1.6199999999998909,"durationMs":0.22070000000007894}
+{"type":"pause-timing","traceId":"123a8346-b282-457c-bbf8-8a9bb1ecec41","stage":"first-visible-stream-chunk","atMs":1791069060025,"requestArrivedAtMs":1791069060023,"elapsedMs":1.6796999999999116}
+{"type":"pause-timing","traceId":"123a8346-b282-457c-bbf8-8a9bb1ecec41","stage":"final-response-finished","atMs":1791069060025,"requestArrivedAtMs":1791069060023,"elapsedMs":2.06899999999996}
+{"type":"pause-timing","traceId":"123a8346-b282-457c-bbf8-8a9bb1ecec41","stage":"queue-exit","atMs":1791069060026,"requestArrivedAtMs":1791069060023,"elapsedMs":2.1218999999998687}
+Γû╢ ChatKit bridge lifecycle (mock sidecar, real HTTP)
+  Γ£ö issues capability only internally and releases after streamed response (9.7811ms)
+{"type":"pause-timing","traceId":"2327e7da-fd16-4306-bffb-515f6e68207b","stage":"request-arrival","atMs":1791069060033,"requestArrivedAtMs":1791069060033,"elapsedMs":0.014000000000123691}
+{"type":"pause-timing","traceId":"2327e7da-fd16-4306-bffb-515f6e68207b","stage":"initial-authorization-finished","atMs":1791069060033,"requestArrivedAtMs":1791069060033,"elapsedMs":0.4552000000001044}
+{"type":"pause-timing","traceId":"2327e7da-fd16-4306-bffb-515f6e68207b","stage":"queue-entered","atMs":1791069060033,"requestArrivedAtMs":1791069060033,"elapsedMs":0.588799999999992,"queueWaitMs":0.008900000000039654,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"2327e7da-fd16-4306-bffb-515f6e68207b","stage":"queue-exit","atMs":1791069060034,"requestArrivedAtMs":1791069060033,"elapsedMs":1.1015999999999622}
+  Γ£ö does not forward a chunk after live GM authorization is revoked (8.1703ms)
+{"type":"pause-timing","traceId":"61b1cbba-e7c2-4e00-a2be-1b9f5ed71589","stage":"request-arrival","atMs":1791069060041,"requestArrivedAtMs":1791069060041,"elapsedMs":0.0886000000000422}
+{"type":"pause-timing","traceId":"61b1cbba-e7c2-4e00-a2be-1b9f5ed71589","stage":"initial-authorization-finished","atMs":1791069060041,"requestArrivedAtMs":1791069060041,"elapsedMs":0.42180000000007567}
+{"type":"pause-timing","traceId":"61b1cbba-e7c2-4e00-a2be-1b9f5ed71589","stage":"queue-entered","atMs":1791069060041,"requestArrivedAtMs":1791069060041,"elapsedMs":0.5596000000000458,"queueWaitMs":0.01089999999999236,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"61b1cbba-e7c2-4e00-a2be-1b9f5ed71589","stage":"queued-authorization-finished","atMs":1791069060041,"requestArrivedAtMs":1791069060041,"elapsedMs":0.630100000000084,"durationMs":0.04030000000011569}
+{"type":"pause-timing","traceId":"61b1cbba-e7c2-4e00-a2be-1b9f5ed71589","stage":"credentials-resolved","atMs":1791069060042,"requestArrivedAtMs":1791069060041,"elapsedMs":0.7270000000000891,"model":"test-model","durationMs":0.033200000000078944}
+{"type":"pause-timing","traceId":"61b1cbba-e7c2-4e00-a2be-1b9f5ed71589","stage":"queue-exit","atMs":1791069060072,"requestArrivedAtMs":1791069060041,"elapsedMs":31.23129999999992}
+{"type":"pause-timing","traceId":"b5fa95db-4213-46f2-a131-fd1475194bb4","stage":"request-arrival","atMs":1791069060078,"requestArrivedAtMs":1791069060078,"elapsedMs":0.022099999999909414}
+{"type":"pause-timing","traceId":"b5fa95db-4213-46f2-a131-fd1475194bb4","stage":"initial-authorization-finished","atMs":1791069060078,"requestArrivedAtMs":1791069060078,"elapsedMs":0.36220000000002983}
+{"type":"pause-timing","traceId":"b5fa95db-4213-46f2-a131-fd1475194bb4","stage":"queue-entered","atMs":1791069060078,"requestArrivedAtMs":1791069060078,"elapsedMs":0.5066999999999098,"queueWaitMs":0.010999999999967258,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"b5fa95db-4213-46f2-a131-fd1475194bb4","stage":"queued-authorization-finished","atMs":1791069060078,"requestArrivedAtMs":1791069060078,"elapsedMs":0.5920000000000982,"durationMs":0.0420000000001437}
+{"type":"pause-timing","traceId":"b5fa95db-4213-46f2-a131-fd1475194bb4","stage":"credentials-resolved","atMs":1791069060078,"requestArrivedAtMs":1791069060078,"elapsedMs":0.662900000000036,"model":"test-model","durationMs":0.03279999999995198}
+{"type":"pause-timing","traceId":"b5fa95db-4213-46f2-a131-fd1475194bb4","stage":"queue-exit","atMs":1791069060153,"requestArrivedAtMs":1791069060078,"elapsedMs":75.80839999999989}
+  Γ£ö bounds unresponsive headers and stalled stream; releases capabilities (119.1434ms)
+{"type":"pause-timing","traceId":"350d926f-c3ee-46b5-bd72-7d5a12ef1507","stage":"request-arrival","atMs":1791069060160,"requestArrivedAtMs":1791069060160,"elapsedMs":0.015000000000100044}
+{"type":"pause-timing","traceId":"350d926f-c3ee-46b5-bd72-7d5a12ef1507","stage":"initial-authorization-finished","atMs":1791069060160,"requestArrivedAtMs":1791069060160,"elapsedMs":0.28719999999998436}
+{"type":"pause-timing","traceId":"350d926f-c3ee-46b5-bd72-7d5a12ef1507","stage":"queue-entered","atMs":1791069060160,"requestArrivedAtMs":1791069060160,"elapsedMs":0.39620000000013533,"queueWaitMs":0.028299999999944703,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"350d926f-c3ee-46b5-bd72-7d5a12ef1507","stage":"queued-authorization-finished","atMs":1791069060161,"requestArrivedAtMs":1791069060160,"elapsedMs":0.4454000000000633,"durationMs":0.02740000000017062}
+{"type":"pause-timing","traceId":"350d926f-c3ee-46b5-bd72-7d5a12ef1507","stage":"credentials-resolved","atMs":1791069060161,"requestArrivedAtMs":1791069060160,"elapsedMs":0.4879000000000815,"model":"test-model","durationMs":0.02179999999998472}
+{"type":"pause-timing","traceId":"350d926f-c3ee-46b5-bd72-7d5a12ef1507","stage":"stream-authorization","atMs":1791069060161,"requestArrivedAtMs":1791069060160,"elapsedMs":1.3890000000001237,"durationMs":0.05609999999978754}
+{"type":"pause-timing","traceId":"350d926f-c3ee-46b5-bd72-7d5a12ef1507","stage":"first-visible-stream-chunk","atMs":1791069060162,"requestArrivedAtMs":1791069060160,"elapsedMs":1.4366999999999734}
+{"type":"pause-timing","traceId":"350d926f-c3ee-46b5-bd72-7d5a12ef1507","stage":"queue-exit","atMs":1791069060215,"requestArrivedAtMs":1791069060160,"elapsedMs":55.365999999999985}
+  Γ£ö closes a stream that stalls after its first chunk and cancels the run capability (61.8388ms)
+Γ£ö ChatKit bridge lifecycle (mock sidecar, real HTTP) (199.54ms)
+{"type":"pause-timing","traceId":"f72e8ee3-e517-4600-8f02-6375150e17d6","stage":"request-arrival","atMs":1791069060223,"requestArrivedAtMs":1791069060223,"elapsedMs":0.01759999999990214}
+{"type":"pause-timing","traceId":"f72e8ee3-e517-4600-8f02-6375150e17d6","stage":"initial-authorization-finished","atMs":1791069060223,"requestArrivedAtMs":1791069060223,"elapsedMs":0.34149999999999636}
+{"type":"pause-timing","traceId":"f72e8ee3-e517-4600-8f02-6375150e17d6","stage":"queue-entered","atMs":1791069060225,"requestArrivedAtMs":1791069060223,"elapsedMs":1.4711999999999534,"queueWaitMs":1.005200000000059,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"f72e8ee3-e517-4600-8f02-6375150e17d6","stage":"queued-authorization-finished","atMs":1791069060225,"requestArrivedAtMs":1791069060223,"elapsedMs":1.5797000000000025,"durationMs":0.037299999999959255}
+{"type":"pause-timing","traceId":"f72e8ee3-e517-4600-8f02-6375150e17d6","stage":"credentials-resolved","atMs":1791069060225,"requestArrivedAtMs":1791069060223,"elapsedMs":1.6737000000000535,"model":"test-model","durationMs":0.03950000000008913}
+{"type":"pause-timing","traceId":"f72e8ee3-e517-4600-8f02-6375150e17d6","stage":"stream-authorization","atMs":1791069060227,"requestArrivedAtMs":1791069060223,"elapsedMs":3.888300000000072,"durationMs":0.08230000000003201}
+{"type":"pause-timing","traceId":"f72e8ee3-e517-4600-8f02-6375150e17d6","stage":"first-visible-stream-chunk","atMs":1791069060227,"requestArrivedAtMs":1791069060223,"elapsedMs":3.9459999999999127}
+{"type":"pause-timing","traceId":"76bd24d4-cee3-4e7d-bb22-8b5198a04593","stage":"request-arrival","atMs":1791069060229,"requestArrivedAtMs":1791069060229,"elapsedMs":0.01960000000008222}
+{"type":"pause-timing","traceId":"76bd24d4-cee3-4e7d-bb22-8b5198a04593","stage":"initial-authorization-finished","atMs":1791069060229,"requestArrivedAtMs":1791069060229,"elapsedMs":0.3203000000000884}
+{"type":"pause-timing","traceId":"f72e8ee3-e517-4600-8f02-6375150e17d6","stage":"final-response-finished","atMs":1791069060262,"requestArrivedAtMs":1791069060223,"elapsedMs":39.391399999999976}
+{"type":"pause-timing","traceId":"f72e8ee3-e517-4600-8f02-6375150e17d6","stage":"queue-exit","atMs":1791069060263,"requestArrivedAtMs":1791069060223,"elapsedMs":39.469499999999925}
+{"type":"pause-timing","traceId":"76bd24d4-cee3-4e7d-bb22-8b5198a04593","stage":"queue-entered","atMs":1791069060263,"requestArrivedAtMs":1791069060229,"elapsedMs":33.618000000000166,"queueWaitMs":33.18309999999997,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"76bd24d4-cee3-4e7d-bb22-8b5198a04593","stage":"queued-authorization-finished","atMs":1791069060263,"requestArrivedAtMs":1791069060229,"elapsedMs":33.7043000000001,"durationMs":0.03619999999978063}
+{"type":"pause-timing","traceId":"76bd24d4-cee3-4e7d-bb22-8b5198a04593","stage":"credentials-resolved","atMs":1791069060263,"requestArrivedAtMs":1791069060229,"elapsedMs":33.79020000000014,"model":"test-model","durationMs":0.05850000000009459}
+{"type":"pause-timing","traceId":"76bd24d4-cee3-4e7d-bb22-8b5198a04593","stage":"stream-authorization","atMs":1791069060263,"requestArrivedAtMs":1791069060229,"elapsedMs":34.249700000000075,"durationMs":0.0546999999999116}
+{"type":"pause-timing","traceId":"76bd24d4-cee3-4e7d-bb22-8b5198a04593","stage":"first-visible-stream-chunk","atMs":1791069060263,"requestArrivedAtMs":1791069060229,"elapsedMs":34.285500000000184}
+{"type":"pause-timing","traceId":"76bd24d4-cee3-4e7d-bb22-8b5198a04593","stage":"final-response-finished","atMs":1791069060264,"requestArrivedAtMs":1791069060229,"elapsedMs":34.56439999999998}
+{"type":"pause-timing","traceId":"76bd24d4-cee3-4e7d-bb22-8b5198a04593","stage":"queue-exit","atMs":1791069060264,"requestArrivedAtMs":1791069060229,"elapsedMs":34.599100000000135}
+{"type":"pause-timing","traceId":"895d9c39-7590-404e-8195-aad3191e42fb","stage":"request-arrival","atMs":1791069060270,"requestArrivedAtMs":1791069060270,"elapsedMs":0.01319999999986976}
+{"type":"pause-timing","traceId":"895d9c39-7590-404e-8195-aad3191e42fb","stage":"initial-authorization-finished","atMs":1791069060270,"requestArrivedAtMs":1791069060270,"elapsedMs":0.24869999999987158}
+{"type":"pause-timing","traceId":"895d9c39-7590-404e-8195-aad3191e42fb","stage":"queue-exit","atMs":1791069060271,"requestArrivedAtMs":1791069060270,"elapsedMs":0.9623999999998887}
+Γ£ö authenticated HTTP ingress serializes streams and rejects replay across multiple clients (mock sidecar) (54.2224ms)
+{"type":"pause-timing","traceId":"67f67520-6b34-4852-ad1d-199e478d1586","stage":"request-arrival","atMs":1791069060275,"requestArrivedAtMs":1791069060275,"elapsedMs":0.012199999999893407}
+{"type":"pause-timing","traceId":"67f67520-6b34-4852-ad1d-199e478d1586","stage":"initial-authorization-finished","atMs":1791069060276,"requestArrivedAtMs":1791069060275,"elapsedMs":0.2176999999999225}
+{"type":"pause-timing","traceId":"67f67520-6b34-4852-ad1d-199e478d1586","stage":"queue-exit","atMs":1791069060276,"requestArrivedAtMs":1791069060275,"elapsedMs":0.529700000000048}
+{"type":"pause-timing","traceId":"2673f5c6-c882-4b81-877e-b2a699d68da4","stage":"request-arrival","atMs":1791069060279,"requestArrivedAtMs":1791069060279,"elapsedMs":0.010600000000067666}
+{"type":"pause-timing","traceId":"2673f5c6-c882-4b81-877e-b2a699d68da4","stage":"initial-authorization-finished","atMs":1791069060279,"requestArrivedAtMs":1791069060279,"elapsedMs":0.20319999999992433}
+{"type":"pause-timing","traceId":"2673f5c6-c882-4b81-877e-b2a699d68da4","stage":"queue-exit","atMs":1791069060279,"requestArrivedAtMs":1791069060279,"elapsedMs":0.4533999999998741}
+{"type":"pause-timing","traceId":"8a32fa78-655f-454a-81d6-bfd8041a2ccd","stage":"request-arrival","atMs":1791069060282,"requestArrivedAtMs":1791069060282,"elapsedMs":0.014800000000150249}
+{"type":"pause-timing","traceId":"8a32fa78-655f-454a-81d6-bfd8041a2ccd","stage":"initial-authorization-finished","atMs":1791069060282,"requestArrivedAtMs":1791069060282,"elapsedMs":0.17350000000010368}
+{"type":"pause-timing","traceId":"8a32fa78-655f-454a-81d6-bfd8041a2ccd","stage":"queue-exit","atMs":1791069060282,"requestArrivedAtMs":1791069060282,"elapsedMs":0.4005000000001928}
+{"type":"pause-timing","traceId":"dcacc5d3-9632-43cf-b65b-b1e017b13f98","stage":"request-arrival","atMs":1791069060285,"requestArrivedAtMs":1791069060285,"elapsedMs":0.023300000000062937}
+{"type":"pause-timing","traceId":"dcacc5d3-9632-43cf-b65b-b1e017b13f98","stage":"initial-authorization-finished","atMs":1791069060285,"requestArrivedAtMs":1791069060285,"elapsedMs":0.23520000000007713}
+{"type":"pause-timing","traceId":"dcacc5d3-9632-43cf-b65b-b1e017b13f98","stage":"queue-exit","atMs":1791069060286,"requestArrivedAtMs":1791069060285,"elapsedMs":0.4794999999999163}
+{"type":"pause-timing","traceId":"39a1f088-2da9-4751-b9c6-3f7c97cd9752","stage":"request-arrival","atMs":1791069060289,"requestArrivedAtMs":1791069060289,"elapsedMs":0.023299999999835563}
+{"type":"pause-timing","traceId":"39a1f088-2da9-4751-b9c6-3f7c97cd9752","stage":"initial-authorization-finished","atMs":1791069060289,"requestArrivedAtMs":1791069060289,"elapsedMs":0.29349999999999454}
+{"type":"pause-timing","traceId":"39a1f088-2da9-4751-b9c6-3f7c97cd9752","stage":"queue-exit","atMs":1791069060289,"requestArrivedAtMs":1791069060289,"elapsedMs":0.5144000000000233}
+{"type":"pause-timing","traceId":"f622bdf9-bb16-4320-80b8-b1170fcad159","stage":"request-arrival","atMs":1791069060292,"requestArrivedAtMs":1791069060292,"elapsedMs":0.00980000000004111}
+{"type":"pause-timing","traceId":"f622bdf9-bb16-4320-80b8-b1170fcad159","stage":"initial-authorization-finished","atMs":1791069060292,"requestArrivedAtMs":1791069060292,"elapsedMs":0.15610000000015134}
+{"type":"pause-timing","traceId":"f622bdf9-bb16-4320-80b8-b1170fcad159","stage":"queue-exit","atMs":1791069060292,"requestArrivedAtMs":1791069060292,"elapsedMs":0.36590000000001055}
+{"type":"pause-timing","traceId":"f45d1d0d-7f34-44da-9387-edf7d6b94080","stage":"request-arrival","atMs":1791069060295,"requestArrivedAtMs":1791069060295,"elapsedMs":0.012199999999893407}
+{"type":"pause-timing","traceId":"f45d1d0d-7f34-44da-9387-edf7d6b94080","stage":"initial-authorization-finished","atMs":1791069060295,"requestArrivedAtMs":1791069060295,"elapsedMs":0.1812999999999647}
+{"type":"pause-timing","traceId":"f45d1d0d-7f34-44da-9387-edf7d6b94080","stage":"queue-exit","atMs":1791069060296,"requestArrivedAtMs":1791069060295,"elapsedMs":0.4899000000000342}
+Γ£ö fails closed on unreviewed SDK inference before credentials/capability/provider dispatch (25.187ms)
+{"type":"pause-timing","traceId":"c11fbc95-b66e-4037-8f43-f4642b73e2dc","stage":"request-arrival","atMs":1791069059910,"requestArrivedAtMs":1791069059910,"elapsedMs":0.15279999999995653}
+{"type":"pause-timing","traceId":"c11fbc95-b66e-4037-8f43-f4642b73e2dc","stage":"initial-authorization-finished","atMs":1791069059911,"requestArrivedAtMs":1791069059910,"elapsedMs":1.1920999999999822}
+{"type":"pause-timing","traceId":"024a1f69-b5f0-4669-85c2-44221d9dc124","stage":"request-arrival","atMs":1791069059912,"requestArrivedAtMs":1791069059912,"elapsedMs":0.018699999999967076}
+{"type":"pause-timing","traceId":"024a1f69-b5f0-4669-85c2-44221d9dc124","stage":"initial-authorization-finished","atMs":1791069059912,"requestArrivedAtMs":1791069059912,"elapsedMs":0.29309999999998126}
+{"type":"pause-timing","traceId":"c11fbc95-b66e-4037-8f43-f4642b73e2dc","stage":"preparation-finished","atMs":1791069059915,"requestArrivedAtMs":1791069059910,"elapsedMs":5.650899999999979,"durationMs":4.294800000000009}
+{"type":"pause-timing","traceId":"c11fbc95-b66e-4037-8f43-f4642b73e2dc","stage":"queue-exit","atMs":1791069059915,"requestArrivedAtMs":1791069059910,"elapsedMs":5.72829999999999}
+{"type":"pause-timing","traceId":"024a1f69-b5f0-4669-85c2-44221d9dc124","stage":"preparation-finished","atMs":1791069059916,"requestArrivedAtMs":1791069059912,"elapsedMs":3.962599999999952,"durationMs":3.5813000000000557}
+{"type":"pause-timing","traceId":"024a1f69-b5f0-4669-85c2-44221d9dc124","stage":"queue-exit","atMs":1791069059916,"requestArrivedAtMs":1791069059912,"elapsedMs":4.038499999999999}
+Γ£ö preparation shares concurrent work, retains authorization, and exposes no credential (68.2042ms)
+{"type":"pause-timing","traceId":"0c77ee56-db15-45b4-b464-946f89c33ffa","stage":"request-arrival","atMs":1791069059929,"requestArrivedAtMs":1791069059929,"elapsedMs":0.01890000000003056}
+{"type":"pause-timing","traceId":"93b504b3-d584-4cf7-b64c-943b58f59145","stage":"request-arrival","atMs":1791069059935,"requestArrivedAtMs":1791069059935,"elapsedMs":0.05380000000002383}
+Γ£ö expired browser credentials and current role changes cannot prepare (14.3789ms)
+{"type":"pause-timing","traceId":"00868dd1-9f19-4738-b811-a70caa3195b0","stage":"request-arrival","atMs":1791069059942,"requestArrivedAtMs":1791069059942,"elapsedMs":0.01630000000000109}
+{"type":"pause-timing","traceId":"00868dd1-9f19-4738-b811-a70caa3195b0","stage":"initial-authorization-finished","atMs":1791069059943,"requestArrivedAtMs":1791069059942,"elapsedMs":0.33359999999993306}
+{"type":"pause-timing","traceId":"00868dd1-9f19-4738-b811-a70caa3195b0","stage":"preparation-failed","atMs":1791069059944,"requestArrivedAtMs":1791069059942,"elapsedMs":1.076400000000035,"durationMs":0.63900000000001}
+{"type":"pause-timing","traceId":"00868dd1-9f19-4738-b811-a70caa3195b0","stage":"queue-exit","atMs":1791069059944,"requestArrivedAtMs":1791069059942,"elapsedMs":1.1136000000000195}
+{"type":"pause-timing","traceId":"59f66c31-ec18-43a7-ac83-eff85259e47e","stage":"request-arrival","atMs":1791069059949,"requestArrivedAtMs":1791069059949,"elapsedMs":0.013199999999983447}
+{"type":"pause-timing","traceId":"59f66c31-ec18-43a7-ac83-eff85259e47e","stage":"initial-authorization-finished","atMs":1791069059949,"requestArrivedAtMs":1791069059949,"elapsedMs":0.2537999999999556}
+{"type":"pause-timing","traceId":"59f66c31-ec18-43a7-ac83-eff85259e47e","stage":"preparation-failed","atMs":1791069059949,"requestArrivedAtMs":1791069059949,"elapsedMs":0.613399999999956,"durationMs":0.29729999999995016}
+{"type":"pause-timing","traceId":"59f66c31-ec18-43a7-ac83-eff85259e47e","stage":"queue-exit","atMs":1791069059950,"requestArrivedAtMs":1791069059949,"elapsedMs":0.6545999999999594}
+Γ£ö failed preparation is actionable and retries are backed off without sidecar calls (13.4578ms)
+{"type":"pause-timing","traceId":"aa1a3543-eba2-4458-b88c-407c2ac996fb","stage":"request-arrival","atMs":1791069059956,"requestArrivedAtMs":1791069059956,"elapsedMs":0.013799999999946522}
+{"type":"pause-timing","traceId":"aa1a3543-eba2-4458-b88c-407c2ac996fb","stage":"initial-authorization-finished","atMs":1791069059956,"requestArrivedAtMs":1791069059956,"elapsedMs":0.2746999999999389}
+{"type":"pause-timing","traceId":"aa1a3543-eba2-4458-b88c-407c2ac996fb","stage":"preparation-failed","atMs":1791069059957,"requestArrivedAtMs":1791069059956,"elapsedMs":0.9352999999999838,"durationMs":0.5848999999999478}
+{"type":"pause-timing","traceId":"aa1a3543-eba2-4458-b88c-407c2ac996fb","stage":"queue-exit","atMs":1791069059957,"requestArrivedAtMs":1791069059956,"elapsedMs":0.9783999999999651}
+Γ£ö privacy preparation failure gives action required and never discloses path (7.0817ms)
+{"type":"pause-timing","traceId":"b61fb7a5-847f-445b-835d-0735da58abf4","stage":"request-arrival","atMs":1791069059963,"requestArrivedAtMs":1791069059963,"elapsedMs":0.013099999999894862}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"request-arrival","atMs":1791069059968,"requestArrivedAtMs":1791069059968,"elapsedMs":0.014300000000048385}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"initial-authorization-finished","atMs":1791069059969,"requestArrivedAtMs":1791069059968,"elapsedMs":0.2699000000000069}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"request-arrival","atMs":1791069059974,"requestArrivedAtMs":1791069059974,"elapsedMs":0.01749999999992724}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"initial-authorization-finished","atMs":1791069059974,"requestArrivedAtMs":1791069059974,"elapsedMs":0.3027999999999338}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"queue-entered","atMs":1791069059975,"requestArrivedAtMs":1791069059974,"elapsedMs":0.9430999999999585,"queueWaitMs":0.02539999999999054,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"queued-authorization-finished","atMs":1791069059975,"requestArrivedAtMs":1791069059974,"elapsedMs":1.0255999999999403,"durationMs":0.03769999999997253}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"credentials-resolved","atMs":1791069059975,"requestArrivedAtMs":1791069059974,"elapsedMs":1.1039999999999281,"model":"test","durationMs":0.027700000000095315}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"stream-authorization","atMs":1791069059993,"requestArrivedAtMs":1791069059974,"elapsedMs":19.81759999999997,"durationMs":0.11430000000007112}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"first-visible-stream-chunk","atMs":1791069059994,"requestArrivedAtMs":1791069059974,"elapsedMs":19.889699999999948}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"final-response-finished","atMs":1791069059994,"requestArrivedAtMs":1791069059974,"elapsedMs":20.379699999999957}
+{"type":"pause-timing","traceId":"12345678-1234-1234-1234-123456789abc","stage":"queue-exit","atMs":1791069059994,"requestArrivedAtMs":1791069059974,"elapsedMs":20.455099999999902}
+{"type":"pause-timing","traceId":"e447b87b-296b-47af-a087-b55bde7107d6","stage":"request-arrival","atMs":1791069059999,"requestArrivedAtMs":1791069059999,"elapsedMs":0.014099999999984902}
+{"type":"pause-timing","traceId":"e447b87b-296b-47af-a087-b55bde7107d6","stage":"initial-authorization-finished","atMs":1791069059999,"requestArrivedAtMs":1791069059999,"elapsedMs":0.2839000000000169}
+{"type":"pause-timing","traceId":"e447b87b-296b-47af-a087-b55bde7107d6","stage":"queue-entered","atMs":1791069059999,"requestArrivedAtMs":1791069059999,"elapsedMs":0.4171000000000049,"queueWaitMs":0.014699999999947977,"pauseControlOnly":false}
+{"type":"pause-timing","traceId":"e447b87b-296b-47af-a087-b55bde7107d6","stage":"queued-authorization-finished","atMs":1791069059999,"requestArrivedAtMs":1791069059999,"elapsedMs":0.46230000000002747,"durationMs":0.024999999999977263}
+{"type":"pause-timing","traceId":"e447b87b-296b-47af-a087-b55bde7107d6","stage":"credentials-resolved","atMs":1791069059999,"requestArrivedAtMs":1791069059999,"elapsedMs":0.5,"model":"test","durationMs":0.02039999999999509}
+{"type":"pause-timing","traceId":"e447b87b-296b-47af-a087-b55bde7107d6","stage":"stream-authorization","atMs":1791069060000,"requestArrivedAtMs":1791069059999,"elapsedMs":1.1838999999999942,"durationMs":0.05129999999996926}
+{"type":"pause-timing","traceId":"e447b87b-296b-47af-a087-b55bde7107d6","stage":"first-visible-stream-chunk","atMs":1791069060000,"requestArrivedAtMs":1791069059999,"elapsedMs":1.2222000000000435}
+{"type":"pause-timing","traceId":"e447b87b-296b-47af-a087-b55bde7107d6","stage":"final-response-finished","atMs":1791069060000,"requestArrivedAtMs":1791069059999,"elapsedMs":1.4605999999999995}
+{"type":"pause-timing","traceId":"e447b87b-296b-47af-a087-b55bde7107d6","stage":"queue-exit","atMs":1791069060000,"requestArrivedAtMs":1791069059999,"elapsedMs":1.4869999999999663}
+Γ£ö only exact server-configured scoped fixture budgets reach loopback; spoofing is rejected (43.3112ms)
+Γû╢ AI Dungeon Master server configuration
+  Γ£ö keeps private conversation outside served Data and rejects junction bypasses (17.4627ms)
+  Γ£ö is loopback-only and remains testable without live provider keys (8.4617ms)
+  Γ£ö rejects remote provider URLs and remote server binds (4.491ms)
+  Γ£ö requires persistent signing and process-tree broker keys in production (2.5999ms)
+  Γ£ö keeps the API-key provider disabled unless fallback is explicitly enabled (4.8708ms)
+Γ£ö AI Dungeon Master server configuration (39.3615ms)
+Γ£ö protects per-world campaign root with default outside Data and no public override (4.0124ms)
+Γ£ö fixture budgets are immutable startup-only scoped configuration (1.7562ms)
+Γä╣ tests 34
+Γä╣ suites 3
+Γä╣ pass 34
+Γä╣ fail 0
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 2813.5955

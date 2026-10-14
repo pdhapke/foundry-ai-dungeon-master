@@ -1,0 +1,2020 @@
+[
+  {
+    "step": "open",
+    "startedAt": "2026-10-03T00:47:32.282Z",
+    "state": "confirmed",
+    "tool": "foundry_update_scene_wall",
+    "args": {
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "placeableId": "b119fbf4720d7c3c",
+      "changes": {
+        "ds": 1
+      }
+    },
+    "result": {
+      "_id": "b119fbf4720d7c3c",
+      "c": [
+        600,
+        0,
+        600,
+        800
+      ],
+      "move": 20,
+      "sight": 20,
+      "light": 20,
+      "sound": 20,
+      "door": 1,
+      "ds": 1,
+      "levels": [],
+      "dir": 0,
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "flags": {}
+    },
+    "endedAt": "2026-10-03T00:47:32.313Z"
+  },
+  {
+    "step": "dark",
+    "startedAt": "2026-10-03T00:48:14.391Z",
+    "state": "confirmed",
+    "tool": "foundry_update_scene",
+    "args": {
+      "id": "JYKHHWccpbXdZEGD",
+      "changes": {
+        "environment.globalLight.enabled": false,
+        "environment.darknessLevel": 1
+      }
+    },
+    "result": {
+      "_id": "JYKHHWccpbXdZEGD",
+      "name": "Phase5 disposable perception fixture",
+      "ownership": {
+        "default": 0,
+        "edtBL96Yu3058QAT": 2,
+        "X7X4KK7zca5U2Ics": 3
+      },
+      "width": 1200,
+      "height": 800,
+      "padding": 0,
+      "grid": {
+        "type": 1,
+        "size": 100,
+        "distance": 5,
+        "units": "ft",
+        "style": "solidLines",
+        "thickness": 1,
+        "color": "#000000",
+        "alpha": 0.2
+      },
+      "tokenVision": true,
+      "environment": {
+        "darknessLevel": 1,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "darknessLock": false,
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "flags": {
+        "foundry-local-api": {
+          "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+        }
+      },
+      "walls": [
+        {
+          "_id": "b119fbf4720d7c3c",
+          "c": [
+            600,
+            0,
+            600,
+            800
+          ],
+          "move": 20,
+          "sight": 20,
+          "light": 20,
+          "sound": 20,
+          "door": 1,
+          "ds": 1,
+          "levels": [],
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null,
+          "flags": {}
+        }
+      ],
+      "lights": [
+        {
+          "_id": "7153e2b8a3160f05",
+          "x": 300,
+          "y": 400,
+          "elevation": 0,
+          "config": {
+            "dim": 30,
+            "bright": 15,
+            "color": "#ffffff",
+            "alpha": 0.5,
+            "negative": false,
+            "priority": 0,
+            "angle": 360,
+            "coloration": 1,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "levels": [],
+          "rotation": 0,
+          "walls": true,
+          "vision": false,
+          "hidden": false,
+          "locked": false,
+          "flags": {}
+        }
+      ],
+      "active": true,
+      "navigation": true,
+      "navOrder": 0,
+      "thumb": null,
+      "shiftX": 0,
+      "shiftY": 0,
+      "initial": {
+        "x": null,
+        "y": null,
+        "scale": null
+      },
+      "initialLevel": "defaultLevel0000",
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "transition": {
+        "type": null,
+        "duration": 1500,
+        "activeOnly": false
+      },
+      "drawings": [],
+      "tokens": [
+        {
+          "_id": "mb4UqhWbVwmKj47w",
+          "name": "Observer",
+          "actorId": "GF6QQL8YXPLqx7pW",
+          "actorLink": true,
+          "x": 200,
+          "y": 350,
+          "width": 1,
+          "height": 1,
+          "elevation": 0,
+          "hidden": false,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "enabled": true,
+            "range": 60,
+            "visionMode": "basic",
+            "angle": 360,
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "displayName": 0,
+          "delta": null,
+          "depth": 1,
+          "sort": 0,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [],
+          "_regions": []
+        },
+        {
+          "_id": "csPHYkeiwmfbpatt",
+          "name": "Disposable target",
+          "actorId": null,
+          "actorLink": false,
+          "x": 850,
+          "y": 350,
+          "width": 1,
+          "height": 1,
+          "elevation": 0,
+          "hidden": false,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "enabled": false,
+            "range": 60,
+            "visionMode": "basic",
+            "angle": 360,
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "displayName": 0,
+          "delta": null,
+          "depth": 1,
+          "sort": 1,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [],
+          "_regions": []
+        },
+        {
+          "_id": "Meo8oeQ1SstzVa5C",
+          "name": "Disposable target",
+          "actorId": null,
+          "actorLink": false,
+          "x": 300,
+          "y": 550,
+          "width": 1,
+          "height": 1,
+          "elevation": 0,
+          "hidden": true,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "enabled": false,
+            "range": 60,
+            "visionMode": "basic",
+            "angle": 360,
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "displayName": 0,
+          "delta": null,
+          "depth": 1,
+          "sort": 2,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [],
+          "_regions": []
+        }
+      ],
+      "levels": [
+        {
+          "_id": "defaultLevel0000",
+          "name": "Level",
+          "elevation": {
+            "top": 20,
+            "bottom": 0
+          },
+          "background": {
+            "color": "#999999",
+            "src": null,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "foreground": {
+            "src": null,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "fog": {
+            "src": null
+          },
+          "textures": {
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "offsetX": 0,
+            "offsetY": 0,
+            "fit": "fill",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0
+          },
+          "visibility": {
+            "levels": []
+          },
+          "sort": 0,
+          "flags": {}
+        }
+      ],
+      "notes": [],
+      "sounds": [],
+      "regions": [],
+      "tiles": [],
+      "playlist": null,
+      "playlistSound": null,
+      "journal": null,
+      "journalEntryPage": null,
+      "weather": "",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "createdTime": 1790988291501,
+        "modifiedTime": 1790988494404,
+        "lastModifiedBy": "X7X4KK7zca5U2Ics",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    "endedAt": "2026-10-03T00:48:14.418Z"
+  },
+  {
+    "step": "lightoff",
+    "startedAt": "2026-10-03T00:48:42.251Z",
+    "state": "confirmed",
+    "tool": "foundry_update_scene_light",
+    "args": {
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "placeableId": "7153e2b8a3160f05",
+      "changes": {
+        "hidden": true
+      }
+    },
+    "result": {
+      "_id": "7153e2b8a3160f05",
+      "x": 300,
+      "y": 400,
+      "elevation": 0,
+      "config": {
+        "dim": 30,
+        "bright": 15,
+        "color": "#ffffff",
+        "alpha": 0.5,
+        "negative": false,
+        "priority": 0,
+        "angle": 360,
+        "coloration": 1,
+        "attenuation": 0.5,
+        "luminosity": 0.5,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "animation": {
+          "type": null,
+          "speed": 5,
+          "intensity": 5,
+          "reverse": false
+        },
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "levels": [],
+      "rotation": 0,
+      "walls": true,
+      "vision": false,
+      "hidden": true,
+      "locked": false,
+      "flags": {}
+    },
+    "endedAt": "2026-10-03T00:48:42.289Z"
+  },
+  {
+    "step": "walk",
+    "startedAt": "2026-10-03T00:49:05.091Z",
+    "state": "confirmed",
+    "tool": "foundry_core_action_confirmed",
+    "args": {
+      "schemaVersion": "core-actions-v1",
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "origin": "ai-dm",
+      "requestId": "91ee545c-3964-4a53-b7d9-fc42b7b2ea0d",
+      "correlationId": "9ec3322f-aa63-4361-95cc-e6afb30da0b2",
+      "action": {
+        "kind": "token.position",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "targetId": "mb4UqhWbVwmKj47w",
+        "x": 300,
+        "y": 350,
+        "mode": "walk"
+      }
+    },
+    "result": {
+      "worldId": "izzy-campaign",
+      "correlationId": "9ec3322f-aa63-4361-95cc-e6afb30da0b2",
+      "schemaVersion": "core-actions-v1",
+      "action": {
+        "kind": "token.position",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "targetId": "mb4UqhWbVwmKj47w",
+        "x": 300,
+        "y": 350,
+        "mode": "walk"
+      },
+      "state": {
+        "x": 300,
+        "y": 350
+      },
+      "mutated": true,
+      "outcome": "confirmed"
+    },
+    "endedAt": "2026-10-03T00:49:05.168Z"
+  },
+  {
+    "step": "daylight",
+    "startedAt": "2026-10-03T00:49:29.454Z",
+    "state": "confirmed",
+    "tool": "foundry_update_scene",
+    "args": {
+      "id": "JYKHHWccpbXdZEGD",
+      "changes": {
+        "environment.globalLight.enabled": true,
+        "environment.darknessLevel": 0
+      }
+    },
+    "result": {
+      "_id": "JYKHHWccpbXdZEGD",
+      "name": "Phase5 disposable perception fixture",
+      "ownership": {
+        "default": 0,
+        "edtBL96Yu3058QAT": 2,
+        "X7X4KK7zca5U2Ics": 3
+      },
+      "width": 1200,
+      "height": 800,
+      "padding": 0,
+      "grid": {
+        "type": 1,
+        "size": 100,
+        "distance": 5,
+        "units": "ft",
+        "style": "solidLines",
+        "thickness": 1,
+        "color": "#000000",
+        "alpha": 0.2
+      },
+      "tokenVision": true,
+      "environment": {
+        "darknessLevel": 0,
+        "globalLight": {
+          "enabled": true,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "darknessLock": false,
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "flags": {
+        "foundry-local-api": {
+          "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+        }
+      },
+      "walls": [
+        {
+          "_id": "b119fbf4720d7c3c",
+          "c": [
+            600,
+            0,
+            600,
+            800
+          ],
+          "move": 20,
+          "sight": 20,
+          "light": 20,
+          "sound": 20,
+          "door": 1,
+          "ds": 1,
+          "levels": [],
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null,
+          "flags": {}
+        }
+      ],
+      "lights": [
+        {
+          "_id": "7153e2b8a3160f05",
+          "x": 300,
+          "y": 400,
+          "elevation": 0,
+          "config": {
+            "dim": 30,
+            "bright": 15,
+            "color": "#ffffff",
+            "alpha": 0.5,
+            "negative": false,
+            "priority": 0,
+            "angle": 360,
+            "coloration": 1,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "levels": [],
+          "rotation": 0,
+          "walls": true,
+          "vision": false,
+          "hidden": true,
+          "locked": false,
+          "flags": {}
+        }
+      ],
+      "active": true,
+      "navigation": true,
+      "navOrder": 0,
+      "thumb": null,
+      "shiftX": 0,
+      "shiftY": 0,
+      "initial": {
+        "x": null,
+        "y": null,
+        "scale": null
+      },
+      "initialLevel": "defaultLevel0000",
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "transition": {
+        "type": null,
+        "duration": 1500,
+        "activeOnly": false
+      },
+      "drawings": [],
+      "tokens": [
+        {
+          "_id": "mb4UqhWbVwmKj47w",
+          "name": "Observer",
+          "actorId": "GF6QQL8YXPLqx7pW",
+          "actorLink": true,
+          "x": 300,
+          "y": 350,
+          "width": 1,
+          "height": 1,
+          "elevation": 0,
+          "hidden": false,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "enabled": true,
+            "range": 60,
+            "visionMode": "basic",
+            "angle": 360,
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "displayName": 0,
+          "delta": null,
+          "depth": 1,
+          "sort": 0,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [],
+          "_regions": []
+        },
+        {
+          "_id": "csPHYkeiwmfbpatt",
+          "name": "Disposable target",
+          "actorId": null,
+          "actorLink": false,
+          "x": 850,
+          "y": 350,
+          "width": 1,
+          "height": 1,
+          "elevation": 0,
+          "hidden": false,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "enabled": false,
+            "range": 60,
+            "visionMode": "basic",
+            "angle": 360,
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "displayName": 0,
+          "delta": null,
+          "depth": 1,
+          "sort": 1,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [],
+          "_regions": []
+        },
+        {
+          "_id": "Meo8oeQ1SstzVa5C",
+          "name": "Disposable target",
+          "actorId": null,
+          "actorLink": false,
+          "x": 300,
+          "y": 550,
+          "width": 1,
+          "height": 1,
+          "elevation": 0,
+          "hidden": true,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "enabled": false,
+            "range": 60,
+            "visionMode": "basic",
+            "angle": 360,
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "displayName": 0,
+          "delta": null,
+          "depth": 1,
+          "sort": 2,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [],
+          "_regions": []
+        }
+      ],
+      "levels": [
+        {
+          "_id": "defaultLevel0000",
+          "name": "Level",
+          "elevation": {
+            "top": 20,
+            "bottom": 0
+          },
+          "background": {
+            "color": "#999999",
+            "src": null,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "foreground": {
+            "src": null,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "fog": {
+            "src": null
+          },
+          "textures": {
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "offsetX": 0,
+            "offsetY": 0,
+            "fit": "fill",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0
+          },
+          "visibility": {
+            "levels": []
+          },
+          "sort": 0,
+          "flags": {}
+        }
+      ],
+      "notes": [],
+      "sounds": [],
+      "regions": [],
+      "tiles": [],
+      "playlist": null,
+      "playlistSound": null,
+      "journal": null,
+      "journalEntryPage": null,
+      "weather": "",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "createdTime": 1790988291501,
+        "modifiedTime": 1790988569467,
+        "lastModifiedBy": "X7X4KK7zca5U2Ics",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    "endedAt": "2026-10-03T00:49:29.482Z"
+  },
+  {
+    "step": "closed",
+    "startedAt": "2026-10-03T00:49:32.713Z",
+    "state": "confirmed",
+    "tool": "foundry_update_scene_wall",
+    "args": {
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "placeableId": "b119fbf4720d7c3c",
+      "changes": {
+        "ds": 0
+      }
+    },
+    "result": {
+      "_id": "b119fbf4720d7c3c",
+      "c": [
+        600,
+        0,
+        600,
+        800
+      ],
+      "move": 20,
+      "sight": 20,
+      "light": 20,
+      "sound": 20,
+      "door": 1,
+      "ds": 0,
+      "levels": [],
+      "dir": 0,
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "flags": {}
+    },
+    "endedAt": "2026-10-03T00:49:32.732Z"
+  },
+  {
+    "step": "blockedwalk",
+    "startedAt": "2026-10-03T00:49:36.444Z",
+    "state": "confirmed",
+    "tool": "foundry_core_action_confirmed",
+    "args": {
+      "schemaVersion": "core-actions-v1",
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "origin": "ai-dm",
+      "requestId": "e4c71ce9-225b-4e64-836c-f9ccff6813b4",
+      "correlationId": "4809c5a8-7243-4e7b-a1b7-76ec9993044f",
+      "action": {
+        "kind": "token.position",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "targetId": "mb4UqhWbVwmKj47w",
+        "x": 850,
+        "y": 350,
+        "mode": "walk"
+      }
+    },
+    "result": {
+      "worldId": "izzy-campaign",
+      "correlationId": "4809c5a8-7243-4e7b-a1b7-76ec9993044f",
+      "schemaVersion": "core-actions-v1",
+      "action": {
+        "kind": "token.position",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "targetId": "mb4UqhWbVwmKj47w",
+        "x": 850,
+        "y": 350,
+        "mode": "walk"
+      },
+      "state": null,
+      "mutated": false,
+      "outcome": "failure",
+      "message": "Movement blocked by native walls, surfaces or terrain; no movement dispatched"
+    },
+    "endedAt": "2026-10-03T00:49:36.479Z"
+  },
+  {
+    "step": "elevation",
+    "startedAt": "2026-10-03T00:50:38.520Z",
+    "state": "confirmed",
+    "tool": "foundry_update_scene_token",
+    "args": {
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "tokenId": "mb4UqhWbVwmKj47w",
+      "changes": {
+        "elevation": 10
+      }
+    },
+    "result": {
+      "_id": "mb4UqhWbVwmKj47w",
+      "name": "Observer",
+      "actorId": "GF6QQL8YXPLqx7pW",
+      "actorLink": true,
+      "x": 300,
+      "y": 350,
+      "width": 1,
+      "height": 1,
+      "elevation": 10,
+      "hidden": false,
+      "texture": {
+        "src": "icons/svg/mystery-man.svg",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "contain",
+        "scaleX": 1,
+        "scaleY": 1,
+        "tint": "#ffffff",
+        "alphaThreshold": 0.75
+      },
+      "sight": {
+        "enabled": true,
+        "range": 60,
+        "visionMode": "basic",
+        "angle": 360,
+        "color": null,
+        "attenuation": 0.1,
+        "brightness": 0,
+        "saturation": 0,
+        "contrast": 0
+      },
+      "detectionModes": {},
+      "flags": {
+        "foundry-local-api": {
+          "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+        }
+      },
+      "shape": 4,
+      "level": "defaultLevel0000",
+      "displayName": 0,
+      "delta": null,
+      "depth": 1,
+      "sort": 0,
+      "locked": false,
+      "lockRotation": false,
+      "rotation": 0,
+      "alpha": 1,
+      "disposition": -1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "bar2": {
+        "attribute": null
+      },
+      "light": {
+        "negative": false,
+        "priority": 0,
+        "alpha": 0.5,
+        "angle": 360,
+        "bright": 0,
+        "color": null,
+        "coloration": 1,
+        "dim": 0,
+        "attenuation": 0.5,
+        "luminosity": 0.5,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "animation": {
+          "type": null,
+          "speed": 5,
+          "intensity": 5,
+          "reverse": false
+        },
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "occludable": {
+        "radius": 0
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": null,
+          "background": null
+        },
+        "effects": 1,
+        "subject": {
+          "scale": 1,
+          "texture": null
+        }
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false
+      },
+      "movementAction": null,
+      "_movementHistory": [],
+      "_regions": []
+    },
+    "endedAt": "2026-10-03T00:50:38.580Z"
+  },
+  {
+    "step": "dark",
+    "startedAt": "2026-10-03T00:55:32.636Z",
+    "state": "confirmed",
+    "tool": "foundry_update_scene",
+    "args": {
+      "id": "JYKHHWccpbXdZEGD",
+      "changes": {
+        "environment.globalLight.enabled": false,
+        "environment.darknessLevel": 1
+      }
+    },
+    "result": {
+      "_id": "JYKHHWccpbXdZEGD",
+      "name": "Phase5 disposable perception fixture",
+      "ownership": {
+        "default": 0,
+        "edtBL96Yu3058QAT": 2,
+        "X7X4KK7zca5U2Ics": 3
+      },
+      "width": 1200,
+      "height": 800,
+      "padding": 0,
+      "grid": {
+        "type": 1,
+        "size": 100,
+        "distance": 5,
+        "units": "ft",
+        "style": "solidLines",
+        "thickness": 1,
+        "color": "#000000",
+        "alpha": 0.2
+      },
+      "tokenVision": true,
+      "environment": {
+        "darknessLevel": 1,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "darknessLock": false,
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "flags": {
+        "foundry-local-api": {
+          "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+        }
+      },
+      "walls": [
+        {
+          "_id": "b119fbf4720d7c3c",
+          "c": [
+            600,
+            0,
+            600,
+            800
+          ],
+          "move": 20,
+          "sight": 20,
+          "light": 20,
+          "sound": 20,
+          "door": 1,
+          "ds": 0,
+          "levels": [],
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null,
+          "flags": {}
+        }
+      ],
+      "lights": [
+        {
+          "_id": "7153e2b8a3160f05",
+          "x": 300,
+          "y": 400,
+          "elevation": 0,
+          "config": {
+            "dim": 30,
+            "bright": 15,
+            "color": "#ffffff",
+            "alpha": 0.5,
+            "negative": false,
+            "priority": 0,
+            "angle": 360,
+            "coloration": 1,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "levels": [],
+          "rotation": 0,
+          "walls": true,
+          "vision": false,
+          "hidden": true,
+          "locked": false,
+          "flags": {}
+        }
+      ],
+      "active": true,
+      "navigation": true,
+      "navOrder": 0,
+      "thumb": null,
+      "shiftX": 0,
+      "shiftY": 0,
+      "initial": {
+        "x": null,
+        "y": null,
+        "scale": null
+      },
+      "initialLevel": "defaultLevel0000",
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "transition": {
+        "type": null,
+        "duration": 1500,
+        "activeOnly": false
+      },
+      "drawings": [],
+      "tokens": [
+        {
+          "_id": "mb4UqhWbVwmKj47w",
+          "name": "Observer",
+          "actorId": "GF6QQL8YXPLqx7pW",
+          "actorLink": true,
+          "x": 300,
+          "y": 350,
+          "width": 1,
+          "height": 1,
+          "elevation": 10,
+          "hidden": false,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "enabled": true,
+            "range": 60,
+            "visionMode": "darkvision",
+            "angle": 360,
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "displayName": 0,
+          "delta": null,
+          "depth": 1,
+          "sort": 0,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [],
+          "_regions": []
+        },
+        {
+          "_id": "csPHYkeiwmfbpatt",
+          "name": "Disposable target",
+          "actorId": null,
+          "actorLink": false,
+          "x": 850,
+          "y": 350,
+          "width": 1,
+          "height": 1,
+          "elevation": 0,
+          "hidden": false,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "enabled": false,
+            "range": 60,
+            "visionMode": "basic",
+            "angle": 360,
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "displayName": 0,
+          "delta": null,
+          "depth": 1,
+          "sort": 1,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [],
+          "_regions": []
+        },
+        {
+          "_id": "Meo8oeQ1SstzVa5C",
+          "name": "Disposable target",
+          "actorId": null,
+          "actorLink": false,
+          "x": 300,
+          "y": 550,
+          "width": 1,
+          "height": 1,
+          "elevation": 0,
+          "hidden": true,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "enabled": false,
+            "range": 60,
+            "visionMode": "basic",
+            "angle": 360,
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "displayName": 0,
+          "delta": null,
+          "depth": 1,
+          "sort": 2,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [],
+          "_regions": []
+        }
+      ],
+      "levels": [
+        {
+          "_id": "defaultLevel0000",
+          "name": "Level",
+          "elevation": {
+            "top": 20,
+            "bottom": 0
+          },
+          "background": {
+            "color": "#999999",
+            "src": null,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "foreground": {
+            "src": null,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "fog": {
+            "src": null
+          },
+          "textures": {
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "offsetX": 0,
+            "offsetY": 0,
+            "fit": "fill",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0
+          },
+          "visibility": {
+            "levels": []
+          },
+          "sort": 0,
+          "flags": {}
+        }
+      ],
+      "notes": [],
+      "sounds": [],
+      "regions": [],
+      "tiles": [],
+      "playlist": null,
+      "playlistSound": null,
+      "journal": null,
+      "journalEntryPage": null,
+      "weather": "",
+      "folder": null,
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "createdTime": 1790988291501,
+        "modifiedTime": 1790988932656,
+        "lastModifiedBy": "X7X4KK7zca5U2Ics",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    },
+    "endedAt": "2026-10-03T00:55:32.684Z"
+  },
+  {
+    "step": "open",
+    "startedAt": "2026-10-03T00:56:21.480Z",
+    "state": "confirmed",
+    "tool": "foundry_update_scene_wall",
+    "args": {
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "placeableId": "b119fbf4720d7c3c",
+      "changes": {
+        "ds": 1
+      }
+    },
+    "result": {
+      "_id": "b119fbf4720d7c3c",
+      "c": [
+        600,
+        0,
+        600,
+        800
+      ],
+      "move": 20,
+      "sight": 20,
+      "light": 20,
+      "sound": 20,
+      "door": 1,
+      "ds": 1,
+      "levels": [],
+      "dir": 0,
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null,
+      "flags": {}
+    },
+    "endedAt": "2026-10-03T00:56:21.501Z"
+  }
+]

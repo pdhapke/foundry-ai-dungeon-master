@@ -1,0 +1,15 @@
+{
+  "capturedAt": "2026-10-02T23:20:37.218Z",
+  "hp": {
+    "value": 37,
+    "max": 40,
+    "temp": 0,
+    "tempmax": 0,
+    "formula": ""
+  },
+  "resourceUses": {
+    "max": "3",
+    "spent": 1,
+    "recovery": []
+  }
+}

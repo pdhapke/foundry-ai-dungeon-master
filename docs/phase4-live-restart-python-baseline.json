@@ -1,0 +1,50 @@
+{
+  "capturedAt": "2026-10-02T23:14:01.256769+00:00",
+  "traceBytes": 218607,
+  "traceRows": 819,
+  "malformedRows": 0,
+  "streamInvocations": 6,
+  "sdkHooks": 6,
+  "requestIdentities": [
+    {
+      "traceId": "479005cd-d3d7-4e91-b848-1e8c07abbac5",
+      "scopeId": null,
+      "request": 1,
+      "processId": null
+    },
+    {
+      "traceId": "48fe577f-6a51-4647-963e-73da94e01e01",
+      "scopeId": null,
+      "request": 1,
+      "processId": null
+    },
+    {
+      "traceId": "a7ab4098-e197-45db-8fdc-270252919e1f",
+      "scopeId": "0ffa3da9-c596-430a-a915-ad5619d29741",
+      "request": 1,
+      "processId": null
+    },
+    {
+      "traceId": "a7ab4098-e197-45db-8fdc-270252919e1f",
+      "scopeId": "0ffa3da9-c596-430a-a915-ad5619d29741",
+      "request": 2,
+      "processId": null
+    },
+    {
+      "traceId": "38098405-c356-4357-8833-9d6967aaded8",
+      "scopeId": "d8ab28e9-d866-45e4-b120-3eb85d9738c1",
+      "request": 1,
+      "processId": null
+    },
+    {
+      "traceId": "38098405-c356-4357-8833-9d6967aaded8",
+      "scopeId": "d8ab28e9-d866-45e4-b120-3eb85d9738c1",
+      "request": 2,
+      "processId": null
+    }
+  ],
+  "databaseCounts": {
+    "threads": 13,
+    "items": 104
+  }
+}

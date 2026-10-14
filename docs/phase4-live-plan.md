@@ -1,0 +1,19 @@
+# Phase 4 bounded live acceptance proposal
+
+Awaiting fixture, inference and temporary-cap approval. No Phase4 inference or live mutation has occurred. phase4-prepared-build.json identifies disk artifacts only, not the running services.
+
+Use existing disposable attack scene/actors in attack-vision-evidence/live-fixture.json after verifying they still exist and are dedicated fixtures. Capture fresh original scene, pause/combat, token positions, HP/temp HP and item/activity resources. Historical originals are not current readback. Create one dedicated supported finite item-use weapon/activity on the disposable attacker and remove it afterward. If fixtures are unavailable, stop and propose replacements before mutations.
+
+At most four model-free native workflow deliveries: a two-step sequence, its exact duplicate, a resource-consuming sequence, its exact duplicate. Verify stable IDs, authoritative rolls/resources/damage and no additional effects on duplicates. Restore fixture state between cases. Report actual random hit/miss outcomes; no extra trials to obtain desired rolls.
+
+Exactly two embedded prompts in a dedicated test conversation: one explicit two-step attack sequence; one explicit single resource-consuming attack. Both name fixture actor/item/activity/target IDs and request mechanics/factual results without narration. Resolve IDs and save exact prompt text before submission. These are acceptance probes, not a performance distribution or comprehensive live rules matrix.
+
+Maximum six application-level model requests total, three per prompt, zero automatic retries, zero resubmissions. Use current selected eligible model and ChatGPT plan authorization only. No API fallback, paid provider, service-tier or model change. Provider unit cost is unavailable; plan allowance consumption is uncertain. Record application requests and provider IDs when available; upper bounds do not establish observed provider trace counts. Stop on auth/allowance/cap failures or uncertain mechanics rather than retrying.
+
+Request approval to temporarily set existing ChatKit turn cap to three and disable retries, preserving prior disk values. Do not change automatic-event settings. If automatic events would create unapproved inference, stop for a specific setting request. Verify loaded limits after manual restart. Restore original temporary settings afterward and disclose any manual restart needed to restore loaded configuration.
+
+After approval, prepare authorized temporary settings, then ask the user to restart Foundry through the normal launcher. The normal integration hook owns MCP/AI Node/Python; never launch them separately. Wait for confirmation and verify AI/MCP startup artifact hashes, Python app/prompt, policy, provider/model eligibility and browser/native loaded identities against prepared evidence. Discover actual targeted client-reload schema if needed; preserve other clients/tabs and verify reconnection.
+
+Record native roll evidence, resource before/after, rolled versus applied damage, HP/temp HP, per-step durability, duplicate identity, embedded complete persisted call/result exchanges, factual receipts and actual browser rendering. Record existing timing spans separately using process-local monotonic durations; browser sampling is an upper bound. No unsynchronized wall-clock subtraction or SQLite item-timestamp delivery claims. Narration is excluded.
+
+Independent validation checks authoritative outcomes, conversation continuity, actual request counts or enforceable limits, loaded identity and restoration. Restore fresh original scene/pause/combat/token/HP/resource state; remove newly created fixture item. Keep audit receipts/test conversation as disclosed evidence. No service lifecycle operations during cleanup. Unsupported resources/effects/automation/reaction choices and soft-deadline limitations remain explicit. Phase5 and optional model comparison are outside scope.

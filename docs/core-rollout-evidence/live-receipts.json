@@ -1,0 +1,192 @@
+[
+  {
+    "scope": {
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "threadId": "thr_a07b85ee"
+    },
+    "actionId": "3e43c3a7f53da6968f847be6c4203171f33a9b0550cfbdf8d77d0ec4e2926f54",
+    "action": {
+      "paused": false
+    },
+    "correlationId": "aidm-81419043-9b72-47dd-b24b-b06768f00859",
+    "result": {
+      "outcome": "confirmed",
+      "mutated": true,
+      "stateObservedAtMs": 1790903599651,
+      "paused": false,
+      "worldId": "izzy-campaign",
+      "correlationId": "aidm-81419043-9b72-47dd-b24b-b06768f00859"
+    }
+  },
+  {
+    "scope": {
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "threadId": "thr_a07b85ee"
+    },
+    "actionId": "731d6ce645063d999ecc24c6e2c555d51e0751bc538483e5b22a41ed521f81f0",
+    "action": {
+      "kind": "door.state",
+      "sceneId": "2RJeJKqdpEE4VZPh",
+      "targetId": "RsB12oN5v3LYI1XR",
+      "value": 1
+    },
+    "correlationId": "aidm-62df7f44-3691-459b-aa2c-64b4aaa270fe",
+    "result": {
+      "worldId": "izzy-campaign",
+      "correlationId": "aidm-62df7f44-3691-459b-aa2c-64b4aaa270fe",
+      "schemaVersion": "core-actions-v1",
+      "action": {
+        "kind": "door.state",
+        "sceneId": "2RJeJKqdpEE4VZPh",
+        "targetId": "RsB12oN5v3LYI1XR",
+        "value": 1
+      },
+      "state": {
+        "ds": 1
+      },
+      "mutated": true,
+      "outcome": "confirmed"
+    }
+  },
+  {
+    "scope": {
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "threadId": "thr_a07b85ee"
+    },
+    "actionId": "d0614ff61368095b6c1fc858bbc98328d1e1ac6c09c7ee3151a37fd97d74f087",
+    "action": {
+      "kind": "token.position",
+      "sceneId": "2RJeJKqdpEE4VZPh",
+      "targetId": "gHxvFbZTMoim2tYp",
+      "x": 400,
+      "y": 300
+    },
+    "correlationId": "aidm-a525582b-d051-498a-a9ce-244be640769b",
+    "result": {
+      "worldId": "izzy-campaign",
+      "correlationId": "aidm-a525582b-d051-498a-a9ce-244be640769b",
+      "schemaVersion": "core-actions-v1",
+      "action": {
+        "kind": "token.position",
+        "sceneId": "2RJeJKqdpEE4VZPh",
+        "targetId": "gHxvFbZTMoim2tYp",
+        "x": 400,
+        "y": 300
+      },
+      "state": {
+        "x": 400,
+        "y": 300
+      },
+      "mutated": true,
+      "outcome": "confirmed"
+    }
+  },
+  {
+    "scope": {
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "threadId": "thr_a07b85ee"
+    },
+    "actionId": "7d9136f02386bedfb159964dd3054078df9e3e789cabe371e1d75ac553fb3212",
+    "action": {
+      "kind": "system.roll",
+      "sceneId": "2RJeJKqdpEE4VZPh",
+      "targetId": "QvhdPrU8dHE1nm4h",
+      "rollType": "skill",
+      "key": "ste"
+    },
+    "correlationId": "aidm-a391b286-fc91-47a6-af4b-7bf0d6d9777f",
+    "result": {
+      "worldId": "izzy-campaign",
+      "correlationId": "aidm-a391b286-fc91-47a6-af4b-7bf0d6d9777f",
+      "schemaVersion": "core-actions-v1",
+      "action": {
+        "kind": "system.roll",
+        "sceneId": "2RJeJKqdpEE4VZPh",
+        "targetId": "QvhdPrU8dHE1nm4h",
+        "rollType": "skill",
+        "key": "ste"
+      },
+      "state": {
+        "systemId": "dnd5e",
+        "rollType": "skill",
+        "key": "ste",
+        "rolls": [
+          {
+            "formula": "1d20 + 0",
+            "total": 9,
+            "result": "9 + 0"
+          }
+        ]
+      },
+      "mutated": true,
+      "outcome": "confirmed"
+    }
+  },
+  {
+    "scope": {
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "threadId": "thr_a07b85ee"
+    },
+    "actionId": "dd2ba78bbabb51b5466344a31d4b9af499e73aeb2e331d331a0e785d4c4007a4",
+    "action": {
+      "kind": "actor.hp",
+      "sceneId": "2RJeJKqdpEE4VZPh",
+      "targetId": "QvhdPrU8dHE1nm4h",
+      "value": 15
+    },
+    "correlationId": "aidm-2e388dab-d002-4acd-a1b8-d8cf71b4adde",
+    "result": {
+      "worldId": "izzy-campaign",
+      "correlationId": "aidm-2e388dab-d002-4acd-a1b8-d8cf71b4adde",
+      "schemaVersion": "core-actions-v1",
+      "action": {
+        "kind": "actor.hp",
+        "sceneId": "2RJeJKqdpEE4VZPh",
+        "targetId": "QvhdPrU8dHE1nm4h",
+        "value": 15
+      },
+      "state": {
+        "value": 15,
+        "max": 20
+      },
+      "mutated": true,
+      "outcome": "confirmed"
+    }
+  },
+  {
+    "scope": {
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "threadId": "thr_a07b85ee"
+    },
+    "actionId": "4c596ffcbc295e34937594fed48f087f02c43ef983e9c5169db7bd5a2518cd35",
+    "action": {
+      "kind": "combat.next",
+      "sceneId": "2RJeJKqdpEE4VZPh",
+      "targetId": "F72hDz6efnhuYqKb"
+    },
+    "correlationId": "aidm-09837706-159e-4901-a9e7-c6a62106411f",
+    "result": {
+      "worldId": "izzy-campaign",
+      "correlationId": "aidm-09837706-159e-4901-a9e7-c6a62106411f",
+      "schemaVersion": "core-actions-v1",
+      "action": {
+        "kind": "combat.next",
+        "sceneId": "2RJeJKqdpEE4VZPh",
+        "targetId": "F72hDz6efnhuYqKb"
+      },
+      "state": {
+        "round": 1,
+        "turn": 1,
+        "turnCount": 2
+      },
+      "mutated": true,
+      "outcome": "confirmed"
+    }
+  }
+]

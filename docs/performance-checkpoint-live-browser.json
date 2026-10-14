@@ -1,0 +1,19 @@
+{
+  "scope": "Chrome embedded ChatKit; observation timestamps are upper bounds, not browser paint timestamps",
+  "submittedPrompts": 6,
+  "resubmissions": 0,
+  "runtimeMaxModelTurns": 1,
+  "providerRetries": 0,
+  "automaticEventsEnabled": false,
+  "samples": [
+    {"command":"pause","submittedAt":"2026-10-02T15:45:31.577Z","readyReceiptObservedAt":"2026-10-02T15:45:40.740Z","receipt":"Game unpaused."},
+    {"command":"door","submittedAt":"2026-10-02T15:46:20.569Z","readyReceiptObservedAt":"2026-10-02T15:46:34.092Z","receipt":"Door opened."},
+    {"command":"move","submittedAt":"2026-10-02T15:47:32.195Z","readyReceiptObservedAt":"2026-10-02T15:47:50.457Z","receipt":"Token moved to (400, 300)."},
+    {"command":"hp","submittedAt":"2026-10-02T15:48:34.032Z","readyReceiptObservedAt":"2026-10-02T15:48:50.633Z","receipt":"HP set to 18."},
+    {"command":"roll","submittedAt":"2026-10-02T15:49:08.931Z","readyReceiptObservedAt":"2026-10-02T15:49:21.679Z","receipt":"Roll: 18 (18 + 0)."},
+    {"command":"combat","submittedAt":"2026-10-02T15:49:42.252Z","readyReceiptObservedAt":"2026-10-02T15:49:54.736Z","receipt":"Combat advanced: round 1, turn 1."}
+  ],
+  "renderedEvidence": "Pause banner removed; fixture token and movement receipt inspected in screenshot; all six receipts observed in embedded UI; original IZZY03 scene and pause banner restored; close/reopen recovered all six user messages and receipts without new inference",
+  "inputFailure": "First attempt to enter movement text failed with explicit no input sent; subsequent successful entry was the only movement prompt submission",
+  "limitations": "One observation per command. First inference after restart, subsequent requests same conversation; provider/cache cold-warm state unknown. No exact paint, model-call trace, per-operation preparation, queue or narration timing captured. Factual receipt was final output; no separate generated narration requested."
+}

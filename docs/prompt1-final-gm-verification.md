@@ -1,0 +1,13 @@
+# Prompt1 final authenticated verification — zero inference
+
+Actual GM world izzy-campaign/user X7X4KK7zca5U2Ics connected after Peter resumed. Panel Ready and existing history visible; authenticated storage list/get succeeded. Own empty fixture thread200; foreign-user and foreign-world threads404. Preparation200 ready, selected modelgpt-5.6-sol, contextprepared, campaignStatusunavailable. Automatic events remainfalse. Browser loaded core-actions-v1 marker confirmed; AI53/53 and MCP15startup artifact hashes match disk after visible alias restart. Normal maxModelTurns15.
+
+Private redacted evidence: C:/dev/FoundryVtt/.runtime/foundry-ai-dungeon-master/prompt1-browser-isolation-result.json and prompt1-browser-storage-result.json. Exact existing-store fixture bindings in prompt1-bound-fixtures.json; no inference allowance configured,0model requests, no scene/door mutation.
+
+Independent offline model input assembly rejects current model:36823conservative units for instructions/30schemas exceeds24576fallback input ceiling, before history/snapshot. Live latency acceptance cannot proceed. Campaign overview unavailable is an unresolved retrieval gate, not proof migration failed or permission bypass. Foreign-owner404tests prove actual authenticated thread isolation; they do not establish every campaign route.
+
+Prior private migration preserved168authored originals in external archive and working copy with byte/SHA verification,86public media unchanged,7operational files relocated;458old operation rows and165old transcript rows retained. Anonymous former authored/operational routes denied. Existing cutover/restart/independent reports retain exact evidence and limitations. Prior manual player acceptance covers only one deterministic corridor sentence; only GM currently connected.
+
+No Prompt2 began, no push, inference, maintenance, embeddings/images or automatic events. Parent may direct independent offline Prompt2 work if its scope does not depend on blocked campaign retrieval/model admission or imply live acceptance; missing scope/dependency review remains parent responsibility. Prompt1 live acceptance is separate and blocked.
+
+Independent source/storage inspection: protected campaign root exists without pending transaction/lock, but literal overview.md and index.md are absent. The existing parser requires overview.md and returns unavailable when missing; this is a content prerequisite, not evidence of migration loss. Authored canon was preserved rather than rewritten to satisfy preparation. Campaign retrieval acceptance remains incomplete until an approved authored overview/index is supplied or a supported on-demand resource is validated.

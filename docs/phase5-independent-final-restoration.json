@@ -1,0 +1,44 @@
+{
+  "capturedAt": "2026-10-03T01:06:15.125Z",
+  "checks": {
+    "sceneAbsent": true,
+    "actorAbsent": true,
+    "journalAbsent": true,
+    "activeRestored": true,
+    "pause": true,
+    "automatic": true,
+    "views": true,
+    "originalFog": true
+  },
+  "views": [
+    {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "match": true
+    },
+    {
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "match": true
+    }
+  ],
+  "fog": [
+    {
+      "sceneId": "Nbj38PEdvw1zX1J9",
+      "userId": "X7X4KK7zca5U2Ics",
+      "unchanged": true
+    },
+    {
+      "sceneId": "Nbj38PEdvw1zX1J9",
+      "userId": "edtBL96Yu3058QAT",
+      "unchanged": true
+    }
+  ],
+  "elevation": {
+    "ground": [
+      "region-1"
+    ],
+    "above": []
+  },
+  "pass": true,
+  "fixtureFog": "Removal acknowledgements captured before scene deletion; normal fog getter requires existing scene, so fresh orphan absence unavailable through this route.",
+  "inferenceRequests": 0
+}

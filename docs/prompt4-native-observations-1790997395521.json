@@ -1,0 +1,144 @@
+{
+  "worldId": "izzy-campaign",
+  "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "userId": "edtBL96Yu3058QAT",
+  "observations": [
+    {
+      "capturedAt": "2026-10-03T03:16:35.437Z",
+      "observation": {
+        "version": 1,
+        "id": "32e01a6a-9690-4d40-9999-b08fc10c13a4",
+        "worldId": "izzy-campaign",
+        "sceneId": "cbyniU1p5punoUkD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "yG5NYzuzG5YgBslE",
+        "actorId": "cACt3U8e0cCanb1b",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T03:16:35.437Z",
+        "stateRevision": "66f20dace61afba112083a5e7ccccfb70e12d544e4d00cef3f6fbce4de354267",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "sceneId": "cbyniU1p5punoUkD",
+      "effectiveUserId": "edtBL96Yu3058QAT",
+      "tokenId": "yG5NYzuzG5YgBslE",
+      "status": "complete",
+      "issues": [],
+      "context": {
+        "selectedUser": true,
+        "selectedToken": true,
+        "tokenOwned": true,
+        "sceneLoaded": true
+      },
+      "visible": {
+        "tokens": [
+          "yG5NYzuzG5YgBslE"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "redaction": {
+        "occludedEntities": true,
+        "hiddenRegions": true,
+        "barrierDocumentIds": true,
+        "barrierCoordinates": true,
+        "secretDoors": true,
+        "exitDestinations": true
+      },
+      "queryPoints": [
+        {
+          "id": "near-primary",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "beyond-door",
+          "visible": false,
+          "regions": [],
+          "blockerAttribution": "visible-wall",
+          "blockerKeys": [
+            "blocker-1"
+          ]
+        }
+      ],
+      "effectiveSources": {
+        "vision": 1,
+        "light": 1
+      },
+      "isolation": {
+        "status": "complete",
+        "method": "foundry-v14-detection-modes",
+        "detectionModes": 2,
+        "unrelatedVisionSourcesIgnored": 0,
+        "visionProvidingLightsIgnored": 0
+      },
+      "environment": {
+        "fog": "complete",
+        "lighting": "complete",
+        "darkness": "complete",
+        "vision": "complete",
+        "regions": "complete",
+        "fogExplorationEnabled": true,
+        "tokenVisionEnabled": true,
+        "globalLight": true,
+        "darknessLevel": 0
+      },
+      "regions": [],
+      "visibleBarriers": [
+        {
+          "key": "blocker-1",
+          "kind": "door",
+          "state": "closed",
+          "blocksVision": true,
+          "exit": false,
+          "destination": "redacted"
+        }
+      ],
+      "coveragePolygons": [
+        {
+          "source": "selected-token",
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 600,
+              "y": 0
+            },
+            {
+              "x": 600,
+              "y": 800
+            },
+            {
+              "x": 0,
+              "y": 800
+            }
+          ]
+        }
+      ],
+      "fogRevision": "51a6c84a99cfab29470124e175d4c23f8b7dc792fc7279f4e1f055eff9717d7b",
+      "persistence": {
+        "beforeRevision": "66f20dace61afba112083a5e7ccccfb70e12d544e4d00cef3f6fbce4de354267",
+        "afterRevision": "66f20dace61afba112083a5e7ccccfb70e12d544e4d00cef3f6fbce4de354267",
+        "unchanged": true
+      },
+      "bounds": {
+        "truncated": false,
+        "visiblePerKind": 500,
+        "regions": 250,
+        "barriers": 500,
+        "coverageSources": 100,
+        "coveragePointsPerSource": 512,
+        "issues": 50
+      }
+    }
+  ],
+  "evidenceScope": "native MCP only; not authenticated AI adapter or browser observation",
+  "inferenceCalls": 0
+}

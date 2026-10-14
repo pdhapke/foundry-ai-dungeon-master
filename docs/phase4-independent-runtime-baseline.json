@@ -1,0 +1,121 @@
+{
+  "capturedAt": "2026-10-02T20:57:15.782Z",
+  "kind": "read-only-current-phase4-baseline",
+  "system": {
+    "version": "6.0.3"
+  },
+  "notes": "No model request; browser selected-model eligibility not independently tested",
+  "ai": {
+    "status": "ready",
+    "module": "foundry-ai-dungeon-master",
+    "version": "0.1.0",
+    "details": {
+      "processLive": true,
+      "foundryDependencyConfigured": true,
+      "foundryDependencyReady": true,
+      "localAuthenticationReady": true,
+      "chatGptPlanAuthorizationPresent": true,
+      "openAiApiKeyFallbackConfigured": false,
+      "signingKeyPersistent": true
+    },
+    "chatkit": {
+      "requests": 0,
+      "stage": "idle",
+      "errorCode": null,
+      "upstreamStatus": null
+    },
+    "latency": {
+      "schemaVersion": 1,
+      "processRunId": "4bf54f68-95e1-4df5-9977-705355c2d9f9",
+      "enabled": true,
+      "dropped": 0,
+      "errors": 0,
+      "retention": "two files, approximately 4MiB each; bounded queue 512"
+    },
+    "build": {
+      "policy": "core-actions-v1",
+      "startedAt": "2026-10-02T20:29:46.416Z",
+      "manifestDigest": "cf1b2d170efac7dc1bc23dead35fcb594f4cc35f8b0146d112169bb8909b3f66",
+      "artifactHashes": {
+        "server/dist/latency-trace.js": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4",
+        "server/dist/context/world-campaign.js": "afdc426077bee1fbec3b38ed4c99a80114f4929042c954b73376272cf00b1890",
+        "server/dist/index.js": "e2e68e5c74641f6ec1fa6dd1d98c72a27ded4a0807b9ed3b116fb2fa7ca15b5c",
+        "server/dist/app.js": "5c4eab30a36dd8dbb8c2dd7343b5a390ebeb2fb47ee72d487bd6777474ff5c61",
+        "server/dist/chatkit/gateway.js": "346c3de6a795bf6dbf8992067d566dde2b63cf435201ce9d7da14fb6ab698dd4",
+        "server/dist/chatkit/read-tools.js": "4d287c2aec80f42cfc24913f7be76aa66bbb783fb33816898e1ee2dca7059dbf",
+        "server/dist/chatkit/catalog-tools.js": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+        "server/dist/chatkit/pause-actions.js": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+        "server/dist/chatkit/core-actions.js": "6e9b23d025e0609788e0f801f7f26a5019c090e3cb33b9168e0daff63c8d6730",
+        "server/dist/chatkit/attack-actions.js": "3c4476145b65ca6b70f4843267df8a098e1f98f0bb95164449a8e2ca4554f6a6",
+        "server/dist/chatkit/session-actions.js": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614",
+        "server/dist/chatkit/pause-request.js": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+        "server/dist/chatkit/routine-completion.js": "027f7ce0304f2625fc30934af49b65ff2390d9a9e163657ab00bacab529eee0a",
+        "server/dist/chatkit/narration-request.js": "721fbf7029e94fe95944eaeb6860ee59e0764e5a4864c0d647e80df1b9b49f33",
+        "server/dist/chatkit/tool-audit.js": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+        "server/dist/chatkit/world-request.js": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+        "server/dist/chatkit/world-document-actions.js": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+        "server/dist/chatkit/world-tool-policy.js": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+        "server/dist/chatkit/world-file-actions.js": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+        "server/dist/chatkit/world-files.js": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+        "server/dist/chatkit/native-actions.js": "ab0e3316363c7800c0f5a83e043eb1a66ac480ff2478326e34e456574c8f539e",
+        "server/dist/chatkit/campaign-actions.js": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+        "server/dist/chatkit/turns.js": "cdd6a3fb18e7d79e94d45f50dc5940adb04bafaa23631e1ffd58b43772906e63",
+        "server/dist/chatkit/bounded-call.js": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+        "server/dist/tool-catalog/runtime.js": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+        "server/dist/tool-catalog/catalog.js": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+        "server/dist/tool-catalog/canonical.js": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+        "server/dist/tool-catalog/foundry-local-api-adapter.js": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+        "shared/dist/ai-dungeon-master.js": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+        "shared/dist/chatkit.js": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+        "chatkit-server/app.py": "3d86e8d3fb2a4975e70fbbdd59f97598dc34d36a6540ad059d0a6fd4671624c4",
+        "chatkit-server/dm_prompt.py": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2",
+        "module/dist/index.js": "6cb97728a2142a129787df76d754cbafbd52782acf0c3275556828ae37989701"
+      },
+      "scope": "startup artifacts; verify Python health and browser module separately"
+    }
+  },
+  "mcp": {
+    "status": "ok",
+    "uptime": 1650.6183111,
+    "version": "0.1.0",
+    "latency": {
+      "schemaVersion": 1,
+      "processRunId": "87ded551-b3f2-4f78-bb28-e3a75c6bd569",
+      "enabled": true,
+      "dropped": 0,
+      "errors": 0,
+      "retention": "two files, approximately 4MiB each; bounded queue 512"
+    },
+    "build": {
+      "startedAt": "2026-10-02T20:29:46.053Z",
+      "instrumentation": "latency-v1",
+      "artifactHashes": {
+        "server/dist/index.js": "9dae0d12ba8f139fe64d29b25593cc7fc35c27e60dad83069c5ee186e789a710",
+        "server/dist/app.js": "395c60c7fe13a3a82c47f532a73199874cc75d2b302699fddd5f6a9ddec16aed",
+        "server/dist/latency-trace.js": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4",
+        "server/dist/endpoints/registry.js": "3a3f070bbfc18c39517e3639370668744f3e4c49a29d4e793a8e5507353154cc",
+        "server/dist/bridge/foundry-client.js": "9673c13bc8c5c12e629268ef83d597c0224fe58005c87bbe69d1bd5ccbaee3a5",
+        "server/dist/endpoints/routine-mutation-lane.js": "1eb7b3bdaf4a5513f929787b5f73da09b06b261f1daf3ceaaa3bd10ce4dc8067",
+        "shared/dist/protocol.js": "b440adc961681f5e853e95bbd843f14fb156929965818a6000f537bbd8712eac",
+        "module/dist/index.js": "249ece12d67d45f2a4959a858032a3a5282e4ad444bcfa693cb5de679676b536",
+        "module/src/latency-build.ts": "ef438e2bda0918effee2d37c1dcc61a32d17301691d2063baa1285bb6406256e"
+      },
+      "manifestDigest": "ae348e076d5f934a769d61ed7313f9f141f8aa9466ca3ce9dc15b7b4fe01633f",
+      "scope": "Node startup artifact bytes; verify native loaded marker separately"
+    }
+  },
+  "python": {
+    "status": "ready",
+    "protocol": "openai-chatkit",
+    "promptVersion": "solo-dm-v8-core-actions",
+    "promptDigest": "becbafcadb3c69b6352e0e71df60901c1869839f44bd6c721cd7d373293eea13",
+    "codeDigest": "3d86e8d3fb2a4975e70fbbdd59f97598dc34d36a6540ad059d0a6fd4671624c4",
+    "maxModelTurns": 8,
+    "latencyDiagnostics": {
+      "writes": 0,
+      "dropped": 0,
+      "writeDurationMs": 0,
+      "maxWriteDurationMs": 0
+    }
+  }
+}

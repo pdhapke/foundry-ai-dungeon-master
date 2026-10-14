@@ -1,0 +1,20 @@
+
+> build
+> npm run build --workspaces --if-present
+
+
+> @foundry-local-api/shared@0.1.0 build
+> tsc -p tsconfig.json
+
+
+> @foundry-local-api/server@0.1.0 build
+> tsc -p tsconfig.json
+
+
+> @foundry-local-api/module@0.1.0 build
+> esbuild src/index.ts --bundle --format=esm --outfile=dist/index.js
+
+
+  dist\index.js  409.4kb
+
+Done in 27ms

@@ -1,0 +1,9 @@
+{
+  "equivalent": true,
+  "cacheLength": 23880,
+  "bundleLength": 23880,
+  "firstDifference": 23880,
+  "cacheExcerpt": ".#e=null,this.#h=null,AiDungeonMasterApplication.#i=null,await super.close(t)}}\n",
+  "bundleExcerpt": ".#e=null,this.#h=null,AiDungeonMasterApplication.#i=null,await super.close(t)}}\n",
+  "scope": "Class runtime semantics after AST bundler-alias/name-wrapper normalization and esbuild canonical minification; excludes original TypeScript declarations and outside-class helpers"
+}

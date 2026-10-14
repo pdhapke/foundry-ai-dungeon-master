@@ -1,0 +1,67 @@
+{
+  "matches": true,
+  "before": {
+    "token": {
+      "_id": "gHxvFbZTMoim2tYp",
+      "x": 200,
+      "y": 200
+    },
+    "door": {
+      "_id": "RsB12oN5v3LYI1XR",
+      "ds": 0
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0,
+      "tempmax": 0,
+      "formula": ""
+    },
+    "combat": {
+      "_id": "F72hDz6efnhuYqKb",
+      "active": false,
+      "round": 1,
+      "turn": 0
+    },
+    "sceneActive": false,
+    "pause": {
+      "paused": true
+    },
+    "activeScenes": [
+      "Nbj38PEdvw1zX1J9"
+    ],
+    "activeCombats": []
+  },
+  "after": {
+    "token": {
+      "_id": "gHxvFbZTMoim2tYp",
+      "x": 200,
+      "y": 200
+    },
+    "door": {
+      "_id": "RsB12oN5v3LYI1XR",
+      "ds": 0
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0,
+      "tempmax": 0,
+      "formula": ""
+    },
+    "combat": {
+      "_id": "F72hDz6efnhuYqKb",
+      "active": false,
+      "round": 1,
+      "turn": 0
+    },
+    "sceneActive": false,
+    "pause": {
+      "paused": true
+    },
+    "activeScenes": [
+      "Nbj38PEdvw1zX1J9"
+    ],
+    "activeCombats": []
+  }
+}

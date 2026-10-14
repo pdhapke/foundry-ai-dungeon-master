@@ -1,0 +1,457 @@
+[
+  {
+    "name": "foundry_get_capability_report",
+    "description": "Reports negotiated bridge/server/client versions and classifies foundational capabilities as supported, partial, or unsupported, with connected and live-verified state.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    },
+    "annotations": {
+      "readOnlyHint": true
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_reload_client",
+    "description": "Schedules a browser-page reload on one connected, opted-in Foundry client after returning an identity-bound acknowledgement. Success confirms scheduling only; callers must verify reconnection and re-enroll non-GM lanes.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "clientId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "userId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "correlationId": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]+$"
+        },
+        "minimumModuleVersion": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "delayMs": {
+          "default": 1000,
+          "type": "integer",
+          "minimum": 500,
+          "maximum": 5000
+        }
+      },
+      "required": [
+        "correlationId"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": false
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_get_status",
+    "description": "Core Foundry world/system/user identifiers: Foundry version, world id, system id, and current user id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_get_setting",
+    "description": "Reads a single registered game setting by namespace and key.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "namespace": {
+          "type": "string",
+          "minLength": 1
+        },
+        "key": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "namespace",
+        "key"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_get_actor",
+    "description": "Reads a single Actor document by id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_update_actor",
+    "description": "Updates fields on an existing Actor document.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "changes": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {}
+        }
+      },
+      "required": [
+        "id",
+        "changes"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_create_actor_item",
+    "description": "Creates a new embedded Item document on an actor.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "actorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {}
+        }
+      },
+      "required": [
+        "actorId",
+        "data"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_update_actor_item",
+    "description": "Updates fields on an existing embedded Item document on an actor.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "actorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "itemId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "changes": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {}
+        }
+      },
+      "required": [
+        "actorId",
+        "itemId",
+        "changes"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_get_scene",
+    "description": "Reads a single Scene document by id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_activate_scene",
+    "description": "Activates a scene, making it the world's current active/viewed scene.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_list_combats",
+    "description": "Lists every Combat document in the current world.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "foundry_attack_sequence_confirmed",
+    "description": "Bounded explicit GM-authorized attack list, durable per-step roll/apply evidence and clean deadline continuation. No inferred Multiattack entitlement. Reactions and uncertainty need manual reconciliation. Budget is soft between native stages.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "const": "attack-sequence-v1"
+        },
+        "worldId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,128}$"
+        },
+        "userId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,128}$"
+        },
+        "requestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,128}$"
+        },
+        "correlationId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,128}$"
+        },
+        "origin": {
+          "type": "string",
+          "const": "ai-dm"
+        },
+        "action": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "execute"
+                },
+                "steps": {
+                  "minItems": 1,
+                  "maxItems": 4,
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "stepId": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                      },
+                      "attack": {
+                        "type": "object",
+                        "properties": {
+                          "mode": {
+                            "type": "string",
+                            "const": "roll"
+                          },
+                          "sceneId": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                          },
+                          "attackerTokenId": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                          },
+                          "actorId": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                          },
+                          "itemId": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                          },
+                          "activityId": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                          },
+                          "targetTokenId": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                          },
+                          "advantage": {
+                            "type": "string",
+                            "enum": [
+                              "normal",
+                              "advantage",
+                              "disadvantage"
+                            ]
+                          },
+                          "attackMode": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                          },
+                          "ammunitionId": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                          },
+                          "abilityId": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                          }
+                        },
+                        "required": [
+                          "mode",
+                          "sceneId",
+                          "attackerTokenId",
+                          "actorId",
+                          "itemId",
+                          "activityId",
+                          "targetTokenId",
+                          "advantage"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "stepId",
+                      "attack"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "maxDurationMs": {
+                  "type": "integer",
+                  "minimum": 1000,
+                  "maximum": 8000
+                }
+              },
+              "required": [
+                "mode",
+                "steps",
+                "maxDurationMs"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string",
+                  "const": "resume"
+                },
+                "priorSequenceRequestId": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                },
+                "continuationId": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]{1,128}$"
+                },
+                "maxDurationMs": {
+                  "type": "integer",
+                  "minimum": 1000,
+                  "maximum": 8000
+                }
+              },
+              "required": [
+                "mode",
+                "priorSequenceRequestId",
+                "continuationId",
+                "maxDurationMs"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "worldId",
+        "userId",
+        "requestId",
+        "correlationId",
+        "origin",
+        "action"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "annotations": {
+      "readOnlyHint": false,
+      "destructiveHint": false,
+      "idempotentHint": true
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  },
+  {
+    "name": "dtt_get_status",
+    "description": "Convenience composite read for the digital-tabletops integration: whether the module is active, whether a Foundry user named \"TV\" (case-insensitive, matching dtt.js's own check) exists and is currently online, and the module's four current world settings (namespace \"digital-tabletops\": hideUI, lockPan, display-width, port-number — also individually reachable via the generic GET/PUT /api/settings/digital-tabletops/:key endpoints). Call this before dtt_pan_battlemap/dtt_scale_battlemap_to_physical to confirm a display is actually connected.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    },
+    "execution": {
+      "taskSupport": "forbidden"
+    }
+  }
+]

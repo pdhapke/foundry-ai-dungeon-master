@@ -1,0 +1,117 @@
+{
+  "boundary": "Server arrival/queue/backend result/response-written, same trace ID. Browser delivery and paint not measured. Action/correlation IDs absent from these trace stages: command labels cannot be proven from trace alone.",
+  "classification": "Direct zero-model controls only; cold/warm unknown; individual observations, no distribution claim",
+  "sampleCount": 11,
+  "samples": [
+    {
+      "traceId": "88af90d7-c6d0-4277-87bf-c357d0eaa317",
+      "arrivedAtMs": 1790914807467,
+      "arrivalToQueueMs": 1037,
+      "queueWaitMs": 3.827999999994063,
+      "arrivalToBackendResultMs": 1390,
+      "serviceExecutionMs": 283.64310000000114,
+      "arrivalToResponseWrittenMs": 1392,
+      "resultToResponseWrittenMs": 2
+    },
+    {
+      "traceId": "3832a02e-feca-4dc4-aef9-42a48c2856a6",
+      "arrivedAtMs": 1790914845876,
+      "arrivalToQueueMs": 80,
+      "queueWaitMs": 8.410500000027241,
+      "arrivalToBackendResultMs": 394,
+      "serviceExecutionMs": 271.59089999998105,
+      "arrivalToResponseWrittenMs": 395,
+      "resultToResponseWrittenMs": 1
+    },
+    {
+      "traceId": "3b0c656d-b473-432a-accb-49a2f8ab004c",
+      "arrivedAtMs": 1790914866146,
+      "arrivalToQueueMs": 74,
+      "queueWaitMs": 6.869700000010198,
+      "arrivalToBackendResultMs": 479,
+      "serviceExecutionMs": 369.6304999999993,
+      "arrivalToResponseWrittenMs": 481,
+      "resultToResponseWrittenMs": 2
+    },
+    {
+      "traceId": "6892fbc0-6bad-470a-8691-825e6025bfb4",
+      "arrivedAtMs": 1790914890098,
+      "arrivalToQueueMs": 79,
+      "queueWaitMs": 7.391100000008009,
+      "arrivalToBackendResultMs": 633,
+      "serviceExecutionMs": 513.4710000000196,
+      "arrivalToResponseWrittenMs": 637,
+      "resultToResponseWrittenMs": 4
+    },
+    {
+      "traceId": "aac8cd64-699c-4743-b2cb-000bf87a8bb1",
+      "arrivedAtMs": 1790914913097,
+      "arrivalToQueueMs": 80,
+      "queueWaitMs": 8.276000000012573,
+      "arrivalToBackendResultMs": 372,
+      "serviceExecutionMs": 264.0576000000001,
+      "arrivalToResponseWrittenMs": 373,
+      "resultToResponseWrittenMs": 1
+    },
+    {
+      "traceId": "5788d142-03b4-4c1f-abe0-06de58ca2331",
+      "arrivedAtMs": 1790914931374,
+      "arrivalToQueueMs": 68,
+      "queueWaitMs": 7.549399999988964,
+      "arrivalToBackendResultMs": 336,
+      "serviceExecutionMs": 227.43680000002496,
+      "arrivalToResponseWrittenMs": 337,
+      "resultToResponseWrittenMs": 1
+    },
+    {
+      "traceId": "513bd6c8-474b-4264-913e-ca8f87300082",
+      "arrivedAtMs": 1790915038681,
+      "arrivalToQueueMs": 65,
+      "queueWaitMs": 7.610600000014529,
+      "arrivalToBackendResultMs": 469,
+      "serviceExecutionMs": 374.27939999999944,
+      "arrivalToResponseWrittenMs": 470,
+      "resultToResponseWrittenMs": 1
+    },
+    {
+      "traceId": "0a34c65b-ad31-4644-8935-d134d5eb5709",
+      "arrivedAtMs": 1790915058014,
+      "arrivalToQueueMs": 61,
+      "queueWaitMs": 6.12300000002142,
+      "arrivalToBackendResultMs": 369,
+      "serviceExecutionMs": 276.43189999996684,
+      "arrivalToResponseWrittenMs": 371,
+      "resultToResponseWrittenMs": 2
+    },
+    {
+      "traceId": "98a00363-9d1d-4f9e-9f2d-79af269e5894",
+      "arrivedAtMs": 1790915065635,
+      "arrivalToQueueMs": 61,
+      "queueWaitMs": 8.115999999979977,
+      "arrivalToBackendResultMs": 330,
+      "serviceExecutionMs": 235.0337999999756,
+      "arrivalToResponseWrittenMs": 331,
+      "resultToResponseWrittenMs": 1
+    },
+    {
+      "traceId": "8bd75443-c060-42f9-b8c6-5aa1acd4286e",
+      "arrivedAtMs": 1790915086338,
+      "arrivalToQueueMs": 59,
+      "queueWaitMs": 7.455900000000838,
+      "arrivalToBackendResultMs": 327,
+      "serviceExecutionMs": 238.32679999998072,
+      "arrivalToResponseWrittenMs": 328,
+      "resultToResponseWrittenMs": 1
+    },
+    {
+      "traceId": "c24615d6-65df-427e-a6d4-21a5eb954be2",
+      "arrivedAtMs": 1790915104166,
+      "arrivalToQueueMs": 131,
+      "queueWaitMs": 4.330900000000838,
+      "arrivalToBackendResultMs": 333,
+      "serviceExecutionMs": 154.08860000001732,
+      "arrivalToResponseWrittenMs": 334,
+      "resultToResponseWrittenMs": 1
+    }
+  ]
+}

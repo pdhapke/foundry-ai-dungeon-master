@@ -1,0 +1,111 @@
+ M PLAN.md
+ M README.md
+ M docs/mcp-tools.md
+ M docs/openapi.json
+ M docs/trails-integration/server-architecture-audit.md
+ M module/src/bridge-client.test.ts
+ M module/src/bridge-client.ts
+ M module/src/bridge-enrollment.test.ts
+ M module/src/commands/client-readiness.test.ts
+ M module/src/commands/collision-topology.test.ts
+ M module/src/commands/collision-topology.ts
+ M module/src/commands/game-state.ts
+ M module/src/commands/reference-audit.test.ts
+ M module/src/commands/reference-audit.ts
+ M module/src/commands/scene-render.test.ts
+ M module/src/commands/scene-render.ts
+ M module/src/commands/transactions.ts
+ M module/src/commands/users.ts
+ M module/src/index.ts
+ M module/src/movement-event-hooks.ts
+ M module/src/types/foundry-globals.d.ts
+ M package-lock.json
+ M package.json
+ M scripts/foundry-child-bootstrap.mjs
+ M server/.env.example
+ M server/package.json
+ M server/src/app.ts
+ M server/src/bridge/foundry-client.ts
+ M server/src/bridge/gateway.test.ts
+ M server/src/bridge/gateway.ts
+ M server/src/config.ts
+ M server/src/endpoints/ai-gm-delivery.test.ts
+ M server/src/endpoints/ai-gm-delivery.ts
+ M server/src/endpoints/bridge-enrollment.test.ts
+ M server/src/endpoints/client-readiness.test.ts
+ M server/src/endpoints/client-readiness.ts
+ M server/src/endpoints/collision-topology.ts
+ M server/src/endpoints/game-state.ts
+ M server/src/endpoints/index.ts
+ M server/src/endpoints/movement-events.test.ts
+ M server/src/endpoints/movement-events.ts
+ M server/src/endpoints/reference-audit.test.ts
+ M server/src/endpoints/reference-audit.ts
+ M server/src/endpoints/requirement-output-schemas.ts
+ M server/src/endpoints/requirements-registration.test.ts
+ M server/src/endpoints/scene-render.test.ts
+ M server/src/endpoints/scene-render.ts
+ M server/src/endpoints/users.test.ts
+ M server/src/events/movement-event-store.test.ts
+ M server/src/events/movement-event-store.ts
+ M server/src/index.ts
+ M server/src/scripts/generate-docs.ts
+ M server/src/services/ai-gm-delivery.test.ts
+ M server/src/services/ai-gm-delivery.ts
+ M server/src/services/asset-lifecycle.test.ts
+ M server/src/services/asset-lifecycle.ts
+ M shared/src/client-readiness.test.ts
+ M shared/src/client-readiness.ts
+ M shared/src/collision-topology.test.ts
+ M shared/src/collision-topology.ts
+ M shared/src/enrollment.ts
+ M shared/src/foundations.test.ts
+ M shared/src/foundations.ts
+ M shared/src/game-state.ts
+ M shared/src/index.ts
+ M shared/src/movement-events.ts
+ M shared/src/scene-render.ts
+?? module/src/commands/attack-actions.test.ts
+?? module/src/commands/attack-actions.ts
+?? module/src/commands/attack.attack-vision.validation.test.ts
+?? module/src/commands/client-identity.test.ts
+?? module/src/commands/client-identity.ts
+?? module/src/commands/core-rollout.validation.test.ts
+?? module/src/commands/movement-policy.test.ts
+?? module/src/commands/movement-policy.ts
+?? module/src/commands/movement.attack-vision.validation.test.ts
+?? module/src/commands/pause-experiment.validation.test.ts
+?? module/src/commands/session-actions.independent.test.ts
+?? module/src/commands/session-actions.test.ts
+?? module/src/commands/session-actions.ts
+?? module/src/commands/system.attack-vision.validation.test.ts
+?? module/src/commands/transactions-origin.test.ts
+?? module/src/commands/users.test.ts
+?? module/src/commands/world-documents.independent.test.ts
+?? module/src/commands/world-documents.test.ts
+?? module/src/commands/world-documents.ts
+?? scripts/foundry-ai-auth-broker.mjs
+?? scripts/foundry-ai-auth-broker.test.mjs
+?? scripts/foundry-companion-credential.mjs
+?? scripts/foundry-companion-credential.test.mjs
+?? server/src/bridge/foundry-session-verifier.test.ts
+?? server/src/bridge/foundry-session-verifier.ts
+?? server/src/endpoints/acceptance-validation.test.ts
+?? server/src/endpoints/acceptance-validation.ts
+?? server/src/endpoints/attack-actions.ts
+?? server/src/endpoints/attack.attack-vision.validation.test.ts
+?? server/src/endpoints/core-rollout.validation.test.ts
+?? server/src/endpoints/pause-experiment.validation.test.ts
+?? server/src/endpoints/routine-mutation-lane.ts
+?? server/src/endpoints/session-actions.test.ts
+?? server/src/endpoints/session-actions.ts
+?? server/src/endpoints/world-documents.test.ts
+?? server/src/endpoints/world-documents.ts
+?? server/src/scripts/generate-docs.test.ts
+?? server/src/services/movement-generation-rollover.test.ts
+?? server/src/services/movement-generation-rollover.ts
+?? server/src/services/production-asset-roots.test.ts
+?? server/src/services/production-asset-roots.ts
+?? shared/src/attack-actions.ts
+?? shared/src/session-actions.ts
+?? shared/src/world-documents.ts

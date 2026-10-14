@@ -1,0 +1,267 @@
+{
+  "Tile": {
+    "context": {
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0",
+      "documentType": "Tile",
+      "parentDocumentType": "Scene",
+      "parentDocumentId": "JYKHHWccpbXdZEGD",
+      "embedded": true
+    },
+    "mode": "create",
+    "results": [
+      {
+        "index": 0,
+        "context": {
+          "foundryVersion": "14.368",
+          "systemId": "dnd5e",
+          "systemVersion": "6.0.3",
+          "moduleVersion": "0.1.0",
+          "documentType": "Tile",
+          "parentDocumentType": "Scene",
+          "parentDocumentId": "JYKHHWccpbXdZEGD",
+          "embedded": true
+        },
+        "mode": "create",
+        "valid": true,
+        "normalized": {
+          "x": 350,
+          "y": 550,
+          "width": 80,
+          "height": 80,
+          "elevation": 0,
+          "hidden": true,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "fill",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "_id": null,
+          "levels": [],
+          "sort": 0,
+          "rotation": 0,
+          "alpha": 1,
+          "locked": false,
+          "restrictions": {
+            "light": false,
+            "weather": false
+          },
+          "occlusion": {
+            "modes": [],
+            "alpha": 0
+          },
+          "video": {
+            "loop": true,
+            "autoplay": true,
+            "volume": 0
+          }
+        },
+        "errors": [],
+        "warnings": [
+          {
+            "severity": "warning",
+            "code": "UNKNOWN_FIELD",
+            "path": "flags.foundry-local-api",
+            "message": "Field \"flags.foundry-local-api\" is not present in the discovered schema."
+          }
+        ],
+        "inputUnchanged": true,
+        "persisted": false,
+        "migrationWarnings": [],
+        "limitations": []
+      }
+    ],
+    "validCount": 1,
+    "invalidCount": 0,
+    "complete": true,
+    "persisted": false
+  },
+  "Note": {
+    "context": {
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0",
+      "documentType": "Note",
+      "parentDocumentType": "Scene",
+      "parentDocumentId": "JYKHHWccpbXdZEGD",
+      "embedded": true
+    },
+    "mode": "create",
+    "results": [
+      {
+        "index": 0,
+        "context": {
+          "foundryVersion": "14.368",
+          "systemId": "dnd5e",
+          "systemVersion": "6.0.3",
+          "moduleVersion": "0.1.0",
+          "documentType": "Note",
+          "parentDocumentType": "Scene",
+          "parentDocumentId": "JYKHHWccpbXdZEGD",
+          "embedded": true
+        },
+        "mode": "create",
+        "valid": true,
+        "normalized": {
+          "x": 350,
+          "y": 500,
+          "entryId": "AlxP9z6r16qmXo5i",
+          "global": false,
+          "text": "Disposable",
+          "texture": {
+            "src": "icons/svg/book.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0
+          },
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "_id": null,
+          "author": "X7X4KK7zca5U2Ics",
+          "pageId": null,
+          "elevation": 0,
+          "levels": [],
+          "sort": 0,
+          "locked": false,
+          "iconSize": 40,
+          "fontFamily": "",
+          "fontSize": 32,
+          "textAnchor": 1,
+          "textColor": "#ffffff"
+        },
+        "errors": [],
+        "warnings": [
+          {
+            "severity": "warning",
+            "code": "UNKNOWN_FIELD",
+            "path": "flags.foundry-local-api",
+            "message": "Field \"flags.foundry-local-api\" is not present in the discovered schema."
+          }
+        ],
+        "inputUnchanged": true,
+        "persisted": false,
+        "migrationWarnings": [],
+        "limitations": []
+      }
+    ],
+    "validCount": 1,
+    "invalidCount": 0,
+    "complete": true,
+    "persisted": false
+  },
+  "Region": {
+    "context": {
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0",
+      "documentType": "Region",
+      "parentDocumentType": "Scene",
+      "parentDocumentId": "JYKHHWccpbXdZEGD",
+      "embedded": true
+    },
+    "mode": "create",
+    "results": [
+      {
+        "index": 0,
+        "context": {
+          "foundryVersion": "14.368",
+          "systemId": "dnd5e",
+          "systemVersion": "6.0.3",
+          "moduleVersion": "0.1.0",
+          "documentType": "Region",
+          "parentDocumentType": "Scene",
+          "parentDocumentId": "JYKHHWccpbXdZEGD",
+          "embedded": true
+        },
+        "mode": "create",
+        "valid": true,
+        "normalized": {
+          "name": "Phase5 hidden elevation rectangle",
+          "shapes": [
+            {
+              "type": "rectangle",
+              "x": 250,
+              "y": 300,
+              "width": 200,
+              "height": 200,
+              "rotation": 0,
+              "hole": false,
+              "anchorX": 0,
+              "anchorY": 0,
+              "gridBased": false
+            }
+          ],
+          "elevation": {
+            "bottom": 0,
+            "top": 10,
+            "topInclusive": false
+          },
+          "visibility": 1,
+          "hidden": true,
+          "behaviors": [],
+          "flags": {
+            "foundry-local-api": {
+              "phase5Fixture": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7"
+            }
+          },
+          "_id": null,
+          "color": "#28cc53",
+          "levels": [],
+          "restriction": {
+            "enabled": false,
+            "type": "move",
+            "priority": 0
+          },
+          "attachment": {
+            "token": null
+          },
+          "highlightMode": "shapes",
+          "displayMeasurements": false,
+          "locked": false,
+          "ownership": {
+            "default": 0
+          },
+          "_shapeConstraints": null
+        },
+        "errors": [],
+        "warnings": [
+          {
+            "severity": "warning",
+            "code": "UNKNOWN_FIELD",
+            "path": "flags.foundry-local-api",
+            "message": "Field \"flags.foundry-local-api\" is not present in the discovered schema."
+          }
+        ],
+        "inputUnchanged": true,
+        "persisted": false,
+        "migrationWarnings": [],
+        "limitations": []
+      }
+    ],
+    "validCount": 1,
+    "invalidCount": 0,
+    "complete": true,
+    "persisted": false
+  }
+}

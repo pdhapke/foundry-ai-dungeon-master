@@ -648,8 +648,11 @@ void describe("ChatGPT plan authorization", () => {
       (await auth.statusWithModels(identity(true), "gpt-ready")).selectedModel,
       "gpt-ready",
     );
-    discoveryAvailable = false;
+    // More than the old 60-second boundary remains reusable without another GET.
     clock += 60_001;
+    assert.equal((await auth.resolveModel("world-1", "gpt-ready")).model, "gpt-ready");
+    discoveryAvailable = false;
+    clock += 300_001;
     const degraded = await auth.statusWithModels(identity(true), "gpt-ready");
     assert.deepEqual(degraded.availableModels, []);
     assert.equal(degraded.modelDiscoveryState, "unavailable");

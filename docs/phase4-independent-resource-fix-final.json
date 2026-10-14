@@ -1,0 +1,36 @@
+{
+  "capturedAt": "2026-10-02T21:59:54.193Z",
+  "disk": {
+    "count": 45,
+    "mismatches": [],
+    "mcpManifest": "acbdb7e1de537633a28d223bf7ee6030a0cfd0862f111f57be42f38f8352f92c"
+  },
+  "proposal": {
+    "journalHashMatch": true,
+    "flagsHashMatch": true,
+    "entries": [
+      {
+        "flag": "attackLedger",
+        "key": "X7X4KK7zca5U2Ics:fd9770908342716518d86d3485657ec30d5a7a3ec7594ac2b34d5fee2b23dd72",
+        "hashMatch": true,
+        "pending": true,
+        "hasUncertainResult": true
+      },
+      {
+        "flag": "attackSequenceLedger",
+        "key": "X7X4KK7zca5U2Ics:phase4-049ca289-675e-4005-8350-b440b172a68a",
+        "hashMatch": true,
+        "pending": true,
+        "hasUncertainResult": true
+      }
+    ],
+    "pendingCount": 2,
+    "execution": "BLOCKED: explicit reconciliation approval required; no writes performed"
+  },
+  "fix": {
+    "nativeRegressionTests": 11,
+    "semanticGatewayTests": 11,
+    "gate": "PASS offline; changed native bundle not loaded"
+  },
+  "restorationEvidence": "phase4-live-independent-restoration-verification.json"
+}

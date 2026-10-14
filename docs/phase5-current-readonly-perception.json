@@ -1,0 +1,141 @@
+{
+  "capturedAt": "2026-10-03T00:43:31.036Z",
+  "observation": {
+    "version": 1,
+    "id": "b5db1f45-a50c-4468-b8ed-5c21047bc1a8",
+    "worldId": "izzy-campaign",
+    "sceneId": "Nbj38PEdvw1zX1J9",
+    "userId": "edtBL96Yu3058QAT",
+    "tokenId": "5afpFlCHHnclifNw",
+    "actorId": "P9YnTVjX8thvZ8eM",
+    "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+    "isGM": false,
+    "optedIn": true,
+    "capturedAt": "2026-10-03T00:43:31.036Z",
+    "stateRevision": "e1ceca8a7fe7bc30c2a09df2a0311b5bebb815987a1bb0999b6992636740f384",
+    "readiness": "ready",
+    "basis": "request-local-native-render-flags",
+    "pendingRenderFlags": 0
+  },
+  "sceneId": "Nbj38PEdvw1zX1J9",
+  "effectiveUserId": "edtBL96Yu3058QAT",
+  "tokenId": "5afpFlCHHnclifNw",
+  "status": "complete",
+  "issues": [],
+  "context": {
+    "selectedUser": true,
+    "selectedToken": true,
+    "tokenOwned": true,
+    "sceneLoaded": true
+  },
+  "visible": {
+    "tokens": [
+      "5afpFlCHHnclifNw"
+    ],
+    "notes": [],
+    "tiles": []
+  },
+  "redaction": {
+    "occludedEntities": true,
+    "hiddenRegions": true,
+    "barrierDocumentIds": true,
+    "barrierCoordinates": true,
+    "secretDoors": true,
+    "exitDestinations": true
+  },
+  "queryPoints": [],
+  "effectiveSources": {
+    "vision": 1,
+    "light": 1
+  },
+  "isolation": {
+    "status": "complete",
+    "method": "foundry-v14-detection-modes",
+    "detectionModes": 2,
+    "unrelatedVisionSourcesIgnored": 0,
+    "visionProvidingLightsIgnored": 0
+  },
+  "environment": {
+    "fog": "complete",
+    "lighting": "complete",
+    "darkness": "complete",
+    "vision": "complete",
+    "regions": "complete",
+    "fogExplorationEnabled": true,
+    "tokenVisionEnabled": true,
+    "globalLight": false,
+    "darknessLevel": 0.82
+  },
+  "regions": [],
+  "visibleBarriers": [],
+  "coveragePolygons": [
+    {
+      "source": "selected-token",
+      "points": [
+        {
+          "x": 500,
+          "y": 775
+        },
+        {
+          "x": 496.65063509461095,
+          "y": 787.5
+        },
+        {
+          "x": 487.5,
+          "y": 796.650635094611
+        },
+        {
+          "x": 475,
+          "y": 800
+        },
+        {
+          "x": 462.5,
+          "y": 796.650635094611
+        },
+        {
+          "x": 453.34936490538905,
+          "y": 787.5
+        },
+        {
+          "x": 450,
+          "y": 775
+        },
+        {
+          "x": 453.34936490538905,
+          "y": 762.5
+        },
+        {
+          "x": 462.5,
+          "y": 753.349364905389
+        },
+        {
+          "x": 475,
+          "y": 750
+        },
+        {
+          "x": 487.5,
+          "y": 753.349364905389
+        },
+        {
+          "x": 496.65063509461095,
+          "y": 762.5
+        }
+      ]
+    }
+  ],
+  "fogRevision": "0bc03128b6a32d4502f9269b6fb11f4a8dc2f63960b453e4aa439c91ff35515d",
+  "persistence": {
+    "beforeRevision": "e1ceca8a7fe7bc30c2a09df2a0311b5bebb815987a1bb0999b6992636740f384",
+    "afterRevision": "e1ceca8a7fe7bc30c2a09df2a0311b5bebb815987a1bb0999b6992636740f384",
+    "unchanged": true
+  },
+  "bounds": {
+    "truncated": false,
+    "visiblePerKind": 500,
+    "regions": 250,
+    "barriers": 500,
+    "coverageSources": 100,
+    "coveragePointsPerSource": 512,
+    "issues": 50
+  }
+}

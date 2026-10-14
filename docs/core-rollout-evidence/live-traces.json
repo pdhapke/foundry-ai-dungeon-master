@@ -1,0 +1,2504 @@
+{
+  "capturedAt": "2026-10-02T01:27:52.255Z",
+  "events": [
+    {
+      "type": "pause-timing",
+      "traceId": "2c3498bc-d0e2-4729-a9d9-b50d6ad988f3",
+      "stage": "request-arrival",
+      "atMs": 1790903542003,
+      "requestArrivedAtMs": 1790903542003,
+      "elapsedMs": 0.3687999999965541
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "d3b44461-df07-4524-bec2-c5b7d63c695d",
+      "stage": "request-arrival",
+      "atMs": 1790903542079,
+      "requestArrivedAtMs": 1790903542079,
+      "elapsedMs": 0.05190000000584405
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f4bc08b6-cc7a-438f-b632-125b07ae6197",
+      "stage": "request-arrival",
+      "atMs": 1790903542115,
+      "requestArrivedAtMs": 1790903542115,
+      "elapsedMs": 0.04839999999967404
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "d3b44461-df07-4524-bec2-c5b7d63c695d",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903542262,
+      "requestArrivedAtMs": 1790903542079,
+      "elapsedMs": 182.3796000000002
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "d3b44461-df07-4524-bec2-c5b7d63c695d",
+      "stage": "queue-entered",
+      "atMs": 1790903542264,
+      "requestArrivedAtMs": 1790903542079,
+      "elapsedMs": 184.6816000000108,
+      "queueWaitMs": 0.5188999999954831,
+      "pauseControlOnly": false
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f4bc08b6-cc7a-438f-b632-125b07ae6197",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903542282,
+      "requestArrivedAtMs": 1790903542115,
+      "elapsedMs": 166.70900000000256
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f4bc08b6-cc7a-438f-b632-125b07ae6197",
+      "stage": "queue-entered",
+      "atMs": 1790903542283,
+      "requestArrivedAtMs": 1790903542115,
+      "elapsedMs": 167.9438000000082,
+      "queueWaitMs": 0.02899999999499414,
+      "pauseControlOnly": false
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "d3b44461-df07-4524-bec2-c5b7d63c695d",
+      "stage": "credentials-resolved",
+      "atMs": 1790903542318,
+      "requestArrivedAtMs": 1790903542079,
+      "elapsedMs": 238.4670000000042,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f4bc08b6-cc7a-438f-b632-125b07ae6197",
+      "stage": "credentials-resolved",
+      "atMs": 1790903542325,
+      "requestArrivedAtMs": 1790903542115,
+      "elapsedMs": 210.1249000000098,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "d3b44461-df07-4524-bec2-c5b7d63c695d",
+      "stage": "stream-authorization",
+      "atMs": 1790903542567,
+      "requestArrivedAtMs": 1790903542079,
+      "elapsedMs": 487.58570000001055,
+      "durationMs": 24.58520000000135
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "d3b44461-df07-4524-bec2-c5b7d63c695d",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790903542567,
+      "requestArrivedAtMs": 1790903542079,
+      "elapsedMs": 488.24430000000575
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "d3b44461-df07-4524-bec2-c5b7d63c695d",
+      "stage": "final-response-finished",
+      "atMs": 1790903542570,
+      "requestArrivedAtMs": 1790903542079,
+      "elapsedMs": 491.2051000000065
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f4bc08b6-cc7a-438f-b632-125b07ae6197",
+      "stage": "stream-authorization",
+      "atMs": 1790903542596,
+      "requestArrivedAtMs": 1790903542115,
+      "elapsedMs": 481.4896000000008,
+      "durationMs": 23.393700000000536
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f4bc08b6-cc7a-438f-b632-125b07ae6197",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790903542597,
+      "requestArrivedAtMs": 1790903542115,
+      "elapsedMs": 482.43940000000293
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f4bc08b6-cc7a-438f-b632-125b07ae6197",
+      "stage": "final-response-finished",
+      "atMs": 1790903542599,
+      "requestArrivedAtMs": 1790903542115,
+      "elapsedMs": 483.9600000000064
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "5ecb112b-58e0-4cf0-883d-22867b21f0f9",
+      "stage": "request-arrival",
+      "atMs": 1790903595171,
+      "requestArrivedAtMs": 1790903595171,
+      "elapsedMs": 0.06269999998039566
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "request-arrival",
+      "atMs": 1790903595178,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 0.03580000001238659
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903595208,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 29.994899999990594
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "queue-entered",
+      "atMs": 1790903595216,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 38.13769999999204,
+      "queueWaitMs": 6.184800000017276,
+      "pauseControlOnly": true
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "credentials-resolved",
+      "atMs": 1790903595976,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 798.4008000000031,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "stream-authorization",
+      "atMs": 1790903596078,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 899.8777000000118,
+      "durationMs": 23.065900000015972
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790903596078,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 900.5308000000077
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "stream-authorization",
+      "atMs": 1790903596126,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 948.1766000000061,
+      "durationMs": 21.839600000006612
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "stream-authorization",
+      "atMs": 1790903596151,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 972.9474000000046,
+      "durationMs": 23.912699999986216
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "context-prepared",
+      "atMs": 1790903596442.9668,
+      "durationMs": 337.2699999890756
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "model-request",
+      "atMs": 1790903596524.4685,
+      "request": 1,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "model-response",
+      "atMs": 1790903599581.9446,
+      "request": 1,
+      "durationMs": 3057.4950000009267
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "tool-start",
+      "atMs": 1790903599586.2375,
+      "tool": "foundry_set_pause_state",
+      "toolCalls": 1,
+      "request": 1,
+      "sinceModelRequestMs": 3061.7875999887474
+    },
+    {
+      "type": "pause-timing",
+      "stage": "mcp-execution-and-ack",
+      "correlationId": "aidm-81419043-9b72-47dd-b24b-b06768f00859",
+      "durationMs": 56.81540000002133,
+      "result": {
+        "outcome": "confirmed",
+        "mutated": true,
+        "stateObservedAtMs": 1790903599651,
+        "paused": false,
+        "worldId": "izzy-campaign",
+        "correlationId": "aidm-81419043-9b72-47dd-b24b-b06768f00859"
+      }
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "tool-result",
+      "atMs": 1790903599692.6042,
+      "tool": "foundry_set_pause_state",
+      "toolCalls": 1,
+      "durationMs": 106.37020001013298,
+      "elapsedMs": 3194.8144000052707
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "confirmed-action-result",
+      "atMs": 1790903599693.4114,
+      "outcome": "confirmed",
+      "paused": false,
+      "correlationId": "aidm-81419043-9b72-47dd-b24b-b06768f00859",
+      "stateObservedAtMs": 1790903599651,
+      "elapsedMs": 3195.618199999444
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "model-request",
+      "atMs": 1790903599697.338,
+      "request": 2,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "first-stream-event",
+      "atMs": 1790903601463.5771,
+      "durationMs": 5357.8770999884
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "stream-authorization",
+      "atMs": 1790903601491,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 6313.623500000016,
+      "durationMs": 22.259900000004563
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "stream-authorization",
+      "atMs": 1790903601520,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 6342.380399999995,
+      "durationMs": 21.69430000000284
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "stream-authorization",
+      "atMs": 1790903601542,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 6364.7212,
+      "durationMs": 21.652399999991758
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "stream-authorization",
+      "atMs": 1790903601738,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 6560.783800000005,
+      "durationMs": 27.496000000013737
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "stream-authorization",
+      "atMs": 1790903601770,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 6592.291499999992,
+      "durationMs": 29.23190000001341
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "model-response",
+      "atMs": 1790903601775.113,
+      "request": 2,
+      "durationMs": 2077.79140000639
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "assistant-stream-finished",
+      "atMs": 1790903601780.8606,
+      "durationMs": 5675.16009999963
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "stage": "final-response-finished",
+      "atMs": 1790903601783,
+      "requestArrivedAtMs": 1790903595178,
+      "elapsedMs": 6605.12049999999
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "6166c261-cbe7-471a-967a-f4910c9ea355",
+      "stage": "request-arrival",
+      "atMs": 1790903622474,
+      "requestArrivedAtMs": 1790903622474,
+      "elapsedMs": 0.016499999997904524
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "request-arrival",
+      "atMs": 1790903622480,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 0.01980000000912696
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903622510,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 29.90710000001127
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "queue-entered",
+      "atMs": 1790903622519,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 38.68350000001374,
+      "queueWaitMs": 6.074499999987893,
+      "pauseControlOnly": false
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "credentials-resolved",
+      "atMs": 1790903622621,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 140.69880000001285,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "stream-authorization",
+      "atMs": 1790903622715,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 235.38279999999213,
+      "durationMs": 43.77509999999893
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790903622717,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 237.4391000000178
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "stream-authorization",
+      "atMs": 1790903622780,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 300.02720000001136,
+      "durationMs": 60.44800000000396
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "context-prepared",
+      "atMs": 1790903622887.3599,
+      "durationMs": 214.46289999585133
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "model-request",
+      "atMs": 1790903623038.2842,
+      "request": 1,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "model-response",
+      "atMs": 1790903626056.002,
+      "request": 1,
+      "durationMs": 3017.740800001775
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "tool-start",
+      "atMs": 1790903626060.8337,
+      "tool": "foundry_set_door_state",
+      "toolCalls": 1,
+      "request": 1,
+      "sinceModelRequestMs": 3022.5727000070037
+    },
+    {
+      "type": "core-timing",
+      "stage": "mcp-execution-and-ack",
+      "correlationId": "aidm-62df7f44-3691-459b-aa2c-64b4aaa270fe",
+      "durationMs": 85.55000000001746,
+      "result": {
+        "worldId": "izzy-campaign",
+        "correlationId": "aidm-62df7f44-3691-459b-aa2c-64b4aaa270fe",
+        "schemaVersion": "core-actions-v1",
+        "action": {
+          "kind": "door.state",
+          "sceneId": "2RJeJKqdpEE4VZPh",
+          "targetId": "RsB12oN5v3LYI1XR",
+          "value": 1
+        },
+        "state": {
+          "ds": 1
+        },
+        "mutated": true,
+        "outcome": "confirmed"
+      }
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "tool-result",
+      "atMs": 1790903626188.5757,
+      "tool": "foundry_set_door_state",
+      "toolCalls": 1,
+      "durationMs": 127.74409999838099,
+      "elapsedMs": 3204.3355999921914
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "confirmed-action-result",
+      "atMs": 1790903626189.2222,
+      "outcome": "confirmed",
+      "paused": null,
+      "correlationId": "aidm-62df7f44-3691-459b-aa2c-64b4aaa270fe",
+      "stateObservedAtMs": null,
+      "elapsedMs": 3204.9810999887995
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "model-request",
+      "atMs": 1790903626194.7349,
+      "request": 2,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "first-stream-event",
+      "atMs": 1790903628063.623,
+      "durationMs": 5390.7406000071205
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "stream-authorization",
+      "atMs": 1790903628088,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 5607.486200000014,
+      "durationMs": 20.802700000000186
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "stream-authorization",
+      "atMs": 1790903628111,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 5631.1297000000195,
+      "durationMs": 22.169699999998556
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "stream-authorization",
+      "atMs": 1790903628134,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 5653.5874000000185,
+      "durationMs": 21.45120000001043
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "stream-authorization",
+      "atMs": 1790903628325,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 5845.3511,
+      "durationMs": 22.538899999985006
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "stream-authorization",
+      "atMs": 1790903628351,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 5871.0279000000155,
+      "durationMs": 23.10910000000149
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "model-response",
+      "atMs": 1790903628414.0432,
+      "request": 2,
+      "durationMs": 2219.3427000020165
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "assistant-stream-finished",
+      "atMs": 1790903628416.7349,
+      "durationMs": 5743.852800005698
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "stage": "final-response-finished",
+      "atMs": 1790903628417,
+      "requestArrivedAtMs": 1790903622480,
+      "elapsedMs": 5937.26860000001
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "4b2fab04-95c5-4fe0-88c6-6a70045681a0",
+      "stage": "request-arrival",
+      "atMs": 1790903681360,
+      "requestArrivedAtMs": 1790903681360,
+      "elapsedMs": 0.025599999993573874
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "request-arrival",
+      "atMs": 1790903681366,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 0.016499999997904524
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903681410,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 43.712100000004284
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "queue-entered",
+      "atMs": 1790903681420,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 53.95869999998831,
+      "queueWaitMs": 7.290900000021793,
+      "pauseControlOnly": false
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "credentials-resolved",
+      "atMs": 1790903682113,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 746.5390999999945,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903682176,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 810.2498999999953,
+      "durationMs": 20.40450000000419
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790903682178,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 811.5372999999963
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903682207,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 841.3159999999916,
+      "durationMs": 27.45569999999134
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "context-prepared",
+      "atMs": 1790903682292.609,
+      "durationMs": 135.1027999917278
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "model-request",
+      "atMs": 1790903682445.4243,
+      "request": 1,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "model-response",
+      "atMs": 1790903685456.9614,
+      "request": 1,
+      "durationMs": 3011.569900001632
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "tool-start",
+      "atMs": 1790903685464.2507,
+      "tool": "foundry_move_token",
+      "toolCalls": 1,
+      "request": 1,
+      "sinceModelRequestMs": 3018.8567000004696
+    },
+    {
+      "type": "core-timing",
+      "stage": "mcp-execution-and-ack",
+      "correlationId": "aidm-a525582b-d051-498a-a9ce-244be640769b",
+      "durationMs": 190.93129999999655,
+      "result": {
+        "worldId": "izzy-campaign",
+        "correlationId": "aidm-a525582b-d051-498a-a9ce-244be640769b",
+        "schemaVersion": "core-actions-v1",
+        "action": {
+          "kind": "token.position",
+          "sceneId": "2RJeJKqdpEE4VZPh",
+          "targetId": "gHxvFbZTMoim2tYp",
+          "x": 400,
+          "y": 300
+        },
+        "state": {
+          "x": 400,
+          "y": 300
+        },
+        "mutated": true,
+        "outcome": "confirmed"
+      }
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "tool-result",
+      "atMs": 1790903685700.5256,
+      "tool": "foundry_move_token",
+      "toolCalls": 1,
+      "durationMs": 236.27639999904204,
+      "elapsedMs": 3344.2847000114853
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "confirmed-action-result",
+      "atMs": 1790903685701.6018,
+      "outcome": "confirmed",
+      "paused": null,
+      "correlationId": "aidm-a525582b-d051-498a-a9ce-244be640769b",
+      "stateObservedAtMs": null,
+      "elapsedMs": 3345.3611000004457
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "model-request",
+      "atMs": 1790903685706.2847,
+      "request": 2,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "first-stream-event",
+      "atMs": 1790903687382.1658,
+      "durationMs": 5224.659799991059
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687407,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6040.80309999999,
+      "durationMs": 21.83759999999893
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687429,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6063.254099999991,
+      "durationMs": 20.261100000003353
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687468,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6101.997399999993,
+      "durationMs": 21.96229999998468
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687487,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6121.151699999988,
+      "durationMs": 18.135300000023562
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687524,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6158.489499999996,
+      "durationMs": 24.6646999999939
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687558,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6191.61050000001,
+      "durationMs": 31.095999999990454
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687578,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6211.93280000001,
+      "durationMs": 19.594699999986915
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687598,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6231.8157000000065,
+      "durationMs": 18.977899999998044
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687781,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6415.262699999992,
+      "durationMs": 19.11370000001625
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "stream-authorization",
+      "atMs": 1790903687802,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6436.503499999992,
+      "durationMs": 20.45559999998659
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "model-response",
+      "atMs": 1790903687873.1538,
+      "request": 2,
+      "durationMs": 2166.8846999964444
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "assistant-stream-finished",
+      "atMs": 1790903687877.2673,
+      "durationMs": 5719.761899992591
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "stage": "final-response-finished",
+      "atMs": 1790903687878,
+      "requestArrivedAtMs": 1790903681366,
+      "elapsedMs": 6512.102099999989
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "06c7e807-4b9d-47ed-a9d1-ebb2cb51a547",
+      "stage": "request-arrival",
+      "atMs": 1790903726123,
+      "requestArrivedAtMs": 1790903726123,
+      "elapsedMs": 0.024600000004284084
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "request-arrival",
+      "atMs": 1790903726126,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 0.01639999996405095
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903726155,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 28.927900000009686
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "queue-entered",
+      "atMs": 1790903726163,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 36.11229999997886,
+      "queueWaitMs": 5.719500000006519,
+      "pauseControlOnly": false
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "credentials-resolved",
+      "atMs": 1790903726258,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 131.41340000001946,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903726320,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 193.81949999998324,
+      "durationMs": 20.846000000019558
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790903726322,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 195.13199999998324
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903726350,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 223.12799999996787,
+      "durationMs": 26.661900000006426
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "context-prepared",
+      "atMs": 1790903729343.3745,
+      "durationMs": 3042.7823000063654
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "model-request",
+      "atMs": 1790903729538.1167,
+      "request": 1,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "model-response",
+      "atMs": 1790903732723.3225,
+      "request": 1,
+      "durationMs": 3185.2356000017608
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "tool-start",
+      "atMs": 1790903732727.0935,
+      "tool": "foundry_roll_actor",
+      "toolCalls": 1,
+      "request": 1,
+      "sinceModelRequestMs": 3189.005799998995
+    },
+    {
+      "type": "core-timing",
+      "stage": "mcp-execution-and-ack",
+      "correlationId": "aidm-a391b286-fc91-47a6-af4b-7bf0d6d9777f",
+      "durationMs": 104.77290000003995,
+      "result": {
+        "worldId": "izzy-campaign",
+        "correlationId": "aidm-a391b286-fc91-47a6-af4b-7bf0d6d9777f",
+        "schemaVersion": "core-actions-v1",
+        "action": {
+          "kind": "system.roll",
+          "sceneId": "2RJeJKqdpEE4VZPh",
+          "targetId": "QvhdPrU8dHE1nm4h",
+          "rollType": "skill",
+          "key": "ste"
+        },
+        "state": {
+          "systemId": "dnd5e",
+          "rollType": "skill",
+          "key": "ste",
+          "rolls": [
+            {
+              "formula": "1d20 + 0",
+              "total": 9,
+              "result": "9 + 0"
+            }
+          ]
+        },
+        "mutated": true,
+        "outcome": "confirmed"
+      }
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "tool-result",
+      "atMs": 1790903732870.954,
+      "tool": "foundry_roll_actor",
+      "toolCalls": 1,
+      "durationMs": 143.859000003431,
+      "elapsedMs": 3468.379300000379
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "confirmed-action-result",
+      "atMs": 1790903732871.9526,
+      "outcome": "confirmed",
+      "paused": null,
+      "correlationId": "aidm-a391b286-fc91-47a6-af4b-7bf0d6d9777f",
+      "stateObservedAtMs": null,
+      "elapsedMs": 3469.3771000020206
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "model-request",
+      "atMs": 1790903732878.6816,
+      "request": 2,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "first-stream-event",
+      "atMs": 1790903734564.6506,
+      "durationMs": 8264.060400004382
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903734596,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 8469.687900000019,
+      "durationMs": 30.428000000014435
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903734660,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 8533.781499999983,
+      "durationMs": 62.76240000000689
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903734728,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 8601.242700000003,
+      "durationMs": 65.42440000001807
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903734761,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 8634.057099999976,
+      "durationMs": 31.211700000043493
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903734787,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 8660.562999999966,
+      "durationMs": 24.67180000001099
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903734813,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 8686.919400000013,
+      "durationMs": 25.00239999999758
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903734836,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 8709.276799999992,
+      "durationMs": 21.502600000007078
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903735064,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 8938.039899999974,
+      "durationMs": 20.98599999997532
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "stream-authorization",
+      "atMs": 1790903735084,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 8957.722200000018,
+      "durationMs": 18.713099999993574
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "model-response",
+      "atMs": 1790903735175.9924,
+      "request": 2,
+      "durationMs": 2297.3404999938793
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "assistant-stream-finished",
+      "atMs": 1790903735179.5752,
+      "durationMs": 8878.98629999836
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "stage": "final-response-finished",
+      "atMs": 1790903735180,
+      "requestArrivedAtMs": 1790903726126,
+      "elapsedMs": 9054.015399999975
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "82e5d0fe-ec21-41c8-bea1-4489f6cd915b",
+      "stage": "request-arrival",
+      "atMs": 1790903772937,
+      "requestArrivedAtMs": 1790903772937,
+      "elapsedMs": 0.021300000022165477
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "request-arrival",
+      "atMs": 1790903772943,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 0.01679999998304993
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903772971,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 28.17299999995157
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "queue-entered",
+      "atMs": 1790903772978,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 34.42449999996461,
+      "queueWaitMs": 5.334199999982957,
+      "pauseControlOnly": false
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "credentials-resolved",
+      "atMs": 1790903773902,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 958.5709999999963,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903773961,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 1017.7111999999615,
+      "durationMs": 19.55179999995744
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790903773962,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 1018.4745999999577
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903773987,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 1043.5275999999722,
+      "durationMs": 23.445400000025984
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "context-prepared",
+      "atMs": 1790903775446.739,
+      "durationMs": 1503.8000000058673
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "model-request",
+      "atMs": 1790903775671.8735,
+      "request": 1,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "model-response",
+      "atMs": 1790903778747.2405,
+      "request": 1,
+      "durationMs": 3075.3896000096574
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "tool-start",
+      "atMs": 1790903778752.2144,
+      "tool": "foundry_set_actor_hp",
+      "toolCalls": 1,
+      "request": 1,
+      "sinceModelRequestMs": 3080.3635000047507
+    },
+    {
+      "type": "core-timing",
+      "stage": "mcp-execution-and-ack",
+      "correlationId": "aidm-2e388dab-d002-4acd-a1b8-d8cf71b4adde",
+      "durationMs": 105.14240000001155,
+      "result": {
+        "worldId": "izzy-campaign",
+        "correlationId": "aidm-2e388dab-d002-4acd-a1b8-d8cf71b4adde",
+        "schemaVersion": "core-actions-v1",
+        "action": {
+          "kind": "actor.hp",
+          "sceneId": "2RJeJKqdpEE4VZPh",
+          "targetId": "QvhdPrU8dHE1nm4h",
+          "value": 15
+        },
+        "state": {
+          "value": 15,
+          "max": 20
+        },
+        "mutated": true,
+        "outcome": "confirmed"
+      }
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "tool-result",
+      "atMs": 1790903778891.7866,
+      "tool": "foundry_set_actor_hp",
+      "toolCalls": 1,
+      "durationMs": 139.57240000308957,
+      "elapsedMs": 3391.387499999837
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "confirmed-action-result",
+      "atMs": 1790903778892.4717,
+      "outcome": "confirmed",
+      "paused": null,
+      "correlationId": "aidm-2e388dab-d002-4acd-a1b8-d8cf71b4adde",
+      "stateObservedAtMs": null,
+      "elapsedMs": 3392.0721000031335
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "model-request",
+      "atMs": 1790903778897.708,
+      "request": 2,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "first-stream-event",
+      "atMs": 1790903780439.7126,
+      "durationMs": 6496.777599997586
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780463,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7519.338999999978,
+      "durationMs": 20.962600000028033
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780482,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7538.884499999986,
+      "durationMs": 18.70260000001872
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780503,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7560.184099999955,
+      "durationMs": 19.90529999998398
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780527,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7583.669699999969,
+      "durationMs": 21.054199999955017
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780545,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7601.847099999955,
+      "durationMs": 17.39179999998305
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780563,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7619.733599999978,
+      "durationMs": 17.20000000001164
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780580,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7636.709299999988,
+      "durationMs": 16.349600000015926
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780598,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7654.345199999982,
+      "durationMs": 16.4833000000217
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780618,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7674.579599999997,
+      "durationMs": 19.507199999992736
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780844,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7900.550300000003,
+      "durationMs": 20.863300000026356
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "stream-authorization",
+      "atMs": 1790903780864,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 7920.507699999958,
+      "durationMs": 18.115599999960978
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "model-response",
+      "atMs": 1790903780978.714,
+      "request": 2,
+      "durationMs": 2081.019600009313
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "assistant-stream-finished",
+      "atMs": 1790903780984.1936,
+      "durationMs": 7041.256700002123
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "stage": "final-response-finished",
+      "atMs": 1790903780985,
+      "requestArrivedAtMs": 1790903772943,
+      "elapsedMs": 8041.940699999977
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "e8fe26ba-ea53-4429-b248-fbdcfd07760f",
+      "stage": "request-arrival",
+      "atMs": 1790903803589,
+      "requestArrivedAtMs": 1790903803589,
+      "elapsedMs": 0.0181999999913387
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "request-arrival",
+      "atMs": 1790903803593,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 0.015200000023469329
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903803617,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 23.76520000002347
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "queue-entered",
+      "atMs": 1790903803624,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 30.521500000031665,
+      "queueWaitMs": 5.491600000008475,
+      "pauseControlOnly": false
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "credentials-resolved",
+      "atMs": 1790903803647,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 53.55009999999311,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903803704,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 110.8634000000311,
+      "durationMs": 21.394599999999627
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790903803705,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 111.89419999998063
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903803731,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 138.2717999999877,
+      "durationMs": 25.534400000004098
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "context-prepared",
+      "atMs": 1790903805678.3862,
+      "durationMs": 1994.551900002989
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "model-request",
+      "atMs": 1790903805944.7805,
+      "request": 1,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "model-response",
+      "atMs": 1790903808968.3013,
+      "request": 1,
+      "durationMs": 3023.544800002128
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "tool-start",
+      "atMs": 1790903808970.6921,
+      "tool": "foundry_advance_combat_turn",
+      "toolCalls": 1,
+      "request": 1,
+      "sinceModelRequestMs": 3025.935900004697
+    },
+    {
+      "type": "core-timing",
+      "stage": "mcp-execution-and-ack",
+      "correlationId": "aidm-09837706-159e-4901-a9e7-c6a62106411f",
+      "durationMs": 97.52759999997215,
+      "result": {
+        "worldId": "izzy-campaign",
+        "correlationId": "aidm-09837706-159e-4901-a9e7-c6a62106411f",
+        "schemaVersion": "core-actions-v1",
+        "action": {
+          "kind": "combat.next",
+          "sceneId": "2RJeJKqdpEE4VZPh",
+          "targetId": "F72hDz6efnhuYqKb"
+        },
+        "state": {
+          "round": 1,
+          "turn": 1,
+          "turnCount": 2
+        },
+        "mutated": true,
+        "outcome": "confirmed"
+      }
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "tool-result",
+      "atMs": 1790903809118.6606,
+      "tool": "foundry_advance_combat_turn",
+      "toolCalls": 1,
+      "durationMs": 147.97059999546036,
+      "elapsedMs": 3379.47100000747
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "confirmed-action-result",
+      "atMs": 1790903809119.3164,
+      "outcome": "confirmed",
+      "paused": null,
+      "correlationId": "aidm-09837706-159e-4901-a9e7-c6a62106411f",
+      "stateObservedAtMs": null,
+      "elapsedMs": 3380.125299998326
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "model-request",
+      "atMs": 1790903809124.0654,
+      "request": 2,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "toolNames": [
+        "foundry_set_pause_state",
+        "foundry_read_play_state",
+        "foundry_roll_actor",
+        "foundry_move_token",
+        "foundry_move_tokens",
+        "foundry_set_door_state",
+        "foundry_set_actor_hp",
+        "foundry_set_actor_condition",
+        "foundry_advance_combat_turn",
+        "foundry_set_initiative",
+        "foundry_read_scene",
+        "foundry_read_actor",
+        "campaign_search",
+        "campaign_validate_sources",
+        "campaign_read",
+        "campaign_propose",
+        "campaign_proposals",
+        "tool_search",
+        "tool_load",
+        "tool_execute",
+        "foundry_roll_dice",
+        "foundry_propose_session_note"
+      ]
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "first-stream-event",
+      "atMs": 1790903811106.0784,
+      "durationMs": 7422.249700000975
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811138,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7544.308799999999,
+      "durationMs": 27.105600000009872
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811166,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7572.158999999985,
+      "durationMs": 26.10480000003008
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811194,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7600.283700000029,
+      "durationMs": 26.627900000021327
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811220,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7626.179999999993,
+      "durationMs": 24.59370000002673
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811242,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7648.915099999984,
+      "durationMs": 21.947800000023562
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811267,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7673.0481000000145,
+      "durationMs": 23.00259999994887
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811288,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7694.387600000016,
+      "durationMs": 19.362800000002608
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811310,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7716.829800000007,
+      "durationMs": 21.78149999998277
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811337,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7743.810600000026,
+      "durationMs": 22.39049999997951
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811373,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7779.410700000008,
+      "durationMs": 26.4089999999851
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811408,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 7814.5470000000205,
+      "durationMs": 34.10899999999674
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903811779,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 8185.099800000025,
+      "durationMs": 17.00109999999404
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903812651,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 9057.28820000001,
+      "durationMs": 21.87260000000242
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "stream-authorization",
+      "atMs": 1790903812734,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 9140.553500000038,
+      "durationMs": 19.023400000005495
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "model-response",
+      "atMs": 1790903812835.7324,
+      "request": 2,
+      "durationMs": 3711.687700008042
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "assistant-stream-finished",
+      "atMs": 1790903812842.46,
+      "durationMs": 9158.631900005275
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "stage": "final-response-finished",
+      "atMs": 1790903812844,
+      "requestArrivedAtMs": 1790903803593,
+      "elapsedMs": 9250.363500000036
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "cb879161-cbf6-42cf-a272-b1f41c973fa5",
+      "stage": "request-arrival",
+      "atMs": 1790903842736,
+      "requestArrivedAtMs": 1790903842736,
+      "elapsedMs": 0.023300000000745058
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "8d4b1f1b-0758-4049-a37e-17d1ac6113b0",
+      "stage": "request-arrival",
+      "atMs": 1790903842741,
+      "requestArrivedAtMs": 1790903842741,
+      "elapsedMs": 0.01640000002225861
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "d05c82b8-6b8a-4d8f-b612-5aa638f34e10",
+      "stage": "request-arrival",
+      "atMs": 1790903842743,
+      "requestArrivedAtMs": 1790903842743,
+      "elapsedMs": 0.015599999984260648
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "958c6620-1d11-4757-a92d-e792b9bb224f",
+      "stage": "request-arrival",
+      "atMs": 1790903842748,
+      "requestArrivedAtMs": 1790903842748,
+      "elapsedMs": 0.01799999998183921
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "7bef2ea7-2e4e-42fa-894a-025d42027266",
+      "stage": "request-arrival",
+      "atMs": 1790903842760,
+      "requestArrivedAtMs": 1790903842760,
+      "elapsedMs": 0.01779999997233972
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "2e2812f5-5a31-4343-bcf3-066758725c64",
+      "stage": "request-arrival",
+      "atMs": 1790903842777,
+      "requestArrivedAtMs": 1790903842776,
+      "elapsedMs": 0.024800000013783574
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "d05c82b8-6b8a-4d8f-b612-5aa638f34e10",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903842824,
+      "requestArrivedAtMs": 1790903842743,
+      "elapsedMs": 80.66659999999683
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "958c6620-1d11-4757-a92d-e792b9bb224f",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903842843,
+      "requestArrivedAtMs": 1790903842748,
+      "elapsedMs": 94.72909999999683
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "7bef2ea7-2e4e-42fa-894a-025d42027266",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903842853,
+      "requestArrivedAtMs": 1790903842760,
+      "elapsedMs": 92.93670000002021
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "2e2812f5-5a31-4343-bcf3-066758725c64",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790903842865,
+      "requestArrivedAtMs": 1790903842776,
+      "elapsedMs": 88.95050000003539
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "2dbd2cf6-c920-4fa2-8631-bcc0df171736",
+      "stage": "request-arrival",
+      "atMs": 1790904296294,
+      "requestArrivedAtMs": 1790904296294,
+      "elapsedMs": 0.014299999922513962
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "7c2a208a-a35d-450b-b950-2cb43fe8256a",
+      "stage": "request-arrival",
+      "atMs": 1790904296302,
+      "requestArrivedAtMs": 1790904296302,
+      "elapsedMs": 0.009200000087730587
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "7c2a208a-a35d-450b-b950-2cb43fe8256a",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790904296316,
+      "requestArrivedAtMs": 1790904296302,
+      "elapsedMs": 14.186000000103377
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "7c2a208a-a35d-450b-b950-2cb43fe8256a",
+      "stage": "queue-entered",
+      "atMs": 1790904296317,
+      "requestArrivedAtMs": 1790904296302,
+      "elapsedMs": 14.868400000035763,
+      "queueWaitMs": 0.035099999979138374,
+      "pauseControlOnly": false
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "af036d99-488d-4d69-9c03-a504bbead1ba",
+      "stage": "request-arrival",
+      "atMs": 1790904296451,
+      "requestArrivedAtMs": 1790904296451,
+      "elapsedMs": 0.01600000006146729
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "af036d99-488d-4d69-9c03-a504bbead1ba",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790904296465,
+      "requestArrivedAtMs": 1790904296451,
+      "elapsedMs": 13.731499999994412
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "af036d99-488d-4d69-9c03-a504bbead1ba",
+      "stage": "queue-entered",
+      "atMs": 1790904296465,
+      "requestArrivedAtMs": 1790904296451,
+      "elapsedMs": 14.06319999997504,
+      "queueWaitMs": 0.019100000034086406,
+      "pauseControlOnly": false
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "7c2a208a-a35d-450b-b950-2cb43fe8256a",
+      "stage": "credentials-resolved",
+      "atMs": 1790904296952,
+      "requestArrivedAtMs": 1790904296302,
+      "elapsedMs": 650.406500000041,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "af036d99-488d-4d69-9c03-a504bbead1ba",
+      "stage": "credentials-resolved",
+      "atMs": 1790904296956,
+      "requestArrivedAtMs": 1790904296451,
+      "elapsedMs": 504.5986999999732,
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "7c2a208a-a35d-450b-b950-2cb43fe8256a",
+      "stage": "stream-authorization",
+      "atMs": 1790904297056,
+      "requestArrivedAtMs": 1790904296302,
+      "elapsedMs": 754.2377000000561,
+      "durationMs": 7.240699999965727
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "7c2a208a-a35d-450b-b950-2cb43fe8256a",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790904297056,
+      "requestArrivedAtMs": 1790904296302,
+      "elapsedMs": 754.5022000001045
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "7c2a208a-a35d-450b-b950-2cb43fe8256a",
+      "stage": "final-response-finished",
+      "atMs": 1790904297057,
+      "requestArrivedAtMs": 1790904296302,
+      "elapsedMs": 754.9872000000905
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "af036d99-488d-4d69-9c03-a504bbead1ba",
+      "stage": "stream-authorization",
+      "atMs": 1790904297063,
+      "requestArrivedAtMs": 1790904296451,
+      "elapsedMs": 611.5126999999629,
+      "durationMs": 8.09679999994114
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "af036d99-488d-4d69-9c03-a504bbead1ba",
+      "stage": "first-visible-stream-chunk",
+      "atMs": 1790904297063,
+      "requestArrivedAtMs": 1790904296451,
+      "elapsedMs": 611.7687999999616
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "af036d99-488d-4d69-9c03-a504bbead1ba",
+      "stage": "final-response-finished",
+      "atMs": 1790904297064,
+      "requestArrivedAtMs": 1790904296451,
+      "elapsedMs": 612.2856000000611
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "ff5d41ca-16f2-4ed2-b130-b36a1f4207c6",
+      "stage": "request-arrival",
+      "atMs": 1790904339504,
+      "requestArrivedAtMs": 1790904339504,
+      "elapsedMs": 0.01939999999012798
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "0a0e0b5c-16fd-4db4-9664-698906821b66",
+      "stage": "request-arrival",
+      "atMs": 1790904339511,
+      "requestArrivedAtMs": 1790904339511,
+      "elapsedMs": 0.011399999959394336
+    },
+    {
+      "type": "pause-timing",
+      "traceId": "0a0e0b5c-16fd-4db4-9664-698906821b66",
+      "stage": "initial-authorization-finished",
+      "atMs": 1790904339657,
+      "requestArrivedAtMs": 1790904339511,
+      "elapsedMs": 146.22769999993034
+    },
+    {
+      "type": "core-timing",
+      "stage": "mcp-execution-and-ack",
+      "correlationId": "aidm-b5fc0010-44eb-43ce-b7a3-e47b8b6d3375",
+      "durationMs": 81.20770000002813,
+      "result": {
+        "worldId": "izzy-campaign",
+        "correlationId": "aidm-b5fc0010-44eb-43ce-b7a3-e47b8b6d3375",
+        "schemaVersion": "core-actions-v1",
+        "action": {
+          "kind": "door.state",
+          "sceneId": "2RJeJKqdpEE4VZPh",
+          "targetId": "RsB12oN5v3LYI1XR",
+          "value": 0
+        },
+        "state": {
+          "ds": 0
+        },
+        "mutated": true,
+        "outcome": "confirmed"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "arrivalAtMs": 1790903595178,
+      "queueWaitMs": 6.184800000017276,
+      "contextMs": 337.2699999890756,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "modelRequests": 2,
+      "tools": [
+        "foundry_set_pause_state"
+      ],
+      "action": {
+        "type": "pause-timing",
+        "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+        "stage": "confirmed-action-result",
+        "atMs": 1790903599693.4114,
+        "outcome": "confirmed",
+        "paused": false,
+        "correlationId": "aidm-81419043-9b72-47dd-b24b-b06768f00859",
+        "stateObservedAtMs": 1790903599651,
+        "elapsedMs": 3195.618199999444
+      },
+      "finalMs": 6605.12049999999,
+      "complete": true
+    },
+    {
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "arrivalAtMs": 1790903622480,
+      "queueWaitMs": 6.074499999987893,
+      "contextMs": 214.46289999585133,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "modelRequests": 2,
+      "tools": [
+        "foundry_set_door_state"
+      ],
+      "action": {
+        "type": "pause-timing",
+        "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+        "stage": "confirmed-action-result",
+        "atMs": 1790903626189.2222,
+        "outcome": "confirmed",
+        "paused": null,
+        "correlationId": "aidm-62df7f44-3691-459b-aa2c-64b4aaa270fe",
+        "stateObservedAtMs": null,
+        "elapsedMs": 3204.9810999887995
+      },
+      "finalMs": 5937.26860000001,
+      "complete": true
+    },
+    {
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "arrivalAtMs": 1790903681366,
+      "queueWaitMs": 7.290900000021793,
+      "contextMs": 135.1027999917278,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "modelRequests": 2,
+      "tools": [
+        "foundry_move_token"
+      ],
+      "action": {
+        "type": "pause-timing",
+        "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+        "stage": "confirmed-action-result",
+        "atMs": 1790903685701.6018,
+        "outcome": "confirmed",
+        "paused": null,
+        "correlationId": "aidm-a525582b-d051-498a-a9ce-244be640769b",
+        "stateObservedAtMs": null,
+        "elapsedMs": 3345.3611000004457
+      },
+      "finalMs": 6512.102099999989,
+      "complete": true
+    },
+    {
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "arrivalAtMs": 1790903726126,
+      "queueWaitMs": 5.719500000006519,
+      "contextMs": 3042.7823000063654,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "modelRequests": 2,
+      "tools": [
+        "foundry_roll_actor"
+      ],
+      "action": {
+        "type": "pause-timing",
+        "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+        "stage": "confirmed-action-result",
+        "atMs": 1790903732871.9526,
+        "outcome": "confirmed",
+        "paused": null,
+        "correlationId": "aidm-a391b286-fc91-47a6-af4b-7bf0d6d9777f",
+        "stateObservedAtMs": null,
+        "elapsedMs": 3469.3771000020206
+      },
+      "finalMs": 9054.015399999975,
+      "complete": true
+    },
+    {
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "arrivalAtMs": 1790903772943,
+      "queueWaitMs": 5.334199999982957,
+      "contextMs": 1503.8000000058673,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "modelRequests": 2,
+      "tools": [
+        "foundry_set_actor_hp"
+      ],
+      "action": {
+        "type": "pause-timing",
+        "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+        "stage": "confirmed-action-result",
+        "atMs": 1790903778892.4717,
+        "outcome": "confirmed",
+        "paused": null,
+        "correlationId": "aidm-2e388dab-d002-4acd-a1b8-d8cf71b4adde",
+        "stateObservedAtMs": null,
+        "elapsedMs": 3392.0721000031335
+      },
+      "finalMs": 8041.940699999977,
+      "complete": true
+    },
+    {
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "arrivalAtMs": 1790903803593,
+      "queueWaitMs": 5.491600000008475,
+      "contextMs": 1994.551900002989,
+      "model": "gpt-5.6-sol",
+      "reasoning": {
+        "context": null,
+        "effort": "none",
+        "generate_summary": null,
+        "mode": null,
+        "summary": null
+      },
+      "modelRequests": 2,
+      "tools": [
+        "foundry_advance_combat_turn"
+      ],
+      "action": {
+        "type": "pause-timing",
+        "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+        "stage": "confirmed-action-result",
+        "atMs": 1790903809119.3164,
+        "outcome": "confirmed",
+        "paused": null,
+        "correlationId": "aidm-09837706-159e-4901-a9e7-c6a62106411f",
+        "stateObservedAtMs": null,
+        "elapsedMs": 3380.125299998326
+      },
+      "finalMs": 9250.363500000036,
+      "complete": true
+    }
+  ]
+}

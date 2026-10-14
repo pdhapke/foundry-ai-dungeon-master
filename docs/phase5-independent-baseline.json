@@ -1,0 +1,36 @@
+{
+  "capturedAt": "2026-10-02T23:58:06.252Z",
+  "health": {
+    "ai": {
+      "manifestDigest": "d25d53d9ad82a1052a6fcd6f5bd6542da1b0b050fd4600efd1e312264e5ad275",
+      "startedAt": "2026-10-02T23:51:12.002Z",
+      "status": "ready"
+    },
+    "mcp": {
+      "manifestDigest": "acbdb7e1de537633a28d223bf7ee6030a0cfd0862f111f57be42f38f8352f92c",
+      "startedAt": "2026-10-02T23:51:11.604Z",
+      "status": "ok"
+    },
+    "python": {
+      "codeDigest": "07392bd21ba17d69a697b6349059567960cfb5939251f84d2775314d15935110",
+      "promptVersion": "solo-dm-v8-core-actions",
+      "maxModelTurns": 15
+    }
+  },
+  "clients": [
+    {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "userId": "X7X4KK7zca5U2Ics",
+      "lane": "gm",
+      "isGM": true,
+      "optedIn": true,
+      "connectedAt": 1790985267084
+    }
+  ],
+  "hashes": {
+    "server/src/chatkit/read-tools.ts": "14a7490f9b41ce4e71f5e5937268320b91d2abcaccfa3a1aec335d863706e139",
+    "../foundry-local-api/module/src/commands/scene-render.ts": "a65b180275413488273ab58bb0c6cd1114f00f2a4367d30922f3f505c2caafc7",
+    "../foundry-local-api/server/src/endpoints/scene-render.ts": "1e8142bb44540063bcb5a3ae8522f9ccb05ef8a567f0c86d22241f39f60827b8"
+  },
+  "scope": "Read-only identities/client readiness; no perception workflow or fixtures changed"
+}

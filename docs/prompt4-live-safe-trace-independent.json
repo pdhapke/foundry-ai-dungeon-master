@@ -1,0 +1,78 @@
+{
+  "traceId": "fc16134f-b024-4745-96ea-b6845fdfd10d",
+  "scope": "Independent read-only trace and safe-store inspection; root observed actual browser separately",
+  "rowCount": 46,
+  "modelRequestStages": 0,
+  "providerStages": 0,
+  "adapterSpansMs": [
+    5493.896399999969,
+    2292.010900000052
+  ],
+  "nodeFirstChunkMs": 273.3300000000163,
+  "nodeFinishedMs": 8723.206999999995,
+  "timingLimit": "First chunk is transport event, not confirmed receipt paint; Python safe path scope starts at commit so Python elapsed is not total action time",
+  "mutationOrNarratorCalls": 0,
+  "safeThread": {
+    "threadHash": "d4fb736da077a56a358ac289",
+    "binding": {
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "sceneId": "cbyniU1p5punoUkD",
+      "tokenId": "yG5NYzuzG5YgBslE",
+      "userId": "edtBL96Yu3058QAT",
+      "worldId": "izzy-campaign"
+    },
+    "totalItems": 1,
+    "itemTypes": [
+      "assistant_message"
+    ],
+    "text": [
+      "A closed door is visible."
+    ],
+    "createdAt": "2026-10-03T03:19:57.200278Z",
+    "privateProtocolPairs": 0
+  },
+  "approvedObservation": {
+    "status": "ready",
+    "binding": {
+      "worldId": "izzy-campaign",
+      "sceneId": "cbyniU1p5punoUkD",
+      "userId": "edtBL96Yu3058QAT",
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "tokenId": "yG5NYzuzG5YgBslE",
+      "stateRevision": "1f50532b6ff05829afba8e786e7d0ebc4e1a627cbce686cfa7c2efcf64bc0591",
+      "observationId": "cb85bb09-52a2-45d8-9b6e-f65ce17af6d7"
+    },
+    "facts": [
+      {
+        "kind": "visible-door",
+        "description": "A closed door is visible.",
+        "basis": "native-visible-barrier",
+        "decision": {
+          "visibility": "public",
+          "audience": {
+            "kind": "public"
+          },
+          "activation": {
+            "status": "active",
+            "conditionRef": null
+          },
+          "dependencies": [
+            {
+              "nodeId": "03d5e3a08368296b6d737bf5c7e12fe40241be30bcfaf3e977bc9585f948a339",
+              "revision": "1f50532b6ff05829afba8e786e7d0ebc4e1a627cbce686cfa7c2efcf64bc0591"
+            }
+          ],
+          "policyRevision": "player-surroundings-v1"
+        }
+      }
+    ],
+    "unknowns": [
+      "threat",
+      "being-noticed",
+      "trap",
+      "unobserved-area"
+    ],
+    "sourceRevision": "3e0894ca15835ccddf329face6c39b060c54a6c7e51b5da705f2ea10869402b8",
+    "text": "A closed door is visible."
+  }
+}

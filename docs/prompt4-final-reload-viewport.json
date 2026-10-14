@@ -1,0 +1,107 @@
+{
+  "before": {
+    "correlationId": "4c02e13a-068f-4400-badb-4d136bc02288",
+    "acknowledged": true,
+    "replayed": false,
+    "acknowledgedAt": "2026-10-03T03:01:56.123Z",
+    "clientUserId": "X7X4KK7zca5U2Ics",
+    "executingClientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+    "expectedSceneId": null,
+    "activeSceneId": "Nbj38PEdvw1zX1J9",
+    "scenePreloaded": false,
+    "activeSceneMatches": true,
+    "sceneReady": false,
+    "assets": [],
+    "viewport": {
+      "x": 138.15104690959666,
+      "y": 531.9897855466938,
+      "scale": 1.126185276462208
+    },
+    "applied": {
+      "preload": false,
+      "viewport": false
+    },
+    "warnings": [],
+    "incomplete": false,
+    "client": {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "userId": "X7X4KK7zca5U2Ics",
+      "lane": "gm",
+      "isGM": true,
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0"
+    }
+  },
+  "current": {
+    "correlationId": "3b7f87d5-1a72-4e9b-ba52-cfb590086557",
+    "acknowledged": true,
+    "replayed": false,
+    "acknowledgedAt": "2026-10-03T03:02:28.565Z",
+    "clientUserId": "X7X4KK7zca5U2Ics",
+    "executingClientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+    "expectedSceneId": null,
+    "activeSceneId": "Nbj38PEdvw1zX1J9",
+    "scenePreloaded": false,
+    "activeSceneMatches": true,
+    "sceneReady": false,
+    "assets": [],
+    "viewport": {
+      "x": 3625,
+      "y": 4875,
+      "scale": 1
+    },
+    "applied": {
+      "preload": false,
+      "viewport": false
+    },
+    "warnings": [],
+    "incomplete": false,
+    "client": {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "userId": "X7X4KK7zca5U2Ics",
+      "lane": "gm",
+      "isGM": true,
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0"
+    }
+  },
+  "result": {
+    "correlationId": "83f3d099-f6b9-417f-8050-33c4ef39d0a0",
+    "acknowledged": true,
+    "replayed": false,
+    "acknowledgedAt": "2026-10-03T03:02:28.895Z",
+    "clientUserId": "X7X4KK7zca5U2Ics",
+    "executingClientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+    "expectedSceneId": "Nbj38PEdvw1zX1J9",
+    "activeSceneId": "Nbj38PEdvw1zX1J9",
+    "scenePreloaded": false,
+    "activeSceneMatches": true,
+    "sceneReady": false,
+    "assets": [],
+    "viewport": {
+      "x": 138.15104690959666,
+      "y": 531.9897855466938,
+      "scale": 1.126185276462208
+    },
+    "applied": {
+      "preload": false,
+      "viewport": true
+    },
+    "warnings": [],
+    "incomplete": false,
+    "client": {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "userId": "X7X4KK7zca5U2Ics",
+      "lane": "gm",
+      "isGM": true,
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0"
+    }
+  }
+}

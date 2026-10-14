@@ -1,0 +1,58 @@
+[
+  {
+    "schemaVersion": 1,
+    "processRunId": "c4b15a95-c115-47a4-942c-20ef243e848c",
+    "monotonicMs": 497047.9264,
+    "traceId": "c7bc1d6a-7d4f-45d4-b59b-2248f1013307",
+    "component": "mcp-node",
+    "stage": "bridge:status:dispatch",
+    "elapsedMs": 1.9944000000250526
+  },
+  {
+    "schemaVersion": 1,
+    "processRunId": "c4b15a95-c115-47a4-942c-20ef243e848c",
+    "monotonicMs": 497050.2492,
+    "traceId": "c7bc1d6a-7d4f-45d4-b59b-2248f1013307",
+    "component": "mcp-node",
+    "stage": "bridge:status:ack",
+    "elapsedMs": 0.01680000004125759,
+    "durationMs": 2.995600000023842,
+    "outcome": "returned"
+  },
+  {
+    "schemaVersion": 1,
+    "processRunId": "c4b15a95-c115-47a4-942c-20ef243e848c",
+    "monotonicMs": 497050.2748,
+    "traceId": "c7bc1d6a-7d4f-45d4-b59b-2248f1013307",
+    "component": "foundry-native",
+    "stage": "native:status:clock",
+    "elapsedMs": 0,
+    "durationMs": 0.3999999761581421,
+    "clockId": "a0385697-2ab7-465c-bc13-f04d4ff8acd7",
+    "nativeStartMs": 129076.10000002384,
+    "nativeEndMs": 129076.5,
+    "instrumentationBuild": "215f9274b3bfcdf363696fa23070a609a5657927c7ccd345a7576147f1a8860a"
+  },
+  {
+    "schemaVersion": 1,
+    "processRunId": "c4b15a95-c115-47a4-942c-20ef243e848c",
+    "monotonicMs": 497050.2938,
+    "traceId": "c7bc1d6a-7d4f-45d4-b59b-2248f1013307",
+    "component": "mcp-node",
+    "stage": "native:status:execution",
+    "elapsedMs": 0.07340000005206093,
+    "durationMs": 0.3999999761581421,
+    "outcome": "returned"
+  },
+  {
+    "schemaVersion": 1,
+    "processRunId": "c4b15a95-c115-47a4-942c-20ef243e848c",
+    "monotonicMs": 497050.3952,
+    "traceId": "c7bc1d6a-7d4f-45d4-b59b-2248f1013307",
+    "component": "mcp-node",
+    "stage": "mcp:foundry_get_status",
+    "elapsedMs": 4.479400000011083,
+    "durationMs": 4.471299999975599,
+    "outcome": "returned"
+  }
+]

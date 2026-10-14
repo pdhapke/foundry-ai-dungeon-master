@@ -1,0 +1,25 @@
+{
+  "capturedAt": "2026-10-02T23:13:43.735Z",
+  "checks": {
+    "aiManifest": true,
+    "aiArtifacts": true,
+    "mcpManifest": true,
+    "mcpArtifacts": true,
+    "pythonCode": true,
+    "pythonPrompt": true,
+    "cap3": true,
+    "noFallback": true,
+    "reconciledFlagsUnchanged": true,
+    "twoHistoricalUncertain": true,
+    "noPending": true
+  },
+  "pass": true,
+  "loaded": {
+    "ai": "df520e6fabcffcbba1b0f81adba6fe3dbb093e4547c93935ca2d9783e2dadcc8",
+    "mcp": "acbdb7e1de537633a28d223bf7ee6030a0cfd0862f111f57be42f38f8352f92c",
+    "python": "119e9125b9f9cd78e8fa52f88e5b87b18a5ba3a8022ac8f10c2451aa395e6f63",
+    "maxModelTurns": 3,
+    "startedAt": "2026-10-02T23:10:13.313Z"
+  },
+  "scope": "Read-only loopback health and Journal; native browser marker and selected model readiness separate"
+}

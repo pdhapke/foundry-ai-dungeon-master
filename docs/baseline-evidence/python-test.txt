@@ -1,0 +1,6 @@
+.............Executing <Task pending name='Task-102' coro=<StoreTests.test_serialized_plan_request_uses_oauth_and_supported_fields() running at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_app.py:57> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\futures.py:384, Task.task_wakeup()] created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py:459> cb=[_run_until_complete_cb() at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\base_events.py:181] created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.119 seconds
+.
+----------------------------------------------------------------------
+Ran 14 tests in 0.927s
+
+OK

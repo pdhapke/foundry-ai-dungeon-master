@@ -1,0 +1,20 @@
+{
+  "coreCalls": 6,
+  "modelRequests": 12,
+  "lastResult": {
+    "worldId": "izzy-campaign",
+    "correlationId": "aidm-b5fc0010-44eb-43ce-b7a3-e47b8b6d3375",
+    "schemaVersion": "core-actions-v1",
+    "action": {
+      "kind": "door.state",
+      "sceneId": "2RJeJKqdpEE4VZPh",
+      "targetId": "RsB12oN5v3LYI1XR",
+      "value": 0
+    },
+    "state": {
+      "ds": 0
+    },
+    "mutated": true,
+    "outcome": "confirmed"
+  }
+}

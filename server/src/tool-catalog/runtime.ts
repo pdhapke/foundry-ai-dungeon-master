@@ -16,6 +16,7 @@ import { searchCatalog } from "./search.js";
 import type {
   CatalogToolRecord,
   LoadedToolGrant,
+  ProviderInvocation,
   ToolCatalogClock,
   ToolCatalogIds,
   ToolCatalogOutcome,
@@ -201,7 +202,15 @@ export class ToolCatalogRunSession {
 
   async executeGrant(
     request: ToolExecutionRequest,
+    boundary?: {
+      signal: AbortSignal;
+      invoke: (invocation: ProviderInvocation) => Promise<AiDmJsonValue>;
+      durableProposal?: boolean;
+      authorizeSession?: (invocation: ProviderInvocation) => Promise<boolean>;
+      authorizeProposal?: (invocation: ProviderInvocation) => Promise<boolean>;
+    },
   ): Promise<ToolCatalogOutcome<ToolExecutionResult>> {
+    boundary?.signal.throwIfAborted();
     const grant = this.grants.get(request.grantId);
     if (!grant || grant.runId !== this.options.runId) {
       return denial(null, "TOOL_UNKNOWN", "The run-scoped tool grant is unknown.");
@@ -234,6 +243,7 @@ export class ToolCatalogRunSession {
     let snapshot;
     try {
       snapshot = await this.catalog.refresh();
+      boundary?.signal.throwIfAborted();
     } catch {
       return deny("TOOL_UNAVAILABLE", "The tool provider could not be revalidated.", true);
     }
@@ -276,7 +286,75 @@ export class ToolCatalogRunSession {
       return deny("TOOL_ARGUMENT_INVALID", validationErrors[0] ?? "Invalid tool arguments.");
     }
 
-    if (request.effect === "propose" || (isConsequential(record) && request.effect !== "commit")) {
+    if (request.effect === "session") {
+      if (
+        !boundary?.authorizeSession ||
+        record.metadata.approvalPolicy !== "gm-request" ||
+        record.metadata.risk !== "consequential" ||
+        !this.options.principal.isGm
+      )
+        return deny(
+          "TOOL_UNAUTHORIZED",
+          "Session mutation requires a trusted direct GM request boundary.",
+        );
+      try {
+        boundary.signal.throwIfAborted();
+        if (
+          !(await boundary.authorizeSession({
+            providerId: snapshot.providerId,
+            toolId,
+            arguments: structuredClone(request.arguments),
+            schemaDigest: record.schemaDigest,
+            idempotencyKey: null,
+          }))
+        )
+          return deny(
+            "TOOL_UNAUTHORIZED",
+            "Direct GM request does not authorize these session arguments.",
+          );
+        boundary.signal.throwIfAborted();
+      } catch {
+        return deny("TOOL_UNAUTHORIZED", "Session request authorization failed.");
+      }
+    }
+    let authorizedDurableProposal = false;
+    if (
+      request.effect === "propose" &&
+      isConsequential(record) &&
+      boundary?.durableProposal &&
+      boundary.authorizeProposal
+    ) {
+      if (record.metadata.approvalPolicy !== "gm-approval" || !this.options.principal.isGm)
+        return deny(
+          "TOOL_UNAUTHORIZED",
+          "Durable review requires a current GM and reviewed proposal policy.",
+        );
+      try {
+        boundary.signal.throwIfAborted();
+        authorizedDurableProposal = await boundary.authorizeProposal({
+          providerId: snapshot.providerId,
+          toolId,
+          arguments: structuredClone(request.arguments),
+          schemaDigest: record.schemaDigest,
+          idempotencyKey: null,
+        });
+        boundary.signal.throwIfAborted();
+        if (!authorizedDurableProposal)
+          return deny(
+            "TOOL_UNAUTHORIZED",
+            "The trusted boundary did not admit this exact proposal.",
+          );
+      } catch {
+        return deny("TOOL_UNAUTHORIZED", "Durable proposal authorization failed.");
+      }
+    }
+    if (
+      (request.effect === "propose" && !boundary?.durableProposal) ||
+      (isConsequential(record) &&
+        request.effect !== "commit" &&
+        request.effect !== "session" &&
+        !authorizedDurableProposal)
+    ) {
       this.executionReceipts.push({ ...receiptBase, outcome: "proposed" });
       return {
         ok: true,
@@ -342,13 +420,17 @@ export class ToolCatalogRunSession {
     this.callsUsed += 1;
     grant.remainingCalls -= 1;
     try {
-      const result = await this.catalog.provider.invokeSelected({
+      boundary?.signal.throwIfAborted();
+      const result = await (
+        boundary?.invoke ?? this.catalog.provider.invokeSelected.bind(this.catalog.provider)
+      )({
         providerId: snapshot.providerId,
         toolId,
         arguments: structuredClone(request.arguments),
         schemaDigest: record.schemaDigest,
         idempotencyKey,
       });
+      boundary?.signal.throwIfAborted();
       if (record.definition.outputSchema !== null) {
         const outputErrors = validateArguments(record.definition.outputSchema, result);
         if (outputErrors.length > 0) {
@@ -368,7 +450,12 @@ export class ToolCatalogRunSession {
       };
     } catch {
       this.executionReceipts.push({ ...receiptBase, outcome: "failed" });
-      return denial(toolId, "TOOL_UNAVAILABLE", "The selected provider tool failed.", true);
+      return denial(
+        toolId,
+        "TOOL_UNAVAILABLE",
+        "The selected provider tool failed; dispatched effects may be uncertain. Inspect durable receipts before repeating.",
+        request.effect === "read" || request.effect === "simulate",
+      );
     }
   }
 }

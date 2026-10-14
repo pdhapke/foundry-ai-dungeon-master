@@ -1,0 +1,20 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { mkdtempSync, mkdirSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { createHash } from "node:crypto";
+import { importApprovedLocalMapAsset } from "./local-asset-import.js";
+test("approved raster import is content-addressed, bounded and replayable; wrong hash/scope deny", () => {
+  const root = mkdtempSync(join(tmpdir(), "prep-assets-")), sourceRoot = join(root, "approved"), target = join(root, "public");
+  mkdirSync(sourceRoot); mkdirSync(target);
+  const bytes = Buffer.from([137,80,78,71,13,10,26,10,1]); const source = join(sourceRoot, "map.png"); writeFileSync(source, bytes);
+  const input = { worldId: "w", sourcePath: source, sourceHash: createHash("sha256").update(bytes).digest("hex"), license: "fixture", playerVisibleApproved: true as const };
+  const config = { worldId: "w", approvedSourceRoot: sourceRoot, publicAssetRoot: target, publicUrlPrefix: "assets/prepared", authorize: () => {} };
+  assert.equal(importApprovedLocalMapAsset(input, config).reused, false);
+  assert.equal(importApprovedLocalMapAsset(input, config).reused, true);
+  assert.throws(() => importApprovedLocalMapAsset({ ...input, sourceHash: "wrong" }, config), /changed/);
+  assert.throws(() => importApprovedLocalMapAsset({ ...input, worldId: "other" }, config), /approval/);
+  const text = join(sourceRoot, "private.md"); writeFileSync(text, "private");
+  assert.throws(() => importApprovedLocalMapAsset({ ...input, sourcePath: text, sourceHash: createHash("sha256").update("private").digest("hex") }, config), /raster/);
+});

@@ -1,0 +1,80 @@
+{
+  "gate": "PASS timing attribution/limits",
+  "browserDiagnostics": {
+    "droppedRows": 0,
+    "overBudgetEvents": 0
+  },
+  "browser": [
+    {
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "clockIds": [
+        "b199826d-9c5f-4858-91aa-b02ce1c96501"
+      ],
+      "events": [
+        {
+          "stage": "browser-submit",
+          "elapsedMs": 0.09999999403953552
+        },
+        {
+          "stage": "browser-response-headers",
+          "elapsedMs": 759.8000000119209
+        },
+        {
+          "stage": "browser-first-stream-chunk",
+          "elapsedMs": 761.1999999880791
+        },
+        {
+          "stage": "browser-receipt-arrival",
+          "elapsedMs": 11997.40000000596
+        },
+        {
+          "stage": "browser-stream-end",
+          "elapsedMs": 16861.59999999404
+        },
+        {
+          "stage": "browser-chatkit-response-end",
+          "elapsedMs": 16885.59999999404
+        }
+      ]
+    },
+    {
+      "traceId": "7491cfa0-64e7-4e23-96d1-a3db7c481ae8",
+      "clockIds": [
+        "b199826d-9c5f-4858-91aa-b02ce1c96501"
+      ],
+      "events": [
+        {
+          "stage": "browser-submit",
+          "elapsedMs": 0
+        },
+        {
+          "stage": "browser-response-headers",
+          "elapsedMs": 785.1000000238419
+        },
+        {
+          "stage": "browser-first-stream-chunk",
+          "elapsedMs": 785.5
+        },
+        {
+          "stage": "browser-receipt-arrival",
+          "elapsedMs": 8586.300000011921
+        },
+        {
+          "stage": "browser-stream-end",
+          "elapsedMs": 12637.40000000596
+        },
+        {
+          "stage": "browser-chatkit-response-end",
+          "elapsedMs": 12655.600000023842
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Two distinct prompts, one sample each; no distribution or improvement claim",
+    "Arrival is transport, render is separately observed upper bound; no clock subtraction",
+    "Native exact confirmation timestamp unavailable; adapter includes auth/dispatch/readback",
+    "Context child spans overlap parent; not additive",
+    "Final second model is factual summary, no requested DM narration"
+  ]
+}

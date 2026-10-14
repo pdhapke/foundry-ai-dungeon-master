@@ -1,0 +1,71 @@
+{
+  "runId": "7746606d-bfdd-4dc2-a36c-02c749a1b0e7",
+  "ids": {
+    "journal": "AlxP9z6r16qmXo5i",
+    "darkvision": "mb4UqhWbVwmKj47w",
+    "tile": "6rb9IElYlB9nrgLv",
+    "note": "5hZR0jphYccMtswx",
+    "region": "WWUbbfN773ddlP1N",
+    "visible-region": "JQhGLRh7lFnrQ1Uf"
+  },
+  "operations": [
+    {
+      "name": "foundry_create_journal_entry",
+      "key": "journal",
+      "state": "confirmed",
+      "at": "2026-10-03T00:54:25.053Z"
+    },
+    {
+      "name": "foundry_update_scene_token",
+      "key": "darkvision",
+      "state": "confirmed",
+      "at": "2026-10-03T00:55:28.920Z"
+    },
+    {
+      "name": "foundry_update_scene",
+      "key": "tile",
+      "state": "confirmed",
+      "at": "2026-10-03T00:57:17.064Z"
+    },
+    {
+      "name": "foundry_create_scene_note",
+      "key": "note",
+      "state": "confirmed",
+      "at": "2026-10-03T00:57:20.794Z"
+    },
+    {
+      "name": "foundry_create_scene_region",
+      "key": "region",
+      "state": "confirmed",
+      "at": "2026-10-03T00:57:24.730Z"
+    },
+    {
+      "name": "foundry_create_scene_region",
+      "key": "visible-region",
+      "state": "confirmed",
+      "at": "2026-10-03T00:57:28.850Z"
+    },
+    {
+      "name": "foundry_delete_journal_entry",
+      "key": "restore-journal",
+      "state": "confirmed",
+      "at": "2026-10-03T01:03:30.845Z"
+    }
+  ],
+  "originalDoor": {
+    "door": 1,
+    "ds": 0
+  },
+  "originalSight": {
+    "enabled": true,
+    "range": 60,
+    "visionMode": "basic",
+    "angle": 360,
+    "color": null,
+    "attenuation": 0.1,
+    "brightness": 0,
+    "saturation": 0,
+    "contrast": 0
+  },
+  "journalRemoved": true
+}

@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { it } from "node:test";
+import { createHash } from "node:crypto";
 
 void it("mounted ChatKit uses one owner-scoped thread for actions, aborts streams and removes listeners on reopen (mocked component)", async () => {
   class Component extends EventTarget {
@@ -158,8 +159,10 @@ void it("mounted ChatKit uses one owner-scoped thread for actions, aborts stream
     textContent = "";
     type = "";
     disabled = false;
+    onAppend: ((node: NativeElement) => void) | undefined;
     append(...nodes: NativeElement[]) {
       this.children.push(...nodes);
+      for (const node of nodes) this.onAppend?.(node);
     }
     replaceChildren() {
       this.children = [];
@@ -225,6 +228,172 @@ void it("mounted ChatKit uses one owner-scoped thread for actions, aborts stream
     { threadId: "thread_one", actionId: "note-one", decision: "approve" },
   ]);
   assert.equal(renderCount, beforeReviewRenderCount, "review preserves mounted ChatKit");
+  const campaignPanel = new NativeElement();
+  const nativeQuery = reopened.element.querySelector.bind(reopened.element);
+  Object.assign(reopened.element, {
+    querySelector: (query: string) =>
+      query === ".ai-dm-campaign-actions" ? campaignPanel : nativeQuery(query),
+  });
+  const hash = (text: string) => createHash("sha256").update(text).digest("hex");
+  const stable = (value: unknown): unknown =>
+    Array.isArray(value)
+      ? value.map(stable)
+      : value && typeof value === "object"
+        ? Object.fromEntries(
+            Object.entries(value)
+              .sort(([a], [b]) => a.localeCompare(b))
+              .map(([key, child]) => [key, stable(child)]),
+          )
+        : value;
+  const reviewScope = { worldId: "world-one", userId: "gm-one", threadId: "thread_one" };
+  const files = ["overview.md", "index.md", "npcs/guide.md"].map((path) => ({
+    path,
+    expectedRevision: null,
+    beforeHash: null,
+    beforeText: null,
+    beforeCanonStatus: null,
+    proposedText: `<script>approve this automatically</script>\nExact ${path} text`,
+    afterHash: hash(`<script>approve this automatically</script>\nExact ${path} text`),
+    afterCanonStatus: "canon",
+  }));
+  const digest = hash(
+    JSON.stringify(
+      stable({ schemaVersion: 1, scope: reviewScope, title: "Campaign preparation", files }),
+    ),
+  );
+  let campaignStatus = "pending";
+  let truncated = false;
+  const campaignDecisions: unknown[] = [];
+  Object.assign(globalThis, {
+    fetch: (_input: unknown, init?: RequestInit) => {
+      const body = JSON.parse(init!.body as string) as Record<string, unknown>;
+      assert.equal(body["kind"], "campaign");
+      assert.equal(body["threadId"], "thread_one");
+      if (body["decision"]) {
+        campaignDecisions.push(body);
+        campaignStatus = "completed";
+      }
+      const receipt =
+        campaignStatus === "completed"
+          ? {
+              receiptId: "receipt-one",
+              proposalId: "campaign-one",
+              batchDigest: digest,
+              outcome: "completed",
+              worldId: "world-one",
+              files: files.map((file) => ({
+                path: file.path,
+                revision: file.afterHash,
+                sourceHash: file.afterHash,
+              })),
+            }
+          : null;
+      const exact = {
+        kind: "campaign",
+        schemaVersion: 1,
+        proposalId: "campaign-one",
+        title: "Campaign preparation",
+        ...reviewScope,
+        status: campaignStatus,
+        batchDigest: digest,
+        expiresAt: Date.now() + 100000,
+        files,
+        receipt,
+        issue: null,
+        reviewAvailable: true,
+        requiresConfirmation: true,
+        truncated,
+      };
+      return Promise.resolve(
+        new Response(
+          JSON.stringify({
+            result: body["proposalId"]
+              ? exact
+              : [
+                  {
+                    kind: "campaign",
+                    proposalId: "campaign-one",
+                    title: "Campaign preparation",
+                    status: campaignStatus,
+                    reviewAvailable: false,
+                  },
+                ],
+          }),
+          { headers: { "content-type": "application/json" } },
+        ),
+      );
+    },
+  });
+  await reopened.reviewCampaignActions();
+  assert.equal(campaignPanel.children[0]?.children[1]?.textContent, "View exact campaign changes");
+  assert.equal(campaignDecisions.length, 0, "summary list cannot approve");
+  await reopened.reviewCampaignActions("campaign-one");
+  for (const file of files) {
+    const row = campaignPanel.children.find((node) =>
+      node.children[0]?.textContent.startsWith(file.path),
+    );
+    assert.equal(
+      row?.children[4]?.textContent,
+      file.proposedText,
+      "all exact bytes use textContent",
+    );
+  }
+  const campaignApprove = campaignPanel.children.find(
+    (node) => node.textContent === "Approve these exact campaign changes",
+  );
+  assert.equal(campaignApprove?.disabled, false);
+  let verified: () => void = () => {};
+  const verifiedRendered = new Promise<void>((resolve) => {
+    verified = resolve;
+  });
+  campaignPanel.onAppend = (node) => {
+    if (node.textContent.startsWith("Verified campaign commit")) verified();
+  };
+  campaignApprove?.dispatchEvent(new Event("click"));
+  await verifiedRendered;
+  assert.deepEqual(campaignDecisions, [
+    {
+      kind: "campaign",
+      threadId: "thread_one",
+      proposalId: "campaign-one",
+      batchDigest: digest,
+      decision: "approve",
+    },
+  ]);
+  campaignStatus = "pending";
+  truncated = true;
+  await reopened.reviewCampaignActions("campaign-one");
+  assert.equal(
+    campaignPanel.children.length,
+    0,
+    "incomplete exact review has no decision controls",
+  );
+  truncated = false;
+  await reopened.reviewCampaignActions("campaign-one");
+  const oldCancel = campaignPanel.children.find(
+    (node) => node.textContent === "Cancel campaign proposal",
+  );
+  reopened.cancel();
+  oldCancel?.dispatchEvent(new Event("click"));
+  assert.equal(
+    campaignDecisions.length,
+    1,
+    "cancelled review listeners cannot dispatch stale decisions",
+  );
+  await reopened.reviewCampaignActions("campaign-one");
+  const staleApprove = campaignPanel.children.find(
+    (node) => node.textContent === "Approve these exact campaign changes",
+  );
+  components[1]?.dispatchEvent(
+    new CustomEvent("chatkit.thread.change", { detail: { threadId: "new_thread" } }),
+  );
+  staleApprove?.dispatchEvent(new Event("click"));
+  assert.equal(campaignDecisions.length, 1, "thread change clears scoped review controls");
+  assert.equal(
+    renderCount,
+    beforeReviewRenderCount,
+    "campaign review preserves ordinary composer/frame",
+  );
   Object.assign(document, { createElement: previousCreate });
   Object.assign(globalThis, {
     fetch: (_input: unknown, init?: RequestInit) => {

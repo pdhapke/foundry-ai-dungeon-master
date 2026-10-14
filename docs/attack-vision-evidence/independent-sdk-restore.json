@@ -1,0 +1,29 @@
+{
+  "capturedAt": "2026-10-02T04:26:22.900Z",
+  "boundary": "Read-only authenticated SDK; no model or mutation",
+  "worldId": "izzy-campaign",
+  "userId": "X7X4KK7zca5U2Ics",
+  "mode": "restore",
+  "originalSceneId": "Nbj38PEdvw1zX1J9",
+  "originalSceneActive": true,
+  "paused": true,
+  "expectedPaused": true,
+  "activeCombatIds": [],
+  "retainedFixture": {
+    "sceneId": "xj5praphJhGr6mxL",
+    "active": false,
+    "token": {
+      "x": 300,
+      "y": 400
+    },
+    "door": 0,
+    "globalLight": true,
+    "lightHidden": false,
+    "hp": {
+      "value": 40,
+      "temp": 4,
+      "max": 40
+    }
+  },
+  "pass": true
+}

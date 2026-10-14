@@ -1,0 +1,48 @@
+{
+  "enrollmentId": "waYU7sbWLL5Z5Ff5xIiFrg",
+  "userId": "edtBL96Yu3058QAT",
+  "lane": "player",
+  "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "scope": "/bridge",
+  "protocolVersion": 2,
+  "moduleVersion": "0.1.0",
+  "expiresAt": "2026-10-03T00:07:37.341Z",
+  "deliveredAt": "2026-10-03T00:06:37.341Z",
+  "client": {
+    "moduleLoaded": true,
+    "moduleVersion": "0.1.0",
+    "userId": "edtBL96Yu3058QAT",
+    "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+    "enrollmentPublicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuz72vwfcoZISJHgF9iSzpG16pSY4TM+U6GAsJDPVEfXxLA88wXFl3WTA6eUt6ofrVXrfHSmD4PNaLWCArJPZ97h0aexLhkv6z7z7WGZ+PHxFsWRatVED99WZSjCmSehG8/wSMRFm/EmoKmuBK07jhto6B5n7neUJChlewSEn+KiyP3M0s9zdJADx75b3s0r1cTxc5HRH6Wvyuq5HxFTuuVlk2QctEvApQEJJclAB4kOEhUZQNBOLXFe9FTL3FOIt1HrvN7TbKZmfiQn54Fbq5o3MoInPyTRVJWWgvVdrvevQ/9FCSX/C4JOV6KeA6y6a7RWHbtlaSi59qUGtQeh2jQIDAQAB",
+    "intendedLane": "player",
+    "consentGranted": true,
+    "protocolVersion": 2,
+    "foundryVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.3",
+    "delivery": "accepted",
+    "errorCode": null,
+    "diagnostics": {
+      "moduleLoaded": true,
+      "moduleVersion": "0.1.0",
+      "userId": "edtBL96Yu3058QAT",
+      "intendedLane": "player",
+      "consentGranted": true,
+      "connectionState": "connecting",
+      "lastConnectionAttemptAt": "2026-10-03T00:06:37.351Z",
+      "lastNegotiationResult": {
+        "outcome": "rejected",
+        "at": "2026-10-03T00:05:50.058Z",
+        "protocolVersion": 2,
+        "moduleVersion": "0.1.0",
+        "errorCode": "enrollment-required"
+      },
+      "errorCode": null,
+      "reconnect": {
+        "state": "idle",
+        "attempt": 0,
+        "nextAttemptAt": null
+      }
+    }
+  }
+}

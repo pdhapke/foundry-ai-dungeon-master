@@ -1,0 +1,459 @@
+[
+  {
+    "name": "foundry_get_status",
+    "args": {},
+    "result": {
+      "foundryVersion": "14.368",
+      "worldId": "izzy-campaign",
+      "systemId": "dnd5e",
+      "userId": "X7X4KK7zca5U2Ics"
+    }
+  },
+  {
+    "name": "foundry_activate_scene",
+    "args": {
+      "id": "2RJeJKqdpEE4VZPh"
+    },
+    "result": {
+      "name": "AI CORE TEST | test-ai-core-20261001-1790902644995",
+      "active": true,
+      "navigation": false,
+      "width": 1200,
+      "height": 1000,
+      "padding": 0,
+      "grid": {
+        "size": 100,
+        "type": 1,
+        "distance": 5,
+        "units": "ft",
+        "style": "solidLines",
+        "thickness": 1,
+        "color": "#000000",
+        "alpha": 0.2
+      },
+      "tokenVision": false,
+      "flags": {
+        "foundry-local-api": {
+          "testRunId": "test-ai-core-20261001-1790902644995"
+        }
+      },
+      "_id": "2RJeJKqdpEE4VZPh",
+      "navOrder": 0,
+      "thumb": null,
+      "shiftX": 0,
+      "shiftY": 0,
+      "initial": {
+        "x": null,
+        "y": null,
+        "scale": null
+      },
+      "initialLevel": "defaultLevel0000",
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "environment": {
+        "darknessLevel": 0,
+        "darknessLock": false,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "transition": {
+        "type": null,
+        "duration": 1500,
+        "activeOnly": false
+      },
+      "drawings": [],
+      "tokens": [
+        {
+          "name": "Practice Guard",
+          "actorId": "QvhdPrU8dHE1nm4h",
+          "actorLink": true,
+          "x": 200,
+          "y": 200,
+          "width": 1,
+          "height": 1,
+          "flags": {
+            "foundry-local-api": {
+              "testRunId": "test-ai-core-20261001-1790902644995"
+            }
+          },
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "_id": "gHxvFbZTMoim2tYp",
+          "displayName": 0,
+          "delta": null,
+          "elevation": 0,
+          "depth": 1,
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "sort": 0,
+          "locked": false,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "hidden": false,
+          "disposition": -1,
+          "displayBars": 0,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "sight": {
+            "enabled": false,
+            "range": 0,
+            "angle": 360,
+            "visionMode": "basic",
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "_movementHistory": [
+            {
+              "x": 400,
+              "y": 300,
+              "elevation": 0,
+              "width": 1,
+              "height": 1,
+              "depth": 1,
+              "shape": 4,
+              "level": "defaultLevel0000",
+              "action": "walk",
+              "terrain": null,
+              "snapped": false,
+              "explicit": false,
+              "checkpoint": true,
+              "intermediate": false,
+              "userId": "X7X4KK7zca5U2Ics",
+              "movementId": "313HRorXo9XKHC3V",
+              "subpathId": "313HRorXo9XKHC3V",
+              "cost": 0
+            },
+            {
+              "x": 300,
+              "y": 200,
+              "elevation": 0,
+              "width": 1,
+              "height": 1,
+              "depth": 1,
+              "shape": 4,
+              "level": "defaultLevel0000",
+              "action": "walk",
+              "terrain": null,
+              "snapped": true,
+              "explicit": false,
+              "checkpoint": false,
+              "intermediate": true,
+              "userId": "X7X4KK7zca5U2Ics",
+              "movementId": "313HRorXo9XKHC3V",
+              "subpathId": "313HRorXo9XKHC3V",
+              "cost": 0
+            },
+            {
+              "x": 200,
+              "y": 200,
+              "elevation": 0,
+              "width": 1,
+              "height": 1,
+              "depth": 1,
+              "shape": 4,
+              "level": "defaultLevel0000",
+              "action": "walk",
+              "terrain": null,
+              "snapped": false,
+              "explicit": false,
+              "checkpoint": true,
+              "intermediate": false,
+              "userId": "X7X4KK7zca5U2Ics",
+              "movementId": "313HRorXo9XKHC3V",
+              "subpathId": "313HRorXo9XKHC3V",
+              "cost": 0
+            }
+          ],
+          "_regions": []
+        }
+      ],
+      "levels": [
+        {
+          "_id": "defaultLevel0000",
+          "name": "Level",
+          "elevation": {
+            "top": 20,
+            "bottom": 0
+          },
+          "background": {
+            "color": "#999999",
+            "src": null,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "foreground": {
+            "src": null,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "fog": {
+            "src": null
+          },
+          "textures": {
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "offsetX": 0,
+            "offsetY": 0,
+            "fit": "fill",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0
+          },
+          "visibility": {
+            "levels": []
+          },
+          "sort": 0,
+          "flags": {}
+        }
+      ],
+      "lights": [],
+      "notes": [],
+      "sounds": [],
+      "regions": [],
+      "tiles": [],
+      "walls": [
+        {
+          "c": [
+            700,
+            100,
+            700,
+            500
+          ],
+          "door": 1,
+          "ds": 0,
+          "flags": {
+            "foundry-local-api": {
+              "testRunId": "test-ai-core-20261001-1790902644995"
+            }
+          },
+          "_id": "RsB12oN5v3LYI1XR",
+          "levels": [],
+          "light": 20,
+          "move": 20,
+          "sight": 20,
+          "sound": 20,
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null
+        }
+      ],
+      "playlist": null,
+      "playlistSound": null,
+      "journal": null,
+      "journalEntryPage": null,
+      "weather": "",
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "X7X4KK7zca5U2Ics": 3
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "createdTime": 1790902645049,
+        "modifiedTime": 1790955915272,
+        "lastModifiedBy": "X7X4KK7zca5U2Ics",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    }
+  },
+  {
+    "name": "foundry_update_combat",
+    "args": {
+      "id": "F72hDz6efnhuYqKb",
+      "changes": {
+        "active": true
+      }
+    },
+    "result": {
+      "scene": "2RJeJKqdpEE4VZPh",
+      "active": true,
+      "round": 1,
+      "turn": 0,
+      "flags": {
+        "foundry-local-api": {
+          "testRunId": "test-ai-core-20261001-1790902644995"
+        }
+      },
+      "combatants": [
+        {
+          "name": "Practice Guard",
+          "actorId": "QvhdPrU8dHE1nm4h",
+          "tokenId": "gHxvFbZTMoim2tYp",
+          "sceneId": "2RJeJKqdpEE4VZPh",
+          "initiative": 20,
+          "_id": "Jp6aMv7V2dmc8sfI",
+          "type": "base",
+          "system": {},
+          "img": null,
+          "hidden": false,
+          "defeated": false,
+          "group": null,
+          "roundJoined": 1,
+          "flags": {},
+          "_stats": {
+            "coreVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.3",
+            "createdTime": 1790902645324,
+            "modifiedTime": 1790902645324,
+            "lastModifiedBy": "X7X4KK7zca5U2Ics",
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          }
+        },
+        {
+          "name": "Practice Opponent",
+          "initiative": 10,
+          "_id": "pGdbfi4CEeu8FTrJ",
+          "type": "base",
+          "system": {},
+          "actorId": null,
+          "tokenId": null,
+          "sceneId": null,
+          "img": null,
+          "hidden": false,
+          "defeated": false,
+          "group": null,
+          "roundJoined": 1,
+          "flags": {},
+          "_stats": {
+            "coreVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.3",
+            "createdTime": 1790902645324,
+            "modifiedTime": 1790902645324,
+            "lastModifiedBy": "X7X4KK7zca5U2Ics",
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          }
+        }
+      ],
+      "_id": "F72hDz6efnhuYqKb",
+      "name": "",
+      "type": "base",
+      "system": {},
+      "groups": [],
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "createdTime": 1790902645324,
+        "modifiedTime": 1790955915357,
+        "lastModifiedBy": "X7X4KK7zca5U2Ics",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    }
+  }
+]

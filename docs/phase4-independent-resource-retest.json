@@ -1,0 +1,28 @@
+{
+  "capturedAt": "2026-10-02T23:15:51.654Z",
+  "checks": {
+    "exactDuplicateReceipt": true,
+    "duplicateHp": true,
+    "duplicateUses": true,
+    "confirmed": true,
+    "resourceVerified": true,
+    "pathValue": true,
+    "damageEvidence": true,
+    "storedTerminal": true,
+    "resetTarget": true,
+    "resetResource": true,
+    "budget": true
+  },
+  "pass": true,
+  "samples": [
+    {
+      "duplicate": false,
+      "elapsedMs": 655.0284999999999
+    },
+    {
+      "duplicate": true,
+      "elapsedMs": 27.97289999999998
+    }
+  ],
+  "scope": "Native retest/current fixture only; no embedded acceptance or new workflow calls"
+}

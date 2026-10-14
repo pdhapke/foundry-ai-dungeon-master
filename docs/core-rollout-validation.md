@@ -1,0 +1,74 @@
+# Core rollout independent validation
+
+The user reported the pause experiment "looks like that is faster" and explicitly approved expansion. This is qualitative manual feedback; it does not establish measured latency, cold/warm distributions, or an approved numerical target.
+
+## Evidence boundary
+
+No live model call, live game mutation, restart, deployment, push, reset, or remote change was performed by this validator. The parent has separate user authorization for six embedded test requests, at most four model calls each, and a dedicated reversible fixture; that live gate is tracked by the parent. Mocked Foundry globals, fake MCP transport, and in-memory SQLite tests are identified separately from live evidence. The real embedded path remains browser ChatKit -> authenticated TypeScript gateway -> existing Python Agents Runner -> scoped internal adapter -> existing authenticated MCP client. Legacy orchestration tests alone cannot validate that path.
+
+The current instructions were checked by a hidden workspace scan; no AGENTS.md was found. Parent REPOSITORY.md confirms separate MCP module `Data/Data/modules/foundry-local-api` and existing in-process child-server launch arrangement. Current package scripts were read before selecting checks.
+
+## Preservation checkpoint
+
+`core-rollout-evidence/*-start-status.txt`, `*-start-head.txt`, and `*-start-hashes.txt` capture the parent, AI module, and MCP module. Capture happened after worker dispatch and is conservative, not an atomic pre-dispatch snapshot. Both modules include substantial starting dirty work. Git's inaccessible global ignore generated warnings; local status and hashes were captured. No secret file contents or environment configuration were collected.
+
+## Gates
+
+Phase 4 source/inventory/cache gate: PASS (source/unit). The first-turn Python agent exposes individual typed core mutations, bounded play-state read, bounded system-aware dnd5e roll, bounded multi-token move, and existing campaign tools while uncommon search/load/execute remains available. Reviewed fixed protocol `core-actions-v1` replaces runtime schema discovery for routine actions; schema/server drift fails closed. Live state/authority is rechecked at use rather than cached. Overview parsing alone is cached by world/source URI/permission revision and exact content hash, with fresh source/lock/visibility checks on every use. Independent cache invalidation test passed. Core system restrictions and configured roll keys are evaluated live; no persistent world-document availability cache was introduced.
+
+Phase 5 command-family source/unit gate: PASS. Independent new tests: AI core service 5/5, overview cache 1/1; MCP command tests 7/7; MCP endpoint tests 3/3. Real in-memory SQLite, mocked MCP and Foundry globals were used. Checks cover manual GM scope, cancellation before dispatch, excluded effects, schema/world/action acknowledgement drift, durable uncertainty with no redispatch, duplicate delivery, changed arguments, revoked-authority replay, wrong-world replay, reconnect history, shared uncertainty fencing across core and pause, stale optimistic state, deleted targets, ambiguous actors, configured dnd5e roll keys, no dialog/message creation, and lost roll acknowledgement without fallback/reroll. Direct controls share world inference ordering and queued cancellation. Multi-token moves are bounded to eight distinct tokens, sequential and explicitly non-atomic, stop on first failure/uncertainty, preserve successful partial results, list unattempted targets, and reject changed batch arguments under an existing outer request ID. Replays do not redispatch confirmed or uncertain child moves. Initial independent module tests could not import an in-progress shared export; rebuilding shared resolved it.
+
+Combat validation independently inspected installed `App/client/documents/combat.mjs`: supported `nextTurn` and `nextRound` own defeated-skip and world-time semantics. Tests confirm the core service accepts authoritative lifecycle outcome rather than computing its own successor, preserves `direction` and `worldTime`, injects scoped correlation/origin into supported hook options, cleans up hooks on success/failure, and never advances again after missing lifecycle acknowledgement. These tests simulate lifecycle hooks; actual live combat acceptance is still separate.
+
+Both affected modules passed independent workspace typechecks after implementation updates. Logs: `core-rollout-evidence/ai-independent-typecheck.log`, `mcp-independent-typecheck.log`, `ai-independent-tests.log`, `mcp-module-independent-tests.log`, `mcp-endpoint-independent-tests.log`, and `ai-origin-independent-tests.log`. Implementation workers report final builds and Python tests passing; the parent owns full-suite/build evidence and runtime load checks.
+
+Existing dynamic catalog/discovery checks 13/13 passed independently together with the three AI tests: schema and permission revision changes, deferred schema grants, grant expiry, provider revision changes, and uncommon discovery execution. Existing browser origin/hooks checks 8/8 passed with mocked Foundry events, including Region movement provenance, door/combat suppression, lifecycle/world cancellation, and rejection of arbitrary lookalike origins. This establishes source/unit contracts, not remote-client live origin propagation or live natural-language tool selection.
+
+Phase 6 representative embedded acceptance: PASS for the approved six fixture requests. Performance target acceptance remains UNSET: no numerical target was agreed and no equivalent pre-change baseline was captured for the six families.
+
+Parent-collected read-only manual pause evidence from thread `thr_21b6155f` supplies four user-to-assistant item-creation spans: 14.774635, 8.172419, 16.043746, and 8.679215 seconds. These same-clock spans are not measured browser action time or final-painted response time. Parent reports matching confirmed pause receipts and browser correlations with selected UI model `gpt-5.6-sol`; full model settings/turn counts were not durably recorded. Receipt epoch timestamps correspond to UTC and item timestamps are timezone-naive; subtracting them requires independently proven timestamp timezone provenance. No conditional action delta is presented as measured latency. Cold/warm classification is unknown, and historical 38–47 second UI labels are a different metric.
+
+## Concrete acceptance preparation
+
+Use a disposable test scene with one identified token/actor, one unlocked door, and a two-combatant started combat. Record initial token position, door state, actor HP/maximum/conditions, combat round/turn/initiative, world/system IDs, loaded build markers, and model settings. Use reversible desired-state commands and restore these fixture values after the run; advance combat only in that fixture. Confirm the current system before HP tests and exclude unsupported HP schemas.
+
+The approved allowance is exactly six embedded requests (unpause, door, token move, bounded roll, HP setter, combat next turn), each capped at four model calls, against the dedicated reversible fixture recorded in `core-rollout-evidence/live-fixture.json`. No broader calls are authorized. More samples are needed for defensible median/tail estimates; report individual runs and cold/warm labels for this small acceptance set. Manual user requests remain an alternative without agent-initiated model calls.
+
+Capture request/queue/context/model/tool/MCP timings, model tool-call counts, authoritative receipt timestamps, first browser-observed action change, and final narration completion separately. A dispatched notification or stream chunk is not browser paint. Require authoritative matching-world confirmed receipts, preserved uncommon discovery, and no unexpected repeat mutation. Agree numerical latency targets after measured results and user feedback.
+
+## Limitations and preservation
+
+Known source limitations: one world inference queue still blocks controls behind ongoing narration; recognized routine command grammar gets compact overview context, while broader natural-language wording can retain full retrieval/actor-context assembly; unsupported game-system HP/roll schemas remain discoverable rather than fast core mutations. Natural-language tool selection, browser paint/action latency, remote-client origin propagation, and reconnect behavior in a real browser require the live gate. No numerical target or median/tail estimate is established by unit checks.
+
+`*-preservation-changes.json` lists changes from captured starting hashes. MCP captured changes are limited to the session-actions contracts/implementation/tests and shared routine pause lane integration. All other captured dirty MCP files remain byte-identical at comparison. AI changed files are expected ChatKit/core/prompt/context/browser/build integration. Build outputs and new evidence/tests are expected. Capture timing prevents proof about changes before capture; no Git state manipulation was performed.
+
+## Independent live evidence review
+
+The parent submitted exactly six natural-language requests in the real embedded ChatKit UI against the approved disposable dnd5e fixture. The validator made read-only SDK state requests and opened the operations database with SQLite `readOnly: true`; it did not make model calls or mutations. `independent-live-final-inspect.json` independently confirms the fixture scene active, pause false, door ds=1, token position 400/300, actor HP 15/20, and combat round 1/turn 1. `independent-live-receipts.json` captures six matching-world, matching-GM, matching-thread confirmed receipts directly from the durable database, distinct from assistant narration. The system skill roll is `ste`, total 9, formula `1d20 + 0`.
+
+`loaded-build.json` reports Node `core-actions-v1` and Python `solo-dm-v8-core-actions`. The validator independently recalculated every recorded startup artifact hash and Python code hash; all matched. This identifies actual loaded Node/Python versions. Parent browser load verification is separate from those startup hashes.
+
+Every request used `gpt-5.6-sol`, reasoning `none`, exactly two model requests and one typed core tool; total twelve model requests and six tool calls. No search/load/discovery or follow-up state tool was called. Initial model-request traces show the typed core set already available, with uncommon discovery tools still present in ordinary context. Compact pause context intentionally offers only the pause setter. Fixture prompts contained explicit target IDs; these runs do not establish name-based target clarification quality.
+
+| Request | Request to confirmed backend result | Request to gateway stream end | Context preparation |
+| --- | ---: | ---: | ---: |
+| Unpause | 4.515 s | 6.605 s | 0.337 s |
+| Open door | 3.709 s | 5.937 s | 0.214 s |
+| Move token | 4.336 s | 6.512 s | 0.135 s |
+| dnd5e skill roll | 6.746 s | 9.054 s | 3.043 s |
+| Set HP | 5.949 s | 8.042 s | 1.504 s |
+| Advance combat | 5.526 s | 9.250 s | 1.995 s |
+
+Timings come from correlated `live-traces.json` events. Request-to-confirmation is action epoch `atMs` minus gateway arrival epoch; the hook's own `elapsedMs` begins after context preparation and is not request latency. Pause additionally has canonical `stateObservedAtMs`, 4.473 seconds after arrival. Other core receipts confirm readback without an independent state-observed epoch, so the confirmation timestamp is an upper bound for the mutation's completion rather than its precise wall-clock instant. Gateway stream end is not final browser paint, and first forwarded chunks can be non-action workflow content. Queue wait was 5–7 milliseconds in these sequential unloaded requests. One first run followed reload and later runs were sequential warm-session requests, not repeated cold/warm samples per family; no defensible median or tail distribution is reported.
+
+Observed costs include roughly three seconds before the first typed tool in the first three requests, another model request for acknowledgement, and larger context costs for some explicit fixture instructions. MCP action/acknowledgement in the first three requests took about 57–191 milliseconds. The evidence supports removal of discovery round trips, not a claim that discovery was the only bottleneck. Broad live failure/reconnect/cache-change scenarios, live batch moves, browser paint latency, and remote-client origin suppression remain outside the six-request budget; source/unit results cover their stated contracts.
+
+## Demonstrated shortcut repair
+
+After the six natural-language runs, the parent found Foundry v14's chat hook receives serialized editor paragraphs before command parsing. Browser-only normalization now accepts one plain `<p>`/`<br>` envelope and bounded entity decoding, while rich tags/attributes/multiple paragraphs remain ignored. Independent parser plus existing hook tests 2/2 passed (`ai-shortcut-independent-tests.log`), including preserved plain grammar and rejection of toggle/extra arguments. Source inspection confirms the live GM guard remains before dispatch and `/ai-control` uses the existing `/actions` core path and world queue without inference. Parent owns live direct shortcut acceptance; this source/unit repair does not consume another model request or alter the six-request evidence.
+
+Live direct shortcut gate: PASS. Parent `direct-shortcut.json` shows one additional confirmed core door-close receipt (`ds=0`), with model-request count unchanged at twelve. This demonstrates a live browser shortcut using the same backend without inference. The earlier plain-regex mismatch was repaired based on actual Foundry editor behavior.
+
+The validator independently checked fixture restoration through read-only MCP (`independent-restored-inspect.json`): inactive fixture scene, token 200/200, door closed, HP 20/20, inactive combat round 1/turn 0, and pause true matching the recorded original pause. A separate read-only active-scenes request during the parent's final restart returned a capability/transport error; it made no mutation. After the parent's ready notification, a fresh read-only request confirmed original scene `Nbj38PEdvw1zX1J9` active (`independent-restored-active-scene.json`).
+
+Final normal-runtime identity gate: PASS. Fresh independent Node/Python health and recomputed disk hashes are saved in `independent-final-loaded-build.json`: policy `core-actions-v1`, prompt `solo-dm-v8-core-actions`, Python code matches, all 28 recorded artifact hashes match including the repaired browser bundle. Parent `runtime-current.json` confirms current GM bridge in the expected world/system with core action/state commands; the parent reports the temporary acceptance turn-limit override removed when restarting the normal launcher. No new model requests were made for this final verification.

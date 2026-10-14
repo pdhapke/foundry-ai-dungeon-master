@@ -1,0 +1,1868 @@
+[
+  {
+    "name": "foundry_get_status",
+    "args": {},
+    "result": {
+      "foundryVersion": "14.368",
+      "worldId": "izzy-campaign",
+      "systemId": "dnd5e",
+      "userId": "X7X4KK7zca5U2Ics"
+    }
+  },
+  {
+    "name": "foundry_update_actor",
+    "args": {
+      "id": "QvhdPrU8dHE1nm4h",
+      "changes": {
+        "system.attributes.hp.value": 20,
+        "system.attributes.hp.temp": 0
+      }
+    },
+    "result": {
+      "name": "AI CORE TEST | Practice Guard",
+      "type": "npc",
+      "system": {
+        "attributes": {
+          "hp": {
+            "value": 20,
+            "max": 20,
+            "temp": 0,
+            "tempmax": 0,
+            "formula": ""
+          },
+          "ac": {
+            "calcs": [
+              "unarmored",
+              "armored"
+            ],
+            "flat": null,
+            "formulas": [],
+            "override": null
+          },
+          "init": {
+            "ability": "",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "movement": {
+            "speeds": {},
+            "units": null,
+            "hover": false,
+            "ignoredDifficultTerrain": []
+          },
+          "attunement": {
+            "max": 3
+          },
+          "senses": {
+            "ranges": {
+              "blindsight": null,
+              "darkvision": null,
+              "tremorsense": null,
+              "truesight": null
+            },
+            "units": null,
+            "special": ""
+          },
+          "spell": {
+            "level": 0
+          },
+          "spellcasting": "",
+          "exhaustion": 0,
+          "concentration": {
+            "ability": "",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "limit": 1
+          },
+          "loyalty": {},
+          "hd": {
+            "spent": 0
+          },
+          "death": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "success": 0,
+            "failure": 0
+          },
+          "price": {
+            "value": null,
+            "denomination": "gp"
+          }
+        },
+        "currency": {
+          "pp": 0,
+          "gp": 0,
+          "ep": 0,
+          "sp": 0,
+          "cp": 0
+        },
+        "identifier": "ai-core-test-or-practice-guard",
+        "abilities": {
+          "str": {
+            "value": 10,
+            "proficient": 0,
+            "max": null,
+            "attack": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "check": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "save": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            }
+          },
+          "dex": {
+            "value": 10,
+            "proficient": 0,
+            "max": null,
+            "attack": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "check": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "save": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            }
+          },
+          "con": {
+            "value": 10,
+            "proficient": 0,
+            "max": null,
+            "attack": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "check": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "save": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            }
+          },
+          "int": {
+            "value": 10,
+            "proficient": 0,
+            "max": null,
+            "attack": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "check": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "save": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            }
+          },
+          "wis": {
+            "value": 10,
+            "proficient": 0,
+            "max": null,
+            "attack": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "check": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "save": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            }
+          },
+          "cha": {
+            "value": 10,
+            "proficient": 0,
+            "max": null,
+            "attack": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "check": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            },
+            "save": {
+              "roll": {
+                "min": null,
+                "max": null,
+                "mode": 0
+              }
+            }
+          }
+        },
+        "bonuses": {
+          "spell": {
+            "dc": ""
+          }
+        },
+        "rolls": {},
+        "skills": {
+          "acr": {
+            "ability": "dex",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "ani": {
+            "ability": "wis",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "arc": {
+            "ability": "int",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "ath": {
+            "ability": "str",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "dec": {
+            "ability": "cha",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "his": {
+            "ability": "int",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "ins": {
+            "ability": "wis",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "itm": {
+            "ability": "cha",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "inv": {
+            "ability": "int",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "med": {
+            "ability": "wis",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "nat": {
+            "ability": "int",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "prc": {
+            "ability": "wis",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "prf": {
+            "ability": "cha",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "per": {
+            "ability": "cha",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "rel": {
+            "ability": "int",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "slt": {
+            "ability": "dex",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "ste": {
+            "ability": "dex",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          },
+          "sur": {
+            "ability": "wis",
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            },
+            "bonuses": {
+              "passive": ""
+            },
+            "value": 0
+          }
+        },
+        "tools": {},
+        "spells": {
+          "spell1": {
+            "value": 0,
+            "override": null
+          },
+          "spell2": {
+            "value": 0,
+            "override": null
+          },
+          "spell3": {
+            "value": 0,
+            "override": null
+          },
+          "spell4": {
+            "value": 0,
+            "override": null
+          },
+          "spell5": {
+            "value": 0,
+            "override": null
+          },
+          "spell6": {
+            "value": 0,
+            "override": null
+          },
+          "spell7": {
+            "value": 0,
+            "override": null
+          },
+          "spell8": {
+            "value": 0,
+            "override": null
+          },
+          "spell9": {
+            "value": 0,
+            "override": null
+          },
+          "pact": {
+            "value": 0,
+            "override": null
+          }
+        },
+        "details": {
+          "biography": {
+            "value": "",
+            "public": ""
+          },
+          "alignment": "",
+          "ideal": "",
+          "bond": "",
+          "flaw": "",
+          "race": null,
+          "type": {},
+          "habitat": {
+            "value": [],
+            "custom": ""
+          },
+          "cr": 1,
+          "treasure": {
+            "value": []
+          }
+        },
+        "resources": {
+          "legact": {
+            "max": 0,
+            "spent": 0
+          },
+          "legres": {
+            "max": 0,
+            "spent": 0
+          },
+          "lair": {
+            "value": false,
+            "initiative": null,
+            "inside": false
+          }
+        },
+        "source": {
+          "revision": 1,
+          "rules": "2024"
+        },
+        "traits": {
+          "size": "med",
+          "di": {
+            "value": [],
+            "custom": "",
+            "bypasses": []
+          },
+          "dr": {
+            "value": [],
+            "custom": "",
+            "bypasses": []
+          },
+          "dv": {
+            "value": [],
+            "custom": "",
+            "bypasses": []
+          },
+          "dm": {
+            "amount": {},
+            "bypasses": []
+          },
+          "ci": {
+            "value": [],
+            "custom": ""
+          },
+          "languages": {
+            "value": [],
+            "custom": "",
+            "communication": {}
+          },
+          "important": false
+        }
+      },
+      "flags": {
+        "foundry-local-api": {
+          "testRunId": "test-ai-core-20261001-1790902644995"
+        }
+      },
+      "_id": "QvhdPrU8dHE1nm4h",
+      "img": "systems/dnd5e/icons/svg/actors/npc.svg",
+      "prototypeToken": {
+        "name": "AI CORE TEST | Practice Guard",
+        "displayName": 0,
+        "actorLink": false,
+        "width": 1,
+        "height": 1,
+        "depth": 1,
+        "texture": {
+          "src": "systems/dnd5e/icons/svg/actors/npc.svg",
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "fit": "contain",
+          "scaleX": 1,
+          "scaleY": 1,
+          "tint": "#ffffff",
+          "alphaThreshold": 0.75
+        },
+        "lockRotation": false,
+        "rotation": 0,
+        "alpha": 1,
+        "disposition": -1,
+        "displayBars": 0,
+        "bar1": {
+          "attribute": "attributes.hp"
+        },
+        "bar2": {
+          "attribute": null
+        },
+        "light": {
+          "negative": false,
+          "priority": 0,
+          "alpha": 0.5,
+          "angle": 360,
+          "bright": 0,
+          "color": null,
+          "coloration": 1,
+          "dim": 0,
+          "attenuation": 0.5,
+          "luminosity": 0.5,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "animation": {
+            "type": null,
+            "speed": 5,
+            "intensity": 5,
+            "reverse": false
+          },
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "sight": {
+          "enabled": false,
+          "range": 0,
+          "angle": 360,
+          "visionMode": "basic",
+          "color": null,
+          "attenuation": 0.1,
+          "brightness": 0,
+          "saturation": 0,
+          "contrast": 0
+        },
+        "detectionModes": {},
+        "occludable": {
+          "radius": 0
+        },
+        "ring": {
+          "enabled": false,
+          "colors": {
+            "ring": null,
+            "background": null
+          },
+          "effects": 1,
+          "subject": {
+            "scale": 1,
+            "texture": null
+          }
+        },
+        "turnMarker": {
+          "mode": 1,
+          "animation": null,
+          "src": null,
+          "disposition": false
+        },
+        "movementAction": null,
+        "flags": {},
+        "randomImg": false,
+        "appendNumber": false,
+        "prependAdjective": false
+      },
+      "items": [],
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "X7X4KK7zca5U2Ics": 3
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "createdTime": 1790902645150,
+        "modifiedTime": 1790956236889,
+        "lastModifiedBy": "X7X4KK7zca5U2Ics",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    }
+  },
+  {
+    "name": "foundry_update_scene_token",
+    "args": {
+      "sceneId": "2RJeJKqdpEE4VZPh",
+      "tokenId": "gHxvFbZTMoim2tYp",
+      "changes": {
+        "x": 200,
+        "y": 200
+      }
+    },
+    "result": {
+      "name": "Practice Guard",
+      "actorId": "QvhdPrU8dHE1nm4h",
+      "actorLink": true,
+      "x": 200,
+      "y": 200,
+      "width": 1,
+      "height": 1,
+      "flags": {
+        "foundry-local-api": {
+          "testRunId": "test-ai-core-20261001-1790902644995"
+        }
+      },
+      "shape": 4,
+      "level": "defaultLevel0000",
+      "_id": "gHxvFbZTMoim2tYp",
+      "displayName": 0,
+      "delta": null,
+      "elevation": 0,
+      "depth": 1,
+      "texture": {
+        "src": "icons/svg/mystery-man.svg",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "contain",
+        "scaleX": 1,
+        "scaleY": 1,
+        "tint": "#ffffff",
+        "alphaThreshold": 0.75
+      },
+      "sort": 0,
+      "locked": false,
+      "lockRotation": false,
+      "rotation": 0,
+      "alpha": 1,
+      "hidden": false,
+      "disposition": -1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "bar2": {
+        "attribute": null
+      },
+      "light": {
+        "negative": false,
+        "priority": 0,
+        "alpha": 0.5,
+        "angle": 360,
+        "bright": 0,
+        "color": null,
+        "coloration": 1,
+        "dim": 0,
+        "attenuation": 0.5,
+        "luminosity": 0.5,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "animation": {
+          "type": null,
+          "speed": 5,
+          "intensity": 5,
+          "reverse": false
+        },
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "sight": {
+        "enabled": false,
+        "range": 0,
+        "angle": 360,
+        "visionMode": "basic",
+        "color": null,
+        "attenuation": 0.1,
+        "brightness": 0,
+        "saturation": 0,
+        "contrast": 0
+      },
+      "detectionModes": {},
+      "occludable": {
+        "radius": 0
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": null,
+          "background": null
+        },
+        "effects": 1,
+        "subject": {
+          "scale": 1,
+          "texture": null
+        }
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false
+      },
+      "movementAction": null,
+      "_movementHistory": [
+        {
+          "x": 400,
+          "y": 300,
+          "elevation": 0,
+          "width": 1,
+          "height": 1,
+          "depth": 1,
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "action": "walk",
+          "terrain": null,
+          "snapped": false,
+          "explicit": false,
+          "checkpoint": true,
+          "intermediate": false,
+          "userId": "X7X4KK7zca5U2Ics",
+          "movementId": "kzBiVOkulSCRpslA",
+          "subpathId": "kzBiVOkulSCRpslA",
+          "cost": 0
+        },
+        {
+          "x": 300,
+          "y": 200,
+          "elevation": 0,
+          "width": 1,
+          "height": 1,
+          "depth": 1,
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "action": "walk",
+          "terrain": null,
+          "snapped": true,
+          "explicit": false,
+          "checkpoint": false,
+          "intermediate": true,
+          "userId": "X7X4KK7zca5U2Ics",
+          "movementId": "kzBiVOkulSCRpslA",
+          "subpathId": "kzBiVOkulSCRpslA",
+          "cost": 5
+        },
+        {
+          "x": 200,
+          "y": 200,
+          "elevation": 0,
+          "width": 1,
+          "height": 1,
+          "depth": 1,
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "action": "walk",
+          "terrain": null,
+          "snapped": false,
+          "explicit": false,
+          "checkpoint": true,
+          "intermediate": false,
+          "userId": "X7X4KK7zca5U2Ics",
+          "movementId": "kzBiVOkulSCRpslA",
+          "subpathId": "kzBiVOkulSCRpslA",
+          "cost": 5
+        },
+        {
+          "x": 200,
+          "y": 200,
+          "elevation": 0,
+          "width": 1,
+          "height": 1,
+          "depth": 1,
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "action": "walk",
+          "terrain": null,
+          "snapped": false,
+          "explicit": false,
+          "checkpoint": true,
+          "intermediate": false,
+          "userId": "X7X4KK7zca5U2Ics",
+          "movementId": "5srCkIfrq4HcrMBM",
+          "subpathId": "5srCkIfrq4HcrMBM",
+          "cost": 0
+        }
+      ],
+      "_regions": []
+    }
+  },
+  {
+    "name": "foundry_update_scene_wall",
+    "args": {
+      "sceneId": "2RJeJKqdpEE4VZPh",
+      "placeableId": "RsB12oN5v3LYI1XR",
+      "changes": {
+        "ds": 0
+      }
+    },
+    "result": {
+      "c": [
+        700,
+        100,
+        700,
+        500
+      ],
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "foundry-local-api": {
+          "testRunId": "test-ai-core-20261001-1790902644995"
+        }
+      },
+      "_id": "RsB12oN5v3LYI1XR",
+      "levels": [],
+      "light": 20,
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "dir": 0,
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null
+    }
+  },
+  {
+    "name": "foundry_activate_scene",
+    "args": {
+      "id": "Nbj38PEdvw1zX1J9"
+    },
+    "result": {
+      "name": "IZZY | 03 Sargauth Level",
+      "folder": "B5vW9FHCOqQ7Tw1J",
+      "width": 7250,
+      "height": 9750,
+      "padding": 0,
+      "grid": {
+        "type": 1,
+        "size": 50,
+        "distance": 5,
+        "units": "ft",
+        "style": "solidLines",
+        "thickness": 1,
+        "color": "#000000",
+        "alpha": 0.12
+      },
+      "tokenVision": true,
+      "navigation": true,
+      "navOrder": 300,
+      "flags": {
+        "world": {
+          "izzyCampaignId": "SCENE-WDMM-03",
+          "sourceUrl": "https://5e.tools/img/adventure/WDMM/010-303.webp",
+          "gridNote": "Printed map squares are 10 ft; Foundry grid is 5 ft (two cells per printed square)."
+        }
+      },
+      "_id": "Nbj38PEdvw1zX1J9",
+      "active": true,
+      "thumb": null,
+      "shiftX": 0,
+      "shiftY": 0,
+      "initial": {
+        "x": null,
+        "y": null,
+        "scale": null
+      },
+      "initialLevel": "defaultLevel0000",
+      "fog": {
+        "mode": 1,
+        "colors": {
+          "explored": null,
+          "unexplored": null
+        }
+      },
+      "environment": {
+        "darknessLevel": 0.82,
+        "darknessLock": true,
+        "globalLight": {
+          "enabled": false,
+          "alpha": 0.5,
+          "bright": false,
+          "color": null,
+          "coloration": 1,
+          "luminosity": 0,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "cycle": true,
+        "base": {
+          "hue": 0,
+          "intensity": 0,
+          "luminosity": 0,
+          "saturation": 0,
+          "shadows": 0
+        },
+        "dark": {
+          "hue": 0.7138888888888889,
+          "intensity": 0,
+          "luminosity": -0.25,
+          "saturation": 0,
+          "shadows": 0
+        }
+      },
+      "transition": {
+        "type": null,
+        "duration": 1500,
+        "activeOnly": false
+      },
+      "drawings": [],
+      "tokens": [
+        {
+          "name": "Goblin Warrior",
+          "displayName": 20,
+          "actorLink": false,
+          "width": 1,
+          "height": 1,
+          "texture": {
+            "src": "systems/dnd5e/tokens/humanoid/Goblin.webp",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "lockRotation": false,
+          "rotation": 135,
+          "alpha": 1,
+          "disposition": -1,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "sight": {
+            "enabled": false,
+            "range": 0,
+            "angle": 360,
+            "visionMode": "basic",
+            "color": null,
+            "attenuation": 0.1,
+            "brightness": 0,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "flags": {
+            "world": {
+              "izzyCampaignId": "TOKEN-WDMM-03-GOBLIN-01"
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "depth": 1,
+          "actorId": "mmGoblinWarrior0",
+          "x": 1700,
+          "y": 1950,
+          "hidden": true,
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "_id": "ziX0zc9sujIAwKof",
+          "delta": {
+            "_id": "ziX0zc9sujIAwKof",
+            "name": "Goblin Warrior",
+            "system": {},
+            "items": [],
+            "effects": [],
+            "flags": {},
+            "type": null,
+            "img": null,
+            "ownership": null
+          },
+          "elevation": 0,
+          "sort": 1,
+          "locked": false,
+          "_movementHistory": [],
+          "_regions": []
+        },
+        {
+          "name": "Drow",
+          "displayName": 20,
+          "actorLink": false,
+          "width": 1,
+          "height": 1,
+          "lockRotation": false,
+          "rotation": 135,
+          "disposition": -1,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "flags": {
+            "world": {
+              "izzyCampaignId": "TOKEN-WDMM-03-DROW-01"
+            }
+          },
+          "alpha": 1,
+          "light": {
+            "alpha": 1,
+            "angle": 360,
+            "bright": 0,
+            "coloration": 1,
+            "dim": 0,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "speed": 5,
+              "intensity": 5,
+              "type": null,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            },
+            "attenuation": 0.5,
+            "color": null,
+            "negative": false,
+            "priority": 0
+          },
+          "texture": {
+            "src": "systems/dnd5e/tokens/humanoid/Drow.webp",
+            "tint": "#ffffff",
+            "scaleX": 1,
+            "scaleY": 1,
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "alphaThreshold": 0.75
+          },
+          "sight": {
+            "angle": 360,
+            "enabled": false,
+            "range": 120,
+            "brightness": 0,
+            "visionMode": "basic",
+            "color": null,
+            "attenuation": 0.1,
+            "saturation": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 1,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "depth": 1,
+          "actorId": "1vaBSMUfOy6JPJ14",
+          "x": 1800,
+          "y": 1950,
+          "hidden": true,
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "_id": "73NfOiwa556nJ9pS",
+          "delta": {
+            "_id": "73NfOiwa556nJ9pS",
+            "name": "Drow",
+            "system": {},
+            "items": [],
+            "effects": [],
+            "flags": {},
+            "type": null,
+            "img": null,
+            "ownership": null
+          },
+          "elevation": 0,
+          "sort": 2,
+          "locked": false,
+          "_movementHistory": [],
+          "_regions": []
+        },
+        {
+          "name": "Isabetta Gostanza Da’Shay",
+          "actorLink": true,
+          "displayName": 20,
+          "displayBars": 0,
+          "disposition": 1,
+          "texture": {
+            "src": "worlds/izzy-campaign/assets/tokens/izzy-discord-variant-a-long-staff-symmetric-rune-shield-v1.png",
+            "scaleX": 1,
+            "scaleY": 1,
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "tint": "#ffffff",
+            "alphaThreshold": 0.2
+          },
+          "sight": {
+            "enabled": true,
+            "range": 0,
+            "angle": 360,
+            "visionMode": "basic",
+            "color": null,
+            "attenuation": 0,
+            "saturation": 0,
+            "brightness": 0,
+            "contrast": 0
+          },
+          "detectionModes": {},
+          "bar1": {
+            "attribute": null
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "width": 1,
+          "height": 1,
+          "depth": 1,
+          "lockRotation": false,
+          "rotation": 0,
+          "alpha": 1,
+          "light": {
+            "negative": false,
+            "priority": 0,
+            "alpha": 0.5,
+            "angle": 360,
+            "bright": 0,
+            "color": null,
+            "coloration": 1,
+            "dim": 0,
+            "attenuation": 0.5,
+            "luminosity": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "occludable": {
+            "radius": 0
+          },
+          "ring": {
+            "enabled": false,
+            "colors": {
+              "ring": null,
+              "background": null
+            },
+            "effects": 0,
+            "subject": {
+              "scale": 1,
+              "texture": null
+            }
+          },
+          "turnMarker": {
+            "mode": 1,
+            "animation": null,
+            "src": null,
+            "disposition": false
+          },
+          "movementAction": null,
+          "flags": {
+            "dnd5e": {
+              "lockSize": false,
+              "lockScale": false
+            }
+          },
+          "actorId": "P9YnTVjX8thvZ8eM",
+          "hidden": false,
+          "sort": 3,
+          "shape": 4,
+          "level": "defaultLevel0000",
+          "_id": "5afpFlCHHnclifNw",
+          "delta": null,
+          "x": 450,
+          "y": 750,
+          "elevation": 0,
+          "locked": false,
+          "_movementHistory": [],
+          "_regions": []
+        }
+      ],
+      "levels": [
+        {
+          "_id": "defaultLevel0000",
+          "name": "Level",
+          "elevation": {
+            "top": 20,
+            "bottom": 0
+          },
+          "background": {
+            "color": "#111111",
+            "src": "worlds/izzy-campaign/assets/maps/level-03-player.webp",
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "foreground": {
+            "src": null,
+            "tint": "#ffffff",
+            "alphaThreshold": 0.75
+          },
+          "fog": {
+            "src": null
+          },
+          "textures": {
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "offsetX": 0,
+            "offsetY": 0,
+            "fit": "fill",
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0
+          },
+          "visibility": {
+            "levels": []
+          },
+          "sort": 0,
+          "flags": {}
+        }
+      ],
+      "lights": [
+        {
+          "x": 500,
+          "y": 500,
+          "config": {
+            "bright": 10,
+            "dim": 30,
+            "angle": 360,
+            "color": "#f4c27a",
+            "alpha": 0.25,
+            "luminosity": 0.25,
+            "animation": {
+              "type": null,
+              "speed": 5,
+              "intensity": 5,
+              "reverse": false
+            },
+            "negative": false,
+            "priority": 0,
+            "coloration": 1,
+            "attenuation": 0.5,
+            "saturation": 0,
+            "contrast": 0,
+            "shadows": 0,
+            "darkness": {
+              "min": 0,
+              "max": 1
+            }
+          },
+          "hidden": false,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "LIGHT-WDMM-03-ENTRY"
+            }
+          },
+          "_id": "WkH2dldk0EAZ5Bdq",
+          "elevation": 0,
+          "levels": [],
+          "rotation": 0,
+          "walls": true,
+          "vision": false,
+          "locked": false
+        }
+      ],
+      "notes": [
+        {
+          "x": 500,
+          "y": 500,
+          "entryId": "FYBsgOTwe8ArbjJp",
+          "text": "Floor 03 GM Index",
+          "iconSize": 60,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "NOTE-WDMM-03-INDEX"
+            }
+          },
+          "_id": "D1EzGNWqOIMADybS",
+          "author": "X7X4KK7zca5U2Ics",
+          "pageId": null,
+          "elevation": 0,
+          "levels": [],
+          "sort": 0,
+          "locked": false,
+          "texture": {
+            "src": "icons/svg/book.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0
+          },
+          "fontFamily": "",
+          "fontSize": 32,
+          "textAnchor": 1,
+          "textColor": "#ffffff",
+          "global": false
+        },
+        {
+          "x": 650,
+          "y": 650,
+          "entryId": "KyotZKCZUmddPnXT",
+          "text": "room 01 catacombs",
+          "iconSize": 50,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "NOTE-ROOM-WDMM-03-01",
+              "navigationOnly": true
+            }
+          },
+          "_id": "mcJvLfnWLxodVEG6",
+          "author": "X7X4KK7zca5U2Ics",
+          "pageId": null,
+          "elevation": 0,
+          "levels": [],
+          "sort": 1,
+          "locked": false,
+          "texture": {
+            "src": "icons/svg/book.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0
+          },
+          "fontFamily": "",
+          "fontSize": 32,
+          "textAnchor": 1,
+          "textColor": "#ffffff",
+          "global": false
+        },
+        {
+          "x": 750,
+          "y": 650,
+          "entryId": "aRHe8wBYsZZKIYBs",
+          "text": "room 05 auvryndar outpost",
+          "iconSize": 50,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "NOTE-ROOM-WDMM-03-05",
+              "navigationOnly": true
+            }
+          },
+          "_id": "MxWApp4nYmwBLaGA",
+          "author": "X7X4KK7zca5U2Ics",
+          "pageId": null,
+          "elevation": 0,
+          "levels": [],
+          "sort": 2,
+          "locked": false,
+          "texture": {
+            "src": "icons/svg/book.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0
+          },
+          "fontFamily": "",
+          "fontSize": 32,
+          "textAnchor": 1,
+          "textColor": "#ffffff",
+          "global": false
+        },
+        {
+          "x": 850,
+          "y": 650,
+          "entryId": "WMLGdr92kWDhi7fm",
+          "text": "room 15 way to wyllowwood",
+          "iconSize": 50,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "NOTE-ROOM-WDMM-03-15",
+              "navigationOnly": true
+            }
+          },
+          "_id": "AMRUnsYLpU2sSiI7",
+          "author": "X7X4KK7zca5U2Ics",
+          "pageId": null,
+          "elevation": 0,
+          "levels": [],
+          "sort": 3,
+          "locked": false,
+          "texture": {
+            "src": "icons/svg/book.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0
+          },
+          "fontFamily": "",
+          "fontSize": 32,
+          "textAnchor": 1,
+          "textColor": "#ffffff",
+          "global": false
+        },
+        {
+          "x": 950,
+          "y": 650,
+          "entryId": "F7brHtGu1iSDUQtH",
+          "text": "room 21 azroks hold",
+          "iconSize": 50,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "NOTE-ROOM-WDMM-03-21",
+              "navigationOnly": true
+            }
+          },
+          "_id": "9W8dLCudryxc3XxR",
+          "author": "X7X4KK7zca5U2Ics",
+          "pageId": null,
+          "elevation": 0,
+          "levels": [],
+          "sort": 4,
+          "locked": false,
+          "texture": {
+            "src": "icons/svg/book.svg",
+            "anchorX": 0.5,
+            "anchorY": 0.5,
+            "fit": "contain",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff",
+            "alphaThreshold": 0
+          },
+          "fontFamily": "",
+          "fontSize": 32,
+          "textAnchor": 1,
+          "textColor": "#ffffff",
+          "global": false
+        }
+      ],
+      "sounds": [],
+      "regions": [],
+      "tiles": [],
+      "walls": [
+        {
+          "c": [
+            0,
+            0,
+            3500,
+            0
+          ],
+          "move": 20,
+          "door": 0,
+          "ds": 0,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "WALL-WDMM-03-BOUNDARY-01"
+            }
+          },
+          "_id": "7J5vmOz50u51j7EB",
+          "levels": [],
+          "light": 20,
+          "sight": 20,
+          "sound": 20,
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null
+        },
+        {
+          "c": [
+            3500,
+            0,
+            3750,
+            0
+          ],
+          "move": 20,
+          "sight": 20,
+          "light": 20,
+          "sound": 20,
+          "door": 1,
+          "ds": 0,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "WALL-WDMM-03-TRANSITION-DOOR",
+              "purpose": "abstract-gate-transition"
+            }
+          },
+          "_id": "dPlXTLbM6YOkAaob",
+          "levels": [],
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null
+        },
+        {
+          "c": [
+            3750,
+            0,
+            7250,
+            0
+          ],
+          "move": 20,
+          "sight": 20,
+          "light": 20,
+          "sound": 20,
+          "door": 0,
+          "ds": 0,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "WALL-WDMM-03-BOUNDARY-02",
+              "purpose": "scene-safety-boundary"
+            }
+          },
+          "_id": "2DOAXLGPiezLZujH",
+          "levels": [],
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null
+        },
+        {
+          "c": [
+            7250,
+            0,
+            7250,
+            9750
+          ],
+          "move": 20,
+          "sight": 20,
+          "light": 20,
+          "sound": 20,
+          "door": 0,
+          "ds": 0,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "WALL-WDMM-03-BOUNDARY-03",
+              "purpose": "scene-safety-boundary"
+            }
+          },
+          "_id": "LR7UatY1wG8mCzXz",
+          "levels": [],
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null
+        },
+        {
+          "c": [
+            7250,
+            9750,
+            0,
+            9750
+          ],
+          "move": 20,
+          "sight": 20,
+          "light": 20,
+          "sound": 20,
+          "door": 0,
+          "ds": 0,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "WALL-WDMM-03-BOUNDARY-04",
+              "purpose": "scene-safety-boundary"
+            }
+          },
+          "_id": "jOQUtDYsFxLEbOp0",
+          "levels": [],
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null
+        },
+        {
+          "c": [
+            0,
+            9750,
+            0,
+            0
+          ],
+          "move": 20,
+          "sight": 20,
+          "light": 20,
+          "sound": 20,
+          "door": 0,
+          "ds": 0,
+          "flags": {
+            "world": {
+              "izzyCampaignId": "WALL-WDMM-03-BOUNDARY-05",
+              "purpose": "scene-safety-boundary"
+            }
+          },
+          "_id": "zey6MkuYu7uc2QtN",
+          "levels": [],
+          "dir": 0,
+          "threshold": {
+            "light": null,
+            "sight": null,
+            "sound": null,
+            "attenuation": false
+          },
+          "animation": null
+        }
+      ],
+      "playlist": null,
+      "playlistSound": null,
+      "journal": null,
+      "journalEntryPage": null,
+      "weather": "",
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "X7X4KK7zca5U2Ics": 3
+      },
+      "_stats": {
+        "coreVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "createdTime": 1790547969197,
+        "modifiedTime": 1790966281604,
+        "lastModifiedBy": "X7X4KK7zca5U2Ics",
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null
+      }
+    }
+  },
+  {
+    "name": "foundry_set_game_paused",
+    "args": {
+      "paused": true
+    },
+    "result": {
+      "paused": true
+    }
+  }
+]

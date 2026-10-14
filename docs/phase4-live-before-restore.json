@@ -1,0 +1,2177 @@
+{
+  "capturedAt": "2026-10-02T21:53:25.869Z",
+  "actor": {
+    "name": "AI TEST | Practice Attacker",
+    "type": "npc",
+    "ownership": {
+      "default": 0,
+      "4Nv47EuKFy06C6eO": 3,
+      "X7X4KK7zca5U2Ics": 3
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 16,
+          "proficient": 0,
+          "max": null,
+          "attack": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "check": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "save": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          }
+        }
+      },
+      "attributes": {
+        "hp": {
+          "value": 20,
+          "max": 20,
+          "temp": 0,
+          "tempmax": 0,
+          "formula": ""
+        },
+        "ac": {
+          "flat": 15,
+          "override": 15,
+          "calcs": [
+            "unarmored",
+            "armored"
+          ],
+          "formulas": []
+        },
+        "init": {
+          "ability": "",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        },
+        "movement": {
+          "speeds": {},
+          "units": null,
+          "hover": false,
+          "ignoredDifficultTerrain": []
+        },
+        "attunement": {
+          "max": 3
+        },
+        "senses": {
+          "ranges": {
+            "blindsight": null,
+            "darkvision": null,
+            "tremorsense": null,
+            "truesight": null
+          },
+          "units": null,
+          "special": ""
+        },
+        "spell": {
+          "level": 0
+        },
+        "spellcasting": "",
+        "exhaustion": 0,
+        "concentration": {
+          "ability": "",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "limit": 1
+        },
+        "loyalty": {},
+        "hd": {
+          "spent": 0
+        },
+        "death": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "success": 0,
+          "failure": 0
+        },
+        "price": {
+          "value": null,
+          "denomination": "gp"
+        }
+      },
+      "currency": {
+        "pp": 0,
+        "gp": 0,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "identifier": "ai-test-or-practice-attacker",
+      "bonuses": {
+        "spell": {
+          "dc": ""
+        }
+      },
+      "rolls": {},
+      "skills": {
+        "acr": {
+          "ability": "dex",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "ani": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "arc": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "ath": {
+          "ability": "str",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "dec": {
+          "ability": "cha",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "his": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "ins": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "itm": {
+          "ability": "cha",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "inv": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "med": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "nat": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "prc": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "prf": {
+          "ability": "cha",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "per": {
+          "ability": "cha",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "rel": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "slt": {
+          "ability": "dex",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "ste": {
+          "ability": "dex",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "sur": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        }
+      },
+      "tools": {},
+      "spells": {
+        "spell1": {
+          "value": 0,
+          "override": null
+        },
+        "spell2": {
+          "value": 0,
+          "override": null
+        },
+        "spell3": {
+          "value": 0,
+          "override": null
+        },
+        "spell4": {
+          "value": 0,
+          "override": null
+        },
+        "spell5": {
+          "value": 0,
+          "override": null
+        },
+        "spell6": {
+          "value": 0,
+          "override": null
+        },
+        "spell7": {
+          "value": 0,
+          "override": null
+        },
+        "spell8": {
+          "value": 0,
+          "override": null
+        },
+        "spell9": {
+          "value": 0,
+          "override": null
+        },
+        "pact": {
+          "value": 0,
+          "override": null
+        }
+      },
+      "details": {
+        "biography": {
+          "value": "",
+          "public": ""
+        },
+        "alignment": "",
+        "ideal": "",
+        "bond": "",
+        "flaw": "",
+        "race": null,
+        "type": {},
+        "habitat": {
+          "value": [],
+          "custom": ""
+        },
+        "cr": 1,
+        "treasure": {
+          "value": []
+        }
+      },
+      "resources": {
+        "legact": {
+          "max": 0,
+          "spent": 0
+        },
+        "legres": {
+          "max": 0,
+          "spent": 0
+        },
+        "lair": {
+          "value": false,
+          "initiative": null,
+          "inside": false
+        }
+      },
+      "source": {
+        "revision": 1,
+        "rules": "2024"
+      },
+      "traits": {
+        "size": "med",
+        "di": {
+          "value": [],
+          "custom": "",
+          "bypasses": []
+        },
+        "dr": {
+          "value": [],
+          "custom": "",
+          "bypasses": []
+        },
+        "dv": {
+          "value": [],
+          "custom": "",
+          "bypasses": []
+        },
+        "dm": {
+          "amount": {},
+          "bypasses": []
+        },
+        "ci": {
+          "value": [],
+          "custom": ""
+        },
+        "languages": {
+          "value": [],
+          "custom": "",
+          "communication": {}
+        },
+        "important": false
+      }
+    },
+    "flags": {
+      "foundry-local-api": {
+        "testRunId": "test-ai-attack-vision-1790913702048"
+      }
+    },
+    "_id": "7Omg3czrr0z94iw4",
+    "img": "systems/dnd5e/icons/svg/actors/npc.svg",
+    "prototypeToken": {
+      "name": "AI TEST | Practice Attacker",
+      "displayName": 0,
+      "actorLink": false,
+      "width": 1,
+      "height": 1,
+      "depth": 1,
+      "texture": {
+        "src": "systems/dnd5e/icons/svg/actors/npc.svg",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "contain",
+        "scaleX": 1,
+        "scaleY": 1,
+        "tint": "#ffffff",
+        "alphaThreshold": 0.75
+      },
+      "lockRotation": false,
+      "rotation": 0,
+      "alpha": 1,
+      "disposition": -1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "bar2": {
+        "attribute": null
+      },
+      "light": {
+        "negative": false,
+        "priority": 0,
+        "alpha": 0.5,
+        "angle": 360,
+        "bright": 0,
+        "color": null,
+        "coloration": 1,
+        "dim": 0,
+        "attenuation": 0.5,
+        "luminosity": 0.5,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "animation": {
+          "type": null,
+          "speed": 5,
+          "intensity": 5,
+          "reverse": false
+        },
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "sight": {
+        "enabled": false,
+        "range": 0,
+        "angle": 360,
+        "visionMode": "basic",
+        "color": null,
+        "attenuation": 0.1,
+        "brightness": 0,
+        "saturation": 0,
+        "contrast": 0
+      },
+      "detectionModes": {},
+      "occludable": {
+        "radius": 0
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": null,
+          "background": null
+        },
+        "effects": 1,
+        "subject": {
+          "scale": 1,
+          "texture": null
+        }
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false
+      },
+      "movementAction": null,
+      "flags": {},
+      "randomImg": false,
+      "appendNumber": false,
+      "prependAdjective": false
+    },
+    "items": [
+      {
+        "name": "AI TEST | Fixture Club",
+        "type": "weapon",
+        "system": {
+          "quantity": 1,
+          "type": {
+            "value": "simpleM",
+            "baseItem": "club"
+          },
+          "properties": [
+            "gear"
+          ],
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "modifiers": [],
+              "scaling": {
+                "number": 1
+              }
+            },
+            "versatile": {
+              "number": 0,
+              "denomination": 0,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "modifiers": [],
+              "scaling": {
+                "number": 1
+              }
+            }
+          },
+          "activities": {
+            "AttackFixture001": {
+              "_id": "AttackFixture001",
+              "type": "attack",
+              "name": "Fixture Club",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "override": false
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "melee",
+                  "classification": "weapon"
+                },
+                "critical": {
+                  "threshold": 20
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": [],
+                "critical": {
+                  "bonus": ""
+                }
+              },
+              "consumption": {
+                "targets": [],
+                "spellSlot": false,
+                "scaling": {
+                  "allowed": false
+                }
+              },
+              "effects": [],
+              "img": null,
+              "sort": 0,
+              "behaviors": [],
+              "description": {
+                "value": ""
+              },
+              "duration": {
+                "units": "inst",
+                "expiry": null,
+                "concentration": false,
+                "override": false
+              },
+              "flags": {},
+              "range": {
+                "units": "self",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "contiguous": false,
+                  "stationary": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false,
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              },
+              "visibility": {
+                "level": {},
+                "requireAttunement": false,
+                "requireIdentification": false,
+                "requireMagic": false
+              }
+            }
+          },
+          "uses": {
+            "spent": 0,
+            "recovery": []
+          },
+          "description": {
+            "value": "",
+            "chat": ""
+          },
+          "identifier": "ai-test-or-fixture-club",
+          "source": {
+            "revision": 1,
+            "rules": "2024"
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "weight": {
+            "value": 0,
+            "units": "lb"
+          },
+          "price": {
+            "value": 0,
+            "denomination": "gp"
+          },
+          "rarities": [],
+          "attunement": "",
+          "attuned": false,
+          "equipped": true,
+          "crew": {
+            "value": []
+          },
+          "ammunition": {},
+          "armor": {},
+          "range": {
+            "units": "ft"
+          }
+        },
+        "flags": {
+          "foundry-local-api": {
+            "testRunId": "test-ai-attack-vision-1790913702048"
+          },
+          "dnd5e": {
+            "last": {
+              "AttackFixture001": {
+                "ability": "str",
+                "attackMode": "oneHanded",
+                "damageType": {
+                  "0": "bludgeoning"
+                }
+              }
+            }
+          }
+        },
+        "_id": "v6aPlCpfDEZdyhvB",
+        "img": "systems/dnd5e/icons/svg/items/weapon.svg",
+        "effects": [],
+        "folder": null,
+        "sort": 0,
+        "ownership": {
+          "default": 0,
+          "X7X4KK7zca5U2Ics": 3
+        },
+        "_stats": {
+          "coreVersion": "14.368",
+          "systemId": "dnd5e",
+          "systemVersion": "6.0.3",
+          "createdTime": 1790913702653,
+          "modifiedTime": 1790914890592,
+          "lastModifiedBy": "X7X4KK7zca5U2Ics",
+          "compendiumSource": null,
+          "duplicateSource": null,
+          "exportSource": null
+        }
+      },
+      {
+        "name": "AI TEST | Phase4 Limited Club",
+        "type": "weapon",
+        "system": {
+          "quantity": 1,
+          "type": {
+            "value": "simpleM",
+            "baseItem": "club"
+          },
+          "properties": [
+            "gear",
+            "gear"
+          ],
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "modifiers": [],
+              "scaling": {
+                "number": 1
+              }
+            },
+            "versatile": {
+              "number": 0,
+              "denomination": 0,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "modifiers": [],
+              "scaling": {
+                "number": 1
+              }
+            }
+          },
+          "activities": {
+            "AttackFixture001": {
+              "_id": "AttackFixture001",
+              "type": "attack",
+              "name": "Phase4 Limited Club",
+              "activation": {
+                "type": "",
+                "value": 1,
+                "override": true
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "melee",
+                  "classification": "weapon"
+                },
+                "critical": {
+                  "threshold": 20
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": [],
+                "critical": {
+                  "bonus": ""
+                }
+              },
+              "consumption": {
+                "targets": [
+                  {
+                    "type": "itemUses",
+                    "target": "",
+                    "value": "1",
+                    "scaling": {
+                      "mode": "",
+                      "formula": ""
+                    }
+                  }
+                ],
+                "spellSlot": false,
+                "scaling": {
+                  "allowed": false
+                }
+              },
+              "effects": [],
+              "img": null,
+              "sort": 0,
+              "behaviors": [],
+              "description": {
+                "value": ""
+              },
+              "duration": {
+                "units": "inst",
+                "expiry": null,
+                "concentration": false,
+                "override": false
+              },
+              "flags": {},
+              "range": {
+                "units": "self",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "contiguous": false,
+                  "stationary": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false,
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              },
+              "visibility": {
+                "level": {},
+                "requireAttunement": false,
+                "requireIdentification": false,
+                "requireMagic": false
+              }
+            }
+          },
+          "uses": {
+            "max": "3",
+            "spent": 1,
+            "recovery": []
+          },
+          "description": {
+            "value": "",
+            "chat": ""
+          },
+          "identifier": "ai-test-phase4-limited-club",
+          "source": {
+            "revision": 1,
+            "rules": "2024"
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "weight": {
+            "value": 0,
+            "units": "lb"
+          },
+          "price": {
+            "value": 0,
+            "denomination": "gp"
+          },
+          "rarities": [],
+          "attunement": "",
+          "attuned": false,
+          "equipped": true,
+          "crew": {
+            "value": []
+          },
+          "ammunition": {},
+          "armor": {},
+          "range": {
+            "units": "ft"
+          }
+        },
+        "flags": {
+          "foundry-local-api": {
+            "testRunId": "test-ai-attack-vision-1790913702048",
+            "phase4": true
+          }
+        },
+        "img": "systems/dnd5e/icons/svg/items/weapon.svg",
+        "effects": [],
+        "sort": 0,
+        "_id": "pttA6bYy0Ru9W1Ng",
+        "folder": null,
+        "ownership": {
+          "default": 0,
+          "X7X4KK7zca5U2Ics": 3
+        },
+        "_stats": {
+          "coreVersion": "14.368",
+          "systemId": "dnd5e",
+          "systemVersion": "6.0.3",
+          "createdTime": 1790977860679,
+          "modifiedTime": 1790977912202,
+          "lastModifiedBy": "X7X4KK7zca5U2Ics",
+          "compendiumSource": null,
+          "duplicateSource": null,
+          "exportSource": null
+        }
+      }
+    ],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "_stats": {
+      "coreVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "createdTime": 1790913702338,
+      "modifiedTime": 1790913702343,
+      "lastModifiedBy": "X7X4KK7zca5U2Ics",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null
+    }
+  },
+  "target": {
+    "name": "AI TEST | Practice Target",
+    "type": "npc",
+    "ownership": {
+      "default": 0,
+      "X7X4KK7zca5U2Ics": 3
+    },
+    "system": {
+      "attributes": {
+        "hp": {
+          "value": 40,
+          "max": 40,
+          "temp": 4,
+          "tempmax": 0,
+          "formula": ""
+        },
+        "ac": {
+          "flat": 10,
+          "override": 10,
+          "calcs": [
+            "unarmored",
+            "armored"
+          ],
+          "formulas": []
+        },
+        "init": {
+          "ability": "",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          }
+        },
+        "movement": {
+          "speeds": {},
+          "units": null,
+          "hover": false,
+          "ignoredDifficultTerrain": []
+        },
+        "attunement": {
+          "max": 3
+        },
+        "senses": {
+          "ranges": {
+            "blindsight": null,
+            "darkvision": null,
+            "tremorsense": null,
+            "truesight": null
+          },
+          "units": null,
+          "special": ""
+        },
+        "spell": {
+          "level": 0
+        },
+        "spellcasting": "",
+        "exhaustion": 0,
+        "concentration": {
+          "ability": "",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "limit": 1
+        },
+        "loyalty": {},
+        "hd": {
+          "spent": 0
+        },
+        "death": {
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "success": 0,
+          "failure": 0
+        },
+        "price": {
+          "value": null,
+          "denomination": "gp"
+        }
+      },
+      "currency": {
+        "pp": 0,
+        "gp": 0,
+        "ep": 0,
+        "sp": 0,
+        "cp": 0
+      },
+      "identifier": "ai-test-or-practice-target",
+      "abilities": {
+        "str": {
+          "value": 10,
+          "proficient": 0,
+          "max": null,
+          "attack": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "check": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "save": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          }
+        },
+        "dex": {
+          "value": 10,
+          "proficient": 0,
+          "max": null,
+          "attack": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "check": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "save": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          }
+        },
+        "con": {
+          "value": 10,
+          "proficient": 0,
+          "max": null,
+          "attack": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "check": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "save": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          }
+        },
+        "int": {
+          "value": 10,
+          "proficient": 0,
+          "max": null,
+          "attack": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "check": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "save": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          }
+        },
+        "wis": {
+          "value": 10,
+          "proficient": 0,
+          "max": null,
+          "attack": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "check": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "save": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          }
+        },
+        "cha": {
+          "value": 10,
+          "proficient": 0,
+          "max": null,
+          "attack": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "check": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          },
+          "save": {
+            "roll": {
+              "min": null,
+              "max": null,
+              "mode": 0
+            }
+          }
+        }
+      },
+      "bonuses": {
+        "spell": {
+          "dc": ""
+        }
+      },
+      "rolls": {},
+      "skills": {
+        "acr": {
+          "ability": "dex",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "ani": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "arc": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "ath": {
+          "ability": "str",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "dec": {
+          "ability": "cha",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "his": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "ins": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "itm": {
+          "ability": "cha",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "inv": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "med": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "nat": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "prc": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "prf": {
+          "ability": "cha",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "per": {
+          "ability": "cha",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "rel": {
+          "ability": "int",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "slt": {
+          "ability": "dex",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "ste": {
+          "ability": "dex",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        },
+        "sur": {
+          "ability": "wis",
+          "roll": {
+            "min": null,
+            "max": null,
+            "mode": 0
+          },
+          "bonuses": {
+            "passive": ""
+          },
+          "value": 0
+        }
+      },
+      "tools": {},
+      "spells": {
+        "spell1": {
+          "value": 0,
+          "override": null
+        },
+        "spell2": {
+          "value": 0,
+          "override": null
+        },
+        "spell3": {
+          "value": 0,
+          "override": null
+        },
+        "spell4": {
+          "value": 0,
+          "override": null
+        },
+        "spell5": {
+          "value": 0,
+          "override": null
+        },
+        "spell6": {
+          "value": 0,
+          "override": null
+        },
+        "spell7": {
+          "value": 0,
+          "override": null
+        },
+        "spell8": {
+          "value": 0,
+          "override": null
+        },
+        "spell9": {
+          "value": 0,
+          "override": null
+        },
+        "pact": {
+          "value": 0,
+          "override": null
+        }
+      },
+      "details": {
+        "biography": {
+          "value": "",
+          "public": ""
+        },
+        "alignment": "",
+        "ideal": "",
+        "bond": "",
+        "flaw": "",
+        "race": null,
+        "type": {},
+        "habitat": {
+          "value": [],
+          "custom": ""
+        },
+        "cr": 1,
+        "treasure": {
+          "value": []
+        }
+      },
+      "resources": {
+        "legact": {
+          "max": 0,
+          "spent": 0
+        },
+        "legres": {
+          "max": 0,
+          "spent": 0
+        },
+        "lair": {
+          "value": false,
+          "initiative": null,
+          "inside": false
+        }
+      },
+      "source": {
+        "revision": 1,
+        "rules": "2024"
+      },
+      "traits": {
+        "size": "med",
+        "di": {
+          "value": [],
+          "custom": "",
+          "bypasses": []
+        },
+        "dr": {
+          "value": [],
+          "custom": "",
+          "bypasses": []
+        },
+        "dv": {
+          "value": [],
+          "custom": "",
+          "bypasses": []
+        },
+        "dm": {
+          "amount": {},
+          "bypasses": []
+        },
+        "ci": {
+          "value": [],
+          "custom": ""
+        },
+        "languages": {
+          "value": [],
+          "custom": "",
+          "communication": {}
+        },
+        "important": false
+      }
+    },
+    "flags": {
+      "foundry-local-api": {
+        "testRunId": "test-ai-attack-vision-1790913702048"
+      }
+    },
+    "_id": "uwyaFQurD4uFZCKC",
+    "img": "systems/dnd5e/icons/svg/actors/npc.svg",
+    "prototypeToken": {
+      "name": "AI TEST | Practice Target",
+      "displayName": 0,
+      "actorLink": false,
+      "width": 1,
+      "height": 1,
+      "depth": 1,
+      "texture": {
+        "src": "systems/dnd5e/icons/svg/actors/npc.svg",
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "fit": "contain",
+        "scaleX": 1,
+        "scaleY": 1,
+        "tint": "#ffffff",
+        "alphaThreshold": 0.75
+      },
+      "lockRotation": false,
+      "rotation": 0,
+      "alpha": 1,
+      "disposition": -1,
+      "displayBars": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "bar2": {
+        "attribute": null
+      },
+      "light": {
+        "negative": false,
+        "priority": 0,
+        "alpha": 0.5,
+        "angle": 360,
+        "bright": 0,
+        "color": null,
+        "coloration": 1,
+        "dim": 0,
+        "attenuation": 0.5,
+        "luminosity": 0.5,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "animation": {
+          "type": null,
+          "speed": 5,
+          "intensity": 5,
+          "reverse": false
+        },
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "sight": {
+        "enabled": false,
+        "range": 0,
+        "angle": 360,
+        "visionMode": "basic",
+        "color": null,
+        "attenuation": 0.1,
+        "brightness": 0,
+        "saturation": 0,
+        "contrast": 0
+      },
+      "detectionModes": {},
+      "occludable": {
+        "radius": 0
+      },
+      "ring": {
+        "enabled": false,
+        "colors": {
+          "ring": null,
+          "background": null
+        },
+        "effects": 1,
+        "subject": {
+          "scale": 1,
+          "texture": null
+        }
+      },
+      "turnMarker": {
+        "mode": 1,
+        "animation": null,
+        "src": null,
+        "disposition": false
+      },
+      "movementAction": null,
+      "flags": {},
+      "randomImg": false,
+      "appendNumber": false,
+      "prependAdjective": false
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "_stats": {
+      "coreVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "createdTime": 1790913702504,
+      "modifiedTime": 1790977911940,
+      "lastModifiedBy": "X7X4KK7zca5U2Ics",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null
+    }
+  },
+  "scene": {
+    "name": "AI ATTACK VISION TEST | test-ai-attack-vision-1790913702048",
+    "active": true,
+    "navigation": false,
+    "width": 1200,
+    "height": 900,
+    "padding": 0,
+    "grid": {
+      "size": 100,
+      "type": 1,
+      "distance": 5,
+      "units": "ft",
+      "style": "solidLines",
+      "thickness": 1,
+      "color": "#000000",
+      "alpha": 0.2
+    },
+    "tokenVision": true,
+    "environment": {
+      "globalLight": {
+        "enabled": true,
+        "bright": true,
+        "alpha": 0.5,
+        "color": null,
+        "coloration": 1,
+        "luminosity": 0,
+        "saturation": 0,
+        "contrast": 0,
+        "shadows": 0,
+        "darkness": {
+          "min": 0,
+          "max": 1
+        }
+      },
+      "darknessLevel": 0,
+      "darknessLock": false,
+      "cycle": true,
+      "base": {
+        "hue": 0,
+        "intensity": 0,
+        "luminosity": 0,
+        "saturation": 0,
+        "shadows": 0
+      },
+      "dark": {
+        "hue": 0.7138888888888889,
+        "intensity": 0,
+        "luminosity": -0.25,
+        "saturation": 0,
+        "shadows": 0
+      }
+    },
+    "flags": {
+      "foundry-local-api": {
+        "testRunId": "test-ai-attack-vision-1790913702048"
+      }
+    },
+    "_id": "xj5praphJhGr6mxL",
+    "navOrder": 0,
+    "thumb": null,
+    "shiftX": 0,
+    "shiftY": 0,
+    "initial": {
+      "x": null,
+      "y": null,
+      "scale": null
+    },
+    "initialLevel": "defaultLevel0000",
+    "fog": {
+      "mode": 1,
+      "colors": {
+        "explored": null,
+        "unexplored": null
+      }
+    },
+    "transition": {
+      "type": null,
+      "duration": 1500,
+      "activeOnly": false
+    },
+    "drawings": [],
+    "tokens": [
+      {
+        "name": "Practice Attacker",
+        "actorId": "7Omg3czrr0z94iw4",
+        "actorLink": true,
+        "x": 300,
+        "y": 400,
+        "width": 1,
+        "height": 1,
+        "sight": {
+          "enabled": true,
+          "range": 0,
+          "visionMode": "basic",
+          "angle": 360,
+          "color": null,
+          "attenuation": 0.1,
+          "brightness": 0,
+          "saturation": 0,
+          "contrast": 0
+        },
+        "texture": {
+          "src": "icons/svg/mystery-man.svg",
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "fit": "contain",
+          "scaleX": 1,
+          "scaleY": 1,
+          "tint": "#ffffff",
+          "alphaThreshold": 0.75
+        },
+        "flags": {
+          "foundry-local-api": {
+            "testRunId": "test-ai-attack-vision-1790913702048"
+          }
+        },
+        "shape": 4,
+        "level": "defaultLevel0000",
+        "_id": "4Jgz4kpyTaMpkdHn",
+        "displayName": 0,
+        "delta": null,
+        "elevation": 0,
+        "depth": 1,
+        "sort": 0,
+        "locked": false,
+        "lockRotation": false,
+        "rotation": 0,
+        "alpha": 1,
+        "hidden": false,
+        "disposition": -1,
+        "displayBars": 0,
+        "bar1": {
+          "attribute": "attributes.hp"
+        },
+        "bar2": {
+          "attribute": null
+        },
+        "light": {
+          "negative": false,
+          "priority": 0,
+          "alpha": 0.5,
+          "angle": 360,
+          "bright": 0,
+          "color": null,
+          "coloration": 1,
+          "dim": 0,
+          "attenuation": 0.5,
+          "luminosity": 0.5,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "animation": {
+            "type": null,
+            "speed": 5,
+            "intensity": 5,
+            "reverse": false
+          },
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "detectionModes": {},
+        "occludable": {
+          "radius": 0
+        },
+        "ring": {
+          "enabled": false,
+          "colors": {
+            "ring": null,
+            "background": null
+          },
+          "effects": 1,
+          "subject": {
+            "scale": 1,
+            "texture": null
+          }
+        },
+        "turnMarker": {
+          "mode": 1,
+          "animation": null,
+          "src": null,
+          "disposition": false
+        },
+        "movementAction": null,
+        "_movementHistory": [],
+        "_regions": []
+      },
+      {
+        "name": "Practice Target",
+        "actorId": "uwyaFQurD4uFZCKC",
+        "actorLink": true,
+        "x": 700,
+        "y": 400,
+        "width": 1,
+        "height": 1,
+        "texture": {
+          "src": "icons/svg/target.svg",
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "fit": "contain",
+          "scaleX": 1,
+          "scaleY": 1,
+          "tint": "#ffffff",
+          "alphaThreshold": 0.75
+        },
+        "flags": {
+          "foundry-local-api": {
+            "testRunId": "test-ai-attack-vision-1790913702048"
+          }
+        },
+        "shape": 4,
+        "level": "defaultLevel0000",
+        "_id": "z2oFZhuQdL4GQ793",
+        "displayName": 0,
+        "delta": null,
+        "elevation": 0,
+        "depth": 1,
+        "sort": 1,
+        "locked": false,
+        "lockRotation": false,
+        "rotation": 0,
+        "alpha": 1,
+        "hidden": false,
+        "disposition": -1,
+        "displayBars": 0,
+        "bar1": {
+          "attribute": "attributes.hp"
+        },
+        "bar2": {
+          "attribute": null
+        },
+        "light": {
+          "negative": false,
+          "priority": 0,
+          "alpha": 0.5,
+          "angle": 360,
+          "bright": 0,
+          "color": null,
+          "coloration": 1,
+          "dim": 0,
+          "attenuation": 0.5,
+          "luminosity": 0.5,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "animation": {
+            "type": null,
+            "speed": 5,
+            "intensity": 5,
+            "reverse": false
+          },
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "sight": {
+          "enabled": false,
+          "range": 0,
+          "angle": 360,
+          "visionMode": "basic",
+          "color": null,
+          "attenuation": 0.1,
+          "brightness": 0,
+          "saturation": 0,
+          "contrast": 0
+        },
+        "detectionModes": {},
+        "occludable": {
+          "radius": 0
+        },
+        "ring": {
+          "enabled": false,
+          "colors": {
+            "ring": null,
+            "background": null
+          },
+          "effects": 1,
+          "subject": {
+            "scale": 1,
+            "texture": null
+          }
+        },
+        "turnMarker": {
+          "mode": 1,
+          "animation": null,
+          "src": null,
+          "disposition": false
+        },
+        "movementAction": null,
+        "_movementHistory": [],
+        "_regions": []
+      }
+    ],
+    "levels": [
+      {
+        "_id": "defaultLevel0000",
+        "name": "Level",
+        "elevation": {
+          "top": 20,
+          "bottom": 0
+        },
+        "background": {
+          "color": "#999999",
+          "src": null,
+          "tint": "#ffffff",
+          "alphaThreshold": 0.75
+        },
+        "foreground": {
+          "src": null,
+          "tint": "#ffffff",
+          "alphaThreshold": 0.75
+        },
+        "fog": {
+          "src": null
+        },
+        "textures": {
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "offsetX": 0,
+          "offsetY": 0,
+          "fit": "fill",
+          "scaleX": 1,
+          "scaleY": 1,
+          "rotation": 0
+        },
+        "visibility": {
+          "levels": []
+        },
+        "sort": 0,
+        "flags": {}
+      }
+    ],
+    "lights": [
+      {
+        "x": 450,
+        "y": 450,
+        "hidden": false,
+        "config": {
+          "dim": 20,
+          "bright": 10,
+          "negative": false,
+          "priority": 0,
+          "alpha": 0.5,
+          "angle": 360,
+          "color": null,
+          "coloration": 1,
+          "attenuation": 0.5,
+          "luminosity": 0.5,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "animation": {
+            "type": null,
+            "speed": 5,
+            "intensity": 5,
+            "reverse": false
+          },
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "flags": {
+          "foundry-local-api": {
+            "testRunId": "test-ai-attack-vision-1790913702048"
+          }
+        },
+        "_id": "Lo5u5V20A5G4d5YP",
+        "elevation": 0,
+        "levels": [],
+        "rotation": 0,
+        "walls": true,
+        "vision": false,
+        "locked": false
+      }
+    ],
+    "notes": [],
+    "sounds": [],
+    "regions": [],
+    "tiles": [],
+    "walls": [
+      {
+        "c": [
+          600,
+          0,
+          600,
+          350
+        ],
+        "door": 0,
+        "ds": 0,
+        "flags": {
+          "foundry-local-api": {
+            "testRunId": "test-ai-attack-vision-1790913702048"
+          }
+        },
+        "_id": "7mTvvfJbstrQB1Ty",
+        "levels": [],
+        "light": 20,
+        "move": 20,
+        "sight": 20,
+        "sound": 20,
+        "dir": 0,
+        "threshold": {
+          "light": null,
+          "sight": null,
+          "sound": null,
+          "attenuation": false
+        },
+        "animation": null
+      },
+      {
+        "c": [
+          600,
+          350,
+          600,
+          550
+        ],
+        "door": 1,
+        "ds": 0,
+        "flags": {
+          "foundry-local-api": {
+            "testRunId": "test-ai-attack-vision-1790913702048"
+          }
+        },
+        "_id": "Axtn1UK6lEYcRz5d",
+        "levels": [],
+        "light": 20,
+        "move": 20,
+        "sight": 20,
+        "sound": 20,
+        "dir": 0,
+        "threshold": {
+          "light": null,
+          "sight": null,
+          "sound": null,
+          "attenuation": false
+        },
+        "animation": null
+      },
+      {
+        "c": [
+          600,
+          550,
+          600,
+          900
+        ],
+        "door": 0,
+        "ds": 0,
+        "flags": {
+          "foundry-local-api": {
+            "testRunId": "test-ai-attack-vision-1790913702048"
+          }
+        },
+        "_id": "sQVAfoJBWII7jgR7",
+        "levels": [],
+        "light": 20,
+        "move": 20,
+        "sight": 20,
+        "sound": 20,
+        "dir": 0,
+        "threshold": {
+          "light": null,
+          "sight": null,
+          "sound": null,
+          "attenuation": false
+        },
+        "animation": null
+      }
+    ],
+    "playlist": null,
+    "playlistSound": null,
+    "journal": null,
+    "journalEntryPage": null,
+    "weather": "",
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0,
+      "X7X4KK7zca5U2Ics": 3
+    },
+    "_stats": {
+      "coreVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "createdTime": 1790913702164,
+      "modifiedTime": 1790977860563,
+      "lastModifiedBy": "X7X4KK7zca5U2Ics",
+      "compendiumSource": null,
+      "duplicateSource": null,
+      "exportSource": null
+    }
+  }
+}

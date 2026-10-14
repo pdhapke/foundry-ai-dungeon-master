@@ -1,0 +1,690 @@
+[
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17909-343d6890183d52b33ec92b3fdb2dcc1ed8de0de4",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 33255,
+    "codeSHA256": "bc6fedd974eac6fd36428256f1e60274e37a2a9a7dc90f91b630ed14d7a0f245",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-02T16:56:13.115Z",
+    "features": {
+      "latency": true,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17909-f0d8b53b60c1147b88812a625ec7e6e2b9e90e20",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 32983,
+    "codeSHA256": "a61a8c385fb115f36d5e178fa62d6d9aa31706200b8838aa4e91090da3d0aa9e",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-02T16:46:44.298Z",
+    "features": {
+      "latency": true,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17909-c5ea231526b6da1ffe0213f032f30cc404a43b3f",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 32355,
+    "codeSHA256": "6fe85f3a0ce1aa85fd0f9c2a792607b75d107e29dadcf2d0ceface4ad781560a",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-02T14:17:31.352Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17909-68fca575ec468072f123198a411dbe796d456930",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 32313,
+    "codeSHA256": "060f1c74aea5c23a660580ee775c8d55fe3594dbba68e6f1ff3ee1f4ec1e4312",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-02T04:13:00.595Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17909-f72bcc2aa225b31a0b494790840686bf0501c6a6",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 29272,
+    "codeSHA256": "9828973b5806391c904ddb3d817a24f590d0fc0db05ef5e2d16effd39ef4f804",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-02T01:23:08.230Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17909-f6feb11c107cd8d431d712494a902387eaba3832",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 29272,
+    "codeSHA256": "9828973b5806391c904ddb3d817a24f590d0fc0db05ef5e2d16effd39ef4f804",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-02T01:01:33.024Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17909-57113f3936543e627cdf63137eb4cb5b0dbad214",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 28305,
+    "codeSHA256": "52f73bc790a1e82366c675f285ceca223c12fb69ffd1bd94e0c6d3d6e6f4b249",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-02T00:33:49.850Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-peter/17908-77ed2e350d69d757b4505624219ec0855455060b",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 28305,
+    "codeSHA256": "52f73bc790a1e82366c675f285ceca223c12fb69ffd1bd94e0c6d3d6e6f4b249",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T23:11:02.266Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-77ed2e350d69d757b4505624219ec0855455060b",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 28305,
+    "codeSHA256": "52f73bc790a1e82366c675f285ceca223c12fb69ffd1bd94e0c6d3d6e6f4b249",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T23:07:01.833Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-fe6cdac52574996931c192795c24abca30fb25ba",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 27893,
+    "codeSHA256": "252a0e038fd4eb855e9981b26eafb12879c2374a21a21ded22c218f44430cd52",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T22:52:52.187Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-bc2a22f078fdaaf27b8d25a91ecf5352b842bb63",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 24788,
+    "codeSHA256": "df632807bb472c89ef43b6c07ba3344a87f1b09b089cd38b0b6a0cae16fdf5cb",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:36:29.581Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-129de59440f31a9253dcfd5b86be297f7f8b85c1",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 24788,
+    "codeSHA256": "df632807bb472c89ef43b6c07ba3344a87f1b09b089cd38b0b6a0cae16fdf5cb",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:34:10.260Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-peter/17908-bc2a22f078fdaaf27b8d25a91ecf5352b842bb63",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 24788,
+    "codeSHA256": "df632807bb472c89ef43b6c07ba3344a87f1b09b089cd38b0b6a0cae16fdf5cb",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:32:28.454Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-ecc1ad723490ffdac945e11923f0b310e0d2273e",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 23828,
+    "codeSHA256": "96e0fd9191c7c50b758b707ff6331ef253e2d327b37834b07b6f1a156c39f39c",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:15:34.763Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-b0d033fb56a88ddc5d8b6bba081b67bb8705eda0",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 23828,
+    "codeSHA256": "96e0fd9191c7c50b758b707ff6331ef253e2d327b37834b07b6f1a156c39f39c",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:15:02.007Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-307f33b6d592cc2703d8c6ad2b229d26fbaf7908",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 23392,
+    "codeSHA256": "1f2cd933bcc69b3cfc161add9cb380275012b7811aa8d900702f69f94da46a74",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:11:44.106Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-9925be70c6376e8a8bfa17c67fad1af281ab6550",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 23069,
+    "codeSHA256": "03cb5e0b4600cefc3abd69be3caf8a9169ee1cb6c4d3014e1fac7578c81cb71d",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:10:52.859Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-9f44211e10139844d8ca207a813a06949c33ae49",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 23005,
+    "codeSHA256": "b8a8bea613167f28a6d63a5b7619c8a8b4898e8b11bc41dbb334567407a147fd",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:09:34.292Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-04ca9dd1cbf5923fe4cdb0d097ea8ed02588d87a",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 20981,
+    "codeSHA256": "f8e54485a210034ce5fed4666f0b6add722850e425458b7a7d3ce3a34ef928f0",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:07:48.011Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-5342fdf1ba5c30979c14248c928e16021fb608d2",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 20981,
+    "codeSHA256": "f8e54485a210034ce5fed4666f0b6add722850e425458b7a7d3ce3a34ef928f0",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:05:31.118Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-2be4acadc6d97b2f2c1ddc61f636b501c3e5925f",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 20820,
+    "codeSHA256": "9cf1aa07049f8d21131f3b2cafe2802ccc47c2ba68223bf2e06424b41d10cdfd",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T21:03:28.354Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-peter/17908-950725fd128313daed492b6633c8583c0b065cff",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 15125,
+    "codeSHA256": "c8220f7cf8cc621f314f651d1249c64c630782c3d36789dfe83f4ed0515c6ff3",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T20:12:38.202Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-59bae80466ae0fc61b6cf9a51d9f9a1cd8f1f826",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 15125,
+    "codeSHA256": "c8220f7cf8cc621f314f651d1249c64c630782c3d36789dfe83f4ed0515c6ff3",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T17:54:24.915Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-950725fd128313daed492b6633c8583c0b065cff",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 15125,
+    "codeSHA256": "c8220f7cf8cc621f314f651d1249c64c630782c3d36789dfe83f4ed0515c6ff3",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T17:53:37.285Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-68f1098a72bf78fa6f5a66bf3448f49186663557",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 15004,
+    "codeSHA256": "8d4a59feda7b9e0b60904e95e8340ad91a1256ca00b0d6f578e45f8f4f119b5c",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T17:46:35.516Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-d33571445bce23871b4ac4b5fa54c38e8bf6377a",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 15004,
+    "codeSHA256": "8d4a59feda7b9e0b60904e95e8340ad91a1256ca00b0d6f578e45f8f4f119b5c",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T17:43:53.238Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-d7d6530fab3d13c382c8803b7e9c586bfbb5842c",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 14315,
+    "codeSHA256": "48824bc14c989d95407eba826a1fe290de04f3a4f61b18dcd942e3f52b4a8098",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T17:38:37.218Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-peter/17908-f5745645883022302cb42370c0a62ea3bdd5dd7c",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 13491,
+    "codeSHA256": "2e8434f58faa50b9136fd66306bcc9c82af5698e1b6e1a3dcbe4ef884c26bcdb",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T17:25:12.123Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-f5745645883022302cb42370c0a62ea3bdd5dd7c",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 13491,
+    "codeSHA256": "2e8434f58faa50b9136fd66306bcc9c82af5698e1b6e1a3dcbe4ef884c26bcdb",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T17:13:23.998Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-5de79826de89848fedd92da024c5bee94c7311cd",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 13491,
+    "codeSHA256": "2e8434f58faa50b9136fd66306bcc9c82af5698e1b6e1a3dcbe4ef884c26bcdb",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T17:11:41.627Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": true,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-01f34390a43048cb1873f550918266975bdae2d9",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 11723,
+    "codeSHA256": "92a544b6d59785f29997a9da713b39d85e174560370b512a5f3878680c56193c",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T04:38:54.208Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-9e499bb2f98f2f5bb72f5a12e6e03152ab211b48",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 11699,
+    "codeSHA256": "4a67154a125a98c2dfa956b661100b4bc385baf04f2c21c522b10b3579221577",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T04:37:57.346Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-ec9b02c06a970a0cea238d0ebd60b1f791fcf0c7",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 11679,
+    "codeSHA256": "2640fa4587bc473d0dd642ebece917a4635ca5f0d07798d7a0cbb5ac8afa417b",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T04:35:21.256Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-c10b4c53e3e2164d556efe635944d4833a722a7d",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 11635,
+    "codeSHA256": "e56dd0ea0914da89a7ddd7f3675a6f0036ef7ada06d23e2ade7202e4b4e8a049",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T04:26:51.794Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-59da609540dfae31a13bc02b892a013d2dd99f29",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 11460,
+    "codeSHA256": "647d002a890fede85b6c08f3f7dd760788ef9e93937e1c599e7fc79112bfa5fb",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T04:18:25.379Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-54e22762f1054724af97da705d979ab0af954873",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 11584,
+    "codeSHA256": "4e965bb5e1204189aa46cf5eb86a380882132de0677eebf2eb68dfd23e89713b",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T04:17:24.507Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-41cec58a8f0340c7fe5b5af3652fdab47f9bb542",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 11186,
+    "codeSHA256": "ceb9cb597c975c58eb435d70c48788c76c995e1fbef55d786d6fefd359c5583b",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T04:13:09.382Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-3cbaed909e21499b82c665178f7525e5fb417de1",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 11186,
+    "codeSHA256": "ceb9cb597c975c58eb435d70c48788c76c995e1fbef55d786d6fefd359c5583b",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T04:13:01.875Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-peter/17908-378ef55ee9cf07109e6c31420e36b0d61ba9c789",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 8646,
+    "codeSHA256": "284e0bf7834e270f9cc2397821fb5b0d613f908e391aeb13a8283afb5062a619",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T03:41:05.671Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-378ef55ee9cf07109e6c31420e36b0d61ba9c789",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 8646,
+    "codeSHA256": "284e0bf7834e270f9cc2397821fb5b0d613f908e391aeb13a8283afb5062a619",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T03:38:52.621Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-506ad10b1da1008539de932e5dfb24b3969fe6b4",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 8646,
+    "codeSHA256": "284e0bf7834e270f9cc2397821fb5b0d613f908e391aeb13a8283afb5062a619",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T03:37:38.791Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-696db18dea6c8fc0c1649b301f07ad8fc3473d50",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 8330,
+    "codeSHA256": "b7b19c9874d2ff2fe3035b69ffc39e1bd8a63aae7afc64b6d57da593581e129d",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T03:37:02.026Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  },
+  {
+    "path": "C:/Users/peter/AppData/Local/Temp/tsx-CodexSandboxOffline/17908-5c6b8d867f22c5c3f2dae3cb822599abf55f903d",
+    "sources": [
+      "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\module\\src\\ai-dungeon-master\\application.ts"
+    ],
+    "codeLength": 8279,
+    "codeSHA256": "3cd4466a3f47598219ea05adfeb634ce9df4f842918a1149a5e24452eaa36683",
+    "sourceContentPresent": false,
+    "mtime": "2026-10-01T03:36:29.966Z",
+    "features": {
+      "latency": false,
+      "directControl": false,
+      "review": false,
+      "historical": false
+    }
+  }
+]

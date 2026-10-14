@@ -1,0 +1,9 @@
+{
+  "scope": "Actual existing Chrome player tab, CUA screenshot and DOM inspection after live confirmed token light action. No exported screenshot file is claimed.",
+  "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "userId": "edtBL96Yu3058QAT",
+  "sceneId": "Nbj38PEdvw1zX1J9",
+  "observed": ["Izzy player listed with her assigned character", "Original Sargauth scene active and viewing", "Own selected token visible", "Corridor floor and surrounding walls visibly illuminated", "Game Paused overlay remains", "Current pre-reload zoom preserved after explicit viewport restoration"],
+  "limits": ["No token movement was performed", "Moving reveal and fog persistence require manual player acceptance", "No model narration was run", "Rendering observation is separate from backend receipt"],
+  "inferenceRequests": 0
+}

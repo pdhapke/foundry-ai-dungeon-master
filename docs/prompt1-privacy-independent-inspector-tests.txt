@@ -1,0 +1,14 @@
+Γ£ö extension alone or image location alone never clears public source-copy blocker (86.8206ms)
+Γ£ö recognized binary media means source-copy gate only; symlink and unknown directories fail closed (28.2379ms)
+Γ£ö asset-only legacy tree permits source-copy gate without asserting image secrecy (18.7994ms)
+Γ£ö authored files, receipts, unknown files, SVG and incorrectly located media keep source gate closed (102.4741ms)
+Γ£ö unexpected empty directories, links and bounded traversal overflow fail closed (66.5589ms)
+Γ£ö absent legacy source and invalid world identifier are distinguished (6.9759ms)
+Γä╣ tests 6
+Γä╣ suites 0
+Γä╣ pass 6
+Γä╣ fail 0
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 483.6028

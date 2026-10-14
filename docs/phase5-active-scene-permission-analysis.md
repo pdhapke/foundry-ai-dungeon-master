@@ -1,0 +1,9 @@
+# Active scene permission investigation
+
+Current observation: Izzy legitimately views active scene Nbj38PEdvw1zX1J9, owning token5afpFlCHHnclifNw/actorP9YnTVjX8thvZ8eM; scene ownership default0 and GM3, no Izzy override. Structured visibility rejects PERMISSION_DENIED at requirePerspective's scene OBSERVER requirement. This is distinct from earlier disconnected-player evidence.
+
+Installed Foundry14.368 source: App/client/applications/ui/scene-navigation.mjs86 admits active || isView || (scene.navigation && scene.visible); active scenes are visible independently of document ownership. App/client/documents/scene.mjs261 Scene.view draws its scene without OBSERVER check, and App/client/game.mjs1062 initializes game.scenes.current. Thus document OBSERVER is stricter than native active-scene viewing and causes this false rejection.
+
+Smallest proposed scoped repair, not yet authorized/implemented: accept the exact loaded scene when scene.active===true or existing OBSERVER permission succeeds. Preserve collection/canvas scene identity, opted-in exact nonGM user, token OWNER, selected vision isolation, before/after persistence and final permission/world/client checks. The same predicate must be rechecked after awaits; inactive scenes without OBSERVER remain denied. Do not broaden ownership or use unrestricted GM visibility. Viewing alone (isView) would be broader than required for this case and is not needed for the narrow proposal. Independent tests should cover active ownership0 accepted, inactive ownership0 rejected, active→inactive during observation rejected, and unchanged hidden entity redaction.
+
+No production or world changes made for this investigation. Dedicated live fixture explicitly granting Izzy OBSERVER remains a valid separate test, but would not prove this current-world false rejection repaired.

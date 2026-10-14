@@ -22,7 +22,10 @@ const identity: AiDmAuthenticatedIdentity = {
   isGm: true,
 };
 const scope = { worldId: "w", userId: "gm", threadId: "t" };
-function fixture(options: Partial<ChatKitReadOptions> = {}) {
+function fixture(
+  options: Partial<ChatKitReadOptions> = {},
+  actors: Record<string, AiDmJsonValue> = {},
+) {
   let revoked = false;
   let world = "w";
   let hold = false;
@@ -40,7 +43,7 @@ function fixture(options: Partial<ChatKitReadOptions> = {}) {
           },
         })),
       ),
-    callTool: async ({ name }) => {
+    callTool: async ({ name, arguments: input }) => {
       calls.push(name);
       if (hold) return new Promise(() => {});
       let result: AiDmJsonValue;
@@ -58,11 +61,14 @@ function fixture(options: Partial<ChatKitReadOptions> = {}) {
           tokens: [{ _id: "token", actorId: "a", hidden: false }],
           secret: "not-exposed",
         };
+      else if (name === "foundry_get_actor" && actors[(input as { id: string }).id])
+        result = actors[(input as { id: string }).id]!;
       else
         result = {
           _id: "a",
           name: "Hero",
           type: "character",
+          hasPlayerOwner: true,
           system: { attributes: { hp: { value: 10, max: 12 }, ac: { value: 14 } } },
           secret: "not-exposed",
         };
@@ -106,6 +112,60 @@ function fixture(options: Partial<ChatKitReadOptions> = {}) {
   };
 }
 void describe("ChatKit bounded adapter (controlled MCP fixture; no model)", () => {
+  void it("guarantees overview and explicitly assigned off-scene party while surfacing unassigned characters", async () => {
+    const root = mkdtempSync(join(tmpdir(), "ai-dm-party-"));
+    try {
+      const path = join(root, "w", "data", "campaign");
+      mkdirSync(path, { recursive: true });
+      writeFileSync(
+        join(path, "overview.md"),
+        "---\nschema_version: 1\nid: campaign-main\nrevision: r1\nvisibility: gm\ncanon_status: canon\nparty_actor_ids: hero\n---\nSolo lighthouse adventure.",
+      );
+      const f = fixture(
+        { campaign: new WorldCampaignContext(root) },
+        { hero: { _id: "hero", name: "Assigned Hero", type: "character" } },
+      );
+      const run = f.begin();
+      const result = (await f.adapter.execute(
+        run.token,
+        scope,
+        "context",
+        { query: "unrelated" },
+        new AbortController().signal,
+      )) as Record<string, AiDmJsonValue>;
+      assert.match(JSON.stringify(result["campaignOverview"]), /Solo lighthouse/);
+      assert.match(JSON.stringify(result["characters"]), /Assigned Hero/);
+      assert.doesNotMatch(JSON.stringify(result["characters"]), /"id":"a"/);
+      const actor = await f.adapter.execute(
+        run.token,
+        scope,
+        "actor",
+        { id: "hero" },
+        new AbortController().signal,
+      );
+      assert.match(JSON.stringify(actor), /Assigned Hero/);
+      writeFileSync(
+        join(path, "overview.md"),
+        "---\nschema_version: 1\nid: campaign-main\nrevision: r2\nvisibility: gm\ncanon_status: canon\n---\nUpdated lighthouse.",
+      );
+      const ambiguous = fixture(
+        { campaign: new WorldCampaignContext(root) },
+        { a: { _id: "a", name: "Unassigned", type: "character" } },
+      );
+      const updated = (await ambiguous.adapter.execute(
+        ambiguous.begin().token,
+        scope,
+        "context",
+        {},
+        new AbortController().signal,
+      )) as Record<string, AiDmJsonValue>;
+      assert.deepEqual(updated["characters"], []);
+      assert.match(JSON.stringify(updated["party"]), /unresolved/);
+      assert.match(JSON.stringify(updated["campaignOverview"]), /Updated lighthouse/);
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  });
   void it("builds equivalent authorized campaign/rules/character/combat context for prompts and actions", async () => {
     const root = mkdtempSync(join(tmpdir(), "ai-dm-adapter-"));
     try {

@@ -1,0 +1,20 @@
+{
+  "capturedAt": "2026-10-03T01:06:33.247Z",
+  "paths": [
+    "module/src/bridge-client.ts",
+    "module/src/command-registry.ts",
+    "module/src/commands/session-actions.ts",
+    "shared/src/protocol.ts",
+    "module/src/commands/scene-render.ts",
+    "shared/src/scene-render.ts"
+  ],
+  "marker": "1953b89f2c8acb8888b2f3b10abaf98ca55b6e5286b4f67a9d107d8af40768de",
+  "checks": {
+    "perceptionNativeInput": true,
+    "perceptionContractInput": true,
+    "derivedMarkerMatches": true,
+    "compiledContainsMarker": true
+  },
+  "pass": true,
+  "scope": "Disk nativebuild input binding; remote runtime marker requires targeted client reload and receiver readback"
+}

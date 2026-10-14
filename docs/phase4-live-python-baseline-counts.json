@@ -1,0 +1,295 @@
+{
+  "capturedAt": "2026-10-02T21:49:07.820684+00:00",
+  "tracePath": ".runtime\\ai-dungeon-master\\latency-traces.jsonl",
+  "traceBytes": 203952,
+  "traceLines": 763,
+  "actualApplicationStreamRequests": 6,
+  "sdkModelRequestHookRows": 6,
+  "counts": [
+    {
+      "component": "ai-node",
+      "stage": "adapter:operation",
+      "count": 10
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:authorization",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:authorization-between-read-phases",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:authorization-final",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:campaign-overview-source-hash-and-parse",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:catalog-refresh",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:foundry_get_scene:mcp-read",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:foundry_get_system:mcp-read",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:foundry_get_world:mcp-read",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:foundry_list_combats:mcp-read",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:foundry_list_scenes:mcp-read",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "context:serialization-and-budget-validation",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "core:execution-readback-ack",
+      "count": 8
+    },
+    {
+      "component": "ai-node",
+      "stage": "core:receipt-persisted",
+      "count": 8
+    },
+    {
+      "component": "ai-node",
+      "stage": "credentials-resolved",
+      "count": 10
+    },
+    {
+      "component": "ai-node",
+      "stage": "direct-action-result",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "direct-queue-entered",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "direct-response-written",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "final-response-finished",
+      "count": 10
+    },
+    {
+      "component": "ai-node",
+      "stage": "first-visible-stream-chunk",
+      "count": 10
+    },
+    {
+      "component": "ai-node",
+      "stage": "initial-authorization-finished",
+      "count": 14
+    },
+    {
+      "component": "ai-node",
+      "stage": "mcp:catalog-list",
+      "count": 4
+    },
+    {
+      "component": "ai-node",
+      "stage": "mcp:tool-roundtrip",
+      "count": 379
+    },
+    {
+      "component": "ai-node",
+      "stage": "mutation-capability-revoked-and-slot-released",
+      "count": 2
+    },
+    {
+      "component": "ai-node",
+      "stage": "queue-entered",
+      "count": 10
+    },
+    {
+      "component": "ai-node",
+      "stage": "queue-exit",
+      "count": 14
+    },
+    {
+      "component": "ai-node",
+      "stage": "queued-authorization-finished",
+      "count": 10
+    },
+    {
+      "component": "ai-node",
+      "stage": "request-arrival",
+      "count": 25
+    },
+    {
+      "component": "ai-node",
+      "stage": "stream-authorization",
+      "count": 51
+    },
+    {
+      "component": "ai-node",
+      "stage": "world-slot-released-for-narration",
+      "count": 2
+    },
+    {
+      "component": "python",
+      "stage": "assistant-stream-finished",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "confirmed-action-result",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "context-prepared",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "first-stream-event",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "model-actionable-arguments",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "model-complete-arguments-event",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "model-first-event",
+      "count": 6
+    },
+    {
+      "component": "python",
+      "stage": "model-first-text-event",
+      "count": 2
+    },
+    {
+      "component": "python",
+      "stage": "model-provider-request-id-unavailable",
+      "count": 6
+    },
+    {
+      "component": "python",
+      "stage": "model-provider-response",
+      "count": 18
+    },
+    {
+      "component": "python",
+      "stage": "model-request",
+      "count": 6
+    },
+    {
+      "component": "python",
+      "stage": "model-response",
+      "count": 6
+    },
+    {
+      "component": "python",
+      "stage": "model-stream-invocation",
+      "count": 6
+    },
+    {
+      "component": "python",
+      "stage": "narration-boundary-confirmed",
+      "count": 2
+    },
+    {
+      "component": "python",
+      "stage": "narration-boundary-requested",
+      "count": 2
+    },
+    {
+      "component": "python",
+      "stage": "python-response-start",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "receipt-created",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "receipt-server-event-yield",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "receipt-store-commit-complete",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "receipt-stream-enqueued",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "receipt-summary-persisted",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "store-item-commit-complete",
+      "count": 22
+    },
+    {
+      "component": "python",
+      "stage": "tool-exchange-persist-complete",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "tool-exchange-persist-start",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "tool-result",
+      "count": 4
+    },
+    {
+      "component": "python",
+      "stage": "tool-start",
+      "count": 4
+    }
+  ],
+  "databasePath": ".runtime\\ai-dungeon-master\\chatkit.sqlite",
+  "databaseCounts": {
+    "threads": 13,
+    "items": 104
+  }
+}

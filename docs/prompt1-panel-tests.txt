@@ -1,0 +1,101 @@
+
+> @foundry-ai-dungeon-master/module@0.1.0 test
+> node --import tsx --test --test-concurrency=1 "src/**/*.test.ts"
+
+Γ£ö cancel/close at thread HTTP, body, and component awaits prevents later dispatch or stale persistence (mocked component) (354.085ms)
+Γ£ö independent stale component thread event cannot write another world's pointer (218.6547ms)
+Γ£ö rerender cancels detached player panel and removes its source hooks (204.0481ms)
+Γ£ö mounted ChatKit uses one owner-scoped thread for actions, aborts streams and removes listeners on reopen (mocked component) (318.3112ms)
+Γ£ö independent cancellation during ChatKit readiness prevents later dispatch (217.5157ms)
+Γ£ö identical multi-client events hash equally; distinct keyed areas and reentries remain distinct regardless of digest completion order (47.2071ms)
+Γ£ö disable/world changes and lifecycle cancellation abort queued timers and dispatched turns (138.8765ms)
+Γ£ö only reviewed structured bridge provenance suppresses events; arbitrary identity strings are not grants (0.6342ms)
+Γ£ö exact campaign review verifies complete content, scope and digest (21.9615ms)
+Γ£ö partial/tampered/missing reviews cannot be approved (3.3163ms)
+Γ£ö completion is displayed as verified only with matching durable receipt (1.9743ms)
+Γ£ö ChatGPT authorization panel explains readiness failures without identity or credentials (mocked status) (1.2731ms)
+Γû╢ ChatKit context and trigger boundary (mocked Foundry)
+  Γ£ö rejects hidden/arbitrary fields and bounds the allowlist (2.0041ms)
+  Γ£ö rejects player extraction and never copies document secrets (0.3938ms)
+  Γ£ö deduplicates request IDs, rejects overlap, releases on cancellation, and expires IDs (0.3343ms)
+Γ£ö ChatKit context and trigger boundary (mocked Foundry) (3.782ms)
+Γ£ö uses the documented development key only for exact loopback hosts (0.9022ms)
+Γû╢ AI Dungeon Master model selection
+  Γ£ö allows only an authenticated GM to select a server-advertised eligible model (197.3665ms)
+  Γ£ö blocks GM inference until authoritative provider readiness is restored (1.29ms)
+  Γ£ö does not expose the nonfunctional run retry action (0.9423ms)
+Γ£ö AI Dungeon Master model selection (200.8554ms)
+Γ£ö Foundry14 serialized editor commands preserve explicit typed targets (2.3396ms)
+Γ£ö explicit attack shortcuts preserve native IDs and never accept model reaction waiver (0.701ms)
+Γ£ö independent Foundry paragraph normalization preserves plain control grammar and rejects rich envelopes (2.6257ms)
+{"type":"pause-timing","stage":"browser-pause-state-observed","observedAt":1791067428048,"paused":false,"worldId":"world","correlationId":null,"origin":"unmarked"}
+{"type":"pause-timing","stage":"browser-action-notification-issued","notificationIssuedAtMs":1791067428050,"worldId":"world","correlationId":"aidm-fixture","paused":false}
+Γ£ö registered physical Region, remote combat, door and cancellation hooks (mocked Foundry API) (1486.008ms)
+Γû╢ AI Dungeon Master browser authentication
+  Γ£ö renews before expiry through a fresh bound challenge without replaying commands (11.7873ms)
+  Γ£ö expired submit requests renewal and sends no action; renewal failure has an explicit message (1.1361ms)
+  Γ£ö disconnect cancels renewal and a late renewal callback cannot reconnect (0.8166ms)
+  Γ£ö supplies ChatKit headers only for a current authenticated GM without persisting credentials (0.8549ms)
+  Γ£ö automatically authenticates a GM without browser role claims or persistent secrets (0.6997ms)
+  Γ£ö does not treat identity-only ChatGPT sign-in as inference-ready (2.8851ms)
+  Γ£ö uses the server-authenticated player lane and blocks ChatGPT sign-in (0.6118ms)
+  Γ£ö fails closed on a malformed Foundry acknowledgement (0.626ms)
+  Γ£ö has no manual enrollment controls (0.7311ms)
+  Γ£ö retries disconnects with bounded exponential backoff (0.5969ms)
+Γ£ö AI Dungeon Master browser authentication (22.2458ms)
+Γû╢ independent renewal isolation
+  Γ£ö fresh renewal world mismatch cannot restore old authority or replay action (0.8764ms)
+  Γ£ö fresh player lane cannot reuse prior GM ChatKit authority (0.7426ms)
+Γ£ö independent renewal isolation (1.76ms)
+Γ£ö independent UTF8 fragmented stream receipt records metadata only with same document clock (3.839ms)
+Γ£ö independent direct JSON receipt and loss counters remain explicit (3.7174ms)
+Γ£ö fragmented SSE receipt metadata correlates without retaining text (3.5644ms)
+Γ£ö stream diagnostic budgets and malformed content never throw (3.179ms)
+Γ£ö direct JSON action receipt gets a browser arrival boundary (0.513ms)
+Γ£ö world document origin retains its exact source; arbitrary lookalike sources do not suppress Regions (1.3398ms)
+Γ£ö matches only exact core operation trajectory and revision; all keyed entries share provenance (0.3481ms)
+Γ£ö manual/newer/unknown/malformed movement invalidates; pre-update cannot guess future event (0.3088ms)
+Γ£ö rapid overlapping moves, expiry, clear/reopen and bounded retention do not suppress unrelated entries (0.4993ms)
+Γ£ö panel opens and commands share one preparation; cached prerequisite check emits no duplicate request (27.1299ms)
+Γ£ö disconnect/close fences delayed response; reconnect starts fresh prerequisite check (1.3829ms)
+Γ£ö invalid/expired/unavailable readiness fails closed with bounded retry backoff (1.6951ms)
+Γ£ö permits only exact armed deterministic action and same-thread safe reads (1.6307ms)
+Γ£ö mounted SDK flow probes exact consenting owner, creates empty audience thread, then sends safe action (30.7136ms)
+Γ£ö actual frame errors reject readiness before history/action dispatch (0.5454ms)
+Γ£ö readiness timeout and cancellation reject with safe phase messages (5.7428ms)
+Γ£ö frame ready and other-thread load events cannot authorize early safe action (0.5121ms)
+Γ£ö refuses revoked consent before thread or action dispatch, without enrollment (0.3952ms)
+Γ£ö source revision change and panel close fence future history/action requests (3.3705ms)
+Γ£ö rejects asynchronous bootstrap acceptance after world change (0.6512ms)
+Γû╢ AI Dungeon Master client store
+  Γ£ö deduplicates deliveries and detects reconnect gaps (1.2634ms)
+  Γ£ö restores ordered history without duplicating message IDs (1.1008ms)
+  Γ£ö assembles ordered output deltas and records approval cards (0.3517ms)
+  Γ£ö preserves safe failure details and removes partial output on terminal delivery (0.3242ms)
+  Γ£ö removes partial output and stale failure details when a run completes (0.2139ms)
+  Γ£ö accepts an authenticated history snapshot as a recipient cursor baseline (0.2262ms)
+  Γ£ö does not advance the recipient cursor for a malformed stream delta (0.1506ms)
+  Γ£ö requires an eligible selected model before marking ChatGPT inference ready (0.3341ms)
+  Γ£ö clears authoritative model readiness on a reconnect-required provider failure (0.4521ms)
+Γ£ö AI Dungeon Master client store (5.9353ms)
+Γû╢ AI Dungeon Master browser authentication
+  Γ£ö renews before expiry through a fresh bound challenge without replaying commands (13.1321ms)
+  Γ£ö expired submit requests renewal and sends no action; renewal failure has an explicit message (1.1536ms)
+  Γ£ö disconnect cancels renewal and a late renewal callback cannot reconnect (0.6007ms)
+  Γ£ö supplies ChatKit headers only for a current authenticated GM without persisting credentials (0.7163ms)
+  Γ£ö automatically authenticates a GM without browser role claims or persistent secrets (0.7275ms)
+  Γ£ö does not treat identity-only ChatGPT sign-in as inference-ready (3.1465ms)
+  Γ£ö uses the server-authenticated player lane and blocks ChatGPT sign-in (1.1341ms)
+  Γ£ö fails closed on a malformed Foundry acknowledgement (0.4887ms)
+  Γ£ö has no manual enrollment controls (0.8121ms)
+  Γ£ö retries disconnects with bounded exponential backoff (0.5011ms)
+Γ£ö AI Dungeon Master browser authentication (24.0122ms)
+Γ£ö destructive world and file reviews bind exact target, content and identity (8.8242ms)
+Γä╣ tests 75
+Γä╣ suites 6
+Γä╣ pass 75
+Γä╣ fail 0
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 8877.665

@@ -1,9 +1,17 @@
-import { randomBytes, randomUUID } from "node:crypto";
+import { createHash, randomBytes, randomUUID } from "node:crypto";
 import { DatabaseSync } from "node:sqlite";
 import { z } from "zod";
 import type { AiDmAuthenticatedIdentity, AiDmJsonValue } from "@foundry-ai-dungeon-master/shared";
 import { validateArguments, type FoundryLocalApiMcpClient } from "../tool-catalog/index.js";
-import { bounded } from "./read-tools.js";
+import { bounded } from "./bounded-call.js";
+import { stableJson } from "../context/hash.js";
+import { ChatKitAttackSequences, attackSequenceSchema } from "./attack-sequences.js";
+import { ChatKitAttackActions, attackActionSchema } from "./attack-actions.js";
+import { ChatKitCoreActions } from "./core-actions.js";
+import { ChatKitPauseActions } from "./pause-actions.js";
+import { ChatKitSessionActions } from "./session-actions.js";
+import type { SessionRequestAuthorization } from "./pause-request.js";
+import { ChatKitWorldDocumentActions } from "./world-document-actions.js";
 
 const id = z.string().regex(/^[A-Za-z0-9_-]{1,128}$/);
 const roll = z
@@ -80,6 +88,12 @@ function resolvedTerms(expression: string): number[] {
 
 /** Reviewed native subset. Durable dispatch claim precedes every effect; uncertain effects never redispatch. */
 export class ChatKitNativeActions {
+  private readonly core: ChatKitCoreActions;
+  private readonly attacks: ChatKitAttackActions;
+  private readonly sequences: ChatKitAttackSequences;
+  private readonly pauses: ChatKitPauseActions;
+  private readonly sessions: ChatKitSessionActions;
+  private readonly worlds: ChatKitWorldDocumentActions;
   constructor(
     private readonly client: FoundryLocalApiMcpClient,
     private readonly db: DatabaseSync,
@@ -90,6 +104,12 @@ export class ChatKitNativeActions {
     private readonly timeoutMs = 10_000,
     private readonly now = Date.now,
   ) {
+    this.core = new ChatKitCoreActions(client, db, authorize, timeoutMs);
+    this.attacks = new ChatKitAttackActions(client, db, authorize, timeoutMs);
+    this.sequences = new ChatKitAttackSequences(client, db, authorize);
+    this.pauses = new ChatKitPauseActions(client, db, authorize, timeoutMs);
+    this.sessions = new ChatKitSessionActions(client, db, authorize, timeoutMs);
+    this.worlds = new ChatKitWorldDocumentActions(client, db, authorize, timeoutMs);
     db.exec(
       "CREATE TABLE IF NOT EXISTS chatkit_native_actions (scope_key TEXT PRIMARY KEY, entry_json TEXT NOT NULL)",
     );
@@ -137,7 +157,7 @@ export class ChatKitNativeActions {
   }
   recent(scope: Scope): AiDmJsonValue {
     const prefix = JSON.stringify([scope.worldId, scope.userId, scope.threadId]).slice(0, -1) + ",";
-    return this.db
+    const entries = this.db
       .prepare(
         "SELECT entry_json FROM chatkit_native_actions WHERE scope_key>=? AND scope_key<? ORDER BY rowid DESC LIMIT 12",
       )
@@ -150,6 +170,13 @@ export class ChatKitNativeActions {
           entry.scope.threadId === scope.threadId,
       )
       .map((entry) => this.view(entry));
+    return [
+      ...this.worlds.recent(scope),
+      ...this.sessions.recent(scope),
+      ...this.pauses.recent(scope),
+      ...this.core.recent(scope),
+      ...entries,
+    ].slice(0, 12);
   }
   private async call(
     tool: string,
@@ -186,7 +213,83 @@ export class ChatKitNativeActions {
     operation: string,
     args: unknown,
     outerSignal: AbortSignal,
+    requestedPaused?: boolean,
+    sessionAuthorization?: SessionRequestAuthorization,
   ): Promise<AiDmJsonValue> {
+    if (["native_world_read", "native_world_write", "native_world_authorize"].includes(operation))
+      return this.worlds.request(
+        identity,
+        scope,
+        operation === "native_world_read"
+          ? "read"
+          : operation === "native_world_authorize"
+            ? "authorize"
+            : "write",
+        args,
+        sessionAuthorization,
+        outerSignal,
+      );
+    if (operation === "native_authorize_pause") {
+      const input = z
+        .object({ actionId: id, paused: z.boolean(), expectedPaused: z.boolean() })
+        .strict()
+        .parse(args);
+      if (
+        !identity.isGm ||
+        scope.worldId !== identity.worldId ||
+        scope.userId !== identity.userId ||
+        (requestedPaused === undefined
+          ? !sessionAuthorization?.worldControl?.manualRequest ||
+            !/^[a-f0-9]{64}$/.test(sessionAuthorization.worldControl.requestDigest)
+          : requestedPaused !== input.paused)
+      )
+        throw new Error("Direct GM pause request required");
+      await this.authorize(identity, outerSignal);
+      outerSignal.throwIfAborted();
+      return { authorized: true };
+    }
+    if (operation.startsWith("native_session_"))
+      return this.sessions.request(
+        identity,
+        scope,
+        operation,
+        args,
+        sessionAuthorization,
+        outerSignal,
+      );
+    if (operation === "native_attack_sequence")
+      return this.sequences.request(identity, scope, args, sessionAuthorization, outerSignal);
+    if (operation === "native_attack_state")
+      return this.attacks.read(identity, scope, args, outerSignal);
+    if (operation === "native_attack_action")
+      return this.attacks.request(identity, scope, args, sessionAuthorization, outerSignal);
+    if (operation === "native_core_action")
+      return this.core.request(identity, scope, args, sessionAuthorization, outerSignal);
+    if (operation === "native_core_move_batch")
+      return this.core.moveBatch(identity, scope, args, sessionAuthorization, outerSignal);
+    if (operation === "native_core_state")
+      return this.core.read(identity, scope, args, outerSignal);
+    if (operation === "native_token_light_read")
+      return this.core.readTokenLight(identity, scope, args, outerSignal);
+    if (operation === "native_set_pause_core")
+      return this.pauses.setConfirmed(
+        identity,
+        scope,
+        args,
+        requestedPaused,
+        outerSignal,
+        sessionAuthorization,
+      );
+    if (operation === "native_get_pause") return this.pauses.read(identity, scope, outerSignal);
+    if (operation === "native_set_pause")
+      return this.pauses.request(
+        identity,
+        scope,
+        args,
+        requestedPaused,
+        outerSignal,
+        sessionAuthorization,
+      );
     if (scope.worldId !== identity.worldId || scope.userId !== identity.userId)
       throw new Error("Action scope mismatch");
     id.parse(scope.threadId);
@@ -271,6 +374,150 @@ export class ChatKitNativeActions {
     body: unknown,
     outerSignal: AbortSignal,
   ): Promise<AiDmJsonValue> {
+    const sequenceList = z
+      .object({ kind: z.literal("attack-sequence"), threadId: id })
+      .strict()
+      .safeParse(body);
+    if (sequenceList.success) {
+      if (!identity.isGm) throw Error("GM required");
+      await bounded(this.authorize(identity, outerSignal), outerSignal);
+      outerSignal.throwIfAborted();
+      return this.sequences.recent({
+        worldId: identity.worldId,
+        userId: identity.userId,
+        threadId: sequenceList.data.threadId,
+      });
+    }
+    const sequenceAction = z
+      .object({
+        kind: z.literal("attack-sequence"),
+        threadId: id,
+        actionId: id,
+        action: attackSequenceSchema,
+      })
+      .strict()
+      .safeParse(body);
+    if (sequenceAction.success)
+      return this.sequences.request(
+        identity,
+        {
+          worldId: identity.worldId,
+          userId: identity.userId,
+          threadId: sequenceAction.data.threadId,
+        },
+        { actionId: sequenceAction.data.actionId, action: sequenceAction.data.action },
+        {
+          worldControl: {
+            manualRequest: true,
+            requestDigest: createHash("sha256")
+              .update(stableJson(sequenceAction.data))
+              .digest("hex"),
+          },
+        },
+        outerSignal,
+      );
+    const attackList = z
+      .object({ kind: z.literal("attack"), threadId: id })
+      .strict()
+      .safeParse(body);
+    if (attackList.success) {
+      if (!identity.isGm) throw new Error("GM required");
+      await bounded(this.authorize(identity, outerSignal), outerSignal);
+      outerSignal.throwIfAborted();
+      return this.attacks.recent({
+        worldId: identity.worldId,
+        userId: identity.userId,
+        threadId: attackList.data.threadId,
+      });
+    }
+    const directAttack = z
+      .object({ kind: z.literal("attack"), threadId: id, actionId: id, action: attackActionSchema })
+      .strict()
+      .safeParse(body);
+    if (directAttack.success) {
+      const action = directAttack.data.action;
+      return this.attacks.request(
+        identity,
+        {
+          worldId: identity.worldId,
+          userId: identity.userId,
+          threadId: directAttack.data.threadId,
+        },
+        { actionId: directAttack.data.actionId, action },
+        {
+          worldControl: {
+            manualRequest: true,
+            requestDigest: createHash("sha256")
+              .update(JSON.stringify(directAttack.data))
+              .digest("hex"),
+          },
+          ...(action.mode === "apply" && action.decisionId
+            ? {
+                attackDecision: {
+                  priorAttackRequestId: action.priorAttackRequestId,
+                  decisionId: action.decisionId,
+                },
+              }
+            : {}),
+        },
+        outerSignal,
+      );
+    }
+    const directBatch = z
+      .object({
+        kind: z.literal("core-move-batch"),
+        threadId: id,
+        actionId: id,
+        sceneId: id,
+        moves: z.unknown(),
+      })
+      .strict()
+      .safeParse(body);
+    if (directBatch.success)
+      return this.core.moveBatch(
+        identity,
+        { worldId: identity.worldId, userId: identity.userId, threadId: directBatch.data.threadId },
+        {
+          actionId: directBatch.data.actionId,
+          sceneId: directBatch.data.sceneId,
+          moves: directBatch.data.moves,
+        },
+        {
+          worldControl: {
+            manualRequest: true,
+            requestDigest: createHash("sha256")
+              .update(JSON.stringify(directBatch.data))
+              .digest("hex"),
+          },
+        },
+        outerSignal,
+      );
+    const directCore = z
+      .object({ kind: z.literal("core"), threadId: id, actionId: id, action: z.unknown() })
+      .strict()
+      .safeParse(body);
+    if (directCore.success)
+      return this.core.request(
+        identity,
+        { worldId: identity.worldId, userId: identity.userId, threadId: directCore.data.threadId },
+        { actionId: directCore.data.actionId, action: directCore.data.action },
+        {
+          worldControl: {
+            manualRequest: true,
+            requestDigest: createHash("sha256")
+              .update(JSON.stringify(directCore.data))
+              .digest("hex"),
+          },
+        },
+        outerSignal,
+      );
+    if (
+      body &&
+      typeof body === "object" &&
+      !Array.isArray(body) &&
+      (body as Record<string, unknown>)["kind"] === "world"
+    )
+      return this.worlds.browser(identity, body, outerSignal);
     const signal = AbortSignal.any([outerSignal, AbortSignal.timeout(this.timeoutMs)]);
     const list = z.object({ threadId: id }).strict().safeParse(body);
     if (list.success) {

@@ -1,0 +1,10 @@
+import {captureBuildIdentity} from '../server/dist/build-identity.js';
+import {startupBuildIdentity} from '../../foundry-local-api/server/dist/build-identity.js';
+import {createHash} from 'node:crypto';
+import {readFileSync,writeFileSync} from 'node:fs';
+const source=readFileSync('../foundry-local-api/scripts/generate-latency-build.mjs','utf8');
+const paths=JSON.parse(source.match(/const inputs = (\[[^;]+\]);/)[1]);const hash=createHash('sha256');for(const path of paths)hash.update(path).update(readFileSync('../foundry-local-api/'+path));
+const marker=readFileSync('../foundry-local-api/module/src/latency-build.ts','utf8').match(/"([a-f0-9]{64})"/)[1];
+const digest=path=>createHash('sha256').update(readFileSync(path)).digest('hex');
+const report={capturedAt:new Date().toISOString(),scope:'Prepared disk artifacts; these imports do not start a service and are not identities of existing running processes.',ai:captureBuildIdentity(process.cwd()),mcp:startupBuildIdentity,python:{appDigest:digest('chatkit-server/app.py'),playerObservationDigest:digest('chatkit-server/player_observation.py')},native:{marker,markerInputs:paths,derivedMatches:hash.digest('hex')===marker,bundleDigest:digest('../foundry-local-api/module/dist/index.js'),compiledContainsMarker:readFileSync('../foundry-local-api/module/dist/index.js','utf8').includes(marker)}};
+writeFileSync('docs/prompt4-prepared-build.json',JSON.stringify(report,null,2));console.log(JSON.stringify({scope:report.scope,aiManifest:report.ai.manifestDigest,mcpManifest:report.mcp.manifestDigest,python:report.python,native:report.native}));

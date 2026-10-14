@@ -1,0 +1,26 @@
+[
+  {
+    "path": "module/src/commands/session-actions.test.ts",
+    "status": "changed"
+  },
+  {
+    "path": "module/src/commands/session-actions.ts",
+    "status": "changed"
+  },
+  {
+    "path": "server/src/endpoints/session-actions.test.ts",
+    "status": "changed"
+  },
+  {
+    "path": "server/src/endpoints/session-actions.ts",
+    "status": "changed"
+  },
+  {
+    "path": "shared/src/session-actions.ts",
+    "status": "changed"
+  },
+  {
+    "path": "server/src/endpoints/game-state.ts",
+    "status": "changed"
+  }
+]

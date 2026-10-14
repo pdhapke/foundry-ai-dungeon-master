@@ -1,0 +1,199 @@
+{
+  "rows": [
+    {
+      "file": "phase5-live-read-1790988353774.json",
+      "capturedAt": "2026-10-03T00:45:53.774Z",
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "user": "edtBL96Yu3058QAT",
+      "status": "complete",
+      "readiness": "ready",
+      "world": "izzy-campaign",
+      "client": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "nonGM": true,
+      "optedIn": true,
+      "visible": {
+        "tokens": [
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": false,
+          "regions": [],
+          "blockerAttribution": "out-of-range",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete",
+      "projectionBasis": "compiled disk helper, not authenticated AI adapter dispatch",
+      "issues": []
+    },
+    {
+      "file": "phase5-live-read-1790988490596.json",
+      "capturedAt": "2026-10-03T00:48:10.596Z",
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "user": "edtBL96Yu3058QAT",
+      "status": "complete",
+      "readiness": "ready",
+      "world": "izzy-campaign",
+      "client": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "nonGM": true,
+      "optedIn": true,
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete",
+      "projectionBasis": "compiled disk helper, not authenticated AI adapter dispatch",
+      "issues": []
+    },
+    {
+      "file": "phase5-live-read-1790988518694.json",
+      "capturedAt": "2026-10-03T00:48:38.694Z",
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "user": "edtBL96Yu3058QAT",
+      "status": "complete",
+      "readiness": "ready",
+      "world": "izzy-campaign",
+      "client": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "nonGM": true,
+      "optedIn": true,
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete",
+      "projectionBasis": "compiled disk helper, not authenticated AI adapter dispatch",
+      "issues": []
+    },
+    {
+      "file": "phase5-live-read-1790988540955.json",
+      "capturedAt": "2026-10-03T00:49:00.955Z",
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "user": "edtBL96Yu3058QAT",
+      "status": "complete",
+      "readiness": "ready",
+      "world": "izzy-campaign",
+      "client": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "nonGM": true,
+      "optedIn": true,
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete",
+      "projectionBasis": "compiled disk helper, not authenticated AI adapter dispatch",
+      "issues": []
+    },
+    {
+      "file": "phase5-live-read-1790988565579.json",
+      "capturedAt": "2026-10-03T00:49:25.579Z",
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "user": "edtBL96Yu3058QAT",
+      "status": "complete",
+      "readiness": "ready",
+      "world": "izzy-campaign",
+      "client": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "nonGM": true,
+      "optedIn": true,
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt",
+          "mb4UqhWbVwmKj47w"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "query": [
+        {
+          "id": "behind-door",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "near-observer",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        }
+      ],
+      "projectionStatus": "complete",
+      "projectionBasis": "compiled disk helper, not authenticated AI adapter dispatch",
+      "issues": []
+    }
+  ],
+  "scope": "Saved native receipts, disk projector separately; browser root-owned, not actual AI adapter live"
+}

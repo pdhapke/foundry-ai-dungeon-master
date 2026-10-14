@@ -1,0 +1,126 @@
+{
+  "capturedAt": "2026-10-02T21:53:25.862Z",
+  "deliveries": 3,
+  "results": [
+    {
+      "label": "two-step",
+      "duplicate": false,
+      "outcome": "confirmed",
+      "elapsedMs": 359.4362,
+      "completed": 2,
+      "hp": {
+        "value": 33,
+        "max": 40,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": ""
+      },
+      "uses": {
+        "max": "3",
+        "spent": 0,
+        "recovery": []
+      }
+    },
+    {
+      "label": "two-step",
+      "duplicate": true,
+      "outcome": "confirmed",
+      "elapsedMs": 13.080100000000016,
+      "completed": 2,
+      "hp": {
+        "value": 33,
+        "max": 40,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": ""
+      },
+      "uses": {
+        "max": "3",
+        "spent": 0,
+        "recovery": []
+      }
+    },
+    {
+      "label": "resource",
+      "duplicate": false,
+      "outcome": "uncertain",
+      "elapsedMs": 427.48850000000004,
+      "completed": 0,
+      "hp": {
+        "value": 40,
+        "max": 40,
+        "temp": 4,
+        "tempmax": 0,
+        "formula": ""
+      },
+      "uses": {
+        "max": "3",
+        "spent": 1,
+        "recovery": []
+      }
+    }
+  ],
+  "attackPending": true,
+  "sequencePending": true,
+  "storedStage": "resources-consumed",
+  "storedResources": {
+    "before": [
+      {
+        "type": "itemUses",
+        "spent": 0,
+        "cost": 1
+      }
+    ],
+    "after": [
+      1
+    ],
+    "verified": true,
+    "nativeUpdates": {
+      "activity": {},
+      "actor": {},
+      "create": [],
+      "delete": [],
+      "item": [
+        {
+          "_id": "pttA6bYy0Ru9W1Ng",
+          "system": {
+            "uses": {
+              "spent": 1
+            }
+          }
+        }
+      ],
+      "rolls": []
+    }
+  },
+  "receiptResources": {
+    "before": [
+      {
+        "type": "itemUses",
+        "spent": 0,
+        "cost": 1
+      }
+    ],
+    "after": [
+      1
+    ],
+    "verified": true,
+    "nativeUpdates": {
+      "activity": {},
+      "actor": {},
+      "create": [],
+      "delete": [],
+      "item": [
+        {
+          "_id": "pttA6bYy0Ru9W1Ng",
+          "system.uses.spent": 1
+        }
+      ],
+      "rolls": []
+    }
+  },
+  "errors": {
+    "outer": "Sequence persistence readback mismatch",
+    "inner": "Attack ledger acknowledgement unavailable"
+  }
+}

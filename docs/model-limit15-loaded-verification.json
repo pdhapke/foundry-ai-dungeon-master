@@ -1,0 +1,13 @@
+{
+  "capturedAt": "2026-10-02T23:55:51.872Z",
+  "checks": {
+    "limit15": true,
+    "pythonCode": true,
+    "aiManifest": true,
+    "mcpManifest": true
+  },
+  "loadedMaxModelTurns": 15,
+  "pythonCodeDigest": "07392bd21ba17d69a697b6349059567960cfb5939251f84d2775314d15935110",
+  "pass": true,
+  "inferenceRequests": 0
+}

@@ -1,0 +1,5 @@
+
+> foundry-ai-dungeon-master@0.1.0 check:manifest
+> node scripts/check-manifest.mjs
+
+AI Dungeon Master manifest is synchronized.

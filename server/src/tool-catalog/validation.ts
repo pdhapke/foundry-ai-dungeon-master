@@ -35,6 +35,7 @@ export function validateArguments(schema: AiDmJsonValue, value: AiDmJsonValue): 
       "$id",
       "type",
       "properties",
+      "propertyNames",
       "required",
       "additionalProperties",
       "items",
@@ -145,6 +146,10 @@ export function validateArguments(schema: AiDmJsonValue, value: AiDmJsonValue): 
         } else if (isObject(currentSchema["additionalProperties"] as AiDmJsonValue)) {
           visit(currentSchema["additionalProperties"]!, child, `${path}.${key}`);
         }
+      }
+      const propertyNames = currentSchema["propertyNames"];
+      if (propertyNames !== undefined) {
+        for (const key of Object.keys(current)) visit(propertyNames, key, `${path} property name`);
       }
       const minProperties = currentSchema["minProperties"];
       const maxProperties = currentSchema["maxProperties"];

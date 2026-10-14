@@ -1,0 +1,8 @@
+{
+  "capturedAt": "2026-10-02T19:52:20.545Z",
+  "automaticEventsEnabled": {
+    "namespace": "foundry-ai-dungeon-master",
+    "key": "automaticEventsEnabled",
+    "value": false
+  }
+}

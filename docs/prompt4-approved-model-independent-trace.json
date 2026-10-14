@@ -1,0 +1,77 @@
+{
+  "traceId": "b6db4f67-d44f-4625-92de-ac0e54949e8d",
+  "modelRequests": 2,
+  "modelRequestIndices": [
+    1,
+    2
+  ],
+  "transportRetryLimits": [
+    0,
+    0
+  ],
+  "toolStartCount": 1,
+  "providerResponseCount": 2,
+  "nativeVisibilityDispatches": 0,
+  "nativeVisibilityClocks": 0,
+  "mcpPerceptionCalls": 0,
+  "mcpCapabilityReads": 1,
+  "postStateComparisons": {
+    "worldId": true,
+    "tokenMode": true,
+    "scene": true,
+    "actors": true,
+    "views": true,
+    "fog": true,
+    "pause": true,
+    "combats": true,
+    "scenes": true,
+    "automaticEvents": true,
+    "playerGeneration": true,
+    "gmGeneration": true
+  },
+  "intendedPlayerGenerationStable": true,
+  "timings": {
+    "nodeFinishedMs": 11424.572700000368,
+    "pythonContextPreparedMs": 1314.2177000117954,
+    "modelResponseDurationsMs": [
+      5380.0294999964535,
+      2524.3022000067867
+    ],
+    "toolDurationMs": 1104.1741000080947,
+    "firstModelTextMs": 10036.146900005406
+  },
+  "timingLimits": "Python times share response scope; Node separate arrival scope. First stream chunk is not paint. No mutation/confirmed mechanical receipt; narration is unavailable refusal.",
+  "pair": {
+    "hash": "99e9c019dde31f1cf56580d3",
+    "complete": true,
+    "tool": "foundry_read_token_perception",
+    "arguments": {
+      "scene_id": "Nbj38PEdvw1zX1J9",
+      "token_id": "5afpFlCHHnclifNw",
+      "effective_user_id": "edtBL96Yu3058QAT",
+      "client_id": "client80f7f865-6ebf-4a83-ad44-33ab0c0747f2"
+    },
+    "returnedStatus": "unavailable",
+    "returnedIssueCode": "PLAYER_CLIENT_UNAVAILABLE",
+    "returnedObservation": null,
+    "returnedVisible": {
+      "tokens": [],
+      "notes": [],
+      "tiles": []
+    }
+  },
+  "expectedClientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "extraLiteralClientPrefix": true,
+  "threadPrivacy": {
+    "enrolledSafeThread": false,
+    "itemTypeCounts": {
+      "user_message": 3,
+      "hidden_context_item": 3,
+      "assistant_message": 5
+    },
+    "historicalPrivatePairCount": 2
+  },
+  "finalText": [
+    "No player description is confirmed: the opted-in player client is unavailable."
+  ]
+}

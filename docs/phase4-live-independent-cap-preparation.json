@@ -1,0 +1,22 @@
+{
+  "capturedAt": "2026-10-02T21:34:46.582Z",
+  "kind": "read-only-disk-preparation-not-runtime",
+  "capSettingCount": 1,
+  "temporaryCap": "3",
+  "rollback": {
+    "provider": "existing selected ChatGPT plan model only",
+    "setting": "AI_DM_CHATKIT_MAX_TURNS",
+    "temporary": "3",
+    "preparedAt": "2026-10-02T21:34:21.9481247Z",
+    "restoreRequired": true,
+    "promptResubmissions": 0,
+    "previousLine": null,
+    "approvedModelRequests": 6,
+    "providerRetries": 0,
+    "approvedEmbeddedPrompts": 2,
+    "appended": true
+  },
+  "maxRetriesZero": true,
+  "manualRestartStillRequired": true,
+  "noInferencePerformed": true
+}

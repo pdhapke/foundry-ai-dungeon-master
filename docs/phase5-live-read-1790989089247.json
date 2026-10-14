@@ -1,0 +1,211 @@
+{
+  "capturedAt": "2026-10-03T00:58:09.247Z",
+  "native": {
+    "capturedAt": "2026-10-03T00:58:09.231Z",
+    "observation": {
+      "version": 1,
+      "id": "82a0f941-da75-4a6d-8f94-9cabaa35e0c6",
+      "worldId": "izzy-campaign",
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "userId": "edtBL96Yu3058QAT",
+      "tokenId": "mb4UqhWbVwmKj47w",
+      "actorId": "GF6QQL8YXPLqx7pW",
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "isGM": false,
+      "optedIn": true,
+      "capturedAt": "2026-10-03T00:58:09.231Z",
+      "stateRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+      "readiness": "ready",
+      "basis": "request-local-native-render-flags",
+      "pendingRenderFlags": 0
+    },
+    "sceneId": "JYKHHWccpbXdZEGD",
+    "effectiveUserId": "edtBL96Yu3058QAT",
+    "tokenId": "mb4UqhWbVwmKj47w",
+    "status": "complete",
+    "issues": [],
+    "context": {
+      "selectedUser": true,
+      "selectedToken": true,
+      "tokenOwned": true,
+      "sceneLoaded": true
+    },
+    "visible": {
+      "tokens": [
+        "csPHYkeiwmfbpatt",
+        "mb4UqhWbVwmKj47w"
+      ],
+      "notes": [],
+      "tiles": []
+    },
+    "redaction": {
+      "occludedEntities": true,
+      "hiddenRegions": true,
+      "barrierDocumentIds": true,
+      "barrierCoordinates": true,
+      "secretDoors": true,
+      "exitDestinations": true
+    },
+    "queryPoints": [
+      {
+        "id": "behind-door",
+        "visible": true,
+        "regions": [],
+        "blockerAttribution": "none",
+        "blockerKeys": []
+      },
+      {
+        "id": "near-observer",
+        "visible": true,
+        "regions": [],
+        "blockerAttribution": "none",
+        "blockerKeys": []
+      }
+    ],
+    "effectiveSources": {
+      "vision": 1,
+      "light": 0
+    },
+    "isolation": {
+      "status": "complete",
+      "method": "foundry-v14-detection-modes",
+      "detectionModes": 2,
+      "unrelatedVisionSourcesIgnored": 0,
+      "visionProvidingLightsIgnored": 0
+    },
+    "environment": {
+      "fog": "complete",
+      "lighting": "complete",
+      "darkness": "complete",
+      "vision": "complete",
+      "regions": "complete",
+      "fogExplorationEnabled": true,
+      "tokenVisionEnabled": true,
+      "globalLight": false,
+      "darknessLevel": 1
+    },
+    "regions": [],
+    "visibleBarriers": [
+      {
+        "key": "barrier-1",
+        "kind": "door",
+        "state": "open",
+        "blocksVision": false,
+        "exit": false,
+        "destination": "redacted"
+      }
+    ],
+    "coveragePolygons": [
+      {
+        "source": "selected-token",
+        "points": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 1200,
+            "y": 0
+          },
+          {
+            "x": 1200,
+            "y": 800
+          },
+          {
+            "x": 0,
+            "y": 800
+          }
+        ]
+      }
+    ],
+    "fogRevision": "feade8e8eec08d8603df0db1f7cb270b9d6bedb412f4298427268bd86fd69aef",
+    "persistence": {
+      "beforeRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+      "afterRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+      "unchanged": true
+    },
+    "bounds": {
+      "truncated": false,
+      "visiblePerKind": 500,
+      "regions": 250,
+      "barriers": 500,
+      "coverageSources": 100,
+      "coveragePointsPerSource": 512,
+      "issues": 50
+    }
+  },
+  "projection": {
+    "sceneId": "JYKHHWccpbXdZEGD",
+    "tokenId": "mb4UqhWbVwmKj47w",
+    "effectiveUserId": "edtBL96Yu3058QAT",
+    "status": "complete",
+    "issues": [],
+    "context": {
+      "selectedUser": true,
+      "selectedToken": true,
+      "tokenOwned": true,
+      "sceneLoaded": true
+    },
+    "redaction": {
+      "occludedEntities": true,
+      "hiddenRegions": true,
+      "barrierDocumentIds": true,
+      "barrierCoordinates": true,
+      "secretDoors": true,
+      "exitDestinations": true
+    },
+    "visible": {
+      "tokens": [
+        "csPHYkeiwmfbpatt",
+        "mb4UqhWbVwmKj47w"
+      ],
+      "notes": [],
+      "tiles": []
+    },
+    "observation": {
+      "version": 1,
+      "id": "82a0f941-da75-4a6d-8f94-9cabaa35e0c6",
+      "worldId": "izzy-campaign",
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "userId": "edtBL96Yu3058QAT",
+      "tokenId": "mb4UqhWbVwmKj47w",
+      "actorId": "GF6QQL8YXPLqx7pW",
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "isGM": false,
+      "optedIn": true,
+      "capturedAt": "2026-10-03T00:58:09.231Z",
+      "stateRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+      "readiness": "ready",
+      "basis": "request-local-native-render-flags",
+      "pendingRenderFlags": 0
+    },
+    "isolation": {
+      "status": "complete",
+      "method": "foundry-v14-detection-modes",
+      "detectionModes": 2
+    },
+    "environment": {
+      "fog": "complete",
+      "lighting": "complete",
+      "darkness": "complete",
+      "vision": "complete",
+      "regions": "complete",
+      "fogExplorationEnabled": true,
+      "tokenVisionEnabled": true,
+      "globalLight": false,
+      "darknessLevel": 1
+    },
+    "persistence": {
+      "beforeRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+      "afterRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+      "unchanged": true
+    },
+    "fogRevision": "feade8e8eec08d8603df0db1f7cb270b9d6bedb412f4298427268bd86fd69aef",
+    "bounds": {
+      "truncated": false
+    },
+    "knowledge": "selected-player-only; request-local observation, re-read after changes; no GM fallback"
+  },
+  "projectionBasis": "compiled disk helper, not authenticated AI adapter dispatch",
+  "projectionSha256": "0388400870beaadff9f19050d0f40f42628e06c59d158cb8a28e5a4aecda9a91"
+}

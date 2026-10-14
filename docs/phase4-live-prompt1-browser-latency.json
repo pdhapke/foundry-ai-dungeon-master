@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "renderedReceipt": "unobserved: requires browser observation",
+  "diagnostics": {
+    "droppedRows": 0,
+    "overBudgetEvents": 0
+  },
+  "events": [
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "browser",
+      "stage": "browser-submit",
+      "elapsedMs": 0.09999999403953552,
+      "clockId": "b199826d-9c5f-4858-91aa-b02ce1c96501",
+      "timeOrigin": 1790982757933.5,
+      "atMs": 224021
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "browser",
+      "stage": "browser-response-headers",
+      "elapsedMs": 759.8000000119209,
+      "clockId": "b199826d-9c5f-4858-91aa-b02ce1c96501",
+      "timeOrigin": 1790982757933.5,
+      "atMs": 224780.60000002384
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "browser",
+      "stage": "browser-first-stream-chunk",
+      "elapsedMs": 761.1999999880791,
+      "clockId": "b199826d-9c5f-4858-91aa-b02ce1c96501",
+      "timeOrigin": 1790982757933.5,
+      "atMs": 224782
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "browser",
+      "stage": "browser-receipt-arrival",
+      "elapsedMs": 11997.40000000596,
+      "clockId": "b199826d-9c5f-4858-91aa-b02ce1c96501",
+      "timeOrigin": 1790982757933.5,
+      "atMs": 236018.20000001788
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "browser",
+      "stage": "browser-stream-end",
+      "elapsedMs": 16861.59999999404,
+      "clockId": "b199826d-9c5f-4858-91aa-b02ce1c96501",
+      "timeOrigin": 1790982757933.5,
+      "atMs": 240882.40000000596
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+      "component": "browser",
+      "stage": "browser-chatkit-response-end",
+      "elapsedMs": 16885.59999999404,
+      "clockId": "b199826d-9c5f-4858-91aa-b02ce1c96501",
+      "timeOrigin": 1790982757933.5,
+      "atMs": 240906.40000000596
+    }
+  ]
+}

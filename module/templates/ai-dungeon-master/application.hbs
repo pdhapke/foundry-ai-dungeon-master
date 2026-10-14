@@ -1,25 +1,43 @@
 <div class="ai-dm-chatkit-shell">
-  <p class="ai-dm-chatkit-status" role="status" aria-live="polite">{{status}}</p>
   {{#if isGm}}
-    <section class="ai-dm-provider" aria-label="ChatGPT authorization">
+    <header class="ai-dm-compact-header">
+      <label class="ai-dm-model-label">Model
+        <select data-chatgpt-model aria-label="Eligible ChatGPT model"></select>
+      </label>
+      <button type="button" data-action="cancelResponse" class="ai-dm-stop" hidden aria-label="Stop ongoing response">Stop</button>
+      <details class="ai-dm-account-menu">
+        <summary>Account/settings</summary>
+        <div class="ai-dm-menu-content">
+          <button type="button" data-action="chatGptRefresh">Check connection</button>
+          <button type="button" data-action="chatGptSignOut">Sign out / switch account</button>
+          <button type="button" data-action="reviewNativeActions">Review proposed actions and receipts</button>
+          <button type="button" data-player-surroundings>Player surroundings</button>
+          <button type="button" data-campaign-setup>Campaign setup (no model usage)</button>
+          {{#if isTestWorld}}<button type="button" data-forest-map>Forest test map (no model usage)</button>{{/if}}
+          <div class="ai-dm-diagnostics"></div>
+        </div>
+      </details>
+    </header>
+    <div class="ai-dm-reconnection">
       <p class="ai-dm-provider-status" role="status" aria-live="polite">{{providerStatus}}</p>
-      <div class="ai-dm-chatkit-toolbar">
-        <button type="button" data-action="chatGptSignIn">Continue with ChatGPT</button>
-        <button type="button" data-action="chatGptRefresh">Refresh status</button>
-        <button type="button" data-action="chatGptSignOut">Sign out</button>
-      </div>
-      <label>ChatGPT model
-        <select data-chatgpt-model aria-label="Eligible ChatGPT model"></select></label>
-    </section>
-    <div class="ai-dm-chatkit-toolbar">
-      <button type="button" data-action="contextResponse">Ask DM</button>
-      <button type="button" data-action="resolveAction">Resolve Action</button>
-      <button type="button" data-action="cancelResponse">Cancel response</button>
-      <button type="button" data-action="reviewNativeActions">Review native actions</button>
+      <button type="button" data-action="chatGptSignIn">Continue with ChatGPT</button>
     </div>
-    <p class="ai-dm-context-notice">The context button sends the scene name and ID, selected
-      actor/token IDs, target IDs, and combat round/turn. No journal or document text is sent.</p>
+  {{/if}}
+  <p class="ai-dm-chatkit-status" role="status" aria-live="polite" {{#unless status}}hidden{{/unless}}>{{status}}</p>
+  {{#if isGm}}
+    <section class="ai-dm-player-observations" aria-label="Player observation receipts" hidden></section>
+    <section class="ai-dm-campaign-setup" aria-label="Campaign setup preferences" hidden></section>
+    {{#if isTestWorld}}<section class="ai-dm-forest-map" aria-label="Forest map native review" hidden></section>{{/if}}
     <div class="ai-dm-chatkit-mount"></div>
-    <section class="ai-dm-native-actions" aria-label="Native action confirmations"></section>
+    <details class="ai-dm-review-drawer" hidden>
+      <summary>Proposed actions and confirmed receipts</summary>
+      <div class="ai-dm-review-content">
+        <section class="ai-dm-attack-actions" aria-label="Attack player decisions"></section>
+        <section class="ai-dm-native-actions" aria-label="Native action confirmations"></section>
+        <section class="ai-dm-campaign-actions" aria-label="Exact campaign change review"></section>
+        <section class="ai-dm-world-actions" aria-label="Exact world change review"></section>
+        <section class="ai-dm-world-file-actions" aria-label="Exact world file change review"></section>
+      </div>
+    </details>
   {{/if}}
 </div>

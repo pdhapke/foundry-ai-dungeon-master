@@ -1,0 +1,144 @@
+{
+  "context": {
+    "foundryVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.3",
+    "moduleVersion": "0.1.0",
+    "documentType": "Token",
+    "parentDocumentType": "Scene",
+    "parentDocumentId": "JYKHHWccpbXdZEGD",
+    "embedded": true
+  },
+  "mode": "update",
+  "results": [
+    {
+      "index": 0,
+      "context": {
+        "foundryVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "moduleVersion": "0.1.0",
+        "documentType": "Token",
+        "parentDocumentType": "Scene",
+        "parentDocumentId": "JYKHHWccpbXdZEGD",
+        "embedded": true
+      },
+      "mode": "update",
+      "valid": true,
+      "normalized": {
+        "sight": {
+          "visionMode": "darkvision",
+          "enabled": false,
+          "range": 0,
+          "angle": 360,
+          "color": null,
+          "attenuation": 0.1,
+          "brightness": 0,
+          "saturation": 0,
+          "contrast": 0
+        },
+        "_id": null,
+        "name": "",
+        "displayName": 0,
+        "actorId": null,
+        "actorLink": false,
+        "delta": null,
+        "x": 0,
+        "y": 0,
+        "elevation": 0,
+        "width": 1,
+        "height": 1,
+        "depth": 1,
+        "shape": 4,
+        "level": "defaultLevel0000",
+        "texture": {
+          "src": "icons/svg/mystery-man.svg",
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "fit": "contain",
+          "scaleX": 1,
+          "scaleY": 1,
+          "tint": "#ffffff",
+          "alphaThreshold": 0.75
+        },
+        "sort": 0,
+        "locked": false,
+        "lockRotation": false,
+        "rotation": 0,
+        "alpha": 1,
+        "hidden": false,
+        "disposition": -1,
+        "displayBars": 0,
+        "bar1": {
+          "attribute": "attributes.hp"
+        },
+        "bar2": {
+          "attribute": null
+        },
+        "light": {
+          "negative": false,
+          "priority": 0,
+          "alpha": 0.5,
+          "angle": 360,
+          "bright": 0,
+          "color": null,
+          "coloration": 1,
+          "dim": 0,
+          "attenuation": 0.5,
+          "luminosity": 0.5,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "animation": {
+            "type": null,
+            "speed": 5,
+            "intensity": 5,
+            "reverse": false
+          },
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "detectionModes": {},
+        "occludable": {
+          "radius": 0
+        },
+        "ring": {
+          "enabled": false,
+          "colors": {
+            "ring": null,
+            "background": null
+          },
+          "effects": 1,
+          "subject": {
+            "scale": 1,
+            "texture": null
+          }
+        },
+        "turnMarker": {
+          "mode": 1,
+          "animation": null,
+          "src": null,
+          "disposition": false
+        },
+        "movementAction": null,
+        "_movementHistory": [],
+        "_regions": [],
+        "flags": {}
+      },
+      "errors": [],
+      "warnings": [],
+      "inputUnchanged": true,
+      "persisted": false,
+      "migrationWarnings": [],
+      "limitations": [
+        "Document-level joint validation was skipped because this update candidate is partial and no baseline document source was provided."
+      ]
+    }
+  ],
+  "validCount": 1,
+  "invalidCount": 0,
+  "complete": true,
+  "persisted": false
+}

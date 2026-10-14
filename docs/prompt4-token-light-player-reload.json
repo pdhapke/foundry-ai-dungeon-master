@@ -1,0 +1,57 @@
+{
+  "before": {
+    "correlationId": "3e521def-b271-4e97-bdf8-e31d595a2db9",
+    "acknowledged": true,
+    "replayed": false,
+    "acknowledgedAt": "2026-10-03T20:19:10.528Z",
+    "clientUserId": "edtBL96Yu3058QAT",
+    "executingClientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+    "expectedSceneId": null,
+    "activeSceneId": "Nbj38PEdvw1zX1J9",
+    "scenePreloaded": false,
+    "activeSceneMatches": true,
+    "sceneReady": false,
+    "assets": [],
+    "viewport": {
+      "x": 487.99583378448074,
+      "y": 791.1835271492207,
+      "scale": 4.116135595381588
+    },
+    "applied": {
+      "preload": false,
+      "viewport": false
+    },
+    "warnings": [],
+    "incomplete": false,
+    "client": {
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "userId": "edtBL96Yu3058QAT",
+      "lane": "player",
+      "isGM": false,
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0"
+    }
+  },
+  "receipt": {
+    "correlationId": "9cb1cf52-27fd-4d64-8335-66a057f79bfb",
+    "acknowledged": true,
+    "replayed": false,
+    "acknowledgedAt": "2026-10-03T20:19:10.546Z",
+    "clientUserId": "edtBL96Yu3058QAT",
+    "executingClientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+    "reloadScheduled": true,
+    "reloadAfterMs": 500,
+    "client": {
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "userId": "edtBL96Yu3058QAT",
+      "lane": "player",
+      "isGM": false,
+      "foundryVersion": "14.368",
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "moduleVersion": "0.1.0"
+    }
+  }
+}

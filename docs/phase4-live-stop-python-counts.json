@@ -1,0 +1,19 @@
+{
+  "capturedAt": "2026-10-02T21:54:18.042663+00:00",
+  "baselineCapturedAt": "2026-10-02T21:49:07.820684+00:00",
+  "traceBytes": 213649,
+  "traceRows": 800,
+  "streamInvocations": 6,
+  "sdkHooks": 6,
+  "streamInvocationDelta": 0,
+  "sdkHookDelta": 0,
+  "databaseCounts": {
+    "threads": 13,
+    "items": 104
+  },
+  "databaseDelta": {
+    "threads": 0,
+    "items": 0
+  },
+  "scope": "Model invocation/hooks and database counts unchanged relative to pretrial baseline. Trace grew by37 non-inference metadata rows; no embedded request submitted by this worker."
+}

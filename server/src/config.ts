@@ -1,14 +1,43 @@
 import { randomBytes } from "node:crypto";
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
+import { existsSync, readFileSync, realpathSync, writeFileSync } from "node:fs";
+import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { config as loadDotenv } from "dotenv";
+// @ts-ignore Shared machine-local lifecycle module; no credential is committed here.
+import { readManagedCredential } from "../../../foundry-local-api/scripts/foundry-managed-credential.mjs";
 
 const serverRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const environmentPath = resolve(serverRoot, ".env");
 loadDotenv({ path: environmentPath, quiet: true });
 
+export interface AcceptanceFixture {
+  readonly worldId: string;
+  readonly userId: string;
+  readonly threadId: string;
+  readonly traceId: string;
+  readonly maxModelRequests: 1 | 2 | 3 | 4 | 5 | 6;
+  readonly expiresAt: string;
+}
+export function parseAcceptanceFixtures(raw: string | undefined, now = Date.now()): Readonly<Record<string, AcceptanceFixture>> {
+  if (!raw) return Object.freeze({});
+  let parsed: unknown;
+  try { parsed = JSON.parse(raw); } catch { throw new AiDmConfigError("Invalid acceptance fixture configuration."); }
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed) || Object.keys(parsed).length > 8) throw new AiDmConfigError("Invalid acceptance fixture configuration.");
+  const output: Record<string, AcceptanceFixture> = {};
+  for (const [id, entry] of Object.entries(parsed)) {
+    if (!/^[A-Za-z0-9_-]{1,64}$/.test(id) || !entry || typeof entry !== "object" || Array.isArray(entry)) throw new AiDmConfigError("Invalid acceptance fixture configuration.");
+    const value = entry as Record<string, unknown>;
+    if (Object.keys(value).sort().join(",") !== "expiresAt,maxModelRequests,threadId,traceId,userId,worldId" ||
+      !["worldId", "userId", "threadId"].every(key => typeof value[key] === "string" && /^[A-Za-z0-9_-]{1,128}$/.test(value[key] as string)) ||
+      typeof value["traceId"] !== "string" || !/^[a-f0-9-]{36}$/i.test(value["traceId"]) ||
+      ![1, 2, 3, 4, 5, 6].includes(value["maxModelRequests"] as number) || typeof value["expiresAt"] !== "string" ||
+      !Number.isFinite(Date.parse(value["expiresAt"])) || Date.parse(value["expiresAt"]) <= now || Date.parse(value["expiresAt"]) > now + 24 * 60 * 60_000)
+      throw new AiDmConfigError("Invalid acceptance fixture configuration.");
+    output[id] = Object.freeze({ ...value } as unknown as AcceptanceFixture);
+  }
+  return Object.freeze(output);
+}
 export interface AiDmServerConfig {
   host: "127.0.0.1" | "::1";
   port: number;
@@ -28,6 +57,9 @@ export interface AiDmServerConfig {
   chatkitPython: string;
   chatkitPort: number;
   chatkitDatabasePath: string;
+  campaignProtectedRoot: string;
+  acceptanceFixtures: Readonly<Record<string, AcceptanceFixture>>;
+  chatkitLegacyDatabasePath?: string;
   chatkitAuth: "existing" | "api-key";
 }
 
@@ -36,6 +68,30 @@ export class AiDmConfigError extends Error {
     super(message);
     this.name = "AiDmConfigError";
   }
+}
+
+/** Resolve existing ancestors too: a junction must not move private storage into Data. */
+function resolvedStoragePath(path: string): string {
+  let ancestor = resolve(path);
+  const suffix: string[] = [];
+  while (!existsSync(ancestor)) {
+    const parent = dirname(ancestor);
+    if (parent === ancestor) break;
+    suffix.unshift(relative(parent, ancestor));
+    ancestor = parent;
+  }
+  return resolve(realpathSync(ancestor), ...suffix);
+}
+
+export function assertPrivateChatkitPath(path: string, publicRoots: readonly string[]): string {
+  const target = resolvedStoragePath(path);
+  for (const root of publicRoots) {
+    const child = relative(resolvedStoragePath(root), target);
+    if (!child || (!isAbsolute(child) && child !== ".." && !child.startsWith(`..${sep}`))) {
+      throw new AiDmConfigError("ChatKit storage must be outside Foundry's publicly served Data tree.");
+    }
+  }
+  return target;
 }
 
 function parsePort(raw: string | undefined, defaultPort = 3940): number {
@@ -156,6 +212,12 @@ export function loadAiDmServerConfig(
     throw new AiDmConfigError("AI_DM_CHATKIT_AUTH must be existing or api-key.");
   }
   const runtimeRoot = resolve(environment["AI_DM_RUNTIME_ROOT"] ?? resolve(moduleRoot, ".runtime"));
+  const worldsRoot = resolve(environment["AI_DM_WORLDS_ROOT"] ?? resolve(moduleRoot, "../../worlds"));
+  const chatkitDatabasePath = assertPrivateChatkitPath(
+    environment["AI_DM_CHATKIT_DATABASE_PATH"] ??
+      resolve(moduleRoot, "../../../../.runtime/foundry-ai-dungeon-master/chatkit.sqlite"),
+    [resolve(moduleRoot, "../.."), dirname(worldsRoot)],
+  );
   return {
     host: parseLoopbackHost(environment["AI_DM_HOST"]),
     port: parsePort(environment["AI_DM_PORT"]),
@@ -171,17 +233,20 @@ export function loadAiDmServerConfig(
         process.platform === "win32" ? "Scripts/python.exe" : "bin/python",
       ),
     chatkitPort: parsePort(environment["AI_DM_CHATKIT_PORT"], 3941),
-    chatkitDatabasePath: resolve(
-      environment["AI_DM_CHATKIT_DATABASE_PATH"] ??
-        resolve(runtimeRoot, "ai-dungeon-master", "chatkit.sqlite"),
+    chatkitDatabasePath,
+    acceptanceFixtures: parseAcceptanceFixtures(environment["AI_DM_ACCEPTANCE_FIXTURES_JSON"]),
+    campaignProtectedRoot: assertPrivateChatkitPath(
+      environment["AI_DM_CAMPAIGN_PROTECTED_ROOT"] ?? resolve(dirname(chatkitDatabasePath), "campaign-worlds"),
+      [resolve(moduleRoot, "../.."), dirname(worldsRoot)],
     ),
-    worldsRoot: resolve(environment["AI_DM_WORLDS_ROOT"] ?? resolve(moduleRoot, "../../worlds")),
+    chatkitLegacyDatabasePath: resolve(runtimeRoot, "ai-dungeon-master", "chatkit.sqlite"),
+    worldsRoot,
     sourceBookRoot: environment["AI_DM_SOURCEBOOK_ROOT"]
       ? resolve(environment["AI_DM_SOURCEBOOK_ROOT"])
       : null,
     foundryLocalApiBaseUrl: parseLoopbackUrl(environment["FOUNDRY_LOCAL_API_URL"]),
     foundryLocalApiKey: optionalSecret(
-      environment["FOUNDRY_LOCAL_API_KEY"],
+        readManagedCredential()?.key ?? environment["FOUNDRY_LOCAL_API_KEY"],
       "FOUNDRY_LOCAL_API_KEY",
       16,
     ),

@@ -1,0 +1,103 @@
+[
+  {
+    "name": "unowned-token",
+    "result": {
+      "capturedAt": "2026-10-03T00:58:33.854Z",
+      "observation": {
+        "version": 1,
+        "id": "27c1b41a-1f9e-4d38-a335-94dac13db570",
+        "worldId": "izzy-campaign",
+        "sceneId": "JYKHHWccpbXdZEGD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "csPHYkeiwmfbpatt",
+        "actorId": null,
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T00:58:33.854Z",
+        "stateRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "sceneId": "JYKHHWccpbXdZEGD",
+      "effectiveUserId": "edtBL96Yu3058QAT",
+      "tokenId": "csPHYkeiwmfbpatt",
+      "status": "incomplete",
+      "issues": [
+        {
+          "code": "TOKEN_VISION_INACTIVE",
+          "message": "The selected Token has no active vision source on this client.",
+          "retryable": true,
+          "subjectId": "csPHYkeiwmfbpatt"
+        }
+      ],
+      "context": {
+        "selectedUser": true,
+        "selectedToken": true,
+        "tokenOwned": true,
+        "sceneLoaded": true
+      },
+      "visible": {
+        "tokens": [
+          "csPHYkeiwmfbpatt"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "redaction": {
+        "occludedEntities": true,
+        "hiddenRegions": true,
+        "barrierDocumentIds": true,
+        "barrierCoordinates": true,
+        "secretDoors": true,
+        "exitDestinations": true
+      },
+      "queryPoints": [],
+      "effectiveSources": {
+        "vision": 0,
+        "light": 0
+      },
+      "isolation": {
+        "status": "incomplete",
+        "method": null,
+        "detectionModes": 0,
+        "unrelatedVisionSourcesIgnored": 1,
+        "visionProvidingLightsIgnored": 0
+      },
+      "environment": {
+        "fog": "complete",
+        "lighting": "complete",
+        "darkness": "complete",
+        "vision": "incomplete",
+        "regions": "complete",
+        "fogExplorationEnabled": true,
+        "tokenVisionEnabled": false,
+        "globalLight": false,
+        "darknessLevel": 1
+      },
+      "regions": [],
+      "visibleBarriers": [],
+      "coveragePolygons": [],
+      "fogRevision": "feade8e8eec08d8603df0db1f7cb270b9d6bedb412f4298427268bd86fd69aef",
+      "persistence": {
+        "beforeRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+        "afterRevision": "613268c393c7f85d77dca53bd9bffdf69c5ed40002f7e788b3400094e2d52f4a",
+        "unchanged": true
+      },
+      "bounds": {
+        "truncated": false,
+        "visiblePerKind": 500,
+        "regions": 250,
+        "barriers": 500,
+        "coverageSources": 100,
+        "coveragePointsPerSource": 512,
+        "issues": 50
+      }
+    }
+  },
+  {
+    "name": "gm-substitution",
+    "error": "Error: {\"code\":\"NOT_CONNECTED\",\"message\":\"The selected user's opted-in rendering client is disconnected.\",\"retryable\":true}"
+  }
+]

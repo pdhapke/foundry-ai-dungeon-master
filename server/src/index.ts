@@ -3,7 +3,11 @@ import { createServer } from "node:http";
 import { randomBytes, randomUUID } from "node:crypto";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { join } from "node:path";
+import { dirname, join, resolve } from "node:path";
+import { mkdirSync } from "node:fs";
+import { inspectLegacyCampaign, PreparationPrivacyError, type PrivacyBlocker } from "./campaign-privacy.js";
+import { assertProtectedCampaignRoot } from "./context/protected-campaign.js";
+import { PreparationService } from "./preparation-service.js";
 
 import type {
   AiDmAuthenticatedIdentity,
@@ -15,15 +19,20 @@ import type {
 } from "@foundry-ai-dungeon-master/shared";
 
 import { createAiDmApp } from "./app.js";
+import { captureBuildIdentity } from "./build-identity.js";
+import { configureLatencyTrace } from "./latency-trace.js";
 import {
   AiDmFoundrySessionService,
   ChatGptPlanAuth,
   SqliteAiDmEnrollmentRepository,
   type AiDmLocalSessionProof,
 } from "./auth/index.js";
-import { loadAiDmServerConfig } from "./config.js";
+import { assertPrivateChatkitPath, loadAiDmServerConfig } from "./config.js";
 import { ChatKitReadTools } from "./chatkit/read-tools.js";
 import { ChatKitNativeActions } from "./chatkit/native-actions.js";
+import { ChatKitCampaignActions } from "./chatkit/campaign-actions.js";
+import { ChatKitWorldFileActions } from "./chatkit/world-file-actions.js";
+import { ChatKitToolAudit } from "./chatkit/tool-audit.js";
 import { createChatKitGateway } from "./chatkit/gateway.js";
 import { ContinuationCapsuleSigner } from "./context/index.js";
 import { WorldCampaignContext, worldCampaignRoot } from "./context/world-campaign.js";
@@ -76,7 +85,11 @@ class EmptyCatalogProvider implements ToolCatalogProvider {
 }
 
 async function main(): Promise<void> {
+  const buildIdentity = captureBuildIdentity(fileURLToPath(new URL("../../", import.meta.url)));
   const config = loadAiDmServerConfig();
+  // Enable only after reviewed MCP/native ordering and independent boundary gates pass.
+  const mutationBoundaryEnabled = true;
+  configureLatencyTrace(join(config.runtimeRoot, "ai-dungeon-master", "latency-traces.jsonl"));
   if (!config.foundryBrokerSecret) {
     throw new Error("Foundry identity broker unavailable; start the AI companion through Foundry.");
   }
@@ -110,7 +123,14 @@ async function main(): Promise<void> {
   });
   await chatGptAuth.initialize();
   const context = createCampaignContext();
-  const campaign = new WorldCampaignContext(config.worldsRoot);
+  mkdirSync(config.campaignProtectedRoot, { recursive: true });
+  const protectedCampaign = { protectedRoot: config.campaignProtectedRoot, publicDataRoot: dirname(config.worldsRoot) };
+  assertProtectedCampaignRoot(protectedCampaign);
+  const assertCampaignPersistencePrivate = () => {
+    assertProtectedCampaignRoot(protectedCampaign);
+    assertPrivateChatkitPath(database.path, [dirname(config.worldsRoot), resolve(fileURLToPath(new URL("../../../../", import.meta.url)))]);
+  };
+  const campaign = new WorldCampaignContext(config.worldsRoot, protectedCampaign);
   const catalogProvider = mcpClient
     ? new FoundryLocalApiProviderAdapter({
         providerVersion: "0.1.0",
@@ -141,7 +161,7 @@ async function main(): Promise<void> {
     directNodeIds: context.directNodeIds,
     contextForWorld: (worldId) => {
       try {
-        return createCampaignContext(worldCampaignRoot(config.worldsRoot, worldId));
+        return createCampaignContext(worldCampaignRoot(config.campaignProtectedRoot, worldId));
       } catch {
         return createCampaignContext();
       }
@@ -155,7 +175,7 @@ async function main(): Promise<void> {
   ): Promise<void> => {
     if (!mcpClient) throw new Error("Foundry capability provider unavailable.");
     const values = await Promise.all(
-      ["foundry_get_world", "foundry_get_user_by_id"].map((name) =>
+      ["foundry_get_world", "foundry_get_user_by_id", "foundry_get_user_status"].map((name) =>
         mcpClient.callTool(
           {
             name,
@@ -168,9 +188,13 @@ async function main(): Promise<void> {
     );
     const world = values[0] as Record<string, AiDmJsonValue>;
     const user = values[1] as Record<string, AiDmJsonValue>;
+    const status = values[2] as Record<string, AiDmJsonValue>;
     if (
       !world ||
       !user ||
+      !status ||
+      status["userId"] !== identity.userId ||
+      status["active"] !== true ||
       (world["_id"] ?? world["id"]) !== identity.worldId ||
       (user["_id"] ?? user["id"]) !== identity.userId ||
       !(user["isGM"] === true || Number(user["role"]) >= 4)
@@ -178,9 +202,36 @@ async function main(): Promise<void> {
       throw new Error("Current Foundry GM authorization required.");
   };
   const chatkitSecret = randomBytes(32).toString("hex");
+  const jobsRoot = join(config.runtimeRoot, 'ai-dungeon-master', 'preparation-jobs');
+  mkdirSync(jobsRoot, { recursive: true });
+  const preparationService = new PreparationService({ worldsRoot: config.worldsRoot, protectedCampaign,
+    acceptanceFixtures:config.acceptanceFixtures,
+    ...(mcpClient ? { mcpClient } : {}),
+    jobsRoot, database: database.connection, sidecarUrl: `http://127.0.0.1:${config.chatkitPort}`, internalSecret: chatkitSecret,
+    authorize: authorizeChatKit, assertPrivateStorage: worldId => {
+      assertCampaignPersistencePrivate();
+      if (!inspectLegacyCampaign(config.worldsRoot, worldId).ready) throw new PreparationPrivacyError(['public-campaign-copies']);
+    },
+  });
+  preparationService.recoverStartup();
+  const toolAudit = new ChatKitToolAudit(database.connection);
   const nativeActions = mcpClient
     ? new ChatKitNativeActions(mcpClient, database.connection, authorizeChatKit)
     : null;
+  // No privacy-verification callback: private campaign persistence is intentionally fail closed.
+  const campaignActions = new ChatKitCampaignActions(database.connection, authorizeChatKit, {
+    worldsRoot: config.worldsRoot,
+    protectedCampaign,
+    assertPrivateStorage: worldId => {
+      assertCampaignPersistencePrivate();
+      if (!inspectLegacyCampaign(config.worldsRoot, worldId).ready) throw new PreparationPrivacyError(["public-campaign-copies"]);
+    },
+  });
+  const worldFileActions = new ChatKitWorldFileActions(
+    config.worldsRoot,
+    database.connection,
+    authorizeChatKit,
+  );
   const readCatalog = new TrustedToolCatalog(
     catalogProvider,
     CHATKIT_READ_TOOL_METADATA,
@@ -188,8 +239,13 @@ async function main(): Promise<void> {
   );
   const readTools = mcpClient
     ? new ChatKitReadTools(mcpClient, authorizeChatKit, readCatalog, {
+        allowMutationBoundary: mutationBoundaryEnabled,
         internalSecret: chatkitSecret,
+        toolAudit: toolAudit.observe,
         campaign,
+        campaignActions,
+        worldFiles: worldFileActions,
+        preparationAction: (identity, body, signal) => preparationService.execute(identity, body, signal, 'dm'),
         ...(nativeActions ? { actions: nativeActions } : {}),
       })
     : null;
@@ -212,10 +268,12 @@ async function main(): Promise<void> {
         ...process.env,
         AI_DM_CHATKIT_INTERNAL_SECRET: chatkitSecret,
         AI_DM_CHATKIT_READ_URL: `http://127.0.0.1:${config.port}/internal/chatkit/read`,
+        AI_DM_ACCEPTANCE_FIXTURES_JSON: JSON.stringify(config.acceptanceFixtures),
         AI_DM_CHATKIT_DATABASE_PATH: config.chatkitDatabasePath,
+        AI_DM_CHATKIT_LEGACY_DATABASE_PATH: config.chatkitLegacyDatabasePath,
       },
       stdio: "inherit",
-      windowsHide: true,
+      windowsHide: false,
     },
   );
   chatkitChild.on("error", () =>
@@ -230,27 +288,49 @@ async function main(): Promise<void> {
     chatkitChild.kill();
   });
   const app = createAiDmApp({
+    buildIdentity,
     ...(readTools ? { chatkitReadHandler: readTools.handler } : {}),
     chatkitHandler: createChatKitGateway({
+      allowMutationBoundary: mutationBoundaryEnabled,
+      acceptanceFixtures: config.acceptanceFixtures,
       turns: new ChatKitTurns(database.connection),
       sidecarUrl: `http://127.0.0.1:${config.chatkitPort}`,
       internalSecret: chatkitSecret,
+      preparationAction: (identity, body, signal) => preparationService.execute(identity, body, signal, 'browser'),
       ...(nativeActions
         ? {
             nativeActions: (
               identity: AiDmAuthenticatedIdentity,
               body: unknown,
               signal: AbortSignal,
-            ) => nativeActions.browser(identity, body, signal),
+            ) =>
+              body && typeof body === "object" && (body as { kind?: unknown }).kind === "world-file"
+                ? worldFileActions.browser(identity, body, signal)
+                : body &&
+                    typeof body === "object" &&
+                    (body as { kind?: unknown }).kind === "campaign"
+                  ? campaignActions.browser(identity, body, signal)
+                  : nativeActions.browser(identity, body, signal),
           }
         : {}),
       allowedOrigins: config.allowedFoundryOrigins,
       authenticate: (input) =>
         foundrySessions.validateProof(foundrySessions.authenticate(input)).identity,
       authorize: authorizeChatKit,
-      beginReadRun: (identity, body, signal) => {
+      beginReadRun: (identity, body, signal, pauseRequest, traceId, releaseMutationSlot) => {
         if (!readTools) throw new Error("Foundry read provider unavailable");
-        return readTools.begin(identity, body, signal);
+        return readTools.begin(identity, body, signal, pauseRequest, traceId, releaseMutationSlot);
+      },
+      invalidatePreparation: (identity, reason) => readTools?.invalidatePreparation(identity, reason),
+      credentialExpiry: identity => config.chatkitAuth === "existing" ? chatGptAuth.status(identity.worldId, chatGptAuth.owner(identity.worldId) ?? identity.userId).expiresAt ?? null : null,
+      prepareContext: async (identity, signal) => {
+        const blockers: PrivacyBlocker[] = [];
+        try { assertProtectedCampaignRoot(protectedCampaign); } catch { blockers.push("protected-storage-unavailable"); }
+        try { assertPrivateChatkitPath(database.path, [dirname(config.worldsRoot), resolve(fileURLToPath(new URL("../../../../", import.meta.url)))]); } catch { blockers.push("public-operational-store"); }
+        if (!inspectLegacyCampaign(config.worldsRoot, identity.worldId).ready) blockers.push("public-campaign-copies");
+        if (blockers.length) throw new PreparationPrivacyError(blockers);
+        if (!readTools) throw new Error("Foundry context unavailable");
+        return readTools.prepare(identity, signal, JSON.stringify([config.chatkitAuth, config.openAiModel]), identity.clientId);
       },
       resolveAuthorization: async (identity) => {
         if (

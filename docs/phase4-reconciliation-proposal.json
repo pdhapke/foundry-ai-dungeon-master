@@ -1,0 +1,43 @@
+{
+  "status": "PROPOSAL ONLY — no ledger mutation authorized or performed",
+  "journalId": "bTu2x1pNiH8BhyVz",
+  "worldId": "izzy-campaign",
+  "userId": "X7X4KK7zca5U2Ics",
+  "hashAlgorithm": "SHA256 UTF8 JSON recursively sorted object keys; arrays preserve order",
+  "entries": [
+    {
+      "flag": "attackLedger",
+      "key": "X7X4KK7zca5U2Ics:fd9770908342716518d86d3485657ec30d5a7a3ec7594ac2b34d5fee2b23dd72",
+      "expectedHash": "508990d4f22c971fb7b640efcab23a27d333d6ab74e42c91cb538023815b3acd",
+      "expectedPending": true
+    },
+    {
+      "flag": "attackSequenceLedger",
+      "key": "X7X4KK7zca5U2Ics:phase4-049ca289-675e-4005-8350-b440b172a68a",
+      "expectedHash": "db0f6f496b415502a3afc7e00fd8cd735bfd0af2ea0cac8f94d917596e92d5d5",
+      "expectedPending": true
+    }
+  ],
+  "proposedChange": {
+    "pending": false,
+    "retainOriginalInputStateAndUncertainResult": true,
+    "terminalAudit": {
+      "status": "reconciled-without-mechanics-retry",
+      "reason": "Fixture resource use spent exactly one charge, independently read back. Attack roll never occurred; target HP40/temp4 unchanged in resource case. New resource fixture item removed and fresh original scene/pause/combat/token/HP state restored. No reroll, damage application, refund or workflow resume.",
+      "mechanicsResumed": false,
+      "approval": "REQUIRES EXPLICIT USER APPROVAL"
+    }
+  },
+  "preconditions": [
+    "Fresh read exact same private GM-only Journal in same world and exact current GM.",
+    "Both exact entry hashes and pending=true still match; no other pending entries or concurrent active workflow.",
+    "Verify resource/target/restoration evidence and no attack/damage calls for failed resource step.",
+    "Only these two pending booleans plus terminal audit fields may change; keep original uncertain receipts and immutable inputs.",
+    "Verify write/readback; exact duplicate remains uncertain and must not retry mechanics.",
+    "Do not clear native/server memory fences implicitly; manual restart and loaded verification still needed.",
+    "Failed original sequence remains terminal uncertain: no resume, reroll, reconsumption or replay effects. Preserve every other ledger entry."
+  ],
+  "expectedJournalHash": "5c748ccbaf96e3880694933823436e81753904bcddb89e6defcee711a289338c",
+  "expectedJournalFlagsHash": "ca4644b6c80f6bffaf23e6aebddd6688a23d0be3729ca79ac014475493c3cc12",
+  "freshReadAt": "2026-10-02T21:57:17.066Z"
+}

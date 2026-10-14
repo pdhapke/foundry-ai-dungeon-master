@@ -1,0 +1,15 @@
+{
+  "scope": "Read-only current campaign prerequisite check; not fixture acceptance",
+  "userId": "edtBL96Yu3058QAT",
+  "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "sceneId": "Nbj38PEdvw1zX1J9",
+  "tokenId": "5afpFlCHHnclifNw",
+  "error": {
+    "code": "PERMISSION_DENIED",
+    "message": "The selected user cannot render this Scene.",
+    "retryable": false,
+    "correlationId": "285665a8-39e3-4139-b58f-d9179bc90cf5"
+  },
+  "campaignAccessChanged": false,
+  "inferenceRequests": 0
+}

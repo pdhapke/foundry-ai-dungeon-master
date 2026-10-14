@@ -1,0 +1,13 @@
+{
+  "scope": "Root directly observed Chrome incognito player tab 1958919419; model-free native rendering. Screenshot sampling proves observed state, not native event timestamps or latency.",
+  "userId": "edtBL96Yu3058QAT",
+  "sceneId": "JYKHHWccpbXdZEGD",
+  "observations": [
+    {"case":"closed door daylight","visible":"Left half of fixture grid visible; area behind full-height closed door black; target icon absent; hidden target absent","structuredEvidence":"phase5-live-read-1790988353774.json","qualification":"Initial out-of-range attribution was incorrect and requires superseding read"},
+    {"case":"open door daylight","visible":"Right-side grid revealed and target icon visible; hidden target absent","structuredEvidence":"phase5-live-read-1790988490596.json"},
+    {"case":"darkness global light disabled, local light on","visible":"Localized bright area near observer, dimmer explored area to right; target icon still visible under configured native range60 sight","structuredEvidence":"phase5-live-read-1790988518694.json","qualification":"No assumption that basic range60 means no dark vision; records actual configured native behavior"},
+    {"case":"local light off","visible":"Grid dims; observer and target icons remain visible under configured native sight; hidden target absent","structuredEvidence":"phase5-live-read-1790988540955.json"},
+    {"case":"confirmed walk","visible":"Observer outline moves one 100px grid cell right; target unchanged","structuredEvidence":"phase5-live-read-1790988565579.json","authoritativeEvidence":"phase5-live-steps.json walk mode: confirmed x300,y350"}
+  ],
+  "inferenceRequests": 0
+}

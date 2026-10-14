@@ -1,0 +1,8 @@
+{
+  "actorId": "uwyaFQurD4uFZCKC",
+  "campaignActorMutations": 0,
+  "fixtureTokenId": "csPHYkeiwmfbpatt",
+  "result": {
+    "error": "Error: {\"code\":\"PERMISSION_DENIED\",\"message\":\"The selected user does not own the selected vision Token.\",\"retryable\":false,\"fieldPath\":\"tokenId\",\"correlationId\":\"0b6c3f77-018c-4efa-a8a1-da6c324128f5\"}"
+  }
+}

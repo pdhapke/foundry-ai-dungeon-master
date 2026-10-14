@@ -1,0 +1,12 @@
+{
+  "id":"combat-round","version":"prompt1-recipes-v1","schema_version":1,"status":"partly-supported",
+  "systems":"Reviewed attack path dnd5e only; broader combat/multiattack rollout stays paused.",
+  "preconditions":["Current GM/world authority","Explicit combat and requested boundary","Native system action support","Player choices/reactions preserved"],
+  "minimum_reads":["foundry_read_play_state()","foundry_read_attack_state(scene_id, actor_id, request_id) when an attack is needed"],
+  "tools":["foundry_move_token(scene_id,token_id,x,y,mode)","foundry_roll_attack(action_id,scene_id,attacker_token_id,actor_id,item_id,activity_id,target_token_id,...)","foundry_apply_attack_damage(action_id,prior_attack_request_id)","foundry_set_actor_condition(scene_id,actor_id,condition_id,active)","foundry_advance_combat_turn(scene_id,combat_id)"],
+  "steps":["Read round, turn, order and defeated state; define whether boundary means end of current round or one traversal from current turn.","Choose only eligible NPC mechanics under explicit intent and system support; do not choose player actions.","Execute reviewed bounded steps, preserving each stable action ID and confirmed receipt; damage application never rerolls attack.","Stop for player turn, reactions, required choices, missing rules, partial or uncertain outcome.","After response/reconnect reread combat and receipts; confirmed actions are history, not instructions to replay. Reconcile changed initiative, new/defeated participants and combat ending.","Advance only a confirmed completed eligible turn and never beyond boundary. Report factual rolls/damage/effects and next actor."],
+  "evidence":"Confirmed per-step receipts plus current combat order/round/turn; attempted actions never prove HP/resources changed.",
+  "round_trips":"State reads plus movement/attack/application/effects/advance per eligible turn; resumable interactions can span model requests. No measured planning or latency claim.",
+  "gaps":["No durable round-boundary/progress coordinator","No blanket NPC reactions/resource support","Existing attack sequence presence does not authorize expanding paused rollout"],
+  "invalidation":["world/user/permissions/build/system","combat roster/order/turn revisions"]
+}

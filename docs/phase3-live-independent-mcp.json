@@ -1,0 +1,354 @@
+{
+  "capturedAt": "2026-10-02T19:52:20.712Z",
+  "status": {
+    "foundryVersion": "14.368",
+    "worldId": "izzy-campaign",
+    "systemId": "dnd5e",
+    "userId": "X7X4KK7zca5U2Ics"
+  },
+  "capabilities": {
+    "generatedAt": 1790970740522,
+    "serverVersion": "0.1.0",
+    "protocolVersion": 2,
+    "clients": [
+      {
+        "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+        "userId": "X7X4KK7zca5U2Ics",
+        "userName": "Gamemaster",
+        "isGM": true,
+        "lane": "gm",
+        "optedIn": true,
+        "protocolVersion": 2,
+        "foundryVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "moduleVersion": "0.1.0",
+        "transport": "websocket",
+        "capabilities": [
+          "actorCreateItem",
+          "actorDeleteItem",
+          "actorGetItem",
+          "actorGetRollData",
+          "actorListItems",
+          "actorUpdateItem",
+          "adventureExport",
+          "adventureImport",
+          "assets.references",
+          "attackConfirmed",
+          "attackState",
+          "bridgeEnrollmentTarget",
+          "canvasGetViewport",
+          "canvasPan",
+          "canvasPushView",
+          "cardsDeal",
+          "cardsDraw",
+          "cardsPass",
+          "cardsReset",
+          "cardsShuffle",
+          "chatList",
+          "chatSend",
+          "clientEnrolledIdentityAdopt",
+          "clientIdentityAdopt",
+          "clientPreloadScene",
+          "clientReadinessGet",
+          "clientReload",
+          "clientViewportApply",
+          "collisionValidateTokenPath",
+          "collisionValidateWallTopology",
+          "combatAddCombatant",
+          "combatEnd",
+          "combatNextRound",
+          "combatNextTurn",
+          "combatPreviousRound",
+          "combatPreviousTurn",
+          "combatRemoveCombatant",
+          "combatRollInitiative",
+          "combatStart",
+          "combatUpdateCombatant",
+          "coreActionConfirmed",
+          "coreState",
+          "dnd5eActorInventory",
+          "dnd5eActorSheet",
+          "dnd5eAdjustSpellSlot",
+          "dnd5eConfig",
+          "dnd5eRest",
+          "dnd5eRollAbilityCheck",
+          "dnd5eRollDeathSave",
+          "dnd5eRollSavingThrow",
+          "dnd5eRollSkill",
+          "dnd5eSimulateAction",
+          "dnd5eUseItem",
+          "documentBatchCreate",
+          "documentBatchDelete",
+          "documentBatchUpdate",
+          "documentCreate",
+          "documentDelete",
+          "documentGet",
+          "documentGetOwnership",
+          "documentList",
+          "documentQuery",
+          "documentSetOwnership",
+          "documentUpdate",
+          "dttGetStatus",
+          "dttMirrorGmView",
+          "dttPan",
+          "dttScaleToPhysical",
+          "effectCreate",
+          "effectDelete",
+          "effectGet",
+          "effectList",
+          "effectUpdate",
+          "effectiveUserExecute",
+          "embeddedChildCreate",
+          "embeddedChildDelete",
+          "embeddedChildGet",
+          "embeddedChildList",
+          "embeddedChildUpdate",
+          "enrichHtml",
+          "fileBrowse",
+          "fileCreateDirectory",
+          "fileUpload",
+          "fogExplorationGet",
+          "fogExplorationUpdate",
+          "folderMoveDocument",
+          "gameGetPaused",
+          "gameSetPaused",
+          "gameSetPausedConfirmed",
+          "getSetting",
+          "journalEntryCreatePage",
+          "journalEntryDeletePage",
+          "journalEntryGetPage",
+          "journalEntryListPages",
+          "journalEntryUpdatePage",
+          "localize",
+          "macroExecute",
+          "modules",
+          "movementBuildEvent",
+          "notify",
+          "packCreateEntry",
+          "packCreatePack",
+          "packDeleteEntry",
+          "packDeletePack",
+          "packDuplicatePack",
+          "packGetEntry",
+          "packGetIndex",
+          "packImportEntry",
+          "packList",
+          "packUpdateEntry",
+          "ping",
+          "placeableCreate",
+          "placeableDelete",
+          "placeableGet",
+          "placeableList",
+          "placeableUpdate",
+          "playlistPauseSound",
+          "playlistPlayAll",
+          "playlistPlaySound",
+          "playlistStopAll",
+          "playlistStopSound",
+          "references.audit",
+          "rollEvaluate",
+          "rollTableDraw",
+          "sceneActivate",
+          "sceneAlignGrid",
+          "sceneCreateToken",
+          "sceneDeleteToken",
+          "sceneGetDimensions",
+          "sceneGetToken",
+          "sceneListTokens",
+          "sceneMoveToken",
+          "sceneRenderSnapshot",
+          "sceneResetFog",
+          "sceneSetTokenVisibility",
+          "sceneUpdateToken",
+          "sceneVisibilityInspect",
+          "schemaDiscover",
+          "schemaValidate",
+          "search",
+          "sessionActionApply",
+          "sessionActionRead",
+          "setSetting",
+          "settings",
+          "status",
+          "system",
+          "trails-of-destiny.evaluate-creation",
+          "trails-of-destiny.get-actor-inventory",
+          "trails-of-destiny.get-actor-sheet",
+          "trails-of-destiny.get-catalog",
+          "trails-of-destiny.get-config",
+          "trails-of-destiny.get-experience-progress",
+          "trails-of-destiny.list-catalogs",
+          "trails-of-destiny.preview-builder",
+          "trails-of-destiny.preview-damage",
+          "trails-of-destiny.preview-initiative",
+          "trails-of-destiny.preview-recovery",
+          "trails-of-destiny.preview-threat-contest",
+          "trails-of-destiny.roll-action",
+          "transactionExecute",
+          "transactionPreflight",
+          "transactionRecover",
+          "user",
+          "userCreate",
+          "userDelete",
+          "userGet",
+          "userGetActiveGm",
+          "userGetCanvasSelection",
+          "userGetRole",
+          "userGetStatus",
+          "userGetTargets",
+          "userSetRole",
+          "userSetTargets",
+          "userUpdate",
+          "users",
+          "world",
+          "worldDocumentApply",
+          "worldDocumentRead",
+          "worldTimeAdvance",
+          "worldTimeGet"
+        ],
+        "connectedAt": 1790970614268,
+        "lastSeenAt": 1790970740511
+      }
+    ],
+    "capabilities": [
+      {
+        "id": "track0.protocol-negotiation",
+        "state": "supported",
+        "connected": true,
+        "liveVerified": true
+      },
+      {
+        "id": "track0.gm-command-lane",
+        "state": "supported",
+        "connected": true,
+        "liveVerified": true
+      },
+      {
+        "id": "track0.player-command-lane",
+        "state": "supported",
+        "connected": false,
+        "liveVerified": false,
+        "notes": [
+          "Requires explicit per-client opt-in."
+        ]
+      },
+      {
+        "id": "mcp-req-002.effective-user-execution",
+        "state": "supported",
+        "connected": false,
+        "liveVerified": false,
+        "notes": [
+          "Each bounded operation still requires separate acceptance evidence."
+        ]
+      },
+      {
+        "id": "mcp-req-003.schema-discovery-validation",
+        "state": "supported",
+        "connected": true,
+        "liveVerified": false
+      },
+      {
+        "id": "mcp-req-004.compensating-transactions",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "Strict verified compensation is not database isolation; browser crashes and observed hook side effects can require manual recovery."
+        ]
+      },
+      {
+        "id": "mcp-req-001.fog-exploration",
+        "state": "supported",
+        "connected": true,
+        "liveVerified": false
+      },
+      {
+        "id": "mcp-req-005.player-rendering-visibility",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "Structured player-context visibility, bounded redaction, and typed incomplete/error outcomes are source-implemented.",
+          "Acceptance still requires separate real GM and Izzy evidence for Regions, barriers, secret doors/exits, fog, light, darkness, vision, failures, and no persistence."
+        ]
+      },
+      {
+        "id": "mcp-req-006.tile-region-behavior-crud",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "Exact-subtype validation, full-candidate partial updates, dry-run diffs, replay, and compensation are source-implemented.",
+          "Family-specific live CRUD, revision, rollback, warning, sibling, and unrelated-field preservation acceptance remains open."
+        ]
+      },
+      {
+        "id": "mcp-req-007.playlist-table-card-crud",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "Family-specific CRUD, rollback, secrecy, and sibling-preservation acceptance remains open."
+        ]
+      },
+      {
+        "id": "mcp-req-008.asset-lifecycle",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "Filesystem operations require server-side fixture ownership evidence.",
+          "Media metadata/decode and complete reference reporting remain open."
+        ]
+      },
+      {
+        "id": "mcp-req-009.reference-audit",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "The current graph scan is intentionally reported as incomplete and does not yet cover every ledger category."
+        ]
+      },
+      {
+        "id": "mcp-req-010.collision-topology",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "Continuous swept token footprints, door states, first-collision evidence, and malformed-topology failures are source-implemented.",
+          "The complete live fixture matrix and two independent unchanged-state reads remain open."
+        ]
+      },
+      {
+        "id": "mcp-req-011.client-readiness",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "Acknowledgement validation is implemented; live multi-client readiness and durable replay proof remain open."
+        ]
+      },
+      {
+        "id": "mcp-req-012.dnd5e-simulation",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "The current deterministic projection is not yet equivalent to the full dnd5e activity engine."
+        ]
+      },
+      {
+        "id": "mcp-req-013.movement-events",
+        "state": "partial",
+        "connected": true,
+        "liveVerified": false,
+        "notes": [
+          "Live verification requires an automatically forwarded durable movement event.",
+          "Durable client outbox delivery, exact gaps, persistent deduplication, movement filters, Region geometry, and first-stop pending state are source-implemented.",
+          "Real Izzy movement, disconnect/retry, corruption/restart recovery, suppression, and pending-adjudication acceptance remain open."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "preparedAt": "2026-10-03T03:46:45.128Z",
+  "approval": "User approved immediately after exact final proposal",
+  "prompt": "Read only. For Izzy (user edtBL96Yu3058QAT), token 5afpFlCHHnclifNw in scene Nbj38PEdvw1zX1J9, request foundry_read_token_perception using exact opted-in player client80f7f865-6ebf-4a83-ad44-33ab0c0747f2. Never substitute a GM client. Give a brief description using only that confirmed player observation. Keep unconfirmed threats, secret doors, trap outcomes and environmental causes unknown. If perception is unavailable or unsupported, say no player description is confirmed and stop. Do not move, roll, reveal, change pause/combat/doors, write records or mutate the world. Do not use private world context, retrieval or prior history as narration evidence.",
+  "provider": "current ChatGPT authorization",
+  "model": "gpt-5.6-sol",
+  "maxModelRequests": 15,
+  "providerRetries": 0,
+  "commandRetries": 0,
+  "extraNarratorCalls": 0,
+  "status": "completed-once-no-retry",
+  "aiTraceLineBaseline": 2331,
+  "mcpTraceLineBaseline": 6680,
+  "submissionObservedAt": "2026-10-03T03:47:34.362Z",
+  "traceId": "b6db4f67-d44f-4625-92de-ac0e54949e8d",
+  "browserObservation": {
+    "observedAt": "2026-10-03T03:48:42.591Z",
+    "text": "No player description is confirmed: the opted-in player client is unavailable.",
+    "surface": "Actual embedded ordinary GM SDK frame",
+    "limit": "Private GM response; not strict player narrator or a successful observable description"
+  },
+  "afterState": "prompt4-approved-model-after.json",
+  "noRetry": true,
+  "preflightLeaseExpiry": "2026-10-03T03:55:01.890Z",
+  "rootCause": {
+    "kind": "prompt-authoring-malformed-client-id",
+    "expected": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+    "requested": "client80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+    "effect": "Exact-client refusal before native perception; real intended client was connected",
+    "correctClientRead": "prompt4-approved-model-correct-client-read.json"
+  },
+  "modelRequestsObserved": 2,
+  "correctedProposal": "prompt4-approved-model-corrected-proposal.md"
+}

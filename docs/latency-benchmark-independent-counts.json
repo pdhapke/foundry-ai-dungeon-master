@@ -1,0 +1,22 @@
+{
+  "modelRequests": 2,
+  "modelTraceIds": [
+    "479005cd-d3d7-4e91-b848-1e8c07abbac5",
+    "48fe577f-6a51-4647-963e-73da94e01e01"
+  ],
+  "directConfirmed": 2,
+  "directTraceIds": [
+    "e62895c8-20f7-4b92-b978-a6241638a8e8",
+    "46502620-e17b-41c1-9e6e-0e3faebaaf63"
+  ],
+  "credentialResolutionIntervals": [
+    {
+      "traceId": "479005cd-d3d7-4e91-b848-1e8c07abbac5",
+      "durationMs": 1140.3865000000224
+    },
+    {
+      "traceId": "48fe577f-6a51-4647-963e-73da94e01e01",
+      "durationMs": 570.3096000000369
+    }
+  ]
+}

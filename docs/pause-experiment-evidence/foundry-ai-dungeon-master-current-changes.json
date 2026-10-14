@@ -1,0 +1,38 @@
+[
+  {
+    "path": "chatkit-server/test_prompt.py",
+    "state": "changed"
+  },
+  {
+    "path": "server/src/chatkit/pause-actions.ts",
+    "state": "changed"
+  },
+  {
+    "path": "server/src/chatkit/pause-request.ts",
+    "state": "changed"
+  },
+  {
+    "path": "chatkit-server/app.py",
+    "state": "changed"
+  },
+  {
+    "path": "chatkit-server/dm_prompt.py",
+    "state": "changed"
+  },
+  {
+    "path": "chatkit-server/test_app.py",
+    "state": "changed"
+  },
+  {
+    "path": "server/src/chatkit/gateway.ts",
+    "state": "changed"
+  },
+  {
+    "path": "server/src/chatkit/native-actions.ts",
+    "state": "changed"
+  },
+  {
+    "path": "server/src/chatkit/read-tools.ts",
+    "state": "changed"
+  }
+]

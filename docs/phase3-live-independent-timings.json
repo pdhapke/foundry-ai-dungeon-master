@@ -1,0 +1,53 @@
+{
+  "samples": [
+    {
+      "traceId": "a7ab4098-e197-45db-8fdc-270252919e1f",
+      "confirmedActionMs": 6789.799999982119,
+      "receiptArrivalMs": 7027.899999976158,
+      "finalNarrationMs": 10400.799999982119,
+      "modelRequests": 2,
+      "modelDurationsMs": [
+        4342.862899997272,
+        3249.4685999990907
+      ],
+      "receiptCommitMs": 24.257299985038117,
+      "boundaryConfirmed": true
+    },
+    {
+      "traceId": "91ba6a86-327e-4bc5-9041-a4eefcc8922e",
+      "confirmedActionMs": 246.39999997615814,
+      "receiptArrivalMs": 294.2999999821186,
+      "finalNarrationMs": null,
+      "modelRequests": 0,
+      "modelDurationsMs": [],
+      "receiptCommitMs": null,
+      "boundaryConfirmed": false
+    },
+    {
+      "traceId": "38098405-c356-4357-8833-9d6967aaded8",
+      "confirmedActionMs": 6402.5,
+      "receiptArrivalMs": 6559.799999982119,
+      "finalNarrationMs": 9442.09999999404,
+      "modelRequests": 2,
+      "modelDurationsMs": [
+        4052.8103000251576,
+        2779.908800002886
+      ],
+      "receiptCommitMs": 14.049899997189641,
+      "boundaryConfirmed": true
+    },
+    {
+      "traceId": "899c2a62-e647-412d-a7e9-118b4ed98e69",
+      "confirmedActionMs": 223.19999998807907,
+      "receiptArrivalMs": 263.19999998807907,
+      "finalNarrationMs": null,
+      "modelRequests": 0,
+      "modelDurationsMs": [],
+      "receiptCommitMs": null,
+      "boundaryConfirmed": false
+    }
+  ],
+  "renderTimings": "unavailable; qualitative root observation only",
+  "sameClockNativeBrowser": true,
+  "scope": "one sample per command; no distributions/comparison claim"
+}

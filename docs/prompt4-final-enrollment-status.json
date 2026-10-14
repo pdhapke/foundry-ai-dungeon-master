@@ -1,0 +1,12 @@
+{
+  "scope": "Sanitized authorization status; no credential payload",
+  "userId": "edtBL96Yu3058QAT",
+  "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "lane": "player",
+  "consent": true,
+  "delivery": "accepted",
+  "expiresAt": "2026-10-03T03:49:55.266Z",
+  "priorExpiryBehavior": "Read-only final verification returned NOT_CONNECTED after prior lease expired; no GM fallback. Same-client authorized renewal followed by receiver marker and full restoration checks passed.",
+  "automaticRenewalDefect": "Recorded and deferred at user request; unfixed",
+  "inferenceRequests": 0
+}

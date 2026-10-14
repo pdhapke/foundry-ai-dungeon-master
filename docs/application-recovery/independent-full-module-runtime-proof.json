@@ -1,0 +1,11 @@
+{
+  "capturedAt": "2026-10-02T21:20:10.752Z",
+  "allModuleRuntimeEquivalent": true,
+  "canonicalLength": 32700,
+  "candidateLength": 32700,
+  "sha256": "d70c63e57077f43c0cb39dd1e9aaa4629752fafd0b009186fe8f646937c4c31c",
+  "firstDifference": 32700,
+  "cacheExcerpt": ".#instance=null,await super.close(options)}}export{AiDungeonMasterApplication};\n",
+  "candidateExcerpt": ".#instance=null,await super.close(options)}}export{AiDungeonMasterApplication};\n",
+  "scope": "Complete module transpiled JS against reconstructed TS: all imports/constants/helpers/closures/class/export preserved; identifiers not minified; original __name diagnostic wrappers retained; type annotations erased. Does not assert original TS bytes."
+}

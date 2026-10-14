@@ -37,7 +37,23 @@ function normalizeRelativePath(value: string): string {
       "The source path must be relative to an allowed root.",
     );
   }
-  return value.replaceAll("\\", "/");
+  const normalized = value.replaceAll("\\", "/");
+  if (
+    normalized
+      .split("/")
+      .some(
+        (part) =>
+          !part ||
+          part === "." ||
+          part === ".." ||
+          /[:<>"|?*]/.test(part) ||
+          [...part].some((character) => character.charCodeAt(0) < 32) ||
+          /[. ]$/.test(part) ||
+          /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(?:\.|$)/i.test(part),
+      )
+  )
+    throw new ContextError("SOURCE_OUTSIDE_ROOT", "The source contains an unsafe path segment.");
+  return normalized;
 }
 
 export class CampaignSourceRepository implements ContextSourceReader {

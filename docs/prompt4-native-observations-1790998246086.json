@@ -1,0 +1,133 @@
+{
+  "worldId": "izzy-campaign",
+  "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "userId": "edtBL96Yu3058QAT",
+  "observations": [
+    {
+      "capturedAt": "2026-10-03T03:30:46.035Z",
+      "observation": {
+        "version": 1,
+        "id": "999a7250-4917-439d-bcb7-3af09a506de0",
+        "worldId": "izzy-campaign",
+        "sceneId": "nEzlJwo4h7Nc6NMD",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "2AhFaxDbmHCHfl5Y",
+        "actorId": "HwLVsif7eQ93ZqzK",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T03:30:46.035Z",
+        "stateRevision": "cc8dd060b43440a49051cc8e7c3a81a93fea81cf781d199b6f7db79e1d335a2a",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "sceneId": "nEzlJwo4h7Nc6NMD",
+      "effectiveUserId": "edtBL96Yu3058QAT",
+      "tokenId": "2AhFaxDbmHCHfl5Y",
+      "status": "complete",
+      "issues": [],
+      "context": {
+        "selectedUser": true,
+        "selectedToken": true,
+        "tokenOwned": true,
+        "sceneLoaded": true
+      },
+      "visible": {
+        "tokens": [
+          "2AhFaxDbmHCHfl5Y"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "redaction": {
+        "occludedEntities": true,
+        "hiddenRegions": true,
+        "barrierDocumentIds": true,
+        "barrierCoordinates": true,
+        "secretDoors": true,
+        "exitDestinations": true
+      },
+      "queryPoints": [
+        {
+          "id": "near-primary",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "beyond-door",
+          "visible": false,
+          "regions": [],
+          "blockerAttribution": "environment-ambiguous",
+          "blockerKeys": []
+        }
+      ],
+      "effectiveSources": {
+        "vision": 1,
+        "light": 1
+      },
+      "isolation": {
+        "status": "complete",
+        "method": "foundry-v14-detection-modes",
+        "detectionModes": 2,
+        "unrelatedVisionSourcesIgnored": 0,
+        "visionProvidingLightsIgnored": 0
+      },
+      "environment": {
+        "fog": "complete",
+        "lighting": "complete",
+        "darkness": "complete",
+        "vision": "complete",
+        "regions": "complete",
+        "fogExplorationEnabled": true,
+        "tokenVisionEnabled": true,
+        "globalLight": true,
+        "darknessLevel": 0
+      },
+      "regions": [],
+      "visibleBarriers": [],
+      "coveragePolygons": [
+        {
+          "source": "selected-token",
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 600,
+              "y": 0
+            },
+            {
+              "x": 600,
+              "y": 800
+            },
+            {
+              "x": 0,
+              "y": 800
+            }
+          ]
+        }
+      ],
+      "fogRevision": "51a6c84a99cfab29470124e175d4c23f8b7dc792fc7279f4e1f055eff9717d7b",
+      "persistence": {
+        "beforeRevision": "cc8dd060b43440a49051cc8e7c3a81a93fea81cf781d199b6f7db79e1d335a2a",
+        "afterRevision": "cc8dd060b43440a49051cc8e7c3a81a93fea81cf781d199b6f7db79e1d335a2a",
+        "unchanged": true
+      },
+      "bounds": {
+        "truncated": false,
+        "visiblePerKind": 500,
+        "regions": 250,
+        "barriers": 500,
+        "coverageSources": 100,
+        "coveragePointsPerSource": 512,
+        "issues": 50
+      }
+    }
+  ],
+  "evidenceScope": "native MCP only; not authenticated AI adapter or browser observation",
+  "inferenceCalls": 0
+}

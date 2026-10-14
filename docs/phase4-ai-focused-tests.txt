@@ -1,0 +1,19 @@
+✔ sequence scoped stable replay and changed ID arguments/auth fail without redispatch (24.5895ms)
+✔ source drift or lost receipt fences fresh IDs and original replay never rerolls (2.8146ms)
+✔ resume ticket cannot leave its conversation and models cannot resolve reactions (2.5359ms)
+✔ pending durable crash claim reopens and does not dispatch; isolation remains enforced (1.3993ms)
+✔ clean deadline resume preserves cumulative plan and old correlation without reroll (4.3308ms)
+✔ independent semantic sequence rejects missing roll (21.5638ms)
+✔ independent semantic sequence rejects miss damage (2.6931ms)
+✔ independent semantic sequence rejects child correlation (1.2932ms)
+✔ independent semantic sequence rejects empty resource evidence (1.5471ms)
+✔ independent semantic sequence rejects mutation mismatch (1.4886ms)
+✔ independent plan/source/count corruption creates uncertain durable receipt not synthetic success (8.4806ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 637.3966

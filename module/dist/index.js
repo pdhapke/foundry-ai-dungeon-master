@@ -4,10 +4,10 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 
-// ../shared/dist/ai-dungeon-master.js
+// Data/Data/modules/foundry-ai-dungeon-master/shared/dist/ai-dungeon-master.js
 var AI_DM_PROTOCOL_VERSION = 2;
 
-// ../node_modules/zod/v4/classic/external.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/external.js
 var external_exports = {};
 __export(external_exports, {
   $brand: () => $brand,
@@ -270,7 +270,7 @@ __export(external_exports, {
   xor: () => xor
 });
 
-// ../node_modules/zod/v4/core/index.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/index.js
 var core_exports2 = {};
 __export(core_exports2, {
   $ZodAny: () => $ZodAny,
@@ -587,7 +587,7 @@ __export(core_exports2, {
   withParser: () => withParser
 });
 
-// ../node_modules/zod/v4/core/util.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/util.js
 var util_exports = {};
 __export(util_exports, {
   BIGINT_FORMAT_RANGES: () => BIGINT_FORMAT_RANGES,
@@ -729,9 +729,9 @@ function floatSafeRemainder(val, step) {
   return ratio - roundedRatio;
 }
 var EVALUATING = /* @__PURE__ */ Symbol("evaluating");
-function defineLazy(object2, key, getter) {
+function defineLazy(object3, key, getter) {
   let value = void 0;
-  Object.defineProperty(object2, key, {
+  Object.defineProperty(object3, key, {
     get() {
       if (value === EVALUATING) {
         return void 0;
@@ -743,7 +743,7 @@ function defineLazy(object2, key, getter) {
       return value;
     },
     set(v) {
-      Object.defineProperty(object2, key, {
+      Object.defineProperty(object3, key, {
         value: v
         // configurable: true,
       });
@@ -1430,7 +1430,7 @@ function constantCatch(value) {
   return fn;
 }
 
-// ../node_modules/zod/v4/core/core.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/core.js
 var _a;
 var NEVER = /* @__PURE__ */ Object.freeze({
   status: "aborted"
@@ -1552,7 +1552,7 @@ function config(newConfig) {
   return globalConfig;
 }
 
-// ../node_modules/zod/v4/core/errors.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/errors.js
 function _getMessage() {
   const internals = this._zod;
   internals.message ?? (internals.message = JSON.stringify(internals.def, jsonStringifyReplacer, 2));
@@ -1744,7 +1744,7 @@ function prettifyError(error62) {
   return lines.join("\n");
 }
 
-// ../node_modules/zod/v4/core/parse.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/parse.js
 function finalizeParams(callee, params) {
   return { callee: params?.callee ?? callee, Err: params?.Err };
 }
@@ -1904,7 +1904,7 @@ var _safeDecodeAsync = (_Err) => async (schema, value, _ctx) => {
 };
 var safeDecodeAsync = /* @__PURE__ */ _safeDecodeAsync($ZodRealError);
 
-// ../node_modules/zod/v4/core/regexes.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/regexes.js
 var regexes_exports = {};
 __export(regexes_exports, {
   anyString: () => anyString,
@@ -2076,7 +2076,7 @@ var sha512_hex = /^[0-9a-fA-F]{128}$/;
 var sha512_base64 = /* @__PURE__ */ fixedBase64(86, "==");
 var sha512_base64url = /* @__PURE__ */ fixedBase64url(86);
 
-// ../node_modules/zod/v4/core/checks.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/checks.js
 var $ZodCheck = /* @__PURE__ */ $constructor("$ZodCheck", (inst, def) => {
   var _a3;
   inst._zod ?? (inst._zod = {});
@@ -2552,7 +2552,7 @@ var $ZodCheckOverwrite = /* @__PURE__ */ $constructor("$ZodCheckOverwrite", (ins
   };
 });
 
-// ../node_modules/zod/v4/core/doc.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/doc.js
 var Doc = class {
   constructor(args = [], closed = {}) {
     this.content = [];
@@ -2593,14 +2593,14 @@ ${content.join("\n")}
   }
 };
 
-// ../node_modules/zod/v4/core/versions.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/versions.js
 var version = {
   major: 4,
   minor: 6,
   patch: 5
 };
 
-// ../node_modules/zod/v4/core/schemas.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/schemas.js
 var $ZodType = /* @__PURE__ */ $constructor("$ZodType", (inst, def) => {
   var _a3;
   inst ?? (inst = {});
@@ -3586,15 +3586,15 @@ var $ZodObjectJIT = /* @__PURE__ */ $constructor("$ZodObjectJIT", (inst, def) =>
     const syms = normalized.symbolKeys;
     const doc = new Doc(["payload", "ctx"], { shape, inst, memo: memo2, syms });
     const parseStr = (k) => `shape[${k}]._zod.run({ value: input[${k}], issues: [] }, ctx)`;
-    const prefixStr = (id, k) => `
-          let ${id}_ab = false;
-          for (let i = 0; i < ${id}.issues.length; i++) {
-            const iss = ${id}.issues[i];
+    const prefixStr = (id3, k) => `
+          let ${id3}_ab = false;
+          for (let i = 0; i < ${id3}.issues.length; i++) {
+            const iss = ${id3}.issues[i];
             iss.path = iss.path ? [${k}, ...iss.path] : [${k}];
             payload.issues.push(iss);
-            if (iss.continue !== true) ${id}_ab = true;
+            if (iss.continue !== true) ${id3}_ab = true;
           }
-          if (${id}_ab && ctx && ctx.abortEarly) {
+          if (${id3}_ab && ctx && ctx.abortEarly) {
             payload.value = newResult;
             return payload;
           }`;
@@ -3608,34 +3608,34 @@ var $ZodObjectJIT = /* @__PURE__ */ $constructor("$ZodObjectJIT", (inst, def) =>
     for (const key of normalized.allKeys) {
       if (key === "__proto__")
         continue;
-      const id = ids2[key];
+      const id3 = ids2[key];
       const k = typeof key === "symbol" ? `syms[${syms.indexOf(key)}]` : esc(key);
       const isPresent = `${k} in input`;
       const schema = shape[key];
       const optin = schema?._zod?.optin;
       const isOptionalIn = optin !== void 0;
       const isOptionalOut = schema?._zod?.optout === "optional";
-      doc.write(`const ${id} = ${parseStr(k)};`);
+      doc.write(`const ${id3} = ${parseStr(k)};`);
       if (isOptionalIn && isOptionalOut) {
-        const assign = optin === "optional" ? `${id}_present` : `${id}.value !== undefined || ${id}_present`;
+        const assign = optin === "optional" ? `${id3}_present` : `${id3}.value !== undefined || ${id3}_present`;
         doc.write(`
-        const ${id}_present = ${isPresent};
-        if (!${id}.issues.length || ${id}_present) {
-          if (${id}.issues.length) {${prefixStr(id, k)}
+        const ${id3}_present = ${isPresent};
+        if (!${id3}.issues.length || ${id3}_present) {
+          if (${id3}.issues.length) {${prefixStr(id3, k)}
           }
 
           if (${assign}) {
-            newResult[${k}] = ${id}.value;
+            newResult[${k}] = ${id3}.value;
           }
         }
 
       `);
       } else if (!isOptionalIn) {
         doc.write(`
-        const ${id}_present = ${isPresent};
-        if (${id}.issues.length) {${prefixStr(id, k)}
+        const ${id3}_present = ${isPresent};
+        if (${id3}.issues.length) {${prefixStr(id3, k)}
         }
-        if (!${id}_present && !${id}.issues.length) {
+        if (!${id3}_present && !${id3}.issues.length) {
           payload.issues.push({
             code: "invalid_type",
             expected: "nonoptional",
@@ -3648,22 +3648,22 @@ var $ZodObjectJIT = /* @__PURE__ */ $constructor("$ZodObjectJIT", (inst, def) =>
           }
         }
 
-        if (${id}_present) {
-          newResult[${k}] = ${id}.value;
+        if (${id3}_present) {
+          newResult[${k}] = ${id3}.value;
         }
 
       `);
       } else {
         doc.write(`
-        if (${id}.issues.length) {${prefixStr(id, k)}
+        if (${id3}.issues.length) {${prefixStr(id3, k)}
         }
       `);
         if (optin === "defaulted") {
-          doc.write(`newResult[${k}] = ${id}.value;`);
+          doc.write(`newResult[${k}] = ${id3}.value;`);
         } else {
           doc.write(`
-        if (${id}.value !== undefined || ${isPresent}) {
-          newResult[${k}] = ${id}.value;
+        if (${id3}.value !== undefined || ${isPresent}) {
+          newResult[${k}] = ${id3}.value;
         }
       `);
         }
@@ -5014,7 +5014,7 @@ function handleRefineResult(result, payload, input2, inst) {
   }
 }
 
-// ../node_modules/zod/v4/core/memoizer.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/memoizer.js
 var $ZodCyclicError = class extends Error {
   constructor() {
     super(`Cannot parse a reference cycle that closes through a transform`);
@@ -5291,7 +5291,7 @@ function isBackEdge(ctx, value) {
   return backEdges !== void 0 && isRef(value) && backEdges.has(value);
 }
 
-// ../node_modules/zod/v4/locales/index.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/index.js
 var locales_exports = {};
 __export(locales_exports, {
   ar: () => ar_default,
@@ -5359,7 +5359,7 @@ __export(locales_exports, {
   zhTW: () => zh_TW_default
 });
 
-// ../node_modules/zod/v4/locales/ar.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ar.js
 var error = () => {
   const Sizable = {
     string: { unit: "\u062D\u0631\u0641", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" },
@@ -5471,7 +5471,7 @@ function ar_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/az.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/az.js
 var error2 = () => {
   const Sizable = {
     string: { unit: "simvol", verb: "olmal\u0131d\u0131r" },
@@ -5582,7 +5582,7 @@ function az_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/be.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/be.js
 function getBelarusianPlural(count, one, few, many) {
   const absCount = Math.abs(count);
   const lastDigit = absCount % 10;
@@ -5751,7 +5751,7 @@ function be_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/bg.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/bg.js
 var error4 = () => {
   const Sizable = {
     string: { unit: "\u0441\u0438\u043C\u0432\u043E\u043B\u0430", verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430" },
@@ -5877,7 +5877,7 @@ function bg_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/bn.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/bn.js
 var error5 = () => {
   const Sizable = {
     string: { unit: "\u0985\u0995\u09CD\u09B7\u09B0", verb: "\u09A5\u09BE\u0995\u09A4\u09C7 \u09B9\u09AC\u09C7" },
@@ -5991,7 +5991,7 @@ function bn_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ca.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ca.js
 var error6 = () => {
   const Sizable = {
     string: { unit: "car\xE0cters", verb: "contenir" },
@@ -6105,7 +6105,7 @@ function ca_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ckb.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ckb.js
 var error7 = () => {
   const Sizable = {
     string: { unit: "\u067E\u06CC\u062A", verb: "\u0628\u06CE\u062A" },
@@ -6238,7 +6238,7 @@ function ckb_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/cs.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/cs.js
 var error8 = () => {
   const Sizable = {
     string: { unit: "znak\u016F", verb: "m\xEDt" },
@@ -6355,7 +6355,7 @@ function cs_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/da.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/da.js
 var error9 = () => {
   const Sizable = {
     string: { unit: "tegn", verb: "havde" },
@@ -6476,7 +6476,7 @@ function da_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/de.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/de.js
 var error10 = () => {
   const Sizable = {
     string: { unit: "Zeichen", verb: "zu haben" },
@@ -6590,7 +6590,7 @@ function de_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/el.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/el.js
 var error11 = () => {
   const Sizable = {
     string: { unit: "\u03C7\u03B1\u03C1\u03B1\u03BA\u03C4\u03AE\u03C1\u03B5\u03C2", verb: "\u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9" },
@@ -6703,7 +6703,7 @@ function el_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/en.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/en.js
 var error12 = () => {
   const Sizable = {
     string: { unit: "characters", verb: "to have" },
@@ -6828,7 +6828,7 @@ function en_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/eo.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/eo.js
 var error13 = () => {
   const Sizable = {
     string: { unit: "karaktrojn", verb: "havi" },
@@ -6943,7 +6943,7 @@ function eo_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/es.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/es.js
 var error14 = () => {
   const Sizable = {
     string: { unit: "caracteres", verb: "tener" },
@@ -7080,7 +7080,7 @@ function es_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/fa.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/fa.js
 var error15 = () => {
   const Sizable = {
     string: { unit: "\u06A9\u0627\u0631\u0627\u06A9\u062A\u0631", verb: "\u062F\u0627\u0634\u062A\u0647 \u0628\u0627\u0634\u062F" },
@@ -7200,7 +7200,7 @@ function fa_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/fi.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/fi.js
 var error16 = () => {
   const Sizable = {
     string: { unit: "merkki\xE4", subject: "merkkijonon" },
@@ -7318,7 +7318,7 @@ function fi_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/fr.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/fr.js
 var error17 = () => {
   const Sizable = {
     string: { unit: "caract\xE8res", verb: "avoir" },
@@ -7448,7 +7448,7 @@ function fr_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/fr-CA.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/fr-CA.js
 var error18 = () => {
   const Sizable = {
     string: { unit: "caract\xE8res", verb: "avoir" },
@@ -7561,7 +7561,7 @@ function fr_CA_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/gu.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/gu.js
 var error19 = () => {
   const Sizable = {
     string: { unit: "\u0A85\u0A95\u0ACD\u0AB7\u0AB0", verb: "\u0AB9\u0ACB\u0AB5\u0ABE \u0A9C\u0ACB\u0A88\u0A8F" },
@@ -7675,7 +7675,7 @@ function gu_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/he.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/he.js
 var error20 = () => {
   const TypeNames = {
     string: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA", gender: "f" },
@@ -7877,7 +7877,7 @@ function he_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/hi.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/hi.js
 var error21 = () => {
   const Sizable = {
     string: { unit: "\u0905\u0915\u094D\u0937\u0930", verb: "\u0930\u0916\u0928\u0947 \u0915\u0947 \u0932\u093F\u090F" },
@@ -7989,7 +7989,7 @@ function hi_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/hr.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/hr.js
 var error22 = () => {
   const Sizable = {
     string: { unit: "znakova", verb: "imati" },
@@ -8116,7 +8116,7 @@ function hr_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/hu.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/hu.js
 var error23 = () => {
   const Sizable = {
     string: { unit: "karakter", verb: "legyen" },
@@ -8230,7 +8230,7 @@ function hu_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/hy.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/hy.js
 function getArmenianPlural(count, one, many) {
   return Math.abs(count) === 1 ? one : many;
 }
@@ -8389,7 +8389,7 @@ function hy_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/id.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/id.js
 var error25 = () => {
   const Sizable = {
     string: { unit: "karakter", verb: "memiliki" },
@@ -8501,7 +8501,7 @@ function id_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/is.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/is.js
 var error26 = () => {
   const Sizable = {
     string: { unit: "stafi", verb: "a\xF0 hafa" },
@@ -8616,7 +8616,7 @@ function is_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/it.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/it.js
 var error27 = () => {
   const Sizable = {
     string: { unit: "caratteri", verb: "avere" },
@@ -8730,7 +8730,7 @@ function it_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ja.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ja.js
 var error28 = () => {
   const Sizable = {
     string: { unit: "\u6587\u5B57", verb: "\u3067\u3042\u308B" },
@@ -8843,7 +8843,7 @@ function ja_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ka.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ka.js
 var error29 = () => {
   const Sizable = {
     string: { unit: "\u10E1\u10D8\u10DB\u10D1\u10DD\u10DA\u10DD", verb: "\u10E3\u10DC\u10D3\u10D0 \u10E8\u10D4\u10D8\u10EA\u10D0\u10D5\u10D3\u10D4\u10E1" },
@@ -8961,7 +8961,7 @@ function ka_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/km.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/km.js
 var error30 = () => {
   const Sizable = {
     string: { unit: "\u178F\u17BD\u17A2\u1780\u17D2\u179F\u179A", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" },
@@ -9077,12 +9077,12 @@ function km_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/kh.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/kh.js
 function kh_default() {
   return km_default();
 }
 
-// ../node_modules/zod/v4/locales/kn.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/kn.js
 var error31 = () => {
   const Sizable = {
     string: { unit: "\u0C85\u0C95\u0CCD\u0CB7\u0CB0\u0C97\u0CB3\u0CC1", verb: "\u0CB9\u0CCA\u0C82\u0CA6\u0CB2\u0CC1" },
@@ -9198,7 +9198,7 @@ function kn_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ko.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ko.js
 var error32 = () => {
   const Sizable = {
     string: { unit: "\uBB38\uC790", verb: "to have" },
@@ -9315,7 +9315,7 @@ function ko_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/lt.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/lt.js
 var capitalizeFirstCharacter = (text) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
 };
@@ -9523,7 +9523,7 @@ function lt_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/mk.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/mk.js
 var error34 = () => {
   const Sizable = {
     string: { unit: "\u0437\u043D\u0430\u0446\u0438", verb: "\u0434\u0430 \u0438\u043C\u0430\u0430\u0442" },
@@ -9638,7 +9638,7 @@ function mk_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ms.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ms.js
 var error35 = () => {
   const Sizable = {
     string: { unit: "aksara", verb: "mempunyai" },
@@ -9751,7 +9751,7 @@ function ms_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ne.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ne.js
 var error36 = () => {
   const Sizable = {
     string: { unit: "\u0905\u0915\u094D\u0937\u0930", verb: "\u0939\u0941\u0928\u0941\u092A\u0930\u094D\u091B" },
@@ -9863,7 +9863,7 @@ function ne_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/nl.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/nl.js
 var error37 = () => {
   const Sizable = {
     string: { unit: "tekens", verb: "heeft" },
@@ -9979,7 +9979,7 @@ function nl_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/nn.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/nn.js
 var error38 = () => {
   const Sizable = {
     string: { unit: "teikn", verb: "\xE5 ha" },
@@ -10093,7 +10093,7 @@ function nn_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/no.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/no.js
 var error39 = () => {
   const Sizable = {
     string: { unit: "tegn", verb: "\xE5 ha" },
@@ -10207,7 +10207,7 @@ function no_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ota.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ota.js
 var error40 = () => {
   const Sizable = {
     string: { unit: "harf", verb: "olmal\u0131d\u0131r" },
@@ -10322,7 +10322,7 @@ function ota_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ps.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ps.js
 var error41 = () => {
   const Sizable = {
     string: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" },
@@ -10442,7 +10442,7 @@ function ps_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/pl.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/pl.js
 var error42 = () => {
   const Sizable = {
     string: { unit: "znak\xF3w", verb: "mie\u0107" },
@@ -10557,7 +10557,7 @@ function pl_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/pt.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/pt.js
 var error43 = () => {
   const Sizable = {
     string: { unit: "caracteres" },
@@ -10701,7 +10701,7 @@ function pt_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/pt-BR.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/pt-BR.js
 var error44 = () => {
   const Sizable = {
     string: { unit: "caracteres" },
@@ -10846,7 +10846,7 @@ function pt_BR_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ro.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ro.js
 var error45 = () => {
   const Sizable = {
     string: { unit: "caractere", verb: "s\u0103 aib\u0103" },
@@ -10969,7 +10969,7 @@ function ro_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ru.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ru.js
 function getRussianPlural(count, one, few, many) {
   const absCount = Math.abs(count);
   const lastDigit = absCount % 10;
@@ -11138,7 +11138,7 @@ function ru_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/sk.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/sk.js
 var error47 = () => {
   const Sizable = {
     string: { unit: "znakov", verb: "ma\u0165" },
@@ -11255,7 +11255,7 @@ function sk_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/sl.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/sl.js
 var error48 = () => {
   const Sizable = {
     string: { unit: "znakov", verb: "imeti" },
@@ -11370,7 +11370,7 @@ function sl_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/sv.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/sv.js
 var error49 = () => {
   const Sizable = {
     string: { unit: "tecken", verb: "att ha" },
@@ -11486,7 +11486,7 @@ function sv_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ta.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ta.js
 var error50 = () => {
   const Sizable = {
     string: { unit: "\u0B8E\u0BB4\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1\u0B95\u0BCD\u0B95\u0BB3\u0BCD", verb: "\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD" },
@@ -11602,7 +11602,7 @@ function ta_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/tg.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/tg.js
 var error51 = () => {
   const Sizable = {
     string: { unit: "\u0430\u043B\u043E\u043C\u0430\u0442", verb: "\u0434\u043E\u0448\u0442\u0430 \u0431\u043E\u0448\u0430\u0434" },
@@ -11719,7 +11719,7 @@ function tg_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/th.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/th.js
 var error52 = () => {
   const Sizable = {
     string: { unit: "\u0E15\u0E31\u0E27\u0E2D\u0E31\u0E01\u0E29\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" },
@@ -11835,7 +11835,7 @@ function th_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/tk.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/tk.js
 var error53 = () => {
   const Sizable = {
     string: { unit: "simwol", verb: "bolmaly" },
@@ -11943,7 +11943,7 @@ function tk_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/tr.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/tr.js
 var error54 = () => {
   const Sizable = {
     string: { unit: "karakter", verb: "olmal\u0131" },
@@ -12054,7 +12054,7 @@ function tr_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/uk.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/uk.js
 var error55 = () => {
   const Sizable = {
     string: { unit: "\u0441\u0438\u043C\u0432\u043E\u043B\u0456\u0432", verb: "\u043C\u0430\u0442\u0438\u043C\u0435" },
@@ -12168,12 +12168,12 @@ function uk_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/ua.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ua.js
 function ua_default() {
   return uk_default();
 }
 
-// ../node_modules/zod/v4/locales/ur.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/ur.js
 var error56 = () => {
   const Sizable = {
     string: { unit: "\u062D\u0631\u0648\u0641", verb: "\u06C1\u0648\u0646\u0627" },
@@ -12289,7 +12289,7 @@ function ur_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/uz.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/uz.js
 var error57 = () => {
   const Sizable = {
     string: { unit: "belgi", verb: "bo\u2018lishi kerak" },
@@ -12403,7 +12403,7 @@ function uz_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/vi.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/vi.js
 var error58 = () => {
   const Sizable = {
     string: { unit: "k\xFD t\u1EF1", verb: "c\xF3" },
@@ -12517,7 +12517,7 @@ function vi_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/zh-CN.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/zh-CN.js
 var error59 = () => {
   const Sizable = {
     string: { unit: "\u5B57\u7B26", verb: "\u5305\u542B" },
@@ -12632,7 +12632,7 @@ function zh_CN_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/zh-TW.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/zh-TW.js
 var error60 = () => {
   const Sizable = {
     string: { unit: "\u5B57\u5143", verb: "\u64C1\u6709" },
@@ -12745,7 +12745,7 @@ function zh_TW_default() {
   };
 }
 
-// ../node_modules/zod/v4/locales/yo.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/locales/yo.js
 var error61 = () => {
   const Sizable = {
     string: { unit: "\xE0mi", verb: "n\xED" },
@@ -12858,7 +12858,7 @@ function yo_default() {
   };
 }
 
-// ../node_modules/zod/v4/core/registries.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/registries.js
 var _a2;
 var $output = /* @__PURE__ */ Symbol("ZodOutput");
 var $input = /* @__PURE__ */ Symbol("ZodInput");
@@ -12908,7 +12908,7 @@ function registry() {
 (_a2 = globalThis).__zod_globalRegistry ?? (_a2.__zod_globalRegistry = registry());
 var globalRegistry = globalThis.__zod_globalRegistry;
 
-// ../node_modules/zod/v4/core/compile.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/compile.js
 var INVALID = /* @__PURE__ */ Symbol.for("zod.compile.invalid");
 var FALLBACK_FLAG = /* @__PURE__ */ Symbol.for("zod.compile.fallback");
 var ZodCompileAsyncError = class extends Error {
@@ -14510,7 +14510,7 @@ function generateTransformCheck(doc, ctx, schema, accessor) {
   return accessor;
 }
 
-// ../node_modules/zod/v4/core/api.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/api.js
 function snapshotChecks(def) {
   if (def.checks)
     def.checks = [...def.checks];
@@ -15569,7 +15569,7 @@ function _stringFormat(Class2, format, fnOrRegex, _params = {}) {
   return inst;
 }
 
-// ../node_modules/zod/v4/core/to-json-schema.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/to-json-schema.js
 function assignProps(target, ...sources) {
   for (const source of sources) {
     for (const key of Reflect.ownKeys(source)) {
@@ -15681,26 +15681,26 @@ function extractDefs(ctx, schema) {
     return;
   const idToSchema = /* @__PURE__ */ new Map();
   for (const entry of ctx.seen.entries()) {
-    const id = ctx.metadataRegistry.get(entry[0])?.id;
-    if (id) {
-      const existing = idToSchema.get(id);
+    const id3 = ctx.metadataRegistry.get(entry[0])?.id;
+    if (id3) {
+      const existing = idToSchema.get(id3);
       if (existing && existing !== entry[0]) {
-        throw new Error(`Duplicate schema id "${id}" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.`);
+        throw new Error(`Duplicate schema id "${id3}" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.`);
       }
-      idToSchema.set(id, entry[0]);
+      idToSchema.set(id3, entry[0]);
     }
   }
   const makeURI = (entry) => {
     const defsSegment = ctx.target === "draft-2020-12" ? "$defs" : "definitions";
     if (ctx.external) {
       const externalId = ctx.external.registry.get(entry[0])?.id;
-      const uriGenerator = ctx.external.uri ?? ((id2) => id2);
+      const uriGenerator = ctx.external.uri ?? ((id4) => id4);
       if (externalId) {
         return { ref: uriGenerator(externalId) };
       }
-      const id = entry[1].defId ?? entry[1].schema.id ?? `schema${ctx.counter++}`;
-      entry[1].defId = id;
-      return { defId: id, ref: `${uriGenerator("__shared")}#/${defsSegment}/${encodeJSONPointerSegment(id)}` };
+      const id3 = entry[1].defId ?? entry[1].schema.id ?? `schema${ctx.counter++}`;
+      entry[1].defId = id3;
+      return { defId: id3, ref: `${uriGenerator("__shared")}#/${defsSegment}/${encodeJSONPointerSegment(id3)}` };
     }
     const uriPrefix = `#`;
     const defUriPrefix = `${uriPrefix}/${defsSegment}/`;
@@ -15748,8 +15748,8 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         continue;
       }
     }
-    const id = ctx.metadataRegistry.get(entry[0])?.id;
-    if (id) {
+    const id3 = ctx.metadataRegistry.get(entry[0])?.id;
+    if (id3) {
       extractToDef(entry);
       continue;
     }
@@ -15810,8 +15810,8 @@ function foldObjects(members2) {
   }
   const properties = {};
   const required2 = /* @__PURE__ */ new Set();
-  for (const object2 of objects) {
-    for (const key in object2.properties) {
+  for (const object3 of objects) {
+    for (const key in object3.properties) {
       if (Object.prototype.hasOwnProperty.call(properties, key))
         continue;
       const parts = [];
@@ -15825,18 +15825,18 @@ function foldObjects(members2) {
       const merged = parts.length === 1 ? parts[0] : foldObjects(parts) ?? { allOf: parts };
       assignProp(properties, key, merged);
     }
-    for (const key of object2.required ?? [])
+    for (const key of object3.required ?? [])
       required2.add(key);
   }
   const folded = { type: "object", properties };
   if (required2.size)
     folded.required = [...required2];
-  if (objects.every((object2) => object2.additionalProperties === false)) {
+  if (objects.every((object3) => object3.additionalProperties === false)) {
     folded.additionalProperties = false;
   } else {
     const constraints = [];
-    for (const object2 of objects) {
-      const constraint = undeclaredConstraint(object2);
+    for (const object3 of objects) {
+      const constraint = undeclaredConstraint(object3);
       if (constraint && !constraints.some((seen) => JSON.stringify(seen) === JSON.stringify(constraint)))
         constraints.push(constraint);
     }
@@ -15982,10 +15982,10 @@ function finalize(ctx, schema) {
   } else {
   }
   if (ctx.external?.uri) {
-    const id = ctx.external.registry.get(schema)?.id;
-    if (!id)
+    const id3 = ctx.external.registry.get(schema)?.id;
+    if (!id3)
       throw new Error("Schema is missing an `id` property");
-    result.$id = ctx.external.uri(id);
+    result.$id = ctx.external.uri(id3);
   }
   assignProps(result, root.defId ? root.schema : root.def ?? root.schema);
   const rootMetaId = ctx.metadataRegistry.get(schema)?.id;
@@ -16099,7 +16099,7 @@ var createStandardJSONSchemaMethod = (schema, io, processors = {}) => (params) =
   return finalize(ctx, schema);
 };
 
-// ../node_modules/zod/v4/core/json-schema-processors.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/json-schema-processors.js
 var narrowMin = (agg, key, value) => {
   if (agg[key] === void 0 || value > agg[key])
     agg[key] = value;
@@ -16591,7 +16591,7 @@ function stringifyKeyNames(bySchema, json2, visited) {
   const values = json2.enum ?? (json2.const !== void 0 ? [json2.const] : void 0);
   if (!numericType && !values?.some((v) => typeof v === "number"))
     return json2;
-  const { minimum, maximum, exclusiveMinimum, exclusiveMaximum, multipleOf, format, id, ...rest } = json2;
+  const { minimum, maximum, exclusiveMinimum, exclusiveMaximum, multipleOf, format, id: id3, ...rest } = json2;
   if (rest.enum)
     rest.enum = rest.enum.map((v) => typeof v === "number" ? String(v) : v);
   else if (typeof rest.const === "number")
@@ -16611,8 +16611,8 @@ function rewriteKeyNames(ctx) {
       bySchema.set(entry.schema, entry);
   }
   const rewrites = /* @__PURE__ */ new Map();
-  for (const record2 of pendingRecords.get(ctx) ?? []) {
-    const seen = ctx.seen.get(record2);
+  for (const record3 of pendingRecords.get(ctx) ?? []) {
+    const seen = ctx.seen.get(record3);
     const names = (seen?.def ?? seen?.schema)?.propertyNames;
     if (!names || names === true || rewrites.has(names))
       continue;
@@ -16847,7 +16847,7 @@ function toJSONSchema(input2, params) {
   return finalize(ctx, input2);
 }
 
-// ../node_modules/zod/v4/core/json-schema-generator.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/json-schema-generator.js
 var JSONSchemaGenerator = class {
   /** @deprecated Access via ctx instead */
   get metadataRegistry() {
@@ -16925,10 +16925,10 @@ var JSONSchemaGenerator = class {
   }
 };
 
-// ../node_modules/zod/v4/core/json-schema.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/json-schema.js
 var json_schema_exports = {};
 
-// ../node_modules/zod/v4/classic/schemas.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/schemas.js
 var schemas_exports2 = {};
 __export(schemas_exports2, {
   ZodAny: () => ZodAny,
@@ -17109,7 +17109,7 @@ __export(schemas_exports2, {
   xor: () => xor
 });
 
-// ../node_modules/zod/v4/classic/checks.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/checks.js
 var checks_exports2 = {};
 __export(checks_exports2, {
   endsWith: () => _endsWith,
@@ -17144,7 +17144,7 @@ __export(checks_exports2, {
   uppercase: () => _uppercase
 });
 
-// ../node_modules/zod/v4/classic/errors.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/errors.js
 var _installedErrorProtos = /* @__PURE__ */ new WeakSet([Object.prototype, Error.prototype]);
 function _lazyMethod(proto, key, make) {
   Object.defineProperty(proto, key, {
@@ -17190,7 +17190,7 @@ var ZodRealError = /* @__PURE__ */ $constructor("ZodError", initializer2, void 0
   Parent: Error
 });
 
-// ../node_modules/zod/v4/classic/parse.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/parse.js
 var parse2 = /* @__PURE__ */ _parse(ZodRealError);
 var parseAsync2 = /* @__PURE__ */ _parseAsync(ZodRealError);
 var safeParse2 = /* @__PURE__ */ _safeParse(ZodRealError);
@@ -17204,7 +17204,7 @@ var safeDecode2 = /* @__PURE__ */ _safeDecode(ZodRealError);
 var safeEncodeAsync2 = /* @__PURE__ */ _safeEncodeAsync(ZodRealError);
 var safeDecodeAsync2 = /* @__PURE__ */ _safeDecodeAsync(ZodRealError);
 
-// ../node_modules/zod/v4/classic/schemas.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/schemas.js
 function _ensureDefaultLocale() {
   if (!globalConfig.localeError)
     config(en_default());
@@ -18669,7 +18669,7 @@ function preprocess(fn, schema) {
   });
 }
 
-// ../node_modules/zod/v4/classic/compat.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/compat.js
 var ZodIssueCode = {
   invalid_type: "invalid_type",
   too_big: "too_big",
@@ -18695,7 +18695,7 @@ var ZodFirstPartyTypeKind;
 /* @__PURE__ */ (function(ZodFirstPartyTypeKind2) {
 })(ZodFirstPartyTypeKind || (ZodFirstPartyTypeKind = {}));
 
-// ../node_modules/zod/v4/classic/iso.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/iso.js
 var iso_exports = {};
 __export(iso_exports, {
   ZodISODate: () => ZodISODate,
@@ -18720,7 +18720,7 @@ function duration2(params) {
   return _isoDuration(ZodISODuration, params);
 }
 
-// ../node_modules/zod/v4/classic/from-json-schema.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/from-json-schema.js
 var z = {
   ...schemas_exports2,
   ...checks_exports2,
@@ -19453,7 +19453,7 @@ function fromJSONSchema(schema, params) {
   return convertSchema(normalized, ctx);
 }
 
-// ../node_modules/zod/v4/core/visit.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/core/visit.js
 var RESOLVING = /* @__PURE__ */ Symbol("z.visit/resolving");
 function visit(schema, fnOrHandlers) {
   const fn = typeof fnOrHandlers === "function" ? fnOrHandlers : (node2, rewritten) => {
@@ -19608,7 +19608,7 @@ function visit(schema, fnOrHandlers) {
   return run(schema);
 }
 
-// ../node_modules/zod/v4/classic/deep-partial.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/deep-partial.js
 function deepPartial(schema) {
   return visit(schema, {
     object: (s) => s.partial(),
@@ -19620,7 +19620,7 @@ function deepPartial(schema) {
   });
 }
 
-// ../node_modules/zod/v4/classic/in-out.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/in-out.js
 function withChecks(side, checks) {
   if (!checks?.length)
     return side;
@@ -19650,7 +19650,7 @@ function output(schema) {
   });
 }
 
-// ../node_modules/zod/v4/classic/coerce.js
+// Data/Data/modules/foundry-ai-dungeon-master/node_modules/zod/v4/classic/coerce.js
 var coerce_exports = {};
 __export(coerce_exports, {
   bigint: () => bigint3,
@@ -19675,7 +19675,7 @@ function date4(params) {
   return _coercedDate(ZodDate, params);
 }
 
-// ../shared/dist/schemas.js
+// Data/Data/modules/foundry-ai-dungeon-master/shared/dist/schemas.js
 var AI_DM_MAX_ID_LENGTH = 160;
 var AI_DM_MAX_PROMPT_LENGTH = 2e4;
 var AI_DM_MAX_SELECTED_IDS = 64;
@@ -20110,7 +20110,7 @@ var aiDmTransportServerMessageSchema = external_exports.discriminatedUnion("type
   }).strict()
 ]);
 
-// ../shared/dist/chatkit.js
+// Data/Data/modules/foundry-ai-dungeon-master/shared/dist/chatkit.js
 var CHATKIT_INFERENCE_OPERATIONS = [
   "threads.create",
   "threads.add_user_message",
@@ -20129,7 +20129,7 @@ function supportedChatKitOperation(value) {
   return typeof value === "string" && (CHATKIT_INFERENCE_OPERATIONS.includes(value) || CHATKIT_STORAGE_OPERATIONS.includes(value));
 }
 
-// src/ai-dungeon-master/store.ts
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/store.ts
 var AiDmClientStore = class {
   #state = {
     connection: "disconnected",
@@ -20327,12 +20327,117 @@ var AiDmClientStore = class {
   }
 };
 
-// src/ai-dungeon-master/transport.ts
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/status-refresh.ts
+var StatusRefresh = class {
+  constructor(request, eligible, options = {}) {
+    this.request = request;
+    this.eligible = eligible;
+    this.#now = options.now ?? Date.now;
+    this.#schedule = options.schedule ?? setTimeout;
+    this.#unschedule = options.unschedule ?? clearTimeout;
+    this.#cooldown = Math.max(0, options.cooldownMs ?? 1e3);
+    this.#retryDelays = (options.retryDelaysMs ?? [1e3, 3e3]).slice(0, 2);
+    this.#onFailure = options.onFailure;
+  }
+  request;
+  eligible;
+  #active = false;
+  #pending = null;
+  #abort = null;
+  #timer = null;
+  #lastSuccess = -Infinity;
+  #generation = 0;
+  #dirty = false;
+  #now;
+  #schedule;
+  #unschedule;
+  #cooldown;
+  #retryDelays;
+  #onFailure;
+  open() {
+    this.#active = true;
+    return this.refresh();
+  }
+  close() {
+    this.#active = false;
+    this.#lastSuccess = -Infinity;
+    this.#generation++;
+    this.#abort?.abort();
+    this.#abort = null;
+    this.#pending = null;
+    this.#dirty = false;
+    this.#clearTimer();
+  }
+  /** A meaningful change bypasses the success cache, while sharing pending work. */
+  invalidate() {
+    this.#lastSuccess = -Infinity;
+    if (this.#pending) this.#dirty = true;
+    return this.refresh();
+  }
+  refresh() {
+    if (!this.#active || !this.eligible()) return Promise.resolve();
+    if (this.#pending) return this.#pending;
+    if (this.#timer !== null) return Promise.resolve();
+    if (this.#now() - this.#lastSuccess < this.#cooldown) return Promise.resolve();
+    this.#clearTimer();
+    return this.#start(0);
+  }
+  #start(attempt) {
+    if (!this.#active || !this.eligible()) return Promise.resolve();
+    const generation = this.#generation;
+    this.#dirty = false;
+    const abort = new AbortController();
+    this.#abort = abort;
+    const pending = new Promise((resolve, reject) => {
+      try {
+        abort.signal.throwIfAborted();
+        resolve(this.request(abort.signal));
+      } catch (error62) {
+        reject(error62);
+      }
+    }).then(() => {
+      if (generation === this.#generation && !abort.signal.aborted)
+        this.#lastSuccess = this.#now();
+    }).catch((error62) => {
+      const delay = this.#retryDelays[attempt];
+      if (generation === this.#generation && !abort.signal.aborted && this.#active && this.eligible() && delay !== void 0) {
+        this.#timer = this.#schedule(
+          () => {
+            this.#timer = null;
+            if (generation === this.#generation)
+              void this.#start(attempt + 1).catch(() => void 0);
+          },
+          Math.max(0, delay)
+        );
+      } else if (generation === this.#generation && !abort.signal.aborted && this.#active && this.eligible()) {
+        this.#onFailure?.(error62);
+      }
+      throw error62;
+    }).finally(() => {
+      if (generation === this.#generation) {
+        this.#pending = null;
+        this.#abort = null;
+        if (this.#dirty && this.#timer === null && this.#active && this.eligible()) {
+          void this.#start(0).catch(() => void 0);
+        }
+      }
+    });
+    this.#pending = pending;
+    return pending;
+  }
+  #clearTimer() {
+    if (this.#timer !== null) this.#unschedule(this.#timer);
+    this.#timer = null;
+  }
+};
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/transport.ts
 var MODULE_ID = "foundry-ai-dungeon-master";
 var RECIPIENT_CURSOR_KEY = `${MODULE_ID}.recipient-cursor.v1`;
 var LEGACY_SESSION_KEY = `${MODULE_ID}.session.v1`;
 var FOUNDRY_AUTH_EVENT = "foundry-ai-dungeon-master.authenticate";
 var AUTH_ACK_TIMEOUT_MS = 5e3;
+var SESSION_RENEWAL_MARGIN_MS = 3e4;
 function httpOrigin(webSocketUrl) {
   try {
     const url2 = new URL(webSocketUrl);
@@ -20354,16 +20459,32 @@ var AiDmTransport = class {
   #reconnectAttempt = 0;
   #reconnectTimer = null;
   #authAckTimer = null;
+  #sessionRenewalTimer = null;
+  #renewingSession = false;
   #chatGptPopup = null;
   #chatGptStatusTimer = null;
+  #statusRefresh;
+  #statusReply = null;
+  #suppressStatusRefresh = false;
+  #retiredStatusRequests = /* @__PURE__ */ new Set();
   constructor(store) {
     this.#store = store;
+    this.#statusRefresh = new StatusRefresh(
+      (signal) => this.#fetchStatus(signal),
+      () => !this.#suppressStatusRefresh && this.#store.state.connection === "connected" && this.#store.state.authenticatedLane === "gm",
+      {
+        schedule: (callback, delay) => window.setTimeout(callback, delay),
+        unschedule: (timer) => window.clearTimeout(timer),
+        onFailure: () => ui.notifications.warn("Provider status could not be checked. Open AI DM account settings and recheck connection.")
+      }
+    );
     window.addEventListener("message", (event) => {
       if (!this.#chatGptPopup || event.source !== this.#chatGptPopup || typeof event.data !== "object" || event.data === null || event.data.type !== "ai-dm.chatgpt.auth-complete" || !game.settings)
         return;
       const expectedOrigin = httpOrigin(String(game.settings.get(MODULE_ID, "serverUrl")));
       if (expectedOrigin !== null && event.origin === expectedOrigin && event.source === this.#chatGptPopup && typeof event.data === "object" && event.data !== null && event.data.type === "ai-dm.chatgpt.auth-complete") {
-        this.#requestChatGptStatus();
+        this.#stopChatGptStatusPolling();
+        this.refreshChatGptStatus();
       }
     });
   }
@@ -20372,14 +20493,19 @@ var AiDmTransport = class {
     sessionStorage.removeItem(LEGACY_SESSION_KEY);
     const cursor = Number(sessionStorage.getItem(RECIPIENT_CURSOR_KEY) ?? "0");
     if (Number.isSafeInteger(cursor) && cursor >= 0) this.#store.resetRecipientSequence(cursor);
-    this.#open();
+    if (this.#socket?.readyState === WebSocket.OPEN && (!this.#session || Date.parse(this.#session.expiresAt) <= Date.now()))
+      this.#renewSession();
+    else this.#open();
   }
   disconnect() {
+    this.#statusRefresh.close();
     this.#manualClose = true;
     if (this.#reconnectTimer !== null) window.clearTimeout(this.#reconnectTimer);
     this.#reconnectTimer = null;
     if (this.#authAckTimer !== null) window.clearTimeout(this.#authAckTimer);
     this.#authAckTimer = null;
+    this.#clearSessionRenewal();
+    this.#renewingSession = false;
     this.#socket?.close(1e3, "Client closed");
     this.#socket = null;
     this.#session = null;
@@ -20387,8 +20513,29 @@ var AiDmTransport = class {
     this.#chatGptPopup?.close();
     this.#chatGptPopup = null;
   }
+  openStatusPanel() {
+    void this.#statusRefresh.open().catch(() => void 0);
+  }
+  closeStatusPanel() {
+    this.#statusRefresh.close();
+    this.#stopChatGptStatusPolling();
+  }
+  refreshChatGptStatus() {
+    if (this.#store.state.connection !== "connected" || this.#store.state.authenticatedLane !== "gm") return false;
+    void this.#statusRefresh.invalidate().catch(() => void 0);
+    void this.#statusRefresh.open().catch(() => void 0);
+    return true;
+  }
   /** Short-lived Foundry credential stays in memory and is used only for gateway requests. */
   chatKitHeaders() {
+    if (this.#store.state.connection === "authentication-failed" && this.#store.state.connectionMessage.startsWith("Foundry credential renewal failed:"))
+      throw new Error(this.#store.state.connectionMessage);
+    if (this.#session && Date.parse(this.#session.expiresAt) <= Date.now()) {
+      this.#renewSession();
+      throw new Error(this.#renewingSession ? "Your Foundry credential expired. Renewing your Foundry identity; submit again after Connected. No action was sent." : "Your Foundry credential expired. Reconnect as a Foundry GM; no action was sent.");
+    }
+    if (this.#renewingSession)
+      throw new Error("Renewing your Foundry identity. Submit again after Connected; no action was sent.");
     if (!this.#session || Date.parse(this.#session.expiresAt) <= Date.now() || this.#store.state.connection !== "connected" || this.#store.state.authenticatedLane !== "gm") {
       throw new Error("Connect as a Foundry GM before using ChatKit.");
     }
@@ -20429,6 +20576,9 @@ var AiDmTransport = class {
       return false;
     if (this.#store.state.authenticatedLane === "gm" && this.#store.state.chatGpt.state !== "ready" && (command.type === "aiDm.prompt.submit" || command.type === "aiDm.event.submit" || command.type === "aiDm.run.retry" || command.type === "aiDm.player-request.decide" && command.payload.decision === "approve"))
       return false;
+    if (command.type === "aiDm.chatgpt.model.select" || command.type === "aiDm.chatgpt.signout" || command.type === "aiDm.chatgpt.signin.begin") {
+      this.#statusRefresh.close();
+    }
     this.#socket.send(JSON.stringify({ type: "aiDm.command", payload: command }));
     return true;
   }
@@ -20439,12 +20589,19 @@ var AiDmTransport = class {
     const socket = new WebSocket(url2);
     this.#socket = socket;
     socket.addEventListener("open", () => {
+      if (this.#socket !== socket) return;
       if (this.#session && Date.parse(this.#session.expiresAt) > Date.now() + 5e3)
         this.#sendConnect();
       else this.#sendIdentityRequest();
     });
-    socket.addEventListener("message", (event) => this.#onMessage(event.data));
+    socket.addEventListener("message", (event) => {
+      if (this.#socket === socket) this.#onMessage(event.data);
+    });
     socket.addEventListener("close", () => {
+      if (this.#socket !== socket) return;
+      this.#statusRefresh.close();
+      this.#stopChatGptStatusPolling();
+      this.#clearSessionRenewal();
       if (this.#authAckTimer !== null) window.clearTimeout(this.#authAckTimer);
       this.#authAckTimer = null;
       if (this.#store.state.connection !== "authentication-failed") {
@@ -20479,6 +20636,35 @@ var AiDmTransport = class {
         }
       })
     );
+  }
+  #clearSessionRenewal() {
+    if (this.#sessionRenewalTimer !== null) window.clearTimeout(this.#sessionRenewalTimer);
+    this.#sessionRenewalTimer = null;
+  }
+  #scheduleSessionRenewal() {
+    this.#clearSessionRenewal();
+    if (!this.#session || this.#manualClose) return;
+    const delay = Math.max(0, Date.parse(this.#session.expiresAt) - Date.now() - SESSION_RENEWAL_MARGIN_MS);
+    this.#sessionRenewalTimer = window.setTimeout(() => {
+      this.#sessionRenewalTimer = null;
+      this.#renewSession();
+    }, delay);
+  }
+  /** Fresh socket uses the existing live Foundry challenge/assertion protocol.
+   * The server ignores auth.identify on an already-authenticated socket.
+   * Never resend a prompt or effect after renewing a credential.
+   */
+  #renewSession() {
+    if (this.#manualClose || this.#renewingSession || this.#socket?.readyState !== WebSocket.OPEN) return;
+    this.#clearSessionRenewal();
+    this.#renewingSession = true;
+    this.#session = null;
+    const previous = this.#socket;
+    this.#statusRefresh.close();
+    this.#socket = null;
+    previous.close(1e3, "Renew Foundry identity");
+    this.#open();
+    this.#store.setConnection("authenticating", "Renewing your Foundry identity\u2026");
   }
   #sendConnect() {
     if (!this.#session) return;
@@ -20532,13 +20718,19 @@ var AiDmTransport = class {
         return;
       }
       this.#reconnectAttempt = 0;
+      const renewed = this.#renewingSession;
+      this.#renewingSession = false;
+      this.#suppressStatusRefresh = renewed;
       this.#store.setAuthenticated(parsed.payload.lane, "Connected");
+      this.#suppressStatusRefresh = false;
+      this.#scheduleSessionRenewal();
+      if (renewed) return;
       this.send({
         type: "aiDm.history.fetch",
         payload: { requestId: crypto.randomUUID(), limit: 100 }
       });
       if (parsed.payload.lane === "gm") {
-        this.send({ type: "aiDm.chatgpt.status", payload: { requestId: crypto.randomUUID() } });
+        void this.#statusRefresh.open().catch(() => void 0);
         this.send({
           type: "aiDm.player-requests.policy.set",
           payload: {
@@ -20574,6 +20766,8 @@ var AiDmTransport = class {
       return;
     }
     if (parsed.type === "aiDm.chatgpt.status" || parsed.type === "aiDm.player-requests.state") {
+      if (parsed.type === "aiDm.chatgpt.status" && this.#retiredStatusRequests.has(parsed.payload.requestId)) return;
+      if (parsed.type === "aiDm.chatgpt.status" && parsed.payload.requestId === this.#statusReply?.requestId) this.#statusReply.resolve();
       this.#store.applyControlMessage(parsed);
       if (parsed.type === "aiDm.chatgpt.status" && parsed.payload.identityConnected && this.#chatGptPopup) {
         this.#stopChatGptStatusPolling();
@@ -20623,9 +20817,10 @@ var AiDmTransport = class {
       this.#failAuthentication("The local authentication challenge expired.");
       return;
     }
+    const authenticatingSocket = this.#socket;
     let settled = false;
     const finish = (response) => {
-      if (settled) return;
+      if (settled || this.#socket !== authenticatingSocket) return;
       settled = true;
       if (this.#authAckTimer !== null) window.clearTimeout(this.#authAckTimer);
       this.#authAckTimer = null;
@@ -20666,8 +20861,10 @@ var AiDmTransport = class {
     );
   }
   #failAuthentication(message) {
+    this.#clearSessionRenewal();
     this.#session = null;
-    this.#store.setConnection("authentication-failed", message);
+    this.#store.setConnection("authentication-failed", this.#renewingSession ? `Foundry credential renewal failed: ${message} Reconnect as a Foundry GM.` : message);
+    this.#renewingSession = false;
     this.#socket?.close(4003, "Foundry authentication failed");
   }
   #scheduleReconnect() {
@@ -20679,14 +20876,32 @@ var AiDmTransport = class {
     }, delay);
   }
   #requestChatGptStatus() {
-    this.send({
-      type: "aiDm.chatgpt.status",
-      payload: { requestId: crypto.randomUUID() }
+    this.refreshChatGptStatus();
+  }
+  #fetchStatus(signal) {
+    return new Promise((resolve, reject) => {
+      const requestId = crypto.randomUUID();
+      const finish = (error62) => {
+        window.clearTimeout(timeout);
+        signal.removeEventListener("abort", aborted2);
+        if (this.#statusReply?.requestId === requestId) this.#statusReply = null;
+        this.#retiredStatusRequests.add(requestId);
+        if (this.#retiredStatusRequests.size > 64) this.#retiredStatusRequests.delete(this.#retiredStatusRequests.values().next().value);
+        if (error62) reject(error62);
+        else resolve();
+      };
+      const aborted2 = () => finish(new Error("Status refresh cancelled."));
+      const timeout = window.setTimeout(() => finish(new Error("Status refresh timed out. Use Recheck connection.")), 5e3);
+      this.#statusReply = { requestId, resolve: () => finish(), reject: (error62) => finish(error62) };
+      signal.addEventListener("abort", aborted2, { once: true });
+      if (!this.send({ type: "aiDm.chatgpt.status", payload: { requestId } })) finish(new Error("Connect as a Foundry GM to refresh status."));
     });
   }
   #startChatGptStatusPolling() {
     this.#stopChatGptStatusPolling();
-    this.#chatGptStatusTimer = window.setInterval(() => {
+    let attempt = 0;
+    const check2 = () => {
+      this.#chatGptStatusTimer = null;
       if (this.#chatGptPopup?.closed) {
         this.#requestChatGptStatus();
         this.#stopChatGptStatusPolling();
@@ -20694,15 +20909,17 @@ var AiDmTransport = class {
         return;
       }
       this.#requestChatGptStatus();
-    }, 1500);
+      if (++attempt < 6 && this.#chatGptPopup) this.#chatGptStatusTimer = window.setTimeout(check2, Math.min(15e3, 1500 * 2 ** attempt));
+    };
+    this.#chatGptStatusTimer = window.setTimeout(check2, 1500);
   }
   #stopChatGptStatusPolling() {
-    if (this.#chatGptStatusTimer !== null) window.clearInterval(this.#chatGptStatusTimer);
+    if (this.#chatGptStatusTimer !== null) window.clearTimeout(this.#chatGptStatusTimer);
     this.#chatGptStatusTimer = null;
   }
 };
 
-// src/ai-dungeon-master/controller.ts
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/controller.ts
 var AiDmController = class {
   store;
   transport;
@@ -20711,6 +20928,10 @@ var AiDmController = class {
     this.transport = transport ?? new AiDmTransport(store);
   }
   connect() {
+    this.transport.connect();
+  }
+  reconnect() {
+    this.transport.disconnect?.();
     this.transport.connect();
   }
   submitPrompt(text, requestedAudience) {
@@ -20727,8 +20948,8 @@ var AiDmController = class {
         contextHints: {
           ...canvas?.scene?.id ? { sceneId: canvas.scene.id } : {},
           controlledTokenIds: controlled.flatMap((token) => {
-            const id = token.document?.id ?? token.id;
-            return id ? [id] : [];
+            const id3 = token.document?.id ?? token.id;
+            return id3 ? [id3] : [];
           }),
           controlledActorIds: controlled.flatMap(
             (token) => token.document?.actorId ? [token.document.actorId] : []
@@ -20759,10 +20980,17 @@ var AiDmController = class {
     return this.transport.beginChatGptSignIn();
   }
   refreshChatGptStatus() {
+    if (this.transport.refreshChatGptStatus) return this.transport.refreshChatGptStatus();
     return this.transport.send({
       type: "aiDm.chatgpt.status",
       payload: { requestId: crypto.randomUUID() }
     });
+  }
+  openStatusPanel() {
+    this.transport.openStatusPanel?.();
+  }
+  closeStatusPanel() {
+    this.transport.closeStatusPanel?.();
   }
   signOutChatGpt() {
     return this.transport.send({
@@ -20802,32 +21030,389 @@ var AiDmController = class {
 };
 var aiDmController = new AiDmController();
 
-// src/ai-dungeon-master/chatgpt-panel.ts
-function chatGptPanelStatus(state) {
-  if (state.connection !== "connected" || state.authenticatedLane !== "gm")
-    return `${state.connectionMessage} Connect as a Foundry GM to continue with ChatGPT.`;
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/compact-panel.ts
+function compactPanelState(state) {
   const provider = state.chatGpt;
-  if (!provider.identityConnected)
-    return "Continue with ChatGPT to check whether this account authorizes model use. A subscription alone does not guarantee API access.";
-  if (!provider.planUsageAuthorized)
-    return "ChatGPT sign-in connected your identity, but this account did not authorize model use. Reconnect to check authorization, or configure an authorized API key on the server.";
-  if (provider.modelDiscoveryState === "unavailable")
-    return "Eligible models could not be loaded. Select Refresh status; if this persists, reconnect ChatGPT.";
-  if (provider.modelDiscoveryState === "empty")
-    return "This account returned no eligible models. Refresh status or use an authorized server API key.";
-  if (provider.modelSelectionPending) return "Confirming selected model\u2026";
-  if (!provider.selectedModel) return "Choose an eligible model to use ChatGPT authorization.";
-  return `ChatGPT model available: ${provider.selectedModel}. ChatKit also needs its registered domain key.`;
+  const connected = state.connection === "connected" && state.authenticatedLane === "gm";
+  const authorized = provider.identityConnected && provider.planUsageAuthorized;
+  let providerMessage = "";
+  if (!connected) providerMessage = `${state.connectionMessage} Connect as a Foundry GM.`;
+  else if (!provider.identityConnected) providerMessage = "Sign in to check account authorization for model use.";
+  else if (!provider.planUsageAuthorized) providerMessage = "Account has not authorized model use. Reconnect ChatGPT or configure an authorized server API key.";
+  else if (provider.modelSelectionPending) providerMessage = "Confirming selected model.";
+  else if (provider.modelDiscoveryState === "unavailable") providerMessage = "Models could not be loaded. Use Account/settings: Check connection.";
+  else if (provider.modelDiscoveryState === "empty") providerMessage = "No eligible models. Use Account/settings: Check connection.";
+  else if (!provider.selectedModel) providerMessage = "Choose an eligible model.";
+  else if (provider.state !== "ready" || !provider.availableModels.some((model) => model.slug === provider.selectedModel)) providerMessage = "Selected model is unavailable. Choose an eligible model or use Account/settings: Check connection.";
+  return { providerMessage, showSignIn: !authorized, signInLabel: provider.identityConnected ? "Reconnect ChatGPT" : "Continue with ChatGPT" };
+}
+function compactStatusMessage(message) {
+  if (message === "Preparation expired. Refresh status or submit to check prerequisites again.") return "";
+  return message.startsWith("Ready.") ? "" : message.replaceAll("Refresh status", "Account/settings: Check connection").replaceAll("refresh status", "check connection in Account/settings");
 }
 
-// src/ai-dungeon-master/chatkit-domain.ts
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/chatkit-domain.ts
 function chatKitDomainKey(configured, hostname3) {
   const value = typeof configured === "string" ? configured.trim() : "";
   if (value) return value;
   return ["localhost", "127.0.0.1", "[::1]"].includes(hostname3) ? "local-dev" : "";
 }
 
-// src/ai-dungeon-master/chatkit-context.ts
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/campaign-review.ts
+var hashPattern = /^[a-f0-9]{64}$/;
+function canonical(value) {
+  if (Array.isArray(value)) return value.map(canonical);
+  if (value && typeof value === "object")
+    return Object.fromEntries(
+      Object.entries(value).filter(([, child]) => child !== void 0).sort(([a], [b]) => a.localeCompare(b)).map(([key, child]) => [key, canonical(child)])
+    );
+  return value;
+}
+async function sha256(text) {
+  const bytes = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(bytes), (byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+async function validateCampaignReview(value, scope) {
+  const review = value;
+  if (!review || review.kind !== "campaign" || review.schemaVersion !== 1 || review.reviewAvailable !== true || review.requiresConfirmation !== true || review.truncated === true || review.worldId !== scope.worldId || review.userId !== scope.userId || review.threadId !== scope.threadId || !/^[A-Za-z0-9_-]{1,128}$/.test(review.proposalId) || typeof review.title !== "string" || review.title.length > 120 || !hashPattern.test(review.batchDigest) || !Array.isArray(review.files) || !review.files.length || review.files.length > 32 || typeof review.status !== "string" || !Number.isFinite(review.expiresAt) || new TextEncoder().encode(JSON.stringify(value)).length > 24e3)
+    throw new Error("Complete exact campaign review is unavailable. Refresh before deciding.");
+  const files = [];
+  const paths = /* @__PURE__ */ new Set();
+  for (const file2 of review.files) {
+    if (!file2 || file2.truncated === true || typeof file2.path !== "string" || !/^(overview\.md|index\.md|(?:locations|npcs|factions|quests|rules|sessions)\/[A-Za-z0-9_-][A-Za-z0-9_. -]*\.md)$/.test(
+      file2.path
+    ) || paths.has(file2.path.toLowerCase()) || typeof file2.proposedText !== "string" || !(file2.beforeText === null || typeof file2.beforeText === "string") || !(file2.expectedRevision === null || typeof file2.expectedRevision === "string" && hashPattern.test(file2.expectedRevision)) || file2.beforeHash !== file2.expectedRevision || !hashPattern.test(file2.afterHash) || file2.afterCanonStatus !== "canon" || !(file2.beforeCanonStatus === null || ["canon", "draft"].includes(file2.beforeCanonStatus)) || file2.beforeText === null !== (file2.beforeHash === null) || await sha256(file2.proposedText) !== file2.afterHash || file2.beforeText !== null && await sha256(file2.beforeText) !== file2.beforeHash)
+      throw new Error("Campaign file review is incomplete or changed; approval disabled.");
+    paths.add(file2.path.toLowerCase());
+    files.push({
+      path: file2.path,
+      expectedRevision: file2.expectedRevision,
+      proposedText: file2.proposedText,
+      beforeHash: file2.beforeHash,
+      afterHash: file2.afterHash,
+      beforeText: file2.beforeText,
+      beforeCanonStatus: file2.beforeCanonStatus,
+      afterCanonStatus: file2.afterCanonStatus
+    });
+  }
+  if (!paths.has("overview.md") || !paths.has("index.md"))
+    throw new Error("Campaign overview/index review missing; approval disabled.");
+  if (await sha256(
+    JSON.stringify(canonical({ schemaVersion: 1, scope, title: review.title, files }))
+  ) !== review.batchDigest)
+    throw new Error("Campaign review digest mismatch; approval disabled.");
+  return review;
+}
+function campaignReceiptText(review) {
+  const receipt = review.receipt;
+  if (review.status === "completed" && receipt?.outcome === "completed" && receipt.proposalId === review.proposalId && receipt.batchDigest === review.batchDigest && receipt.worldId === review.worldId && typeof receipt.receiptId === "string" && receipt.files?.length === review.files.length && review.files.every(
+    (file2) => receipt.files.some(
+      (actual) => actual.path === file2.path && actual.revision === file2.afterHash && actual.sourceHash === file2.afterHash
+    )
+  ))
+    return `Verified campaign commit: ${receipt.receiptId}.`;
+  if (review.status === "completed")
+    return "Completion receipt unavailable; refresh before relying on this change.";
+  if (["dispatching", "uncertain", "drafting"].includes(review.status))
+    return "Outcome requires inspection. Refresh the exact review; do not blindly repeat the change.";
+  if (review.status === "pending")
+    return "Draft saved; these exact changes have not been approved as canon.";
+  return `Campaign proposal ${review.status}.`;
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/world-review.ts
+var canonical2 = (value) => {
+  if (Array.isArray(value)) return value.map(canonical2);
+  if (value && typeof value === "object")
+    return Object.fromEntries(
+      Object.entries(value).sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([k, v]) => [k, canonical2(v)])
+    );
+  return value;
+};
+async function validateWorldReview(value, scope) {
+  const review = value;
+  if (!review || !["world", "world-file"].includes(review.kind) || review.reviewComplete !== true || typeof review.requiresConfirmation !== "boolean" || review.status === "pending" && !review.requiresConfirmation || review.scope?.worldId !== scope.worldId || review.scope.userId !== scope.userId || review.scope.threadId !== scope.threadId || !/^[A-Za-z0-9_-]{1,128}$/.test(review.actionId) || !/^[a-f0-9]{64}$/.test(review.reviewDigest) || !review.request || !review.before || new TextEncoder().encode(JSON.stringify(value)).length > 96e3)
+    throw new Error("Complete world change review unavailable. Refresh before deciding.");
+  const payload = {
+    scope: review.scope,
+    input: review.request,
+    before: review.before,
+    selectedTarget: review.kind === "world" ? review.before["targetId"] : review.request["path"]
+  };
+  const digest2 = await crypto.subtle.digest(
+    "SHA-256",
+    new TextEncoder().encode(JSON.stringify(canonical2(payload)))
+  );
+  const actual = Array.from(new Uint8Array(digest2), (b) => b.toString(16).padStart(2, "0")).join(
+    ""
+  );
+  if (actual !== review.reviewDigest)
+    throw new Error("World change review changed. Approval disabled.");
+  return review;
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/automatic-triggers.ts
+var id = /^[A-Za-z0-9_-]{1,128}$/;
+var lifecycleListeners = /* @__PURE__ */ new Set();
+function onAutomaticEventsCancelled(listener) {
+  lifecycleListeners.add(listener);
+}
+function cancelAutomaticEventLifecycle() {
+  for (const listener of lifecycleListeners) listener();
+}
+function isBridgeMutation(value) {
+  const origin = value;
+  return !!origin && [
+    "foundry-local-api.transaction",
+    "foundry-local-api.session-action",
+    "foundry-local-api.world-document"
+  ].includes(origin.source) && ["apply", "compensate"].includes(origin.phase) && typeof origin.correlationId === "string" && /^[A-Za-z0-9_.:-]{1,128}$/.test(origin.correlationId);
+}
+var AutomaticTriggers = class {
+  constructor(dispatch, delay = 250, enabled = () => true) {
+    this.dispatch = dispatch;
+    this.delay = delay;
+    this.enabled = enabled;
+  }
+  dispatch;
+  delay;
+  enabled;
+  #pending = /* @__PURE__ */ new Map();
+  #seen = /* @__PURE__ */ new Map();
+  #generation = 0;
+  #cancel = new AbortController();
+  accept(signal) {
+    if (!["area", "door", "turn"].includes(signal.kind) || !id.test(signal.worldId) || !id.test(signal.sceneId) || !id.test(signal.documentId) || !Number.isSafeInteger(signal.revision) || signal.revision < 0 || typeof signal.transition !== "string" || signal.transition.length > 256 || !signal.transition || isBridgeMutation(signal.bridgeOrigin) || !this.enabled(signal))
+      return;
+    if (signal.kind === "area" && (!signal.key || !id.test(signal.key) || !signal.tokenId || !id.test(signal.tokenId) || !signal.regionId || !id.test(signal.regionId)))
+      return;
+    const identity = JSON.stringify([
+      signal.kind,
+      signal.worldId,
+      signal.sceneId,
+      signal.documentId,
+      signal.tokenId ?? null,
+      signal.regionId ?? null,
+      signal.key ?? null,
+      signal.revision,
+      signal.transition
+    ]);
+    const now = Date.now();
+    for (const [key, time3] of this.#seen) if (now - time3 > 3e5) this.#seen.delete(key);
+    if (this.#seen.has(identity) || this.#pending.has(identity) || this.#pending.size >= 64) return;
+    this.#seen.set(identity, now);
+    if (this.#seen.size > 1e3) this.#seen.delete(this.#seen.keys().next().value);
+    const generation = this.#generation;
+    const cancellation = this.#cancel.signal;
+    this.#pending.set(
+      identity,
+      setTimeout(() => {
+        this.#pending.delete(identity);
+        if (generation !== this.#generation || cancellation.aborted || !this.enabled(signal))
+          return;
+        void crypto.subtle.digest("SHA-256", new TextEncoder().encode(identity)).then((bytes) => {
+          if (generation !== this.#generation || cancellation.aborted || !this.enabled(signal))
+            return;
+          const digest2 = Array.from(
+            new Uint8Array(bytes),
+            (byte) => byte.toString(16).padStart(2, "0")
+          ).join("");
+          this.dispatch(
+            {
+              requestId: `${signal.kind}-${digest2}`,
+              prompt: signal.kind === "area" ? `A player entered keyed area ${signal.key}. Retrieve the relevant campaign section and narrate only observable information.` : signal.kind === "door" ? "A player opened this scene's door. Describe observable consequences using current authorized state." : "A player completed a combat turn. Review current combat state and describe the next situation without inventing actions or rolls.",
+              context: {
+                sceneId: signal.sceneId,
+                ...signal.tokenId ? { controlledTokenIds: [signal.tokenId] } : {}
+              },
+              automatic: {
+                kind: signal.kind,
+                worldId: signal.worldId,
+                sceneId: signal.sceneId,
+                documentId: signal.documentId,
+                revision: signal.revision,
+                transition: signal.transition,
+                ...signal.tokenId ? { tokenId: signal.tokenId } : {},
+                ...signal.regionId ? { regionId: signal.regionId } : {},
+                ...signal.key ? { key: signal.key } : {}
+              }
+            },
+            cancellation
+          );
+        }).catch(() => {
+        });
+      }, this.delay)
+    );
+  }
+  cancel() {
+    this.#generation++;
+    this.#cancel.abort(new Error("Automatic events cancelled."));
+    this.#cancel = new AbortController();
+    for (const timer of this.#pending.values()) clearTimeout(timer);
+    this.#pending.clear();
+  }
+};
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/latency-probe.ts
+var rows = [];
+var diagnostics = { droppedRows: 0, overBudgetEvents: 0 };
+function latencyDiagnostics() {
+  return { ...diagnostics };
+}
+function latencyRows() {
+  return rows.map((row) => ({ ...row }));
+}
+var BrowserLatencyProbe = class {
+  started = performance.now();
+  clockId = (() => {
+    const scope = globalThis;
+    return scope.__foundryLatencyClockId ??= crypto.randomUUID();
+  })();
+  traceId = crypto.randomUUID();
+  #decoder = new TextDecoder();
+  #buffer = "";
+  #first = true;
+  constructor() {
+    this.mark("browser-submit");
+  }
+  mark(stage) {
+    rows.push({ schemaVersion: 1, traceId: this.traceId, component: "browser", stage, elapsedMs: performance.now() - this.started, clockId: this.clockId, timeOrigin: performance.timeOrigin, atMs: performance.now() });
+    if (rows.length > 1e3) {
+      diagnostics.droppedRows += rows.length - 1e3;
+      rows.splice(0, rows.length - 1e3);
+    }
+  }
+  finish() {
+    try {
+      const value = JSON.parse(this.#buffer);
+      if (typeof value.result?.outcome === "string") this.mark("browser-action-receipt-arrival");
+    } catch {
+    }
+    this.#buffer = "";
+  }
+  chunk(bytes) {
+    if (this.#first) {
+      this.mark("browser-first-stream-chunk");
+      this.#first = false;
+    }
+    this.#buffer = (this.#buffer + this.#decoder.decode(bytes, { stream: true })).replace(/\r\n/g, "\n");
+    if (this.#buffer.length > 65536) {
+      this.#buffer = "";
+      diagnostics.overBudgetEvents++;
+      this.mark("browser-diagnostic-event-over-budget");
+      return;
+    }
+    let index;
+    while ((index = this.#buffer.indexOf("\n\n")) >= 0) {
+      const frame = this.#buffer.slice(0, index);
+      this.#buffer = this.#buffer.slice(index + 2);
+      const data = frame.split("\n").filter((line) => line.startsWith("data:")).map((line) => line.slice(5).trimStart()).join("\n");
+      try {
+        const event = JSON.parse(data);
+        if (event.type === "thread.item.done" && typeof event.item?.id === "string" && event.item.id.startsWith("msg_receipt_")) this.mark("browser-receipt-arrival");
+      } catch {
+      }
+    }
+  }
+};
+function latencyDownloadButton() {
+  const button = document.createElement("button");
+  button.className = "ai-dm-latency-export";
+  button.type = "button";
+  button.textContent = "Export latency diagnostics";
+  button.title = "Metadata timings only. Receipt arrival does not prove chat rendering.";
+  button.addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify({ schemaVersion: 1, renderedReceipt: "unobserved: requires browser observation", diagnostics: latencyDiagnostics(), events: latencyRows() }, null, 2)], { type: "application/json" });
+    const url2 = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url2;
+    link.download = "ai-dm-browser-latency.json";
+    link.click();
+    URL.revokeObjectURL(url2);
+  });
+  return button;
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/core-command.ts
+function normalizeChatCommand(message) {
+  const text = message.trim();
+  if (!text.startsWith("<")) return text;
+  const paragraph = /^<p>([\s\S]*)<\/p>$/i.exec(text);
+  if (!paragraph) return text;
+  const body = paragraph[1].replace(/<br\s*\/?\s*>/gi, "\n");
+  if (/[<>]/.test(body)) return text;
+  return body.replace(/&(nbsp|amp|lt|gt|quot|apos|#\d+|#x[0-9a-f]+);/gi, (entity, key) => {
+    const named = { nbsp: " ", amp: "&", lt: "<", gt: ">", quot: '"', apos: "'" };
+    if (key.startsWith("#")) {
+      const value = key[1]?.toLowerCase() === "x" ? Number.parseInt(key.slice(2), 16) : Number(key.slice(1));
+      return value > 0 && value <= 1114111 && !(value >= 55296 && value <= 57343) ? String.fromCodePoint(value) : entity;
+    }
+    return named[key.toLowerCase()] ?? entity;
+  }).trim();
+}
+function parseCoreCommand(text) {
+  const [kind, ...args] = text.trim().split(/\s+/);
+  const id3 = (n) => {
+    const value = args[n];
+    if (!value || !/^[A-Za-z0-9_-]{1,128}$/.test(value)) throw new Error("Use explicit document IDs.");
+    return value;
+  };
+  const number4 = (n) => {
+    const value = Number(args[n]);
+    if (!args[n] || !Number.isFinite(value)) throw new Error("Use numeric values.");
+    return value;
+  };
+  const count = (n) => {
+    if (args.length !== n) throw new Error("Wrong number of control arguments.");
+  };
+  switch (kind?.toLowerCase()) {
+    case "teleport":
+      count(4);
+      return { kind: "token.position", sceneId: id3(0), targetId: id3(1), x: number4(2), y: number4(3), mode: "teleport" };
+    case "move":
+      count(4);
+      return { kind: "token.position", sceneId: id3(0), targetId: id3(1), x: number4(2), y: number4(3) };
+    case "door": {
+      count(3);
+      const value = { closed: 0, open: 1, locked: 2 }[args[2]];
+      if (value === void 0) throw new Error("Door state must be closed, open or locked.");
+      return { kind: "door.state", sceneId: id3(0), targetId: id3(1), value };
+    }
+    case "hp":
+      count(3);
+      return { kind: "actor.hp", sceneId: id3(0), targetId: id3(1), value: number4(2) };
+    case "condition":
+      count(4);
+      if (!["on", "off"].includes(args[3])) throw new Error("Condition state must be on or off.");
+      return { kind: "actor.condition", sceneId: id3(0), targetId: id3(1), conditionId: id3(2), active: args[3] === "on" };
+    case "next":
+      count(2);
+      return { kind: "combat.next", sceneId: id3(0), targetId: id3(1) };
+    case "initiative":
+      count(4);
+      return { kind: "combat.initiative", sceneId: id3(0), targetId: id3(1), combatantId: id3(2), value: number4(3) };
+    case "attack": {
+      if (args.length !== 6 && args.length !== 7) throw new Error("Attack needs scene, attacker token, actor, item, activity, target token IDs, and optional advantage/disadvantage.");
+      const advantage = args[6] ?? "normal";
+      if (!["normal", "advantage", "disadvantage"].includes(advantage)) throw new Error("Attack advantage must be normal, advantage or disadvantage.");
+      return { mode: "roll", sceneId: id3(0), attackerTokenId: id3(1), actorId: id3(2), itemId: id3(3), activityId: id3(4), targetTokenId: id3(5), advantage };
+    }
+    case "attack-apply":
+      count(1);
+      return { mode: "apply", priorAttackRequestId: id3(0) };
+    case "roll":
+      count(1);
+      return { kind: "dice.roll", formula: args[0] };
+    case "actor-roll":
+      count(4);
+      if (!["ability", "save", "skill"].includes(args[2])) throw new Error("Roll type must be ability, save or skill.");
+      return { kind: "system.roll", sceneId: id3(0), targetId: id3(1), rollType: args[2], key: id3(3) };
+    default:
+      throw new Error("Use /ai-control move, teleport, door, hp, condition, next, initiative, roll, actor-roll, attack or attack-apply with explicit IDs.");
+  }
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/chatkit-context.ts
 var ID = /^[A-Za-z0-9_-]{1,128}$/;
 function ids(value) {
   if (value === void 0) return void 0;
@@ -20898,14 +21483,14 @@ function currentGameContext() {
 var TriggerGuard = class {
   busy = false;
   #seen = /* @__PURE__ */ new Map();
-  start(id, now = Date.now()) {
-    if (!ID.test(id)) throw new Error("Invalid trigger request ID.");
+  start(id3, now = Date.now()) {
+    if (!ID.test(id3)) throw new Error("Invalid trigger request ID.");
     for (const [key, time3] of this.#seen) if (now - time3 > 3e5) this.#seen.delete(key);
-    if (this.#seen.has(id)) return false;
+    if (this.#seen.has(id3)) return false;
     if (this.busy)
       throw new Error("A response is already running. Cancel it or wait for completion.");
     this.busy = true;
-    this.#seen.set(id, now);
+    this.#seen.set(id3, now);
     if (this.#seen.size > 100) this.#seen.delete(this.#seen.keys().next().value);
     return true;
   }
@@ -20914,131 +21499,875 @@ var TriggerGuard = class {
   }
 };
 
-// src/ai-dungeon-master/application.ts
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/panel-preparation.ts
+var PanelPreparation = class {
+  constructor(request, publish, now = Date.now) {
+    this.request = request;
+    this.publish = publish;
+    this.now = now;
+  }
+  request;
+  publish;
+  now;
+  #generation = 0;
+  #pending = null;
+  #abort = null;
+  #expiry = null;
+  #validUntil = 0;
+  #retryAt = 0;
+  /** Explicit recovery shares a current check instead of aborting a concurrent opener. */
+  refresh() {
+    if (this.#pending) return this.#pending;
+    this.invalidate();
+    return this.ensure();
+  }
+  invalidate(message = "Reconnect required. Preparation must be checked again.") {
+    this.#generation++;
+    this.#abort?.abort();
+    this.#abort = null;
+    this.#pending = null;
+    this.#validUntil = 0;
+    this.#retryAt = 0;
+    if (this.#expiry) clearTimeout(this.#expiry);
+    this.#expiry = null;
+    this.publish({ state: "reconnect-required", message });
+  }
+  ensure() {
+    if (this.#pending) return this.#pending;
+    if (this.#validUntil > this.now()) return Promise.resolve();
+    if (this.#retryAt > this.now()) return Promise.reject(new Error("Reconnect required. Preparation failed; wait briefly before retrying."));
+    const generation = this.#generation;
+    const abort = new AbortController();
+    this.#abort = abort;
+    this.publish({ state: "preparing", message: "Preparing credentials and campaign context\u2026" });
+    const timeout = setTimeout(() => abort.abort(), 15e3);
+    const pending = (async () => {
+      try {
+        const response = await this.request(abort.signal);
+        const data = await response.json();
+        if (generation !== this.#generation || abort.signal.aborted) throw new Error("Preparation cancelled.");
+        const result = data;
+        const validUntil = typeof result.validUntil === "string" ? Date.parse(result.validUntil) : NaN;
+        if (!response.ok || result.state !== "ready" || !Number.isFinite(validUntil) || validUntil <= this.now()) {
+          this.#retryAt = this.now() + Math.max(1e3, Math.min(3e4, typeof result.retryAfterMs === "number" ? result.retryAfterMs : 5e3));
+          const message = result.reason === "context-action-required" ? "Reconnect required. Selected model context could not be admitted. Check sidecar availability and model context configuration; no inference was sent." : result.reason === "privacy-action-required" ? "Reconnect required. Private campaign storage requires repair before readiness. Ask the operator to resolve storage protection blockers." : response.status === 401 ? "Reconnect required. Foundry authentication expired. Reconnect as the current GM." : response.status === 403 ? "Reconnect required. Campaign preparation requires current Foundry GM authorization." : "Reconnect required. Credentials or campaign preparation could not be checked. Recheck connection or reconnect.";
+          throw new Error(message);
+        }
+        this.#validUntil = validUntil;
+        this.publish({ state: "ready", message: "Ready. Credentials and bounded campaign context checked; each action still requires current authorization. Player perception and provider acceptance are checked separately. Private campaign-file protection and player/TV acceptance remain required." });
+        this.#expiry = setTimeout(() => {
+          this.#expiry = null;
+          this.#validUntil = 0;
+          this.publish({ state: "reconnect-required", message: "Preparation expired. Refresh status or submit to check prerequisites again." });
+        }, Math.min(2147483647, validUntil - this.now()));
+      } catch (error62) {
+        if (generation === this.#generation) {
+          this.#retryAt ||= this.now() + 5e3;
+          this.publish({ state: "reconnect-required", message: error62 instanceof Error && !abort.signal.aborted ? error62.message : "Reconnect required. Preparation was interrupted." });
+        }
+        throw error62;
+      } finally {
+        clearTimeout(timeout);
+        if (generation === this.#generation) {
+          this.#pending = null;
+          this.#abort = null;
+        }
+      }
+    })();
+    this.#pending = pending;
+    return pending;
+  }
+};
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/player-observation-panel.ts
+var PLAYER_OBSERVATION_ACTION = "foundry.player-observation";
+function currentObservationEnvironment() {
+  const runtime = game;
+  const view = canvas;
+  const selected = view?.tokens?.controlled;
+  return {
+    worldId: runtime.world?.id ?? "",
+    gmId: runtime.user.id,
+    isGM: runtime.user.isGM,
+    sceneId: view?.scene?.id,
+    token: selected?.length === 1 ? selected[0] : void 0,
+    players: runtime.users?.contents ?? [],
+    // Request-local lifetime fence only. Never transmitted or exposed as a public receipt.
+    revision: JSON.stringify({ scene: view?.scene?.toObject?.() ?? null, token: selected?.length === 1 ? selected[0]?.document?.toObject?.() ?? null : null })
+  };
+}
+function owningPlayers(environment) {
+  return environment.players.filter((user) => user.active && !user.isGM && environment.token?.document?.testUserPermission?.(user, "OWNER") === true);
+}
+var selectionKeys = ["worldId", "sceneId", "userId", "clientId", "tokenId"];
+function safePlayerOperation(body, threadId, selection, armedRequest) {
+  if (!body || typeof body !== "object" || !threadId) return false;
+  const request = body;
+  const params = request.params;
+  if (!params || params.thread_id !== threadId) return false;
+  if (request.type === "threads.get_by_id" || request.type === "items.list") return true;
+  if (request.type !== "threads.custom_action" || !armedRequest) return false;
+  const action = params.action;
+  if (action?.type !== PLAYER_OBSERVATION_ACTION || !action.payload) return false;
+  const payload = action.payload;
+  return Object.keys(payload).length === 6 && payload.requestId === armedRequest && selectionKeys.every((key) => payload[key] === selection[key]);
+}
+function waitForPlayerFrame(component, signal, timeoutMs = 2e4) {
+  return new Promise((resolve, reject) => {
+    const listeners = new AbortController();
+    const finish = (error62) => {
+      clearTimeout(timer);
+      listeners.abort();
+      error62 ? reject(error62) : resolve();
+    };
+    const timer = setTimeout(() => finish(Error("Player chat frame did not become ready. Check ChatKit domain registration and CDN access, then reopen this panel.")), timeoutMs);
+    component.addEventListener("chatkit.ready", () => finish(), { once: true, signal: listeners.signal });
+    component.addEventListener("chatkit.error", () => finish(Error("Player chat frame could not initialize. Check ChatKit domain registration and CDN access, then reopen this panel.")), { once: true, signal: listeners.signal });
+    signal.addEventListener("abort", () => finish(Error("Player observation panel closed.")), { once: true, signal: listeners.signal });
+    if (signal.aborted) finish(Error("Player observation panel closed."));
+  });
+}
+function waitForPlayerThread(component, threadId, signal, timeoutMs = 2e4) {
+  return new Promise((resolve, reject) => {
+    const listeners = new AbortController();
+    const finish = (error62) => {
+      clearTimeout(timer);
+      listeners.abort();
+      error62 ? reject(error62) : resolve();
+    };
+    const timer = setTimeout(() => finish(Error("Dedicated player history did not finish loading.")), timeoutMs);
+    component.addEventListener("chatkit.thread.load.end", (event) => {
+      if (event.detail?.threadId === threadId) finish();
+    }, { signal: listeners.signal });
+    component.addEventListener("chatkit.error", () => finish(Error("Dedicated player history could not load.")), { once: true, signal: listeners.signal });
+    signal.addEventListener("abort", () => finish(Error("Player observation panel closed.")), { once: true, signal: listeners.signal });
+    if (signal.aborted) finish(Error("Player observation panel closed."));
+  });
+}
+var PlayerObservationPanel = class {
+  constructor(host, deps) {
+    this.host = host;
+    this.deps = deps;
+    this.#environment = deps.environment ?? currentObservationEnvironment;
+    this.#baseline = { ...this.#environment() };
+    host.replaceChildren();
+    host.hidden = false;
+    this.#status = document.createElement("p");
+    this.#status.setAttribute("role", "status");
+    this.#mount = document.createElement("div");
+    this.#mount.className = "ai-dm-chatkit-mount";
+    this.#mount.style.height = "320px";
+    const picker = document.createElement("select");
+    picker.setAttribute("aria-label", "Observing player");
+    const owners = owningPlayers(this.#baseline);
+    for (const owner of owners) {
+      const option = document.createElement("option");
+      option.value = owner.id;
+      option.textContent = owner.name ?? "Player";
+      picker.append(option);
+    }
+    this.#playerId = owners[0]?.id ?? null;
+    this.#button = document.createElement("button");
+    this.#button.type = "button";
+    this.#button.textContent = "Describe surroundings";
+    this.#button.disabled = !this.#baseline.isGM || !this.#baseline.token || owners.length === 0;
+    this.#status.textContent = this.#button.disabled ? "Select one token owned by an active player, then reopen Player surroundings." : "Player observations only. This uses no model calls.";
+    const close = document.createElement("button");
+    close.type = "button";
+    close.textContent = "Close player observations";
+    host.append(picker, this.#button, close, this.#status, this.#mount);
+    picker.addEventListener("change", () => {
+      this.#playerId = picker.value;
+      if (this.#component || this.#busy) {
+        this.cancel();
+        this.#status.textContent = "Player changed. Reopen Player surroundings to start a new observation history.";
+      }
+    }, { signal: this.#lifetime.signal });
+    close.addEventListener("click", () => {
+      this.cancel();
+      host.hidden = true;
+    }, { signal: this.#lifetime.signal });
+    this.#button.addEventListener("click", () => {
+      void this.observe().catch(() => void 0);
+    }, { signal: this.#lifetime.signal });
+    const hooks = globalThis.Hooks;
+    if (typeof hooks?.on === "function" && typeof hooks?.off === "function") for (const event of ["canvasReady", "controlToken", "updateToken", "updateScene", "updateUser", "deleteToken", "deleteScene"]) {
+      this.#hooks.push({ event, id: hooks.on(event, () => {
+        try {
+          this.#current();
+        } catch {
+          this.#status.textContent = "World, player, or token changed. Reopen Player surroundings for current observations.";
+        }
+      }) });
+    }
+  }
+  host;
+  deps;
+  #diagnostic = { phase: "idle", operation: "none", failure: "none" };
+  get diagnostic() {
+    return { ...this.#diagnostic };
+  }
+  #lifetime = new AbortController();
+  #requests = /* @__PURE__ */ new Set();
+  #component = null;
+  #threadId = null;
+  #selection = null;
+  #armed = null;
+  #baseline;
+  #playerId = null;
+  #busy = false;
+  #status;
+  #mount;
+  #button;
+  #environment;
+  #hooks = [];
+  #current() {
+    this.#lifetime.signal.throwIfAborted();
+    const now = this.#environment(), before = this.#baseline;
+    const tokenId = before.token?.document?.id ?? before.token?.id;
+    if (!now.isGM || now.worldId !== before.worldId || now.gmId !== before.gmId || now.sceneId !== before.sceneId || (now.token?.document?.id ?? now.token?.id) !== tokenId || now.revision !== before.revision || !owningPlayers(now).some((p) => p.id === this.#playerId)) {
+      this.cancel();
+      throw Error("Player observation lifetime changed");
+    }
+  }
+  cancel() {
+    this.#lifetime.abort();
+    for (const request of this.#requests) request.abort();
+    this.#requests.clear();
+    this.#component?.remove();
+    this.#component = null;
+    this.#threadId = null;
+    this.#selection = null;
+    this.#armed = null;
+    this.#button.disabled = true;
+    this.#mount.replaceChildren();
+    const hooks = globalThis.Hooks;
+    for (const hook of this.#hooks) hooks?.off(hook.event, hook.id);
+    this.#hooks = [];
+  }
+  async #request(input2, init, bootstrap = false) {
+    this.#current();
+    const gateway = new URL(this.deps.gatewayUrl), target = new URL(input2 instanceof Request ? input2.url : String(input2), gateway);
+    if (target.origin !== gateway.origin || target.pathname !== `${gateway.pathname}${bootstrap ? "/thread" : ""}` || (init?.method ?? (input2 instanceof Request ? input2.method : "GET")).toUpperCase() !== "POST") {
+      this.#diagnostic.failure = "UNSUPPORTED_RECEIPT_ROUTE";
+      throw Error("Unsupported player receipt route");
+    }
+    const raw = typeof init?.body === "string" ? init.body : input2 instanceof Request ? await input2.clone().text() : "";
+    const body = JSON.parse(raw);
+    this.#diagnostic.operation = bootstrap ? "bootstrap" : ["threads.get_by_id", "items.list", "threads.custom_action"].includes(body?.type) ? body.type : "unsupported";
+    if (!bootstrap && (!this.#selection || !safePlayerOperation(body, this.#threadId, this.#selection, this.#armed))) {
+      this.#diagnostic.failure = "RECEIPT_POLICY_DENIED";
+      throw Error("Player component cannot invoke inference or GM history");
+    }
+    const auth = this.deps.authHeaders();
+    if (!auth) throw Error("Foundry authentication unavailable");
+    const headers = new Headers({ "content-type": "application/json", ...auth });
+    const controller = new AbortController();
+    this.#requests.add(controller);
+    const signal = AbortSignal.any([this.#lifetime.signal, controller.signal, ...init?.signal ? [init.signal] : input2 instanceof Request ? [input2.signal] : []]);
+    try {
+      const response = await (this.deps.fetch ?? fetch)(target, { method: "POST", body: raw, headers, signal });
+      this.#current();
+      if (!response.ok) {
+        this.#diagnostic.failure = "RECEIPT_HTTP_REJECTED";
+        throw Error("Player receipt request unavailable");
+      }
+      if (!response.body) {
+        this.#requests.delete(controller);
+        return response;
+      }
+      const reader = response.body.getReader(), panel = this;
+      return new Response(new ReadableStream({ async pull(stream) {
+        try {
+          panel.#current();
+          const next = await reader.read();
+          panel.#current();
+          if (next.done) {
+            panel.#requests.delete(controller);
+            stream.close();
+          } else stream.enqueue(next.value);
+        } catch (error62) {
+          controller.abort();
+          panel.#requests.delete(controller);
+          await reader.cancel().catch(() => void 0);
+          stream.error(error62);
+        }
+      }, async cancel() {
+        controller.abort();
+        panel.#requests.delete(controller);
+        await reader.cancel();
+      } }), { status: response.status, headers: response.headers });
+    } catch (error62) {
+      this.#requests.delete(controller);
+      throw error62;
+    }
+  }
+  async observe() {
+    this.#current();
+    if (this.#busy) return;
+    this.#busy = true;
+    this.#button.disabled = true;
+    let stage = "player";
+    this.#diagnostic = { phase: "player", operation: "none", failure: "none" };
+    try {
+      const user = this.#environment().players.find((p) => p.id === this.#playerId);
+      if (!user?.query) throw Error("Supported Foundry User.query unavailable");
+      this.#status.textContent = "Checking the player's connection and consent\u2026";
+      const probe = await user.query("foundry-local-api.bridgeEnrollment", { action: "probe", targetUserId: user.id, expectedLane: "player" }, { timeout: 5e3 });
+      this.#current();
+      const diagnostics2 = probe.diagnostics;
+      if (probe.moduleLoaded !== true || probe.userId !== user.id || probe.intendedLane !== "player" || probe.consentGranted !== true || diagnostics2?.connectionState !== "connected" || typeof probe.clientId !== "string" || !/^[0-9a-f-]{36}$/i.test(probe.clientId)) throw Error("Exact consenting player not connected");
+      const selection = { worldId: this.#baseline.worldId, sceneId: this.#baseline.sceneId, userId: user.id, clientId: probe.clientId, tokenId: this.#baseline.token?.document?.id ?? this.#baseline.token?.id };
+      if (this.#selection && selectionKeys.some((key) => this.#selection[key] !== selection[key])) {
+        this.cancel();
+        throw Error("Player audience changed");
+      }
+      if (!this.#component) {
+        stage = "thread";
+        this.#diagnostic.phase = stage;
+        this.#selection = selection;
+        const response = await this.#request(`${this.deps.gatewayUrl}/thread`, { method: "POST", body: JSON.stringify({ playerObservation: selection }) }, true);
+        const data = await response.json();
+        this.#current();
+        if (typeof data.threadId !== "string" || !/^[A-Za-z0-9_-]{1,128}$/.test(data.threadId)) throw Error("Dedicated thread unavailable");
+        this.#threadId = data.threadId;
+        const component = document.createElement("openai-chatkit");
+        this.#component = component;
+        stage = "frame";
+        this.#diagnostic.phase = stage;
+        component.style.display = "block";
+        component.style.width = "100%";
+        component.style.height = "100%";
+        const frameLifetime = new AbortController();
+        const initializationSignal = AbortSignal.any([this.#lifetime.signal, frameLifetime.signal]);
+        const ready = waitForPlayerFrame(component, initializationSignal);
+        const loaded = waitForPlayerThread(component, this.#threadId, initializationSignal);
+        void ready.catch(() => void 0);
+        void loaded.catch(() => void 0);
+        component.addEventListener("chatkit.error", () => {
+          if (this.#diagnostic.failure === "none") this.#diagnostic.failure = "CHATKIT_COMPONENT_ERROR";
+          this.#status.textContent = "Player receipt unavailable. No model request is permitted here.";
+        }, { signal: this.#lifetime.signal });
+        try {
+          component.setOptions({
+            api: { url: this.deps.gatewayUrl, domainKey: this.deps.domainKey, fetch: (input2, init) => this.#request(input2, init) },
+            initialThread: this.#threadId,
+            frameTitle: "Player surroundings",
+            theme: "dark",
+            header: { enabled: false },
+            history: { enabled: false },
+            composer: { placeholder: "Use Describe surroundings above", attachments: { enabled: false } }
+          });
+          this.#mount.append(component);
+          await ready;
+          this.#current();
+          stage = "history";
+          this.#diagnostic.phase = stage;
+          await loaded;
+          this.#current();
+        } catch (error62) {
+          component.remove();
+          this.#component = null;
+          this.#threadId = null;
+          this.#selection = null;
+          throw error62;
+        } finally {
+          frameLifetime.abort();
+        }
+      }
+      stage = "receipt";
+      this.#diagnostic.phase = stage;
+      this.#armed = crypto.randomUUID();
+      this.#status.textContent = "Reading validated player observations\u2026";
+      await this.#component.sendCustomAction({ type: PLAYER_OBSERVATION_ACTION, payload: { requestId: this.#armed, ...selection } });
+      this.#current();
+      this.#status.textContent = "Player observation receipt received. Unknown threats and trap outcomes remain unknown.";
+      this.#diagnostic.phase = "complete";
+    } catch (error62) {
+      if (this.#diagnostic.failure === "none") this.#diagnostic.failure = "PLAYER_COMPONENT_STEP_REJECTED";
+      this.#status.setAttribute("data-player-observation-phase", this.#diagnostic.phase);
+      this.#status.setAttribute("data-player-observation-operation", this.#diagnostic.operation);
+      this.#status.setAttribute("data-player-observation-failure", this.#diagnostic.failure);
+      if (!this.#lifetime.signal.aborted) this.#status.textContent = stage === "frame" ? "Player chat frame unavailable. Check ChatKit domain registration and CDN access, then reopen this panel." : stage === "thread" || stage === "history" ? "Dedicated player history unavailable. Check Foundry authentication and server connection, then reopen this panel." : stage === "receipt" ? "Player observation receipt unavailable. Recheck the selected player's connection and consent." : "Selected player unavailable. Check connection, consent, and token ownership, then reopen this panel.";
+      throw error62;
+    } finally {
+      this.#armed = null;
+      this.#busy = false;
+      if (!this.#lifetime.signal.aborted) this.#button.disabled = false;
+    }
+  }
+};
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/preparation-panel.ts
+var CampaignPreparationPanel = class {
+  constructor(host, request) {
+    this.host = host;
+    this.request = request;
+  }
+  host;
+  request;
+  lifecycle = new AbortController();
+  cancel() {
+    this.lifecycle.abort();
+  }
+  async open() {
+    await this.action({ operation: "start", audience: "player" });
+  }
+  async action(input2) {
+    this.host.hidden = false;
+    const current = await this.request({ sessionId: "campaign-setup-v1", ...input2 }, this.lifecycle.signal);
+    this.lifecycle.signal.throwIfAborted();
+    if (!current?.session || !Number.isSafeInteger(current.session.revision) || !Array.isArray(current.questions) || current.questions.length > 3) throw Error("Campaign setup response unavailable");
+    this.host.replaceChildren();
+    const title = document.createElement("h3");
+    title.textContent = "Campaign setup";
+    const status = document.createElement("p");
+    status.setAttribute("role", "status");
+    status.textContent = current.session.paused ? "Setup paused. Your answers are saved privately." : current.questions.length ? "Your setup preferences remain drafts for campaign review." : "Setup answers saved. Campaign records still need source preparation and review.";
+    this.host.append(title, status);
+    const button = (label, next) => {
+      const element = document.createElement("button");
+      element.type = "button";
+      element.textContent = label;
+      element.addEventListener("click", () => {
+        element.disabled = true;
+        void this.action({ expectedRevision: current.session.revision, ...next() }).catch(() => {
+          status.textContent = "Setup could not be saved. Reconnect and reopen to check the saved revision.";
+          element.disabled = false;
+        });
+      }, { signal: this.lifecycle.signal });
+      return element;
+    };
+    if (!current.session.paused) for (const question of current.questions) {
+      if (!question || typeof question.id !== "string" || typeof question.question !== "string" || question.question.length > 500) throw Error("Invalid setup question");
+      const label = document.createElement("label"), field = document.createElement("textarea");
+      label.textContent = question.question;
+      field.maxLength = 2e3;
+      field.rows = 3;
+      label.append(field);
+      this.host.append(label, button("Save preference", () => ({ operation: "answer", questionId: question.id, text: field.value, mode: "out-of-character", approved: true })));
+    }
+    this.host.append(button(current.session.paused ? "Resume setup" : "Pause setup", () => ({ operation: current.session.paused ? "resume" : "pause" })));
+  }
+};
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/forest-battlemap-panel.ts
+var ForestBattlemapPanel = class {
+  constructor(host, request) {
+    this.host = host;
+    this.request = request;
+  }
+  host;
+  request;
+  cancellation = new AbortController();
+  packageId = "";
+  digest = "";
+  approvalId = "";
+  cancel() {
+    this.cancellation.abort();
+  }
+  open() {
+    this.host.hidden = false;
+    this.host.replaceChildren();
+    const title = document.createElement("h3");
+    title.textContent = "Forest test map";
+    const explanation = document.createElement("p");
+    explanation.textContent = "Review forest artwork in test mcp using the previous approved fixture or a recorded new image handoff. These controls send no image or model requests. Create an inactive scene; choose GM preview or TV calibration explicitly.";
+    const status = document.createElement("p");
+    status.setAttribute("role", "status");
+    const review = document.createElement("pre");
+    review.style.whiteSpace = "pre-wrap";
+    const profile = document.createElement("select");
+    profile.setAttribute("aria-label", "Forest map preview");
+    for (const [value, label] of [["gm-preview", "GM preview (no TV acceptance)"], ["tv", "Authenticated TV viewport"]]) {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = label;
+      profile.append(option);
+    }
+    const action = (label, work) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = label;
+      button.addEventListener("click", () => {
+        button.disabled = true;
+        void work().catch((error62) => {
+          status.textContent = error62 instanceof Error ? error62.message : "Forest workflow unavailable. Reconnect and inspect receipts before retrying an uncertain apply.";
+        }).finally(() => {
+          button.disabled = false;
+        });
+      });
+      return button;
+    };
+    const generationId = document.createElement("input");
+    generationId.type = "text";
+    generationId.maxLength = 64;
+    generationId.placeholder = "New image request ID from this conversation";
+    generationId.setAttribute("aria-label", "New forest image request ID");
+    const reset = () => {
+      this.packageId = "";
+      this.digest = "";
+      this.approvalId = "";
+      review.textContent = "";
+    };
+    generationId.addEventListener("input", reset);
+    const input2 = () => {
+      const id3 = generationId.value.trim();
+      if (id3 && !/^[a-f0-9]{64}$/.test(id3)) throw Error("Enter the exact new image request ID.");
+      return { worldId: "mcp-test", ...id3 ? { generationId: id3 } : {} };
+    };
+    const generationStatus = action("Check new image handoff", async () => {
+      if (!generationId.value.trim()) throw Error("Enter the new image request ID first.");
+      const result = await this.request("battlemap-generation-status", input2(), this.cancellation.signal);
+      review.textContent = JSON.stringify(result, null, 2);
+      status.textContent = `New image request: ${result.name}; ${result.status}. Secure manual generation handoff; automatic generation is unavailable.`;
+    });
+    const generationComplete = action("Import securely staged new image", async () => {
+      if (!generationId.value.trim()) throw Error("Enter the new image request ID first.");
+      const result = await this.request("battlemap-generation-complete", input2(), this.cancellation.signal);
+      reset();
+      review.textContent = JSON.stringify(result, null, 2);
+      status.textContent = `New artwork imported for ${result.fixture.name}. No scene created; TV calibration and physical measurement remain pending.`;
+    });
+    const thread = action("Initialize a fresh forest conversation", async () => {
+      const result = await this.request("battlemap-thread", input2(), this.cancellation.signal);
+      review.textContent = JSON.stringify(result, null, 2);
+      status.textContent = "Fresh private conversation initialized without inference. Configure its approved startup budget before submitting a prompt.";
+    });
+    const budget = action("Use configured forest test budget", async () => {
+      const result = await this.request("battlemap-acceptance", input2(), this.cancellation.signal);
+      review.textContent = JSON.stringify(result, null, 2);
+      status.textContent = `Forest test budget bound: ${result.maxModelRequests} total requests within this binding. No model request sent. Test consumption persists across reconnects; normal chat requires no test allowance.`;
+    });
+    const imported = action("Import approved forest artwork", async () => {
+      const result = await this.request("battlemap-import", input2(), this.cancellation.signal);
+      status.textContent = `Artwork ${result.status}. No scene created.`;
+    });
+    const prepare = action("Prepare forest scene review", async () => {
+      const result = await this.request("battlemap-prepare", { ...input2(), profile: profile.value }, this.cancellation.signal);
+      this.packageId = result.package.id;
+      this.digest = result.package.digest;
+      this.approvalId = "";
+      review.textContent = JSON.stringify({ profile: result.profile, physicalAcceptance: false, scene: result.package.sceneRequest.args.data, reviewDigest: this.digest }, null, 2);
+      status.textContent = "Exact scene prepared. Review the background, dimensions, native level and grid before applying.";
+    });
+    const approve = action("Approve this exact forest scene", async () => {
+      if (!this.packageId || !this.digest) throw Error("Prepare first");
+      const result = await this.request("battlemap-review", { ...input2(), packageId: this.packageId, reviewDigest: this.digest }, this.cancellation.signal);
+      this.approvalId = result.approvalId;
+      status.textContent = "Exact native scene review approved. Scene has not been created yet.";
+    });
+    const apply = action("Create reviewed forest scene", async () => {
+      if (!this.approvalId) throw Error("Review first");
+      const result = await this.request("battlemap-apply", { ...input2(), packageId: this.packageId, approvalId: this.approvalId }, this.cancellation.signal);
+      review.textContent = JSON.stringify(result, null, 2);
+      status.textContent = `Inactive forest scene created and read back: ${result.result.sceneId}. View it in Scenes. Physical TV acceptance remains pending.`;
+    });
+    const refresh = action("Check forest scene receipt", async () => {
+      if (!this.packageId) throw Error("Prepare first");
+      const result = await this.request("battlemap-status", { ...input2(), packageId: this.packageId }, this.cancellation.signal);
+      review.textContent = JSON.stringify(result, null, 2);
+      status.textContent = "Receipt refreshed; no scene mutation or model request.";
+    });
+    const display = action("Display reviewed forest scene", async () => {
+      if (!this.packageId) throw Error("Prepare first");
+      const result = await this.request("battlemap-display", { ...input2(), packageId: this.packageId }, this.cancellation.signal);
+      review.textContent = JSON.stringify(result, null, 2);
+      status.textContent = result.profile === "tv" ? "Actual TV scene and Digital Tabletop viewport acknowledged. Measure a grid square with a ruler before accepting one-inch scale." : "GM preview acknowledged; physical TV acceptance remains pending.";
+    });
+    profile.addEventListener("change", () => {
+      this.packageId = "";
+      this.digest = "";
+      this.approvalId = "";
+      review.textContent = "";
+    });
+    const handoffExplanation = document.createElement("p");
+    handoffExplanation.textContent = "For a new image, ask in the current conversation, enter its request ID here, and check the recorded handoff. A trusted operator must generate and securely stage one matching new image before import. Keep the request ID selected for scene review and creation. Clearing it selects the previous fixture.";
+    this.host.append(title, explanation, profile, thread, budget, handoffExplanation, generationId, generationStatus, generationComplete, imported, prepare, approve, apply, refresh, display, status, review);
+  }
+};
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts
+var __defProp2 = Object.defineProperty;
+var __name = (target, value) => __defProp2(target, "name", { value, configurable: true });
 var MODULE_ID2 = "foundry-ai-dungeon-master";
 var RUNTIME_URL = "https://cdn.platform.openai.com/deployments/chatkit/chatkit.js";
+async function cancellable(work, signal) {
+  const promise2 = Promise.resolve(work);
+  if (signal.aborted) {
+    void promise2.catch(() => {
+    });
+    signal.throwIfAborted();
+  }
+  let stop = __name(() => {
+  }, "stop");
+  const stopped = new Promise((_, reject) => {
+    stop = __name(() => reject(signal.reason instanceof Error ? signal.reason : new Error("Response cancelled.")), "stop");
+    signal.addEventListener("abort", stop, { once: true });
+  });
+  try {
+    return await Promise.race([promise2, stopped]);
+  } finally {
+    signal.removeEventListener("abort", stop);
+  }
+}
+__name(cancellable, "cancellable");
 var runtimePromise;
 function loadRuntime() {
-  if (customElements.get("openai-chatkit")) return Promise.resolve();
+  if (customElements.get("openai-chatkit"))
+    return Promise.resolve();
   if (!runtimePromise)
     runtimePromise = new Promise((resolve, reject) => {
       const script = document.createElement("script");
       script.src = RUNTIME_URL;
       script.async = true;
-      script.addEventListener(
-        "load",
-        () => {
-          void customElements.whenDefined("openai-chatkit").then(() => resolve());
-        },
-        { once: true }
-      );
-      script.addEventListener(
-        "error",
-        () => {
-          runtimePromise = void 0;
-          script.remove();
-          reject(new Error("ChatKit could not load. Check network access to the OpenAI CDN."));
-        },
-        { once: true }
-      );
+      script.addEventListener("load", () => {
+        void customElements.whenDefined("openai-chatkit").then(() => resolve());
+      }, { once: true });
+      script.addEventListener("error", () => {
+        runtimePromise = void 0;
+        script.remove();
+        reject(new Error("ChatKit could not load. Check network access to the OpenAI CDN."));
+      }, { once: true });
       document.head.append(script);
     });
   return runtimePromise;
 }
+__name(loadRuntime, "loadRuntime");
 function gatewayUrl() {
   const url2 = new URL(String(game.settings.get(MODULE_ID2, "serverUrl")));
   url2.protocol = url2.protocol === "wss:" ? "https:" : "http:";
   return `${url2.origin}/chatkit`;
 }
+__name(gatewayUrl, "gatewayUrl");
 function pointerKey() {
   return `${MODULE_ID2}.chatkit.thread.${game.world?.id ?? "none"}.${game.user.id}`;
 }
-var Base = foundry.applications.api.HandlebarsApplicationMixin(
-  foundry.applications.api.ApplicationV2
-);
+__name(pointerKey, "pointerKey");
+var Base = foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.api.ApplicationV2);
 var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base {
-  static DEFAULT_OPTIONS = {
-    id: MODULE_ID2,
-    classes: [MODULE_ID2],
-    tag: "div",
-    position: { width: 620, height: 720 },
-    window: { title: "AI Dungeon Master", resizable: true, minimizable: true },
-    actions: {
-      contextResponse: () => {
-        void this.#instance?.trigger({
-          prompt: "Describe the current game situation using the supplied context.",
-          context: currentGameContext()
-        }).catch((error62) => this.#instance?.fail(error62));
-      },
-      resolveAction: () => {
-        void this.#instance?.trigger({
-          prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action."
-        }).catch((error62) => this.#instance?.fail(error62));
-      },
-      cancelResponse: () => this.#instance?.cancel(),
-      reviewNativeActions: () => {
-        void this.#instance?.reviewNativeActions().catch((error62) => this.#instance?.fail(error62));
-      },
-      chatGptSignIn: () => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()),
-      chatGptRefresh: () => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()),
-      chatGptSignOut: () => this.#instance?.providerAction(() => aiDmController.signOutChatGpt())
-    }
-  };
-  static PARTS = {
-    main: { template: `modules/${MODULE_ID2}/module/templates/ai-dungeon-master/application.hbs` }
-  };
+  static {
+    __name(this, "AiDungeonMasterApplication");
+  }
+  static DEFAULT_OPTIONS = { id: MODULE_ID2, classes: [MODULE_ID2], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => {
+    void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch((error62) => this.#instance?.fail(error62));
+  }, "contextResponse"), resolveAction: __name(() => {
+    void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch((error62) => this.#instance?.fail(error62));
+  }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => {
+    void this.#instance?.reviewActions().catch((error62) => this.#instance?.fail(error62));
+  }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => {
+    this.#instance?.recoverConnection();
+  }, "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+  static PARTS = { main: { template: `modules/${MODULE_ID2}/module/templates/ai-dungeon-master/application.hbs` } };
   static #instance = null;
   #component = null;
+  #playerObservationPanel = null;
+  #campaignPreparationPanel = null;
+  #forestBattlemapPanel = null;
+  #forestBudget = null;
+  #latencyProbe = null;
   #mounting = null;
+  #mountGeneration = 0;
   #ready = null;
   #listeners = null;
   #requests = /* @__PURE__ */ new Set();
   #guard = new TriggerGuard();
+  #queuedTriggers = 0;
+  #responseActive = false;
+  #idleWaiters = /* @__PURE__ */ new Set();
   #triggerTail = Promise.resolve();
   #triggerGeneration = 0;
+  #triggerCancellation = new AbortController();
+  #dispatchCancellation = null;
   #closed = false;
   #threadId = null;
+  #threadSelection = null;
+  #preparationStatus = "Preparing prerequisites\u2026";
+  #preparationKey = "";
+  #preparation = new PanelPreparation(async (signal) => {
+    const auth = aiDmController.transport.chatKitHeaders?.();
+    if (!auth) throw new Error("Reconnect required. Foundry authentication is unavailable.");
+    return fetch(`${gatewayUrl()}/prepare`, { method: "POST", headers: { ...auth, "content-type": "application/json" }, body: "{}", signal });
+  }, ({ message }) => {
+    this.#preparationStatus = message;
+    if (!this.#closed && !this.#requestFailed && !this.#responseActive && !this.#guard.busy) this.status(message);
+  });
+  refreshPreparation() {
+    if (this.#closed || this.#configurationChanged) return;
+    const state = aiDmController.store.state;
+    if (game.user.isGM && game.world?.id === this.#worldId && game.user.id === this.#userId && state.connection === "connected" && state.authenticatedLane === "gm" && state.chatGpt.state === "ready" && !state.chatGpt.modelSelectionPending)
+      void this.#preparation.refresh().catch(() => void 0);
+    else this.checkPreparation();
+  }
+  recoverConnection() {
+    if (this.#closed || !game.user.isGM) return;
+    if (this.#configurationChanged) {
+      this.fail(new Error(this.#configurationChanged));
+      return;
+    }
+    if (aiDmController.store.state.connection !== "connected" || aiDmController.store.state.authenticatedLane !== "gm") {
+      aiDmController.reconnect();
+      this.status("Reconnecting Foundry authentication. No model request was sent.");
+      return;
+    }
+    this.refreshPreparation();
+    this.providerAction(() => aiDmController.refreshChatGptStatus());
+  }
+  checkPreparation() {
+    if (this.#closed || this.#configurationChanged || !this.element) return;
+    const state = aiDmController.store.state;
+    const key = JSON.stringify([game.world?.id, game.user.id, game.user.isGM, state.connection, state.authenticatedLane, state.chatGpt.selectedModel, state.chatGpt.state, state.chatGpt.modelSelectionPending]);
+    if (key === this.#preparationKey) return;
+    this.#preparationKey = key;
+    this.#preparation.invalidate();
+    if (game.user.isGM && (game.world?.id ?? "none") === this.#worldId && game.user.id === this.#userId && state.connection === "connected" && state.authenticatedLane === "gm" && state.chatGpt.state === "ready" && !state.chatGpt.modelSelectionPending)
+      void this.#preparation.ensure().catch(() => void 0);
+  }
   #status = "Connecting to ChatKit\u2026";
   #requestFailed = false;
+  #configurationChanged = "";
+  #statusConnection = "";
   #unsubscribe = null;
   #providerListeners = null;
+  #reviewEpoch = 0;
+  #reviewBatch = null;
+  #campaignLoadGeneration = 0;
+  #worldLoadGeneration = { world: 0, "world-file": 0 };
+  #campaignListeners = null;
+  #worldId = game.world?.id ?? "none";
+  #userId = game.user.id;
   constructor(options = {}) {
     super(options);
     this.#unsubscribe = aiDmController.store.subscribe(() => {
-      if (!this.#closed) this.updateProviderControls();
+      if (!this.#closed) {
+        const state = aiDmController.store.state;
+        const connection = `${state.connection}:${state.authenticatedLane}`;
+        if (connection !== this.#statusConnection) {
+          this.#statusConnection = connection;
+          if (state.connection === "connected" && state.authenticatedLane === "gm" && !this.#configurationChanged) aiDmController.openStatusPanel();
+        }
+        this.updateProviderControls();
+        this.checkPreparation();
+      }
     });
   }
   static open() {
     const instance = this.#instance ?? new this();
     this.#instance = instance;
-    if (!instance.#component) instance.render({ force: true });
+    if (!instance.#component)
+      instance.render({ force: true });
     return instance;
   }
+  static settingsChanged(key = "configuration") {
+    const panel = this.#instance;
+    if (!panel || panel.#closed) return;
+    panel.updateDiagnostics();
+    if (key === "latencyDiagnosticsEnabled") return;
+    panel.cancel();
+    aiDmController.closeStatusPanel();
+    panel.#configurationChanged = key === "serverUrl" ? "Server settings changed. Reopen the DM panel after Foundry authentication reconnects. No model request was sent." : "ChatKit settings changed. Reopen the DM panel to validate this browser configuration.";
+    if (key === "serverUrl") aiDmController.reconnect();
+    panel.fail(new Error(panel.#configurationChanged));
+  }
+  static cancelOpen() {
+    this.#instance?.cancel();
+  }
+  async openPlayerObservations() {
+    this.#playerObservationPanel?.cancel();
+    this.#playerObservationPanel = null;
+    await loadRuntime();
+    if (this.#closed || !game.user.isGM || (game.world?.id ?? "none") !== this.#worldId || game.user.id !== this.#userId) return;
+    const host = this.element.querySelector(".ai-dm-player-observations");
+    const domainKey = chatKitDomainKey(game.settings.get(MODULE_ID2, "chatKitDomainKey"), globalThis.location?.hostname ?? "");
+    if (!host || !domainKey) throw Error("Player observation panel requires the registered ChatKit browser origin.");
+    this.#playerObservationPanel?.cancel();
+    this.#playerObservationPanel = new PlayerObservationPanel(host, { gatewayUrl: gatewayUrl(), domainKey, authHeaders: () => aiDmController.transport.chatKitHeaders?.() });
+  }
+  updateStopControl() {
+    const button = this.element?.querySelector('[data-action="cancelResponse"]');
+    if (button?.tagName === "BUTTON") button.hidden = !(this.#guard.busy || this.#responseActive || this.#queuedTriggers > 0);
+  }
+  showReviewDrawer() {
+    const drawer = this.element?.querySelector(".ai-dm-review-drawer");
+    if (drawer?.tagName === "DETAILS") {
+      drawer.hidden = false;
+      drawer.open = true;
+    }
+  }
+  updateDiagnostics() {
+    const host = this.element?.querySelector(".ai-dm-diagnostics");
+    if (host?.tagName !== "DIV") return;
+    const enabled = game.settings.get(MODULE_ID2, "latencyDiagnosticsEnabled") === true;
+    host.hidden = !enabled;
+    if (!enabled) host.replaceChildren();
+    else if (!host.querySelector(".ai-dm-latency-export")) host.append(latencyDownloadButton());
+  }
+  finishGuard() {
+    this.#guard.finish();
+    this.updateStopControl();
+    for (const wake of this.#idleWaiters)
+      wake();
+    this.#idleWaiters.clear();
+  }
+  async waitForIdle(signal) {
+    while (this.#guard.busy) {
+      let wake = __name(() => {
+      }, "wake");
+      const idle = new Promise((resolve) => {
+        wake = resolve;
+        this.#idleWaiters.add(wake);
+      });
+      try {
+        await cancellable(idle, signal);
+      } finally {
+        this.#idleWaiters.delete(wake);
+      }
+    }
+  }
   _prepareContext() {
-    return {
-      isGm: game.user.isGM,
-      status: game.user.isGM ? this.#status : "ChatKit currently requires a Foundry GM.",
-      providerStatus: chatGptPanelStatus(aiDmController.store.state)
-    };
+    return { isGm: game.user.isGM, isTestWorld: game.world?.id === "mcp-test", status: game.user.isGM ? compactStatusMessage(this.#status) : "ChatKit currently requires a Foundry GM.", providerStatus: compactPanelState(aiDmController.store.state).providerMessage };
   }
   _onRender() {
-    if (!game.user.isGM) return;
+    this.checkPreparation();
+    this.#playerObservationPanel?.cancel();
+    this.#playerObservationPanel = null;
+    if (!game.user.isGM)
+      return;
     this.#providerListeners?.abort();
     this.#providerListeners = new AbortController();
+    if (!this.#configurationChanged) aiDmController.openStatusPanel();
+    const accountMenu = this.element.querySelector(".ai-dm-account-menu");
+    if (accountMenu?.tagName === "DETAILS") accountMenu.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        accountMenu.open = false;
+        accountMenu.querySelector("summary")?.focus();
+        event.stopPropagation();
+      }
+    }, { signal: this.#providerListeners.signal });
+    const setupButton = this.element.querySelector("[data-campaign-setup]");
+    const forestButton = this.element.querySelector("[data-forest-map]");
+    if (forestButton?.tagName === "BUTTON") forestButton.addEventListener("click", () => {
+      void this.openForestMap().catch(() => this.status("Forest test map unavailable. Reconnect the intended test GM."));
+    }, { signal: this.#providerListeners.signal });
+    if (setupButton?.tagName === "BUTTON") setupButton.addEventListener("click", () => {
+      void this.openCampaignSetup().catch(() => this.status("Campaign setup unavailable. Reconnect the intended GM client."));
+    }, { signal: this.#providerListeners.signal });
+    const playerButton = this.element.querySelector("[data-player-surroundings]");
+    if (playerButton?.tagName === "BUTTON") playerButton.addEventListener("click", () => {
+      void this.openPlayerObservations().catch(() => this.status("Player observations unavailable. Check the current token and registered ChatKit origin."));
+    }, { signal: this.#providerListeners.signal });
     const select = this.element.querySelector("[data-chatgpt-model]");
     if (select?.tagName === "SELECT")
-      select.addEventListener(
-        "change",
-        () => {
-          this.providerAction(() => aiDmController.selectChatGptModel(select.value));
-        },
-        { signal: this.#providerListeners.signal }
-      );
+      select.addEventListener("change", () => {
+        this.providerAction(() => aiDmController.selectChatGptModel(select.value));
+      }, { signal: this.#providerListeners.signal });
     this.updateProviderControls();
     const mount = this.element.querySelector(".ai-dm-chatkit-mount");
-    if (!mount) return;
+    if (!mount)
+      return;
     if (this.#component) {
       mount.append(this.#component);
+      this.updateDiagnostics();
       return;
     }
     this.#mounting ??= this.mount(mount).catch((error62) => {
@@ -21050,28 +22379,45 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
   status(text) {
     this.#status = text;
     const node2 = this.element?.querySelector(".ai-dm-chatkit-status");
-    if (node2) node2.textContent = text;
+    if (node2) {
+      node2.textContent = compactStatusMessage(text);
+      node2.hidden = !node2.textContent;
+    }
+    this.updateStopControl();
   }
   providerAction(action) {
     if (!game.user.isGM || !action()) {
-      const node2 = this.element?.querySelector(".ai-dm-provider-status");
-      if (node2)
-        node2.textContent = "Connect as a Foundry GM before changing ChatGPT authorization. Allow popups for sign-in, then try again.";
+      this.fail(new Error("Connect as a Foundry GM before changing ChatGPT authorization. Allow popups for sign-in, then try again."));
     }
   }
   updateProviderControls() {
-    if (!game.user.isGM) return;
+    if (!game.user.isGM)
+      return;
     const state = aiDmController.store.state;
     const status = this.element?.querySelector(".ai-dm-provider-status");
-    if (status) status.textContent = chatGptPanelStatus(state);
+    if (status) {
+      status.textContent = compactPanelState(state).providerMessage;
+      status.hidden = !status.textContent;
+    }
+    const presentation = compactPanelState(state);
+    const signIn = this.element?.querySelector('[data-action="chatGptSignIn"]');
+    if (signIn?.tagName === "BUTTON") {
+      signIn.hidden = !presentation.showSignIn;
+      signIn.textContent = presentation.signInLabel;
+    }
+    const reconnect = this.element?.querySelector(".ai-dm-reconnection");
+    if (reconnect?.tagName === "DIV") reconnect.hidden = !presentation.providerMessage && !presentation.showSignIn;
+    this.updateDiagnostics();
+    this.updateStopControl();
     const connected = state.connection === "connected" && state.authenticatedLane === "gm";
     for (const action of ["chatGptSignIn", "chatGptRefresh", "chatGptSignOut"]) {
       const button = this.element?.querySelector(`[data-action="${action}"]`);
       if (button?.tagName === "BUTTON")
-        button.disabled = !connected || action === "chatGptSignOut" && !state.chatGpt.identityConnected;
+        button.disabled = action === "chatGptRefresh" ? false : !connected || action === "chatGptSignOut" && !state.chatGpt.identityConnected;
     }
     const select = this.element?.querySelector("[data-chatgpt-model]");
-    if (select?.tagName !== "SELECT") return;
+    if (select?.tagName !== "SELECT")
+      return;
     const options = state.chatGpt.availableModels.map((model) => {
       const option = document.createElement("option");
       option.value = model.slug;
@@ -21096,101 +22442,87 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
     select.disabled = !connected || !state.chatGpt.planUsageAuthorized || !state.chatGpt.availableModels.length || state.chatGpt.modelSelectionPending;
   }
   fail(error62) {
+    this.#responseActive = false;
     this.#requestFailed = true;
-    this.#guard.finish();
+    this.finishGuard();
     this.status(error62 instanceof Error ? error62.message : "ChatKit request failed.");
   }
   async mount(mount) {
+    const generation = ++this.#mountGeneration;
     await loadRuntime();
-    if (this.#closed) return;
+    if (this.#closed || generation !== this.#mountGeneration || (game.world?.id ?? "none") !== this.#worldId || game.user.id !== this.#userId)
+      return;
     const domainValue = game.settings.get(MODULE_ID2, "chatKitDomainKey");
     const domainKey = chatKitDomainKey(domainValue, globalThis.location?.hostname ?? "");
     if (!domainKey)
-      throw new Error(
-        "Set the ChatKit domain key in module settings for this Foundry browser origin."
-      );
-    this.#threadId = localStorage.getItem(pointerKey());
+      throw new Error("Set the ChatKit domain key in module settings for this Foundry browser origin.");
+    const threadPointer = `${MODULE_ID2}.chatkit.thread.${this.#worldId}.${this.#userId}`;
+    this.#threadId = localStorage.getItem(threadPointer);
     const component = document.createElement("openai-chatkit");
     this.#listeners = new AbortController();
     const options = { signal: this.#listeners.signal };
     this.#ready = new Promise((resolve, reject) => {
-      const timeout = window.setTimeout(
-        () => reject(
-          new Error(
-            "ChatKit did not become ready. Check the registered domain key and CDN access."
-          )
-        ),
-        2e4
-      );
-      component.addEventListener(
-        "chatkit.ready",
-        () => {
-          window.clearTimeout(timeout);
-          resolve();
-        },
-        { ...options, once: true }
-      );
-      this.#listeners?.signal.addEventListener(
-        "abort",
-        () => {
-          window.clearTimeout(timeout);
-          reject(new Error("Chat panel closed."));
-        },
-        { once: true }
-      );
+      const timeout = window.setTimeout(() => reject(new Error("ChatKit did not become ready. Check the registered domain key and CDN access.")), 2e4);
+      component.addEventListener("chatkit.ready", () => {
+        window.clearTimeout(timeout);
+        resolve();
+      }, { ...options, once: true });
+      this.#listeners?.signal.addEventListener("abort", () => {
+        window.clearTimeout(timeout);
+        reject(new Error("Chat panel closed."));
+      }, { once: true });
     });
     void this.#ready.catch((error62) => {
-      if (!this.#closed) this.fail(error62);
+      if (!this.#closed)
+        this.fail(error62);
     });
-    component.addEventListener(
-      "chatkit.thread.change",
-      (event) => {
-        this.#threadId = event.detail.threadId;
-        if (this.#threadId) localStorage.setItem(pointerKey(), this.#threadId);
-        else localStorage.removeItem(pointerKey());
-      },
-      options
-    );
-    component.addEventListener(
-      "chatkit.response.start",
-      () => {
-        this.#requestFailed = false;
-        this.#guard.busy = true;
-        this.status("Receiving response\u2026");
-      },
-      options
-    );
-    component.addEventListener(
-      "chatkit.response.end",
-      () => {
-        this.#guard.finish();
-        if (!this.#requestFailed) this.status("Ready");
-      },
-      options
-    );
-    component.addEventListener(
-      "chatkit.error",
-      () => this.fail(
-        new Error(
-          "ChatKit could not complete the request. Check connection, Foundry authentication and server configuration."
-        )
-      ),
-      options
-    );
-    component.setOptions({
-      api: { url: gatewayUrl(), domainKey, fetch: this.authenticatedFetch },
-      initialThread: this.#threadId,
-      frameTitle: "AI Dungeon Master chat",
-      theme: "dark",
-      composer: { attachments: { enabled: false } },
-      history: { enabled: true }
-    });
+    component.addEventListener("chatkit.thread.change", (event) => {
+      if (this.#closed || generation !== this.#mountGeneration || this.#component !== component || (game.world?.id ?? "none") !== this.#worldId || game.user.id !== this.#userId)
+        return;
+      if (this.#threadSelection?.id === event.detail.threadId && this.#threadSelection.generation !== this.#triggerGeneration)
+        return;
+      this.invalidateReviews();
+      this.#threadId = event.detail.threadId;
+      if (this.#threadId)
+        localStorage.setItem(threadPointer, this.#threadId);
+      else
+        localStorage.removeItem(threadPointer);
+      this.checkPendingReviews();
+    }, options);
+    component.addEventListener("chatkit.response.start", () => {
+      this.#requestFailed = false;
+      this.#responseActive = true;
+      this.#guard.busy = true;
+      this.status("Receiving response\u2026");
+    }, options);
+    component.addEventListener("chatkit.response.end", () => {
+      this.#latencyProbe?.mark("browser-chatkit-response-end");
+      this.#responseActive = false;
+      this.finishGuard();
+      this.checkPendingReviews();
+      if (!this.#requestFailed)
+        this.status(this.#preparationStatus);
+    }, options);
+    component.addEventListener("chatkit.error", () => this.fail(new Error("ChatKit could not complete the request. Check connection, Foundry authentication and server configuration.")), options);
+    component.setOptions({ api: { url: gatewayUrl(), domainKey, fetch: this.authenticatedFetch }, initialThread: this.#threadId, frameTitle: "AI Dungeon Master chat", theme: "dark", composer: { attachments: { enabled: false } }, history: { enabled: true } });
     this.#component = component;
     mount.append(component);
-    this.status("Ready. Messages use your private GM conversation.");
+    this.updateDiagnostics();
+    this.checkPreparation();
+    void this.#ready.then(() => {
+      if (!this.#closed && this.#component === component && generation === this.#mountGeneration) this.checkPendingReviews();
+    }).catch(() => void 0);
   }
-  authenticatedFetch = async (input2, init) => {
-    if (this.#closed) throw new Error("Chat panel is closed.");
+  authenticatedFetch = __name(async (input2, init) => {
+    const cancellation = AbortSignal.any([this.#triggerCancellation.signal, ...this.#dispatchCancellation ? [this.#dispatchCancellation] : []]);
+    cancellation.throwIfAborted();
+    if (this.#closed)
+      throw new Error("Chat panel is closed.");
+    if (this.#configurationChanged) throw new Error(this.#configurationChanged);
+    if ((game.world?.id ?? "none") !== this.#worldId || game.user.id !== this.#userId) {
+      this.cancel();
+      throw new Error("World or player changed. Reopen the dungeon master panel.");
+    }
     const destination = new URL(input2 instanceof Request ? input2.url : String(input2), gatewayUrl());
     const gateway = new URL(gatewayUrl());
     if (destination.origin !== gateway.origin || !["/chatkit", "/chatkit/thread", "/chatkit/actions"].includes(destination.pathname)) {
@@ -21200,95 +22532,122 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
     new Headers(init?.headers).forEach((value, key) => headers.set(key, value));
     headers.delete("chatkit-frame-instance-id");
     const auth = aiDmController.transport.chatKitHeaders?.();
-    if (!auth) throw new Error("Foundry authentication is unavailable.");
-    for (const [key, value] of Object.entries(auth)) headers.set(key, value);
+    if (!auth)
+      throw new Error("Foundry authentication is unavailable.");
+    for (const [key, value] of Object.entries(auth))
+      headers.set(key, value);
+    let latency;
     let pendingKey;
     const rawBody = typeof init?.body === "string" ? init.body : void 0;
     if (destination.pathname === "/chatkit" && rawBody) {
       const operation = JSON.parse(rawBody).type;
-      if (!supportedChatKitOperation(operation)) throw new Error("Unsupported ChatKit operation.");
+      if (operation && CHATKIT_INFERENCE_OPERATIONS.includes(operation)) {
+        await cancellable(this.#preparation.ensure(), cancellation);
+        cancellation.throwIfAborted();
+        latency = new BrowserLatencyProbe();
+        this.#latencyProbe = latency;
+        headers.set("x-ai-dm-trace", latency.traceId);
+        if (this.#forestBudget) {
+          const body = JSON.parse(rawBody);
+          if (body.params?.thread_id !== this.#forestBudget.threadId || !["threads.create", "threads.add_user_message"].includes(operation) || Date.parse(this.#forestBudget.expiresAt) <= Date.now()) throw Error("Forest budget scope changed or expired. No model request was sent.");
+          headers.set("x-ai-dm-trace", this.#forestBudget.traceId);
+        }
+      }
+      if (!supportedChatKitOperation(operation))
+        throw new Error("Unsupported ChatKit operation.");
       if (CHATKIT_INFERENCE_OPERATIONS.includes(operation) && !headers.has("x-ai-dm-event")) {
         const hash2 = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(rawBody));
+        cancellation.throwIfAborted();
+        if (this.#closed || (game.world?.id ?? "none") !== this.#worldId || game.user.id !== this.#userId)
+          throw new Error("Chat request cancelled or owner changed.");
         pendingKey = `${pointerKey()}.pending.${Array.from(new Uint8Array(hash2), (byte) => byte.toString(16).padStart(2, "0")).join("")}`;
         const eventId = localStorage.getItem(pendingKey) ?? crypto.randomUUID();
         localStorage.setItem(pendingKey, eventId);
         headers.set("x-ai-dm-event", eventId);
       }
     }
+    if (destination.pathname === "/chatkit/actions" && rawBody) {
+      latency = new BrowserLatencyProbe();
+      headers.set("x-ai-dm-trace", latency.traceId);
+    }
     const abort = new AbortController();
     this.#requests.add(abort);
-    const signal = AbortSignal.any([
-      abort.signal,
-      ...init?.signal ? [init.signal] : input2 instanceof Request ? [input2.signal] : []
-    ]);
+    const signal = AbortSignal.any([abort.signal, cancellation, ...init?.signal ? [init.signal] : input2 instanceof Request ? [input2.signal] : []]);
     try {
+      signal.throwIfAborted();
       const response = await fetch(input2, { ...init, headers, signal });
+      latency?.mark("browser-response-headers");
       if (!response.ok) {
         this.#requests.delete(abort);
-        throw new Error(
-          response.status === 401 ? "Foundry authentication expired. Reconnect and try again." : response.status === 403 ? "ChatKit currently requires an authenticated GM." : response.status === 409 ? "A response is already running." : response.status === 503 ? "ChatKit server or OpenAI authorization is not configured." : "ChatKit server request failed."
-        );
+        throw new Error(response.status === 401 ? "Foundry authentication expired. Reconnect and try again." : response.status === 403 ? "ChatKit currently requires an authenticated GM." : response.status === 409 ? "A response is already running." : response.status === 503 ? "ChatKit server or OpenAI authorization is not configured." : "ChatKit server request failed.");
       }
       if (!response.body) {
         this.#requests.delete(abort);
-        if (pendingKey) localStorage.removeItem(pendingKey);
+        if (pendingKey)
+          localStorage.removeItem(pendingKey);
         return response;
       }
       const reader = response.body.getReader();
       const requests = this.#requests;
-      const body = new ReadableStream({
-        async pull(controller) {
-          try {
-            const item = await reader.read();
-            if (item.done) {
-              requests.delete(abort);
-              if (pendingKey) localStorage.removeItem(pendingKey);
-              controller.close();
-            } else controller.enqueue(item.value);
-          } catch (error62) {
+      const body = new ReadableStream({ async pull(controller) {
+        try {
+          const item = await reader.read();
+          if (item.done) {
+            latency?.finish();
+            latency?.mark("browser-stream-end");
             requests.delete(abort);
-            controller.error(error62);
+            if (pendingKey)
+              localStorage.removeItem(pendingKey);
+            controller.close();
+          } else {
+            latency?.chunk(item.value);
+            controller.enqueue(item.value);
           }
-        },
-        async cancel(reason) {
-          abort.abort();
+        } catch (error62) {
           requests.delete(abort);
-          await reader.cancel(reason);
+          latency?.mark("browser-stream-error");
+          controller.error(error62);
         }
-      });
-      return new Response(body, {
-        status: response.status,
-        statusText: response.statusText,
-        headers: response.headers
-      });
+      }, async cancel(reason) {
+        latency?.mark("browser-stream-cancelled");
+        abort.abort();
+        requests.delete(abort);
+        await reader.cancel(reason);
+      } });
+      return new Response(body, { status: response.status, statusText: response.statusText, headers: response.headers });
     } catch (error62) {
       this.#requests.delete(abort);
       this.fail(error62);
       throw error62;
     }
-  };
+  }, "authenticatedFetch");
   async reviewNativeActions() {
     if (!this.#threadId) {
       this.status("Open a conversation before reviewing actions.");
       return;
     }
     const panel = this.element.querySelector(".ai-dm-native-actions");
-    if (!panel) return;
-    const response = await this.authenticatedFetch(`${gatewayUrl()}/actions`, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ threadId: this.#threadId })
-    });
+    if (!panel)
+      return;
+    const threadId = this.#threadId;
+    const epoch = this.#reviewEpoch;
+    const response = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ threadId }) });
     const data = await response.json();
+    if (this.#closed || epoch !== this.#reviewEpoch || this.#threadId !== threadId)
+      return;
     panel.replaceChildren();
     for (const action of data.result) {
+      if (action.kind === "world" || action.kind === "world-file")
+        continue;
+      if (action.status === "pending") this.showReviewDrawer();
       const row = document.createElement("section");
       const label = document.createElement("p");
-      label.textContent = `${action.kind === "note" ? action.input.title : action.input.formula}: ${action.status}${action.receipt?.total !== void 0 ? `, total ${action.receipt.total}` : ""}`;
+      const title = action.kind === "pause" ? action.input?.paused ? "Pause game" : "Unpause game" : action.kind === "session" ? action.input?.action?.kind ?? "Game action" : action.kind === "note" ? action.input?.title : action.input?.formula;
+      label.textContent = `${title ?? "Game action"}: ${action.status}${action.receipt?.total !== void 0 ? `, total ${action.receipt.total}` : ""}`;
       row.append(label);
       if (action.kind === "note") {
         const preview = document.createElement("p");
-        preview.textContent = action.input.text ?? "";
+        preview.textContent = action.input?.text ?? "";
         row.append(preview);
         if (action.status === "pending")
           for (const choice of ["approve", "reject"]) {
@@ -21296,16 +22655,10 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
             button.type = "button";
             button.textContent = choice === "approve" ? "Approve private session journal" : "Reject";
             button.addEventListener("click", () => {
+              if (this.#closed || epoch !== this.#reviewEpoch || this.#threadId !== threadId)
+                return;
               button.disabled = true;
-              void this.authenticatedFetch(`${gatewayUrl()}/actions`, {
-                method: "POST",
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify({
-                  threadId: this.#threadId,
-                  actionId: action.actionId,
-                  decision: choice
-                })
-              }).then(async (response2) => {
+              void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ threadId, actionId: action.actionId, decision: choice }) }).then(async (response2) => {
                 await response2.json();
                 await this.reviewNativeActions();
               }).catch((error62) => {
@@ -21318,66 +22671,504 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
       }
       panel.append(row);
     }
-    if (!data.result.length) panel.textContent = "No native actions in this conversation.";
+    if (!data.result.length)
+      panel.textContent = "No native actions in this conversation.";
   }
-  trigger(request) {
+  invalidateReviews() {
+    const drawer = this.element?.querySelector(".ai-dm-review-drawer");
+    if (drawer?.tagName === "DETAILS") {
+      drawer.hidden = true;
+      drawer.open = false;
+    }
+    this.#reviewEpoch++;
+    this.#worldLoadGeneration.world++;
+    this.#worldLoadGeneration["world-file"]++;
+    this.#campaignLoadGeneration++;
+    this.#campaignListeners?.abort();
+    for (const selector of [".ai-dm-native-actions", ".ai-dm-attack-actions", ".ai-dm-campaign-actions", ".ai-dm-world-actions", ".ai-dm-world-file-actions"]) {
+      const panel = this.element?.querySelector(selector);
+      if (panel && typeof panel.replaceChildren === "function") {
+        panel.replaceChildren();
+        panel.textContent = "Review cleared. Use Review proposed actions to refresh.";
+      }
+    }
+  }
+  async openCampaignSetup() {
+    if (!game.user.isGM || game.user.id !== this.#userId || game.world?.id !== this.#worldId || this.#closed) throw new Error("Current GM required");
+    const host = this.element.querySelector(".ai-dm-campaign-setup");
+    if (!host) return;
+    this.#campaignPreparationPanel?.cancel();
+    this.#campaignPreparationPanel = new CampaignPreparationPanel(host, async (input2, signal) => {
+      if (!game.user.isGM || game.user.id !== this.#userId || game.world?.id !== this.#worldId || this.#closed) throw new Error("Campaign setup scope changed");
+      const auth = aiDmController.transport.chatKitHeaders?.();
+      if (!auth) throw new Error("Reconnect required");
+      const response = await fetch(`${gatewayUrl()}/preparation`, { method: "POST", headers: { ...auth, "content-type": "application/json" }, body: JSON.stringify({ operation: "interview", input: input2 }), signal });
+      if (!response.ok) throw new Error("Campaign setup unavailable");
+      const body = await response.json();
+      if (this.#closed || game.world?.id !== this.#worldId || game.user.id !== this.#userId || body.worldId !== this.#worldId) throw new Error("Campaign setup scope changed");
+      return body.result;
+    });
+    await this.#campaignPreparationPanel.open();
+  }
+  async openForestMap() {
+    if (!game.user.isGM || game.user.id !== this.#userId || game.world?.id !== this.#worldId || this.#worldId !== "mcp-test" || this.#closed) throw Error("Test GM required");
+    const host = this.element.querySelector(".ai-dm-forest-map");
+    if (!host) return;
+    this.#forestBattlemapPanel?.cancel();
+    this.#forestBattlemapPanel = new ForestBattlemapPanel(host, async (operation, input2, signal) => {
+      if (this.#closed || game.world?.id !== this.#worldId || game.user.id !== this.#userId || !game.user.isGM) throw Error("Forest scope changed");
+      const auth = aiDmController.transport.chatKitHeaders?.();
+      if (!auth) throw Error("Reconnect required");
+      if (operation === "battlemap-thread") {
+        if (this.#guard.busy || this.#responseActive || this.#queuedTriggers) throw Error("Wait for the current response to finish.");
+        const response2 = await this.authenticatedFetch(`${gatewayUrl()}/thread`, { method: "POST", headers: { "content-type": "application/json" }, body: "{}", signal });
+        const body2 = await response2.json();
+        if (typeof body2.threadId !== "string" || !/^[A-Za-z0-9_-]{1,128}$/.test(body2.threadId)) throw Error("Thread bootstrap failed.");
+        if (this.#closed || game.world?.id !== this.#worldId || game.user.id !== this.#userId) throw Error("Forest scope changed");
+        this.#threadId = body2.threadId;
+        this.#forestBudget = null;
+        localStorage.setItem(pointerKey(), body2.threadId);
+        await this.#component?.setThreadId(body2.threadId);
+        return { status: "thread-ready", threadId: body2.threadId, worldId: this.#worldId, userId: this.#userId, providerRequests: 0 };
+      }
+      if (operation === "battlemap-acceptance" || operation.startsWith("battlemap-generation-") || input2["generationId"] !== void 0) input2 = { ...input2, threadId: this.#threadId };
+      const response = await fetch(`${gatewayUrl()}/preparation`, { method: "POST", headers: { ...auth, "content-type": "application/json" }, body: JSON.stringify({ operation, input: input2 }), signal });
+      const body = await response.json();
+      const hints = { FOREST_APPROVED_IMPORT_REQUIRED: "Import the approved forest artwork first.", FOREST_TV_FULLSCREEN_REQUIRED: "Put the actual TV browser in fullscreen (F11), then prepare and review again. Measure a grid square after display.", FOREST_DIGITAL_TABLETOP_955_MM_REQUIRED: "Enable Digital Tabletop and confirm its physical display width is 955 mm before preparing TV output.", FOREST_EXACT_TV_REQUIRED: "Connect and enroll the exact TV client, or select GM preview.", FOREST_FRESH_DISPLAY_REQUIRED: "Deploy the companion display update and reconnect this client.", FOREST_DISPLAY_CHANGED_REPREPARE_REQUIRED: "The client or viewport changed. Prepare and review again.", FOREST_VIEW_NAMED_SCENE_FIRST: "View the named forest fixture in Scenes before fitting it.", FOREST_PRELOAD_NOT_READY: "The approved forest artwork did not finish loading.", FOREST_SCENE_CHANGED: "The fixture changed. Check its native receipt before further actions." };
+      if (!response.ok) throw Error(hints[String(body.reasonCode)] ?? (/^[A-Z_]{3,80}$/.test(String(body.reasonCode ?? body.code)) ? `Forest workflow unavailable (${body.reasonCode ?? body.code}). Reconnect and inspect the receipt.` : "Forest workflow unavailable. Reconnect and inspect the receipt."));
+      if (this.#closed || game.world?.id !== this.#worldId || game.user.id !== this.#userId || body.worldId !== this.#worldId) throw Error("Forest scope changed");
+      if (operation === "battlemap-acceptance") {
+        const binding = body.result;
+        if (binding.threadId !== this.#threadId || binding.worldId !== this.#worldId || binding.userId !== this.#userId || !Number.isInteger(binding.maxModelRequests) || binding.maxModelRequests < 1 || binding.maxModelRequests > 6 || !binding.fixtureId?.startsWith("forest-") || Date.parse(binding.expiresAt) <= Date.now()) throw Error("Forest budget binding changed.");
+        this.#forestBudget = { threadId: binding.threadId, traceId: binding.traceId, expiresAt: binding.expiresAt };
+      }
+      return body.result;
+    });
+    this.#forestBattlemapPanel.open();
+  }
+  checkPendingReviews() {
+    const drawer = this.element?.querySelector(".ai-dm-review-drawer");
+    if (drawer?.tagName !== "DETAILS" || !this.#threadId || this.#closed) return;
+    const epoch = this.#reviewEpoch, threadId = this.#threadId;
+    void this.reviewActionsAfterResponse().catch(() => {
+      if (!this.#closed && epoch === this.#reviewEpoch && threadId === this.#threadId) this.status("Action review unavailable. Open Account/settings to inspect actions and receipts before retrying a change.");
+    });
+  }
+  reviewActionsAfterResponse() {
+    const key = JSON.stringify([this.#threadId, this.#reviewEpoch]);
+    if (this.#reviewBatch?.key === key) return this.#reviewBatch.promise;
+    const promise2 = Promise.all([this.reviewNativeActions(), this.reviewAttackActions(), this.reviewCampaignActions(), this.reviewWorldActions("world"), this.reviewWorldActions("world-file")]).then(() => void 0);
+    const batch = { key, promise: promise2 };
+    this.#reviewBatch = batch;
+    void promise2.finally(() => {
+      if (this.#reviewBatch === batch) this.#reviewBatch = null;
+    }).catch(() => void 0);
+    return promise2;
+  }
+  async reviewActions() {
+    this.showReviewDrawer();
+    await this.reviewActionsAfterResponse();
+  }
+  async reviewAttackActions() {
+    const selectedThread = this.#threadId;
+    const threadId = selectedThread ?? "direct-control";
+    const panel = this.element?.querySelector(".ai-dm-attack-actions");
+    if (!threadId || !panel)
+      return;
+    const epoch = this.#reviewEpoch, worldId = this.#worldId, userId = this.#userId;
+    const current = __name(() => !this.#closed && epoch === this.#reviewEpoch && this.#threadId === selectedThread && (game.world?.id ?? "none") === worldId && game.user.id === userId, "current");
+    const response = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "attack", threadId }) });
+    const data = await response.json();
+    if (!current())
+      return;
+    if (!Array.isArray(data.result))
+      throw new Error("Attack review unavailable.");
+    panel.replaceChildren();
+    for (const raw of data.result.slice(0, 12)) {
+      if (!raw || typeof raw !== "object")
+        throw new Error("Invalid attack review.");
+      const entry = raw;
+      if (entry.scope?.worldId !== worldId || entry.scope.userId !== userId || entry.scope.threadId !== threadId || typeof entry.requestId !== "string" || !/^[A-Za-z0-9_-]{1,128}$/.test(entry.requestId))
+        throw new Error("Attack review scope mismatch.");
+      const row = document.createElement("section"), label = document.createElement("p"), state = entry.result?.state;
+      label.textContent = `Attack: ${String(entry.result?.outcome ?? "uncertain")} (${String(state?.stage ?? "unconfirmed")}); damage rolled ${String(state?.damageRolled ?? "unknown")}, applied ${String(state?.damageApplied ?? "not applied")}.`;
+      row.append(label);
+      if (entry.result?.outcome === "decision-required") this.showReviewDrawer();
+      if (entry.result?.outcome === "decision-required" && typeof state?.attackRequestId === "string" && /^[A-Za-z0-9_-]{1,128}$/.test(state.attackRequestId) && Array.isArray(state?.decisions)) {
+        for (const rawDecision of state.decisions.slice(0, 8)) {
+          const decision = rawDecision;
+          if (!decision || typeof decision.id !== "string" || !/^[A-Za-z0-9_-]{1,128}$/.test(decision.id) || typeof decision.message !== "string")
+            throw new Error("Invalid attack decision ticket.");
+          const message = document.createElement("p"), button = document.createElement("button");
+          message.textContent = decision.message.slice(0, 1e3);
+          button.type = "button";
+          button.textContent = "Player decisions resolved; apply recorded damage";
+          const actionId = crypto.randomUUID(), priorAttackRequestId = state.attackRequestId, decisionId = decision.id;
+          button.addEventListener("click", () => {
+            if (!current())
+              return;
+            button.disabled = true;
+            void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "attack", threadId, actionId, action: { mode: "apply", priorAttackRequestId, decisionId } }) }).then(async (result) => {
+              const outcome = await result.json();
+              if (current()) {
+                label.textContent = `Damage application: ${String(outcome.result?.outcome ?? "uncertain")}.`;
+                await this.reviewAttackActions();
+              }
+            }).catch((error62) => {
+              this.fail(error62);
+              button.disabled = false;
+            });
+          });
+          row.append(message);
+          if (decision.kind === "reaction")
+            row.append(button);
+        }
+      }
+      panel.append(row);
+    }
+    if (!data.result.length)
+      panel.textContent = "No attack receipts in this conversation.";
+  }
+  async reviewWorldActions(kind, actionId) {
+    const threadId = this.#threadId;
+    if (!threadId)
+      return;
+    const panel = this.element.querySelector(kind === "world" ? ".ai-dm-world-actions" : ".ai-dm-world-file-actions");
+    if (!panel)
+      return;
+    const epoch = this.#reviewEpoch;
+    const generation = ++this.#worldLoadGeneration[kind];
+    const current = __name(() => !this.#closed && epoch === this.#reviewEpoch && threadId === this.#threadId && generation === this.#worldLoadGeneration[kind] && (game.world?.id ?? "none") === this.#worldId && game.user.id === this.#userId, "current");
+    const result = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind, threadId, ...actionId ? { actionId } : {} }) });
+    const data = await result.json();
+    if (!current())
+      return;
+    panel.replaceChildren();
+    if (!actionId) {
+      if (!Array.isArray(data.result))
+        throw new Error("World proposal list unavailable.");
+      for (const item of data.result.slice(0, 12)) {
+        const summary = item;
+        if (summary.status === "pending") this.showReviewDrawer();
+        if (summary.kind !== kind || typeof summary.status !== "string" || typeof summary.actionId !== "string" || !/^[A-Za-z0-9_-]{1,128}$/.test(summary.actionId))
+          throw new Error("Invalid world proposal summary.");
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = `Review world change: ${summary.status}`;
+        button.addEventListener("click", () => {
+          if (current())
+            void this.reviewWorldActions(kind, summary.actionId).catch((error62) => this.fail(error62));
+        });
+        panel.append(button);
+      }
+      return;
+    }
+    const review = await validateWorldReview(data.result, { worldId: this.#worldId, userId: this.#userId, threadId });
+    if (!current())
+      return;
+    const state = document.createElement("p");
+    state.textContent = `World change: ${review.status}`;
+    panel.append(state);
+    if (review.receipt) {
+      const receipt = document.createElement("pre");
+      receipt.textContent = JSON.stringify(review.receipt, null, 2);
+      panel.append(receipt);
+    }
+    for (const [label, value] of [["Current state", review.before], ["Exact requested change", review.request]]) {
+      const heading = document.createElement("h3");
+      heading.textContent = label;
+      const text = document.createElement("pre");
+      text.textContent = JSON.stringify(value, null, 2);
+      panel.append(heading, text);
+    }
+    if (review.status !== "pending")
+      return;
+    const buttons = [];
+    for (const decision of ["approve", "reject", "cancel"]) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = decision === "approve" ? "Approve this exact world change" : decision === "reject" ? "Reject change" : "Cancel proposal";
+      button.addEventListener("click", () => {
+        if (!current() || button.disabled)
+          return;
+        buttons.forEach((control) => {
+          control.disabled = true;
+        });
+        void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind, threadId, actionId, reviewDigest: review.reviewDigest, decision }) }).then(async (response) => {
+          await response.json();
+          if (current())
+            await this.reviewWorldActions(kind, actionId);
+        }).catch(() => {
+          if (current())
+            state.textContent = "Outcome requires inspection. Refresh this review before deciding again.";
+        });
+      });
+      buttons.push(button);
+      panel.append(button);
+    }
+  }
+  async reviewCampaignActions(proposalId) {
+    const threadId = this.#threadId;
+    if (!threadId) {
+      this.status("Open a conversation before reviewing campaign changes.");
+      return;
+    }
+    const panel = this.element.querySelector(".ai-dm-campaign-actions");
+    if (!panel)
+      return;
+    const epoch = this.#reviewEpoch;
+    const generation = ++this.#campaignLoadGeneration;
+    this.#campaignListeners?.abort();
+    this.#campaignListeners = new AbortController();
+    const listeners = this.#campaignListeners.signal;
+    const current = __name(() => !this.#closed && epoch === this.#reviewEpoch && generation === this.#campaignLoadGeneration && threadId === this.#threadId && (game.world?.id ?? "none") === this.#worldId && game.user.id === this.#userId, "current");
+    panel.replaceChildren();
+    panel.textContent = "Loading campaign review\u2026";
+    const response = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "campaign", threadId, ...proposalId ? { proposalId } : {} }) });
+    const data = await response.json();
+    if (!current())
+      return;
+    panel.replaceChildren();
+    panel.textContent = "";
+    if (!proposalId) {
+      if (!Array.isArray(data.result))
+        throw new Error("Campaign proposal list unavailable.");
+      for (const value of data.result.slice(0, 12)) {
+        const summary = value;
+        if (summary.status === "pending") this.showReviewDrawer();
+        if (summary.kind !== "campaign" || typeof summary.proposalId !== "string" || !/^[A-Za-z0-9_-]{1,128}$/.test(summary.proposalId) || typeof summary.title !== "string" || typeof summary.status !== "string")
+          throw new Error("Invalid campaign proposal summary.");
+        const row = document.createElement("section");
+        const label = document.createElement("p");
+        label.textContent = `${summary.title}: ${summary.status}. Open the complete changes before deciding.`;
+        row.append(label);
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = "View exact campaign changes";
+        const selected = summary.proposalId;
+        button.addEventListener("click", () => {
+          if (current())
+            void this.reviewCampaignActions(selected).catch((error62) => this.fail(error62));
+        }, { signal: listeners });
+        row.append(button);
+        panel.append(row);
+      }
+      if (!data.result.length)
+        panel.textContent = "No campaign proposals in this conversation. Ask your dungeon master to create a campaign or prepare a change.";
+      return;
+    }
+    let review;
+    try {
+      review = await validateCampaignReview(data.result, { worldId: this.#worldId, userId: this.#userId, threadId });
+    } catch (error62) {
+      if (current()) {
+        panel.textContent = error62 instanceof Error ? error62.message : "Exact campaign review unavailable.";
+      }
+      return;
+    }
+    if (!current())
+      return;
+    const heading = document.createElement("h3");
+    heading.textContent = review.title;
+    panel.append(heading);
+    const state = document.createElement("p");
+    state.textContent = campaignReceiptText(review);
+    panel.append(state);
+    if (review.issue) {
+      const issue2 = document.createElement("p");
+      issue2.textContent = review.issue;
+      panel.append(issue2);
+    }
+    const digest2 = document.createElement("p");
+    digest2.textContent = `Review digest: ${review.batchDigest}`;
+    digest2.className = "ai-dm-review-revision";
+    panel.append(digest2);
+    for (const file2 of review.files) {
+      const row = document.createElement("details");
+      row.open = true;
+      const label = document.createElement("summary");
+      label.textContent = `${file2.path}: ${file2.beforeCanonStatus ?? "new draft"} \u2192 ${file2.afterCanonStatus}`;
+      row.append(label);
+      for (const [labelText, content] of [[`Before \u2014 revision ${file2.expectedRevision ?? "absent"}`, file2.beforeText ?? "[New file: no previous content]"], [`Proposed \u2014 SHA-256 ${file2.afterHash}`, file2.proposedText]]) {
+        const label2 = document.createElement("p");
+        label2.textContent = labelText;
+        const text = document.createElement("pre");
+        text.textContent = content;
+        row.append(label2, text);
+      }
+      panel.append(row);
+    }
+    if (review.status !== "pending")
+      return;
+    const buttons = [];
+    for (const choice of ["approve", "reject", "cancel"]) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = choice === "approve" ? "Approve these exact campaign changes" : choice === "reject" ? "Reject campaign changes" : "Cancel campaign proposal";
+      button.disabled = choice === "approve" && Date.now() >= review.expiresAt;
+      button.addEventListener("click", () => {
+        if (!current() || button.disabled)
+          return;
+        if (choice === "approve" && Date.now() >= review.expiresAt) {
+          button.disabled = true;
+          state.textContent = "This review expired. Ask for a refreshed campaign proposal.";
+          return;
+        }
+        for (const control of buttons)
+          control.disabled = true;
+        void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "campaign", threadId, proposalId: review.proposalId, batchDigest: review.batchDigest, decision: choice }) }).then(async (response2) => {
+          await response2.json();
+          if (current())
+            await this.reviewCampaignActions(review.proposalId);
+        }).catch((error62) => {
+          if (current()) {
+            this.fail(error62);
+            state.textContent = "Decision outcome requires inspection. Refresh the exact review before deciding again.";
+          }
+        });
+      }, { signal: listeners });
+      buttons.push(button);
+      panel.append(button);
+    }
+  }
+  trigger(request, externalSignal) {
+    this.#queuedTriggers++;
+    this.updateStopControl();
     const generation = this.#triggerGeneration;
+    const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]);
     const pending = this.#triggerTail.then(() => {
       if (generation !== this.#triggerGeneration || this.#closed)
         throw new Error("Queued response cancelled.");
-      return this.dispatchTrigger(request);
+      signal.throwIfAborted();
+      return this.dispatchTrigger(request, generation, signal);
     });
     this.#triggerTail = pending.catch(() => {
     });
-    return pending;
+    return cancellable(pending, signal).finally(() => {
+      this.#queuedTriggers = Math.max(0, this.#queuedTriggers - 1);
+      this.updateStopControl();
+    });
   }
-  async dispatchTrigger(request) {
-    if (!game.user.isGM) throw new Error("ChatKit currently requires a Foundry GM.");
+  async directControl(command) {
+    if (!game.user.isGM || game.world?.id !== this.#worldId || game.user.id !== this.#userId)
+      throw new Error("Current GM world required. Reopen the dungeon master panel.");
+    const action = parseCoreCommand(command);
+    const requestId = crypto.randomUUID();
+    const response = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: action["mode"] === "roll" || action["mode"] === "apply" ? "attack" : "core", threadId: this.#threadId ?? "direct-control", actionId: requestId, action }) });
+    if (!response.ok)
+      throw new Error("Control request failed. Inspect current state before a new request.");
+    const data = await response.json();
+    console.info(JSON.stringify({ type: "core-direct-result", requestId, ...data.result }));
+    if (data.result?.outcome === "confirmed")
+      ui.notifications.info("Game action confirmed.");
+    else
+      ui.notifications.warn(`Game action ${data.result?.outcome ?? "uncertain"}. Inspect state before a new request.`);
+  }
+  async dispatchTrigger(request, generation, signal) {
+    const check2 = __name(() => {
+      signal.throwIfAborted();
+      if (this.#closed || generation !== this.#triggerGeneration)
+        throw new Error("Response cancelled.");
+      if ((game.world?.id ?? "none") !== this.#worldId || game.user.id !== this.#userId)
+        throw new Error("World or player changed. Reopen the dungeon master panel.");
+    }, "check");
+    check2();
+    if (!game.user.isGM)
+      throw new Error("ChatKit currently requires a Foundry GM.");
     const prompt = request.prompt?.trim();
-    if (!prompt || prompt.length > 4e3) throw new Error("Enter a prompt of 1\u20134000 characters.");
+    if (!prompt || prompt.length > 4e3)
+      throw new Error("Enter a prompt of 1\u20134000 characters.");
     const context = boundedContext(request.context ?? currentGameContext());
     const requestId = request.requestId ?? crypto.randomUUID();
-    if (!this.#guard.start(requestId)) return;
+    await this.waitForIdle(signal);
+    check2();
+    if (!this.#guard.start(requestId))
+      return;
     this.#requestFailed = false;
     this.status("Preparing game-context response\u2026");
     try {
-      if (!this.#component) await Promise.resolve(this.render({ force: true }));
-      await this.#mounting;
-      await this.#ready;
-      if (!this.#component) throw new Error("ChatKit is not ready.");
+      if (!this.#component) {
+        await cancellable(this.render({ force: true }), signal);
+        check2();
+      }
+      await cancellable(this.#mounting, signal);
+      check2();
+      const component = this.#component;
+      await cancellable(this.#ready, signal);
+      check2();
+      if (this.#component !== component)
+        throw new Error("Chat panel changed before dispatch.");
+      if (!this.#component)
+        throw new Error("ChatKit is not ready.");
+      const originalThread = this.#threadId;
+      const checkThread = __name(() => {
+        check2();
+        if (this.#component !== component || this.#threadId !== originalThread)
+          throw new Error("Conversation changed before dispatch.");
+      }, "checkThread");
       if (!this.#threadId) {
-        const response = await this.authenticatedFetch(`${gatewayUrl()}/thread`, {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: "{}"
-        });
-        const data = await response.json();
+        checkThread();
+        const response = await cancellable(this.authenticatedFetch(`${gatewayUrl()}/thread`, { method: "POST", headers: { "content-type": "application/json" }, body: "{}", signal }), signal);
+        checkThread();
+        const data = await cancellable(response.json(), signal);
+        checkThread();
         if (typeof data.threadId !== "string")
           throw new Error("Could not initialize the ChatKit conversation.");
         this.#threadId = data.threadId;
         localStorage.setItem(pointerKey(), data.threadId);
-        await this.#component.setThreadId(data.threadId);
+        const selection = { id: data.threadId, generation };
+        this.#threadSelection = selection;
+        const selected = this.#component.setThreadId(data.threadId).finally(() => {
+          if (this.#threadSelection === selection)
+            this.#threadSelection = null;
+        });
+        await cancellable(selected, signal);
+        check2();
+        if (this.#component !== component || this.#threadId !== data.threadId)
+          throw new Error("Conversation changed before dispatch.");
+      } else {
+        checkThread();
       }
-      await this.#component.sendCustomAction({
-        type: "foundry.context-response",
-        payload: { requestId, prompt, context }
+      check2();
+      this.#dispatchCancellation = signal;
+      const sending = this.#component.sendCustomAction({ type: "foundry.context-response", payload: { requestId, prompt, context, ...request.automatic ? { automatic: request.automatic } : {} } }).finally(() => {
+        if (this.#dispatchCancellation === signal)
+          this.#dispatchCancellation = null;
       });
+      await cancellable(sending, signal);
+      check2();
     } catch (error62) {
-      this.fail(error62);
+      if (!this.#closed && generation === this.#triggerGeneration)
+        this.fail(error62);
       throw error62;
     } finally {
-      this.#guard.finish();
+      this.finishGuard();
     }
   }
   cancel() {
+    this.#responseActive = false;
+    this.#preparation.invalidate("Preparation cancelled. Submit or refresh status to check again.");
+    this.#preparationKey = "";
+    cancelAutomaticEventLifecycle();
+    this.invalidateReviews();
     this.#triggerGeneration++;
-    for (const request of this.#requests) request.abort();
+    this.#triggerCancellation.abort(new Error("Response cancelled."));
+    this.#triggerCancellation = new AbortController();
+    for (const request of this.#requests)
+      request.abort();
     this.#requests.clear();
-    this.#guard.finish();
-    this.status("Response cancelled.");
+    this.finishGuard();
+    this.status("Response stopped locally. Confirmed changes remain; server or provider work may have completed. Review actions and receipts before retrying.");
   }
   async close(options = {}) {
+    aiDmController.closeStatusPanel();
+    this.#campaignPreparationPanel?.cancel();
+    this.#forestBattlemapPanel?.cancel();
     this.#closed = true;
+    this.#preparation.invalidate("Panel closed.");
+    this.#playerObservationPanel?.cancel();
+    this.#playerObservationPanel = null;
+    this.#mountGeneration++;
     this.#unsubscribe?.();
     this.#unsubscribe = null;
     this.#providerListeners?.abort();
@@ -21391,41 +23182,291 @@ var AiDungeonMasterApplication = class _AiDungeonMasterApplication extends Base 
   }
 };
 
-// src/ai-dungeon-master/automatic-triggers.ts
-var AutomaticTriggers = class {
-  constructor(dispatch, delay = 250) {
-    this.dispatch = dispatch;
-    this.delay = delay;
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/mutation-origin.ts
+var object2 = (v) => v && typeof v === "object" && !Array.isArray(v) ? v : {};
+var finite = (v) => typeof v === "number" && Number.isFinite(v);
+var RegionMutationOrigins = class {
+  constructor(now = Date.now, ttlMs = 5e3, maximum = 256) {
+    this.now = now;
+    this.ttlMs = ttlMs;
+    this.maximum = maximum;
   }
-  dispatch;
-  delay;
-  #pending = /* @__PURE__ */ new Map();
-  accept(signal) {
-    if (signal.origin === "ai-dungeon-master" || !/^[A-Za-z0-9_-]{1,64}$/.test(signal.documentId) || !Number.isSafeInteger(signal.revision) || signal.revision < 0)
-      return;
-    if (signal.kind === "area" && (!signal.key || !/^[A-Za-z0-9_-]{1,48}$/.test(signal.key)))
-      return;
-    const slot = `${signal.kind}-${signal.documentId}`;
-    const old = this.#pending.get(slot);
-    if (old) clearTimeout(old.timer);
-    const timer = setTimeout(() => {
-      this.#pending.delete(slot);
-      this.dispatch({
-        requestId: `${slot}-${signal.revision}`,
-        prompt: signal.kind === "area" ? `A player entered keyed area ${signal.key}. Retrieve the relevant campaign section and narrate only observable information.` : signal.kind === "door" ? "A player opened this scene's door. Describe observable consequences using current authorized state." : "A player completed a combat turn. Review current combat state and describe the next situation without inventing actions or rolls."
-      });
-    }, this.delay);
-    this.#pending.set(slot, { signal, timer });
+  now;
+  ttlMs;
+  maximum;
+  entries = /* @__PURE__ */ new Map();
+  clear() {
+    this.entries.clear();
   }
-  cancel() {
-    for (const value of this.#pending.values()) clearTimeout(value.timer);
-    this.#pending.clear();
+  key(world, token) {
+    return JSON.stringify([world, token.parent?.id, token.uuid ?? token.id]);
+  }
+  observe(world, token, change, options) {
+    const input2 = object2(change);
+    if (!("x" in input2 || "y" in input2)) return;
+    const key = this.key(world, token);
+    this.entries.delete(key);
+    const opts = object2(options), origin = object2(opts["foundryLocalApiOrigin"]), api = object2(opts["foundryLocalApi"]);
+    if (!world || !token.parent?.id || !["foundry-local-api.session-action", "foundry-local-api.world-document"].includes(
+      String(origin["source"])
+    ) || origin["phase"] !== "apply" || api["authorizedGmMovement"] !== true || typeof origin["correlationId"] !== "string" || !/^[A-Za-z0-9_.:-]{1,128}$/.test(origin["correlationId"]) || opts["correlationId"] !== origin["correlationId"])
+      return;
+    const movement = object2(opts["_movement"])[token.id];
+    const data = object2(movement);
+    const x = input2["x"] ?? token.x, y = input2["y"] ?? token.y, revision = token._stats?.modifiedTime;
+    if (!movement || typeof movement !== "object" || typeof data["id"] !== "string" || !data["id"] || !finite(x) || !finite(y) || !Number.isSafeInteger(revision) || revision < 0)
+      return;
+    this.entries.set(key, {
+      movement,
+      movementId: data["id"],
+      x,
+      y,
+      revision,
+      origin: {
+        source: origin["source"],
+        phase: "apply",
+        correlationId: origin["correlationId"]
+      },
+      expires: this.now() + this.ttlMs
+    });
+    for (const [id3, entry] of this.entries)
+      if (entry.expires <= this.now()) this.entries.delete(id3);
+    while (this.entries.size > this.maximum) this.entries.delete(this.entries.keys().next().value);
+  }
+  match(world, token, movement) {
+    const key = this.key(world, token), entry = this.entries.get(key);
+    if (!entry) return;
+    if (entry.expires <= this.now() || token._stats?.modifiedTime !== entry.revision) {
+      this.entries.delete(key);
+      return;
+    }
+    if (movement !== entry.movement || object2(movement)["id"] !== entry.movementId || token.x !== entry.x || token.y !== entry.y)
+      return;
+    const passed = object2(object2(movement)["passed"]), waypoints = passed["waypoints"];
+    if (!Array.isArray(waypoints) || !waypoints.length) return;
+    const last = object2(waypoints.at(-1));
+    if (last["x"] !== entry.x || last["y"] !== entry.y) return;
+    return { ...entry.origin };
   }
 };
 
-// src/ai-dungeon-master/hooks.ts
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/completed-player-turn.ts
+function snapshotCombatTurn(combat) {
+  return {
+    round: combat.round ?? 0,
+    turn: combat.turn ?? -1,
+    combatantId: combat.turns?.[combat.turn ?? -1]?.id ?? "",
+    player: combat.turns?.[combat.turn ?? -1]?.actor?.hasPlayerOwner === true,
+    order: JSON.stringify((combat.turns ?? []).map((turn) => turn.id))
+  };
+}
+function completedPlayerTurn(worldId, combat, previous, options = {}) {
+  const next = snapshotCombatTurn(combat);
+  const sceneId = typeof combat.scene === "string" ? combat.scene : combat.scene?.id;
+  if (!worldId || !previous || !sceneId || combat.active !== true || !previous.player || !Number.isSafeInteger(previous.round) || previous.round < 1 || !Number.isSafeInteger(previous.turn) || previous.turn < 0 || !Number.isSafeInteger(next.round) || !Number.isSafeInteger(next.turn) || next.turn < 0 || !next.combatantId || next.order !== previous.order || options.dmCaused === true || isBridgeMutation(options.bridgeOrigin))
+    return;
+  const forward = next.round === previous.round && next.turn === previous.turn + 1 || next.round === previous.round + 1 && previous.turn === (combat.turns?.length ?? 0) - 1 && next.turn === 0;
+  if (!forward) return;
+  const before = {
+    round: previous.round,
+    turn: previous.turn,
+    combatantId: previous.combatantId
+  };
+  const after = {
+    round: next.round,
+    turn: next.turn,
+    combatantId: next.combatantId
+  };
+  return {
+    signal: {
+      kind: "turn",
+      worldId,
+      sceneId,
+      documentId: combat.id,
+      revision: combat._stats?.modifiedTime ?? -1,
+      transition: JSON.stringify([
+        before.round,
+        before.turn,
+        before.combatantId,
+        after.round,
+        after.turn,
+        after.combatantId
+      ])
+    },
+    previous: before,
+    next: after
+  };
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/dm-event-adapter.ts
+var id2 = /^[A-Za-z0-9_-]{1,128}$/;
+var isId = (value) => typeof value === "string" && id2.test(value);
+var digest = /^[a-f0-9]{64}$/;
+var validPosition = (position) => Number.isSafeInteger(position.round) && position.round >= 1 && Number.isSafeInteger(position.turn) && position.turn >= 0 && position.turn <= 255 && isId(position.combatantId);
+function canonicalDotTurnState(state) {
+  if (![state.worldId, state.sessionId, state.controllerId, state.sceneId, state.combatId].every(
+    isId
+  ) || !Number.isSafeInteger(state.combatModifiedTime) || state.combatModifiedTime < 0 || !Number.isSafeInteger(state.round) || state.round < 1 || !Number.isSafeInteger(state.turn) || state.turn < 0 || !Array.isArray(state.combatantIds) || state.combatantIds.length > 256 || state.turn >= state.combatantIds.length || !state.combatantIds.every(isId) || new Set(state.combatantIds).size !== state.combatantIds.length || typeof state.paused !== "boolean")
+    throw new Error("Incomplete current dot turn state.");
+  return JSON.stringify([
+    "foundry-dot-state-v1",
+    state.worldId,
+    state.sessionId,
+    state.controllerId,
+    state.sceneId,
+    state.combatId,
+    state.combatModifiedTime,
+    state.round,
+    state.turn,
+    state.combatantIds,
+    state.paused
+  ]);
+}
+var sha2562 = async (canonical3) => {
+  const bytes = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(canonical3));
+  return Array.from(new Uint8Array(bytes), (byte) => byte.toString(16).padStart(2, "0")).join("");
+};
+async function completedTurnEventId(input2) {
+  if (![input2.worldId, input2.sessionId, input2.controllerId, input2.sceneId, input2.combatId].every(
+    isId
+  ) || !digest.test(input2.stateRevision) || !validPosition(input2.previous) || !validPosition(input2.next))
+    throw new Error("Invalid completed player turn identity.");
+  return `turn-${await sha2562(
+    JSON.stringify([
+      "foundry-player-turn-v1",
+      input2.worldId,
+      input2.sessionId,
+      input2.controllerId,
+      input2.sceneId,
+      input2.combatId,
+      input2.previous.round,
+      input2.previous.turn,
+      input2.previous.combatantId,
+      input2.next.round,
+      input2.next.turn,
+      input2.next.combatantId,
+      input2.stateRevision
+    ])
+  )}`;
+}
+var DmEventAdapter = class {
+  constructor(dependencies, maximum = 256) {
+    this.dependencies = dependencies;
+    this.maximum = maximum;
+    if (!Number.isSafeInteger(maximum) || maximum < 1) throw new Error("Invalid dedupe capacity.");
+  }
+  dependencies;
+  maximum;
+  seen = /* @__PURE__ */ new Map();
+  cancellation = new AbortController();
+  /** Invoke on mode/session/scene/world/disconnect lifecycle changes. Does not retract an accepted event. */
+  cancel() {
+    this.cancellation.abort();
+    this.cancellation = new AbortController();
+  }
+  mode() {
+    return this.dependencies.mode ? this.dependencies.mode() : "embedded";
+  }
+  authorized(scope, turn) {
+    return !!scope && scope.connected === true && scope.isController === true && scope.automaticEventsEnabled === true && [scope.worldId, scope.sessionId, scope.controllerId, scope.sceneId].every(isId) && scope.worldId === turn.signal.worldId && scope.sceneId === turn.signal.sceneId;
+  }
+  matches(state, scope, turn) {
+    return !!state && state.worldId === scope.worldId && state.sessionId === scope.sessionId && state.controllerId === scope.controllerId && state.sceneId === scope.sceneId && state.combatId === turn.signal.documentId && state.combatModifiedTime === turn.signal.revision && state.round === turn.next.round && state.turn === turn.next.turn && validPosition(turn.previous) && validPosition(turn.next) && state.combatantIds[state.turn] === turn.next.combatantId && state.combatantIds[turn.previous.turn] === turn.previous.combatantId && (turn.next.round === turn.previous.round && turn.next.turn === turn.previous.turn + 1 || turn.next.round === turn.previous.round + 1 && turn.previous.turn === state.combatantIds.length - 1 && turn.next.turn === 0);
+  }
+  async accept(turn) {
+    if (turn.signal.kind !== "turn" || isBridgeMutation(turn.signal.bridgeOrigin))
+      return { status: "suppressed" };
+    turn = { signal: { ...turn.signal }, previous: { ...turn.previous }, next: { ...turn.next } };
+    const mode = this.mode();
+    if (mode !== "embedded" && mode !== "dot") return { status: "suppressed" };
+    const observation = JSON.stringify([
+      turn.signal.worldId,
+      turn.signal.sceneId,
+      turn.signal.documentId,
+      turn.signal.revision,
+      turn.signal.transition
+    ]);
+    if ([...this.seen.values()].some(
+      (entry) => entry.observation === observation && entry.mode !== mode
+    ))
+      return { status: "duplicate" };
+    if (mode === "embedded") {
+      const key2 = `embedded:${observation}`;
+      if (this.seen.has(key2)) return { status: "duplicate" };
+      if (!this.reserve(key2, mode, observation)) return { status: "capacity" };
+      try {
+        this.dependencies.embedded(turn.signal);
+        return { status: "embedded" };
+      } catch (error62) {
+        return { status: "failed", error: error62 };
+      } finally {
+        this.seen.set(key2, { status: "finished", mode, observation });
+      }
+    }
+    const binding = this.dependencies.scope();
+    if (!this.authorized(binding, turn)) return { status: "suppressed" };
+    const scope = { ...binding };
+    const key = JSON.stringify([
+      scope.worldId,
+      scope.sessionId,
+      scope.controllerId,
+      scope.sceneId,
+      turn.signal.documentId,
+      turn.signal.revision,
+      turn.signal.transition
+    ]);
+    if (this.seen.has(key)) return { status: "duplicate" };
+    if (!this.reserve(key, mode, observation)) return { status: "capacity" };
+    const cancellation = this.cancellation.signal;
+    let handedOff = false;
+    try {
+      const timestamp = (this.dependencies.now?.() ?? /* @__PURE__ */ new Date()).toISOString();
+      const state = this.dependencies.currentState(turn);
+      if (!this.matches(state, scope, turn)) return { status: "suppressed" };
+      const canonical3 = canonicalDotTurnState(state);
+      const stateRevision = await sha2562(canonical3);
+      const identity = {
+        worldId: scope.worldId,
+        sessionId: scope.sessionId,
+        controllerId: scope.controllerId,
+        sceneId: scope.sceneId,
+        combatId: turn.signal.documentId,
+        stateRevision,
+        previous: { ...turn.previous },
+        next: { ...turn.next }
+      };
+      const eventId = await completedTurnEventId(identity);
+      const currentScope = this.dependencies.scope();
+      if (cancellation.aborted || this.mode() !== "dot" || !this.authorized(currentScope, turn) || currentScope.sessionId !== scope.sessionId || currentScope.controllerId !== scope.controllerId)
+        return { status: "suppressed" };
+      const currentState = this.dependencies.currentState(turn);
+      if (!this.matches(currentState, currentScope, turn) || canonicalDotTurnState(currentState) !== canonical3)
+        return { status: "suppressed" };
+      handedOff = true;
+      await this.dependencies.submit({ ...identity, eventId, timestamp }, cancellation);
+      return { status: "submitted" };
+    } catch (error62) {
+      return { status: "failed", error: error62 };
+    } finally {
+      if (handedOff) this.seen.set(key, { status: "finished", mode, observation });
+      else this.seen.delete(key);
+    }
+  }
+  reserve(key, mode, observation) {
+    if (this.seen.size >= this.maximum) {
+      const completed = [...this.seen].find(([, entry]) => entry.status === "finished");
+      if (!completed) return false;
+      this.seen.delete(completed[0]);
+    }
+    this.seen.set(key, { status: "pending", mode, observation });
+    return true;
+  }
+};
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/hooks.ts
+var regionMutationOrigins = new RegionMutationOrigins();
 function addAiDungeonMasterSceneControl(controls) {
-  if (!game.user.isGM) return;
+  if (currentUser()?.isGM !== true) return;
   const tool = {
     name: "ai-dungeon-master",
     title: "AI Dungeon Master",
@@ -21446,59 +23487,313 @@ function addAiDungeonMasterSceneControl(controls) {
     } else if (token?.tools) token.tools[tool.name] = tool;
   }
 }
+var MODULE_ID3 = "foundry-ai-dungeon-master";
+var currentUser = () => game.user;
+function registerKeyedRegionBehavior(accept) {
+  const api = foundry;
+  const config2 = globalThis.CONFIG?.RegionBehavior;
+  const Base2 = api.data?.regionBehaviors?.RegionBehaviorType;
+  const StringField = api.data?.fields?.StringField;
+  if (!Base2 || !StringField || !config2) return false;
+  class KeyedAreaBehavior extends Base2 {
+    static defineSchema() {
+      return {
+        key: new StringField({
+          required: true,
+          blank: true,
+          initial: "",
+          label: "Campaign area key",
+          hint: "Stable canonical resource key; an empty key disables narration."
+        })
+      };
+    }
+    static events = {
+      tokenEnter: function(event) {
+        const token = event.data.token;
+        const region = this.region ?? event.region;
+        if (this.parent?.disabled || region.hidden || token.hidden || !token.actor?.hasPlayerOwner || !this.key || !region.parent?.id || token.parent?.id !== region.parent.id)
+          return;
+        const movement = event.data.movement?.id ?? token.movement?.id ?? "direct";
+        const bridgeOrigin = regionMutationOrigins.match(
+          game.world?.id ?? "",
+          token,
+          event.data.movement
+        );
+        accept({
+          kind: "area",
+          worldId: game.world?.id ?? "",
+          sceneId: region.parent.id,
+          documentId: token.id,
+          tokenId: token.id,
+          regionId: region.id,
+          key: this.key,
+          revision: token._stats?.modifiedTime ?? -1,
+          ...bridgeOrigin ? { bridgeOrigin } : {},
+          transition: JSON.stringify([
+            movement,
+            token.x ?? null,
+            token.y ?? null,
+            token.elevation ?? null,
+            event.user.id
+          ])
+        });
+      }
+    };
+  }
+  config2.dataModels[`${MODULE_ID3}.keyedArea`] = KeyedAreaBehavior;
+  if (config2.typeLabels) config2.typeLabels[`${MODULE_ID3}.keyedArea`] = "AI DM keyed area entry";
+  if (config2.typeIcons) config2.typeIcons[`${MODULE_ID3}.keyedArea`] = "fa-solid fa-dragon";
+  return true;
+}
 var registered = false;
-function registerAiDungeonMasterHooks() {
+function registerAiDungeonMasterHooks(integration = {}) {
   if (registered) return;
   registered = true;
-  const automatic = new AutomaticTriggers((request) => {
-    void AiDungeonMasterApplication.open().trigger(request).catch((error62) => ui.notifications.error(String(error62)));
+  Hooks.on("pauseGame", (paused) => {
+    const origin = globalThis.foundryLocalApiPauseOrigin;
+    console.info(
+      JSON.stringify({
+        type: "pause-timing",
+        stage: "browser-pause-state-observed",
+        observedAt: Date.now(),
+        paused,
+        worldId: game.world?.id,
+        correlationId: origin && origin.worldId === game.world?.id ? origin.correlationId : null,
+        origin: origin?.source ?? "unmarked"
+      })
+    );
   });
-  const accept = (signal) => {
-    if (!game.user.isGM || game.settings.get("foundry-ai-dungeon-master", "automaticEventsEnabled") !== true)
-      return;
-    automatic.accept(signal);
+  Hooks.on(
+    "foundryLocalApiPauseResult",
+    (receipt) => {
+      if (currentUser()?.isGM !== true || receipt.worldId !== game.world?.id || receipt.outcome !== "confirmed" || typeof receipt.paused !== "boolean")
+        return;
+      ui.notifications.info(receipt.paused ? "Paused." : "Unpaused.");
+      console.info(
+        JSON.stringify({
+          type: "pause-timing",
+          stage: "browser-action-notification-issued",
+          notificationIssuedAtMs: Date.now(),
+          worldId: receipt.worldId,
+          correlationId: receipt.correlationId,
+          paused: receipt.paused
+        })
+      );
+    }
+  );
+  const mode = () => integration.mode ? integration.mode() : "embedded";
+  const enabled = (signal) => {
+    syncLifecycle();
+    return mode() === "embedded" && currentUser()?.isGM === true && game.world?.id === signal.worldId && typeof canvas !== "undefined" && canvas?.scene?.id === signal.sceneId && game.settings.get(MODULE_ID3, "automaticEventsEnabled") === true && aiDmController.store.state.connection === "connected" && aiDmController.store.state.authenticatedLane === "gm";
   };
+  const automatic = new AutomaticTriggers(
+    (request, signal) => {
+      void AiDungeonMasterApplication.open().trigger(request, signal).catch((error62) => {
+        if (!signal.aborted)
+          ui.notifications.error(
+            error62 instanceof Error ? error62.message : "Automatic DM response failed."
+          );
+      });
+    },
+    250,
+    enabled
+  );
+  let currentWorld = game.world?.id;
+  const walls = /* @__PURE__ */ new Map();
+  const combats = /* @__PURE__ */ new Map();
+  const collections = () => game;
+  const currentState = (turn) => {
+    if (currentUser()?.isGM !== true) return;
+    if (integration.currentState) return integration.currentState(turn);
+    const scope = integration.scope?.();
+    if (!scope || game.world?.id !== scope.worldId || typeof canvas === "undefined" || canvas?.scene?.id !== scope.sceneId || typeof collections().paused !== "boolean")
+      return;
+    const combat = Array.from(collections().combats ?? []).find(
+      (entry) => entry.id === turn.signal.documentId
+    );
+    const sceneId = typeof combat?.scene === "string" ? combat.scene : combat?.scene?.id;
+    if (!combat || combat.active !== true || sceneId !== scope.sceneId || combat._stats?.modifiedTime === void 0 || combat.round === void 0 || combat.turn === void 0 || !combat.turns)
+      return;
+    return {
+      worldId: scope.worldId,
+      sessionId: scope.sessionId,
+      controllerId: scope.controllerId,
+      sceneId: scope.sceneId,
+      combatId: combat.id,
+      combatModifiedTime: combat._stats.modifiedTime,
+      round: combat.round,
+      turn: combat.turn,
+      combatantIds: combat.turns.map((entry) => entry.id),
+      paused: collections().paused
+    };
+  };
+  const adapter = new DmEventAdapter({
+    mode,
+    embedded: (signal) => automatic.accept(signal),
+    scope: () => {
+      if (currentUser()?.isGM !== true) return;
+      const scope = integration.scope?.();
+      if (!scope || game.world?.id !== scope.worldId || typeof canvas === "undefined" || canvas?.scene?.id !== scope.sceneId)
+        return;
+      return {
+        ...scope,
+        automaticEventsEnabled: scope.automaticEventsEnabled === true && game.settings.get(MODULE_ID3, "automaticEventsEnabled") === true
+      };
+    },
+    currentState,
+    submit: (input2, cancellation) => integration.submit ? integration.submit(input2, cancellation) : Promise.reject(new Error("Acknowledged dot bridge ingress is unavailable."))
+  });
+  let lifecycleVersion = 0;
+  const cancelWork = () => {
+    lifecycleVersion++;
+    automatic.cancel();
+    adapter.cancel();
+    regionMutationOrigins.clear();
+  };
+  const lifecycleIdentity = () => {
+    const user = currentUser();
+    const scope = user?.isGM === true ? integration.scope?.() : void 0;
+    return JSON.stringify([
+      mode(),
+      game.world?.id,
+      typeof canvas === "undefined" ? null : canvas?.scene?.id,
+      user?.id ?? null,
+      user?.isGM === true,
+      game.settings.get(MODULE_ID3, "automaticEventsEnabled"),
+      scope?.worldId,
+      scope?.sessionId,
+      scope?.controllerId,
+      scope?.sceneId,
+      scope?.connected,
+      scope?.isController
+    ]);
+  };
+  let currentLifecycle = lifecycleIdentity();
+  const initialize = () => {
+    walls.clear();
+    combats.clear();
+    for (const scene of collections().scenes ?? [])
+      for (const wall of scene.walls ?? []) walls.set(`${scene.id}/${wall.id}`, wall.ds ?? 0);
+    for (const combat of collections().combats ?? [])
+      combats.set(combat.id, snapshotCombatTurn(combat));
+  };
+  const lifecycle = () => {
+    cancelWork();
+    currentLifecycle = lifecycleIdentity();
+    initialize();
+    if (currentWorld !== game.world?.id) {
+      currentWorld = game.world?.id;
+      AiDungeonMasterApplication.cancelOpen();
+    }
+  };
+  const syncLifecycle = () => {
+    if (currentLifecycle !== lifecycleIdentity()) lifecycle();
+  };
+  onAutomaticEventsCancelled(lifecycle);
+  integration.onChange?.(lifecycle);
+  const accept = (signal) => {
+    syncLifecycle();
+    if (mode() === "embedded") automatic.accept(signal);
+  };
+  registerKeyedRegionBehavior(accept);
+  Hooks.on("ready", lifecycle);
+  Hooks.on("canvasReady", lifecycle);
+  Hooks.on("canvasTearDown", lifecycle);
+  Hooks.on("disconnect", lifecycle);
+  Hooks.on("updateSetting", (setting) => {
+    if (setting.key === `${MODULE_ID3}.automaticEventsEnabled` || setting.key === `${MODULE_ID3}.dmEventMode`) {
+      lifecycle();
+    }
+  });
+  aiDmController.store.subscribe(() => {
+    if (mode() === "embedded" && aiDmController.store.state.connection !== "connected")
+      cancelWork();
+    syncLifecycle();
+  });
+  const observeTokenOrigin = (token, change, options) => {
+    syncLifecycle();
+    regionMutationOrigins.observe(game.world?.id ?? "", token, change, options);
+  };
+  Hooks.on("preUpdateToken", observeTokenOrigin);
+  Hooks.on("updateToken", observeTokenOrigin);
   Hooks.on(
     "foundry-ai-dungeon-master.keyedAreaEntered",
     (signal) => accept({ ...signal, kind: "area" })
   );
+  Hooks.on("createWall", (wall) => {
+    if (wall.parent?.id) walls.set(`${wall.parent.id}/${wall.id}`, wall.ds ?? 0);
+  });
+  Hooks.on("deleteWall", (wall) => {
+    walls.delete(`${wall.parent?.id}/${wall.id}`);
+  });
+  Hooks.on("preUpdateWall", (wall) => {
+    if (wall.parent?.id && !walls.has(`${wall.parent.id}/${wall.id}`))
+      walls.set(`${wall.parent.id}/${wall.id}`, wall.ds ?? 0);
+  });
   Hooks.on(
     "updateWall",
-    (wall, change, options) => {
-      if (change.ds === 1 && wall.id && wall._stats?.modifiedTime !== void 0)
-        accept({
-          kind: "door",
-          documentId: wall.id,
-          revision: wall._stats.modifiedTime,
-          origin: options?.aiDmOrigin
-        });
+    (wall, change, options, userId) => {
+      syncLifecycle();
+      const sceneId = wall.parent?.id;
+      if (!sceneId) return;
+      const key = `${sceneId}/${wall.id}`;
+      const previous = walls.get(key);
+      walls.set(key, wall.ds ?? change.ds ?? 0);
+      if (change.ds !== 1 || previous !== 0 || wall.door === 0 || !wall.door || isBridgeMutation(options?.foundryLocalApiOrigin))
+        return;
+      const user = collections().users?.get(userId);
+      if (!user) return;
+      const activeCanvas = typeof canvas === "undefined" ? void 0 : canvas;
+      const hasPlayer = activeCanvas?.scene?.id === sceneId && activeCanvas?.tokens?.placeables?.some((token) => token.document?.actor?.hasPlayerOwner === true);
+      if (user.isGM && !hasPlayer) return;
+      accept({
+        kind: "door",
+        worldId: game.world?.id ?? "",
+        sceneId,
+        documentId: wall.id,
+        revision: wall._stats?.modifiedTime ?? -1,
+        transition: JSON.stringify([previous, 1, userId])
+      });
     }
   );
-  const completedPlayerTurns = /* @__PURE__ */ new Set();
-  Hooks.on(
-    "preUpdateCombat",
-    (combat, change) => {
-      if (combat.id && change.turn !== void 0 && combat.turn !== void 0 && combat.turn >= 0 && combat.turns?.[combat.turn]?.actor?.hasPlayerOwner === true)
-        completedPlayerTurns.add(combat.id);
-    }
-  );
-  Hooks.on(
-    "updateCombat",
-    (combat, change, options) => {
-      if (change.turn !== void 0 && change.turn >= 0 && combat.id && completedPlayerTurns.delete(combat.id) && combat._stats?.modifiedTime !== void 0)
-        accept({
-          kind: "turn",
-          documentId: combat.id,
-          revision: combat._stats.modifiedTime,
-          origin: options?.aiDmOrigin
-        });
-    }
-  );
+  Hooks.on("createCombat", (combat) => combats.set(combat.id, snapshotCombatTurn(combat)));
+  Hooks.on("deleteCombat", (combat) => combats.delete(combat.id));
+  Hooks.on("updateCombat", (combat, _change, options) => {
+    syncLifecycle();
+    const previous = combats.get(combat.id);
+    const next = snapshotCombatTurn(combat);
+    combats.set(combat.id, next);
+    const turn = completedPlayerTurn(game.world?.id ?? "", combat, previous, {
+      bridgeOrigin: options?.foundryLocalApiOrigin
+    });
+    if (!turn) return;
+    const version2 = lifecycleVersion;
+    void adapter.accept(turn).then((result) => {
+      if (version2 !== lifecycleVersion) return;
+      if (result.status === "failed") ui.notifications.error("Automatic DM event handoff failed.");
+      if (result.status === "capacity")
+        ui.notifications.error("Automatic DM event capacity reached.");
+    });
+  });
   Hooks.on("getSceneControlButtons", addAiDungeonMasterSceneControl);
   Hooks.on("chatMessage", (_chatLog, message) => {
+    message = normalizeChatCommand(message);
+    const control = message.match(/^\/ai-control\s+(.+)$/i);
+    if (control) {
+      if (currentUser()?.isGM !== true) {
+        ui.notifications.warn("AI Dungeon Master currently requires a GM.");
+        return false;
+      }
+      void AiDungeonMasterApplication.open().directControl(control[1]).catch(
+        (error62) => ui.notifications.error(
+          error62 instanceof Error ? error62.message : "Control request failed."
+        )
+      );
+      return false;
+    }
     const match = message.match(/^\/ai(?:\s+([\s\S]+))?$/i);
     if (!match) return true;
-    if (!game.user.isGM) {
+    if (currentUser()?.isGM !== true) {
       ui.notifications.warn("AI Dungeon Master currently requires a GM.");
       return false;
     }
@@ -21518,36 +23813,990 @@ function registerAiDungeonMasterHooks() {
   });
 }
 
-// src/index.ts
-var MODULE_ID3 = "foundry-ai-dungeon-master";
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/dot-hook-integration.ts
+var MODULE_ID4 = "foundry-ai-dungeon-master";
+function createDotHookIntegration() {
+  let attached;
+  let detach;
+  const listeners = /* @__PURE__ */ new Set();
+  const changed = () => {
+    for (const listener of listeners) listener();
+  };
+  const api = () => {
+    const modules2 = game.modules;
+    const candidate = modules2?.get(MODULE_ID4)?.api?.dot;
+    const available = candidate && typeof candidate.getScope === "function" && typeof candidate.currentState === "function" && typeof candidate.submitCompletedTurn === "function" && typeof candidate.onLifecycle === "function" ? candidate : void 0;
+    if (available !== attached) {
+      detach?.();
+      attached = available;
+      detach = attached?.onLifecycle(changed);
+      changed();
+    }
+    return available;
+  };
+  Hooks.on(
+    "ready",
+    () => queueMicrotask(() => {
+      api();
+    })
+  );
+  Hooks.on("foundry-local-api.bridgeReady", () => queueMicrotask(() => {
+    api();
+  }));
+  return {
+    mode: () => game.settings.get(MODULE_ID4, "dmEventMode"),
+    scope: () => {
+      const user = game.user;
+      if (user?.isGM !== true) return;
+      const binding = api()?.getScope();
+      if (!binding || binding.userId !== user.id) return;
+      return binding;
+    },
+    currentState: (turn) => api()?.currentState(turn.signal.documentId),
+    submit: (input2, cancellation) => {
+      const bridge = api();
+      if (!bridge)
+        return Promise.reject(new Error("Acknowledged dot bridge ingress is unavailable."));
+      return bridge.submitCompletedTurn(input2, cancellation);
+    },
+    onChange: (listener) => {
+      listeners.add(listener);
+      api();
+    }
+  };
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/tunnel-configuration-menu.ts
+var MODULE_ID5 = "foundry-ai-dungeon-master";
+var BRIDGE_MODULE_ID = "foundry-local-api";
+async function openTunnelConfiguration() {
+  if (!game.user?.isGM || game.user.name?.toLowerCase() === "tv") {
+    ui.notifications.warn("Open tunnel configuration as the connected local GM.");
+    return;
+  }
+  const modules2 = game.modules;
+  const bridge = modules2?.get(BRIDGE_MODULE_ID);
+  if (!bridge || bridge.active !== true) {
+    ui.notifications.warn("Enable Foundry local api and mcp in Module Management to use AI Dungeon Master tunnel configuration.");
+    return;
+  }
+  const api = modules2?.get(MODULE_ID5)?.api;
+  const setup = api?.dotTunnelSetup;
+  if (typeof setup?.show !== "function") {
+    ui.notifications.warn("AI Dungeon Master tunnel controls are not ready. Wait for the GM bridge to connect, then reopen Configure tunnel.");
+    return;
+  }
+  try {
+    await setup.show.call(setup);
+  } catch {
+    ui.notifications.error("Tunnel configuration could not open. Check the local GM bridge connection, then try again.");
+  }
+}
+function registerTunnelConfigurationMenu() {
+  const settings = game.settings;
+  const Application = foundry.applications?.api?.ApplicationV2;
+  if (!settings.registerMenu || !Application) return;
+  class TunnelConfigurationMenu extends Application {
+    render() {
+      void openTunnelConfiguration();
+      return this;
+    }
+  }
+  settings.registerMenu(MODULE_ID5, "tunnelConfiguration", {
+    name: "OpenAI dot tunnel configuration",
+    label: "Configure tunnel",
+    hint: "OpenAI dot tunnel ID and runtime key. Install the official tool, configure the existing private tunnel, and explicitly Activate or Stop. Saved configuration remains with the local companion; no key re-entry is needed to open this menu.",
+    icon: "fas fa-link",
+    type: TunnelConfigurationMenu,
+    restricted: true
+  });
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/dot-bridge.ts
+var DOT_EVENT = "foundry.player_turn_completed";
+var DOT_BIND_REQUEST = "foundry.dot_controller_requested";
+var dotCanonical = (s) => JSON.stringify(["foundry-dot-state-v1", s.worldId, s.sessionId, s.controllerId, s.sceneId, s.combatId, s.combatModifiedTime, s.round, s.turn, s.combatantIds, s.paused]);
+async function dotDigest(text) {
+  const bytes = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(bytes), (b) => b.toString(16).padStart(2, "0")).join("");
+}
+var identifier = (value) => typeof value === "string" && /^[A-Za-z0-9_-]{1,128}$/.test(value);
+var DotBridge = class {
+  constructor(clientId, userId, storage, native, send, now = Date.now) {
+    this.clientId = clientId;
+    this.userId = userId;
+    this.storage = storage;
+    this.native = native;
+    this.send = send;
+    this.now = now;
+    try {
+      const raw = storage?.getItem(this.key);
+      if (raw && raw.length > 262144) throw new Error();
+      const data = raw ? JSON.parse(raw) : { version: 1, turns: [], receipts: {} };
+      if (data.version !== 1 || !Array.isArray(data.turns) || data.turns.length > 64 || !data.receipts || Object.keys(data.receipts).length > 1024 || data.turns.some((t) => !t || !/^turn-[a-f0-9]{64}$/.test(t.input?.eventId) || !Number.isSafeInteger(t.attempts) || t.attempts < 0 || t.attempts > 5 || !Number.isSafeInteger(t.next) || !["queued", "dead_letter"].includes(t.status))) throw new Error();
+      this.turns = data.turns;
+      this.receipts = data.receipts;
+      this.persist();
+      this.healthy = true;
+    } catch {
+      this.healthy = false;
+    }
+  }
+  clientId;
+  userId;
+  storage;
+  native;
+  send;
+  now;
+  binding;
+  connected = false;
+  listeners = /* @__PURE__ */ new Set();
+  waiters = /* @__PURE__ */ new Map();
+  turns = [];
+  receipts = {};
+  healthy = false;
+  responseTail = Promise.resolve();
+  responseCancellations = /* @__PURE__ */ new Map();
+  get key() {
+    return `foundry-local-api.dot.v1.${this.userId}.${this.clientId}`;
+  }
+  persist() {
+    if (!this.storage) throw new Error("Private browser storage is unavailable.");
+    const raw = JSON.stringify({ version: 1, turns: this.turns, receipts: this.receipts });
+    if (raw.length > 262144) throw new Error("Dot bridge storage capacity reached.");
+    try {
+      this.storage.setItem(this.key, raw);
+      if (this.storage.getItem(this.key) !== raw) throw new Error();
+    } catch {
+      this.healthy = false;
+      throw new Error("Dot bridge storage failed.");
+    }
+  }
+  onLifecycle = (listener) => {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
+  };
+  changed() {
+    for (const listener of this.listeners) listener();
+  }
+  setConnected(connected) {
+    if (this.connected !== connected) {
+      this.connected = connected;
+      this.changed();
+    }
+  }
+  /** Bounded lifecycle hint only; server identity verification remains authoritative. */
+  requestBinding() {
+    if (this.connected) {
+      this.changed();
+      this.send(DOT_BIND_REQUEST, {});
+    }
+  }
+  bind(raw) {
+    const b = raw;
+    if (!b || Object.keys(b).sort().join() !== "clientId,controllerId,sceneId,sessionId,userId,worldId" || !Object.values(b).every(identifier) || b.clientId !== this.clientId || b.userId !== this.userId || !this.connected || !this.healthy || !this.native.authority(b)) throw new Error("Dot binding refused.");
+    this.binding = { ...b };
+    this.changed();
+    return { bound: true, ...b };
+  }
+  unbind() {
+    this.binding = void 0;
+    this.changed();
+  }
+  getScope = () => {
+    const b = this.binding;
+    try {
+      if (!b || !this.healthy || !this.native.authority(b)) return;
+    } catch {
+      return;
+    }
+    return { ...b, connected: this.connected, isController: true, automaticEventsEnabled: true };
+  };
+  currentState = (combatId) => {
+    const b = this.getScope();
+    if (!b?.connected || !identifier(combatId)) return;
+    return this.native.state(b, combatId)?.state;
+  };
+  async read(combatId) {
+    const b = this.getScope();
+    if (!b?.connected) throw new Error("Dot controller is inactive.");
+    const read = this.native.state(b, combatId);
+    if (!read) throw new Error("Dot combat state is unavailable.");
+    const canonical3 = dotCanonical(read.state);
+    const stateRevision = await dotDigest(canonical3);
+    if (dotCanonical(this.currentState(combatId) ?? {}) !== canonical3) throw new Error("Dot state changed during read.");
+    return { ...read, stateRevision };
+  }
+  submitCompletedTurn = async (input2, signal) => {
+    signal.throwIfAborted();
+    const scope = this.getScope();
+    if (!scope?.connected || input2.worldId !== scope.worldId || input2.sessionId !== scope.sessionId || input2.controllerId !== scope.controllerId || input2.sceneId !== scope.sceneId || !/^turn-[a-f0-9]{64}$/.test(input2.eventId) || JSON.stringify(input2).length > 4096) throw new Error("Dot submission refused.");
+    const existing = this.turns.find((t) => t.input.eventId === input2.eventId);
+    if (existing && JSON.stringify({ ...existing.input, timestamp: "" }) !== JSON.stringify({ ...input2, timestamp: "" })) throw new Error("Dot event identity conflict.");
+    if (!existing) {
+      if (this.turns.length >= 64) throw new Error("Dot outbox is full.");
+      this.turns.push({ input: structuredClone(input2), attempts: 0, next: this.now(), status: "queued" });
+      this.persist();
+    }
+    if (existing?.status === "dead_letter") throw new Error("Dot delivery requires reconciliation.");
+    await new Promise((resolve, reject) => {
+      const entries = this.waiters.get(input2.eventId) ?? /* @__PURE__ */ new Set();
+      const entry = { resolve: () => {
+        cleanup();
+        resolve();
+      }, reject: (error62) => {
+        cleanup();
+        reject(error62);
+      } };
+      const abort = () => entry.reject(new Error("Dot handoff cancelled; persisted event requires reconciliation."));
+      const timer = setTimeout(() => entry.reject(new Error("Dot acknowledgement is uncertain; persisted event retained.")), 25e3);
+      const cleanup = () => {
+        clearTimeout(timer);
+        signal.removeEventListener("abort", abort);
+        entries.delete(entry);
+        if (!entries.size) this.waiters.delete(input2.eventId);
+      };
+      entries.add(entry);
+      this.waiters.set(input2.eventId, entries);
+      signal.addEventListener("abort", abort, { once: true });
+      this.pump();
+    });
+  };
+  pump() {
+    const b = this.getScope();
+    if (!b?.connected) return;
+    for (const record3 of this.turns) {
+      if (record3.status !== "queued" || record3.next > this.now()) continue;
+      if (record3.input.sessionId !== b.sessionId || record3.input.controllerId !== b.controllerId || record3.attempts >= 5) {
+        record3.status = "dead_letter";
+        this.persist();
+        for (const w of this.waiters.get(record3.input.eventId) ?? []) w.reject(new Error("Dot delivery requires reconciliation."));
+        continue;
+      }
+      record3.attempts++;
+      record3.next = this.now() + Math.min(16e3, 1e3 * 2 ** (record3.attempts - 1));
+      this.persist();
+      this.send(DOT_EVENT, record3.input);
+    }
+  }
+  /** Explicit operator reconciliation retries transport only, preserving the exact event identity. */
+  reconcileCompletedTurn = async (eventId, signal) => {
+    signal.throwIfAborted();
+    const record3 = this.turns.find((t) => t.input.eventId === eventId);
+    if (!record3) throw new Error("No retained dot handoff to reconcile.");
+    const scope = this.getScope();
+    if (!scope?.connected || scope.sessionId !== record3.input.sessionId || scope.controllerId !== record3.input.controllerId) throw new Error("Dot handoff scope is no longer active.");
+    record3.attempts = 0;
+    record3.status = "queued";
+    record3.next = this.now();
+    this.persist();
+    return this.submitCompletedTurn(record3.input, signal);
+  };
+  receive(raw) {
+    const control = raw;
+    if (control?.kind === "dot-cancel-response") {
+      if (control.clientId === this.clientId && typeof control.cancellationId === "string" && /^[a-f0-9-]{36}$/.test(control.cancellationId)) {
+        let cancellation = this.responseCancellations.get(control.cancellationId);
+        if (!cancellation && this.responseCancellations.size < 256) {
+          cancellation = new AbortController();
+          this.responseCancellations.set(control.cancellationId, cancellation);
+        }
+        cancellation?.abort();
+      }
+      return true;
+    }
+    const ack = raw;
+    if (ack?.kind !== "dot-receipt") return false;
+    if (ack.clientId !== this.clientId || typeof ack.eventId !== "string") return true;
+    const record3 = this.turns.find((t) => t.input.eventId === ack.eventId);
+    if (!record3) return true;
+    if (ack.accepted === true) {
+      this.turns = this.turns.filter((t) => t !== record3);
+      this.persist();
+      for (const w of this.waiters.get(ack.eventId) ?? []) w.resolve();
+    } else {
+      record3.status = "dead_letter";
+      this.persist();
+      for (const w of this.waiters.get(ack.eventId) ?? []) w.reject(new Error("Dot event was refused."));
+    }
+    return true;
+  }
+  respond(input2) {
+    const requestId = input2.cancellationId ?? crypto.randomUUID();
+    if (!/^[a-f0-9-]{36}$/.test(requestId) || this.responseCancellations.size >= 256) return Promise.reject(new Error("Dot response cancellation capacity reached."));
+    const cancellation = this.responseCancellations.get(requestId) ?? new AbortController();
+    this.responseCancellations.set(requestId, cancellation);
+    const next = this.responseTail.then(() => this.publish({ ...input2 }, cancellation.signal)).finally(() => this.responseCancellations.delete(requestId));
+    this.responseTail = next.catch(() => void 0);
+    return next;
+  }
+  async publish(input2, signal) {
+    if (!input2 || Object.keys(input2).filter((key) => key !== "cancellationId").sort().join() !== "combatId,eventId,stateRevision,text" || !/^turn-[a-f0-9]{64}$/.test(input2.eventId) || !/^[a-f0-9]{64}$/.test(input2.stateRevision) || !identifier(input2.combatId) || typeof input2.text !== "string" || !input2.text.trim() || input2.text.length > 12e3) throw new Error("Invalid dot response.");
+    const scope = this.getScope();
+    if (!scope?.connected) throw new Error("Dot controller is inactive.");
+    const fingerprint = await dotDigest(JSON.stringify([scope.worldId, scope.sessionId, scope.controllerId, input2.combatId, input2.stateRevision, input2.text]));
+    const messageId = (await dotDigest(JSON.stringify(["dot-response-v1", scope.worldId, scope.sessionId, scope.controllerId, input2.eventId]))).slice(0, 16);
+    const prior = this.receipts[input2.eventId];
+    if (prior && prior.fingerprint !== fingerprint) throw new Error("Dot response identity conflict.");
+    const existing = this.native.findMessage(messageId);
+    if (existing) {
+      const flags = existing.flags?.["foundry-local-api"];
+      if (flags?.dotFingerprint !== fingerprint || flags?.dotEventId !== input2.eventId) throw new Error("Dot response document identity conflict.");
+      this.receipts[input2.eventId] = { fingerprint, status: "confirmed", messageId };
+      this.persist();
+      return { outcome: "confirmed", messageId, replayed: true };
+    }
+    if (prior) return { outcome: "uncertain", messageId, replayed: true };
+    signal.throwIfAborted();
+    if (Object.keys(this.receipts).length >= 1024) throw new Error("Dot response ledger is full.");
+    const current = await this.read(input2.combatId);
+    if (current.stateRevision !== input2.stateRevision || this.binding?.sessionId !== scope.sessionId || this.binding?.controllerId !== scope.controllerId) throw new Error("Stale dot response refused.");
+    signal.throwIfAborted();
+    this.receipts[input2.eventId] = { fingerprint, status: "pending", messageId };
+    this.persist();
+    const finalState = this.currentState(input2.combatId);
+    if (!finalState || !this.getScope()?.connected || dotCanonical(finalState) !== dotCanonical(current.state)) return { outcome: "uncertain", messageId };
+    const escape = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+    try {
+      signal.throwIfAborted();
+      await this.native.createMessage({ _id: messageId, content: `<p>${escape(input2.text).replace(/\n/g, "<br>")}</p>`, speaker: { alias: "Dungeon Master" }, flags: { "foundry-local-api": { dotEventId: input2.eventId, dotFingerprint: fingerprint } } });
+      const observed = this.native.findMessage(messageId);
+      const observedFlags = observed?.flags?.["foundry-local-api"];
+      if (observedFlags?.dotFingerprint !== fingerprint || observedFlags?.dotEventId !== input2.eventId) return { outcome: "uncertain", messageId };
+      this.receipts[input2.eventId] = { fingerprint, status: "confirmed", messageId };
+      this.persist();
+      return { outcome: "confirmed", messageId, replayed: false };
+    } catch {
+      return { outcome: "uncertain", messageId };
+    }
+  }
+};
+function registerDotCommands(bridge, registerCommand) {
+  const disposers = [];
+  try {
+    disposers.push(registerCommand("dotBind", (payload) => bridge.bind(payload)));
+    disposers.push(registerCommand("dotUnbind", () => {
+      bridge.unbind();
+      return { bound: false };
+    }));
+    disposers.push(registerCommand("dotRead", (payload) => bridge.read(payload.combatId)));
+    disposers.push(registerCommand("dotStatus", () => bridge.getScope() ?? null));
+    disposers.push(registerCommand("dotRespond", (payload) => bridge.respond(payload)));
+    return disposers;
+  } catch (error62) {
+    for (const dispose of disposers.reverse()) dispose();
+    throw error62;
+  }
+}
+var foundryDotNative = {
+  authority: (b) => game.world?.id === b.worldId && game.user?.id === b.userId && game.user.isGM && game.user.active === true && canvas?.scene?.id === b.sceneId && game.settings.get("foundry-ai-dungeon-master", "automaticEventsEnabled") === true && game.settings.get("foundry-ai-dungeon-master", "dmEventMode") === "dot",
+  state(b, combatId) {
+    const combat = game.collections.get("Combat")?.get(combatId);
+    if (!combat?.active || (typeof combat.scene === "string" ? combat.scene : combat.scene?.id) !== b.sceneId || !Number.isSafeInteger(combat._stats?.modifiedTime) || !Number.isSafeInteger(combat.round) || combat.round < 1 || !Number.isSafeInteger(combat.turn) || combat.turn < 0 || !Array.isArray(combat.turns) || !combat.turns.length || combat.turns.length > 256 || combat.turn >= combat.turns.length || !combat.turns.every((t) => identifier(t.id)) || new Set(combat.turns.map((t) => t.id)).size !== combat.turns.length || typeof game.paused !== "boolean") return;
+    return { state: { worldId: b.worldId, sessionId: b.sessionId, controllerId: b.controllerId, sceneId: b.sceneId, combatId, combatModifiedTime: combat._stats.modifiedTime, round: combat.round, turn: combat.turn, combatantIds: combat.turns.map((t) => t.id), paused: game.paused }, playerCombatantIds: combat.turns.filter((t) => t.actor?.hasPlayerOwner === true).map((t) => t.id) };
+  },
+  findMessage: (id3) => game.collections.get("ChatMessage")?.get(id3)?.toObject(),
+  async createMessage(data) {
+    const cls = CONFIG["ChatMessage"]?.documentClass;
+    if (!cls) throw new Error("Chat messages unavailable.");
+    const result = await cls.create(data, { keepId: true });
+    if (!result) throw new Error("Chat write uncertain.");
+    return result.toObject();
+  }
+};
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/tunnel-configuration.ts
+var TUNNEL_FAILURE_PHASES = ["prepare", "runtime", "bind", "revalidate", "host_start", "host_health", "host_shutdown"];
+var TUNNEL_HOST_DIAGNOSTIC_CODES = ["host_failed", "visible_console_required", "invalid_path", "invalid_executable", "native_compile_failed", "health_listener_failed", "health_port_occupied", "job_create_failed", "job_limits_failed", "nul_handle_failed", "attribute_list_failed", "handle_list_failed", "process_create_failed", "job_assign_failed", "process_resume_failed", "control_input_invalid", "child_exited", "host_spawn_failed", "host_protocol_invalid", "host_start_timeout", "host_status_timeout", "host_shutdown_unconfirmed"];
+var CONFIGURATION_TIMEOUT_MS = { status: 18e4, save: 36e4, activate: 36e4, stop: 18e4 };
+var errorMessages = {
+  invalid_input: "Configuration input is invalid. Use the supplied tunnel ID and a 20\u20134096 character runtime key with no spaces or line breaks.",
+  private_storage_unavailable: "Protected tunnel storage could not be verified. Ask the local operator to check the folder and private permissions.",
+  profile_conflict: "The existing tunnel profile differs from the supported profile. It was preserved; local operator review is required.",
+  recovery_required: "An interrupted configuration save requires local review. The recovery marker was preserved; do not enter another key.",
+  controller_mismatch: "The saved controller belongs to another GM, scene, or browser. Existing configuration was preserved; local operator review is required.",
+  replacement_required: "A runtime key is already saved. Leave the key field blank to keep it, or explicitly confirm replacement.",
+  runtime_key_required: "No runtime key is saved. Enter the OpenAI tunnel runtime key before saving.",
+  rotation_invalid: "Key replacement needs an existing saved key and a new key value.",
+  retained_events: "Existing event state requires local review before changing tunnel configuration.",
+  bridge_key_conflict: "The existing bridge key and configuration do not match. Both were preserved; local operator review is required.",
+  scope_changed: "The displayed GM, scene, or browser scope changed. Refresh status before saving.",
+  scope_unavailable: "The current GM scene could not be verified. Check the GM connection and viewed scene, then refresh status.",
+  activation_loaded: "Tunnel service configuration is already loaded. Stop it through the supported launcher before changing configuration.",
+  busy: "Another configuration request is running. Wait for completion, then refresh status.",
+  save_failed: "The save did not complete. Local review of the recovery marker is required before another save."
+};
+var TunnelConfigurationRequestError = class extends Error {
+};
+var TunnelConfigurationClient = class {
+  constructor(clientId, authority, world, sendPrivate) {
+    this.clientId = clientId;
+    this.authority = authority;
+    this.world = world;
+    this.sendPrivate = sendPrivate;
+  }
+  clientId;
+  authority;
+  world;
+  sendPrivate;
+  pending;
+  request(input2) {
+    if (!this.authority() || this.pending) {
+      delete input2.runtimeKey;
+      return Promise.reject(new Error("Open configuration as the connected local GM and wait for the pending request."));
+    }
+    const requestId = crypto.randomUUID();
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => {
+        this.pending = void 0;
+        reject(new TunnelConfigurationRequestError("Configuration result is uncertain. Refresh status before entering another key."));
+      }, CONFIGURATION_TIMEOUT_MS[input2.action]);
+      this.pending = { id: requestId, timer, resolve, reject };
+      try {
+        this.sendPrivate({ kind: "dot-tunnel-configuration", requestId, worldId: this.world(), ...input2 });
+      } catch {
+        this.disconnected();
+      } finally {
+        delete input2.runtimeKey;
+      }
+    });
+  }
+  receive(raw) {
+    const value = raw;
+    if (value?.kind !== "dot-tunnel-configuration-status") return false;
+    const pending = this.pending;
+    if (!pending || value.clientId !== this.clientId || value.requestId !== pending.id) return true;
+    const status = value.status;
+    clearTimeout(pending.timer);
+    this.pending = void 0;
+    if (!status && typeof value.errorCode === "string" && Object.hasOwn(errorMessages, value.errorCode)) {
+      pending.reject(new TunnelConfigurationRequestError(errorMessages[value.errorCode]));
+      return true;
+    }
+    const allowed = ["configured", "runtimeKeyConfigured", "bridgeKeyConfigured", "tunnelId", "controller", "activation", "message", "lifecycle"];
+    const lifecycle = status?.lifecycle;
+    const hasDiagnosticId = Boolean(lifecycle) && Object.hasOwn(lifecycle, "diagnosticId");
+    const hasDiagnosticStorage = Boolean(lifecycle) && Object.hasOwn(lifecycle, "diagnosticStorage");
+    if (lifecycle && (Object.keys(lifecycle).filter((key) => !["failurePhase", "hostFailureCode", "diagnosticId", "diagnosticStorage"].includes(key)).sort().join(",") !== "canActivate,canStop,healthy,message,phase,ready,reason" || !["inactive", "starting", "running", "stopping", "blocked", "failed"].includes(lifecycle.phase) || typeof lifecycle.canActivate !== "boolean" || typeof lifecycle.canStop !== "boolean" || [lifecycle.healthy, lifecycle.ready].some((value2) => value2 !== null && typeof value2 !== "boolean") || !["inactive", "remediation_required", "configuration_unsafe", "controller_mismatch", "dot_mode_required", "activation_loaded", "running", "host_failed", "scope_changed", "busy"].includes(lifecycle.reason) || typeof lifecycle.message !== "string" || lifecycle.message.length > 512 || lifecycle.failurePhase !== void 0 && !TUNNEL_FAILURE_PHASES.includes(lifecycle.failurePhase) || lifecycle.hostFailureCode !== void 0 && !TUNNEL_HOST_DIAGNOSTIC_CODES.includes(lifecycle.hostFailureCode) || hasDiagnosticId !== hasDiagnosticStorage || hasDiagnosticId && (typeof lifecycle.diagnosticId !== "string" || !/^attempt-[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(lifecycle.diagnosticId) || !["saved", "unavailable"].includes(lifecycle.diagnosticStorage ?? "")) || lifecycle.canActivate && !["inactive", "failed"].includes(lifecycle.phase) || lifecycle.canStop && !["running", "failed"].includes(lifecycle.phase))) {
+      pending.reject(new TunnelConfigurationRequestError("Tunnel lifecycle status could not be verified."));
+      return true;
+    }
+    if (!status || Object.keys(status).some((key) => !allowed.includes(key)) || ![status.configured, status.runtimeKeyConfigured, status.bridgeKeyConfigured].every((flag) => typeof flag === "boolean") || !["inactive", "active"].includes(status.activation) || status.activation === "active" && lifecycle?.phase !== "running" || typeof status.message !== "string" || status.message.length > 512 || status.tunnelId !== void 0 && !/^tunnel_[a-f0-9]{32}$/.test(status.tunnelId) || !status.controller || Object.keys(status.controller).sort().join(",") !== "clientId,sceneId,userId,worldId" || Object.values(status.controller).some((id3) => typeof id3 !== "string" || !/^[A-Za-z0-9_-]{1,128}$/.test(id3)) || status.controller.clientId !== this.clientId || status.controller.worldId !== this.world()) {
+      pending.reject(new TunnelConfigurationRequestError("Configuration was not completed. Check private storage, current GM scope, and key replacement confirmation."));
+      return true;
+    }
+    pending.resolve(status);
+    return true;
+  }
+  disconnected() {
+    if (this.pending) {
+      clearTimeout(this.pending.timer);
+      this.pending.reject(new TunnelConfigurationRequestError("Configuration connection interrupted. Refresh status before entering another key."));
+      this.pending = void 0;
+    }
+  }
+};
+var escapeConfiguration = (value) => String(value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+function configurationFields(status) {
+  const scope = status.controller;
+  return `<fieldset><legend>Private tunnel configuration</legend><label>Tunnel ID <input name="dot-tunnel-id" type="text" autocomplete="off" spellcheck="false" value="${escapeConfiguration(status.tunnelId ?? "")}"></label><label>OpenAI tunnel runtime key <input name="dot-runtime-key" type="password" autocomplete="new-password" spellcheck="false" value=""></label><p>Runtime key: ${status.runtimeKeyConfigured ? "Configured. Leave blank to keep it." : "Not configured."}</p>${status.runtimeKeyConfigured ? '<label><input name="dot-rotate-key" type="checkbox"> Replace the existing runtime key with the new value</label>' : ""}<p>World: ${escapeConfiguration(scope.worldId)}<br>Scene: ${escapeConfiguration(scope.sceneId)}<br>GM: ${escapeConfiguration(scope.userId)}<br>Controller: ${escapeConfiguration(scope.clientId)}</p><p>${escapeConfiguration(status.message)}</p><p>Save does not activate the tunnel or change AI DM mode.</p></fieldset>`;
+}
+function takeConfigurationInput(root, controller) {
+  const key = root.querySelector('[name="dot-runtime-key"]');
+  const runtimeKey = key?.value ?? "";
+  if (key) key.value = "";
+  const tunnelId = root.querySelector('[name="dot-tunnel-id"]')?.value.trim() ?? "";
+  const rotate = root.querySelector('[name="dot-rotate-key"]')?.checked === true;
+  return { action: "save", tunnelId, expectedController: { ...controller }, ...runtimeKey ? { runtimeKey } : {}, ...rotate ? { rotateRuntimeKey: true } : {} };
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/dot-tunnel-setup.ts
+var TUNNEL_SETUP_EVENT = "foundry.dot_tunnel_tool_setup";
+var DotTunnelSetupClient = class {
+  constructor(clientId, authority, connected, world, send, configuration) {
+    this.clientId = clientId;
+    this.authority = authority;
+    this.connected = connected;
+    this.world = world;
+    this.send = send;
+    this.configuration = configuration;
+  }
+  clientId;
+  authority;
+  connected;
+  world;
+  send;
+  configuration;
+  pending;
+  request(action) {
+    if (!this.authority() || !this.connected()) return Promise.reject(new Error("Open Foundry as the connected GM to use tunnel tool setup."));
+    if (this.pending) return Promise.reject(new Error("Setup request is pending. Wait for its result before requesting another action."));
+    const requestId = crypto.randomUUID();
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => {
+        this.pending = void 0;
+        reject(new Error("Companion setup timed out. Check its connection and retry Status; an installation may still be completing."));
+      }, action === "install" ? 16e4 : 15e3);
+      this.pending = { id: requestId, resolve, reject, timer };
+      try {
+        this.send(TUNNEL_SETUP_EVENT, { requestId, worldId: this.world(), action, ...["install", "rollback"].includes(action) ? { confirmed: true } : {} });
+      } catch {
+        this.disconnected();
+      }
+    });
+  }
+  receive(raw) {
+    const value = raw;
+    if (value?.kind !== "dot-tunnel-tool-status") return false;
+    const pending = this.pending;
+    if (!pending || value.clientId !== this.clientId || value.requestId !== pending.id) return true;
+    const status = value.status;
+    if (!status || typeof status.enabled !== "boolean" || !["unsupported", "not_installed", "installed", "different_version", "installing", "error"].includes(status.phase) || typeof status.requiredVersion !== "string" || status.requiredVersion.length > 32 || typeof status.platform !== "string" || status.platform.length > 40 || typeof status.message !== "string" || status.message.length > 1024 || [status.installedVersion, status.retainedVersion, status.errorCode].some((value2) => value2 !== void 0 && (typeof value2 !== "string" || value2.length > 64)) || [status.rollbackAvailable, status.restartNeeded].some((value2) => value2 !== void 0 && typeof value2 !== "boolean")) {
+      this.disconnected();
+      return true;
+    }
+    clearTimeout(pending.timer);
+    this.pending = void 0;
+    pending.resolve(status);
+    return true;
+  }
+  disconnected() {
+    if (this.pending) {
+      clearTimeout(this.pending.timer);
+      this.pending.reject(new Error("Foundry companion connection was interrupted. Reconnect and check Status."));
+      this.pending = void 0;
+    }
+  }
+};
+var openSetups = /* @__PURE__ */ new WeakMap();
+async function closedDialog(dialog, options) {
+  let finish;
+  const closed = new Promise((resolve) => {
+    finish = resolve;
+  });
+  const result = await dialog.wait({ ...options, close: () => {
+    try {
+      const close = options["close"];
+      if (typeof close === "function") close();
+    } finally {
+      finish();
+    }
+  } });
+  await closed;
+  return result;
+}
+function showDotTunnelSetup(client) {
+  const existing = openSetups.get(client);
+  if (existing) {
+    ui.notifications.notify("Tunnel setup is already open or working. Repeated clicks do not start another installation.", "info");
+    return existing;
+  }
+  const work = runDotTunnelSetup(client).finally(() => {
+    openSetups.delete(client);
+  });
+  openSetups.set(client, work);
+  return work;
+}
+var escaped = (value) => String(value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+function diagnosticFields(lifecycle) {
+  if (!lifecycle?.diagnosticId) return "";
+  const file2 = `%LOCALAPPDATA%\\FoundryDot\\diagnostic-${lifecycle.diagnosticId}.json`;
+  return `<p>Last activation diagnostic: <code>${escaped(lifecycle.diagnosticId)}</code>. Code: <code>${escaped(lifecycle.hostFailureCode ?? lifecycle.reason)}</code>${lifecycle.failurePhase ? `. Failure phase: <code>${escaped(lifecycle.failurePhase)}</code>` : ""}.</p>${lifecycle.diagnosticStorage === "saved" ? `<p>Saved local diagnostic: <code>${escaped(file2)}</code>. Paste this path into File Explorer to find the report.</p>` : "<p>The diagnostic could not be saved. No diagnostic file was confirmed. Keep the reference ID for local troubleshooting.</p>"}`;
+}
+async function loadingStatus(dialog, read) {
+  let cancelled = false, finished = false, progressWindow;
+  const progress = dialog.wait({
+    window: { title: "Loading tunnel configuration" },
+    content: '<p role="status">Checking the companion connection, installed tool and private configuration. Please wait while local checks complete.</p><p>Save and Activate become available only after status verification. No configuration is being changed and no tunnel will start.</p>',
+    buttons: [{ action: "close", label: "Close", callback: () => {
+      cancelled = true;
+      return "close";
+    } }],
+    rejectClose: false,
+    close: () => {
+      if (!finished) cancelled = true;
+    },
+    render: (_event, instance) => {
+      progressWindow = instance;
+      if (finished) void instance.close().catch(() => void 0);
+    }
+  });
+  void progress.then(() => {
+    if (!finished) cancelled = true;
+  }, () => {
+    cancelled = true;
+  });
+  let value;
+  try {
+    value = await read(() => cancelled);
+  } catch (error62) {
+    if (!cancelled) throw error62;
+  } finally {
+    finished = true;
+    await progressWindow?.close();
+    await progress.catch(() => void 0);
+  }
+  return cancelled ? void 0 : value;
+}
+async function runDotTunnelSetup(client) {
+  if (!game.user?.isGM || game.user.name?.toLowerCase() === "tv") return;
+  const dialog = globalThis.foundry?.applications?.api?.DialogV2;
+  if (!dialog) {
+    ui.notifications.notify("Tunnel setup requires Foundry's DialogV2. Ask the operator to check the supported Foundry version.", "error");
+    return;
+  }
+  try {
+    let configurationUnavailable = false;
+    let configurationError = "";
+    const readConfiguration = async () => {
+      if (!client.configuration) return;
+      try {
+        const value = await client.configuration.request({ action: "status" });
+        configurationUnavailable = false;
+        configurationError = "";
+        return value;
+      } catch (error62) {
+        configurationUnavailable = true;
+        configurationError = error62 instanceof TunnelConfigurationRequestError ? error62.message : "Private configuration is unavailable. Refresh status after checking the GM connection.";
+        return;
+      }
+    };
+    const readStatus = () => loadingStatus(dialog, async (cancelled) => {
+      const status2 = await client.request("status");
+      if (cancelled()) return;
+      const configuration2 = await readConfiguration();
+      if (cancelled()) return;
+      return { status: status2, configuration: configuration2 };
+    });
+    const loaded = await readStatus();
+    if (!loaded || !game.user?.isGM) return;
+    let { status, configuration } = loaded;
+    while (game.user?.isGM) {
+      let form;
+      const choices = [
+        ...configuration ? [
+          { action: "save", label: "Save configuration", disabled: configuration.lifecycle?.canStop === true },
+          { action: "activate", label: "Activate", disabled: configuration.lifecycle?.canActivate !== true },
+          { action: "stop", label: "Stop", disabled: configuration.lifecycle?.canStop !== true }
+        ] : [],
+        { action: "status", label: "Refresh status" },
+        ...status.phase !== "unsupported" ? [status.enabled ? { action: "disable", label: "Disable downloads" } : { action: "enable", label: "Enable downloads for this session" }] : [],
+        ...status.enabled && !["unsupported", "installed", "installing"].includes(status.phase) ? [{ action: "install", label: "Install required version" }] : [],
+        ...status.enabled && status.rollbackAvailable ? [{ action: "rollback", label: "Restore verified prior version" }] : [],
+        { action: "close", label: "Close" }
+      ];
+      const action = await closedDialog(dialog, {
+        window: { title: configuration ? "Foundry tunnel configuration" : "Foundry tunnel tool setup" },
+        content: `${configuration ? configurationFields(configuration) : ""}${configurationUnavailable ? `<p role="alert">Private configuration is unavailable. ${escaped(configurationError)} Save is unavailable until status verification succeeds.</p>` : ""}<p>Required tool: ${escaped(status.requiredVersion)} (${escaped(status.platform)})</p><p>Installed: ${escaped(status.installedVersion ?? "None")}</p>${status.retainedVersion ? `<p>Retained: ${escaped(status.retainedVersion)}. ${status.rollbackAvailable ? "Verified rollback available." : "Rollback needs a reviewed manifest in an app update."}</p>` : ""}${status.restartNeeded ? "<p>Restart an existing tunnel through the supported launcher to use the selected version.</p>" : ""}<p>${escaped(status.message)}</p>${configuration ? `<p>${escaped(configuration.lifecycle?.message ?? "Activation status is unavailable. Refresh status.")}</p><p>Process: ${escaped(configuration.lifecycle?.phase ?? "inactive")}. Local health: ${configuration.lifecycle?.healthy === null || configuration.lifecycle?.healthy === void 0 ? "Unknown" : configuration.lifecycle.healthy ? "Healthy" : "Unhealthy"}. Local readiness: ${configuration.lifecycle?.ready === null || configuration.lifecycle?.ready === void 0 ? "Unknown" : configuration.lifecycle.ready ? "Ready" : "Not ready"}.</p><p>Local readiness does not confirm a ChatGPT connection or event delivery.</p>${diagnosticFields(configuration.lifecycle)}` : "<p>Tunnel access, credentials and activation are separate steps.</p>"}`,
+        render: (_event, instance) => {
+          form = instance.element;
+        },
+        close: () => {
+          const key = form?.querySelector('[name="dot-runtime-key"]');
+          if (key) key.value = "";
+        },
+        buttons: choices.map((choice) => ({ ...choice, callback: () => choice.action === "save" && form && configuration ? takeConfigurationInput(form, configuration.controller) : choice.action })),
+        rejectClose: false
+      });
+      if (action && typeof action === "object" && action.action === "save" && client.configuration) {
+        const input2 = action;
+        try {
+          if (input2.rotateRuntimeKey) {
+            const confirmed = await closedDialog(dialog, { window: { title: "Replace tunnel runtime key" }, content: "<p>Replace the saved OpenAI tunnel runtime key with the new value you entered? No tunnel will be started.</p>", buttons: [{ action: "confirm", label: "Replace key", callback: () => true }, { action: "cancel", label: "Cancel", callback: () => false }], rejectClose: false });
+            if (confirmed !== true) continue;
+          }
+          let progressWindow, finished = false;
+          const progress = dialog.wait({ window: { title: "Saving private tunnel configuration" }, content: "<p>Verifying private Windows permissions and saving configuration. This may take up to six minutes. The runtime key has been cleared from the form.</p><p>Do not submit another key while this save is pending. No tunnel will start.</p>", buttons: [{ action: "hide", label: "Hide progress", type: "button" }], rejectClose: false, render: (_event, instance) => {
+            progressWindow = instance;
+            if (finished) void instance.close();
+          } });
+          void progress.catch(() => void 0);
+          try {
+            configuration = await client.configuration.request(input2);
+          } finally {
+            finished = true;
+            await progressWindow?.close();
+          }
+          await progress;
+          if (!configuration.configured || !configuration.runtimeKeyConfigured || !configuration.bridgeKeyConfigured) throw new TunnelConfigurationRequestError("Save did not confirm all required private files. Refresh status before entering another key.");
+          ui.notifications.notify("Runtime key and tunnel configuration saved privately. Activation requires a separate confirmation.", "info");
+        } catch (error62) {
+          configuration = void 0;
+          configurationUnavailable = true;
+          configurationError = error62 instanceof TunnelConfigurationRequestError ? error62.message : "Save did not confirm completion. Refresh status before entering another key; an interrupted save requires local review.";
+          ui.notifications.notify(configurationError, "warning");
+        } finally {
+          delete input2.runtimeKey;
+        }
+        continue;
+      }
+      if ((action === "activate" || action === "stop") && configuration && client.configuration) {
+        const permitted = action === "activate" ? configuration.lifecycle?.canActivate : configuration.lifecycle?.canStop;
+        if (!permitted) continue;
+        const confirmed = await closedDialog(dialog, {
+          window: { title: action === "activate" ? "Activate Foundry tunnel" : "Stop Foundry tunnel" },
+          content: action === "activate" ? "<p>Start the official client in the existing visible Foundry console using the saved private profile? This connects the configured dot MCP endpoint to OpenAI. The current GM, scene, dot mode, pinned tools and security guards will be checked again.</p>" : "<p>Revoke the dot endpoint, cancel pending responses and stop the tunnel process owned by this session? Retained events remain paused for the same controller.</p>",
+          buttons: [{ action: "confirm", label: action === "activate" ? "Activate" : "Stop", callback: () => true }, { action: "cancel", label: "Cancel", callback: () => false }],
+          rejectClose: false
+        });
+        if (confirmed !== true) continue;
+        ui.notifications.notify(action === "activate" ? "Checking prerequisites and starting the visible tunnel host. Please wait." : "Revoking the endpoint and stopping the owned tunnel. Please wait.", "info");
+        try {
+          configuration = await client.configuration.request({ action, confirmed: true, expectedController: { ...configuration.controller } });
+          ui.notifications.notify(configuration.lifecycle?.message ?? "Refresh status to verify the result.", configuration.lifecycle?.phase === "failed" ? "warning" : "info");
+        } catch (error62) {
+          configuration = void 0;
+          configurationUnavailable = true;
+          configurationError = error62 instanceof TunnelConfigurationRequestError ? error62.message : "Lifecycle result is uncertain. Refresh status before retrying.";
+          ui.notifications.notify(configurationError, "warning");
+        }
+        continue;
+      }
+      if (!["status", "enable", "disable", "install", "rollback"].includes(String(action))) break;
+      if (action === "install" || action === "rollback") {
+        const confirmed = await closedDialog(dialog, { window: { title: action === "rollback" ? "Restore verified prior tunnel tool" : "Install required tunnel tool" }, content: action === "rollback" ? `<p>Restore verified ${escaped(status.retainedVersion)}? Restart an existing tunnel through the supported launcher afterward.</p>` : `<p>Download and verify official OpenAI ${escaped(status.requiredVersion)} for ${escaped(status.platform)}? The complete tool bundle will be stored with Foundry. It will not start a tunnel.</p>`, buttons: [{ action: "confirm", label: action === "rollback" ? "Restore" : "Install", callback: () => true }, { action: "cancel", label: "Cancel", callback: () => false }], rejectClose: false });
+        if (confirmed !== true) continue;
+        ui.notifications.notify(action === "rollback" ? "Verifying and restoring the retained tunnel tool." : "Downloading and verifying the tunnel tool.", "info");
+      }
+      if (action === "install" || action === "rollback") {
+        let progressWindow, finished = false;
+        const progress = dialog.wait({ window: { title: "Foundry tunnel tool setup \u2014 working" }, content: "<p>Installation is in progress. The companion is downloading and verifying the selected bundle. No additional installation is needed while this request is pending.</p><p>Hide this window to continue using Foundry; the result will appear when the request finishes.</p>", buttons: [{ action: "hide", label: "Hide progress", type: "button" }], rejectClose: false, render: (_event, instance) => {
+          progressWindow = instance;
+          if (finished) void instance.close();
+        } });
+        void progress.catch(() => void 0);
+        try {
+          status = await client.request(action);
+        } finally {
+          finished = true;
+          await progressWindow?.close();
+        }
+        await progress;
+      } else if (action === "status") {
+        const refreshed = await readStatus();
+        if (!refreshed) break;
+        ({ status, configuration } = refreshed);
+      } else {
+        status = await client.request(action);
+        configuration = await readConfiguration();
+      }
+    }
+  } catch {
+    ui.notifications.notify("Tunnel status could not be verified. Check the local GM companion connection, then reopen tunnel configuration.", "error");
+  }
+}
+function registerDotTunnelSetupButton(getClient) {
+  Hooks.on("renderSettings", (_app, html) => {
+    if (!game.user?.isGM || game.user.name?.toLowerCase() === "tv") return;
+    const root = html instanceof HTMLElement ? html : html?.[0];
+    if (!root || root.querySelector("[data-foundry-dot-tunnel-setup]")) return;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.dataset.foundryDotTunnelSetup = "true";
+    button.textContent = "Tunnel configuration";
+    button.addEventListener("click", () => {
+      const client = getClient();
+      if (client) void showDotTunnelSetup(client);
+      else ui.notifications.notify("Foundry companion is not connected. Reconnect the GM browser first.", "warning");
+    });
+    (root.querySelector(".settings-list") ?? root).append(button);
+  });
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/prepared-scene-guard.ts
+function record2(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value) ? value : void 0;
+}
+function preparationId(source) {
+  const flags = record2(source?.["flags"]);
+  return record2(flags?.["foundry-ai-dungeon-master"])?.["preparationId"];
+}
+function validatePreparedScene(context) {
+  const value = record2(context), input2 = record2(value?.["input"]);
+  const guard = record2(input2?.["preparationGuard"]);
+  const sceneId = guard?.["sceneId"], id3 = guard?.["preparationId"];
+  if (typeof sceneId !== "string" || !/^[A-Za-z0-9_-]{1,128}$/.test(sceneId) || typeof id3 !== "string" || !/^[a-f0-9]{64}$/.test(id3)) throw new Error("Invalid preparation guard");
+  const family = input2?.["family"], operation = input2?.["operation"];
+  if (typeof family !== "string" || family !== "scenes" && !family.startsWith("scene-")) throw new Error("Preparation guard requires scene document");
+  if ((input2?.["parentId"] ?? input2?.["targetId"]) !== sceneId) throw new Error("Preparation scene scope mismatch");
+  const data = record2(value?.["data"]) ?? {};
+  if (family === "scenes" && operation === "create") {
+    const ownership = record2(data["ownership"]);
+    if (data["active"] !== false || data["navigation"] !== false || ownership?.["default"] !== 0 || preparationId(data) !== id3) throw new Error("Preparation scene must remain inactive");
+  } else {
+    const source = record2(value?.["source"]);
+    if (source?.["active"] !== false || preparationId(source) !== id3) throw new Error("Preparation scene changed or became active");
+    if (family === "scenes" && (data["active"] === true || data["navigation"] === true)) throw new Error("Preparation cannot activate scene");
+  }
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/dot-runtime.ts
+var MODULE_ID6 = "foundry-ai-dungeon-master";
+var API_MODULE_ID = "foundry-local-api";
+function modules() {
+  return game.modules;
+}
+function availableBridge() {
+  const module = modules()?.get(API_MODULE_ID);
+  const api = module?.api?.["bridge"];
+  if (module?.active === false || api?.version !== 1) return;
+  if ([api.identity, api.registerCommand, api.registerDocumentGuard, api.sendEvent, api.sendPrivate, api.onMessage, api.onStatus, api.onPump].some((fn) => typeof fn !== "function")) return;
+  return api;
+}
+function browserStorage() {
+  try {
+    return typeof localStorage === "undefined" ? void 0 : localStorage;
+  } catch {
+    return;
+  }
+}
+function createDotRuntime(api, storage = browserStorage()) {
+  const identity = api.identity();
+  if (identity.lane !== "gm" || !game.user?.isGM || game.user.name?.toLowerCase() === "tv" || identity.userId !== game.user.id) throw new Error("AI DM requires the current GM bridge.");
+  const authority = () => {
+    const current = api.identity();
+    return current.connected && current.lane === "gm" && current.clientId === identity.clientId && current.userId === identity.userId && game.user?.id === identity.userId && game.user.isGM && game.user.name?.toLowerCase() !== "tv";
+  };
+  const world = () => {
+    const id3 = game.world?.id;
+    if (!id3) throw new Error("Current Foundry world unavailable.");
+    return id3;
+  };
+  const dot = new DotBridge(identity.clientId, identity.userId, storage, { ...foundryDotNative, authority: (binding) => authority() && foundryDotNative.authority(binding) }, (name, payload) => api.sendEvent(name, payload));
+  const configuration = new TunnelConfigurationClient(identity.clientId, authority, world, (payload) => api.sendPrivate(payload));
+  const setup = new DotTunnelSetupClient(identity.clientId, authority, () => api.identity().connected, world, (name, payload) => api.sendEvent(name, payload), configuration);
+  const disposers = [];
+  const requestBinding = () => {
+    try {
+      if (authority() && game.settings.get(MODULE_ID6, "dmEventMode") === "dot" && game.settings.get(MODULE_ID6, "automaticEventsEnabled") === true) dot.requestBinding();
+      else dot.unbind();
+    } catch {
+      dot.unbind();
+    }
+  };
+  const setupScope = () => {
+    const sceneId = canvas?.scene?.id;
+    if (!authority() || !sceneId) throw new Error("Current GM scene unavailable.");
+    return { worldId: world(), sceneId, clientId: identity.clientId, userId: identity.userId };
+  };
+  try {
+    disposers.push(api.registerDocumentGuard("preparation", validatePreparedScene));
+    disposers.push(...registerDotCommands(dot, (type, handler) => api.registerCommand(type, handler)));
+    disposers.push(api.registerCommand("dotSetupScope", setupScope));
+    disposers.push(api.registerCommand("dotSetupReadiness", () => ({ controller: setupScope(), automaticEventsEnabled: game.settings.get(MODULE_ID6, "automaticEventsEnabled") === true, dmEventMode: game.settings.get(MODULE_ID6, "dmEventMode") })));
+    disposers.push(api.onMessage((payload) => configuration.receive(payload) || setup.receive(payload) || dot.receive(payload)));
+    disposers.push(api.onStatus((status) => {
+      dot.setConnected(status === "connected" && authority());
+      if (status !== "connected") {
+        setup.disconnected();
+        configuration.disconnected();
+      }
+      requestBinding();
+    }));
+    disposers.push(api.onPump(() => dot.pump()));
+    dot.setConnected(identity.connected);
+    requestBinding();
+  } catch {
+    for (const dispose of disposers.reverse()) dispose();
+    dot.setConnected(false);
+    dot.unbind();
+    throw new Error("AI DM bridge extension could not initialize.");
+  }
+  return { dot, setup, requestBinding, dispose() {
+    for (const dispose of disposers.reverse()) dispose();
+    dot.setConnected(false);
+    dot.unbind();
+    setup.disconnected();
+    configuration.disconnected();
+  } };
+}
+function registerDotRuntime() {
+  let attached;
+  let runtime;
+  const attach = () => {
+    const api = availableBridge();
+    if (api === attached) return;
+    runtime?.dispose();
+    runtime = void 0;
+    attached = void 0;
+    const module = modules()?.get(MODULE_ID6);
+    if (module?.api) {
+      delete module.api["dot"];
+      delete module.api["dotTunnelSetup"];
+    }
+    if (!api) return;
+    try {
+      runtime = createDotRuntime(api);
+      attached = api;
+      if (module) module.api = { ...module.api, dot: runtime.dot, dotTunnelSetup: { show: () => showDotTunnelSetup(runtime.setup), status: () => runtime.setup.request("status") } };
+    } catch {
+    }
+  };
+  registerDotTunnelSetupButton(() => runtime?.setup);
+  Hooks.on("foundry-local-api.bridgeReady", attach);
+  Hooks.on("ready", () => queueMicrotask(attach));
+  Hooks.on("canvasReady", () => runtime?.requestBinding());
+  Hooks.on("updateSetting", (setting) => {
+    const key = setting?.key;
+    if (key === `${MODULE_ID6}.dmEventMode` || key === `${MODULE_ID6}.automaticEventsEnabled`) runtime?.requestBinding();
+  });
+}
+
+// Data/Data/modules/foundry-ai-dungeon-master/module/src/index.ts
+var MODULE_ID7 = "foundry-ai-dungeon-master";
 Hooks.once("init", () => {
-  game.settings.register(MODULE_ID3, "serverUrl", {
+  game.settings.register(MODULE_ID7, "serverUrl", {
     name: "AI Dungeon Master server URL",
     hint: "Loopback WebSocket URL for the local AI Dungeon Master server.",
     scope: "client",
     config: true,
     type: String,
-    default: "ws://127.0.0.1:3940/ws"
+    default: "ws://127.0.0.1:3940/ws",
+    onChange: () => AiDungeonMasterApplication.settingsChanged("serverUrl")
   });
-  game.settings.register(MODULE_ID3, "chatKitDomainKey", {
+  game.settings.register(MODULE_ID7, "chatKitDomainKey", {
     name: "ChatKit domain key",
     hint: "Public ChatKit domain key registered for this Foundry browser origin.",
     scope: "world",
     config: true,
     type: String,
     default: "",
-    restricted: true
+    restricted: true,
+    onChange: () => AiDungeonMasterApplication.settingsChanged("chatKitDomainKey")
   });
-  game.settings.register(MODULE_ID3, "automaticEventsEnabled", {
+  game.settings.register(MODULE_ID7, "latencyDiagnosticsEnabled", {
+    name: "AI Dungeon Master developer diagnostics",
+    hint: "Show metadata-only latency export in the account menu. Disabled by default.",
+    scope: "client",
+    config: true,
+    type: Boolean,
+    default: false,
+    onChange: () => AiDungeonMasterApplication.settingsChanged("latencyDiagnosticsEnabled")
+  });
+  game.settings.register(MODULE_ID7, "automaticEventsEnabled", {
     name: "Enable AI Dungeon Master automatic events",
     hint: "Enable door-open, combat-turn and explicitly keyed area entry signals. Raw movement does not trigger turns.",
     scope: "world",
     config: true,
     type: Boolean,
     default: false,
-    restricted: true
+    restricted: true,
+    onChange: () => cancelAutomaticEventLifecycle()
   });
-  game.settings.register(MODULE_ID3, "allowAllPlayerRequests", {
+  game.settings.register(MODULE_ID7, "dmEventMode", {
+    name: "AI Dungeon Master automatic event controller",
+    hint: "Embedded uses the local AI Dungeon Master. Dot uses a verified local-api controller binding for completed combat turns.",
+    scope: "world",
+    config: true,
+    type: String,
+    choices: { embedded: "Embedded", dot: "Dot" },
+    default: "embedded",
+    restricted: true,
+    onChange: () => cancelAutomaticEventLifecycle()
+  });
+  registerTunnelConfigurationMenu();
+  registerDotRuntime();
+  game.settings.register(MODULE_ID7, "allowAllPlayerRequests", {
     name: "Automatically approve all player AI requests",
     hint: "When enabled, player prompts run automatically under the connected GM's authority.",
     scope: "world",
@@ -21556,7 +24805,7 @@ Hooks.once("init", () => {
     default: false,
     restricted: true
   });
-  game.keybindings.register(MODULE_ID3, "open", {
+  game.keybindings.register(MODULE_ID7, "open", {
     name: "Open AI Dungeon Master",
     hint: "Open the AI Dungeon Master window.",
     editable: [{ key: "KeyD", modifiers: ["Control", "Shift"] }],
@@ -21566,16 +24815,24 @@ Hooks.once("init", () => {
     },
     restricted: false
   });
-  registerAiDungeonMasterHooks();
+  registerAiDungeonMasterHooks(createDotHookIntegration());
 });
 Hooks.once("ready", () => {
   aiDmController.connect();
   const module = game.modules?.get(
-    MODULE_ID3
+    MODULE_ID7
   );
   if (module)
     module.api = {
+      ...module.api,
+      build: Object.freeze({
+        policy: "core-actions-v1",
+        bundleIdentity: "core-actions-v1",
+        compactPanel: "prompt3-v1",
+        scope: "Loaded module marker; compare server startup artifact hashes separately"
+      }),
       open: () => AiDungeonMasterApplication.open(),
       trigger: (request) => AiDungeonMasterApplication.open().trigger(request)
     };
 });
+//# sourceMappingURL=index.js.map

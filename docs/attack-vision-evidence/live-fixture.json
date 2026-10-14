@@ -1,0 +1,78 @@
+{
+  "testRunId": "test-ai-attack-vision-1790913702048",
+  "worldId": "izzy-campaign",
+  "userId": "X7X4KK7zca5U2Ics",
+  "playerUserId": "4Nv47EuKFy06C6eO",
+  "original": {
+    "sceneId": "Nbj38PEdvw1zX1J9",
+    "paused": true,
+    "activeCombatIds": []
+  },
+  "created": [
+    {
+      "documentType": "Scene",
+      "id": "xj5praphJhGr6mxL"
+    },
+    {
+      "documentType": "Actor",
+      "id": "7Omg3czrr0z94iw4"
+    },
+    {
+      "documentType": "Actor",
+      "id": "uwyaFQurD4uFZCKC"
+    },
+    {
+      "documentType": "Item",
+      "id": "v6aPlCpfDEZdyhvB",
+      "parentType": "Actor",
+      "parentId": "7Omg3czrr0z94iw4"
+    },
+    {
+      "documentType": "Token",
+      "id": "4Jgz4kpyTaMpkdHn",
+      "parentType": "Scene",
+      "parentId": "xj5praphJhGr6mxL"
+    },
+    {
+      "documentType": "Token",
+      "id": "z2oFZhuQdL4GQ793",
+      "parentType": "Scene",
+      "parentId": "xj5praphJhGr6mxL"
+    },
+    {
+      "documentType": "Wall",
+      "id": "7mTvvfJbstrQB1Ty",
+      "parentType": "Scene",
+      "parentId": "xj5praphJhGr6mxL"
+    },
+    {
+      "documentType": "Wall",
+      "id": "Axtn1UK6lEYcRz5d",
+      "parentType": "Scene",
+      "parentId": "xj5praphJhGr6mxL"
+    },
+    {
+      "documentType": "Wall",
+      "id": "sQVAfoJBWII7jgR7",
+      "parentType": "Scene",
+      "parentId": "xj5praphJhGr6mxL"
+    },
+    {
+      "documentType": "AmbientLight",
+      "id": "Lo5u5V20A5G4d5YP",
+      "parentType": "Scene",
+      "parentId": "xj5praphJhGr6mxL"
+    }
+  ],
+  "setupComplete": true,
+  "sceneId": "xj5praphJhGr6mxL",
+  "actorId": "7Omg3czrr0z94iw4",
+  "targetActorId": "uwyaFQurD4uFZCKC",
+  "activityId": "AttackFixture001",
+  "itemId": "v6aPlCpfDEZdyhvB",
+  "tokenId": "4Jgz4kpyTaMpkdHn",
+  "targetTokenId": "z2oFZhuQdL4GQ793",
+  "doorId": "Axtn1UK6lEYcRz5d",
+  "lightId": "Lo5u5V20A5G4d5YP",
+  "restoredAt": "2026-10-02T04:25:25.854Z"
+}

@@ -1,0 +1,42 @@
+{
+  "capturedAt": "2026-10-02T04:25:47.506Z",
+  "boundary": "Read-only authenticated SDK; no model or mutation",
+  "worldId": "izzy-campaign",
+  "userId": "X7X4KK7zca5U2Ics",
+  "mode": "inspect",
+  "scene": {
+    "id": "xj5praphJhGr6mxL",
+    "active": false,
+    "tokenVision": true,
+    "darkness": 0,
+    "globalLight": true,
+    "fogMode": 1
+  },
+  "tokens": [
+    {
+      "id": "4Jgz4kpyTaMpkdHn",
+      "actorId": "7Omg3czrr0z94iw4",
+      "x": 300,
+      "y": 400,
+      "elevation": 0
+    },
+    {
+      "id": "z2oFZhuQdL4GQ793",
+      "actorId": "uwyaFQurD4uFZCKC",
+      "x": 700,
+      "y": 400,
+      "elevation": 0
+    }
+  ],
+  "door": [
+    {
+      "id": "Axtn1UK6lEYcRz5d",
+      "ds": 0
+    }
+  ],
+  "hp": {
+    "value": 40,
+    "temp": 4,
+    "max": 40
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "capturedAt": "2026-10-02T18:46:38.2815525Z",
+  "diskHashes": [
+    {
+      "path": "chatkit-server/app.py",
+      "sha256": "92b930877dc9251548c40d4fa4b3d3692318f69c0ed02e2c39f4f5831d52b107"
+    },
+    {
+      "path": "module/src/ai-dungeon-master/transport.ts",
+      "sha256": "a185e731cffc8951fbe5356f4e0e3c5f14c5c8973388cc5ffe0cd1966cb5ea8e"
+    },
+    {
+      "path": "module/dist/index.js",
+      "sha256": "6cb97728a2142a129787df76d754cbafbd52782acf0c3275556828ae37989701"
+    },
+    {
+      "path": "scripts/export-latency-traces.mjs",
+      "sha256": "85e3ffaed57cab18a2fdebdd1454e1e65e7d177bd4bdd68ea0bcccce9c924fc5"
+    }
+  ],
+  "loadedAi": {
+    "policy": "core-actions-v1",
+    "startedAt": "2026-10-02T18:17:49.426Z",
+    "manifestDigest": "a26545417ee625073502dfe9ff0ff40fae386baafd34782cf417acbf878d3a29",
+    "artifactHashes": {
+      "server/dist/latency-trace.js": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4",
+      "server/dist/context/world-campaign.js": "afdc426077bee1fbec3b38ed4c99a80114f4929042c954b73376272cf00b1890",
+      "server/dist/index.js": "71e03f00d4fcc4a9523f9e87d0a174457e91d9260690fb821230cbe35be3a867",
+      "server/dist/app.js": "5c4eab30a36dd8dbb8c2dd7343b5a390ebeb2fb47ee72d487bd6777474ff5c61",
+      "server/dist/chatkit/gateway.js": "dc018717717c920b2f42a5311d271baa55d5bba53981e8fba3765c05d746991d",
+      "server/dist/chatkit/read-tools.js": "3611b285cfe5de0a91a0c7d665e3ddf982f7aaca1e81a659cc8ab93605d3c6f9",
+      "server/dist/chatkit/catalog-tools.js": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+      "server/dist/chatkit/pause-actions.js": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+      "server/dist/chatkit/core-actions.js": "6e9b23d025e0609788e0f801f7f26a5019c090e3cb33b9168e0daff63c8d6730",
+      "server/dist/chatkit/attack-actions.js": "3c4476145b65ca6b70f4843267df8a098e1f98f0bb95164449a8e2ca4554f6a6",
+      "server/dist/chatkit/session-actions.js": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614",
+      "server/dist/chatkit/pause-request.js": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+      "server/dist/chatkit/routine-completion.js": "027f7ce0304f2625fc30934af49b65ff2390d9a9e163657ab00bacab529eee0a",
+      "server/dist/chatkit/tool-audit.js": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+      "server/dist/chatkit/world-request.js": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+      "server/dist/chatkit/world-document-actions.js": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+      "server/dist/chatkit/world-tool-policy.js": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+      "server/dist/chatkit/world-file-actions.js": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+      "server/dist/chatkit/world-files.js": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+      "server/dist/chatkit/native-actions.js": "ab0e3316363c7800c0f5a83e043eb1a66ac480ff2478326e34e456574c8f539e",
+      "server/dist/chatkit/campaign-actions.js": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+      "server/dist/chatkit/turns.js": "fa0f853ae27d672bd875a7ae2eaa95c7142a31ee794444687dcc338a8c4ec929",
+      "server/dist/chatkit/bounded-call.js": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+      "server/dist/tool-catalog/runtime.js": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+      "server/dist/tool-catalog/catalog.js": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+      "server/dist/tool-catalog/canonical.js": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+      "server/dist/tool-catalog/foundry-local-api-adapter.js": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+      "shared/dist/ai-dungeon-master.js": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+      "shared/dist/chatkit.js": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+      "chatkit-server/app.py": "bc706d4928d25c28105ec149a9427de7abaf393abd2503755fea07eca9b8f747",
+      "chatkit-server/dm_prompt.py": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2",
+      "module/dist/index.js": "2d07a0f4c40e739d26f9739af51f91886d0b752ac0691122e02eb54081453cd1"
+    },
+    "scope": "startup artifacts; verify Python health and browser module separately"
+  },
+  "loadedPython": {
+    "status": "ready",
+    "protocol": "openai-chatkit",
+    "promptVersion": "solo-dm-v8-core-actions",
+    "promptDigest": "becbafcadb3c69b6352e0e71df60901c1869839f44bd6c721cd7d373293eea13",
+    "codeDigest": "bc706d4928d25c28105ec149a9427de7abaf393abd2503755fea07eca9b8f747",
+    "maxModelTurns": 1,
+    "latencyDiagnostics": {
+      "writes": 56,
+      "dropped": 0,
+      "writeDurationMs": 150.11320012854412,
+      "maxWriteDurationMs": 6.558599998243153
+    }
+  },
+  "compiledRenewalMessagePresent": true,
+  "compiledExpiredNoActionMessagePresent": true,
+  "scopeIdSourcePresent": true,
+  "scopeIdExporterPresent": true,
+  "limits": "New source/disk identity only; prepared benchmark manifest describes older instrumentation build. Runtime/client has not been refreshed or restarted."
+}

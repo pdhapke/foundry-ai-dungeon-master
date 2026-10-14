@@ -1,0 +1,58 @@
+[
+  {
+    "path": "chatkit-server/test_prompt.py",
+    "status": "changed"
+  },
+  {
+    "path": "server/src/build-identity.ts",
+    "status": "changed"
+  },
+  {
+    "path": "server/src/chatkit/pause-actions.ts",
+    "status": "changed"
+  },
+  {
+    "path": "chatkit-server/app.py",
+    "status": "changed"
+  },
+  {
+    "path": "chatkit-server/dm_prompt.py",
+    "status": "changed"
+  },
+  {
+    "path": "chatkit-server/test_app.py",
+    "status": "changed"
+  },
+  {
+    "path": "module/dist/index.js",
+    "status": "changed"
+  },
+  {
+    "path": "module/src/ai-dungeon-master/application.ts",
+    "status": "changed"
+  },
+  {
+    "path": "module/src/ai-dungeon-master/hooks.ts",
+    "status": "changed"
+  },
+  {
+    "path": "module/src/index.ts",
+    "status": "changed"
+  },
+  {
+    "path": "server/src/chatkit/gateway.ts",
+    "status": "changed"
+  },
+  {
+    "path": "server/src/chatkit/native-actions.ts",
+    "status": "changed"
+  },
+  {
+    "path": "server/src/chatkit/read-tools.ts",
+    "status": "changed"
+  },
+  {
+    "path": "server/src/context/world-campaign.ts",
+    "status": "changed"
+  }
+]

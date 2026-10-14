@@ -5,8 +5,10 @@ declare const Hooks: {
 };
 
 declare const game: {
-  user: { id: string; isGM: boolean; name?: string };
+  user: { id: string; isGM: boolean; name?: string; active?: boolean };
   world?: { id?: string };
+  paused?: boolean;
+  collections: Map<string, { get(id: string): { toObject(): Record<string, unknown> } | undefined }>;
   socket: {
     emit(
       event: string,
@@ -39,8 +41,11 @@ declare const ui: {
     info(message: string): void;
     warn(message: string): void;
     error(message: string): void;
+    notify(message: string, type?: "info" | "warning" | "error"): void;
   };
 };
+
+declare const CONFIG: Record<string, { documentClass?: { create(data: Record<string, unknown>, options: { keepId: true }): Promise<{ toObject(): Record<string, unknown> } | undefined> } } | undefined>;
 
 declare const foundry: {
   applications: {

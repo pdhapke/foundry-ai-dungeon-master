@@ -133,6 +133,7 @@ export const CHATKIT_READ_TOOL_METADATA: readonly ToolMetadataOverlay[] = [
   ["foundry_get_world", "Read active world"],
   ["foundry_get_system", "Read active rules system"],
   ["foundry_list_combats", "Read active combat state"],
+  ["foundry_get_token_visibility", "Read selected opted-in player perception"],
 ].map(([toolId, displayName]) => ({
   toolId: toolId!,
   displayName: displayName!,

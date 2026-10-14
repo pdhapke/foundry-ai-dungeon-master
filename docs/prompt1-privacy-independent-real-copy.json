@@ -1,0 +1,16 @@
+{
+  "sourceFilesVerified": 168,
+  "totalBytes": 1112446,
+  "mismatches": 0,
+  "reviewAndPublishedRevisionMatch": true,
+  "manifestRevision": "5a240800d4ffb364b332ca505e0e7f2fd447990362a44dc26423f7eb920d64c7",
+  "lockAbsent": true,
+  "transactionAbsent": true,
+  "originalPublicCopiesRemain": true,
+  "scope": "Copy candidate only; no runtime cutover or source deletion",
+  "inferenceRequests": 0,
+  "copiedTreeFiles": 169,
+  "unexpectedFiles": 0,
+  "redirectEntries": 0,
+  "exactManifestFileSet": true
+}

@@ -1,12 +1,28 @@
 import assert from "node:assert/strict";
 import { it } from "node:test";
 import { DatabaseSync } from "node:sqlite";
+import { createHash } from "node:crypto";
 import { ChatKitTurns } from "./turns.js";
 import type { AiDmAuthenticatedIdentity } from "@foundry-ai-dungeon-master/shared";
 const gm = { worldId: "world", userId: "gm", isGm: true } as AiDmAuthenticatedIdentity;
 const body = (id: string) => ({
   type: "threads.custom_action",
   params: { thread_id: "thread", action: { payload: { requestId: id } } },
+});
+void it("bounded automatic observation hashes deduplicate across GM clients and reject scope or hash tampering", async () => {
+  const db = new DatabaseSync(":memory:");
+  const q = new ChatKitTurns(db);
+  const automatic = { kind: "area", worldId: "world", sceneId: "scene", documentId: "token", tokenId: "token", regionId: "region", key: "room", revision: 1, transition: "move" };
+  const id = "area-" + createHash("sha256").update(JSON.stringify([automatic.kind, automatic.worldId, automatic.sceneId, automatic.documentId, automatic.tokenId, automatic.regionId, automatic.key, automatic.revision, automatic.transition])).digest("hex");
+  const observation = { type: "threads.custom_action", params: { thread_id: "thread", action: { payload: { requestId: id, automatic } } } };
+  const signal = new AbortController().signal;
+  const finish = await q.enter(gm, observation, signal);
+  finish!();
+  await assert.rejects(q.enter({ ...gm, userId: "second-gm" }, observation, signal), /already recorded/);
+  await assert.rejects(q.enter({ ...gm, worldId: "other" }, observation, signal));
+  await assert.rejects(q.enter(gm, { ...observation, params: { ...observation.params, action: { payload: { requestId: id, automatic: { ...automatic, key: "tampered" } } } } }, signal));
+  await assert.rejects(q.enter({ ...gm, isGm: false }, observation, signal));
+  db.close();
 });
 void it("serializes prompts/custom actions across clients, persists replay and recovers interrupted states (real SQLite)", async () => {
   const db = new DatabaseSync(":memory:");

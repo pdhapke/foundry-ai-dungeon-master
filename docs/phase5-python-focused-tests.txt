@@ -1,0 +1,5 @@
+Executing <Task finished name='Task-7' coro=<PlayerPerceptionTests.test_typed_player_read_preserves_explicit_unavailable_and_never_queries_gm_fallback() done, defined at C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\chatkit-server\test_player_perception.py:9> result=None created at C:\Users\peter\scoop\apps\python\current\Lib\asyncio\runners.py:100> took 0.218 seconds
+----------------------------------------------------------------------
+Ran 2 tests in 0.312s
+
+OK

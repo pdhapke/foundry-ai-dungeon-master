@@ -8,9 +8,13 @@ import { AiDmTransport } from "./transport.js";
 
 export interface AiDmControllerTransport {
   connect(): void;
+  disconnect?(): void;
   send(command: Parameters<AiDmTransport["send"]>[0]): boolean;
   beginChatGptSignIn(): boolean;
   chatKitHeaders?(): Record<string, string>;
+  openStatusPanel?(): void;
+  closeStatusPanel?(): void;
+  refreshChatGptStatus?(): boolean;
 }
 
 export class AiDmController {
@@ -23,6 +27,11 @@ export class AiDmController {
   }
 
   connect(): void {
+    this.transport.connect();
+  }
+
+  reconnect(): void {
+    this.transport.disconnect?.();
     this.transport.connect();
   }
 
@@ -77,11 +86,15 @@ export class AiDmController {
   }
 
   refreshChatGptStatus(): boolean {
+    if (this.transport.refreshChatGptStatus) return this.transport.refreshChatGptStatus();
     return this.transport.send({
       type: "aiDm.chatgpt.status",
       payload: { requestId: crypto.randomUUID() },
     });
   }
+
+  openStatusPanel(): void { this.transport.openStatusPanel?.(); }
+  closeStatusPanel(): void { this.transport.closeStatusPanel?.(); }
 
   signOutChatGpt(): boolean {
     return this.transport.send({

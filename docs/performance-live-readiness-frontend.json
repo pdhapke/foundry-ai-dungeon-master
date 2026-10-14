@@ -1,0 +1,6 @@
+{
+  "servedSha256": "ebe84c462ff650a2ef71dadb14464aef674b4e7120563660459b5ead778a3e64",
+  "expectedSha256": "ebe84c462ff650a2ef71dadb14464aef674b4e7120563660459b5ead778a3e64",
+  "match": true,
+  "scope": "DOM script source plus freshly served bytes; browser cached execution bytes not directly hashed"
+}

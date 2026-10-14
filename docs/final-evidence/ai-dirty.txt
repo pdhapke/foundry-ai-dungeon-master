@@ -1,0 +1,76 @@
+ M README.md
+ M chatkit-server/app.py
+ M chatkit-server/dm_prompt.py
+ M chatkit-server/test_app.py
+ M docs/configuration.md
+ M docs/phase3-campaign-context.md
+ M module/dist/index.js
+ M module/src/ai-dungeon-master/application.test.ts
+ M module/src/ai-dungeon-master/application.ts
+ M module/src/ai-dungeon-master/automatic-triggers.test.ts
+ M module/src/ai-dungeon-master/automatic-triggers.ts
+ M module/src/ai-dungeon-master/hooks.ts
+ M module/src/index.ts
+ M module/styles/ai-dungeon-master.css
+ M module/templates/ai-dungeon-master/application.hbs
+ M server/src/chatkit/gateway.ts
+ M server/src/chatkit/read-tools.test.ts
+ M server/src/chatkit/read-tools.ts
+ M server/src/chatkit/turns.test.ts
+ M server/src/chatkit/turns.ts
+ M server/src/context/campaign-source.ts
+ M server/src/context/world-campaign.test.ts
+ M server/src/context/world-campaign.ts
+ M server/src/index.ts
+ M server/src/tool-catalog/runtime.ts
+ M shared/src/chatkit.ts
+?? chatkit-server/discovery_contract_probe.py
+?? chatkit-server/test_automatic_actions.py
+?? chatkit-server/test_campaign_tools.py
+?? chatkit-server/test_discovery_tools.py
+?? chatkit-server/test_prompt.py
+?? docs/baseline-evidence/
+?? docs/final-evidence/
+?? docs/solo-dm-acceptance-summary.md
+?? docs/solo-dm-baseline.md
+?? docs/solo-dm-campaign-authoring-plan.md
+?? docs/solo-dm-catalog-plan.md
+?? docs/solo-dm-contract-plan.md
+?? docs/solo-dm-ledger.md
+?? docs/solo-dm-live-acceptance.md
+?? docs/solo-dm-panel-revalidation.md
+?? docs/solo-dm-panel-validation.md
+?? docs/solo-dm-panel.md
+?? docs/solo-dm-phase0-validation.md
+?? docs/solo-dm-phase1-validation.md
+?? docs/solo-dm-phase2-validation.md
+?? docs/solo-dm-phase2.md
+?? docs/solo-dm-phase3-validation.md
+?? docs/solo-dm-phase3.md
+?? docs/solo-dm-phase4-validation.md
+?? docs/solo-dm-phase4.md
+?? docs/solo-dm-phase5-validation.md
+?? docs/solo-dm-privacy-validation.md
+?? docs/solo-dm-privacy.md
+?? docs/solo-dm-prompt-validation.md
+?? docs/solo-dm-prompt.md
+?? docs/solo-dm-python-campaign.md
+?? docs/solo-dm-python-triggers.md
+?? docs/solo-dm-storage.md
+?? docs/solo-dm-triggers-plan.md
+?? docs/solo-dm-triggers.md
+?? module/src/ai-dungeon-master/application-cancellation.test.ts
+?? module/src/ai-dungeon-master/application.panel-revalidation.test.ts
+?? module/src/ai-dungeon-master/application.validation.test.ts
+?? module/src/ai-dungeon-master/campaign-review.test.ts
+?? module/src/ai-dungeon-master/campaign-review.ts
+?? module/src/ai-dungeon-master/hooks.test.ts
+?? server/src/chatkit/campaign-actions.test.ts
+?? server/src/chatkit/campaign-actions.ts
+?? server/src/chatkit/campaign-actions.validation.test.ts
+?? server/src/chatkit/catalog-tools.test.ts
+?? server/src/chatkit/catalog-tools.ts
+?? server/src/context/campaign-storage.test.ts
+?? server/src/context/campaign-storage.ts
+?? server/src/context/campaign-storage.validation.test.ts
+?? server/src/context/world-campaign.validation.test.ts

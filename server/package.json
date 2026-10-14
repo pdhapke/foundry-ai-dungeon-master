@@ -8,7 +8,7 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "start": "node dist/index.js",
-    "test": "node --import tsx --test --test-concurrency=4 \"src/**/*.test.ts\"",
+    "test": "node --import tsx --import ../scripts/test-events-core-register.mjs --test --test-concurrency=4 \"src/**/*.test.ts\"",
     "generate:docs": "tsx src/scripts/generate-docs.ts"
   },
   "dependencies": {

@@ -1,0 +1,20 @@
+
+> foundry-ai-dungeon-master@0.1.0 build
+> npm run build --workspaces --if-present
+
+
+> @foundry-ai-dungeon-master/shared@0.1.0 build
+> tsc -p tsconfig.json
+
+
+> @foundry-ai-dungeon-master/server@0.1.0 build
+> tsc -p tsconfig.json
+
+
+> @foundry-ai-dungeon-master/module@0.1.0 build
+> esbuild src/index.ts --bundle --format=esm --outfile=dist/index.js
+
+
+  dist\index.js  834.4kb
+
+Done in 47ms

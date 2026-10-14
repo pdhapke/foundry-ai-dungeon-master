@@ -1,0 +1,161 @@
+ D packs/actors24/000068.log
+ M packs/actors24/CURRENT
+ M packs/actors24/LOG
+ M packs/actors24/LOG.old
+ D packs/actors24/MANIFEST-000067
+ D packs/backgrounds/000063.log
+ M packs/backgrounds/CURRENT
+ M packs/backgrounds/LOG
+ M packs/backgrounds/LOG.old
+ D packs/backgrounds/MANIFEST-000062
+ D packs/classes/000063.log
+ M packs/classes/CURRENT
+ M packs/classes/LOG
+ M packs/classes/LOG.old
+ D packs/classes/MANIFEST-000062
+ D packs/classes24/000063.log
+ M packs/classes24/CURRENT
+ M packs/classes24/LOG
+ M packs/classes24/LOG.old
+ D packs/classes24/MANIFEST-000062
+ D packs/classfeatures/000063.log
+ M packs/classfeatures/CURRENT
+ M packs/classfeatures/LOG
+ M packs/classfeatures/LOG.old
+ D packs/classfeatures/MANIFEST-000062
+ D packs/content24/000064.log
+ M packs/content24/CURRENT
+ M packs/content24/LOG
+ M packs/content24/LOG.old
+ D packs/content24/MANIFEST-000063
+ D packs/effects/000063.log
+ M packs/effects/CURRENT
+ M packs/effects/LOG
+ M packs/effects/LOG.old
+ D packs/effects/MANIFEST-000062
+ D packs/equipment24/000064.log
+ M packs/equipment24/CURRENT
+ M packs/equipment24/LOG
+ M packs/equipment24/LOG.old
+ D packs/equipment24/MANIFEST-000063
+ D packs/feats24/000063.log
+ M packs/feats24/CURRENT
+ M packs/feats24/LOG
+ M packs/feats24/LOG.old
+ D packs/feats24/MANIFEST-000062
+ D packs/heroes/000063.log
+ M packs/heroes/CURRENT
+ M packs/heroes/LOG
+ M packs/heroes/LOG.old
+ D packs/heroes/MANIFEST-000062
+ D packs/items/000067.log
+ M packs/items/CURRENT
+ M packs/items/LOG
+ M packs/items/LOG.old
+ D packs/items/MANIFEST-000066
+ D packs/monsterfeatures/000063.log
+ M packs/monsterfeatures/CURRENT
+ M packs/monsterfeatures/LOG
+ M packs/monsterfeatures/LOG.old
+ D packs/monsterfeatures/MANIFEST-000062
+ D packs/monsterfeatures24/000063.log
+ M packs/monsterfeatures24/CURRENT
+ M packs/monsterfeatures24/LOG
+ M packs/monsterfeatures24/LOG.old
+ D packs/monsterfeatures24/MANIFEST-000062
+ D packs/monsters/000063.log
+ M packs/monsters/CURRENT
+ M packs/monsters/LOG
+ M packs/monsters/LOG.old
+ D packs/monsters/MANIFEST-000062
+ D packs/origins24/000063.log
+ M packs/origins24/CURRENT
+ M packs/origins24/LOG
+ M packs/origins24/LOG.old
+ D packs/origins24/MANIFEST-000062
+ D packs/races/000063.log
+ M packs/races/CURRENT
+ M packs/races/LOG
+ M packs/races/LOG.old
+ D packs/races/MANIFEST-000062
+ D packs/rules/000063.log
+ M packs/rules/CURRENT
+ M packs/rules/LOG
+ M packs/rules/LOG.old
+ D packs/rules/MANIFEST-000062
+ D packs/spells/000063.log
+ M packs/spells/CURRENT
+ M packs/spells/LOG
+ M packs/spells/LOG.old
+ D packs/spells/MANIFEST-000062
+ D packs/spells24/000063.log
+ M packs/spells24/CURRENT
+ M packs/spells24/LOG
+ M packs/spells24/LOG.old
+ D packs/spells24/MANIFEST-000062
+ D packs/subclasses/000063.log
+ M packs/subclasses/CURRENT
+ M packs/subclasses/LOG
+ M packs/subclasses/LOG.old
+ D packs/subclasses/MANIFEST-000062
+ D packs/tables/000063.log
+ M packs/tables/CURRENT
+ M packs/tables/LOG
+ M packs/tables/LOG.old
+ D packs/tables/MANIFEST-000062
+ D packs/tables24/000064.log
+ M packs/tables24/CURRENT
+ M packs/tables24/LOG
+ M packs/tables24/LOG.old
+ D packs/tables24/MANIFEST-000063
+ D packs/tradegoods/000063.log
+ M packs/tradegoods/CURRENT
+ M packs/tradegoods/LOG
+ M packs/tradegoods/LOG.old
+ D packs/tradegoods/MANIFEST-000062
+?? packs/actors24/000092.log
+?? packs/actors24/MANIFEST-000091
+?? packs/backgrounds/000087.log
+?? packs/backgrounds/MANIFEST-000086
+?? packs/classes/000087.log
+?? packs/classes/MANIFEST-000086
+?? packs/classes24/000087.log
+?? packs/classes24/MANIFEST-000086
+?? packs/classfeatures/000087.log
+?? packs/classfeatures/MANIFEST-000086
+?? packs/content24/000088.log
+?? packs/content24/MANIFEST-000087
+?? packs/effects/000087.log
+?? packs/effects/MANIFEST-000086
+?? packs/equipment24/000088.log
+?? packs/equipment24/MANIFEST-000087
+?? packs/feats24/000087.log
+?? packs/feats24/MANIFEST-000086
+?? packs/heroes/000087.log
+?? packs/heroes/MANIFEST-000086
+?? packs/items/000091.log
+?? packs/items/MANIFEST-000090
+?? packs/monsterfeatures/000087.log
+?? packs/monsterfeatures/MANIFEST-000086
+?? packs/monsterfeatures24/000087.log
+?? packs/monsterfeatures24/MANIFEST-000086
+?? packs/monsters/000087.log
+?? packs/monsters/MANIFEST-000086
+?? packs/origins24/000087.log
+?? packs/origins24/MANIFEST-000086
+?? packs/races/000087.log
+?? packs/races/MANIFEST-000086
+?? packs/rules/000087.log
+?? packs/rules/MANIFEST-000086
+?? packs/spells/000087.log
+?? packs/spells/MANIFEST-000086
+?? packs/spells24/000087.log
+?? packs/spells24/MANIFEST-000086
+?? packs/subclasses/000087.log
+?? packs/subclasses/MANIFEST-000086
+?? packs/tables/000087.log
+?? packs/tables/MANIFEST-000086
+?? packs/tables24/000088.log
+?? packs/tables24/MANIFEST-000087
+?? packs/tradegoods/000087.log
+?? packs/tradegoods/MANIFEST-000086

@@ -14,6 +14,18 @@ export interface AiDmChatKitTrigger {
   prompt: string;
   context?: AiDmChatKitContext;
   requestId?: string;
+  /** Authenticated GM observation hints; never filesystem/game execution authority. */
+  automatic?: {
+    kind: "area" | "door" | "turn";
+    worldId: string;
+    sceneId: string;
+    documentId: string;
+    revision: number;
+    transition: string;
+    tokenId?: string;
+    regionId?: string;
+    key?: string;
+  };
 }
 
 export const AI_DM_CHATKIT_HEADERS = {
@@ -43,4 +55,14 @@ export function supportedChatKitOperation(value: unknown): value is string {
     typeof value === "string" &&
     (CHATKIT_INFERENCE_OPERATIONS.includes(value) || CHATKIT_STORAGE_OPERATIONS.includes(value))
   );
+}
+
+/** A historical confirmed observation, not a claim about current world state. */
+export interface AiDmMutationBoundaryAcknowledgement {
+  version: 1;
+  mutationCapability: "permanently-revoked";
+  receiptDigest: string;
+  stateRevision: string;
+  stateRevisionKind: "receipt-state-digest";
+  scope: "confirmed-receipt-observation; may be superseded";
 }

@@ -1,0 +1,181 @@
+{
+  "capturedAt": "2026-10-02T01:11:50.8540338Z",
+  "node": {
+    "status": "ready",
+    "module": "foundry-ai-dungeon-master",
+    "version": "0.1.0",
+    "details": {
+      "processLive": true,
+      "foundryDependencyConfigured": true,
+      "foundryDependencyReady": true,
+      "localAuthenticationReady": true,
+      "chatGptPlanAuthorizationPresent": true,
+      "openAiApiKeyFallbackConfigured": false,
+      "signingKeyPersistent": true
+    },
+    "chatkit": {
+      "requests": 0,
+      "stage": "idle",
+      "errorCode": null,
+      "upstreamStatus": null
+    },
+    "build": {
+      "policy": "core-actions-v1",
+      "startedAt": "2026-10-02T01:10:45.006Z",
+      "manifestDigest": "5db4d3263a1bd5a3b5d8c2e1b51fcf9cd5b07c6c8d71035b589becf58afe79f7",
+      "artifactHashes": {
+        "server/dist/index.js": "c5d1b61057ba830f4a16c419a692f70f6037e35c250815a7dfedcf7f705a86db",
+        "server/dist/app.js": "c5f7909ec4cc2c6035cdf9c1260ed99f1b9f49fbaadfdfab208678480f74d353",
+        "server/dist/chatkit/gateway.js": "3557533fbc333326aebc9a9631a61d553bd2fa4591f9db1b1af73ad7c0c33a46",
+        "server/dist/chatkit/read-tools.js": "99aaeab9133ceceee9c0db0e7d6ec84c980eeeb0f29b91fa1fb09a376299f1fe",
+        "server/dist/chatkit/catalog-tools.js": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+        "server/dist/chatkit/pause-actions.js": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+        "server/dist/chatkit/core-actions.js": "3f76a839180d4f184483959801369d778c3aa83d6cd6296b3c01eb2981c34f5e",
+        "server/dist/chatkit/session-actions.js": "eaf6e76451b9445030748d6df3f1ae2902c2acf3056491b6eb4cc537a643afdf",
+        "server/dist/chatkit/pause-request.js": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+        "server/dist/chatkit/tool-audit.js": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+        "server/dist/chatkit/world-request.js": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+        "server/dist/chatkit/world-document-actions.js": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+        "server/dist/chatkit/world-tool-policy.js": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+        "server/dist/chatkit/world-file-actions.js": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+        "server/dist/chatkit/world-files.js": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+        "server/dist/chatkit/native-actions.js": "0be5406d920dcd021dbf27038abde5be47dca528a724f57b728340287b0396a7",
+        "server/dist/chatkit/campaign-actions.js": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+        "server/dist/chatkit/turns.js": "fa0f853ae27d672bd875a7ae2eaa95c7142a31ee794444687dcc338a8c4ec929",
+        "server/dist/chatkit/bounded-call.js": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+        "server/dist/tool-catalog/runtime.js": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+        "server/dist/tool-catalog/catalog.js": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+        "server/dist/tool-catalog/canonical.js": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+        "server/dist/tool-catalog/foundry-local-api-adapter.js": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+        "shared/dist/ai-dungeon-master.js": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+        "shared/dist/chatkit.js": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+        "chatkit-server/app.py": "17a68fa11c6886a3e6f4ff638b54095dd0af7a808badba01235799199c600bae",
+        "chatkit-server/dm_prompt.py": "d5022b19e092ff49670d7c14ad95be80e1db3941c6a385ea6d6f88f9ead4113a",
+        "module/dist/index.js": "766771f4960f162746b21da7d178499a9eb395393a861b5c2fded3453a60a21b"
+      },
+      "scope": "startup artifacts; verify Python health and browser module separately"
+    }
+  },
+  "python": {
+    "status": "ready",
+    "protocol": "openai-chatkit",
+    "promptVersion": "solo-dm-v8-core-actions",
+    "promptDigest": "68b4c2d0c5eaecbb1270ffd984c6169ef65307652df699d53846fd1efc95f134",
+    "codeDigest": "17a68fa11c6886a3e6f4ff638b54095dd0af7a808badba01235799199c600bae"
+  },
+  "pythonCodeMatches": true,
+  "nodeArtifacts": [
+    {
+      "path": "server/dist/index.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/app.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/gateway.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/read-tools.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/catalog-tools.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/pause-actions.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/core-actions.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/session-actions.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/pause-request.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/tool-audit.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-request.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-document-actions.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-tool-policy.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-file-actions.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/world-files.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/native-actions.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/campaign-actions.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/turns.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/chatkit/bounded-call.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/tool-catalog/runtime.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/tool-catalog/catalog.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/tool-catalog/canonical.js",
+      "matches": true
+    },
+    {
+      "path": "server/dist/tool-catalog/foundry-local-api-adapter.js",
+      "matches": true
+    },
+    {
+      "path": "shared/dist/ai-dungeon-master.js",
+      "matches": true
+    },
+    {
+      "path": "shared/dist/chatkit.js",
+      "matches": true
+    },
+    {
+      "path": "chatkit-server/app.py",
+      "matches": true
+    },
+    {
+      "path": "chatkit-server/dm_prompt.py",
+      "matches": true
+    },
+    {
+      "path": "module/dist/index.js",
+      "matches": true
+    }
+  ]
+}

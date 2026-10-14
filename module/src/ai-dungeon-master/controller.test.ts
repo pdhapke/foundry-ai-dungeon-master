@@ -4,6 +4,16 @@ import { describe, it } from "node:test";
 import type { AiDmClientMessage } from "@foundry-ai-dungeon-master/shared";
 
 void describe("AI Dungeon Master model selection", () => {
+  void it("manual recovery disconnects then reconnects without sending inference", async () => {
+    Object.assign(globalThis, { window: { addEventListener: () => undefined } });
+    const [{ AiDmController }, { AiDmClientStore }] = await Promise.all([import("./controller.js"), import("./store.js")]);
+    const calls: string[] = [];
+    const controller = new AiDmController(new AiDmClientStore(), {
+      disconnect: () => { calls.push("disconnect"); }, connect: () => { calls.push("connect"); },
+      beginChatGptSignIn: () => false, send: () => { throw new Error("Recovery must not send inference"); },
+    });
+    controller.reconnect(); assert.deepEqual(calls, ["disconnect", "connect"]);
+  });
   void it("allows only an authenticated GM to select a server-advertised eligible model", async () => {
     Object.assign(globalThis, {
       window: { addEventListener: () => undefined },

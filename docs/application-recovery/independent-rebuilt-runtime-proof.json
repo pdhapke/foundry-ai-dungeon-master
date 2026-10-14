@@ -1,0 +1,10 @@
+{
+  "capturedAt": "2026-10-02T21:28:15.929Z",
+  "rebuiltApplicationEquivalent": true,
+  "baselineLength": 25217,
+  "rebuiltLength": 25217,
+  "firstDifference": 25217,
+  "baselineExcerpt": "),this.#e?.remove(),this.#e=null,this.#h=null,A.#i=null,await super.close(t)}};\n",
+  "rebuiltExcerpt": "),this.#e?.remove(),this.#e=null,this.#h=null,A.#i=null,await super.close(t)}};\n",
+  "scope": "Complete compiled application section helpers/constants/class; diagnostic naming wrappers and generated aliases normalized. No claim original TypeScript bytes recovered."
+}

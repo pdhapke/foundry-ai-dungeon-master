@@ -1,0 +1,14 @@
+# Fresh Prompt4 privacy source gate
+
+2026-10-03. Read-only production audit in the fresh resumed effort. Existing dirty implementation was preserved. No runtime mutations, model requests, service launches, settings changes or paid calls.
+
+Current production matches the completed narrow privacy design: `FoundryChatKit.action` uses the explicit `foundry.player-observation` lane, rejects historical GM items and audience changes, calls authenticated `player_surroundings` twice, compares native state/source revisions and approved facts, and persists only deterministic safe assistant text plus a separate audience-scoped record. It never invokes Runner or reconstructs GM tool history. `project_surroundings` requires exact world/scene/player/browser/token binding, typed active public decisions, opaque revision provenance and explicit unknown threat/being-noticed/trap/unobserved-area. Ordinary GM respond remains a private unrestricted lane with a weaker prose guarantee.
+
+Fresh independent checks (exit code 0):
+
+- `.venv/Scripts/python.exe -m unittest test_prompt4_privacy_independent test_player_observation_identity test_player_observation -v`: **27 passed**. Historical private tool pairs, injected auxiliary secrets/retrieval, malformed failures, reconnect/audience isolation, source/fact drift, no model/history path and loaded startup-digest snapshot covered. Test fixtures emitted SQLite ResourceWarnings; no failing assertions.
+- `node --import tsx --test src/chatkit/player-surroundings.test.ts src/chatkit/prompt4-terrain-contract.test.ts src/chatkit/narration-boundary.test.ts`: **31 passed**, 0 failed/skipped. Includes actual Python safe action/store through the authenticated offline adapter contract, exact client/consent/reconnect rejection, public-point projection, unknown obstruction refusal and delayed mutation revocation. Imported existing test modules cause repeated cases; count is runner output, not 31 unique behaviors.
+
+These are offline tests, not fresh browser/runtime acceptance. Latest existing `prompt4-final-acceptance.md` and `prompt4-terrain-final-independent-gate.md` supersede earlier privacy gates: the localized authored terrain sentence was already observed in the actual SDK frame and manually accepted. Its trace had two native reads and zero model requests. Do not treat earlier incomplete readiness-only or terrain-blocked checkpoints as current blockers.
+
+Remaining scope: automatic player enrollment renewal is an explicitly deferred sustained-readiness blocker; strict natural-model player narration, conditional reveals, threat noticing/being noticed/trap outcomes and broad modes/elevation/complex paths remain unsupported or untested. Safe deterministic localized projection needs no extra narrator call. No new repair is justified by this audit. No production files were modified.

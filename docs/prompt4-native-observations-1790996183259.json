@@ -1,0 +1,140 @@
+{
+  "worldId": "izzy-campaign",
+  "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "userId": "edtBL96Yu3058QAT",
+  "observations": [
+    {
+      "capturedAt": "2026-10-03T02:56:23.207Z",
+      "observation": {
+        "version": 1,
+        "id": "57989994-8d6a-403b-9db9-73dce7177e17",
+        "worldId": "izzy-campaign",
+        "sceneId": "5ZMNJbyeEtvowSHG",
+        "userId": "edtBL96Yu3058QAT",
+        "tokenId": "imz9nTiYm1axcS9H",
+        "actorId": "scbuCxyee0qCcsA6",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "isGM": false,
+        "optedIn": true,
+        "capturedAt": "2026-10-03T02:56:23.207Z",
+        "stateRevision": "aad381be1ba581ed0b4e4e8237f5259bfe822731b4be53b41a91a40d56fd6512",
+        "readiness": "ready",
+        "basis": "request-local-native-render-flags",
+        "pendingRenderFlags": 0
+      },
+      "sceneId": "5ZMNJbyeEtvowSHG",
+      "effectiveUserId": "edtBL96Yu3058QAT",
+      "tokenId": "imz9nTiYm1axcS9H",
+      "status": "incomplete",
+      "issues": [
+        {
+          "code": "QUERY_FAILED",
+          "message": "Visibility failure could not be attributed to a player-visible wall; range, fog or lighting may be responsible.",
+          "retryable": true,
+          "subjectId": "beyond-door"
+        }
+      ],
+      "context": {
+        "selectedUser": true,
+        "selectedToken": true,
+        "tokenOwned": true,
+        "sceneLoaded": true
+      },
+      "visible": {
+        "tokens": [
+          "imz9nTiYm1axcS9H"
+        ],
+        "notes": [],
+        "tiles": []
+      },
+      "redaction": {
+        "occludedEntities": true,
+        "hiddenRegions": true,
+        "barrierDocumentIds": true,
+        "barrierCoordinates": true,
+        "secretDoors": true,
+        "exitDestinations": true
+      },
+      "queryPoints": [
+        {
+          "id": "near-primary",
+          "visible": true,
+          "regions": [],
+          "blockerAttribution": "none",
+          "blockerKeys": []
+        },
+        {
+          "id": "beyond-door",
+          "visible": false,
+          "regions": [],
+          "blockerAttribution": "environment-ambiguous",
+          "blockerKeys": []
+        }
+      ],
+      "effectiveSources": {
+        "vision": 1,
+        "light": 1
+      },
+      "isolation": {
+        "status": "complete",
+        "method": "foundry-v14-detection-modes",
+        "detectionModes": 2,
+        "unrelatedVisionSourcesIgnored": 0,
+        "visionProvidingLightsIgnored": 0
+      },
+      "environment": {
+        "fog": "complete",
+        "lighting": "complete",
+        "darkness": "complete",
+        "vision": "complete",
+        "regions": "complete",
+        "fogExplorationEnabled": true,
+        "tokenVisionEnabled": true,
+        "globalLight": true,
+        "darknessLevel": 0
+      },
+      "regions": [],
+      "visibleBarriers": [],
+      "coveragePolygons": [
+        {
+          "source": "selected-token",
+          "points": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 600,
+              "y": 0
+            },
+            {
+              "x": 600,
+              "y": 800
+            },
+            {
+              "x": 0,
+              "y": 800
+            }
+          ]
+        }
+      ],
+      "fogRevision": "51a6c84a99cfab29470124e175d4c23f8b7dc792fc7279f4e1f055eff9717d7b",
+      "persistence": {
+        "beforeRevision": "aad381be1ba581ed0b4e4e8237f5259bfe822731b4be53b41a91a40d56fd6512",
+        "afterRevision": "aad381be1ba581ed0b4e4e8237f5259bfe822731b4be53b41a91a40d56fd6512",
+        "unchanged": true
+      },
+      "bounds": {
+        "truncated": false,
+        "visiblePerKind": 500,
+        "regions": 250,
+        "barriers": 500,
+        "coverageSources": 100,
+        "coveragePointsPerSource": 512,
+        "issues": 50
+      }
+    }
+  ],
+  "evidenceScope": "native MCP only; not authenticated AI adapter or browser observation",
+  "inferenceCalls": 0
+}

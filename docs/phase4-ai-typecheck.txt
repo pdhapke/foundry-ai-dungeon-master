@@ -1,0 +1,30 @@
+
+> @foundry-ai-dungeon-master/shared@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @foundry-ai-dungeon-master/server@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @foundry-ai-dungeon-master/module@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+src/ai-dungeon-master/application-cancellation.test.ts(69,11): error TS2339: Property 'AiDungeonMasterApplication' does not exist on type 'typeof import("C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application", { with: { "resolution-mode": "import" } })'.
+src/ai-dungeon-master/application.panel-revalidation.test.ts(63,11): error TS2339: Property 'AiDungeonMasterApplication' does not exist on type 'typeof import("C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application", { with: { "resolution-mode": "import" } })'.
+src/ai-dungeon-master/application.test.ts(92,11): error TS2339: Property 'AiDungeonMasterApplication' does not exist on type 'typeof import("C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application", { with: { "resolution-mode": "import" } })'.
+src/ai-dungeon-master/application.validation.test.ts(56,11): error TS2339: Property 'AiDungeonMasterApplication' does not exist on type 'typeof import("C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application", { with: { "resolution-mode": "import" } })'.
+src/ai-dungeon-master/hooks.test.ts(52,11): error TS2339: Property 'AiDungeonMasterApplication' does not exist on type 'typeof import("C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application", { with: { "resolution-mode": "import" } })'.
+src/ai-dungeon-master/hooks.ts(7,10): error TS2305: Module '"./application.js"' has no exported member 'AiDungeonMasterApplication'.
+src/ai-dungeon-master/hooks.ts(217,17): error TS7006: Parameter 'error' implicitly has an 'any' type.
+src/ai-dungeon-master/hooks.ts(394,80): error TS7006: Parameter 'error' implicitly has an 'any' type.
+src/ai-dungeon-master/hooks.ts(407,17): error TS7006: Parameter 'error' implicitly has an 'any' type.
+src/ai-dungeon-master/hooks.ts(418,15): error TS7006: Parameter 'error' implicitly has an 'any' type.
+src/index.ts(1,10): error TS2305: Module '"./ai-dungeon-master/application.js"' has no exported member 'AiDungeonMasterApplication'.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\module
+npm error workspace @foundry-ai-dungeon-master/module@0.1.0
+npm error location C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\module
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsc -p tsconfig.json --noEmit

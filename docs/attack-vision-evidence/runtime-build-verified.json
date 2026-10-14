@@ -1,0 +1,191 @@
+{
+  "capturedAt": "2026-10-02T04:20:55.0612417+00:00",
+  "gate": "PASS",
+  "node": {
+    "policy": "core-actions-v1",
+    "startedAt": "2026-10-02T04:18:10.775Z",
+    "manifestDigest": "0dc8ab9e4bea9b3a1c099f83452ea6bef061b5c55867e497ce790a93c3f0543a",
+    "artifactChecks": [
+      {
+        "path": "server/dist/index.js",
+        "expected": "0d4d081e9bea37f06cfdb5440231affbc88aad97fdebf393c32e74f74651982f",
+        "actual": "0d4d081e9bea37f06cfdb5440231affbc88aad97fdebf393c32e74f74651982f",
+        "matches": true
+      },
+      {
+        "path": "server/dist/app.js",
+        "expected": "c5f7909ec4cc2c6035cdf9c1260ed99f1b9f49fbaadfdfab208678480f74d353",
+        "actual": "c5f7909ec4cc2c6035cdf9c1260ed99f1b9f49fbaadfdfab208678480f74d353",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/gateway.js",
+        "expected": "e9fc8ac9a0e68ce44cb0968ba358bfaf634c06d0fb422a118f01f6fb78f7b7f4",
+        "actual": "e9fc8ac9a0e68ce44cb0968ba358bfaf634c06d0fb422a118f01f6fb78f7b7f4",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/read-tools.js",
+        "expected": "9891d3a2840feb40e70bf8e4b9f35fe2ad6a6e39bd4c17dfeeb911c014391339",
+        "actual": "9891d3a2840feb40e70bf8e4b9f35fe2ad6a6e39bd4c17dfeeb911c014391339",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/catalog-tools.js",
+        "expected": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+        "actual": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/pause-actions.js",
+        "expected": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+        "actual": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/core-actions.js",
+        "expected": "3f76a839180d4f184483959801369d778c3aa83d6cd6296b3c01eb2981c34f5e",
+        "actual": "3f76a839180d4f184483959801369d778c3aa83d6cd6296b3c01eb2981c34f5e",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/attack-actions.js",
+        "expected": "3c4476145b65ca6b70f4843267df8a098e1f98f0bb95164449a8e2ca4554f6a6",
+        "actual": "3c4476145b65ca6b70f4843267df8a098e1f98f0bb95164449a8e2ca4554f6a6",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/session-actions.js",
+        "expected": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614",
+        "actual": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/pause-request.js",
+        "expected": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+        "actual": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/tool-audit.js",
+        "expected": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+        "actual": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/world-request.js",
+        "expected": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+        "actual": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/world-document-actions.js",
+        "expected": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+        "actual": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/world-tool-policy.js",
+        "expected": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+        "actual": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/world-file-actions.js",
+        "expected": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+        "actual": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/world-files.js",
+        "expected": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+        "actual": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/native-actions.js",
+        "expected": "ab0e3316363c7800c0f5a83e043eb1a66ac480ff2478326e34e456574c8f539e",
+        "actual": "ab0e3316363c7800c0f5a83e043eb1a66ac480ff2478326e34e456574c8f539e",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/campaign-actions.js",
+        "expected": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+        "actual": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/turns.js",
+        "expected": "fa0f853ae27d672bd875a7ae2eaa95c7142a31ee794444687dcc338a8c4ec929",
+        "actual": "fa0f853ae27d672bd875a7ae2eaa95c7142a31ee794444687dcc338a8c4ec929",
+        "matches": true
+      },
+      {
+        "path": "server/dist/chatkit/bounded-call.js",
+        "expected": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+        "actual": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+        "matches": true
+      },
+      {
+        "path": "server/dist/tool-catalog/runtime.js",
+        "expected": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+        "actual": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+        "matches": true
+      },
+      {
+        "path": "server/dist/tool-catalog/catalog.js",
+        "expected": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+        "actual": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+        "matches": true
+      },
+      {
+        "path": "server/dist/tool-catalog/canonical.js",
+        "expected": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+        "actual": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+        "matches": true
+      },
+      {
+        "path": "server/dist/tool-catalog/foundry-local-api-adapter.js",
+        "expected": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+        "actual": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+        "matches": true
+      },
+      {
+        "path": "shared/dist/ai-dungeon-master.js",
+        "expected": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+        "actual": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+        "matches": true
+      },
+      {
+        "path": "shared/dist/chatkit.js",
+        "expected": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+        "actual": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+        "matches": true
+      },
+      {
+        "path": "chatkit-server/app.py",
+        "expected": "ebec816ea7725c1f906d1830933e014c40f68fee1b4656dad49f96466cbe399d",
+        "actual": "ebec816ea7725c1f906d1830933e014c40f68fee1b4656dad49f96466cbe399d",
+        "matches": true
+      },
+      {
+        "path": "chatkit-server/dm_prompt.py",
+        "expected": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2",
+        "actual": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2",
+        "matches": true
+      },
+      {
+        "path": "module/dist/index.js",
+        "expected": "2ebe449bc2ddb3c92a3dbb1767e3956a1acb1daf6a75d64cde170640a4a3dfaa",
+        "actual": "2ebe449bc2ddb3c92a3dbb1767e3956a1acb1daf6a75d64cde170640a4a3dfaa",
+        "matches": true
+      }
+    ]
+  },
+  "python": {
+    "codeDigest": "ebec816ea7725c1f906d1830933e014c40f68fee1b4656dad49f96466cbe399d",
+    "promptDigest": "becbafcadb3c69b6352e0e71df60901c1869839f44bd6c721cd7d373293eea13",
+    "promptVersion": "solo-dm-v8-core-actions"
+  },
+  "limits": "Health startup identities only; browser module identity and native API marker checked separately."
+}

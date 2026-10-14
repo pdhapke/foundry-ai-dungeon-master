@@ -1,0 +1,9 @@
+# Normal per-response model request limit: 15
+
+User requested a higher normal allowance for longer combat requests. Python max_model_turns now defaults to15 with hard upper15 and lower1; explicit smaller approved-test caps remain honored. Malformed values use default15. The response loop still stops at the cap without automatic continuation/refresh. Durable confirmed tool exchanges and receipts, next-message conversation history/current state refresh, authorization, deduplication, bounded mechanics and safety stops remain unchanged.
+
+No model requests, provider changes, automatic-event changes, fixture changes or service lifecycle operations were performed. Temporary cap was previously removed on disk; the running service still requires a user-managed restart to load changed Python code and restore the new normal default15. Verify Python health maxModelTurns15 and codeDigest against prepared artifact hashes after restart, without inference.
+
+Offline validation: model-limit15-tests.log covers default/invalid/clamp/smaller caps, installed-SDK routine completion/durable continuity and attack sequences. Independent validation is separate. phase4-prepared-build.json recaptured disk artifacts only; prior Phase4 loaded identities/results are historical and remain in their evidence files. The previous Phase4 handoff's default8 restoration instruction is superseded by this user-requested normal15 change.
+
+Final gates PASS: root11 tests; independent installed-SDK endless fake-tool run stops at exactly15 model requests with no16th, plus default/bounds/invalid/small-cap and existing cap1 routine completion coverage. Independent logs phase4-independent-turn-limit-tests.log / phase4-independent-turn-limit-hard-sdk.log. Python app prepared SHA25607392bd21ba17d69a697b6349059567960cfb5939251f84d2775314d15935110. No provider calls occurred; manual loaded-version verification remains pending restart.

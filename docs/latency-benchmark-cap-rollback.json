@@ -1,0 +1,11 @@
+{
+  "setting": "AI_DM_CHATKIT_MAX_TURNS",
+  "previous": null,
+  "temporary": "1",
+  "restoreRequired": true,
+  "approvedEmbeddedPrompts": 6,
+  "approvedModelRequests": 6,
+  "providerRetries": 0,
+  "promptResubmissions": 0,
+  "provider": "existing ChatGPT plan only"
+}

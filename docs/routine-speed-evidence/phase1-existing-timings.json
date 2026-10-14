@@ -1,0 +1,233 @@
+{
+  "source": "C:\\dev\\FoundryVtt\\Data\\Data\\modules\\foundry-ai-dungeon-master\\docs\\core-rollout-evidence\\live-traces.json",
+  "sampleCount": 6,
+  "limitations": [
+    "Different commands: no median/tail or cold/warm claim.",
+    "Proxy first chunk does not establish browser rendering or confirmed receipt delivery.",
+    "Null means unmeasured; MCP acknowledgement includes bundled validation and confirmation."
+  ],
+  "samples": [
+    {
+      "traceId": "cc28879e-b2f5-4501-9c06-093cb6a485a3",
+      "correlationId": "aidm-81419043-9b72-47dd-b24b-b06768f00859",
+      "command": "foundry_set_pause_state",
+      "runTemperature": "unknown",
+      "source": "archived-live-observation",
+      "initialAuthorizationMs": 30,
+      "queueWaitMs": 6.2,
+      "contextPreparationMs": 337.3,
+      "contextOperationBreakdown": null,
+      "modelRequests": [
+        {
+          "request": 1,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 3057.5,
+          "firstExecutableToolMs": 3061.8
+        },
+        {
+          "request": 2,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 2077.8,
+          "firstExecutableToolMs": null
+        }
+      ],
+      "mcpExecutionAndAuthoritativeAckMs": 56.8,
+      "backendValidationMs": null,
+      "authoritativeReadbackMs": null,
+      "arrivalToConfirmedResultMs": 4515.4,
+      "arrivalToFirstProxyChunkMs": 900,
+      "confirmedResultDeliveredToBrowserMs": null,
+      "visibleBrowserUpdateMs": null,
+      "arrivalToAssistantStreamFinishedMs": 6602.9,
+      "arrivalToProxyFinishedMs": 6605,
+      "preparationOperations": []
+    },
+    {
+      "traceId": "f85e4257-e55f-4a96-b44f-eb608d51ce64",
+      "correlationId": "aidm-62df7f44-3691-459b-aa2c-64b4aaa270fe",
+      "command": "foundry_set_door_state",
+      "runTemperature": "unknown",
+      "source": "archived-live-observation",
+      "initialAuthorizationMs": 30,
+      "queueWaitMs": 6.1,
+      "contextPreparationMs": 214.5,
+      "contextOperationBreakdown": null,
+      "modelRequests": [
+        {
+          "request": 1,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 3017.7,
+          "firstExecutableToolMs": 3022.6
+        },
+        {
+          "request": 2,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 2219.3,
+          "firstExecutableToolMs": null
+        }
+      ],
+      "mcpExecutionAndAuthoritativeAckMs": 85.6,
+      "backendValidationMs": null,
+      "authoritativeReadbackMs": null,
+      "arrivalToConfirmedResultMs": 3709.2,
+      "arrivalToFirstProxyChunkMs": 237,
+      "confirmedResultDeliveredToBrowserMs": null,
+      "visibleBrowserUpdateMs": null,
+      "arrivalToAssistantStreamFinishedMs": 5936.7,
+      "arrivalToProxyFinishedMs": 5937,
+      "preparationOperations": []
+    },
+    {
+      "traceId": "69dead60-55ad-4de9-854b-a6beab54a609",
+      "correlationId": "aidm-a525582b-d051-498a-a9ce-244be640769b",
+      "command": "foundry_move_token",
+      "runTemperature": "unknown",
+      "source": "archived-live-observation",
+      "initialAuthorizationMs": 44,
+      "queueWaitMs": 7.3,
+      "contextPreparationMs": 135.1,
+      "contextOperationBreakdown": null,
+      "modelRequests": [
+        {
+          "request": 1,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 3011.6,
+          "firstExecutableToolMs": 3018.9
+        },
+        {
+          "request": 2,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 2166.9,
+          "firstExecutableToolMs": null
+        }
+      ],
+      "mcpExecutionAndAuthoritativeAckMs": 190.9,
+      "backendValidationMs": null,
+      "authoritativeReadbackMs": null,
+      "arrivalToConfirmedResultMs": 4335.6,
+      "arrivalToFirstProxyChunkMs": 812,
+      "confirmedResultDeliveredToBrowserMs": null,
+      "visibleBrowserUpdateMs": null,
+      "arrivalToAssistantStreamFinishedMs": 6511.3,
+      "arrivalToProxyFinishedMs": 6512,
+      "preparationOperations": []
+    },
+    {
+      "traceId": "870891a7-6da2-4c84-bb93-7e64e40dff0c",
+      "correlationId": "aidm-a391b286-fc91-47a6-af4b-7bf0d6d9777f",
+      "command": "foundry_roll_actor",
+      "runTemperature": "unknown",
+      "source": "archived-live-observation",
+      "initialAuthorizationMs": 29,
+      "queueWaitMs": 5.7,
+      "contextPreparationMs": 3042.8,
+      "contextOperationBreakdown": null,
+      "modelRequests": [
+        {
+          "request": 1,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 3185.2,
+          "firstExecutableToolMs": 3189
+        },
+        {
+          "request": 2,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 2297.3,
+          "firstExecutableToolMs": null
+        }
+      ],
+      "mcpExecutionAndAuthoritativeAckMs": 104.8,
+      "backendValidationMs": null,
+      "authoritativeReadbackMs": null,
+      "arrivalToConfirmedResultMs": 6746,
+      "arrivalToFirstProxyChunkMs": 196,
+      "confirmedResultDeliveredToBrowserMs": null,
+      "visibleBrowserUpdateMs": null,
+      "arrivalToAssistantStreamFinishedMs": 9053.6,
+      "arrivalToProxyFinishedMs": 9054,
+      "preparationOperations": []
+    },
+    {
+      "traceId": "72183abc-ee40-4d9a-9b27-b9d2b8acc7a2",
+      "correlationId": "aidm-2e388dab-d002-4acd-a1b8-d8cf71b4adde",
+      "command": "foundry_set_actor_hp",
+      "runTemperature": "unknown",
+      "source": "archived-live-observation",
+      "initialAuthorizationMs": 28,
+      "queueWaitMs": 5.3,
+      "contextPreparationMs": 1503.8,
+      "contextOperationBreakdown": null,
+      "modelRequests": [
+        {
+          "request": 1,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 3075.4,
+          "firstExecutableToolMs": 3080.4
+        },
+        {
+          "request": 2,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 2081,
+          "firstExecutableToolMs": null
+        }
+      ],
+      "mcpExecutionAndAuthoritativeAckMs": 105.1,
+      "backendValidationMs": null,
+      "authoritativeReadbackMs": null,
+      "arrivalToConfirmedResultMs": 5949.5,
+      "arrivalToFirstProxyChunkMs": 1019,
+      "confirmedResultDeliveredToBrowserMs": null,
+      "visibleBrowserUpdateMs": null,
+      "arrivalToAssistantStreamFinishedMs": 8041.2,
+      "arrivalToProxyFinishedMs": 8042,
+      "preparationOperations": []
+    },
+    {
+      "traceId": "88516371-7081-4e89-96e5-b503b1d31cc8",
+      "correlationId": "aidm-09837706-159e-4901-a9e7-c6a62106411f",
+      "command": "foundry_advance_combat_turn",
+      "runTemperature": "unknown",
+      "source": "archived-live-observation",
+      "initialAuthorizationMs": 24,
+      "queueWaitMs": 5.5,
+      "contextPreparationMs": 1994.6,
+      "contextOperationBreakdown": null,
+      "modelRequests": [
+        {
+          "request": 1,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 3023.5,
+          "firstExecutableToolMs": 3025.9
+        },
+        {
+          "request": 2,
+          "model": "gpt-5.6-sol",
+          "reasoning": "none",
+          "durationMs": 3711.7,
+          "firstExecutableToolMs": null
+        }
+      ],
+      "mcpExecutionAndAuthoritativeAckMs": 97.5,
+      "backendValidationMs": null,
+      "authoritativeReadbackMs": null,
+      "arrivalToConfirmedResultMs": 5526.3,
+      "arrivalToFirstProxyChunkMs": 112,
+      "confirmedResultDeliveredToBrowserMs": null,
+      "visibleBrowserUpdateMs": null,
+      "arrivalToAssistantStreamFinishedMs": 9249.5,
+      "arrivalToProxyFinishedMs": 9251,
+      "preparationOperations": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "capturedAt": "2026-10-02T04:22:34.981Z",
+  "gate": "PASS",
+  "schemaVersion": "core-actions-v1",
+  "movementPolicy": "native-constrained-walk-v1",
+  "fixtureSceneMatches": true,
+  "scope": "Actual authenticated native coreState bridge read; source marker, not browser rendering acceptance."
+}

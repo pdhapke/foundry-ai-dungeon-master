@@ -1,0 +1,23 @@
+{
+  "capturedAt": "2026-10-02T23:22:50.308Z",
+  "checks": {
+    "diskCapAbsent": true,
+    "artifactsUnchanged": true,
+    "loadedCap3": true,
+    "resourceRemoved": true,
+    "actorHp": true,
+    "targetHp": true,
+    "activeScene": true,
+    "pause": true,
+    "combats": true,
+    "positions": true,
+    "automatic": true,
+    "noPending": true,
+    "historicalAudit": true
+  },
+  "artifactCount": 45,
+  "pass": true,
+  "processAudit": "All validator script sessions exited; independent OS process attribution blocked by access denied. No processes stopped.",
+  "manualStep": "Disk cap restored; running cap3 until user manual restart",
+  "scope": "Read-only final restoration/config/hash audit; no inference/workflow calls"
+}

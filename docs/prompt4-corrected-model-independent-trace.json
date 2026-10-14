@@ -1,0 +1,1659 @@
+{
+  "traceId": "23dee24a-f780-4322-812e-f2e9a863055f",
+  "requests": [
+    1,
+    2
+  ],
+  "retryLimits": [
+    0,
+    0
+  ],
+  "privatePairComplete": true,
+  "safeThread": false,
+  "arguments": {
+    "scene_id": "Nbj38PEdvw1zX1J9",
+    "token_id": "5afpFlCHHnclifNw",
+    "effective_user_id": "edtBL96Yu3058QAT",
+    "client_id": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2"
+  },
+  "result": {
+    "sceneId": "Nbj38PEdvw1zX1J9",
+    "tokenId": "5afpFlCHHnclifNw",
+    "effectiveUserId": "edtBL96Yu3058QAT",
+    "status": "complete",
+    "issues": [],
+    "context": {
+      "selectedUser": true,
+      "selectedToken": true,
+      "tokenOwned": true,
+      "sceneLoaded": true
+    },
+    "redaction": {
+      "occludedEntities": true,
+      "hiddenRegions": true,
+      "barrierDocumentIds": true,
+      "barrierCoordinates": true,
+      "secretDoors": true,
+      "exitDestinations": true
+    },
+    "visible": {
+      "tokens": [
+        "5afpFlCHHnclifNw"
+      ],
+      "notes": [],
+      "tiles": []
+    },
+    "observation": {
+      "version": 1,
+      "id": "46dac40a-5889-4911-bb09-552235516af1",
+      "worldId": "izzy-campaign",
+      "sceneId": "Nbj38PEdvw1zX1J9",
+      "userId": "edtBL96Yu3058QAT",
+      "tokenId": "5afpFlCHHnclifNw",
+      "actorId": "P9YnTVjX8thvZ8eM",
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "isGM": false,
+      "optedIn": true,
+      "capturedAt": "2026-10-03T04:02:52.512Z",
+      "stateRevision": "3a2e3be41b17f01622eec03656111228b5895478721978322e7bff572ce82d3b",
+      "readiness": "ready",
+      "basis": "request-local-native-render-flags",
+      "pendingRenderFlags": 0
+    },
+    "isolation": {
+      "status": "complete",
+      "method": "foundry-v14-detection-modes",
+      "detectionModes": 2
+    },
+    "environment": {
+      "fog": "complete",
+      "lighting": "complete",
+      "darkness": "complete",
+      "vision": "complete",
+      "regions": "complete",
+      "fogExplorationEnabled": true,
+      "tokenVisionEnabled": true,
+      "globalLight": false,
+      "darknessLevel": 0.82
+    },
+    "persistence": {
+      "beforeRevision": "3a2e3be41b17f01622eec03656111228b5895478721978322e7bff572ce82d3b",
+      "afterRevision": "3a2e3be41b17f01622eec03656111228b5895478721978322e7bff572ce82d3b",
+      "unchanged": true
+    },
+    "fogRevision": "0bc03128b6a32d4502f9269b6fb11f4a8dc2f63960b453e4aa439c91ff35515d",
+    "bounds": {
+      "truncated": false
+    },
+    "knowledge": "selected-player-only; request-local observation, re-read after changes; no GM fallback"
+  },
+  "timings": [
+    {
+      "stage": "store-item-commit-complete",
+      "elapsedMs": 0
+    },
+    {
+      "stage": "python-response-start",
+      "elapsedMs": 0.09169999975711107
+    },
+    {
+      "stage": "context-prepared",
+      "elapsedMs": 1463.9860999886878,
+      "durationMs": 1463.9815999835264
+    },
+    {
+      "stage": "model-request",
+      "elapsedMs": 1772.8056999912951,
+      "request": 1
+    },
+    {
+      "stage": "model-stream-invocation",
+      "elapsedMs": 1774.8279999941587,
+      "request": 1
+    },
+    {
+      "stage": "model-first-event",
+      "elapsedMs": 4163.6795999947935
+    },
+    {
+      "stage": "model-provider-response",
+      "elapsedMs": 4165.637099999003
+    },
+    {
+      "stage": "model-provider-response",
+      "elapsedMs": 4187.3799999884795
+    },
+    {
+      "stage": "model-complete-arguments-event",
+      "elapsedMs": 7064.389500010293
+    },
+    {
+      "stage": "model-provider-response",
+      "elapsedMs": 7091.371199989226
+    },
+    {
+      "stage": "model-provider-request-id-unavailable",
+      "elapsedMs": 7094.82100000605
+    },
+    {
+      "stage": "model-response",
+      "elapsedMs": 7289.9288999906275,
+      "durationMs": 5517.166400008136,
+      "request": 1
+    },
+    {
+      "stage": "model-actionable-arguments",
+      "elapsedMs": 7296.315899991896,
+      "request": 1
+    },
+    {
+      "stage": "tool-start",
+      "elapsedMs": 7300.6638000078965,
+      "request": 1
+    },
+    {
+      "stage": "tool-result",
+      "elapsedMs": 7903.151999984402,
+      "durationMs": 602.4890999833588
+    },
+    {
+      "stage": "tool-exchange-persist-start",
+      "elapsedMs": 7911.95529999095
+    },
+    {
+      "stage": "store-item-commit-complete",
+      "elapsedMs": 7932.964300009189
+    },
+    {
+      "stage": "tool-exchange-persist-complete",
+      "elapsedMs": 7936.680099985097
+    },
+    {
+      "stage": "model-request",
+      "elapsedMs": 7945.126699982211,
+      "request": 2
+    },
+    {
+      "stage": "model-stream-invocation",
+      "elapsedMs": 7948.94070000737,
+      "request": 2
+    },
+    {
+      "stage": "model-first-event",
+      "elapsedMs": 9447.883499989985
+    },
+    {
+      "stage": "model-provider-response",
+      "elapsedMs": 9449.548700009473
+    },
+    {
+      "stage": "model-provider-response",
+      "elapsedMs": 9460.846000001766
+    },
+    {
+      "stage": "model-first-text-event",
+      "elapsedMs": 10768.74639999005
+    },
+    {
+      "stage": "first-stream-event",
+      "elapsedMs": 10774.223799991887,
+      "durationMs": 10774.21889998368
+    },
+    {
+      "stage": "store-item-commit-complete",
+      "elapsedMs": 11568.1585999846
+    },
+    {
+      "stage": "model-provider-response",
+      "elapsedMs": 11599.359799991362
+    },
+    {
+      "stage": "model-provider-request-id-unavailable",
+      "elapsedMs": 11606.4131000021
+    },
+    {
+      "stage": "model-response",
+      "elapsedMs": 11616.583499999251,
+      "durationMs": 3671.4740000024904,
+      "request": 2
+    },
+    {
+      "stage": "assistant-stream-finished",
+      "elapsedMs": 11634.256699995603,
+      "durationMs": 11634.250100003555
+    },
+    {
+      "stage": "final-response-finished",
+      "elapsedMs": 11795.391700000037
+    }
+  ],
+  "finalText": "Izzy sees only herself in deep darkness. No other creatures, notes, or visible features are confirmed.",
+  "postStateComparisons": {
+    "worldId": true,
+    "tokenMode": true,
+    "scene": true,
+    "actors": true,
+    "views": true,
+    "fog": true,
+    "pause": true,
+    "combats": true,
+    "scenes": true,
+    "automaticEvents": true,
+    "playerGeneration": true,
+    "gmGeneration": true
+  },
+  "nativeTraceStages": [
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:documentList:dispatch"
+    },
+    {
+      "stage": "bridge:system:dispatch"
+    },
+    {
+      "stage": "bridge:documentList:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:documentList:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:documentList:clock"
+    },
+    {
+      "stage": "native:documentList:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:system:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:system:clock"
+    },
+    {
+      "stage": "native:system:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_list_scenes",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_system",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:documentList:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:documentList:clock"
+    },
+    {
+      "stage": "native:documentList:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_list_combats",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:documentGet:dispatch"
+    },
+    {
+      "stage": "bridge:documentGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:documentGet:clock"
+    },
+    {
+      "stage": "native:documentGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_scene",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_capability_report",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:sceneVisibilityInspect:dispatch"
+    },
+    {
+      "stage": "bridge:sceneVisibilityInspect:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:sceneVisibilityInspect:clock"
+    },
+    {
+      "stage": "native:sceneVisibilityInspect:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_token_visibility",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_capability_report",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:world:dispatch"
+    },
+    {
+      "stage": "bridge:userGet:dispatch"
+    },
+    {
+      "stage": "bridge:userGetStatus:dispatch"
+    },
+    {
+      "stage": "bridge:world:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:world:clock"
+    },
+    {
+      "stage": "native:world:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGet:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGet:clock"
+    },
+    {
+      "stage": "native:userGet:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_world",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_by_id",
+      "outcome": "returned"
+    },
+    {
+      "stage": "bridge:userGetStatus:ack",
+      "outcome": "returned"
+    },
+    {
+      "stage": "native:userGetStatus:clock"
+    },
+    {
+      "stage": "native:userGetStatus:execution",
+      "outcome": "returned"
+    },
+    {
+      "stage": "mcp:foundry_get_user_status",
+      "outcome": "returned"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+import {open,call} from './phase4-live-client.mjs';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {resolve} from 'node:path';
+const record={capturedAt:new Date().toISOString(),inferenceRequests:0,services:{},clients:[],readiness:[],scope:'Fresh read-only identity check. Startup native hashes are historical, receiver markers are current. No fixture mutations.'};
+for(const [key,port,base] of [['ai',3940,process.cwd()],['mcp',3939,resolve('../foundry-local-api')],['python',3941,process.cwd()]]){
+ try { const health=await(await fetch(`http://127.0.0.1:${port}/health`,{signal:AbortSignal.timeout(5000)})).json(); const build=health.build; record.services[key]=build?{status:health.status,manifestDigest:build.manifestDigest,startedAt:build.startedAt,artifacts:Object.entries(build.artifactHashes??{}).map(([path,hash])=>({path,startupHash:hash,diskHash:createHash('sha256').update(readFileSync(resolve(base,path))).digest('hex')}))}:{status:health.status,codeDigest:health.codeDigest,playerObservationDigest:health.playerObservationDigest,diskPlayerObservationDigest:createHash('sha256').update(readFileSync('chatkit-server/player_observation.py')).digest('hex'),diskCodeDigest:createHash('sha256').update(readFileSync('chatkit-server/app.py')).digest('hex'),promptVersion:health.promptVersion,maxModelTurns:health.maxModelTurns}; }catch(e){record.services[key]={error:e.message};}
+}
+try{const client=await open();try{const caps=await call(client,'foundry_get_capability_report');record.clients=(caps.clients??[]).map(({clientId,userId,lane,isGM,optedIn,connectedAt})=>({clientId,userId,lane,isGM,optedIn,connectedAt})); for(const target of record.clients.filter(c=>!c.isGM&&c.optedIn)){try{record.readiness.push({target,result:await call(client,'foundry_get_client_readiness',{clientId:target.clientId,userId:target.userId,correlationId:crypto.randomUUID()})});}catch(e){record.readiness.push({target,error:e.message});}}}finally{await client.close();}}catch(e){record.mcpError=e.message;}
+writeFileSync('docs/prompt4-terrain-runtime-after-restart.json',JSON.stringify(record,null,2));console.log(JSON.stringify({services:Object.fromEntries(Object.entries(record.services).map(([k,v])=>[k,{status:v.status,startedAt:v.startedAt,error:v.error,diskDifferences:v.artifacts?.filter(a=>a.startupHash!==a.diskHash).map(a=>a.path)}])),clients:record.clients,readiness:record.readiness,mcpError:record.mcpError}));
+
+
+
+

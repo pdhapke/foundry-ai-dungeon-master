@@ -1,0 +1,51 @@
+[
+  {
+    "name": "foundry_get_status",
+    "args": {},
+    "result": {
+      "foundryVersion": "14.368",
+      "worldId": "izzy-campaign",
+      "systemId": "dnd5e",
+      "userId": "X7X4KK7zca5U2Ics"
+    }
+  },
+  {
+    "name": "foundry_update_scene_wall",
+    "args": {
+      "sceneId": "2RJeJKqdpEE4VZPh",
+      "placeableId": "RsB12oN5v3LYI1XR",
+      "changes": {
+        "ds": 0
+      }
+    },
+    "result": {
+      "c": [
+        700,
+        100,
+        700,
+        500
+      ],
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "foundry-local-api": {
+          "testRunId": "test-ai-core-20261001-1790902644995"
+        }
+      },
+      "_id": "RsB12oN5v3LYI1XR",
+      "levels": [],
+      "light": 20,
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "dir": 0,
+      "threshold": {
+        "light": null,
+        "sight": null,
+        "sound": null,
+        "attenuation": false
+      },
+      "animation": null
+    }
+  }
+]

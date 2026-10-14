@@ -6,6 +6,7 @@ import type { AiDmAuthenticatedIdentity } from "@foundry-ai-dungeon-master/share
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { z } from "zod";
 
+import { latencyEvent } from "../latency-trace.js";
 import type { AiDmLocalSessionProof } from "./foundry-session.js";
 
 const AUTHORIZATION_ENDPOINT = "https://auth.openai.com/api/accounts/authorize";
@@ -15,7 +16,8 @@ const INITIAL_CLIENT_ID = "dynamic_agent_client";
 const MODELS_ENDPOINT = "https://api.openai.com/v1/models";
 const REQUIRED_SCOPE = "chatgpt.tokens.use.direct";
 const SCOPES = `openid profile email offline_access resource.invoke ${REQUIRED_SCOPE}`;
-const MODEL_CACHE_TTL_MS = 60_000;
+// Catalog availability has no provider revision signal; cap reuse at five minutes.
+const MODEL_CACHE_TTL_MS = 5 * 60_000;
 const MODEL_CACHE_MAX_WORLDS = 32;
 const MODEL_RESPONSE_MAX_BYTES = 1024 * 1024;
 
@@ -139,6 +141,7 @@ export class ChatGptPlanAuth {
     proof: AiDmLocalSessionProof,
   ) => AiDmLocalSessionProof | Promise<AiDmLocalSessionProof>;
   readonly #pending = new Map<string, PendingAuthorization>();
+  readonly #refreshFailures = new Map<string, { attempts: number; retryAt: number }>();
   readonly #refreshes = new Map<string, Promise<string>>();
   readonly #modelCache = new Map<string, ModelCacheEntry>();
   readonly #modelDiscoveryStates = new Map<string, "unavailable" | "empty" | "available">();
@@ -333,6 +336,7 @@ export class ChatGptPlanAuth {
     this.#data.blockedWorldIds = this.#data.blockedWorldIds.filter(
       (worldId) => worldId !== pending.worldId,
     );
+    this.#refreshFailures.delete(pending.worldId);
     this.#modelCache.delete(pending.worldId);
     this.#modelDiscoveryStates.delete(pending.worldId);
     await this.#persist();
@@ -418,6 +422,7 @@ export class ChatGptPlanAuth {
     )!;
     const accessToken = await this.accessToken(worldId);
     await this.#refreshModelSelection(worldId, owner, accessToken, configuredModel);
+    if (!this.#data.sessions.includes(session) || session.accessToken !== accessToken) throw new ChatGptReconnectRequiredError();
     const model = session.selectedModel;
     if (!model) throw new Error("No eligible ChatGPT model is selected for this world.");
     return {
@@ -492,6 +497,7 @@ export class ChatGptPlanAuth {
       cached.tokenHash !== tokenHash ||
       cached.expiresAt <= now
     ) {
+      latencyEvent("preparation:provider-catalog-miss");
       const discoveryKey = `${worldId}:${tokenHash}`;
       let discovery = this.#modelDiscoveries.get(discoveryKey);
       if (!discovery) {
@@ -513,7 +519,9 @@ export class ChatGptPlanAuth {
         throw error;
       }
       this.#modelDiscoveryStates.set(worldId, models.length === 0 ? "empty" : "available");
-      cached = { owner, tokenHash, models, expiresAt: now + MODEL_CACHE_TTL_MS };
+      const session = this.#data.sessions.find(item => item.worldId === worldId && item.gmUserId === owner);
+      if (!session || session.accessToken !== accessToken) throw new ChatGptReconnectRequiredError();
+      cached = { owner, tokenHash, models, expiresAt: Math.min(this.#now() + MODEL_CACHE_TTL_MS, session.expiresAt - 60_000) };
       this.#modelCache.delete(worldId);
       this.#modelCache.set(worldId, cached);
       while (this.#modelCache.size > MODEL_CACHE_MAX_WORLDS) {
@@ -523,6 +531,7 @@ export class ChatGptPlanAuth {
         this.#modelDiscoveryStates.delete(oldest);
       }
     }
+    else latencyEvent("preparation:provider-catalog-hit");
     return cached.models;
   }
 
@@ -572,10 +581,22 @@ export class ChatGptPlanAuth {
     if (!session.scope.split(/\s+/).includes(REQUIRED_SCOPE)) {
       throw new Error("ChatGPT plan usage is not authorized for this world.");
     }
-    if (session.expiresAt - this.#now() > 60_000) return session.accessToken;
+    if (session.expiresAt - this.#now() > 60_000) { latencyEvent("preparation:credential-expiry-hit"); return session.accessToken; }
+    latencyEvent("preparation:credential-expiry-refresh");
     const inFlight = this.#refreshes.get(worldId);
     if (inFlight) return inFlight;
-    const refresh = this.#refresh(session).finally(() => this.#refreshes.delete(worldId));
+    const failure = this.#refreshFailures.get(worldId);
+    if (failure && failure.retryAt > this.#now()) throw new Error("ChatGPT preparation failed; retry after backoff or reconnect.");
+    const refreshStarted = performance.now();
+    const refresh = this.#refresh(session).then(value => {
+      latencyEvent("preparation:credential-refresh", performance.now() - refreshStarted, "ok");
+      this.#refreshFailures.delete(worldId); return value;
+    }, error => {
+      latencyEvent("preparation:credential-refresh", performance.now() - refreshStarted, "failed");
+      const attempts = Math.min((failure?.attempts ?? 0) + 1, 6);
+      this.#refreshFailures.set(worldId, { attempts, retryAt: this.#now() + Math.min(60_000, 1_000 * 2 ** attempts) });
+      throw error;
+    }).finally(() => this.#refreshes.delete(worldId));
     this.#refreshes.set(worldId, refresh);
     return refresh;
   }
@@ -591,9 +612,10 @@ export class ChatGptPlanAuth {
         client_id: session.clientId,
         resource: RESOURCE,
       }),
+      signal: AbortSignal.timeout(this.#modelDiscoveryTimeoutMs),
     });
     if (!response.ok) {
-      if (response.status === 401 || response.status === 403) {
+      if (response.status === 400 || response.status === 401 || response.status === 403) {
         await this.invalidate(session.worldId, authorizationId).catch(() => undefined);
         throw new ChatGptReconnectRequiredError();
       }
@@ -610,6 +632,8 @@ export class ChatGptPlanAuth {
       await this.invalidate(session.worldId, authorizationId).catch(() => undefined);
       throw new ChatGptReconnectRequiredError();
     }
+    if (!this.#data.sessions.includes(session) || createHash("sha256").update(session.accessToken).digest("hex") !== authorizationId)
+      throw new ChatGptReconnectRequiredError();
     session.accessToken = tokens.access_token;
     session.refreshToken = tokens.refresh_token;
     session.expiresAt = this.#now() + tokens.expires_in * 1_000;
@@ -657,6 +681,7 @@ export class ChatGptPlanAuth {
     this.#data.blockedWorldIds = this.#data.blockedWorldIds.filter(
       (worldId) => worldId !== identity.worldId,
     );
+    this.#refreshFailures.delete(identity.worldId);
     this.#modelCache.delete(identity.worldId);
     this.#modelDiscoveryStates.delete(identity.worldId);
     await this.#persist();

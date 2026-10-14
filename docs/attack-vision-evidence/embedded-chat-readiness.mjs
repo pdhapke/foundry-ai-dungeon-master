@@ -1,0 +1,18 @@
+import { parse } from 'dotenv';
+import { readFileSync, existsSync, writeFileSync } from 'node:fs';
+import { createHash, createDecipheriv } from 'node:crypto';
+import { resolve } from 'node:path';
+const env=parse(readFileSync('server/.env','utf8'));
+const root=env.AI_DM_RUNTIME_ROOT??'.runtime';
+const path=resolve(root,'ai-dungeon-master/chatgpt-plan-auth.json');
+const envelope=JSON.parse(readFileSync(path,'utf8'));
+const key=createHash('sha256').update(env.AI_DM_SIGNING_KEY).digest();
+const decipher=createDecipheriv('aes-256-gcm',key,Buffer.from(envelope.iv,'base64url'));
+decipher.setAuthTag(Buffer.from(envelope.tag,'base64url'));
+const data=JSON.parse(Buffer.concat([decipher.update(Buffer.from(envelope.ciphertext,'base64url')),decipher.final()]).toString('utf8'));
+const fixture=JSON.parse(readFileSync('docs/attack-vision-evidence/live-fixture.json','utf8').replace(/^\uFEFF/,''));
+const session=data.sessions.find(value=>value.worldId===fixture.worldId&&value.gmUserId===fixture.userId);
+const health=await (await fetch('http://127.0.0.1:3940/health')).json();
+const record={capturedAt:new Date().toISOString(),runtimeHealth:{status:health.status,details:health.details},safeConfiguration:{authMode:env.AI_DM_CHATKIT_AUTH??'existing',configuredModel:env.OPENAI_MODEL??'gpt-5.4 (source fallback; no eligible selected model)',apiKeyFallbackEnabled:env.AI_DM_ENABLE_API_KEY_FALLBACK==='true',apiKeyPresent:Boolean(env.OPENAI_API_KEY)},persistedWorldAuthorization:{sessionPresent:Boolean(session),selectedModel:session?.selectedModel??null,expired:session?session.expiresAt<=Date.now():null,blockedWorld:data.blockedWorldIds.includes(fixture.worldId)},baseline:{source:'docs/core-rollout-evidence/live-traces.json and loaded-build.json',successfulModel:'gpt-5.6-sol',apiKeyFallbackConfigured:false},conclusion:'Process/bridge healthy and persisted plan authorization present; embedded chat lacks usable model authorization/selection. Healthy service alone does not establish provider/model readiness. Exact remote discovery cause is not logged; no refresh, sign-in, provider change or inference attempted.'};
+writeFileSync('docs/attack-vision-evidence/embedded-chat-readiness.json',JSON.stringify(record,null,2));
+console.log(JSON.stringify(record));

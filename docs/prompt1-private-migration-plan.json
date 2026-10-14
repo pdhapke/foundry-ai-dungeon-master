@@ -1,0 +1,14 @@
+{
+  "worldId": "izzy-campaign",
+  "fileCount": 168,
+  "totalBytes": 1112446,
+  "excludedAssetCount": 86,
+  "manifestRevision": "5a240800d4ffb364b332ca505e0e7f2fd447990362a44dc26423f7eb920d64c7",
+  "blockers": [],
+  "copied": true,
+  "originalPublicCopiesRemain": true,
+  "privacyResolved": false,
+  "sourceFilesDeleted": 0,
+  "inferenceRequests": 0,
+  "scope": "Local copy-only candidate; no runtime reload or live-source change."
+}

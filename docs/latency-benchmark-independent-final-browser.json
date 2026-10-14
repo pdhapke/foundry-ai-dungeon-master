@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "renderedReceipt": "unobserved: requires browser observation",
+  "diagnostics": {
+    "droppedRows": 0,
+    "overBudgetEvents": 0
+  },
+  "events": [
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-submit",
+      "elapsedMs": 0.19999998807907104,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329326.2999999821
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-response-headers",
+      "elapsedMs": 252.7999999821186,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329578.89999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-first-stream-chunk",
+      "elapsedMs": 253.5,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329579.59999999404
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-action-receipt-arrival",
+      "elapsedMs": 253.7999999821186,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329579.89999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-stream-end",
+      "elapsedMs": 253.7999999821186,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329579.89999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "479005cd-d3d7-4e91-b848-1e8c07abbac5",
+      "component": "browser",
+      "stage": "browser-submit",
+      "elapsedMs": 0,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 378847.89999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "479005cd-d3d7-4e91-b848-1e8c07abbac5",
+      "component": "browser",
+      "stage": "browser-response-headers",
+      "elapsedMs": 1369.5999999940395,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 380217.39999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "479005cd-d3d7-4e91-b848-1e8c07abbac5",
+      "component": "browser",
+      "stage": "browser-first-stream-chunk",
+      "elapsedMs": 1370.5999999940395,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 380218.39999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "479005cd-d3d7-4e91-b848-1e8c07abbac5",
+      "component": "browser",
+      "stage": "browser-receipt-arrival",
+      "elapsedMs": 6340,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 385187.7999999821
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "479005cd-d3d7-4e91-b848-1e8c07abbac5",
+      "component": "browser",
+      "stage": "browser-stream-end",
+      "elapsedMs": 6341.700000017881,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 385189.5
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "479005cd-d3d7-4e91-b848-1e8c07abbac5",
+      "component": "browser",
+      "stage": "browser-chatkit-response-end",
+      "elapsedMs": 6362,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 385209.7999999821
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "48fe577f-6a51-4647-963e-73da94e01e01",
+      "component": "browser",
+      "stage": "browser-submit",
+      "elapsedMs": 0,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 484775.7999999821
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "48fe577f-6a51-4647-963e-73da94e01e01",
+      "component": "browser",
+      "stage": "browser-response-headers",
+      "elapsedMs": 808.8000000119209,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 485584.59999999404
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "48fe577f-6a51-4647-963e-73da94e01e01",
+      "component": "browser",
+      "stage": "browser-first-stream-chunk",
+      "elapsedMs": 813.0999999940395,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 485588.89999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "48fe577f-6a51-4647-963e-73da94e01e01",
+      "component": "browser",
+      "stage": "browser-receipt-arrival",
+      "elapsedMs": 7754.4000000059605,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 492530.1999999881
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "48fe577f-6a51-4647-963e-73da94e01e01",
+      "component": "browser",
+      "stage": "browser-stream-end",
+      "elapsedMs": 7755.5999999940395,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 492531.39999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "48fe577f-6a51-4647-963e-73da94e01e01",
+      "component": "browser",
+      "stage": "browser-chatkit-response-end",
+      "elapsedMs": 7767.700000017881,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 492543.5
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "46502620-e17b-41c1-9e6e-0e3faebaaf63",
+      "component": "browser",
+      "stage": "browser-submit",
+      "elapsedMs": 0.10000002384185791,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 564023.5
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "46502620-e17b-41c1-9e6e-0e3faebaaf63",
+      "component": "browser",
+      "stage": "browser-response-headers",
+      "elapsedMs": 136.60000002384186,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 564160
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "46502620-e17b-41c1-9e6e-0e3faebaaf63",
+      "component": "browser",
+      "stage": "browser-first-stream-chunk",
+      "elapsedMs": 136.90000000596046,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 564160.2999999821
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "46502620-e17b-41c1-9e6e-0e3faebaaf63",
+      "component": "browser",
+      "stage": "browser-action-receipt-arrival",
+      "elapsedMs": 137.10000002384186,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 564160.5
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "46502620-e17b-41c1-9e6e-0e3faebaaf63",
+      "component": "browser",
+      "stage": "browser-stream-end",
+      "elapsedMs": 137.10000002384186,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 564160.5
+    }
+  ]
+}

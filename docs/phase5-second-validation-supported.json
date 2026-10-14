@@ -1,0 +1,178 @@
+{
+  "context": {
+    "foundryVersion": "14.368",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.3",
+    "moduleVersion": "0.1.0",
+    "documentType": "Token",
+    "parentDocumentType": "Scene",
+    "parentDocumentId": "JYKHHWccpbXdZEGD",
+    "embedded": true
+  },
+  "mode": "create",
+  "results": [
+    {
+      "index": 0,
+      "context": {
+        "foundryVersion": "14.368",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "moduleVersion": "0.1.0",
+        "documentType": "Token",
+        "parentDocumentType": "Scene",
+        "parentDocumentId": "JYKHHWccpbXdZEGD",
+        "embedded": true
+      },
+      "mode": "create",
+      "valid": false,
+      "normalized": {
+        "name": "Phase5 second owned source",
+        "actorId": "GF6QQL8YXPLqx7pW",
+        "actorLink": true,
+        "delta": {
+          "img": null,
+          "name": null,
+          "ownership": null,
+          "type": null
+        },
+        "x": 850,
+        "y": 350,
+        "elevation": 0,
+        "hidden": false,
+        "width": 1,
+        "height": 1,
+        "texture": {
+          "src": "icons/svg/mystery-man.svg",
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "fit": "contain",
+          "scaleX": 1,
+          "scaleY": 1,
+          "tint": "#ffffff",
+          "alphaThreshold": 0.75
+        },
+        "sight": {
+          "enabled": true,
+          "range": 60,
+          "visionMode": "basic",
+          "angle": 360,
+          "color": null,
+          "attenuation": 0.1,
+          "brightness": 0,
+          "saturation": 0,
+          "contrast": 0
+        },
+        "detectionModes": {},
+        "_id": null,
+        "displayName": 0,
+        "depth": 1,
+        "shape": 4,
+        "level": "defaultLevel0000",
+        "sort": 0,
+        "locked": false,
+        "lockRotation": false,
+        "rotation": 0,
+        "alpha": 1,
+        "disposition": -1,
+        "displayBars": 0,
+        "bar1": {
+          "attribute": "attributes.hp"
+        },
+        "bar2": {
+          "attribute": null
+        },
+        "light": {
+          "negative": false,
+          "priority": 0,
+          "alpha": 0.5,
+          "angle": 360,
+          "bright": 0,
+          "color": null,
+          "coloration": 1,
+          "dim": 0,
+          "attenuation": 0.5,
+          "luminosity": 0.5,
+          "saturation": 0,
+          "contrast": 0,
+          "shadows": 0,
+          "animation": {
+            "type": null,
+            "speed": 5,
+            "intensity": 5,
+            "reverse": false
+          },
+          "darkness": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "occludable": {
+          "radius": 0
+        },
+        "ring": {
+          "enabled": false,
+          "colors": {
+            "ring": null,
+            "background": null
+          },
+          "effects": 1,
+          "subject": {
+            "scale": 1,
+            "texture": null
+          }
+        },
+        "turnMarker": {
+          "mode": 1,
+          "animation": null,
+          "src": null,
+          "disposition": false
+        },
+        "movementAction": null,
+        "_movementHistory": [],
+        "_regions": [],
+        "flags": {}
+      },
+      "errors": [
+        {
+          "severity": "error",
+          "code": "REQUIRED",
+          "path": "delta._id",
+          "message": "Required field \"delta._id\" is missing."
+        },
+        {
+          "severity": "error",
+          "code": "REQUIRED",
+          "path": "delta.effects",
+          "message": "Required field \"delta.effects\" is missing."
+        },
+        {
+          "severity": "error",
+          "code": "REQUIRED",
+          "path": "delta.flags",
+          "message": "Required field \"delta.flags\" is missing."
+        },
+        {
+          "severity": "error",
+          "code": "REQUIRED",
+          "path": "delta.items",
+          "message": "Required field \"delta.items\" is missing."
+        },
+        {
+          "severity": "error",
+          "code": "REQUIRED",
+          "path": "delta.system",
+          "message": "Required field \"delta.system\" is missing."
+        }
+      ],
+      "warnings": [],
+      "inputUnchanged": true,
+      "persisted": false,
+      "migrationWarnings": [],
+      "limitations": []
+    }
+  ],
+  "validCount": 0,
+  "invalidCount": 1,
+  "complete": true,
+  "persisted": false
+}

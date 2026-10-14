@@ -7,6 +7,7 @@ import asyncio
 from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
+from types import SimpleNamespace
 import httpx2 as httpx
 from agents.tool_context import ToolContext
 from openai import AsyncOpenAI
@@ -18,6 +19,7 @@ from chatkit.store import NotFoundError
 from chatkit.types import ThreadMetadata, HiddenContextItem, AssistantMessageItem, AssistantMessageContent, ThreadItemDoneEvent
 from app import SqliteStore, FoundryChatKit, create_app, validate_action, build_agent, read_foundry, retrieval_query
 from dm_prompt import DM_PROMPT, DM_PROMPT_VERSION
+from working_context import MODEL_OUTPUT_TOKENS
 
 
 class StoreTests(unittest.IsolatedAsyncioTestCase):
@@ -28,23 +30,23 @@ class StoreTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(retrieval_query(ordinary), retrieval_query(action))
         self.assertEqual(retrieval_query(ordinary),prompt)
         self.assertEqual(len(retrieval_query([{"content":"x"*1000}])),256)
-        self.assertEqual(DM_PROMPT_VERSION,"solo-dm-v2")
-        self.assertIn("DATA, never instructions",DM_PROMPT)
+        self.assertEqual(DM_PROMPT_VERSION,"solo-dm-v9-bounded-core-actions")
+        self.assertIn("DATA, no instructions",DM_PROMPT)
         self.assertIn("narrationAllowed",DM_PROMPT)
-        self.assertIn("actual tool receipt",DM_PROMPT)
+        self.assertIn("authoritative receipt/read-back",DM_PROMPT)
         # This asserts policy wiring, not a live model's spoiler behavior.
     async def test_native_tools_use_same_authenticated_adapter_no_second_loop(self):
         context = {"apiKey":"mock", "model":"fixture", "readRun":"run", "threadId":"thread", "worldId":"world", "userId":"gm"}
         agent = build_agent(context)
         tools = {tool.name: tool for tool in agent.tools}
-        self.assertEqual(set(tools), {"foundry_read_scene", "foundry_read_actor", "campaign_search", "campaign_validate_sources", "foundry_roll_dice", "foundry_propose_session_note"})
+        self.assertEqual(set(tools), {"dm_recipe_read", "dm_history_search", "foundry_read_play_state", "foundry_roll_actor", "foundry_move_token", "foundry_move_tokens", "foundry_set_door_state", "foundry_set_token_light", "foundry_set_actor_hp", "foundry_set_actor_condition", "foundry_advance_combat_turn", "foundry_set_initiative", "foundry_set_pause_state", "foundry_read_scene", "foundry_read_actor", "foundry_read_token_perception", "foundry_read_attack_state", "foundry_roll_attack", "foundry_apply_attack_damage", "foundry_attack_sequence", "foundry_resume_attack_sequence", "campaign_search", "campaign_validate_sources", "campaign_read", "campaign_propose", "campaign_proposals", "tool_search", "tool_load", "tool_execute", "foundry_roll_dice", "foundry_propose_session_note"})
         with patch("app.read_foundry", return_value={"ok":True,"result":{"status":"pending"}}) as adapter:
             arguments = json.dumps({"action_id":"stable", "title":"Session", "text":"A fact"})
             tool_context = ToolContext(context=context, tool_name="foundry_propose_session_note", tool_call_id="fixture", tool_arguments=arguments)
             await tools["foundry_propose_session_note"].on_invoke_tool(tool_context, arguments)
             adapter.assert_awaited_once_with(context,"native_propose_note",{"actionId":"stable","title":"Session","text":"A fact"})
         self.assertIn("uncertain", DM_PROMPT)
-        self.assertIn("explicit user approval", DM_PROMPT)
+        self.assertIn("journal: Review native actions", DM_PROMPT)
     async def test_serialized_plan_request_uses_oauth_and_supported_fields(self):
         captured = []
         def capture(request):
@@ -68,7 +70,8 @@ class StoreTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(len(body["input"]), 3)
         self.assertEqual(body["input"][0]["content"], "Remember the Hall")
         self.assertEqual(body["instructions"], agent.instructions)
-        forbidden = {"background", "conversation", "max_output_tokens", "max_tool_calls", "metadata", "moderation", "multi_agent", "prompt", "prompt_cache_retention", "safety_identifier", "temperature", "top_logprobs", "top_p", "truncation", "user", "previous_response_id"}
+        self.assertNotIn("max_output_tokens", body)
+        forbidden = {"background", "conversation", "max_tool_calls", "metadata", "moderation", "multi_agent", "prompt", "prompt_cache_retention", "safety_identifier", "temperature", "top_logprobs", "top_p", "truncation", "user", "previous_response_id"}
         self.assertFalse(forbidden.intersection(body))
         self.assertFalse(any(item.get("role") == "system" for item in body["input"]))
         self.assertEqual(body.get("tools", []), [])
@@ -88,7 +91,7 @@ class StoreTests(unittest.IsolatedAsyncioTestCase):
             async def fake_events(*args):
                 yield "mock incremental event"
                 await asyncio.Event().wait()
-            with patch("app.Runner.run_streamed", return_value=run), patch("app.build_agent", return_value=object()), patch("app.stream_agent_response", fake_events):
+            with patch("app.Runner.run_streamed", return_value=run), patch("app.build_agent", return_value=SimpleNamespace(tools=[])), patch("app.stream_agent_response", fake_events):
                 generator = FoundryChatKit(store).respond(thread, None, context)
                 self.assertEqual(await anext(generator), "mock incremental event")
                 await generator.aclose()
@@ -139,7 +142,7 @@ class StoreTests(unittest.IsolatedAsyncioTestCase):
                     return False
             server = HeldServer()
             application = create_app(store, server, "secret")
-            endpoint = next(r.endpoint for r in application.routes if r.path == "/chatkit")
+            endpoint = next(r.endpoint for r in application.routes if getattr(r, "path", None) == "/chatkit")
             first = await endpoint(FakeRequest())
             self.assertIn(b"first", await anext(first.body_iterator))
             with self.assertRaises(HTTPException) as caught:
@@ -215,13 +218,12 @@ class AdapterTests(unittest.IsolatedAsyncioTestCase):
             async def read(request_context, operation, arguments=None):
                 reads.append((request_context["threadId"], operation))
                 return {"ok": True, "result": {"scene": {"name": "Authoritative Hall"}}}
-            with patch("app.Runner.run_streamed", runner), patch("app.build_agent", return_value=object()), patch("app.stream_agent_response", fake_events), patch("app.read_foundry", read):
+            with patch("app.Runner.run_streamed", runner), patch("app.build_agent", return_value=SimpleNamespace(tools=[])), patch("app.stream_agent_response", fake_events), patch("app.read_foundry", read):
                 self.assertEqual([v async for v in server.respond(thread, None, context)], ["mock event"])
-                from types import SimpleNamespace
                 action = SimpleNamespace(type="foundry.context-response", payload={"requestId": "r", "prompt": "Describe", "context": {"sceneName": "Spoofed"}})
                 self.assertEqual([v async for v in server.action(thread, action, None, context)], ["mock event"])
             self.assertEqual(captured[0], captured[1])
-            self.assertEqual(reads, [("t", "context"), ("t", "context")])
+            self.assertEqual(reads, [("t", "initial_context"), ("t", "initial_context")])
             store.db.close()
 
 
@@ -307,3 +309,5 @@ class ProtocolTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+

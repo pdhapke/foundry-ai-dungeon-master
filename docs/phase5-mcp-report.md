@@ -1,0 +1,31 @@
+# Phase5 MCP perception implementation
+
+Scope: shared scene-render contract, native scene-render command, server scene-render routing/output schema, focused tests. Dirty/untracked start inventory preserved in phase5-start-mcp-inventory.txt. No unrelated source edits, live fixture changes, inference or service lifecycle.
+
+## Current baseline versus saved reports
+
+Fresh exact player request remains NOT_CONNECTED because only the consenting GM bridge was connected at capture (phase5-current-readiness.json). Historical reports prove basic nonGM rendering for doors, normal movement, lights and explored fog; structured perception and broader modes/elevation were unaccepted. Current user is establishing an explicitly opted-in incognito player; that readiness is root-owned and not established by saved screenshots.
+
+## Narrow contract
+
+Existing selected-token native detection/hidden-identity redaction is retained. Visibility now carries capturedAt and version1 observation: UUID id, world/scene/user/token/actor identity, clientId, nonGM=false-role assertion, optedIn=true, capturedAt,stateRevision, ready/stale/unavailable, request-local-native-render-flags basis and pendingRenderFlags count. Native raw clientId=null is filled only by server binding to the exact consenting player receiver. Native rejects GM substitution and missing consent, and rechecks user/world/scene/token/ownership/consent after asynchronous observations. Scene/fog/token persistence hash and selected vision-source identity must remain stable.
+
+Installed Foundry14 PerceptionManager.renderFlags.size is a public current pending-work signal; canvas.ready and before/after flags are required. Missing evidence is unavailable; pending or changed state/source is stale. This is a request-local observation, not a universal revision epoch, proof of completed paint, or mutable cached vision grant. Stale/unavailable response clears visible entities, regions, barriers, coverage, query claims and image. Server rechecks exact player and requesting GM connection IDs+connectedAt after native result; reconnect/revocation returns empty stale claims instead of accepting prior authority.
+
+Query points accept optional finite elevation and default to the selected token elevation. Installed CanvasVisibility._createVisibilityTestConfig honors point elevation, otherwise queried Token movement origin or canvas level base; prior XY-only free queries incorrectly defaulted to canvas level. Region query tests now preserve explicit elevation. Native visibility is not legal movement/pathfinding; separate native path/walk/intentional-teleport workflow remains authoritative. No competing vision or collision engine was added.
+
+No GM fallback, extra model calls, settings changes or cross-turn perception cache. Existing top-level statuses/typed NOT_CONNECTED/TIMEOUT failures and fog/persistence/redaction/bounds remain available. AI worker projects only bounded validated observations, and excludes raw issue text from player narration.
+
+## Validation
+
+Final native full suite337PASS and server full suite529PASS; native/server focused35PASS (29 native,6 endpoint), including independent elevation-region consistency, exact loaded-scene replacement, and mutable connection-record drift regressions. Both MCP typechecks and shared/native/server builds PASS. A retained capturedAt expectation was intentionally updated. Mocked canvas tests are not actual rendered acceptance or proof all modes work.
+
+Production source ownership: shared/src/scene-render.ts; module/src/commands/scene-render.ts; server/src/endpoints/scene-render.ts; server/src/endpoints/requirement-output-schemas.ts; authorized identity-list-only change server/src/build-identity.ts. Scoped fixture tests changed module/src/commands/scene-render.test.ts, server/src/endpoints/scene-render.test.ts and server/src/endpoints/acceptance-validation.test.ts; independent tests belong to the validator. Compiled shared scene-render.js, native dist/index.js and regenerated latency-build marker, server perception endpoint/schema and startup identity are rebuilt. Startup capture now explicitly includes server/dist/endpoints/scene-render.js, server/dist/endpoints/requirement-output-schemas.js and shared/dist/scene-render.js, alongside the native bundle; disk artifacts alone do not prove the running server or browser has loaded them.
+
+Offline artifacts require user-managed manual restart for server routing/shared-schema changes and targeted reload only of intended consenting test clients; parent will verify final startup/native identities. Expanded player fixture mutations require the approved parent plan. Remaining actual player rendering, structured correctness, remote-client readiness, mode/elevation/path/fog tests are separate live gates.
+
+## Final narrow native follow-up
+
+Active Scene viewing permits the exact loaded active Scene even with Scene ownership NONE, matching installed Foundry navigation; token ownership, consent and final active-or-OBSERVER recheck remain enforced. Native query visibility delegates to selected native detection; wall-clipped polygon exclusion no longer asserts radial out-of-range. Independently visible intersecting walls may be attributed; other failures are environment-ambiguous without a separate native pure-range proof. Generator now hashes native and shared perception files; final frozen loaded marker1953b89f2c8acb8888b2f3b10abaf98ca55b6e5286b4f67a9d107d8af40768de supersedes the earlier instrumentation-only marker.
+
+Parent reports final live closed-door visible-wall, darkvision and positive Region elevation observations, with restoration independently checked. Region visibility3 is OBSERVER, visibility2 ALWAYS; the positive case used native ALWAYS and returned region-1 at ground, none at elevation20. See parent live evidence for actual rendering and sample limits. Secret-door fixture and additional owned vision-token fixture remain blocked by existing generic schema-validation defects (numeric Wall enums; required ActorDelta nested fields). These are separate limitations, not validated native vision failures; no validation bypass was performed. Full final native suite result is recorded in phase5-final-native-tests.log.

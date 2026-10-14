@@ -1,0 +1,12 @@
+{
+  "approvedModelRequests": 4,
+  "promptResubmissions": 0,
+  "provider": "existing ChatGPT plan only",
+  "restoreRequired": true,
+  "approvedDirectSubmissions": 2,
+  "previous": null,
+  "setting": "AI_DM_CHATKIT_MAX_TURNS",
+  "approvedEmbeddedPrompts": 2,
+  "providerRetries": 0,
+  "temporary": "2"
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "Final approved original-scene deterministic panel rehearsal",
+  "worldId": "izzy-campaign",
+  "sceneId": "Nbj38PEdvw1zX1J9",
+  "playerUserId": "edtBL96Yu3058QAT",
+  "playerClientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+  "traceId": "09a34d8f-4226-4e7e-b0e2-85cb3a03b5e1",
+  "actualEmbeddedSafeText": "A section of corridor floor is visible here.",
+  "actualPanelStatus": "Player observation receipt received. Unknown threats and trap outcomes remain unknown.",
+  "browserObservation": "Actual player canvas showed Izzy in the torch-lit corridor with visible floor; current pause preserved. No concealed details added to the safe sentence.",
+  "manualFeedback": "Yes, accurate and no concealed information",
+  "manualFeedbackSource": "Direct user response to final player-canvas comparison question",
+  "modelRequests": 0,
+  "narratorCalls": 0,
+  "retries": 0,
+  "restoration": "Temporary panels closed, selection cleared, Journal Notes controls restored; GM viewport authoritative restore acknowledged. Fresh state independently compared in final gate.",
+  "screenshotEvidence": "Actual screenshots displayed during browser validation; no exported screenshot file claimed.",
+  "limits": "One approved public native-visible point; no whole-scene, conditional reveal or strict natural model narration acceptance."
+}

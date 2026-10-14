@@ -1,0 +1,16 @@
+{
+  "provider": "existing selected ChatGPT plan model only",
+  "setting": "AI_DM_CHATKIT_MAX_TURNS",
+  "temporary": "3",
+  "preparedAt": "2026-10-02T21:34:21.9481247Z",
+  "restoreRequired": true,
+  "promptResubmissions": 0,
+  "previousLine": null,
+  "approvedModelRequests": 6,
+  "providerRetries": 0,
+  "approvedEmbeddedPrompts": 2,
+  "appended": true,
+  "diskRestored": true,
+  "diskRestoredAt": "2026-10-02T23:21:36.7623840Z",
+  "loadedRestorePendingManualRestart": true
+}

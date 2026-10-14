@@ -1,0 +1,16 @@
+
+> foundry-ai-dungeon-master@0.1.0 typecheck
+> npm run typecheck --workspaces --if-present
+
+
+> @foundry-ai-dungeon-master/shared@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @foundry-ai-dungeon-master/server@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @foundry-ai-dungeon-master/module@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+

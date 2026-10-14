@@ -1,0 +1,262 @@
+{
+  "capturedAt": "2026-10-02T19:29:13.932Z",
+  "kind": "independent-offline-final-build-verification",
+  "total": 42,
+  "matches": true,
+  "aiManifest": "64153f9579b52220f612527548a3e24b66fc9c62659b98d991bf62df0e903aac",
+  "mcpManifest": "ae348e076d5f934a769d61ed7313f9f141f8aa9466ca3ce9dc15b7b4fe01633f",
+  "rows": [
+    {
+      "module": "ai",
+      "path": "server/dist/latency-trace.js",
+      "expected": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4",
+      "actual": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/context/world-campaign.js",
+      "expected": "afdc426077bee1fbec3b38ed4c99a80114f4929042c954b73376272cf00b1890",
+      "actual": "afdc426077bee1fbec3b38ed4c99a80114f4929042c954b73376272cf00b1890"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/index.js",
+      "expected": "e2e68e5c74641f6ec1fa6dd1d98c72a27ded4a0807b9ed3b116fb2fa7ca15b5c",
+      "actual": "e2e68e5c74641f6ec1fa6dd1d98c72a27ded4a0807b9ed3b116fb2fa7ca15b5c"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/app.js",
+      "expected": "5c4eab30a36dd8dbb8c2dd7343b5a390ebeb2fb47ee72d487bd6777474ff5c61",
+      "actual": "5c4eab30a36dd8dbb8c2dd7343b5a390ebeb2fb47ee72d487bd6777474ff5c61"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/gateway.js",
+      "expected": "346c3de6a795bf6dbf8992067d566dde2b63cf435201ce9d7da14fb6ab698dd4",
+      "actual": "346c3de6a795bf6dbf8992067d566dde2b63cf435201ce9d7da14fb6ab698dd4"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/read-tools.js",
+      "expected": "4d287c2aec80f42cfc24913f7be76aa66bbb783fb33816898e1ee2dca7059dbf",
+      "actual": "4d287c2aec80f42cfc24913f7be76aa66bbb783fb33816898e1ee2dca7059dbf"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/catalog-tools.js",
+      "expected": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918",
+      "actual": "60e62a506d842b0aa90fa4b3b21d7092feb3310c7373bce841d0c802a09eb918"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/pause-actions.js",
+      "expected": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22",
+      "actual": "a9762b316a7d9ea5d9d06e264d77cf4c0177099b53ea717e24518c4350a16e22"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/core-actions.js",
+      "expected": "6e9b23d025e0609788e0f801f7f26a5019c090e3cb33b9168e0daff63c8d6730",
+      "actual": "6e9b23d025e0609788e0f801f7f26a5019c090e3cb33b9168e0daff63c8d6730"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/attack-actions.js",
+      "expected": "3c4476145b65ca6b70f4843267df8a098e1f98f0bb95164449a8e2ca4554f6a6",
+      "actual": "3c4476145b65ca6b70f4843267df8a098e1f98f0bb95164449a8e2ca4554f6a6"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/session-actions.js",
+      "expected": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614",
+      "actual": "980b422e8e81eb15c82b8fc651e04d57ff164ecb5ac2a5b81188619adb9fd614"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/pause-request.js",
+      "expected": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383",
+      "actual": "e0e74fe73e3441b25c493751d6dc1ae384ec74a25a5bb5c0639a6ef5999bd383"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/routine-completion.js",
+      "expected": "027f7ce0304f2625fc30934af49b65ff2390d9a9e163657ab00bacab529eee0a",
+      "actual": "027f7ce0304f2625fc30934af49b65ff2390d9a9e163657ab00bacab529eee0a"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/narration-request.js",
+      "expected": "721fbf7029e94fe95944eaeb6860ee59e0764e5a4864c0d647e80df1b9b49f33",
+      "actual": "721fbf7029e94fe95944eaeb6860ee59e0764e5a4864c0d647e80df1b9b49f33"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/tool-audit.js",
+      "expected": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712",
+      "actual": "fc79a10542757e9ab4c74a135feed4168af2e2ebf8639c414ef40c5086091712"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-request.js",
+      "expected": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294",
+      "actual": "84385cc5fcd751c3900ec2627abcc196c646ceaedde7051a2042b110e7ffa294"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-document-actions.js",
+      "expected": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20",
+      "actual": "6f603a8a94a99e8d3a19407c9425be9d841caca25a0abdd147f744f59a594e20"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-tool-policy.js",
+      "expected": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf",
+      "actual": "943882ab58c775bae7f5598001ccb3e6c1c58a782ab9c133c561f90e7f091baf"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-file-actions.js",
+      "expected": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58",
+      "actual": "49c0e3587257361ded78833ffce117a93423da60d76758ae80d11ec7f4017a58"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/world-files.js",
+      "expected": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00",
+      "actual": "17b31c39bea504d61b317171c70e0ac59379d20b3d788237d329b2536545bd00"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/native-actions.js",
+      "expected": "ab0e3316363c7800c0f5a83e043eb1a66ac480ff2478326e34e456574c8f539e",
+      "actual": "ab0e3316363c7800c0f5a83e043eb1a66ac480ff2478326e34e456574c8f539e"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/campaign-actions.js",
+      "expected": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0",
+      "actual": "87954b1d10024ed74189d57680c64c0dd03a0f25d54a002478b22ad8a912f4d0"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/turns.js",
+      "expected": "cdd6a3fb18e7d79e94d45f50dc5940adb04bafaa23631e1ffd58b43772906e63",
+      "actual": "cdd6a3fb18e7d79e94d45f50dc5940adb04bafaa23631e1ffd58b43772906e63"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/chatkit/bounded-call.js",
+      "expected": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3",
+      "actual": "7f0aac16a027cf4fef154edea5f9a5ff43cd4727c7544094446cff4046343cb3"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/tool-catalog/runtime.js",
+      "expected": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe",
+      "actual": "31da95390b985a9020277fb0646d568d617fc04f938639bd81701fc93a3aedbe"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/tool-catalog/catalog.js",
+      "expected": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e",
+      "actual": "849d3e95f3fc620ac7111310df169cb0562c8515e8b5dfc11a1771eff3a3017e"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/tool-catalog/canonical.js",
+      "expected": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73",
+      "actual": "b994bcd0b14ca02c25b75e6996e14f9173a3cc45c1d7b1cb796af399ddf6fe73"
+    },
+    {
+      "module": "ai",
+      "path": "server/dist/tool-catalog/foundry-local-api-adapter.js",
+      "expected": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051",
+      "actual": "902b014507055559517dd3fceebf4b120eb3908a52c27cb5d10b3cde11a2a051"
+    },
+    {
+      "module": "ai",
+      "path": "shared/dist/ai-dungeon-master.js",
+      "expected": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f",
+      "actual": "cad360b1e1c5fd70ffca3ab999e98a1d1ec93ba5e2072eee758b89475936db8f"
+    },
+    {
+      "module": "ai",
+      "path": "shared/dist/chatkit.js",
+      "expected": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299",
+      "actual": "561db7a78786cdf967350b39993e0396af554c9e6a7dd8c8bb3029fefbc49299"
+    },
+    {
+      "module": "ai",
+      "path": "chatkit-server/app.py",
+      "expected": "742f5adb0b09eb453a8d9a313ca6841daae144b60581e1f532aaff2189ac0f93",
+      "actual": "742f5adb0b09eb453a8d9a313ca6841daae144b60581e1f532aaff2189ac0f93"
+    },
+    {
+      "module": "ai",
+      "path": "chatkit-server/dm_prompt.py",
+      "expected": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2",
+      "actual": "54aaea126b186ee18f3fb88a5fcffc8ed73b6145d199af49c4d700a5ffcb30f2"
+    },
+    {
+      "module": "ai",
+      "path": "module/dist/index.js",
+      "expected": "6cb97728a2142a129787df76d754cbafbd52782acf0c3275556828ae37989701",
+      "actual": "6cb97728a2142a129787df76d754cbafbd52782acf0c3275556828ae37989701"
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/index.js",
+      "expected": "9dae0d12ba8f139fe64d29b25593cc7fc35c27e60dad83069c5ee186e789a710",
+      "actual": "9dae0d12ba8f139fe64d29b25593cc7fc35c27e60dad83069c5ee186e789a710"
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/app.js",
+      "expected": "395c60c7fe13a3a82c47f532a73199874cc75d2b302699fddd5f6a9ddec16aed",
+      "actual": "395c60c7fe13a3a82c47f532a73199874cc75d2b302699fddd5f6a9ddec16aed"
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/latency-trace.js",
+      "expected": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4",
+      "actual": "b6b8f6499f6214bf5b540a66021b70c44e07820491f8b8029c787dde65a807c4"
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/endpoints/registry.js",
+      "expected": "3a3f070bbfc18c39517e3639370668744f3e4c49a29d4e793a8e5507353154cc",
+      "actual": "3a3f070bbfc18c39517e3639370668744f3e4c49a29d4e793a8e5507353154cc"
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/bridge/foundry-client.js",
+      "expected": "9673c13bc8c5c12e629268ef83d597c0224fe58005c87bbe69d1bd5ccbaee3a5",
+      "actual": "9673c13bc8c5c12e629268ef83d597c0224fe58005c87bbe69d1bd5ccbaee3a5"
+    },
+    {
+      "module": "mcp",
+      "path": "server/dist/endpoints/routine-mutation-lane.js",
+      "expected": "1eb7b3bdaf4a5513f929787b5f73da09b06b261f1daf3ceaaa3bd10ce4dc8067",
+      "actual": "1eb7b3bdaf4a5513f929787b5f73da09b06b261f1daf3ceaaa3bd10ce4dc8067"
+    },
+    {
+      "module": "mcp",
+      "path": "shared/dist/protocol.js",
+      "expected": "b440adc961681f5e853e95bbd843f14fb156929965818a6000f537bbd8712eac",
+      "actual": "b440adc961681f5e853e95bbd843f14fb156929965818a6000f537bbd8712eac"
+    },
+    {
+      "module": "mcp",
+      "path": "module/dist/index.js",
+      "expected": "249ece12d67d45f2a4959a858032a3a5282e4ad444bcfa693cb5de679676b536",
+      "actual": "249ece12d67d45f2a4959a858032a3a5282e4ad444bcfa693cb5de679676b536"
+    },
+    {
+      "module": "mcp",
+      "path": "module/src/latency-build.ts",
+      "expected": "ef438e2bda0918effee2d37c1dcc61a32d17301691d2063baa1285bb6406256e",
+      "actual": "ef438e2bda0918effee2d37c1dcc61a32d17301691d2063baa1285bb6406256e"
+    }
+  ]
+}

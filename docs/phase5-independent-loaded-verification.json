@@ -1,0 +1,34 @@
+{
+  "capturedAt": "2026-10-03T00:35:46.717Z",
+  "checks": {
+    "aiManifest": true,
+    "aiArtifacts": true,
+    "mcpManifest": true,
+    "mcpArtifacts": true,
+    "pythonCode": true,
+    "limit15": true,
+    "fallbackDisabled": true
+  },
+  "artifactCount": 50,
+  "pass": true,
+  "clients": [
+    {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "userId": "X7X4KK7zca5U2Ics",
+      "lane": "gm",
+      "isGM": true,
+      "optedIn": true,
+      "connectedAt": 1790987349451
+    },
+    {
+      "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+      "userId": "edtBL96Yu3058QAT",
+      "lane": "player",
+      "isGM": false,
+      "optedIn": true,
+      "connectedAt": 1790987744586
+    }
+  ],
+  "scope": "Server startup/disk identities and client metadata only; native rendering/player view awaits live results",
+  "inferenceRequests": 0
+}

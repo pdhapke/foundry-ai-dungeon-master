@@ -1,0 +1,24 @@
+{
+  "ai": {
+    "schemaVersion": 1,
+    "processRunId": "6da17e5e-5ee6-4c37-8bad-919f88c5ec58",
+    "enabled": true,
+    "dropped": 0,
+    "errors": 0,
+    "retention": "two files, approximately 4MiB each; bounded queue 512"
+  },
+  "mcp": {
+    "schemaVersion": 1,
+    "processRunId": "57fc98d9-714d-4828-9e1d-98dc5d73bdf5",
+    "enabled": true,
+    "dropped": 0,
+    "errors": 0,
+    "retention": "two files, approximately 4MiB each; bounded queue 512"
+  },
+  "python": {
+    "writes": 28,
+    "dropped": 0,
+    "writeDurationMs": 83.90370017150417,
+    "maxWriteDurationMs": 6.041699991328642
+  }
+}

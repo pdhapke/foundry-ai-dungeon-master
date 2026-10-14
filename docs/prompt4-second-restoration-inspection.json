@@ -1,0 +1,156 @@
+{
+  "beforePause": {
+    "paused": true
+  },
+  "current": {
+    "pause": {
+      "paused": false
+    },
+    "views": [
+      {
+        "before": {
+          "correlationId": "prompt4-219a4e33-1bac-48b0-b3bf-edec34034c26",
+          "acknowledged": true,
+          "replayed": false,
+          "acknowledgedAt": "2026-10-03T03:15:39.754Z",
+          "clientUserId": "X7X4KK7zca5U2Ics",
+          "executingClientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+          "expectedSceneId": null,
+          "activeSceneId": "Nbj38PEdvw1zX1J9",
+          "scenePreloaded": false,
+          "activeSceneMatches": true,
+          "sceneReady": false,
+          "assets": [],
+          "viewport": {
+            "x": 3625,
+            "y": 4875,
+            "scale": 1
+          },
+          "applied": {
+            "preload": false,
+            "viewport": false
+          },
+          "warnings": [],
+          "incomplete": false,
+          "client": {
+            "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+            "userId": "X7X4KK7zca5U2Ics",
+            "lane": "gm",
+            "isGM": true,
+            "foundryVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.3",
+            "moduleVersion": "0.1.0"
+          }
+        },
+        "after": {
+          "correlationId": "prompt4-restore-inspection-6489d1c8-8937-42ce-8126-ef036fdfadd5",
+          "acknowledged": true,
+          "replayed": false,
+          "acknowledgedAt": "2026-10-03T03:26:52.236Z",
+          "clientUserId": "X7X4KK7zca5U2Ics",
+          "executingClientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+          "expectedSceneId": null,
+          "activeSceneId": "Nbj38PEdvw1zX1J9",
+          "scenePreloaded": false,
+          "activeSceneMatches": true,
+          "sceneReady": false,
+          "assets": [],
+          "viewport": {
+            "x": 3625,
+            "y": 4875,
+            "scale": 1
+          },
+          "applied": {
+            "preload": false,
+            "viewport": false
+          },
+          "warnings": [],
+          "incomplete": false,
+          "client": {
+            "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+            "userId": "X7X4KK7zca5U2Ics",
+            "lane": "gm",
+            "isGM": true,
+            "foundryVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.3",
+            "moduleVersion": "0.1.0"
+          }
+        }
+      },
+      {
+        "before": {
+          "correlationId": "prompt4-527f290d-0c83-4065-825b-0d177698cd56",
+          "acknowledged": true,
+          "replayed": false,
+          "acknowledgedAt": "2026-10-03T03:15:39.772Z",
+          "clientUserId": "edtBL96Yu3058QAT",
+          "executingClientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+          "expectedSceneId": null,
+          "activeSceneId": "Nbj38PEdvw1zX1J9",
+          "scenePreloaded": false,
+          "activeSceneMatches": true,
+          "sceneReady": false,
+          "assets": [],
+          "viewport": {
+            "x": 475,
+            "y": 875,
+            "scale": 1
+          },
+          "applied": {
+            "preload": false,
+            "viewport": false
+          },
+          "warnings": [],
+          "incomplete": false,
+          "client": {
+            "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+            "userId": "edtBL96Yu3058QAT",
+            "lane": "player",
+            "isGM": false,
+            "foundryVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.3",
+            "moduleVersion": "0.1.0"
+          }
+        },
+        "after": {
+          "correlationId": "prompt4-restore-inspection-80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+          "acknowledged": true,
+          "replayed": false,
+          "acknowledgedAt": "2026-10-03T03:26:52.255Z",
+          "clientUserId": "edtBL96Yu3058QAT",
+          "executingClientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+          "expectedSceneId": null,
+          "activeSceneId": "Nbj38PEdvw1zX1J9",
+          "scenePreloaded": false,
+          "activeSceneMatches": true,
+          "sceneReady": false,
+          "assets": [],
+          "viewport": {
+            "x": 722.0237213027873,
+            "y": 741.7455532346993,
+            "scale": 0.6802576820846127
+          },
+          "applied": {
+            "preload": false,
+            "viewport": false
+          },
+          "warnings": [],
+          "incomplete": false,
+          "client": {
+            "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+            "userId": "edtBL96Yu3058QAT",
+            "lane": "player",
+            "isGM": false,
+            "foundryVersion": "14.368",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.3",
+            "moduleVersion": "0.1.0"
+          }
+        }
+      }
+    ]
+  }
+}

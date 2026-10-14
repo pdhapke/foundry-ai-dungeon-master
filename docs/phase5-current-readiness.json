@@ -1,0 +1,23 @@
+{
+  "capturedAt": "2026-10-02T23:57:52.870Z",
+  "clients": [
+    {
+      "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+      "userId": "X7X4KK7zca5U2Ics",
+      "isGM": true,
+      "lane": "gm",
+      "optedIn": true,
+      "connectedAt": 1790985267084,
+      "systemVersion": "6.0.3"
+    }
+  ],
+  "requested": {
+    "sceneId": "xj5praphJhGr6mxL",
+    "userId": "4Nv47EuKFy06C6eO",
+    "tokenId": "4Jgz4kpyTaMpkdHn"
+  },
+  "perception": {
+    "available": false,
+    "message": "{\"code\":\"NOT_CONNECTED\",\"message\":\"The selected user's opted-in rendering client is disconnected.\",\"retryable\":true}"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "capturedAt": "2026-10-04T00:19:42.041Z",
+  "inferenceRequests": 0,
+  "restarts": 0,
+  "live": {
+    "startedAt": "2026-10-04T00:13:36.274Z",
+    "manifestDigest": "1b43424500ff780da7c5e6e8145f6cb46d0a523d89933dbb4f7f1dafae89f156",
+    "wrongPrivacyPathHash": null,
+    "correctPrivacyPathListed": false
+  },
+  "diskOnly": {
+    "manifestDigest": "e416aacd4392d2e9310810142654338cd868a4eef47d99d28c6614b5b185c4d9",
+    "entries": 53,
+    "missing": [],
+    "correctPrivacyHash": "0f83085e59e734c791c9960019d38be4ae5751333c11fdd4577c896284dc0a19"
+  },
+  "runtimeProof": "Blocked until Peter manually stops, followed by approved visible-alias startup; live old snapshot not replaced"
+}

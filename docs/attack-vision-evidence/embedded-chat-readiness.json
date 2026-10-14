@@ -1,0 +1,33 @@
+{
+  "capturedAt": "2026-10-02T04:29:29.528Z",
+  "runtimeHealth": {
+    "status": "ready",
+    "details": {
+      "processLive": true,
+      "foundryDependencyConfigured": true,
+      "foundryDependencyReady": true,
+      "localAuthenticationReady": true,
+      "chatGptPlanAuthorizationPresent": true,
+      "openAiApiKeyFallbackConfigured": false,
+      "signingKeyPersistent": true
+    }
+  },
+  "safeConfiguration": {
+    "authMode": "existing",
+    "configuredModel": "gpt-5.4 (source fallback; no eligible selected model)",
+    "apiKeyFallbackEnabled": false,
+    "apiKeyPresent": false
+  },
+  "persistedWorldAuthorization": {
+    "sessionPresent": true,
+    "selectedModel": null,
+    "expired": true,
+    "blockedWorld": false
+  },
+  "baseline": {
+    "source": "docs/core-rollout-evidence/live-traces.json and loaded-build.json",
+    "successfulModel": "gpt-5.6-sol",
+    "apiKeyFallbackConfigured": false
+  },
+  "conclusion": "Process/bridge healthy and persisted plan authorization present; embedded chat lacks usable model authorization/selection. Healthy service alone does not establish provider/model readiness. Exact remote discovery cause is not logged; no refresh, sign-in, provider change or inference attempted."
+}

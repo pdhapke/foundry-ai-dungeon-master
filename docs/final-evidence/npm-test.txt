@@ -1,0 +1,325 @@
+
+> foundry-ai-dungeon-master@0.1.0 test
+> node --test scripts/foundry-child-bootstrap.test.mjs && npm run test --workspaces --if-present
+
+✔ missing build output is diagnosed without spawning or throwing (1.673ms)
+✔ a synchronous spawn failure is visible and isolated from the host (0.9028ms)
+✔ duplicate evaluation guard starts one child with the Foundry runtime contract (0.4065ms)
+✔ an asynchronous child spawn error is reported without restarting (0.2187ms)
+✔ an early child exit is diagnosed and does not create a restart loop (0.2181ms)
+✔ parent shutdown terminates a live child and suppresses an expected exit error (0.1777ms)
+✔ parent shutdown does not kill a child that already exited (0.1228ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 97.9386
+
+> @foundry-ai-dungeon-master/shared@0.1.0 test
+> node --import tsx --test "src/**/*.test.ts"
+
+▶ AI Dungeon Master shared contract
+  ✔ has an explicit version and closed terminal statuses (1.5922ms)
+  ✔ keeps prompt identity out of the client-supplied payload (0.1894ms)
+  ✔ binds a provider continuation to one run record (0.1989ms)
+✔ AI Dungeon Master shared contract (3.1493ms)
+▶ AI Dungeon Master runtime schemas
+  ✔ accepts a bounded strict prompt and rejects identity injection (5.4912ms)
+  ✔ bounds prompts and deduplicates selected audiences by rejection (0.9606ms)
+  ✔ accepts safe model slugs and rejects path-shaped model selections (0.8398ms)
+  ✔ rejects oversized recursive JSON (2.0853ms)
+  ✔ rejects malformed nested server delivery payloads (2.2795ms)
+  ✔ accepts bounded automatic-auth messages and rejects browser role claims (0.8765ms)
+✔ AI Dungeon Master runtime schemas (13.5441ms)
+ℹ tests 9
+ℹ suites 2
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 364.7685
+
+> @foundry-ai-dungeon-master/server@0.1.0 test
+> node --import tsx --test --test-concurrency=4 "src/**/*.test.ts"
+
+▶ AI Dungeon Master HTTP app
+  ✔ permits returning OAuth callbacks without a repeated client ID (37.8385ms)
+  ✔ does not expose operator enrollment and returns safe health (37.0424ms)
+  ✔ notifies only configured Foundry origins after an OAuth callback (6.7383ms)
+✔ AI Dungeon Master HTTP app (83.335ms)
+▶ ChatGPT plan authorization
+  ✔ uses the pending registered client on reauthorization and rejects changed IDs (70.2057ms)
+  ✔ creates a GM-only PKCE request and encrypts its local session file (21.1994ms)
+  ✔ keeps identity-only authorization encrypted and disables inference without plan scope (26.3849ms)
+  ✔ discovers safe models, selects deterministically, persists selection, and enforces owner (84.8257ms)
+  ✔ accepts an empty catalog for status but blocks inference until explicit selection (20.5098ms)
+  ✔ coalesces concurrent cold-cache status discovery into one models GET (21.4701ms)
+  ✔ fails closed for HTTP, auth, malformed, redirect, and timeout model discovery (228.6828ms)
+  ✔ clears the model cache when OAuth access tokens rotate and never calls inference (28.911ms)
+  ✔ clears stale ready status when model rediscovery becomes transiently unavailable (19.5351ms)
+  ✔ invalidates persisted readiness when model authorization is rejected (18.0331ms)
+  ✔ invalidates authorization when refresh drops direct-plan scope (24.7741ms)
+  ✔ serializes refresh, rotates encrypted tokens, and reports sign-out revocation (40.6944ms)
+  ✔ rejects a callback when the initiating local session expired or was revoked (6.5946ms)
+  ✔ does not persist OAuth tokens when the local session is revoked during exchange (23.7097ms)
+  ✔ keeps OAuth ownership with the exact GM and reuses its registration (16.7205ms)
+✔ ChatGPT plan authorization (655.1006ms)
+▶ AI Dungeon Master enrollment
+  ✔ binds one-time enrollment to exact verified world, user, lane, and client (2.9379ms)
+  ✔ consumes a mismatched code and never returns a session (0.4923ms)
+✔ AI Dungeon Master enrollment (4.3523ms)
+▶ authoritative Foundry local sessions
+  ✔ uses a random 256-bit single-use challenge and authoritative GM role (5.2681ms)
+  ✔ rejects browser role or user spoofing, invalid signatures, and GM/lane inconsistency (1.0254ms)
+  ✔ atomically allows only one winner when the same challenge is raced (0.5597ms)
+  ✔ rejects world, user-client, browser, connection, and challenge substitution (1.2474ms)
+  ✔ rejects expired challenges and assertions (1.8631ms)
+  ✔ binds sessions, stores only hashes, expires, and revokes (1.3001ms)
+  ✔ rejects expired and legacy auth-version sessions (0.7719ms)
+✔ authoritative Foundry local sessions (13.4017ms)
+▶ durable AI Dungeon Master enrollment
+  ✔ stores only credential hashes and authenticates after service reconstruction (8.7309ms)
+✔ durable AI Dungeon Master enrollment (10.423ms)
+✔ scripted setup → exact approval → persisted canon → prep → refreshed recall (real filesystem/SQLite, no model) (454.0262ms)
+✔ digest, stale revisions, reject/cancel, metadata and cross-scope policies (370.758ms)
+✔ privacy denial and cancelled run cannot persist drafts/canon (16.7134ms)
+✔ expired proposals, revoked approval and interrupted draft checkpoint remain safe (149.9472ms)
+✔ overview and indexed retrieval withhold context during interrupted writes (179.6566ms)
+✔ restart reconciles durable filesystem receipt after missing SQLite completion checkpoint (227.4216ms)
+✔ partial commit is rolled back on authorized inspection and never redispatched (189.7717ms)
+✔ authenticated adapter exposes campaign wrappers but no model approval (94.3174ms)
+✔ campaign decisions wait for manual turn and cancellation releases their queue position (3.3666ms)
+✔ a separate process winning rejection prevents parent approval dispatch (516.0467ms)
+✔ independent process approval cannot be overwritten by an overlapping reject (542.6208ms)
+✔ discovers loaded semantic dice through adapter/catalog/durable native MCP, replays exact input and refuses conflict (49.7572ms)
+✔ discoverable private note is a durable proposal, no mutation before separate human approval (10.0481ms)
+✔ projects authorized reads without hidden tokens/secrets; unknown tools and commit bypass stay unavailable (15.4804ms)
+✔ underlying MCP schema drift invalidates semantic grant; revoked or released capabilities cannot execute (7.1502ms)
+✔ uncertain durable dice receipt never redispatches; wrong scope and schema arguments deny before mutation (13.7921ms)
+✔ response cancellation interrupts noncooperative discovery action and forbids response replay (10.3772ms)
+✔ real Python wrapper HTTP contract reaches adapter catalog and controlled MCP without a model (4392.2654ms)
+✔ strict effect/budget boundaries and stale private-note preflight block every game mutation (8.2397ms)
+▶ ChatKit gateway (mock sidecar)
+  ✔ native confirmation endpoint authenticates and verifies current GM without model credentials or provider calls (66.8813ms)
+  ✔ rejects expired sessions and players before resolving credentials (10.0013ms)
+  ✔ preserves native SSE and confines credentials to authenticated loopback (27.8015ms)
+  ✔ checks current GM authorization and origin; preflight does not request credentials (26.5632ms)
+  ✔ reports unavailable service without leaking errors (6.2788ms)
+  ✔ permits the observed official ChatKit frame header on browser preflight (7.2794ms)
+✔ ChatKit gateway (mock sidecar) (146.1401ms)
+▶ ChatKit bridge lifecycle (mock sidecar, real HTTP)
+  ✔ issues capability only internally and releases after streamed response (7.4657ms)
+  ✔ does not forward a chunk after live GM authorization is revoked (7.656ms)
+  ✔ bounds unresponsive headers and stalled stream; releases capabilities (127.6286ms)
+  ✔ closes a stream that stalls after its first chunk and cancels the run capability (48.435ms)
+✔ ChatKit bridge lifecycle (mock sidecar, real HTTP) (191.6917ms)
+✔ authenticated HTTP ingress serializes streams and rejects replay across multiple clients (mock sidecar) (36.9487ms)
+✔ fails closed on unreviewed SDK inference before credentials/capability/provider dispatch (28.6836ms)
+✔ provider-mocked native roll returns real fixture receipt; repeated delivery and concurrent calls evaluate once (8.17ms)
+✔ provider-mocked proposal preflights only; exact confirmed transaction creates one private escaped session note (6.0232ms)
+✔ provider-mocked rejected, stale, expired, revoked, wrong-thread/world, arbitrary and malformed actions have no effects (12.7664ms)
+✔ provider-mocked uncertain timeout, disconnect, malformed receipt and restart never blindly repeat effects (43.4538ms)
+✔ provider-mocked cancellation before approval dispatch leaves pending and no effect (1.606ms)
+✔ provider-mocked wrong formula, empty/wrong dice, impossible values and false total become uncertain without reroll (9.1636ms)
+✔ provider-mocked native resolved individual dice and parentheses expressions are accepted (2.3557ms)
+✔ provider-mocked concurrent approvals execute once and persisted receipt survives database reopen (46.2889ms)
+▶ ChatKit bounded adapter (controlled MCP fixture; no model)
+  ✔ guarantees overview and explicitly assigned off-scene party while surfacing unassigned characters (70.4983ms)
+  ✔ builds equivalent authorized campaign/rules/character/combat context for prompts and actions (45.5379ms)
+  ✔ reads selected scene and actor through reviewed catalog and projects results (3.7687ms)
+  ✔ does not trust hinted scene and uses equivalent ordinary/action context (1.2734ms)
+  ✔ denies revoked GM and switched world including revocation during provider read (1.1998ms)
+  ✔ binds world, user, thread and denies malformed/unreviewed operations before any read (1.2161ms)
+  ✔ expires capabilities and enforces per-run call budget (6.6864ms)
+  ✔ bounds noncooperative provider timeout and cancels on run/client disconnect (64.3658ms)
+  ✔ requires internal authentication plus scope at real HTTP boundary (59.6508ms)
+✔ ChatKit bounded adapter (controlled MCP fixture; no model) (256.1714ms)
+✔ one scripted adapter journey joins approved campaign, preparation, attributed context, trusted dice and durable recall (real FS/SQLite; fake model/MCP) (563.7162ms)
+✔ bounded automatic observation hashes deduplicate across GM clients and reject scope or hash tampering (7.1607ms)
+✔ serializes prompts/custom actions across clients, persists replay and recovers interrupted states (real SQLite) (5.6291ms)
+✔ queued cancellation releases ordering without dispatch; AI echoes/malformed IDs cannot infer (1.1146ms)
+✔ real disk reopen preserves settled IDs and marks crashed inference interrupted (95.4212ms)
+▶ AI Dungeon Master server configuration
+  ✔ is loopback-only and remains testable without live provider keys (2.9423ms)
+  ✔ rejects remote provider URLs and remote server binds (0.5875ms)
+  ✔ requires persistent signing and process-tree broker keys in production (0.6276ms)
+  ✔ keeps the API-key provider disabled unless fallback is explicitly enabled (0.73ms)
+✔ AI Dungeon Master server configuration (6.5485ms)
+✔ real files: missing folder, revision checks, bounded content and world isolation (62.3132ms)
+✔ private writes fail closed without trusted deployment verification (5.9218ms)
+✔ storage budgets and world identifiers remain explicitly bounded (2.804ms)
+✔ real directory junction escape and cooperative concurrent lock are rejected (22.6775ms)
+✔ interrupted batch denies reads and recovers old state across repository restart (52.9303ms)
+✔ recoverable journal validates world, staging links and interrupted rename (35.0514ms)
+✔ durable transaction receipts prevent conflicting replay and recover a committed marker (48.6421ms)
+✔ independent regression: every accepted prior snapshot remains recoverable (260.64ms)
+✔ independent processes: live writer excludes edits and killed writer rolls back (213.3658ms)
+✔ rejects a source excerpt whose filesystem hash changed after graph indexing (21.1995ms)
+✔ parses fail-closed semantic sections and creates conditional non-auto-follow NEXT-LOAD edges (7.25ms)
+✔ rejects traversal and absolute NEXT-LOAD paths outside the configured root (4.6467ms)
+✔ filters hidden search results and keeps resolver context out of presenter reads (20.7577ms)
+✔ does not follow NEXT-LOAD edges without explicit activation and sanitizes presenter roots (17.9808ms)
+✔ enforces cumulative node and read budgets and records exact receipts (7.739ms)
+✔ invalidates a derived summary when a source dependency revision changes (17.4532ms)
+✔ signs capsules and rejects tampering, stale dependencies, and response-chain material (1.3486ms)
+✔ builds identical root manifests from identical authoritative projections and rejects spoofed binding (2.2953ms)
+✔ requires every presenter node to be disclosable to the complete public audience (0.8195ms)
+✔ searches relevant sections, attributes hashes/spans and keeps GM instructions private (no model) (36.6338ms)
+✔ reserves overview independently, validates canon/visibility and refreshes exact hashes (65.5477ms)
+✔ reads dedicated overview beyond indexing cap and restricts document visibility and Unicode bytes (1040.3113ms)
+✔ rebinding worlds never reuses another world's context, rejects malformed IDs and refreshes source hashes (40.1251ms)
+✔ searches canonical index summaries to retrieve linked sections and surfaces broken index references (20.6355ms)
+✔ keeps index/excerpt budgets bounded and validates sources without invoking campaign scripts (57.9543ms)
+✔ rejects campaign junction escapes (real filesystem, no mocked containment) (8.4002ms)
+✔ independent overview remains guaranteed when search index reaches file cap (172.4237ms)
+✔ independent document-private metadata limits public section narration (10.9568ms)
+✔ independent Unicode campaign result fits adapter byte allocation (20.7295ms)
+▶ Foundry authoritative world gateway
+  ✔ cross-checks hinted token ownership and sanitizes public chat with read-back (3.2087ms)
+✔ Foundry authoritative world gateway (3.9771ms)
+✔ refuses proposals for tools that were not discovered and loaded in the run (1.2472ms)
+▶ direct prompt orchestration
+  ✔ durably normalizes a private prompt, starts one fresh run, and delivers a result (33.6203ms)
+  ✔ rejects unauthorized audience escalation before recording an event (3.576ms)
+  ✔ allows only the run owner or a same-world GM to cancel a run (9.3467ms)
+  ✔ persists a GM table result into recipient-specific transcripts (10.1155ms)
+  ✔ delivers terminal cleanup to every recipient without exposing GM diagnostics (12.9954ms)
+  ✔ routes an authenticated automatic combat event through the same durable run path (8.0939ms)
+  ✔ durably binds provider acceptance and delivers a safe deterministic GM failure (8.1508ms)
+✔ direct prompt orchestration (87.2613ms)
+▶ AI Dungeon Master proposal policy
+  ✔ requires GM approval and derives trusted metadata server-side (10.5116ms)
+  ✔ refuses consequential legacy tools without CAS and idempotency (0.8409ms)
+  ✔ rejects stale revision and otherwise issues one-call idempotent grants (0.6571ms)
+✔ AI Dungeon Master proposal policy (13.0336ms)
+▶ source-aware Responses provider selection
+  ✔ passes the exact server-selected model to the Responses invocation (2.9877ms)
+  ✔ uses ChatGPT only when eligible and API-key fallback only when absent (0.7971ms)
+  ✔ fails closed without invoking either provider when ChatGPT is blocked (0.5063ms)
+  ✔ sends the bounded SIWC request contract with OAuth and namespaced local tools (36.6003ms)
+  ✔ handles split frames, split UTF-8, comments, and multiple frames per chunk (5.3873ms)
+  ✔ parses the SSE body even when an intermediary supplies a non-SSE content type (2.0175ms)
+  ✔ does not accept a non-SSE JSON body as a completed response (5.9718ms)
+  ✔ requires response.completed and distinguishes failed, incomplete, error, EOF, and malformed SSE (63.3135ms)
+  ✔ does not retry HTTP or ambiguous transport failures and exposes only safe diagnostics (46.0507ms)
+  ✔ invalidates stale readiness and requires reconnect after HTTP 401 or 403 (31.1841ms)
+  ✔ rejects invalid tools and oversized requests before dispatch (3.5848ms)
+  ✔ classifies pre-dispatch caller abort without invoking OAuth or fetch (0.3264ms)
+✔ source-aware Responses provider selection (200.3646ms)
+▶ AI Dungeon Master runner
+  ✔ continues tool calls only inside one run and completes structurally (5.1929ms)
+  ✔ withholds provider text until a structured completion is validated (1.1067ms)
+  ✔ refuses to start a fresh run with a prior response chain (0.6206ms)
+  ✔ returns typed cancellation without calling the provider (0.229ms)
+  ✔ retries only an explicitly pre-dispatch failure within the attempt budget (0.4956ms)
+  ✔ does not duplicate a request after an accepted or ambiguous provider failure (0.5953ms)
+  ✔ does not retry an unclassified provider failure (0.3077ms)
+✔ AI Dungeon Master runner (9.5988ms)
+▶ AI Dungeon Master operational database
+  ✔ creates the schema, persists it across restart, and applies hardened pragmas (42.707ms)
+  ✔ preserves but revokes legacy enrollment sessions during the v3 upgrade (77.0468ms)
+  ✔ uses the online backup API before migrating a pre-existing database (56.9589ms)
+  ✔ fails closed on migration checksum drift (53.4861ms)
+  ✔ preserves and refuses a corrupt database (2.6354ms)
+✔ AI Dungeon Master operational database (234.0645ms)
+▶ AI Dungeon Master operational store
+  ✔ assigns monotonic event sequences and detects conflicting replay (51.6397ms)
+  ✔ orders messages and deliveries and restores paged transcript history (45.2085ms)
+  ✔ keeps provider continuation chains isolated to one fresh run (45.8957ms)
+  ✔ deduplicates approvals and commit receipts while rejecting conflicts (47.5482ms)
+  ✔ recovers expired outbox leases and marks uncertain work for reconciliation (60.9213ms)
+  ✔ redacts credential-shaped JSON keys before persistence (34.1856ms)
+✔ AI Dungeon Master operational store (286.6948ms)
+▶ trusted catalog snapshots
+  ✔ adapts an injected live MCP tools/list client without network behavior (11.0513ms)
+  ✔ has a stable order-independent revision and quarantines tools without exact metadata (1.2715ms)
+  ✔ changes catalog and policy-view revisions for schema and permission changes (0.7243ms)
+  ✔ rejects duplicate provider names and duplicate metadata deterministically (0.6238ms)
+✔ trusted catalog snapshots (14.6779ms)
+▶ search and deferred loading
+  ✔ filters by principal without returning denied tools or denied counts (2.3983ms)
+  ✔ loads a full schema only after search and binds an expiring digest grant (1.0453ms)
+  ✔ adds only one hop of related tools after lexical ranking (0.715ms)
+  ✔ enforces search and loaded-definition budgets (1.2538ms)
+✔ search and deferred loading (5.7558ms)
+▶ grant-only execution facade
+  ✔ validates arguments and invokes only the tool bound to a loaded grant (1.9805ms)
+  ✔ rejects grants after provider catalog change and after expiry (0.7226ms)
+  ✔ replays guaranteed idempotent commits and rejects key reuse with changed arguments (0.9599ms)
+  ✔ denies guaranteed commits when no store-backed authorizer is injected (0.5077ms)
+✔ grant-only execution facade (4.3786ms)
+▶ cross-domain spell and item workflow
+  ✔ discovers the workflow without an interaction classifier and keeps legacy writes proposal-only (2.1133ms)
+✔ cross-domain spell and item workflow (2.2131ms)
+▶ AI Dungeon Master WebSocket gateway
+  ✔ rejects missing and non-allowlisted Origins before WebSocket acceptance (32.1236ms)
+  ✔ authorizes allow-all only through a connected, current, same-world GM session (23.4786ms)
+  ✔ routes by world and user and revalidates session expiry before commands (9.6828ms)
+✔ AI Dungeon Master WebSocket gateway (66.3192ms)
+ℹ tests 172
+ℹ suites 21
+ℹ pass 172
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5983.5576
+
+> @foundry-ai-dungeon-master/module@0.1.0 test
+> node --import tsx --test --test-concurrency=1 "src/**/*.test.ts"
+
+✔ cancel/close at thread HTTP, body, and component awaits prevents later dispatch or stale persistence (mocked component) (178.1931ms)
+✔ independent stale component thread event cannot write another world's pointer (153.7699ms)
+✔ mounted ChatKit uses one owner-scoped thread for actions, aborts streams and removes listeners on reopen (mocked component) (204.3998ms)
+✔ independent cancellation during ChatKit readiness prevents later dispatch (153.3155ms)
+✔ identical multi-client events hash equally; distinct keyed areas and reentries remain distinct (mocked timers) (38.3797ms)
+✔ disable/world changes and lifecycle cancellation abort queued timers and dispatched turns (140.4963ms)
+✔ only reviewed structured bridge provenance suppresses events; arbitrary identity strings are not grants (0.2982ms)
+✔ exact campaign review verifies complete content, scope and digest (17.3309ms)
+✔ partial/tampered/missing reviews cannot be approved (2.1314ms)
+✔ completion is displayed as verified only with matching durable receipt (1.1155ms)
+✔ ChatGPT authorization panel explains readiness failures without identity or credentials (mocked status) (1.0228ms)
+▶ ChatKit context and trigger boundary (mocked Foundry)
+  ✔ rejects hidden/arbitrary fields and bounds the allowlist (1.7028ms)
+  ✔ rejects player extraction and never copies document secrets (0.3215ms)
+  ✔ deduplicates request IDs, rejects overlap, releases on cancellation, and expires IDs (0.2848ms)
+✔ ChatKit context and trigger boundary (mocked Foundry) (3.1861ms)
+✔ uses the documented development key only for exact loopback hosts (0.7502ms)
+▶ AI Dungeon Master model selection
+  ✔ allows only an authenticated GM to select a server-advertised eligible model (150.5305ms)
+  ✔ blocks GM inference until authoritative provider readiness is restored (1.1653ms)
+  ✔ does not expose the nonfunctional run retry action (0.704ms)
+✔ AI Dungeon Master model selection (153.3156ms)
+✔ registered physical Region, remote combat, door and cancellation hooks (mocked Foundry API) (784.5243ms)
+▶ AI Dungeon Master client store
+  ✔ deduplicates deliveries and detects reconnect gaps (1.0204ms)
+  ✔ restores ordered history without duplicating message IDs (0.8759ms)
+  ✔ assembles ordered output deltas and records approval cards (0.2726ms)
+  ✔ preserves safe failure details and removes partial output on terminal delivery (0.2819ms)
+  ✔ removes partial output and stale failure details when a run completes (0.1698ms)
+  ✔ accepts an authenticated history snapshot as a recipient cursor baseline (0.1689ms)
+  ✔ does not advance the recipient cursor for a malformed stream delta (0.1211ms)
+  ✔ requires an eligible selected model before marking ChatGPT inference ready (0.3762ms)
+  ✔ clears authoritative model readiness on a reconnect-required provider failure (0.2606ms)
+✔ AI Dungeon Master client store (4.6292ms)
+▶ AI Dungeon Master browser authentication
+  ✔ supplies ChatKit headers only for a current authenticated GM without persisting credentials (8.0343ms)
+  ✔ automatically authenticates a GM without browser role claims or persistent secrets (1.2238ms)
+  ✔ does not treat identity-only ChatGPT sign-in as inference-ready (2.189ms)
+  ✔ uses the server-authenticated player lane and blocks ChatGPT sign-in (0.5683ms)
+  ✔ fails closed on a malformed Foundry acknowledgement (0.5138ms)
+  ✔ has no manual enrollment controls (0.4591ms)
+  ✔ retries disconnects with bounded exponential backoff (0.3606ms)
+✔ AI Dungeon Master browser authentication (14.4051ms)
+ℹ tests 35
+ℹ suites 4
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4050.7078

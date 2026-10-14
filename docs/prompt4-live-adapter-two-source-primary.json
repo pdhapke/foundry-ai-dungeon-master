@@ -1,0 +1,232 @@
+{
+  "capturedAt": "2026-10-03T03:22:11.874Z",
+  "operation": "player_surroundings",
+  "scope": "Current source ChatKitReadTools + production authenticated MCP transport. Not loaded AI HTTP route, Python or embedded chat; no narration or browser assertion.",
+  "identity": {
+    "worldId": "izzy-campaign",
+    "userId": "X7X4KK7zca5U2Ics",
+    "clientId": "6489d1c8-8937-42ce-8126-ef036fdfadd5",
+    "lane": "gm",
+    "isGm": true
+  },
+  "cases": [
+    {
+      "label": "selected-player",
+      "result": {
+        "version": 1,
+        "status": "ready",
+        "binding": {
+          "worldId": "izzy-campaign",
+          "sceneId": "cbyniU1p5punoUkD",
+          "userId": "edtBL96Yu3058QAT",
+          "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+          "tokenId": "yG5NYzuzG5YgBslE",
+          "stateRevision": "d4a2f166a2bc0d92f082cd52e3cdae694f6c93318f66c577149beea0588aeedd",
+          "observationId": "1cf3562c-dd56-44e1-a472-6956724d7411"
+        },
+        "facts": [
+          {
+            "kind": "visible-door",
+            "description": "A closed door is visible.",
+            "basis": "native-visible-barrier",
+            "decision": {
+              "visibility": "public",
+              "audience": {
+                "kind": "public"
+              },
+              "activation": {
+                "status": "active",
+                "conditionRef": null
+              },
+              "dependencies": [
+                {
+                  "nodeId": "03d5e3a08368296b6d737bf5c7e12fe40241be30bcfaf3e977bc9585f948a339",
+                  "revision": "d4a2f166a2bc0d92f082cd52e3cdae694f6c93318f66c577149beea0588aeedd"
+                }
+              ],
+              "policyRevision": "player-surroundings-v1"
+            }
+          }
+        ],
+        "unknowns": [
+          "threat",
+          "being-noticed",
+          "trap",
+          "unobserved-area"
+        ],
+        "sourceRevision": "a1177666460af14d22d62da5145b19e46ad2293f2bda37171a585c874a5c7023"
+      },
+      "adapterMs": 1449.684799999999
+    },
+    {
+      "label": "gm-substitution",
+      "result": {
+        "version": 1,
+        "status": "NOT_CONNECTED",
+        "binding": null,
+        "facts": [],
+        "unknowns": [
+          "threat",
+          "being-noticed",
+          "trap",
+          "unobserved-area"
+        ],
+        "sourceRevision": null,
+        "issues": []
+      },
+      "adapterMs": 1061.5005
+    }
+  ],
+  "calls": [
+    {
+      "name": "foundry_get_world",
+      "arguments": {},
+      "startedAt": "2026-10-03T03:22:07.850Z",
+      "durationMs": 137.9989999999998,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_capability_report",
+      "arguments": {},
+      "startedAt": "2026-10-03T03:22:07.988Z",
+      "durationMs": 12.369399999999587,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_world",
+      "arguments": {},
+      "startedAt": "2026-10-03T03:22:09.372Z",
+      "durationMs": 35.10369999999966,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_user_by_id",
+      "arguments": {
+        "userId": "X7X4KK7zca5U2Ics"
+      },
+      "startedAt": "2026-10-03T03:22:09.372Z",
+      "durationMs": 51.863900000000285,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_user_status",
+      "arguments": {
+        "userId": "X7X4KK7zca5U2Ics"
+      },
+      "startedAt": "2026-10-03T03:22:09.372Z",
+      "durationMs": 56.84350000000086,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_capability_report",
+      "arguments": {},
+      "startedAt": "2026-10-03T03:22:10.659Z",
+      "durationMs": 9.0028999999995,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_token_visibility",
+      "arguments": {
+        "sceneId": "cbyniU1p5punoUkD",
+        "tokenId": "yG5NYzuzG5YgBslE",
+        "effectiveUserId": "edtBL96Yu3058QAT",
+        "clientId": "80f7f865-6ebf-4a83-ad44-33ab0c0747f2",
+        "queryPoints": []
+      },
+      "startedAt": "2026-10-03T03:22:10.668Z",
+      "durationMs": 54.374399999998786,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_capability_report",
+      "arguments": {},
+      "startedAt": "2026-10-03T03:22:10.723Z",
+      "durationMs": 12.211900000000242,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_world",
+      "arguments": {},
+      "startedAt": "2026-10-03T03:22:10.735Z",
+      "durationMs": 31.66700000000128,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_user_by_id",
+      "arguments": {
+        "userId": "X7X4KK7zca5U2Ics"
+      },
+      "startedAt": "2026-10-03T03:22:10.735Z",
+      "durationMs": 34.28260000000046,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_user_status",
+      "arguments": {
+        "userId": "X7X4KK7zca5U2Ics"
+      },
+      "startedAt": "2026-10-03T03:22:10.735Z",
+      "durationMs": 37.63040000000001,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_world",
+      "arguments": {},
+      "startedAt": "2026-10-03T03:22:10.813Z",
+      "durationMs": 36.629799999998795,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_user_by_id",
+      "arguments": {
+        "userId": "X7X4KK7zca5U2Ics"
+      },
+      "startedAt": "2026-10-03T03:22:10.813Z",
+      "durationMs": 39.90380000000005,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_user_status",
+      "arguments": {
+        "userId": "X7X4KK7zca5U2Ics"
+      },
+      "startedAt": "2026-10-03T03:22:10.813Z",
+      "durationMs": 42.895800000000236,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_capability_report",
+      "arguments": {},
+      "startedAt": "2026-10-03T03:22:11.827Z",
+      "durationMs": 5.170600000001286,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_world",
+      "arguments": {},
+      "startedAt": "2026-10-03T03:22:11.833Z",
+      "durationMs": 34.17330000000038,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_user_by_id",
+      "arguments": {
+        "userId": "X7X4KK7zca5U2Ics"
+      },
+      "startedAt": "2026-10-03T03:22:11.833Z",
+      "durationMs": 37.27089999999953,
+      "outcome": "returned"
+    },
+    {
+      "name": "foundry_get_user_status",
+      "arguments": {
+        "userId": "X7X4KK7zca5U2Ics"
+      },
+      "startedAt": "2026-10-03T03:22:11.833Z",
+      "durationMs": 39.08379999999852,
+      "outcome": "returned"
+    }
+  ],
+  "inferenceRequests": 0,
+  "mutations": 0
+}

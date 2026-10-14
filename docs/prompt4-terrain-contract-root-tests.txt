@@ -1,0 +1,19 @@
+✔ complete player evidence projects known fields only; arbitrary instructions and hidden counts never pass (16.5491ms)
+✔ raw injected issue text is rejected without forwarding messages or subject IDs (1.0266ms)
+✔ missing/malformed revisions, worlds, consent, GM view, owned context and unsafe identifiers fail closed (2.512ms)
+✔ pending render/state drift is stale; incomplete/truncated/missing signal returns unavailable without stale claims (1.0328ms)
+✔ explicit disconnect result is content-free and never substitutes a GM view (0.2407ms)
+✔ production bounded read allowlist dispatches only selected player query and filters injected fields (21.7674ms)
+✔ first player action initializes cold catalog without private GM context (3.1213ms)
+✔ disconnected player has explicit unavailable evidence; post-read revocation cannot masquerade as availability (3.5598ms)
+✔ exact-client projection rejects another player browser (0.6251ms)
+✔ adapter rejects asynchronous reconnect, consent and lane drift (4.0156ms)
+✔ terrain campaign through authenticated adapter and actual Python safe action/store (8676.6204ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9503.3021

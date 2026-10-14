@@ -1,0 +1,487 @@
+[
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Cannot find name 'error'. Did you mean 'Error'?"
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 40,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 78,
+    "message": "Cannot find name 'resolve'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 78,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 78,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 78,
+    "message": "Expected 1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 78,
+    "message": "Cannot find name 'resolve'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 86,
+    "message": "This member cannot have an 'override' modifier because it is not declared in the base class '{ render(options?: { force?: boolean; } | undefined): unknown; close(options?: Record<string, unknown> | undefined): Promise<void>; element: HTMLElement; }'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 87,
+    "message": "This member cannot have an 'override' modifier because it is not declared in the base class '{ render(options?: { force?: boolean; } | undefined): unknown; close(options?: Record<string, unknown> | undefined): Promise<void>; element: HTMLElement; }'. Did you mean 'render'?"
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 95,
+    "message": "Cannot find name 'error'. Did you mean 'Error'?"
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 95,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 95,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 95,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 95,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 95,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 110,
+    "message": "Cannot find name 'model'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 110,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 110,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 110,
+    "message": "Cannot find name 'model'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 110,
+    "message": "Cannot find name 'model'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 110,
+    "message": "Cannot find name 'model'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 123,
+    "message": "Argument of type 'unknown' is not assignable to parameter of type 'string | Node'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 127,
+    "message": "Cannot find name 'error'. Did you mean 'Error'?"
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 127,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 127,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 127,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 128,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 128,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 128,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 129,
+    "message": "'event' is possibly 'undefined'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 129,
+    "message": "Property 'detail' does not exist on type 'Event'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 129,
+    "message": "Object is possibly 'null'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 130,
+    "message": "'event' is possibly 'undefined'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 130,
+    "message": "Property 'detail' does not exist on type 'Event'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 133,
+    "message": "Expected 2-3 arguments, but got 4."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 134,
+    "message": "Untyped function calls may not accept type arguments."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 144,
+    "message": "Variable 'latency' implicitly has type 'any' in some locations where its type cannot be determined."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 144,
+    "message": "Variable 'pendingKey' implicitly has type 'any' in some locations where its type cannot be determined."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 158,
+    "message": "Cannot find name 'byte'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 158,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 158,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 158,
+    "message": "Cannot find name 'byte'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 185,
+    "message": "Variable 'latency' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 186,
+    "message": "Variable 'latency' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 188,
+    "message": "Variable 'pendingKey' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 193,
+    "message": "Variable 'latency' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 199,
+    "message": "Variable 'latency' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 201,
+    "message": "Variable 'latency' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 232,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 232,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 232,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 232,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 232,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 273,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 273,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 273,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 273,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 273,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 296,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 296,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 296,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 296,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 296,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 307,
+    "message": "Type 'string | Record<string, unknown> | undefined' is not assignable to type 'string | null'.   Type 'undefined' is not assignable to type 'string | null'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 312,
+    "message": "Variable 'buttons' implicitly has type 'any[]' in some locations where its type cannot be determined."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 317,
+    "message": "Variable 'buttons' implicitly has an 'any[]' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 317,
+    "message": "Cannot find name 'control'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 317,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 317,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 317,
+    "message": "Cannot find name 'control'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 344,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 344,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 344,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 344,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 344,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 372,
+    "message": "Type 'string | undefined' is not assignable to type 'string | null'.   Type 'undefined' is not assignable to type 'string | null'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 374,
+    "message": "Type 'string | undefined' is not assignable to type 'string | null'.   Type 'undefined' is not assignable to type 'string | null'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 379,
+    "message": "Variable 'buttons' implicitly has type 'any[]' in some locations where its type cannot be determined."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 389,
+    "message": "Variable 'buttons' implicitly has an 'any[]' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 391,
+    "message": "Cannot find name 'error'."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 391,
+    "message": "',' expected."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 391,
+    "message": "Parameter 'any' implicitly has an 'any' type."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 391,
+    "message": "Expected 0-1 arguments, but got 2."
+  },
+  {
+    "file": "C:/dev/FoundryVtt/Data/Data/modules/foundry-ai-dungeon-master/module/src/ai-dungeon-master/application.ts",
+    "line": 392,
+    "message": "Cannot find name 'error'."
+  }
+]

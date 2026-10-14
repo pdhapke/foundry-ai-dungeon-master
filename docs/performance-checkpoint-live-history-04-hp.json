@@ -1,0 +1,170 @@
+{
+  "readOnly": true,
+  "cutoff": "2026-10-02T15:42:31",
+  "items": [
+    {
+      "rowid": 72,
+      "item": {
+        "id": "msg_tool_abcb812d3ab50435ca3e122f719a9bca",
+        "thread_id": "thr_8a80466f",
+        "created_at": "2026-10-02T15:45:38.323422Z",
+        "type": "hidden_context_item",
+        "content": {
+          "type": "authoritative_tool_exchange_v1",
+          "items": [
+            {
+              "type": "function_call",
+              "call_id": "call_ZfGQONi7xq7muzZNy0dh3Ko2",
+              "name": "foundry_set_pause_state",
+              "arguments": "{\"paused\":false}"
+            },
+            {
+              "type": "function_call_output",
+              "call_id": "call_ZfGQONi7xq7muzZNy0dh3Ko2",
+              "output": "{\"outcome\": \"confirmed\", \"mutated\": true, \"stateObservedAtMs\": 1790955938281, \"paused\": false, \"worldId\": \"izzy-campaign\", \"correlationId\": \"aidm-e3c65d79-c43f-4998-937f-6c8b295bbd4c\"}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "rowid": 73,
+      "item": {
+        "id": "msg_receipt_e21c0b84a1181007f1baedf5a9bd30a9",
+        "thread_id": "thr_8a80466f",
+        "created_at": "2026-10-02T15:45:38.338504Z",
+        "type": "assistant_message",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Game unpaused.",
+            "type": "output_text"
+          }
+        ]
+      }
+    },
+    {
+      "rowid": 75,
+      "item": {
+        "id": "msg_tool_1f31ea040cccc8a9615e8d0fbe6e78bc",
+        "thread_id": "thr_8a80466f",
+        "created_at": "2026-10-02T15:46:26.154274Z",
+        "type": "hidden_context_item",
+        "content": {
+          "type": "authoritative_tool_exchange_v1",
+          "items": [
+            {
+              "type": "function_call",
+              "call_id": "call_1shPKcohP8WoFivVJ4M4FGW2",
+              "name": "foundry_set_door_state",
+              "arguments": "{\"scene_id\":\"2RJeJKqdpEE4VZPh\",\"door_id\":\"RsB12oN5v3LYI1XR\",\"state\":\"open\"}"
+            },
+            {
+              "type": "function_call_output",
+              "call_id": "call_1shPKcohP8WoFivVJ4M4FGW2",
+              "output": "{\"worldId\": \"izzy-campaign\", \"correlationId\": \"aidm-ce843582-aa75-4d08-a670-506c33deb382\", \"schemaVersion\": \"core-actions-v1\", \"action\": {\"kind\": \"door.state\", \"sceneId\": \"2RJeJKqdpEE4VZPh\", \"targetId\": \"RsB12oN5v3LYI1XR\", \"value\": 1}, \"state\": {\"ds\": 1}, \"mutated\": true, \"outcome\": \"confirmed\"}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "rowid": 76,
+      "item": {
+        "id": "msg_receipt_63c6ede187c05525a241b1d01393fb9d",
+        "thread_id": "thr_8a80466f",
+        "created_at": "2026-10-02T15:46:26.175553Z",
+        "type": "assistant_message",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Door opened.",
+            "type": "output_text"
+          }
+        ]
+      }
+    },
+    {
+      "rowid": 78,
+      "item": {
+        "id": "msg_tool_9a43497c92f7d4f259e1f3d0ee17ef8c",
+        "thread_id": "thr_8a80466f",
+        "created_at": "2026-10-02T15:47:41.947321Z",
+        "type": "hidden_context_item",
+        "content": {
+          "type": "authoritative_tool_exchange_v1",
+          "items": [
+            {
+              "type": "function_call",
+              "call_id": "call_GbXvCbmEGgfZXZwZwnG6Sm9o",
+              "name": "foundry_move_token",
+              "arguments": "{\"scene_id\":\"2RJeJKqdpEE4VZPh\",\"token_id\":\"gHxvFbZTMoim2tYp\",\"x\":400,\"y\":300,\"mode\":\"walk\"}"
+            },
+            {
+              "type": "function_call_output",
+              "call_id": "call_GbXvCbmEGgfZXZwZwnG6Sm9o",
+              "output": "{\"worldId\": \"izzy-campaign\", \"correlationId\": \"aidm-a31a6e75-99ba-4dcb-8802-6132d283bc4a\", \"schemaVersion\": \"core-actions-v1\", \"action\": {\"kind\": \"token.position\", \"sceneId\": \"2RJeJKqdpEE4VZPh\", \"targetId\": \"gHxvFbZTMoim2tYp\", \"x\": 400, \"y\": 300, \"mode\": \"walk\"}, \"state\": {\"x\": 400, \"y\": 300}, \"mutated\": true, \"outcome\": \"confirmed\"}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "rowid": 79,
+      "item": {
+        "id": "msg_receipt_4a2152802476a570401568463ba042e4",
+        "thread_id": "thr_8a80466f",
+        "created_at": "2026-10-02T15:47:41.957954Z",
+        "type": "assistant_message",
+        "content": [
+          {
+            "annotations": [],
+            "text": "Token moved to (400, 300).",
+            "type": "output_text"
+          }
+        ]
+      }
+    },
+    {
+      "rowid": 81,
+      "item": {
+        "id": "msg_tool_2f4fbc0574e3c39c8dd646c8905d5185",
+        "thread_id": "thr_8a80466f",
+        "created_at": "2026-10-02T15:48:47.275065Z",
+        "type": "hidden_context_item",
+        "content": {
+          "type": "authoritative_tool_exchange_v1",
+          "items": [
+            {
+              "type": "function_call",
+              "call_id": "call_Agd4QRsyWv0XzVGh1RpnpYeM",
+              "name": "foundry_set_actor_hp",
+              "arguments": "{\"scene_id\":\"2RJeJKqdpEE4VZPh\",\"actor_id\":\"QvhdPrU8dHE1nm4h\",\"value\":18}"
+            },
+            {
+              "type": "function_call_output",
+              "call_id": "call_Agd4QRsyWv0XzVGh1RpnpYeM",
+              "output": "{\"worldId\": \"izzy-campaign\", \"correlationId\": \"aidm-deaee585-d340-470e-bbdc-63af142080a3\", \"schemaVersion\": \"core-actions-v1\", \"action\": {\"kind\": \"actor.hp\", \"sceneId\": \"2RJeJKqdpEE4VZPh\", \"targetId\": \"QvhdPrU8dHE1nm4h\", \"value\": 18}, \"state\": {\"value\": 18, \"max\": 20}, \"mutated\": true, \"outcome\": \"confirmed\"}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "rowid": 82,
+      "item": {
+        "id": "msg_receipt_25c5b07e54a7f5478b1fcb4b8a8e762b",
+        "thread_id": "thr_8a80466f",
+        "created_at": "2026-10-02T15:48:47.284212Z",
+        "type": "assistant_message",
+        "content": [
+          {
+            "annotations": [],
+            "text": "HP set to 18.",
+            "type": "output_text"
+          }
+        ]
+      }
+    }
+  ]
+}

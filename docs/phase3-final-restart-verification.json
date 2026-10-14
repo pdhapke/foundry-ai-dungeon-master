@@ -1,0 +1,23 @@
+{
+  "capturedAt": "2026-10-02T20:39:00.605Z",
+  "kind": "read-only-manual-restart-loaded-verification",
+  "checks": {
+    "aiManifest": true,
+    "mcpManifest": true,
+    "pythonCode": true,
+    "promptDigest": true,
+    "promptVersion": true,
+    "temporaryCapRemoved": true,
+    "defaultCap": true,
+    "fallbackDisabled": true
+  },
+  "identity": {
+    "aiManifest": "cf1b2d170efac7dc1bc23dead35fcb594f4cc35f8b0146d112169bb8909b3f66",
+    "mcpManifest": "ae348e076d5f934a769d61ed7313f9f141f8aa9466ca3ce9dc15b7b4fe01633f",
+    "pythonCode": "3d86e8d3fb2a4975e70fbbdd59f97598dc34d36a6540ad059d0a6fd4671624c4",
+    "promptDigest": "becbafcadb3c69b6352e0e71df60901c1869839f44bd6c721cd7d373293eea13",
+    "promptVersion": "solo-dm-v8-core-actions",
+    "maxModelTurns": 8
+  },
+  "pass": true
+}

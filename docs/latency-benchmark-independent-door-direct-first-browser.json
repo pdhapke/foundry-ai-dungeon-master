@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "renderedReceipt": "unobserved: requires browser observation",
+  "diagnostics": {
+    "droppedRows": 0,
+    "overBudgetEvents": 0
+  },
+  "events": [
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-submit",
+      "elapsedMs": 0.19999998807907104,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329326.2999999821
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-response-headers",
+      "elapsedMs": 252.7999999821186,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329578.89999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-first-stream-chunk",
+      "elapsedMs": 253.5,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329579.59999999404
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-action-receipt-arrival",
+      "elapsedMs": 253.7999999821186,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329579.89999997616
+    },
+    {
+      "schemaVersion": 1,
+      "traceId": "e62895c8-20f7-4b92-b978-a6241638a8e8",
+      "component": "browser",
+      "stage": "browser-stream-end",
+      "elapsedMs": 253.7999999821186,
+      "clockId": "59645f78-647e-4832-b482-71e5d3baea1b",
+      "timeOrigin": 1790965639644.5,
+      "atMs": 329579.89999997616
+    }
+  ]
+}

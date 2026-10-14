@@ -1,0 +1,18 @@
+{
+  "approvedPrompts": 2,
+  "maximumModelRequests": 6,
+  "maxModelTurnsPerPrompt": 3,
+  "providerRetries": 0,
+  "promptResubmissions": 0,
+  "provider": "selected GPT-5.6-Sol ChatGPT plan authorization only",
+  "promptsSubmitted": 2,
+  "status": "Exactly2 approved prompt submissions complete and independently validated;4 actual model requests;0 retries/resubmissions;no further inference authorized by unused allowance",
+  "promptEvidence": "phase4-live-prompt-drafts.md",
+  "firstDispatchClaimAt": "2026-10-02T23:16:11.9697466Z",
+  "actualModelRequests": 4,
+  "secondDispatchClaimAt": "2026-10-02T23:19:23.1759487Z",
+  "traceIds": [
+    "1513fce6-568c-4071-9ac9-1faa11bfeed0",
+    "7491cfa0-64e7-4e23-96d1-a3db7c481ae8"
+  ]
+}

@@ -1,0 +1,581 @@
+[96mmodule/src/ai-dungeon-master/application-cancellation.test.ts[0m:[93m84[0m:[93m23[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m84[0m   const pending = app.trigger({ prompt: "Cancel before HTTP completes", requestId: "http" });
+[7m  [0m [91m                      ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application-cancellation.test.ts[0m:[93m113[0m:[93m27[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m113[0m   const parsingTurn = app.trigger({ prompt: "Close during JSON body", requestId: "body" });
+[7m   [0m [91m                          ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application-cancellation.test.ts[0m:[93m134[0m:[93m27[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m134[0m   const settingTurn = app.trigger({
+[7m   [0m [91m                          ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application-cancellation.test.ts[0m:[93m155[0m:[93m13[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m155[0m   await app.trigger({ prompt: "New panel can play normally", requestId: "reopened" });
+[7m   [0m [91m            ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application.test.ts[0m:[93m94[0m:[93m13[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m94[0m   await app.trigger({ prompt: "First", requestId: "first", context: { sceneId: "scene" } });
+[7m  [0m [91m            ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application.test.ts[0m:[93m95[0m:[93m13[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m95[0m   await app.trigger({ prompt: "Duplicate", requestId: "first" });
+[7m  [0m [91m            ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application.test.ts[0m:[93m96[0m:[93m13[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m96[0m   await app.trigger({ prompt: "Second", requestId: "second" });
+[7m  [0m [91m            ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application.test.ts[0m:[93m120[0m:[93m9[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m120[0m     app.trigger({ prompt: "Queued one", requestId: "queue-one" }),
+[7m   [0m [91m        ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application.test.ts[0m:[93m121[0m:[93m9[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m121[0m     app.trigger({ prompt: "Queued two", requestId: "queue-two" }),
+[7m   [0m [91m        ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application.test.ts[0m:[93m153[0m:[93m18[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m153[0m   await reopened.trigger({ prompt: "Third", requestId: "third" });
+[7m   [0m [91m                 ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/application.test.ts[0m:[93m327[0m:[93m18[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 0.
+
+[7m327[0m   await reopened.reviewCampaignActions();
+[7m   [0m [91m                 ~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m320[0m:[93m33[0m
+    [7m320[0m     async reviewCampaignActions(proposalId) { const threadId = this.#threadId; if (!threadId) {
+    [7m   [0m [96m                                ~~~~~~~~~~[0m
+    An argument for 'proposalId' was not provided.
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m2[0m:[93m15[0m - [91merror[0m[90m TS7006: [0mParameter 'target' implicitly has an 'any' type.
+
+[7m2[0m var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
+[7m [0m [91m              ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m2[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'value' implicitly has an 'any' type.
+
+[7m2[0m var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
+[7m [0m [91m                      ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m15[0m:[93m28[0m - [91merror[0m[90m TS7006: [0mParameter 'work' implicitly has an 'any' type.
+
+[7m15[0m async function cancellable(work, signal) { const promise = Promise.resolve(work); if (signal.aborted) {
+[7m  [0m [91m                           ~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m15[0m:[93m34[0m - [91merror[0m[90m TS7006: [0mParameter 'signal' implicitly has an 'any' type.
+
+[7m15[0m async function cancellable(work, signal) { const promise = Promise.resolve(work); if (signal.aborted) {
+[7m  [0m [91m                                 ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS7034: [0mVariable 'runtimePromise' implicitly has type 'any' in some locations where its type cannot be determined.
+
+[7m25[0m let runtimePromise;
+[7m  [0m [91m    ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m27[0m:[93m36[0m - [91merror[0m[90m TS7005: [0mVariable 'runtimePromise' implicitly has an 'any' type.
+
+[7m27[0m     return Promise.resolve(); if (!runtimePromise)
+[7m  [0m [91m                                   ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m28[0m:[93m254[0m - [91merror[0m[90m TS2794: [0mExpected 1 arguments, but got 0. Did you forget to include 'void' in your type argument to 'Promise'?
+
+[7m28[0m     runtimePromise = new Promise((resolve, reject) => { const script = document.createElement("script"); script.src = RUNTIME_URL; script.async = true; script.addEventListener("load", () => { void customElements.whenDefined("openai-chatkit").then(() => resolve()); }, { once: true }); script.addEventListener("error", () => { runtimePromise = void 0; script.remove(); reject(new Error("ChatKit could not load. Check network access to the OpenAI CDN.")); }, { once: true }); document.head.append(script); }); return runtimePromise; }
+[7m  [0m [91m                                                                                                                                                                                                                                                             ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.es2015.promise.d.ts[0m:[93m31[0m:[93m34[0m
+    [7m31[0m     new <T>(executor: (resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void): Promise<T>;
+    [7m  [0m [96m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    An argument for 'value' was not provided.
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m260[0m - [91merror[0m[90m TS2339: [0mProperty 'trigger' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                   ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m384[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                               ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m409[0m - [91merror[0m[90m TS2339: [0mProperty 'fail' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                        ~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m497[0m - [91merror[0m[90m TS2339: [0mProperty 'trigger' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m761[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m786[0m - [91merror[0m[90m TS2339: [0mProperty 'fail' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m866[0m - [91merror[0m[90m TS2339: [0mProperty 'cancel' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m952[0m - [91merror[0m[90m TS2339: [0mProperty 'reviewActions' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m974[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m999[0m - [91merror[0m[90m TS2339: [0mProperty 'fail' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m1084[0m - [91merror[0m[90m TS2339: [0mProperty 'providerAction' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m1206[0m - [91merror[0m[90m TS2339: [0mProperty 'providerAction' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m37[0m:[93m1331[0m - [91merror[0m[90m TS2339: [0mProperty 'providerAction' does not exist on type 'never'.
+
+[7m37[0m     static DEFAULT_OPTIONS = { id: MODULE_ID, classes: [MODULE_ID], tag: "div", position: { width: 620, height: 720 }, window: { title: "AI Dungeon Master", resizable: true, minimizable: true }, actions: { contextResponse: __name(() => { void this.#instance?.trigger({ prompt: "Describe the current game situation using the supplied context.", context: currentGameContext() }).catch(error => this.#instance?.fail(error)); }, "contextResponse"), resolveAction: __name(() => { void this.#instance?.trigger({ prompt: "Resolve the selected player action using current authorized state. If the player's intent is unclear, ask for it. Use only permitted native tools; request confirmation for persistent session notes and never claim an unexecuted action." }).catch(error => this.#instance?.fail(error)); }, "resolveAction"), cancelResponse: __name(() => this.#instance?.cancel(), "cancelResponse"), reviewNativeActions: __name(() => { void this.#instance?.reviewActions().catch(error => this.#instance?.fail(error)); }, "reviewNativeActions"), chatGptSignIn: __name(() => this.#instance?.providerAction(() => aiDmController.beginChatGptSignIn()), "chatGptSignIn"), chatGptRefresh: __name(() => this.#instance?.providerAction(() => aiDmController.refreshChatGptStatus()), "chatGptRefresh"), chatGptSignOut: __name(() => this.#instance?.providerAction(() => aiDmController.signOutChatGpt()), "chatGptSignOut") } };
+[7m  [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m66[0m:[93m49[0m - [91merror[0m[90m TS2322: [0mType '() => void' is not assignable to type 'null'.
+
+[7m66[0m     constructor(options = {}) { super(options); this.#unsubscribe = aiDmController.store.subscribe(() => { if (!this.#closed)
+[7m  [0m [91m                                                ~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m68[0m:[93m66[0m - [91merror[0m[90m TS2322: [0mType 'AiDungeonMasterApplication' is not assignable to type 'null'.
+
+[7m68[0m     static open() { const instance = this.#instance ?? new this; this.#instance = instance; if (!instance.#component)
+[7m  [0m [91m                                                                 ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m70[0m:[93m43[0m - [91merror[0m[90m TS2339: [0mProperty 'cancel' does not exist on type 'never'.
+
+[7m70[0m     static cancelOpen() { this.#instance?.cancel(); }
+[7m  [0m [91m                                          ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m72[0m:[93m9[0m - [91merror[0m[90m TS18046: [0m'wake' is of type 'unknown'.
+
+[7m72[0m         wake(); this.#idleWaiters.clear(); }
+[7m  [0m [91m        ~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m73[0m:[93m23[0m - [91merror[0m[90m TS7006: [0mParameter 'signal' implicitly has an 'any' type.
+
+[7m73[0m     async waitForIdle(signal) { while (this.#guard.busy) {
+[7m  [0m [91m                      ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m85[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'abort' does not exist on type 'never'.
+
+[7m85[0m         return; this.#providerListeners?.abort(); this.#providerListeners = new AbortController; const select = this.element.querySelector("[data-chatgpt-model]"); if (select?.tagName === "SELECT")
+[7m  [0m [91m                                         ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m85[0m:[93m51[0m - [91merror[0m[90m TS2322: [0mType 'AbortController' is not assignable to type 'null'.
+
+[7m85[0m         return; this.#providerListeners?.abort(); this.#providerListeners = new AbortController; const select = this.element.querySelector("[data-chatgpt-model]"); if (select?.tagName === "SELECT")
+[7m  [0m [91m                                                  ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m86[0m:[93m118[0m - [91merror[0m[90m TS2339: [0mProperty 'value' does not exist on type 'Element'.
+
+[7m86[0m         select.addEventListener("change", () => { this.providerAction(() => aiDmController.selectChatGptModel(select.value)); }, { signal: this.#providerListeners.signal }); this.updateProviderControls(); const mount = this.element.querySelector(".ai-dm-chatkit-mount"); if (!mount)
+[7m  [0m [91m                                                                                                                     ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m86[0m:[93m140[0m - [91merror[0m[90m TS2531: [0mObject is possibly 'null'.
+
+[7m86[0m         select.addEventListener("change", () => { this.providerAction(() => aiDmController.selectChatGptModel(select.value)); }, { signal: this.#providerListeners.signal }); this.updateProviderControls(); const mount = this.element.querySelector(".ai-dm-chatkit-mount"); if (!mount)
+[7m  [0m [91m                                                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m92[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'Promise<void>' is not assignable to type 'null'.
+
+[7m92[0m     } this.#mounting ??= this.mount(mount).catch(error => { this.fail(error); throw error; }); void this.#mounting.catch(() => void 0); }
+[7m  [0m [91m      ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m92[0m:[93m101[0m - [91merror[0m[90m TS2531: [0mObject is possibly 'null'.
+
+[7m92[0m     } this.#mounting ??= this.mount(mount).catch(error => { this.fail(error); throw error; }); void this.#mounting.catch(() => void 0); }
+[7m  [0m [91m                                                                                                    ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m93[0m:[93m12[0m - [91merror[0m[90m TS7006: [0mParameter 'text' implicitly has an 'any' type.
+
+[7m93[0m     status(text) { this.#status = text; const node = this.element?.querySelector(".ai-dm-chatkit-status"); if (node)
+[7m  [0m [91m           ~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m95[0m:[93m20[0m - [91merror[0m[90m TS7006: [0mParameter 'action' implicitly has an 'any' type.
+
+[7m95[0m     providerAction(action) { if (!game.user.isGM || !action()) {
+[7m  [0m [91m                   ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m105[0m:[93m20[0m - [91merror[0m[90m TS2339: [0mProperty 'disabled' does not exist on type 'Element'.
+
+[7m105[0m             button.disabled = !connected || action === "chatGptSignOut" && !state.chatGpt.identityConnected;
+[7m   [0m [91m                   ~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m120[0m:[93m50[0m - [91merror[0m[90m TS2339: [0mProperty 'disabled' does not exist on type 'Element'.
+
+[7m120[0m     } select.replaceChildren(...options); select.disabled = !connected || !state.chatGpt.planUsageAuthorized || !state.chatGpt.availableModels.length || state.chatGpt.modelSelectionPending; }
+[7m   [0m [91m                                                 ~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m121[0m:[93m10[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m121[0m     fail(error) { this.#requestFailed = true; this.finishGuard(); this.status(error instanceof Error ? error.message : "ChatKit request failed."); }
+[7m   [0m [91m         ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m122[0m:[93m17[0m - [91merror[0m[90m TS7006: [0mParameter 'mount' implicitly has an 'any' type.
+
+[7m122[0m     async mount(mount) { const generation = ++this.#mountGeneration; await loadRuntime(); if (this.#closed || generation !== this.#mountGeneration || (game.world?.id ?? "none") !== this.#worldId || game.user.id !== this.#userId)
+[7m   [0m [91m                ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m124[0m:[93m194[0m - [91merror[0m[90m TS2322: [0mType 'string | null' is not assignable to type 'null'.
+  Type 'string' is not assignable to type 'null'.
+
+[7m124[0m         throw new Error("Set the ChatKit domain key in module settings for this Foundry browser origin."); const threadPointer = `${MODULE_ID}.chatkit.thread.${this.#worldId}.${this.#userId}`; this.#threadId = localStorage.getItem(threadPointer); const component = document.createElement("openai-chatkit"); this.#listeners = new AbortController; const options = { signal: this.#listeners.signal }; this.#ready = new Promise((resolve, reject) => { const timeout = window.setTimeout(() => reject(new Error("ChatKit did not become ready. Check the registered domain key and CDN access.")), 2e4); component.addEventListener("chatkit.ready", () => { window.clearTimeout(timeout); resolve(); }, { ...options, once: true }); this.#listeners?.signal.addEventListener("abort", () => { window.clearTimeout(timeout); reject(new Error("Chat panel closed.")); }, { once: true }); }); void this.#ready.catch(error => { if (!this.#closed)
+[7m   [0m [91m                                                                                                                                                                                                 ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m124[0m:[93m308[0m - [91merror[0m[90m TS2322: [0mType 'AbortController' is not assignable to type 'null'.
+
+[7m124[0m         throw new Error("Set the ChatKit domain key in module settings for this Foundry browser origin."); const threadPointer = `${MODULE_ID}.chatkit.thread.${this.#worldId}.${this.#userId}`; this.#threadId = localStorage.getItem(threadPointer); const component = document.createElement("openai-chatkit"); this.#listeners = new AbortController; const options = { signal: this.#listeners.signal }; this.#ready = new Promise((resolve, reject) => { const timeout = window.setTimeout(() => reject(new Error("ChatKit did not become ready. Check the registered domain key and CDN access.")), 2e4); component.addEventListener("chatkit.ready", () => { window.clearTimeout(timeout); resolve(); }, { ...options, once: true }); this.#listeners?.signal.addEventListener("abort", () => { window.clearTimeout(timeout); reject(new Error("Chat panel closed.")); }, { once: true }); }); void this.#ready.catch(error => { if (!this.#closed)
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                   ~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m124[0m:[93m373[0m - [91merror[0m[90m TS2531: [0mObject is possibly 'null'.
+
+[7m124[0m         throw new Error("Set the ChatKit domain key in module settings for this Foundry browser origin."); const threadPointer = `${MODULE_ID}.chatkit.thread.${this.#worldId}.${this.#userId}`; this.#threadId = localStorage.getItem(threadPointer); const component = document.createElement("openai-chatkit"); this.#listeners = new AbortController; const options = { signal: this.#listeners.signal }; this.#ready = new Promise((resolve, reject) => { const timeout = window.setTimeout(() => reject(new Error("ChatKit did not become ready. Check the registered domain key and CDN access.")), 2e4); component.addEventListener("chatkit.ready", () => { window.clearTimeout(timeout); resolve(); }, { ...options, once: true }); this.#listeners?.signal.addEventListener("abort", () => { window.clearTimeout(timeout); reject(new Error("Chat panel closed.")); }, { once: true }); }); void this.#ready.catch(error => { if (!this.#closed)
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                                                                                    ~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m124[0m:[93m399[0m - [91merror[0m[90m TS2322: [0mType 'Promise<unknown>' is not assignable to type 'null'.
+
+[7m124[0m         throw new Error("Set the ChatKit domain key in module settings for this Foundry browser origin."); const threadPointer = `${MODULE_ID}.chatkit.thread.${this.#worldId}.${this.#userId}`; this.#threadId = localStorage.getItem(threadPointer); const component = document.createElement("openai-chatkit"); this.#listeners = new AbortController; const options = { signal: this.#listeners.signal }; this.#ready = new Promise((resolve, reject) => { const timeout = window.setTimeout(() => reject(new Error("ChatKit did not become ready. Check the registered domain key and CDN access.")), 2e4); component.addEventListener("chatkit.ready", () => { window.clearTimeout(timeout); resolve(); }, { ...options, once: true }); this.#listeners?.signal.addEventListener("abort", () => { window.clearTimeout(timeout); reject(new Error("Chat panel closed.")); }, { once: true }); }); void this.#ready.catch(error => { if (!this.#closed)
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                              ~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m124[0m:[93m676[0m - [91merror[0m[90m TS2794: [0mExpected 1 arguments, but got 0. Did you forget to include 'void' in your type argument to 'Promise'?
+
+[7m124[0m         throw new Error("Set the ChatKit domain key in module settings for this Foundry browser origin."); const threadPointer = `${MODULE_ID}.chatkit.thread.${this.#worldId}.${this.#userId}`; this.#threadId = localStorage.getItem(threadPointer); const component = document.createElement("openai-chatkit"); this.#listeners = new AbortController; const options = { signal: this.#listeners.signal }; this.#ready = new Promise((resolve, reject) => { const timeout = window.setTimeout(() => reject(new Error("ChatKit did not become ready. Check the registered domain key and CDN access.")), 2e4); component.addEventListener("chatkit.ready", () => { window.clearTimeout(timeout); resolve(); }, { ...options, once: true }); this.#listeners?.signal.addEventListener("abort", () => { window.clearTimeout(timeout); reject(new Error("Chat panel closed.")); }, { once: true }); }); void this.#ready.catch(error => { if (!this.#closed)
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.es2015.promise.d.ts[0m:[93m31[0m:[93m34[0m
+    [7m31[0m     new <T>(executor: (resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void): Promise<T>;
+    [7m  [0m [96m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    An argument for 'value' was not provided.
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m124[0m:[93m736[0m - [91merror[0m[90m TS2339: [0mProperty 'signal' does not exist on type 'never'.
+
+[7m124[0m         throw new Error("Set the ChatKit domain key in module settings for this Foundry browser origin."); const threadPointer = `${MODULE_ID}.chatkit.thread.${this.#worldId}.${this.#userId}`; this.#threadId = localStorage.getItem(threadPointer); const component = document.createElement("openai-chatkit"); this.#listeners = new AbortController; const options = { signal: this.#listeners.signal }; this.#ready = new Promise((resolve, reject) => { const timeout = window.setTimeout(() => reject(new Error("ChatKit did not become ready. Check the registered domain key and CDN access.")), 2e4); component.addEventListener("chatkit.ready", () => { window.clearTimeout(timeout); resolve(); }, { ...options, once: true }); this.#listeners?.signal.addEventListener("abort", () => { window.clearTimeout(timeout); reject(new Error("Chat panel closed.")); }, { once: true }); }); void this.#ready.catch(error => { if (!this.#closed)
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m124[0m:[93m877[0m - [91merror[0m[90m TS2531: [0mObject is possibly 'null'.
+
+[7m124[0m         throw new Error("Set the ChatKit domain key in module settings for this Foundry browser origin."); const threadPointer = `${MODULE_ID}.chatkit.thread.${this.#worldId}.${this.#userId}`; this.#threadId = localStorage.getItem(threadPointer); const component = document.createElement("openai-chatkit"); this.#listeners = new AbortController; const options = { signal: this.#listeners.signal }; this.#ready = new Promise((resolve, reject) => { const timeout = window.setTimeout(() => reject(new Error("ChatKit did not become ready. Check the registered domain key and CDN access.")), 2e4); component.addEventListener("chatkit.ready", () => { window.clearTimeout(timeout); resolve(); }, { ...options, once: true }); this.#listeners?.signal.addEventListener("abort", () => { window.clearTimeout(timeout); reject(new Error("Chat panel closed.")); }, { once: true }); }); void this.#ready.catch(error => { if (!this.#closed)
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m124[0m:[93m895[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m124[0m         throw new Error("Set the ChatKit domain key in module settings for this Foundry browser origin."); const threadPointer = `${MODULE_ID}.chatkit.thread.${this.#worldId}.${this.#userId}`; this.#threadId = localStorage.getItem(threadPointer); const component = document.createElement("openai-chatkit"); this.#listeners = new AbortController; const options = { signal: this.#listeners.signal }; this.#ready = new Promise((resolve, reject) => { const timeout = window.setTimeout(() => reject(new Error("ChatKit did not become ready. Check the registered domain key and CDN access.")), 2e4); component.addEventListener("chatkit.ready", () => { window.clearTimeout(timeout); resolve(); }, { ...options, once: true }); this.#listeners?.signal.addEventListener("abort", () => { window.clearTimeout(timeout); reject(new Error("Chat panel closed.")); }, { once: true }); }); void this.#ready.catch(error => { if (!this.#closed)
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m126[0m:[93m44[0m - [91merror[0m[90m TS2339: [0mProperty 'id' does not exist on type 'never'.
+
+[7m126[0m         return; if (this.#threadSelection?.id === event.detail.threadId && this.#threadSelection.generation !== this.#triggerGeneration)
+[7m   [0m [91m                                           ~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m126[0m:[93m57[0m - [91merror[0m[90m TS2339: [0mProperty 'detail' does not exist on type 'Event'.
+
+[7m126[0m         return; if (this.#threadSelection?.id === event.detail.threadId && this.#threadSelection.generation !== this.#triggerGeneration)
+[7m   [0m [91m                                                        ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m126[0m:[93m76[0m - [91merror[0m[90m TS2531: [0mObject is possibly 'null'.
+
+[7m126[0m         return; if (this.#threadSelection?.id === event.detail.threadId && this.#threadSelection.generation !== this.#triggerGeneration)
+[7m   [0m [91m                                                                           ~~~~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m127[0m:[93m66[0m - [91merror[0m[90m TS2339: [0mProperty 'detail' does not exist on type 'Event'.
+
+[7m127[0m         return; this.invalidateReviews(); this.#threadId = event.detail.threadId; if (this.#threadId)
+[7m   [0m [91m                                                                 ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m130[0m:[93m310[0m - [91merror[0m[90m TS2339: [0mProperty 'mark' does not exist on type 'never'.
+
+[7m130[0m         localStorage.removeItem(threadPointer); }, options); component.addEventListener("chatkit.response.start", () => { this.#requestFailed = false; this.#guard.busy = true; this.status("Receiving response\u2026"); }, options); component.addEventListener("chatkit.response.end", () => { this.#latencyProbe?.mark("browser-chatkit-response-end"); this.finishGuard(); if (!this.#requestFailed)
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                     ~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m131[0m:[93m246[0m - [91merror[0m[90m TS2339: [0mProperty 'setOptions' does not exist on type 'HTMLElement'.
+
+[7m131[0m         this.status("Ready"); }, options); component.addEventListener("chatkit.error", () => this.fail(new Error("ChatKit could not complete the request. Check connection, Foundry authentication and server configuration.")), options); component.setOptions({ api: { url: gatewayUrl(), domainKey, fetch: this.authenticatedFetch }, initialThread: this.#threadId, frameTitle: "AI Dungeon Master chat", theme: "dark", composer: { attachments: { enabled: false } }, history: { enabled: true } }); this.#component = component; mount.append(component); if (!mount.parentElement?.querySelector(".ai-dm-latency-export"))
+[7m   [0m [91m                                                                                                                                                                                                                                                     ~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m131[0m:[93m492[0m - [91merror[0m[90m TS2322: [0mType 'HTMLElement' is not assignable to type 'null'.
+
+[7m131[0m         this.status("Ready"); }, options); component.addEventListener("chatkit.error", () => this.fail(new Error("ChatKit could not complete the request. Check connection, Foundry authentication and server configuration.")), options); component.setOptions({ api: { url: gatewayUrl(), domainKey, fetch: this.authenticatedFetch }, initialThread: this.#threadId, frameTitle: "AI Dungeon Master chat", theme: "dark", composer: { attachments: { enabled: false } }, history: { enabled: true } }); this.#component = component; mount.append(component); if (!mount.parentElement?.querySelector(".ai-dm-latency-export"))
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m133[0m:[93m40[0m - [91merror[0m[90m TS7006: [0mParameter 'input' implicitly has an 'any' type.
+
+[7m133[0m     authenticatedFetch = __name(async (input, init) => { const cancellation = AbortSignal.any([this.#triggerCancellation.signal, ...this.#dispatchCancellation ? [this.#dispatchCancellation] : []]); cancellation.throwIfAborted(); if (this.#closed)
+[7m   [0m [91m                                       ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m133[0m:[93m47[0m - [91merror[0m[90m TS7006: [0mParameter 'init' implicitly has an 'any' type.
+
+[7m133[0m     authenticatedFetch = __name(async (input, init) => { const cancellation = AbortSignal.any([this.#triggerCancellation.signal, ...this.#dispatchCancellation ? [this.#dispatchCancellation] : []]); cancellation.throwIfAborted(); if (this.#closed)
+[7m   [0m [91m                                              ~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m141[0m:[93m38[0m - [91merror[0m[90m TS7034: [0mVariable 'latency' implicitly has type 'any' in some locations where its type cannot be determined.
+
+[7m141[0m         headers.set(key, value); let latency; let pendingKey; const rawBody = typeof init?.body === "string" ? init.body : void 0; if (destination.pathname === "/chatkit" && rawBody) {
+[7m   [0m [91m                                     ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m141[0m:[93m51[0m - [91merror[0m[90m TS7034: [0mVariable 'pendingKey' implicitly has type 'any' in some locations where its type cannot be determined.
+
+[7m141[0m         headers.set(key, value); let latency; let pendingKey; const rawBody = typeof init?.body === "string" ? init.body : void 0; if (destination.pathname === "/chatkit" && rawBody) {
+[7m   [0m [91m                                                  ~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m145[0m:[93m13[0m - [91merror[0m[90m TS2322: [0mType 'BrowserLatencyProbe' is not assignable to type 'null'.
+
+[7m145[0m             this.#latencyProbe = latency;
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m182[0m:[93m21[0m - [91merror[0m[90m TS7005: [0mVariable 'latency' implicitly has an 'any' type.
+
+[7m182[0m                     latency?.finish();
+[7m   [0m [91m                    ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m183[0m:[93m21[0m - [91merror[0m[90m TS7005: [0mVariable 'latency' implicitly has an 'any' type.
+
+[7m183[0m                     latency?.mark("browser-stream-end");
+[7m   [0m [91m                    ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m185[0m:[93m25[0m - [91merror[0m[90m TS7005: [0mVariable 'pendingKey' implicitly has an 'any' type.
+
+[7m185[0m                     if (pendingKey)
+[7m   [0m [91m                        ~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m190[0m:[93m21[0m - [91merror[0m[90m TS7005: [0mVariable 'latency' implicitly has an 'any' type.
+
+[7m190[0m                     latency?.chunk(item.value);
+[7m   [0m [91m                    ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m196[0m:[93m17[0m - [91merror[0m[90m TS7005: [0mVariable 'latency' implicitly has an 'any' type.
+
+[7m196[0m                 latency?.mark("browser-stream-error");
+[7m   [0m [91m                ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m198[0m:[93m41[0m - [91merror[0m[90m TS7005: [0mVariable 'latency' implicitly has an 'any' type.
+
+[7m198[0m             } }, async cancel(reason) { latency?.mark("browser-stream-cancelled"); abort.abort(); requests.delete(abort); await reader.cancel(reason); } });
+[7m   [0m [91m                                        ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m229[0m:[93m275[0m - [91merror[0m[90m TS7006: [0mParameter 'response2' implicitly has an 'any' type.
+
+[7m229[0m                         return; button.disabled = true; void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ threadId, actionId: action.actionId, decision: choice }) }).then(async (response2) => { await response2.json(); await this.reviewNativeActions(); }).catch(error => { this.fail(error); button.disabled = false; }); });
+[7m   [0m [91m                                                                                                                                                                                                                                                                                  ~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m229[0m:[93m358[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m229[0m                         return; button.disabled = true; void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ threadId, actionId: action.actionId, decision: choice }) }).then(async (response2) => { await response2.json(); await this.reviewNativeActions(); }).catch(error => { this.fail(error); button.disabled = false; }); });
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                                                                     ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m236[0m:[93m183[0m - [91merror[0m[90m TS2339: [0mProperty 'abort' does not exist on type 'never'.
+
+[7m236[0m     invalidateReviews() { this.#reviewEpoch++; this.#worldLoadGeneration.world++; this.#worldLoadGeneration["world-file"]++; this.#campaignLoadGeneration++; this.#campaignListeners?.abort(); for (const selector of [".ai-dm-native-actions", ".ai-dm-attack-actions", ".ai-dm-campaign-actions", ".ai-dm-world-actions", ".ai-dm-world-file-actions"]) {
+[7m   [0m [91m                                                                                                                                                                                      ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m243[0m:[93m109[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 0.
+
+[7m243[0m     async reviewActions() { await Promise.all([this.reviewNativeActions(), this.reviewAttackActions(), this.reviewCampaignActions(), this.reviewWorldActions("world"), this.reviewWorldActions("world-file")]); }
+[7m   [0m [91m                                                                                                            ~~~~~~~~~~~~~~~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m320[0m:[93m33[0m
+    [7m320[0m     async reviewCampaignActions(proposalId) { const threadId = this.#threadId; if (!threadId) {
+    [7m   [0m [96m                                ~~~~~~~~~~[0m
+    An argument for 'proposalId' was not provided.
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m243[0m:[93m139[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m243[0m     async reviewActions() { await Promise.all([this.reviewNativeActions(), this.reviewAttackActions(), this.reviewCampaignActions(), this.reviewWorldActions("world"), this.reviewWorldActions("world-file")]); }
+[7m   [0m [91m                                                                                                                                          ~~~~~~~~~~~~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m279[0m:[93m36[0m
+    [7m279[0m     async reviewWorldActions(kind, actionId) { const threadId = this.#threadId; if (!threadId)
+    [7m   [0m [96m                                   ~~~~~~~~[0m
+    An argument for 'actionId' was not provided.
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m243[0m:[93m173[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m243[0m     async reviewActions() { await Promise.all([this.reviewNativeActions(), this.reviewAttackActions(), this.reviewCampaignActions(), this.reviewWorldActions("world"), this.reviewWorldActions("world-file")]); }
+[7m   [0m [91m                                                                                                                                                                            ~~~~~~~~~~~~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m279[0m:[93m36[0m
+    [7m279[0m     async reviewWorldActions(kind, actionId) { const threadId = this.#threadId; if (!threadId)
+    [7m   [0m [96m                                   ~~~~~~~~[0m
+    An argument for 'actionId' was not provided.
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m267[0m:[93m313[0m - [91merror[0m[90m TS7006: [0mParameter 'result' implicitly has an 'any' type.
+
+[7m267[0m                     return; button.disabled = true; void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "attack", threadId, actionId, action: { mode: "apply", priorAttackRequestId, decisionId } }) }).then(async (result) => { const outcome = await result.json(); if (current()) {
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                        ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m270[0m:[93m28[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m270[0m                 } }).catch(error => { this.fail(error); button.disabled = false; }); });
+[7m   [0m [91m                           ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m279[0m:[93m30[0m - [91merror[0m[90m TS7006: [0mParameter 'kind' implicitly has an 'any' type.
+
+[7m279[0m     async reviewWorldActions(kind, actionId) { const threadId = this.#threadId; if (!threadId)
+[7m   [0m [91m                             ~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m279[0m:[93m36[0m - [91merror[0m[90m TS7006: [0mParameter 'actionId' implicitly has an 'any' type.
+
+[7m279[0m     async reviewWorldActions(kind, actionId) { const threadId = this.#threadId; if (!threadId)
+[7m   [0m [91m                                   ~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m281[0m:[93m71[0m - [91merror[0m[90m TS7053: [0mElement implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ world: number; "world-file": number; }'.
+
+[7m281[0m         return; const epoch = this.#reviewEpoch; const generation = ++this.#worldLoadGeneration[kind]; const current = __name(() => !this.#closed && epoch === this.#reviewEpoch && threadId === this.#threadId && generation === this.#worldLoadGeneration[kind] && (game.world?.id ?? "none") === this.#worldId && game.user.id === this.#userId, "current"); const result = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind, threadId, ...actionId ? { actionId } : {} }) }); const data = await result.json(); if (!current())
+[7m   [0m [91m                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m281[0m:[93m227[0m - [91merror[0m[90m TS7053: [0mElement implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ world: number; "world-file": number; }'.
+
+[7m281[0m         return; const epoch = this.#reviewEpoch; const generation = ++this.#worldLoadGeneration[kind]; const current = __name(() => !this.#closed && epoch === this.#reviewEpoch && threadId === this.#threadId && generation === this.#worldLoadGeneration[kind] && (game.world?.id ?? "none") === this.#worldId && game.user.id === this.#userId, "current"); const result = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind, threadId, ...actionId ? { actionId } : {} }) }); const data = await result.json(); if (!current())
+[7m   [0m [91m                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m304[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType 'string | Record<string, unknown> | undefined' is not assignable to type 'string | null'.
+  Type 'undefined' is not assignable to type 'string | null'.
+
+[7m304[0m         heading.textContent = label;
+[7m   [0m [91m        ~~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m309[0m:[93m23[0m - [91merror[0m[90m TS7034: [0mVariable 'buttons' implicitly has type 'any[]' in some locations where its type cannot be determined.
+
+[7m309[0m         return; const buttons = []; for (const decision of ["approve", "reject", "cancel"]) {
+[7m   [0m [91m                      ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m314[0m:[93m21[0m - [91merror[0m[90m TS7005: [0mVariable 'buttons' implicitly has an 'any[]' type.
+
+[7m314[0m             return; buttons.forEach(control => { control.disabled = true; }); void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind, threadId, actionId, reviewDigest: review.reviewDigest, decision }) }).then(async (response) => { await response.json(); if (current())
+[7m   [0m [91m                    ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m314[0m:[93m313[0m - [91merror[0m[90m TS7006: [0mParameter 'response' implicitly has an 'any' type.
+
+[7m314[0m             return; buttons.forEach(control => { control.disabled = true; }); void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind, threadId, actionId, reviewDigest: review.reviewDigest, decision }) }).then(async (response) => { await response.json(); if (current())
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                        ~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m320[0m:[93m33[0m - [91merror[0m[90m TS7006: [0mParameter 'proposalId' implicitly has an 'any' type.
+
+[7m320[0m     async reviewCampaignActions(proposalId) { const threadId = this.#threadId; if (!threadId) {
+[7m   [0m [91m                                ~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m324[0m:[93m126[0m - [91merror[0m[90m TS2339: [0mProperty 'abort' does not exist on type 'never'.
+
+[7m324[0m         return; const epoch = this.#reviewEpoch; const generation = ++this.#campaignLoadGeneration; this.#campaignListeners?.abort(); this.#campaignListeners = new AbortController; const listeners = this.#campaignListeners.signal; const current = __name(() => !this.#closed && epoch === this.#reviewEpoch && generation === this.#campaignLoadGeneration && threadId === this.#threadId && (game.world?.id ?? "none") === this.#worldId && game.user.id === this.#userId, "current"); panel.replaceChildren(); panel.textContent = "Loading campaign review\u2026"; const response = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "campaign", threadId, ...proposalId ? { proposalId } : {} }) }); const data = await response.json(); if (!current())
+[7m   [0m [91m                                                                                                                             ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m324[0m:[93m135[0m - [91merror[0m[90m TS2322: [0mType 'AbortController' is not assignable to type 'null'.
+
+[7m324[0m         return; const epoch = this.#reviewEpoch; const generation = ++this.#campaignLoadGeneration; this.#campaignListeners?.abort(); this.#campaignListeners = new AbortController; const listeners = this.#campaignListeners.signal; const current = __name(() => !this.#closed && epoch === this.#reviewEpoch && generation === this.#campaignLoadGeneration && threadId === this.#threadId && (game.world?.id ?? "none") === this.#worldId && game.user.id === this.#userId, "current"); panel.replaceChildren(); panel.textContent = "Loading campaign review\u2026"; const response = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "campaign", threadId, ...proposalId ? { proposalId } : {} }) }); const data = await response.json(); if (!current())
+[7m   [0m [91m                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m324[0m:[93m200[0m - [91merror[0m[90m TS2531: [0mObject is possibly 'null'.
+
+[7m324[0m         return; const epoch = this.#reviewEpoch; const generation = ++this.#campaignLoadGeneration; this.#campaignListeners?.abort(); this.#campaignListeners = new AbortController; const listeners = this.#campaignListeners.signal; const current = __name(() => !this.#closed && epoch === this.#reviewEpoch && generation === this.#campaignLoadGeneration && threadId === this.#threadId && (game.world?.id ?? "none") === this.#worldId && game.user.id === this.#userId, "current"); panel.replaceChildren(); panel.textContent = "Loading campaign review\u2026"; const response = await this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "campaign", threadId, ...proposalId ? { proposalId } : {} }) }); const data = await response.json(); if (!current())
+[7m   [0m [91m                                                                                                                                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m369[0m:[93m13[0m - [91merror[0m[90m TS2322: [0mType 'string | undefined' is not assignable to type 'string | null'.
+  Type 'undefined' is not assignable to type 'string | null'.
+
+[7m369[0m             label2.textContent = labelText;
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m371[0m:[93m13[0m - [91merror[0m[90m TS2322: [0mType 'string | undefined' is not assignable to type 'string | null'.
+  Type 'undefined' is not assignable to type 'string | null'.
+
+[7m371[0m             text.textContent = content;
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m376[0m:[93m23[0m - [91merror[0m[90m TS7034: [0mVariable 'buttons' implicitly has type 'any[]' in some locations where its type cannot be determined.
+
+[7m376[0m         return; const buttons = []; for (const choice of ["approve", "reject", "cancel"]) {
+[7m   [0m [91m                      ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m386[0m:[93m33[0m - [91merror[0m[90m TS7005: [0mVariable 'buttons' implicitly has an 'any[]' type.
+
+[7m386[0m         } for (const control of buttons)
+[7m   [0m [91m                                ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m387[0m:[93m311[0m - [91merror[0m[90m TS7006: [0mParameter 'response2' implicitly has an 'any' type.
+
+[7m387[0m             control.disabled = true; void this.authenticatedFetch(`${gatewayUrl()}/actions`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ kind: "campaign", threadId, proposalId: review.proposalId, batchDigest: review.batchDigest, decision: choice }) }).then(async (response2) => { await response2.json(); if (current())
+[7m   [0m [91m                                                                                                                                                                                                                                                                                                                      ~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m388[0m:[93m75[0m - [91merror[0m[90m TS7006: [0mParameter 'error' implicitly has an 'any' type.
+
+[7m388[0m             await this.reviewCampaignActions(review.proposalId); }).catch(error => { if (current()) {
+[7m   [0m [91m                                                                          ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m13[0m - [91merror[0m[90m TS7006: [0mParameter 'request' implicitly has an 'any' type.
+
+[7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+[7m   [0m [91m            ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m - [91merror[0m[90m TS7006: [0mParameter 'externalSignal' implicitly has an 'any' type.
+
+[7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+[7m   [0m [91m                     ~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m397[0m:[93m25[0m - [91merror[0m[90m TS7006: [0mParameter 'command' implicitly has an 'any' type.
+
+[7m397[0m     async directControl(command) { if (!game.user.isGM || game.world?.id !== this.#worldId || game.user.id !== this.#userId)
+[7m   [0m [91m                        ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m403[0m:[93m27[0m - [91merror[0m[90m TS7006: [0mParameter 'request' implicitly has an 'any' type.
+
+[7m403[0m     async dispatchTrigger(request, generation, signal) { const check = __name(() => { signal.throwIfAborted(); if (this.#closed || generation !== this.#triggerGeneration)
+[7m   [0m [91m                          ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m403[0m:[93m36[0m - [91merror[0m[90m TS7006: [0mParameter 'generation' implicitly has an 'any' type.
+
+[7m403[0m     async dispatchTrigger(request, generation, signal) { const check = __name(() => { signal.throwIfAborted(); if (this.#closed || generation !== this.#triggerGeneration)
+[7m   [0m [91m                                   ~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m403[0m:[93m48[0m - [91merror[0m[90m TS7006: [0mParameter 'signal' implicitly has an 'any' type.
+
+[7m403[0m     async dispatchTrigger(request, generation, signal) { const check = __name(() => { signal.throwIfAborted(); if (this.#closed || generation !== this.#triggerGeneration)
+[7m   [0m [91m                                               ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m436[0m:[93m13[0m - [91merror[0m[90m TS2322: [0mType '{ id: any; generation: any; }' is not assignable to type 'null'.
+
+[7m436[0m             this.#threadSelection = selection;
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m437[0m:[93m46[0m - [91merror[0m[90m TS2339: [0mProperty 'setThreadId' does not exist on type 'never'.
+
+[7m437[0m             const selected = this.#component.setThreadId(data.threadId).finally(() => { if (this.#threadSelection === selection)
+[7m   [0m [91m                                             ~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m449[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'sendCustomAction' does not exist on type 'never'.
+
+[7m449[0m         const sending = this.#component.sendCustomAction({ type: "foundry.context-response", payload: { requestId, prompt, context, ...request.automatic ? { automatic: request.automatic } : {} } }).finally(() => { if (this.#dispatchCancellation === signal)
+[7m   [0m [91m                                        ~~~~~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m463[0m:[93m9[0m - [91merror[0m[90m TS18046: [0m'request' is of type 'unknown'.
+
+[7m463[0m         request.abort(); this.#requests.clear(); this.finishGuard(); this.status("Response cancelled."); }
+[7m   [0m [91m        ~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m464[0m:[93m11[0m - [91merror[0m[90m TS4114: [0mThis member must have an 'override' modifier because it overrides a member in the base class '{ render(options?: { force?: boolean; } | undefined): unknown; close(options?: Record<string, unknown> | undefined): Promise<void>; element: HTMLElement; }'.
+
+[7m464[0m     async close(options = {}) { this.#closed = true; this.#mountGeneration++; this.#unsubscribe?.(); this.#unsubscribe = null; this.#providerListeners?.abort(); this.cancel(); this.#listeners?.abort(); this.#component?.remove(); this.#component = null; this.#mounting = null; AiDungeonMasterApplication.#instance = null; await super.close(options); }
+[7m   [0m [91m          ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m464[0m:[93m84[0m - [91merror[0m[90m TS2349: [0mThis expression is not callable.
+  Type 'never' has no call signatures.
+
+[7m464[0m     async close(options = {}) { this.#closed = true; this.#mountGeneration++; this.#unsubscribe?.(); this.#unsubscribe = null; this.#providerListeners?.abort(); this.cancel(); this.#listeners?.abort(); this.#component?.remove(); this.#component = null; this.#mounting = null; AiDungeonMasterApplication.#instance = null; await super.close(options); }
+[7m   [0m [91m                                                                                   ~~~~~~~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m464[0m:[93m153[0m - [91merror[0m[90m TS2339: [0mProperty 'abort' does not exist on type 'never'.
+
+[7m464[0m     async close(options = {}) { this.#closed = true; this.#mountGeneration++; this.#unsubscribe?.(); this.#unsubscribe = null; this.#providerListeners?.abort(); this.cancel(); this.#listeners?.abort(); this.#component?.remove(); this.#component = null; this.#mounting = null; AiDungeonMasterApplication.#instance = null; await super.close(options); }
+[7m   [0m [91m                                                                                                                                                        ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m464[0m:[93m194[0m - [91merror[0m[90m TS2339: [0mProperty 'abort' does not exist on type 'never'.
+
+[7m464[0m     async close(options = {}) { this.#closed = true; this.#mountGeneration++; this.#unsubscribe?.(); this.#unsubscribe = null; this.#providerListeners?.abort(); this.cancel(); this.#listeners?.abort(); this.#component?.remove(); this.#component = null; this.#mounting = null; AiDungeonMasterApplication.#instance = null; await super.close(options); }
+[7m   [0m [91m                                                                                                                                                                                                 ~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.ts[0m:[93m464[0m:[93m220[0m - [91merror[0m[90m TS2339: [0mProperty 'remove' does not exist on type 'never'.
+
+[7m464[0m     async close(options = {}) { this.#closed = true; this.#mountGeneration++; this.#unsubscribe?.(); this.#unsubscribe = null; this.#providerListeners?.abort(); this.cancel(); this.#listeners?.abort(); this.#component?.remove(); this.#component = null; this.#mounting = null; AiDungeonMasterApplication.#instance = null; await super.close(options); }
+[7m   [0m [91m                                                                                                                                                                                                                           ~~~~~~[0m
+[96mmodule/src/ai-dungeon-master/application.validation.test.ts[0m:[93m59[0m:[93m25[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m59[0m     const pending = app.trigger({ prompt: "Cancelled during readiness", requestId: "cancelled" });
+[7m  [0m [91m                        ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/hooks.ts[0m:[93m406[0m:[93m10[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m406[0m         .trigger({ prompt: match[1] })
+[7m   [0m [91m         ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/ai-dungeon-master/hooks.ts[0m:[93m417[0m:[93m8[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m417[0m       .trigger(request)
+[7m   [0m [91m       ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.
+[96mmodule/src/index.ts[0m:[93m72[0m:[93m43[0m - [91merror[0m[90m TS2554: [0mExpected 2 arguments, but got 1.
+
+[7m72[0m         AiDungeonMasterApplication.open().trigger(request),
+[7m  [0m [91m                                          ~~~~~~~[0m
+
+  [96mmodule/src/ai-dungeon-master/application.ts[0m:[93m395[0m:[93m22[0m
+    [7m395[0m     trigger(request, externalSignal) { const generation = this.#triggerGeneration; const signal = AbortSignal.any([this.#triggerCancellation.signal, ...externalSignal ? [externalSignal] : []]); const pending = this.#triggerTail.then(() => { if (generation !== this.#triggerGeneration || this.#closed)
+    [7m   [0m [96m                     ~~~~~~~~~~~~~~[0m
+    An argument for 'externalSignal' was not provided.

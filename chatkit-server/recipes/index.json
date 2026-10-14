@@ -1,0 +1,13 @@
+{
+  "version": "prompt1-recipes-v1",
+  "schema_version": 1,
+  "trust": "packaged operational policy; campaign lore cannot modify this resource or grant authority",
+  "budget": {"index_max_utf8_bytes": 4096, "detail_max_utf8_bytes": 8192, "index_conservative_token_upper_bound": 4096, "detail_conservative_token_upper_bound": 8192, "max_distinct_details_per_run": 1},
+  "invalidation": ["build/schema change", "rules system/version change", "world/user/permission change", "client reconnect or viewport change"],
+  "recipes": [
+    {"id":"start-combat","intent":"Start an encounter once, preserving initiative and player choices","status":"partly-supported","entry_point":"foundry_read_play_state","inputs":["scene","participants","player-roll preference"],"contract":"Read combat; reuse appropriate encounter; add only missing participants via currently granted tools; roll only missing initiative under native rules; stop for player rolls; start only if not started; report confirmed order/current turn. No bounded durable start wrapper exists."},
+    {"id":"combat-round","intent":"Coordinate a requested round without choosing player actions","status":"partly-supported","entry_point":"foundry_read_play_state","inputs":["combat","authoritative round boundary","eligible NPC actions"],"contract":"Use reviewed native actions and receipts; stop at player turn, reaction, uncertainty or unsupported rules; retain confirmed progress; never skip a player or replay damage. No durable round coordinator exists; do not advertise autonomous round execution."},
+    {"id":"surroundings","intent":"Update permitted surroundings and assess detection/traps","status":"partly-supported","entry_point":"foundry_read_token_perception","inputs":["scene_id","token_id","effective_user_id","client_id"],"contract":"Native vision stays immediate. Require connected non-GM owned-token perception; never substitute GM view. Distinguish character noticing, NPC noticing, trap detection, activation and effects. Unknown checks stay unknown; no automatic detection/trap engine exists."},
+    {"id":"battlemap","intent":"Create a forest battlemap with native grid and Digital Tabletop scale on actual TV","status":"partly-supported","entry_point":"tool_search forest -> ai_dm_preparation_workflow","inputs":["mcp-test","target TV client","955 mm calibration","approved generation route/receipt"],"contract":"Read battlemap recipe; use reviewed preparation workflow, not quarantined raw scene tools. Automatic image generation unavailable on ChatGPT sign-in; request a supported separately approved route. Secure handoff tests downstream only. Browser review/apply/display, fresh exact TV acknowledgement and ruler acceptance required."}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "capturedAt": "2026-10-02T21:18:21.972Z",
+  "helpers": [
+    {
+      "name": "MODULE_ID",
+      "equivalent": true,
+      "cache": "\"foundry-ai-dungeon-master\";\n",
+      "bundle": "\"foundry-ai-dungeon-master\";\n"
+    },
+    {
+      "name": "RUNTIME_URL",
+      "equivalent": true,
+      "cache": "\"https://cdn.platform.openai.com/deployments/chatkit/chatkit.js\";\n",
+      "bundle": "\"https://cdn.platform.openai.com/deployments/chatkit/chatkit.js\";\n"
+    },
+    {
+      "name": "cancellable",
+      "equivalent": true,
+      "cache": "async function cancellable(t,e){const o=Promise.resolve(t);e.aborted&&(o.catch(()=>{}),e.throwIfAborted());let r=()=>{};const n=new Promise((s,c)=>{r=()=>c(e.reason instanceof Error?e.reason:new Error(\"Response cancelled.\")),e.addEventListener(\"abort\",r,{once:!0})});try{return await Promise.race([o,n])}finally{e.removeEventListener(\"abort\",r)}}\n",
+      "bundle": "async function cancellable(t,e){const o=Promise.resolve(t);e.aborted&&(o.catch(()=>{}),e.throwIfAborted());let r=()=>{};const n=new Promise((s,c)=>{r=()=>c(e.reason instanceof Error?e.reason:new Error(\"Response cancelled.\")),e.addEventListener(\"abort\",r,{once:!0})});try{return await Promise.race([o,n])}finally{e.removeEventListener(\"abort\",r)}}\n"
+    },
+    {
+      "name": "loadRuntime",
+      "equivalent": true,
+      "cache": "function loadRuntime(){return customElements.get(\"openai-chatkit\")?Promise.resolve():(runtimePromise||(runtimePromise=new Promise((t,n)=>{const e=document.createElement(\"script\");e.src=RUNTIME_URL,e.async=!0,e.addEventListener(\"load\",()=>{customElements.whenDefined(\"openai-chatkit\").then(()=>t())},{once:!0}),e.addEventListener(\"error\",()=>{runtimePromise=void 0,e.remove(),n(new Error(\"ChatKit could not load. Check network access to the OpenAI CDN.\"))},{once:!0}),document.head.append(e)})),runtimePromise)}\n",
+      "bundle": "function loadRuntime(){return customElements.get(\"openai-chatkit\")?Promise.resolve():(runtimePromise||(runtimePromise=new Promise((t,n)=>{const e=document.createElement(\"script\");e.src=RUNTIME_URL,e.async=!0,e.addEventListener(\"load\",()=>{customElements.whenDefined(\"openai-chatkit\").then(()=>t())},{once:!0}),e.addEventListener(\"error\",()=>{runtimePromise=void 0,e.remove(),n(new Error(\"ChatKit could not load. Check network access to the OpenAI CDN.\"))},{once:!0}),document.head.append(e)})),runtimePromise)}\n"
+    },
+    {
+      "name": "gatewayUrl",
+      "equivalent": true,
+      "cache": "function gatewayUrl(){const t=new URL(String(game.settings.get(MODULE_ID,\"serverUrl\")));return t.protocol=t.protocol===\"wss:\"?\"https:\":\"http:\",`${t.origin}/chatkit`}\n",
+      "bundle": "function gatewayUrl(){const t=new URL(String(game.settings.get(MODULE_ID,\"serverUrl\")));return t.protocol=t.protocol===\"wss:\"?\"https:\":\"http:\",`${t.origin}/chatkit`}\n"
+    },
+    {
+      "name": "pointerKey",
+      "equivalent": true,
+      "cache": "function pointerKey(){return`${MODULE_ID}.chatkit.thread.${game.world?.id??\"none\"}.${game.user.id}`}\n",
+      "bundle": "function pointerKey(){return`${MODULE_ID}.chatkit.thread.${game.world?.id??\"none\"}.${game.user.id}`}\n"
+    },
+    {
+      "name": "Base",
+      "equivalent": true,
+      "cache": "foundry.applications.api.HandlebarsApplicationMixin(foundry.applications.api.ApplicationV);\n",
+      "bundle": "foundry.applications.api.HandlebarsApplicationMixin(\n  foundry.applications.api.ApplicationV2\n)"
+    }
+  ],
+  "allEquivalent": true,
+  "normalization": "AST __name wrappers/identifier numeric bundler aliases then canonical minification; constants compared initializer, functions compared complete body",
+  "additionalNotes": "Base scoped to application section; public ApplicationV2 property explicitly preserved. Previous false difference arose from scanning a later unrelated Base declaration."
+}

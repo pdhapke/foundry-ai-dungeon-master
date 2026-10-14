@@ -1,0 +1,450 @@
+{
+  "capturedAt": "2026-10-02T21:52:48.418Z",
+  "journalId": "bTu2x1pNiH8BhyVz",
+  "attackEntry": {
+    "fingerprint": "{\"schemaVersion\":\"attack-actions-v1\",\"worldId\":\"izzy-campaign\",\"userId\":\"X7X4KK7zca5U2Ics\",\"requestId\":\"fd9770908342716518d86d3485657ec30d5a7a3ec7594ac2b34d5fee2b23dd72\",\"correlationId\":\"phase4-0c1609d4-071a-47db-a25b-621d38b8251d\",\"origin\":\"ai-dm\",\"action\":{\"mode\":\"roll\",\"sceneId\":\"xj5praphJhGr6mxL\",\"attackerTokenId\":\"4Jgz4kpyTaMpkdHn\",\"actorId\":\"7Omg3czrr0z94iw4\",\"itemId\":\"pttA6bYy0Ru9W1Ng\",\"activityId\":\"AttackFixture001\",\"targetTokenId\":\"z2oFZhuQdL4GQ793\",\"advantage\":\"normal\",\"attackMode\":\"oneHanded\",\"abilityId\":\"str\"}}",
+    "input": {
+      "schemaVersion": "attack-actions-v1",
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "requestId": "fd9770908342716518d86d3485657ec30d5a7a3ec7594ac2b34d5fee2b23dd72",
+      "correlationId": "phase4-0c1609d4-071a-47db-a25b-621d38b8251d",
+      "origin": "ai-dm",
+      "action": {
+        "mode": "roll",
+        "sceneId": "xj5praphJhGr6mxL",
+        "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+        "actorId": "7Omg3czrr0z94iw4",
+        "itemId": "pttA6bYy0Ru9W1Ng",
+        "activityId": "AttackFixture001",
+        "targetTokenId": "z2oFZhuQdL4GQ793",
+        "advantage": "normal",
+        "attackMode": "oneHanded",
+        "abilityId": "str"
+      }
+    },
+    "pending": true,
+    "state": {
+      "systemId": "dnd5e",
+      "systemVersion": "6.0.3",
+      "attackRequestId": "fd9770908342716518d86d3485657ec30d5a7a3ec7594ac2b34d5fee2b23dd72",
+      "source": {
+        "sceneId": "xj5praphJhGr6mxL",
+        "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+        "actorId": "7Omg3czrr0z94iw4",
+        "itemId": "pttA6bYy0Ru9W1Ng",
+        "activityId": "AttackFixture001",
+        "targetTokenId": "z2oFZhuQdL4GQ793"
+      },
+      "hpBefore": {
+        "value": 40,
+        "temp": 4,
+        "max": 40
+      },
+      "hpAfter": null,
+      "damageApplied": null,
+      "targetAC": 10,
+      "targetActorId": "uwyaFQurD4uFZCKC",
+      "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+      "attackerPosition": {
+        "x": 300,
+        "y": 400,
+        "elevation": 0
+      },
+      "targetPosition": {
+        "x": 700,
+        "y": 400,
+        "elevation": 0
+      },
+      "sourceItemRevision": 1790977912202,
+      "rulesLimitations": [
+        "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+      ],
+      "resourcesBefore": [
+        {
+          "itemId": "v6aPlCpfDEZdyhvB",
+          "quantity": 1,
+          "uses": {
+            "max": null,
+            "spent": 0
+          }
+        },
+        {
+          "itemId": "pttA6bYy0Ru9W1Ng",
+          "quantity": 1,
+          "uses": {
+            "max": 3,
+            "spent": 0
+          }
+        }
+      ],
+      "attackRoll": null,
+      "hit": null,
+      "critical": false,
+      "damageRolls": [],
+      "damageRolled": 0,
+      "attackMode": "oneHanded",
+      "abilityId": "str",
+      "decisions": [],
+      "resourceConsumption": {
+        "before": [
+          {
+            "type": "itemUses",
+            "spent": 0,
+            "cost": 1
+          }
+        ],
+        "after": [
+          1
+        ],
+        "verified": true,
+        "nativeUpdates": {
+          "activity": {},
+          "actor": {},
+          "create": [],
+          "delete": [],
+          "item": [
+            {
+              "_id": "pttA6bYy0Ru9W1Ng",
+              "system": {
+                "uses": {
+                  "spent": 1
+                }
+              }
+            }
+          ],
+          "rolls": []
+        }
+      },
+      "stage": "resources-consumed"
+    },
+    "result": {
+      "schemaVersion": "attack-actions-v1",
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "requestId": "fd9770908342716518d86d3485657ec30d5a7a3ec7594ac2b34d5fee2b23dd72",
+      "correlationId": "phase4-0c1609d4-071a-47db-a25b-621d38b8251d",
+      "action": {
+        "mode": "roll",
+        "sceneId": "xj5praphJhGr6mxL",
+        "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+        "actorId": "7Omg3czrr0z94iw4",
+        "itemId": "pttA6bYy0Ru9W1Ng",
+        "activityId": "AttackFixture001",
+        "targetTokenId": "z2oFZhuQdL4GQ793",
+        "advantage": "normal",
+        "attackMode": "oneHanded",
+        "abilityId": "str"
+      },
+      "mutated": true,
+      "state": {
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.3",
+        "attackRequestId": "fd9770908342716518d86d3485657ec30d5a7a3ec7594ac2b34d5fee2b23dd72",
+        "source": {
+          "sceneId": "xj5praphJhGr6mxL",
+          "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+          "actorId": "7Omg3czrr0z94iw4",
+          "itemId": "pttA6bYy0Ru9W1Ng",
+          "activityId": "AttackFixture001",
+          "targetTokenId": "z2oFZhuQdL4GQ793"
+        },
+        "hpBefore": {
+          "value": 40,
+          "temp": 4,
+          "max": 40
+        },
+        "hpAfter": null,
+        "damageApplied": null,
+        "targetAC": 10,
+        "targetActorId": "uwyaFQurD4uFZCKC",
+        "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+        "attackerPosition": {
+          "x": 300,
+          "y": 400,
+          "elevation": 0
+        },
+        "targetPosition": {
+          "x": 700,
+          "y": 400,
+          "elevation": 0
+        },
+        "sourceItemRevision": 1790977912202,
+        "rulesLimitations": [
+          "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+        ],
+        "resourcesBefore": [
+          {
+            "itemId": "v6aPlCpfDEZdyhvB",
+            "quantity": 1,
+            "uses": {
+              "max": null,
+              "spent": 0
+            }
+          },
+          {
+            "itemId": "pttA6bYy0Ru9W1Ng",
+            "quantity": 1,
+            "uses": {
+              "max": 3,
+              "spent": 0
+            }
+          }
+        ],
+        "attackRoll": null,
+        "hit": null,
+        "critical": false,
+        "damageRolls": [],
+        "damageRolled": 0,
+        "attackMode": "oneHanded",
+        "abilityId": "str",
+        "decisions": [],
+        "resourceConsumption": {
+          "before": [
+            {
+              "type": "itemUses",
+              "spent": 0,
+              "cost": 1
+            }
+          ],
+          "after": [
+            1
+          ],
+          "verified": true,
+          "nativeUpdates": {
+            "activity": {},
+            "actor": {},
+            "create": [],
+            "delete": [],
+            "item": [
+              {
+                "_id": "pttA6bYy0Ru9W1Ng",
+                "system": {
+                  "uses": {
+                    "spent": 1
+                  }
+                }
+              }
+            ],
+            "rolls": []
+          }
+        },
+        "stage": "resources-consumed"
+      },
+      "outcome": "uncertain",
+      "message": "Attack ledger acknowledgement unavailable"
+    }
+  },
+  "sequenceEntry": {
+    "input": {
+      "schemaVersion": "attack-sequence-v1",
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "requestId": "phase4-049ca289-675e-4005-8350-b440b172a68a",
+      "correlationId": "phase4-0c1609d4-071a-47db-a25b-621d38b8251d",
+      "origin": "ai-dm",
+      "action": {
+        "mode": "execute",
+        "steps": [
+          {
+            "stepId": "step1",
+            "attack": {
+              "mode": "roll",
+              "sceneId": "xj5praphJhGr6mxL",
+              "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+              "actorId": "7Omg3czrr0z94iw4",
+              "itemId": "pttA6bYy0Ru9W1Ng",
+              "activityId": "AttackFixture001",
+              "targetTokenId": "z2oFZhuQdL4GQ793",
+              "advantage": "normal",
+              "attackMode": "oneHanded",
+              "abilityId": "str"
+            }
+          }
+        ],
+        "maxDurationMs": 8000
+      }
+    },
+    "pending": true,
+    "result": {
+      "schemaVersion": "attack-sequence-v1",
+      "worldId": "izzy-campaign",
+      "userId": "X7X4KK7zca5U2Ics",
+      "requestId": "phase4-049ca289-675e-4005-8350-b440b172a68a",
+      "correlationId": "phase4-0c1609d4-071a-47db-a25b-621d38b8251d",
+      "action": {
+        "mode": "execute",
+        "steps": [
+          {
+            "stepId": "step1",
+            "attack": {
+              "mode": "roll",
+              "sceneId": "xj5praphJhGr6mxL",
+              "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+              "actorId": "7Omg3czrr0z94iw4",
+              "itemId": "pttA6bYy0Ru9W1Ng",
+              "activityId": "AttackFixture001",
+              "targetTokenId": "z2oFZhuQdL4GQ793",
+              "advantage": "normal",
+              "attackMode": "oneHanded",
+              "abilityId": "str"
+            }
+          }
+        ],
+        "maxDurationMs": 8000
+      },
+      "outcome": "uncertain",
+      "mutated": true,
+      "state": {
+        "sequenceRequestId": "phase4-049ca289-675e-4005-8350-b440b172a68a",
+        "plan": [
+          {
+            "stepId": "step1",
+            "attack": {
+              "mode": "roll",
+              "sceneId": "xj5praphJhGr6mxL",
+              "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+              "actorId": "7Omg3czrr0z94iw4",
+              "itemId": "pttA6bYy0Ru9W1Ng",
+              "activityId": "AttackFixture001",
+              "targetTokenId": "z2oFZhuQdL4GQ793",
+              "advantage": "normal",
+              "attackMode": "oneHanded",
+              "abilityId": "str"
+            }
+          }
+        ],
+        "completedStepCount": 0,
+        "steps": [
+          {
+            "stepId": "step1",
+            "rollReceipt": {
+              "schemaVersion": "attack-actions-v1",
+              "worldId": "izzy-campaign",
+              "userId": "X7X4KK7zca5U2Ics",
+              "requestId": "fd9770908342716518d86d3485657ec30d5a7a3ec7594ac2b34d5fee2b23dd72",
+              "correlationId": "phase4-0c1609d4-071a-47db-a25b-621d38b8251d",
+              "action": {
+                "mode": "roll",
+                "sceneId": "xj5praphJhGr6mxL",
+                "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                "actorId": "7Omg3czrr0z94iw4",
+                "itemId": "pttA6bYy0Ru9W1Ng",
+                "activityId": "AttackFixture001",
+                "targetTokenId": "z2oFZhuQdL4GQ793",
+                "advantage": "normal",
+                "attackMode": "oneHanded",
+                "abilityId": "str"
+              },
+              "mutated": true,
+              "state": {
+                "systemId": "dnd5e",
+                "systemVersion": "6.0.3",
+                "attackRequestId": "fd9770908342716518d86d3485657ec30d5a7a3ec7594ac2b34d5fee2b23dd72",
+                "source": {
+                  "sceneId": "xj5praphJhGr6mxL",
+                  "attackerTokenId": "4Jgz4kpyTaMpkdHn",
+                  "actorId": "7Omg3czrr0z94iw4",
+                  "itemId": "pttA6bYy0Ru9W1Ng",
+                  "activityId": "AttackFixture001",
+                  "targetTokenId": "z2oFZhuQdL4GQ793"
+                },
+                "hpBefore": {
+                  "value": 40,
+                  "temp": 4,
+                  "max": 40
+                },
+                "hpAfter": null,
+                "damageApplied": null,
+                "targetAC": 10,
+                "targetActorId": "uwyaFQurD4uFZCKC",
+                "targetActorUuid": "Actor.uwyaFQurD4uFZCKC",
+                "attackerPosition": {
+                  "x": 300,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "targetPosition": {
+                  "x": 700,
+                  "y": 400,
+                  "elevation": 0
+                },
+                "sourceItemRevision": 1790977912202,
+                "rulesLimitations": [
+                  "Target legality, reach/range, cover and attack paths require GM adjudication; native rollAttack does not enforce them."
+                ],
+                "resourcesBefore": [
+                  {
+                    "itemId": "v6aPlCpfDEZdyhvB",
+                    "quantity": 1,
+                    "uses": {
+                      "max": null,
+                      "spent": 0
+                    }
+                  },
+                  {
+                    "itemId": "pttA6bYy0Ru9W1Ng",
+                    "quantity": 1,
+                    "uses": {
+                      "max": 3,
+                      "spent": 0
+                    }
+                  }
+                ],
+                "attackRoll": null,
+                "hit": null,
+                "critical": false,
+                "damageRolls": [],
+                "damageRolled": 0,
+                "attackMode": "oneHanded",
+                "abilityId": "str",
+                "decisions": [],
+                "resourceConsumption": {
+                  "before": [
+                    {
+                      "type": "itemUses",
+                      "spent": 0,
+                      "cost": 1
+                    }
+                  ],
+                  "after": [
+                    1
+                  ],
+                  "verified": true,
+                  "nativeUpdates": {
+                    "activity": {},
+                    "actor": {},
+                    "create": [],
+                    "delete": [],
+                    "item": [
+                      {
+                        "_id": "pttA6bYy0Ru9W1Ng",
+                        "system": {
+                          "uses": {
+                            "spent": 1
+                          }
+                        }
+                      }
+                    ],
+                    "rolls": []
+                  }
+                },
+                "stage": "resources-consumed"
+              },
+              "outcome": "uncertain",
+              "message": "Attack ledger acknowledgement unavailable"
+            },
+            "applyReceipt": null
+          }
+        ],
+        "continuation": null,
+        "limitations": [
+          "Explicit GM-authorized list; no inferred Multiattack entitlement or action economy.",
+          "Non-atomic. Budget checked between awaited native stages; in-flight native work cannot be cancelled.",
+          "Reaction and uncertain outcomes require manual reconciliation."
+        ]
+      },
+      "message": "Sequence persistence readback mismatch"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+
+C:\dev\FoundryVtt\Data\Data\modules\foundry-ai-dungeon-master\scripts\inventory-solo-dm-capabilities.mjs
+  154:1  error  'console' is not defined  no-undef
+
+✖ 1 problem (1 error, 0 warnings)
+

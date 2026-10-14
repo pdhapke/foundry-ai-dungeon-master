@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "sampleCount": 200,
+  "totalCallerMs": 175.64439997659065,
+  "meanCallerMs": 0.8782219998829532,
+  "sinkWriteMs": 173.46490002819337,
+  "limits": "Local temp file + captured stdout; real console/disk overhead unmeasured; no live command latency."
+}

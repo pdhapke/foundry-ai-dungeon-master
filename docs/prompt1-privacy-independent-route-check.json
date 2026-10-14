@@ -1,0 +1,26 @@
+{
+  "scope": "Read-only unauthenticated loopback probes; private filesystem copy remains outside static Data; no cutover or claim old path denial",
+  "results": [
+    {
+      "routeClass": "candidate-private-route",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "bodyPrinted": false,
+      "bytesReceived": 236
+    },
+    {
+      "routeClass": "candidate-private-route",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "bodyPrinted": false,
+      "bytesReceived": 201
+    },
+    {
+      "routeClass": "old-public-original",
+      "status": 206,
+      "contentType": "text/markdown; charset=utf-8",
+      "bodyPrinted": false,
+      "bytesReceived": 16
+    }
+  ]
+}
