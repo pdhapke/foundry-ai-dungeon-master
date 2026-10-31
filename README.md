@@ -41,6 +41,70 @@ This selection bypasses retained world sign-in authorization for ChatKit without
 
 Start Foundry normally through the existing `App/main.js` installation hook. It starts Local API and the Node companion; Node starts Python automatically. Enable AI Dungeon Master in the world and open its scene-control button or keybinding as a GM. Optional interpreter override: `AI_DM_CHATKIT_PYTHON`; port: `AI_DM_CHATKIT_PORT=3941`; database: `AI_DM_CHATKIT_DATABASE_PATH`. Health endpoints are `http://127.0.0.1:3939/health`, `http://127.0.0.1:3940/health`, and `http://127.0.0.1:3941/health`.
 
+## Waking an external AI Dungeon Master
+
+Token movement is already queued, retried, and acknowledged inside the Local API process. With no wake URL configured, that queue keeps the placeholder adapter and does not call anyone. Set the variables below to POST each quiet period to your own receiver. The separate dot HMAC challenge webhook is unchanged.
+
+The Local API process reads these variables, not the AI companion. Put them in `foundry-local-api/server/.env` (that process loads this file on startup). A real environment variable overrides the file. Do not put the secret in Foundry game settings or in git.
+
+```dotenv
+AI_DM_WAKE_WEBHOOK_URL=https://your-dm-host.example/wake
+AI_DM_WAKE_WEBHOOK_SECRET=<receiver secret>
+AI_DM_WAKE_WEBHOOK_HEADER=Authorization
+AI_DM_WAKE_WEBHOOK_SCHEME=Bearer
+AI_DM_WAKE_DEBOUNCE_MS=4000
+AI_DM_WAKE_PLAYERS_ONLY=true
+AI_DM_WAKE_ROOM_CROSSINGS_ONLY=false
+AI_DM_WAKE_CHAT=false
+AI_DM_WAKE_COMBAT_TURNS=false
+```
+
+`AI_DM_WAKE_WEBHOOK_HEADER` plus `AI_DM_WAKE_WEBHOOK_SCHEME` build the credential header. The defaults send `Authorization: Bearer <secret>`. For a receiver that wants the raw secret in another header, set `AI_DM_WAKE_WEBHOOK_HEADER=X-Api-Key` and `AI_DM_WAKE_WEBHOOK_SCHEME=` (empty). Leave the URL unset to keep the wake off. `AI_DM_WAKE_PLAYERS_ONLY` defaults to true, so a move is sent when the mover is not the GM client that reported it. `AI_DM_WAKE_ROOM_CROSSINGS_ONLY` defaults to false; set it true to POST movement only when the coalesced path crosses a room Region. Chat and combat turns default off. Chat and combat also need a Local API build that can observe bridge events without consuming them, plus the combat-turn hook from that repo. Movement does not.
+
+Reload steps:
+
+1. In this repo run `npm run build` so `server/dist/dot-extension.js` exists.
+2. In foundry-local-api run `npm run build` after pulling the bootstrap that registers this extension (or set `FOUNDRY_API_EXTENSIONS` in that `.env` to a one-item JSON array containing the `file://` URL of `server/dist/dot-extension.js`).
+3. Stop Foundry and start it again through `App/main.js`. A world reload does not restart the API process. The API log should include `AI-GM wake webhook enabled` and must not print the secret.
+4. Confirm the queue tools are loaded: `foundry_list_ai_gm_deliveries` appears in the Local API MCP tool list, and its `hostCapability` is `wake`.
+
+Verify one event with a local receiver:
+
+```sh
+node -e "require('http').createServer((q,s)=>{let b='';q.on('data',c=>b+=c);q.on('end',()=>{console.log(q.headers.authorization);console.log(b);s.writeHead(204);s.end();});}).listen(8787,'127.0.0.1')"
+```
+
+Point `AI_DM_WAKE_WEBHOOK_URL` at `http://127.0.0.1:8787/wake`, restart Foundry, and move a player token once. Within about four seconds the receiver prints one JSON body and `Bearer <secret>`. A long drag in that window is still one request. `foundry_list_ai_gm_deliveries` then shows the item `acknowledged` with `acknowledgementId` `webhook:204`. HTTP 2xx is delivered. HTTP 408, 425, 429, and 5xx retry on the existing queue; other 4xx dead-letter.
+
+Posted JSON uses this shape:
+
+```json
+{
+  "type": "token_movement",
+  "worldId": "world-id-or-null",
+  "sceneId": "scene-id",
+  "tokenId": "token-id",
+  "actorId": "actor-id-or-null",
+  "userId": "user-id",
+  "userName": "name-or-null",
+  "from": { "x": 0, "y": 0, "elevation": 0 },
+  "to": { "x": 20, "y": 5, "elevation": 1 },
+  "path": [
+    { "x": 0, "y": 0, "elevation": 0 },
+    { "x": 20, "y": 5, "elevation": 1 }
+  ],
+  "sequence": 12,
+  "cursor": "generation:12",
+  "timestamp": "2026-10-31T02:52:00.000Z",
+  "deliveryId": "ai-gm-…",
+  "eventId": "last-event-id",
+  "attempt": 1,
+  "coalescedEventIds": ["first-event-id", "last-event-id"]
+}
+```
+
+Chat adds `messageId` and `content`. Combat turns use `type: "combat_turn"` and add `combatId`, `round`, `turn`, and `combatantId`. `from` and `to` are null for those.
+
 The official component loads from the OpenAI CDN and requires network access. Exact loopback browser hosts (`localhost`, `127.0.0.1`, `[::1]`) default to the `local-dev` key shown in the [official ChatKit quickstart](https://openai.github.io/chatkit-js/quickstart/). Other hosts require an accepted ChatKit domain key configured in Foundry under the GM-only ChatKit domain key setting (`chatKitDomainKey`) for the exact browser origin. A configured key always overrides the local default. Configuration and runtime failures appear in the panel. Automatic observations are optional and disabled by default (`automaticEventsEnabled`); enabling them does not assign the DM identity. Automatic retries of uncertain effects are forbidden. Setup commands describe installation; they do not authorize configuration, credentials, deployment or billable calls in an offline-only task.
 
 ## Programmatic entry point and transmitted context
@@ -61,4 +125,3 @@ chatkit-server/.venv/Scripts/python.exe -m unittest discover -s chatkit-server -
 ```
 
 See the current [solo DM ledger](docs/solo-dm-ledger.md), [acceptance summary](docs/solo-dm-acceptance-summary.md) and [live runbook](docs/solo-dm-live-acceptance.md). Earlier [ChatKit audit](CHATKIT-AUDIT.md), [architecture evidence](CHATKIT-ARCHITECTURE.md) and [integration verification](CHATKIT-INTEGRATION.md) retain historical scope. Passing builds and controlled MCP/DOM/model fixtures do not prove loaded Foundry, live model compliance, actual hook behavior or private serving. No live fixtures, reloads, switching, billable model calls or deployment were authorized during this implementation.
-
