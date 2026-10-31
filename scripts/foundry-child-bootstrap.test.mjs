@@ -12,7 +12,7 @@ Object.defineProperty(testRuntime, bootstrapStateSymbol, {
   configurable: true,
   value: { child: null },
 });
-const { startFoundryAiDungeonMasterChild } = await import(
+const { publishAiDmApiExtension, startFoundryAiDungeonMasterChild } = await import(
   `./foundry-child-bootstrap.mjs?test=${Date.now()}`
 );
 if (previousProcessState) {
@@ -75,6 +75,7 @@ test("missing build output is diagnosed without spawning or throwing", () => {
     entryExists: () => false,
     hostProcess,
     logger,
+    publishExtension() {},
     serverEntryPoint: "C:\\module\\server\\dist\\index.js",
     spawnChild: () => {
       spawnCalls += 1;
@@ -98,6 +99,7 @@ test("a synchronous spawn failure is visible and isolated from the host", () => 
     entryExists: () => true,
     hostProcess,
     logger,
+    publishExtension() {},
     spawnChild: () => {
       throw new Error("synthetic spawn failure");
     },
@@ -119,6 +121,7 @@ test("duplicate evaluation guard starts one child with the Foundry runtime contr
     entryExists: () => true,
     hostProcess,
     logger,
+    publishExtension() {},
     serverDirectory: "C:\\module\\server",
     serverEntryPoint: "C:\\module\\server\\dist\\index.js",
     spawnChild(executable, args, spawnOptions) {
@@ -159,6 +162,7 @@ test("an asynchronous child spawn error is reported without restarting", () => {
     entryExists: () => true,
     hostProcess,
     logger,
+    publishExtension() {},
     spawnChild: () => {
       spawnCalls += 1;
       return child;
@@ -185,6 +189,7 @@ test("an early child exit is diagnosed and does not create a restart loop", () =
     entryExists: () => true,
     hostProcess,
     logger,
+    publishExtension() {},
     spawnChild: () => {
       spawnCalls += 1;
       return child;
@@ -211,6 +216,7 @@ test("parent shutdown terminates a live child and suppresses an expected exit er
     entryExists: () => true,
     hostProcess,
     logger,
+    publishExtension() {},
     spawnChild: () => child,
   });
 
@@ -231,6 +237,7 @@ test("parent shutdown does not kill a child that already exited", () => {
     entryExists: () => true,
     hostProcess,
     logger,
+    publishExtension() {},
     spawnChild: () => child,
   });
   child.exitCode = 0;
@@ -238,4 +245,35 @@ test("parent shutdown does not kill a child that already exited", () => {
   hostProcess.emit("exit", 0);
 
   assert.equal(child.killCalls, 0);
+});
+
+test("startup publishes the API extension before the child inherits the environment", () => {
+  const hostProcess = new FakeHostProcess();
+  const child = new FakeChildProcess();
+  const entry = new globalThis.URL("file:///C:/synthetic/ai/server/dist/dot-extension.js");
+  startFoundryAiDungeonMasterChild({
+    entryExists: () => true,
+    hostProcess,
+    publishExtension(environment) {
+      environment.FOUNDRY_API_EXTENSIONS = JSON.stringify([entry.href]);
+    },
+    spawnChild: () => child,
+  });
+  assert.deepEqual(JSON.parse(hostProcess.env.FOUNDRY_API_EXTENSIONS), [entry.href]);
+});
+
+test("a missing extension build is reported and does not change the environment", () => {
+  const environment = { KEEP: "yes" };
+  const errors = [];
+  publishAiDmApiExtension(
+    environment,
+    {
+      error(message) {
+        errors.push(message);
+      },
+    },
+    { entryExists: () => false },
+  );
+  assert.deepEqual(environment, { KEEP: "yes" });
+  assert.match(errors[0], /API extension is not built/);
 });

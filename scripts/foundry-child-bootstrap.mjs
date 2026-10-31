@@ -1,6 +1,7 @@
 import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import { registerAiDmApiExtension } from "./api-extension-registration.mjs";
 
 const bootstrapStateSymbol = Symbol.for("foundry-ai-dungeon-master.foundry-child-bootstrap.state");
 
@@ -20,6 +21,7 @@ export function startFoundryAiDungeonMasterChild({
   serverDirectory = defaultServerDirectory,
   serverEntryPoint = defaultServerEntryPoint,
   logger = globalThis.console,
+  publishExtension = publishAiDmApiExtension,
 } = {}) {
   if (hostProcess[bootstrapStateSymbol]) {
     return hostProcess[bootstrapStateSymbol].child;
@@ -34,6 +36,8 @@ export function startFoundryAiDungeonMasterChild({
     configurable: true,
     value: state,
   });
+
+  publishExtension(hostProcess.env, logger);
 
   if (!entryExists(serverEntryPoint)) {
     logger.error(
@@ -86,6 +90,22 @@ export function startFoundryAiDungeonMasterChild({
   });
 
   return child;
+}
+
+/** Put this module's extension on the process environment before a Local API spawn copies it. */
+export function publishAiDmApiExtension(environment, logger = globalThis.console, options) {
+  try {
+    registerAiDmApiExtension(environment, options);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    if (message === "AI_DM_EXTENSION_BUILD_REQUIRED") {
+      logger.error(
+        "[foundry-ai-dungeon-master] API extension is not built. Local API will not load queue or wake tools until npm run build.",
+      );
+      return;
+    }
+    logger.error(`[foundry-ai-dungeon-master] API extension registration failed: ${message}`);
+  }
 }
 
 startFoundryAiDungeonMasterChild();

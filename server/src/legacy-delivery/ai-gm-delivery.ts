@@ -219,10 +219,10 @@ export class AiGmDeliveryService {
         (item) =>
           item &&
           typeof item === "object" &&
-          typeof (item).id === "string" &&
-          typeof (item).eventId === "string" &&
-          typeof (item).eventSequence === "number" &&
-          Array.isArray((item).attemptHistory),
+          typeof item.id === "string" &&
+          typeof item.eventId === "string" &&
+          typeof item.eventSequence === "number" &&
+          Array.isArray(item.attemptHistory),
       )
     );
   }
@@ -565,7 +565,40 @@ export class AiGmDeliveryService {
     return clone(this.requireItem(id));
   }
 
-  async dispatchDue(adapter: HostWakeAdapter, limit = 25): Promise<DeliveryRunResult> {
+  currentTime(): number {
+    return this.now();
+  }
+
+  /**
+   * Hold queued work until `until`. Used to keep a token's in-progress drag
+   * together; retries already scheduled later stay on that later time.
+   */
+  deferUntil(ids: readonly string[], until: number): void {
+    if (!Number.isFinite(until) || ids.length === 0) return;
+    const wanted = new Set(ids);
+    const timestamp = this.now();
+    const changes = this.state.items.some((item) => {
+      if (!wanted.has(item.id)) return false;
+      if (item.state !== "queued" && item.state !== "retry_wait") return false;
+      return (item.nextAttemptAt ?? 0) < until;
+    });
+    if (!changes) return;
+    this.commit((next) => {
+      for (const item of next.items) {
+        if (!wanted.has(item.id)) continue;
+        if (item.state !== "queued" && item.state !== "retry_wait") continue;
+        if ((item.nextAttemptAt ?? 0) >= until) continue;
+        item.nextAttemptAt = until;
+        item.updatedAt = timestamp;
+      }
+    });
+  }
+
+  async dispatchDue(
+    adapter: HostWakeAdapter,
+    limit = 25,
+    only?: ReadonlySet<string>,
+  ): Promise<DeliveryRunResult> {
     const result: DeliveryRunResult = {
       attempted: 0,
       acknowledged: 0,
@@ -576,7 +609,8 @@ export class AiGmDeliveryService {
       .filter(
         (item) =>
           (item.state === "queued" || item.state === "retry_wait") &&
-          (item.nextAttemptAt ?? 0) <= this.now(),
+          (item.nextAttemptAt ?? 0) <= this.now() &&
+          (!only || only.has(item.id)),
       )
       .slice(0, Math.max(0, limit));
     for (const item of due) {
