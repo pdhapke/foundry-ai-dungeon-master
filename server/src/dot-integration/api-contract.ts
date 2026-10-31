@@ -20,6 +20,8 @@ export interface ApiExtensionContext {
   call(command: string, payload: unknown, selector: ClientSelector): Promise<unknown>;
   registerPrivateChannel(kind: string, handler: (payload: unknown, sender: EventSender, current: () => boolean) => Promise<void>): () => void;
   registerEventHandler(name: string, handler: (payload: unknown, metadata: EventSender) => void | Promise<void>): () => void;
+  /** Non-consuming event observer. Optional: older Local API builds do not provide it. */
+  observeEvent?(name: string, handler: (payload: unknown, metadata: EventSender) => void | Promise<void>): () => void;
   onConnectionEstablished(handler: (client: ApiClient) => void): () => void;
   onConnectionLost(handler: (client: ApiClient) => void): () => void;
   registerRoute(path: string, handler: RequestHandler): () => void;

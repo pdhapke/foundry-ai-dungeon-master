@@ -13,13 +13,18 @@ export interface WakeWebhookConfig {
    * An empty string sends the secret as the entire header value.
    */
   scheme: string;
-  /** Quiet period per token before a burst is posted. Default 4000. */
+  /**
+   * Quiet period: hold the wake until no new qualifying movement or chat event
+   * has arrived for this long, then post one webhook for the whole burst. Default 5000.
+   */
   debounceMs: number;
+  /** Longest a burst may be held after its first event, even while events keep arriving. Default 15000. */
+  maxWaitMs: number;
   /** When true, GM-authored moves and GM chat are not posted. Default true. */
   playersOnly: boolean;
   /** When true, movement is posted only if it crosses a room Region. Default false. */
   roomCrossingsOnly: boolean;
-  /** Also post GM-observed chat messages. Default false. */
+  /** Also post new player chat messages observed by the GM client. Default true. */
   chat: boolean;
   /** Also post combat turn changes. Default false. */
   combatTurns: boolean;
@@ -28,6 +33,8 @@ export interface WakeWebhookConfig {
 }
 
 const DEFAULT_LIMIT = 2_048;
+const DEFAULT_DEBOUNCE_MS = 5_000;
+const DEFAULT_MAX_WAIT_MS = 15_000;
 const HEADER_NAME = /^[A-Za-z0-9!#$%&'*+.^_`|~-]{1,128}$/;
 const BLOCKED_HEADERS = new Set([
   "connection",
@@ -50,10 +57,11 @@ export function loadWakeWebhookConfig(environment: NodeJS.ProcessEnv): WakeWebho
     secret: null,
     headerName: "Authorization",
     scheme: "Bearer",
-    debounceMs: 4_000,
+    debounceMs: DEFAULT_DEBOUNCE_MS,
+    maxWaitMs: DEFAULT_MAX_WAIT_MS,
     playersOnly: true,
     roomCrossingsOnly: false,
-    chat: false,
+    chat: true,
     combatTurns: false,
   };
   const rawUrl = environment["AI_DM_WAKE_WEBHOOK_URL"]?.trim() ?? "";
@@ -66,16 +74,28 @@ export function loadWakeWebhookConfig(environment: NodeJS.ProcessEnv): WakeWebho
       ? "Bearer"
       : environment["AI_DM_WAKE_WEBHOOK_SCHEME"].trim();
   const secret = environment["AI_DM_WAKE_WEBHOOK_SECRET"]?.trim() || null;
-  const debounce = parseDebounce(environment["AI_DM_WAKE_DEBOUNCE_MS"]);
+  const debounce = parseDuration(
+    environment["AI_DM_WAKE_DEBOUNCE_MS"],
+    "AI_DM_WAKE_DEBOUNCE_MS",
+    DEFAULT_DEBOUNCE_MS,
+    30_000,
+  );
+  const maxWait = parseDuration(
+    environment["AI_DM_WAKE_MAX_WAIT_MS"],
+    "AI_DM_WAKE_MAX_WAIT_MS",
+    DEFAULT_MAX_WAIT_MS,
+    120_000,
+  );
   const playersOnly = parseFlag(environment["AI_DM_WAKE_PLAYERS_ONLY"], true);
   const roomCrossingsOnly = parseFlag(environment["AI_DM_WAKE_ROOM_CROSSINGS_ONLY"], false);
-  const chat = parseFlag(environment["AI_DM_WAKE_CHAT"], false);
+  const chat = parseFlag(environment["AI_DM_WAKE_CHAT"], true);
   const combatTurns = parseFlag(environment["AI_DM_WAKE_COMBAT_TURNS"], false);
   const problem =
     url.problem ??
     headerProblem(headerName) ??
     credentialProblem(secret, scheme) ??
     debounce.problem ??
+    maxWait.problem ??
     playersOnly.problem ??
     roomCrossingsOnly.problem ??
     chat.problem ??
@@ -88,6 +108,8 @@ export function loadWakeWebhookConfig(environment: NodeJS.ProcessEnv): WakeWebho
     headerName,
     scheme,
     debounceMs: debounce.value,
+    // The cap can never be shorter than the quiet period it bounds.
+    maxWaitMs: Math.max(maxWait.value, debounce.value),
     playersOnly: playersOnly.value,
     roomCrossingsOnly: roomCrossingsOnly.value,
     chat: chat.value,
@@ -138,19 +160,17 @@ function credentialProblem(secret: string | null, scheme: string): string | unde
   return undefined;
 }
 
-function parseDebounce(raw: string | undefined): { value: number; problem?: string } {
-  if (!raw?.trim()) return { value: 4_000 };
-  if (!/^\d+$/.test(raw.trim()))
-    return {
-      value: 4_000,
-      problem: "AI_DM_WAKE_DEBOUNCE_MS must be an integer from 0 through 30000.",
-    };
+function parseDuration(
+  raw: string | undefined,
+  name: string,
+  fallback: number,
+  max: number,
+): { value: number; problem?: string } {
+  if (!raw?.trim()) return { value: fallback };
+  const problem = `${name} must be an integer from 0 through ${max}.`;
+  if (!/^\d+$/.test(raw.trim())) return { value: fallback, problem };
   const value = Number(raw.trim());
-  if (!Number.isInteger(value) || value < 0 || value > 30_000)
-    return {
-      value: 4_000,
-      problem: "AI_DM_WAKE_DEBOUNCE_MS must be an integer from 0 through 30000.",
-    };
+  if (!Number.isInteger(value) || value < 0 || value > max) return { value: fallback, problem };
   return { value };
 }
 
