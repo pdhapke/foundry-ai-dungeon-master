@@ -19,6 +19,7 @@ import {
   UNAVAILABLE_WAKE_MESSAGE,
   chatWakeFromHook,
   combatWakeFromEvent,
+  dispatchBatchedWake,
   dispatchCoalescedWake,
   postWakeWebhook,
   selectWakeAdapter,
@@ -130,8 +131,8 @@ void test("default credential header is Authorization Bearer and the secret stay
   assert.equal(config.headerName, "Authorization");
   assert.equal(config.scheme, "Bearer");
   assert.equal(config.playersOnly, true);
-  assert.equal(config.debounceMs, 4_000);
-  assert.equal(config.chat, false);
+  assert.equal(config.debounceMs, 5_000);
+  assert.equal(config.chat, true);
   assert.equal(config.combatTurns, false);
   const captured = recorder();
   const result = await postWakeWebhook(
@@ -541,4 +542,259 @@ void test("registration uses the webhook when configured and the placeholder oth
   } finally {
     await shutdown?.();
   }
+});
+
+void test("chat wakes are on by default with a 5s quiet period and a 15s cap", () => {
+  const config = loadWakeWebhookConfig(baseEnv);
+  assert.equal(config.enabled, true);
+  assert.equal(config.chat, true);
+  assert.equal(config.debounceMs, 5_000);
+  assert.equal(config.maxWaitMs, 15_000);
+  assert.equal(loadWakeWebhookConfig({ ...baseEnv, AI_DM_WAKE_CHAT: "false" }).chat, false);
+  const raised = loadWakeWebhookConfig({
+    ...baseEnv,
+    AI_DM_WAKE_DEBOUNCE_MS: "8000",
+    AI_DM_WAKE_MAX_WAIT_MS: "2000",
+  });
+  assert.equal(raised.maxWaitMs, 8_000);
+  const invalid = loadWakeWebhookConfig({ ...baseEnv, AI_DM_WAKE_MAX_WAIT_MS: "soon" });
+  assert.equal(invalid.enabled, false);
+  assert.match(invalid.problem ?? "", /AI_DM_WAKE_MAX_WAIT_MS/);
+});
+
+void test("player chat uses the v14 author field and GM chat never wakes", () => {
+  const gm = { userId: "gm-user", lane: "gm" };
+  const player = chatWakeFromHook(
+    [
+      {
+        _id: "message-10",
+        author: "player-1",
+        content: "<p>We step inside and look around.</p>",
+        speaker: { scene: "scene-1", alias: "Ada" },
+        timestamp: 1_700_000_000_000,
+      },
+      {},
+      "player-1",
+    ],
+    gm,
+    1,
+    true,
+  );
+  assert.ok(player);
+  assert.equal(player.type, "chat_message");
+  assert.equal(player.messageId, "message-10");
+  assert.equal(player.userId, "player-1");
+  assert.equal(player.sceneId, "scene-1");
+  assert.equal(player.timestamp, new Date(1_700_000_000_000).toISOString());
+  assert.equal(player.content, "We step inside and look around.");
+  // The AI-GM posts through the GM client, so its own narration is filtered.
+  assert.equal(
+    chatWakeFromHook(
+      [{ _id: "message-11", author: "gm-user", content: "Narration" }, {}, "gm-user"],
+      gm,
+      1,
+      true,
+    ),
+    undefined,
+  );
+  // Author objects (resolved documents) still identify the author.
+  assert.equal(
+    chatWakeFromHook(
+      [{ _id: "message-12", author: { _id: "gm-user" }, content: "Narration" }],
+      gm,
+      1,
+      true,
+    ),
+    undefined,
+  );
+});
+
+function chatAt(id: string, at: number, userId = "player-1"): AiDmWakePayload {
+  const parsed = chatWakeFromHook(
+    [{ _id: id, author: userId, content: `message ${id}`, speaker: { scene: "scene-1" } }],
+    { userId: "gm-user", lane: "gm" },
+    at,
+    true,
+  );
+  assert.ok(parsed);
+  return parsed;
+}
+
+void test("a burst of drags on several tokens and chat waits for quiet, then posts once", async (t) => {
+  let now = 10_000;
+  const { service, directory } = queue(() => now);
+  t.after(() => rmSync(directory, { recursive: true, force: true }));
+  const config = loadWakeWebhookConfig(baseEnv);
+  const aux = new AuxiliaryWakeQueue();
+  const captured = recorder();
+  const step = (x: number) => [
+    { x, y: 0, elevation: 0 },
+    { x: x + 10, y: 0, elevation: 0 },
+  ];
+  service.enqueue(movement({ eventId: "drag-a1", sequence: 1, timestamp: 10_000, waypoints: step(0) }), "gen:1");
+  now = 12_000;
+  service.enqueue(
+    movement({ eventId: "drag-b1", sequence: 2, tokenId: "token-2", timestamp: 12_000, waypoints: step(50) }),
+    "gen:2",
+  );
+  let run = await dispatchBatchedWake(service, config, captured.fetch, undefined, aux, now);
+  assert.equal(run.waiting, true);
+  assert.equal(captured.bodies.length, 0);
+
+  // Each new event restarts the quiet period.
+  now = 15_000;
+  service.enqueue(movement({ eventId: "drag-a2", sequence: 3, timestamp: 15_000, waypoints: step(10) }), "gen:3");
+  aux.push(chatAt("message-20", 16_000), 16_000);
+  now = 20_999;
+  run = await dispatchBatchedWake(service, config, captured.fetch, undefined, aux, now);
+  assert.equal(run.waiting, true);
+  assert.equal(captured.bodies.length, 0);
+
+  now = 21_000;
+  run = await dispatchBatchedWake(service, config, captured.fetch, undefined, aux, now);
+  assert.equal(run.postedGroups, 1);
+  assert.equal(run.auxiliaryDelivered, 1);
+  assert.equal(captured.bodies.length, 1);
+  const body = captured.bodies[0]!;
+  // The newest event was the player's chat, so the wake is a chat wake.
+  assert.equal(body.type, "chat_message");
+  assert.equal(body.messageId, "message-20");
+  assert.equal(body.userId, "player-1");
+  assert.equal(body.sceneId, "scene-1");
+  assert.deepEqual(body.coalescedEventIds, ["drag-a1", "drag-b1", "drag-a2", "chat:message-20"]);
+  assert.deepEqual(body.messageIds, ["message-20"]);
+  assert.deepEqual(body.eventTypes, ["token_movement", "chat_message"]);
+  assert.deepEqual(body.tokenIds, ["token-1", "token-2"]);
+  assert.equal(body.chatMessages?.[0]?.content, "message message-20");
+  // Path fields describe the most recently moved token.
+  assert.equal(body.tokenId, "token-1");
+  assert.deepEqual(body.to, { x: 20, y: 0, elevation: 0 });
+  assert.equal(service.list().every((item) => item.state === "acknowledged"), true);
+  assert.equal(aux.pending, 0);
+
+  // Nothing left: later ticks post nothing.
+  now = 40_000;
+  await dispatchBatchedWake(service, config, captured.fetch, undefined, aux, now);
+  assert.equal(captured.bodies.length, 1);
+});
+
+void test("continuous activity is capped at 15s after the first event", async (t) => {
+  let now = 0;
+  const { service, directory } = queue(() => now);
+  t.after(() => rmSync(directory, { recursive: true, force: true }));
+  const config = loadWakeWebhookConfig(baseEnv);
+  const aux = new AuxiliaryWakeQueue();
+  const captured = recorder();
+  for (let index = 0; index < 5; index += 1) {
+    now = 1_000 + index * 3_000;
+    service.enqueue(
+      movement({
+        eventId: `drag-${index}`,
+        sequence: index + 1,
+        timestamp: now,
+        waypoints: [
+          { x: index * 10, y: 0 },
+          { x: index * 10 + 10, y: 0 },
+        ],
+      }),
+      `gen:${index + 1}`,
+    );
+    await dispatchBatchedWake(service, config, captured.fetch, undefined, aux, now);
+  }
+  assert.equal(captured.bodies.length, 0);
+  now = 15_999; // last event at 13s would otherwise wait until 18s
+  await dispatchBatchedWake(service, config, captured.fetch, undefined, aux, now);
+  assert.equal(captured.bodies.length, 0);
+  now = 16_000; // first event at 1s + 15s cap
+  await dispatchBatchedWake(service, config, captured.fetch, undefined, aux, now);
+  assert.equal(captured.bodies.length, 1);
+  assert.equal(captured.bodies[0]!.coalescedEventIds.length, 5);
+  assert.equal(captured.bodies[0]!.type, "token_movement");
+});
+
+void test("chat-only bursts post one webhook and retry together", async (t) => {
+  let now = 1_000;
+  const { service, directory } = queue(() => now);
+  t.after(() => rmSync(directory, { recursive: true, force: true }));
+  const config = loadWakeWebhookConfig(baseEnv);
+  const aux = new AuxiliaryWakeQueue();
+  aux.push(chatAt("message-30", 1_000), 1_000);
+  aux.push(chatAt("message-31", 3_000, "player-2"), 3_000);
+  const failing = recorder(503);
+  now = 7_999;
+  await dispatchBatchedWake(service, config, failing.fetch, undefined, aux, now);
+  assert.equal(failing.bodies.length, 0);
+  now = 8_000;
+  const failed = await dispatchBatchedWake(service, config, failing.fetch, undefined, aux, now);
+  assert.equal(failed.retryScheduled, 1);
+  assert.equal(failing.bodies.length, 1);
+  assert.equal(aux.pending, 2);
+
+  const ok = recorder(200);
+  now = 8_500; // retry backoff not reached yet
+  await dispatchBatchedWake(service, config, ok.fetch, undefined, aux, now);
+  assert.equal(ok.bodies.length, 0);
+  now = 9_000;
+  const posted = await dispatchBatchedWake(service, config, ok.fetch, undefined, aux, now);
+  assert.equal(posted.postedGroups, 1);
+  assert.equal(ok.bodies.length, 1);
+  const body = ok.bodies[0]!;
+  assert.equal(body.type, "chat_message");
+  assert.equal(body.messageId, "message-31");
+  assert.equal(body.userId, "player-2");
+  assert.equal(body.attempt, 2);
+  assert.deepEqual(body.messageIds, ["message-30", "message-31"]);
+  assert.deepEqual(body.coalescedEventIds, ["chat:message-30", "chat:message-31"]);
+  assert.equal(aux.pending, 0);
+});
+
+void test("registration observes chat without consuming it and skips GM authors", async (t) => {
+  const directory = mkdtempSync(join(tmpdir(), "wake-observe-"));
+  t.after(() => rmSync(directory, { recursive: true, force: true }));
+  let shutdown: (() => Promise<void>) | undefined;
+  const observed = new Map<string, (payload: unknown, metadata: unknown) => unknown>();
+  const lookups: string[] = [];
+  const context = {
+    runtimeRoot: pathToFileURL(`${directory}/`),
+    bridge: { getClient: () => null, getVerifiedFoundryIdentity: () => null },
+    call: (command: string, payload: { userId?: string }) => {
+      if (command === "userGet") {
+        lookups.push(payload.userId ?? "");
+        return Promise.resolve({ role: payload.userId === "assistant-gm" ? 3 : 1 });
+      }
+      return Promise.resolve({});
+    },
+    observeEvent: (name: string, handler: (payload: unknown, metadata: unknown) => unknown) => {
+      observed.set(name, handler);
+      return () => observed.delete(name);
+    },
+    registerEventHandler: () => {
+      throw new Error("chat must not be consumed");
+    },
+    movement: {
+      path: join(directory, "movement.json"),
+      getStore: () => undefined,
+      reloadStore: () => undefined,
+      diagnose: () => ({ configured: false }),
+      onRecord: () => () => undefined,
+    },
+    registerEndpoints: () => () => undefined,
+    onShutdown: (handler: () => Promise<void>) => {
+      shutdown = handler;
+      return () => undefined;
+    },
+    createProtocolError: (body: { message: string }) => new Error(body.message),
+  } as unknown as LegacyDeliveryContext;
+  try {
+    registerLegacyDelivery(context, undefined, baseEnv);
+    const handler = observed.get("createChatMessage");
+    assert.ok(handler);
+    const gm = { clientId: "gm-client", userId: "gm-user", lane: "gm" };
+    await handler([{ _id: "message-40", author: "assistant-gm", content: "aside" }], gm);
+    await handler([{ _id: "message-41", author: "player-1", content: "hello" }], gm);
+    assert.deepEqual(lookups, ["assistant-gm", "player-1"]);
+  } finally {
+    await shutdown?.();
+  }
+  assert.equal(observed.size, 0);
 });

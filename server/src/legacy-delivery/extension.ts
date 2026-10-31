@@ -13,15 +13,13 @@ import {
   chatWakeFromHook,
   combatWakeFromEvent,
   createBridgeEnricher,
-  dispatchCoalescedWake,
-  postWakeWebhook,
+  dispatchBatchedWake,
   selectWakeAdapter,
-  type AiDmWakePayload,
   type WakeEnricher,
   type WakeObserverMetadata,
 } from "./wake-webhook.js";
 
-type EventObserver = (payload: unknown, metadata: WakeObserverMetadata) => void;
+type EventObserver = (payload: unknown, metadata: WakeObserverMetadata) => void | Promise<void>;
 
 /** AI-owned adoption of the established queue; no live file relocation or identity reset. */
 export function registerLegacyDelivery(
@@ -116,39 +114,8 @@ async function deliverWake(
   enrich: WakeEnricher,
   auxiliary: AuxiliaryWakeQueue | undefined,
 ): Promise<void> {
-  await dispatchCoalescedWake(service, wake, fetch, enrich);
-  if (!auxiliary) return;
-  await auxiliary.dispatch(
-    async (payload, signal) =>
-      postWakeWebhook(wake, await withWorld(enrich, payload, signal), signal),
-    Date.now(),
-  );
-}
-
-async function withWorld(
-  enrich: WakeEnricher,
-  payload: AiDmWakePayload,
-  signal: AbortSignal,
-): Promise<AiDmWakePayload> {
-  if (payload.worldId && payload.userName && (payload.actorId || payload.type !== "token_movement"))
-    return payload;
-  try {
-    const enrichment = await enrich({
-      userId: payload.userId ?? "",
-      sceneId: payload.sceneId ?? "",
-      tokenId: payload.tokenId ?? "",
-      signal,
-    });
-    return {
-      ...payload,
-      worldId: payload.worldId ?? enrichment.worldId,
-      userName: payload.userName ?? enrichment.userName,
-      actorId: payload.actorId ?? enrichment.actorId,
-    };
-  } catch (error) {
-    if (signal.aborted || (error instanceof Error && error.name === "AbortError")) throw error;
-    return payload;
-  }
+  // One webhook per quiet burst across movement, chat, and combat events.
+  await dispatchBatchedWake(service, wake, fetch, enrich, auxiliary);
 }
 
 function observeAuxiliaryEvents(
@@ -156,11 +123,9 @@ function observeAuxiliaryEvents(
   wake: WakeWebhookConfig | undefined,
   auxiliary: AuxiliaryWakeQueue | undefined,
 ): Array<() => void> {
-  const observe = (
-    context as LegacyDeliveryContext & {
-      observeEvent?: (name: string, handler: EventObserver) => () => void;
-    }
-  ).observeEvent;
+  const observe = context.observeEvent?.bind(context) as
+    | ((name: string, handler: EventObserver) => () => void)
+    | undefined;
   if (!wake || !auxiliary || typeof observe !== "function") {
     if (wake && (wake.chat || wake.combatTurns) && typeof observe !== "function")
       console.error(
@@ -171,9 +136,14 @@ function observeAuxiliaryEvents(
   const stops: Array<() => void> = [];
   if (wake.chat)
     stops.push(
-      observe("createChatMessage", (payload, metadata) => {
-        const parsed = chatWakeFromHook(payload, metadata, Date.now(), wake.playersOnly);
-        if (parsed) auxiliary.push(parsed, Date.now());
+      observe("createChatMessage", async (payload, metadata) => {
+        const receivedAt = Date.now();
+        const parsed = chatWakeFromHook(payload, metadata, receivedAt, wake.playersOnly);
+        if (!parsed) return;
+        // Another GM account (or the AI posting as one) must not wake the AI-GM.
+        if (wake.playersOnly && parsed.userId && (await isGameMaster(context, parsed.userId)))
+          return;
+        auxiliary.push(parsed, receivedAt);
       }),
     );
   if (wake.combatTurns)
@@ -186,6 +156,18 @@ function observeAuxiliaryEvents(
   return stops;
 }
 
+/** Assistant GM (3) and Gamemaster (4) roles. Unknown users count as players. */
+async function isGameMaster(context: LegacyDeliveryContext, userId: string): Promise<boolean> {
+  try {
+    const user = (await context.call("userGet", { userId }, { lane: "gm" })) as {
+      role?: unknown;
+    } | null;
+    return typeof user?.role === "number" && user.role >= 3;
+  } catch {
+    return false;
+  }
+}
+
 function reportWakeConfiguration(config: WakeWebhookConfig): void {
   if (config.enabled) {
     let origin = "configured endpoint";
@@ -195,7 +177,7 @@ function reportWakeConfiguration(config: WakeWebhookConfig): void {
       /* Enabled configuration already rejected credential-bearing URLs. */
     }
     console.error(
-      `[foundry-ai-dungeon-master] AI-GM wake webhook enabled for ${origin}. Debounce ${config.debounceMs}ms. Player moves only: ${config.playersOnly}. Room crossings only: ${config.roomCrossingsOnly}. Chat: ${config.chat}. Combat turns: ${config.combatTurns}.`,
+      `[foundry-ai-dungeon-master] AI-GM wake webhook enabled for ${origin}. Quiet period ${config.debounceMs}ms, max wait ${config.maxWaitMs}ms. Player moves only: ${config.playersOnly}. Room crossings only: ${config.roomCrossingsOnly}. Chat: ${config.chat}. Combat turns: ${config.combatTurns}.`,
     );
     return;
   }

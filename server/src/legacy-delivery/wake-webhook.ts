@@ -44,6 +44,23 @@ export interface AiDmWakePayload {
   round?: number;
   turn?: number;
   combatantId?: string;
+  /** Every event type folded into this wake, oldest first. */
+  eventTypes?: Array<AiDmWakePayload["type"]>;
+  /** Every token that moved in this wake. */
+  tokenIds?: string[];
+  /** Ids of every chat message folded into this wake, oldest first. */
+  messageIds?: string[];
+  /** The chat messages folded into this wake, oldest first. */
+  chatMessages?: WakeChatMessage[];
+}
+
+export interface WakeChatMessage {
+  messageId: string;
+  userId: string | null;
+  userName: string | null;
+  sceneId: string | null;
+  timestamp: string;
+  content: string;
 }
 
 export interface WakeEnrichment {
@@ -321,8 +338,8 @@ export function chatWakeFromHook(
   const args = hookArgs(payload);
   const message = asRecord(args[0]);
   if (!message) return undefined;
-  const author =
-    typeof message["user"] === "string" ? message["user"] : lastString(args);
+  // Foundry v12+ stores the author as `author`; older data used `user`.
+  const author = documentId(message["author"]) ?? documentId(message["user"]) ?? lastString(args);
   if (playersOnly && author && author === metadata.userId) return undefined;
   const messageId = text(message["_id"]) ?? text(message["id"]);
   const content = plainText(typeof message["content"] === "string" ? message["content"] : "");
@@ -392,18 +409,21 @@ export function combatWakeFromEvent(
   };
 }
 
+interface AuxiliaryWakeItem {
+  payload: AiDmWakePayload;
+  attempts: number;
+  nextAttemptAt: number;
+  receivedAt: number;
+}
+
 export class AuxiliaryWakeQueue {
-  private readonly items: Array<{
-    payload: AiDmWakePayload;
-    attempts: number;
-    nextAttemptAt: number;
-  }> = [];
+  private readonly items: AuxiliaryWakeItem[] = [];
   private readonly seen = new Map<string, number>();
 
   constructor(
     private readonly maxItems = 32,
     private readonly dedupeMs = 60_000,
-    private readonly maxAttempts = 5,
+    readonly maxAttempts = 5,
   ) {}
 
   get pending(): number {
@@ -415,10 +435,41 @@ export class AuxiliaryWakeQueue {
     if (this.seen.has(payload.eventId)) return false;
     if (this.items.length >= this.maxItems) this.items.shift();
     this.seen.set(payload.eventId, now + this.dedupeMs);
-    this.items.push({ payload, attempts: 0, nextAttemptAt: now });
+    this.items.push({ payload, attempts: 0, nextAttemptAt: now, receivedAt: now });
     return true;
   }
 
+  /** Pending items, oldest first. Copies; use the methods below to change state. */
+  snapshot(): Array<Readonly<AuxiliaryWakeItem>> {
+    return this.items.map((item) => ({ ...item }));
+  }
+
+  /** Drop delivered (or abandoned) items by event id. */
+  complete(eventIds: Iterable<string>): void {
+    const done = new Set(eventIds);
+    for (let index = this.items.length - 1; index >= 0; index -= 1)
+      if (done.has(this.items[index]!.payload.eventId)) this.items.splice(index, 1);
+  }
+
+  /**
+   * Count one failed batch attempt for these items and schedule the retry.
+   * Items that used every attempt are dropped. Returns the dropped ids.
+   */
+  fail(eventIds: Iterable<string>, now: number, retryBaseMs = 1_000, retryMaxMs = 60_000): string[] {
+    const wanted = new Set(eventIds);
+    const dropped: string[] = [];
+    for (const item of this.items) {
+      if (!wanted.has(item.payload.eventId)) continue;
+      item.attempts += 1;
+      item.nextAttemptAt =
+        now + Math.min(retryMaxMs, retryBaseMs * 2 ** Math.max(0, item.attempts - 1));
+      if (item.attempts >= this.maxAttempts) dropped.push(item.payload.eventId);
+    }
+    this.complete(dropped);
+    return dropped;
+  }
+
+  /** Posts each due item separately. Batched delivery uses {@link dispatchBatchedWake}. */
   async dispatch(
     poster: WakePoster,
     now: number,
@@ -459,6 +510,307 @@ export class AuxiliaryWakeQueue {
 
   private expire(now: number): void {
     for (const [id, until] of this.seen) if (until <= now) this.seen.delete(id);
+  }
+}
+
+export interface BatchedWakeResult extends WakeDispatchResult {
+  /** True while a burst is being held for its quiet period. */
+  waiting: boolean;
+  /** Chat or combat events delivered in a posted wake. */
+  auxiliaryDelivered: number;
+}
+
+/**
+ * Posts at most ONE webhook per call, covering every pending qualifying event:
+ * movement of any token plus queued chat/combat events. A burst is held until
+ * `debounceMs` passes with no new qualifying event, capped at `maxWaitMs` after
+ * the oldest one, so a run of quick drags or messages wakes the AI-GM once.
+ */
+export async function dispatchBatchedWake(
+  service: AiGmDeliveryService,
+  config: WakeWebhookConfig,
+  fetchImpl: typeof fetch,
+  enrich: WakeEnricher = () => Promise.resolve(emptyWakeEnrichment),
+  auxiliary?: AuxiliaryWakeQueue,
+  now: number = service.currentTime(),
+): Promise<BatchedWakeResult> {
+  const result: BatchedWakeResult = {
+    attempted: 0,
+    acknowledged: 0,
+    retryScheduled: 0,
+    deadLettered: 0,
+    filtered: 0,
+    postedGroups: 0,
+    waiting: false,
+    auxiliaryDelivered: 0,
+  };
+  // Filters keep their per-token meaning; filtered moves never reach the webhook.
+  const groups = new Map<string, ReturnType<AiGmDeliveryService["list"]>>();
+  for (const item of service.list(["queued", "retry_wait"])) {
+    const key = `${item.event.sceneId}\0${item.event.tokenId}`;
+    const group = groups.get(key);
+    if (group) group.push(item);
+    else groups.set(key, [item]);
+  }
+  const movement: ReturnType<AiGmDeliveryService["list"]> = [];
+  for (const group of groups.values()) {
+    const reason = movementFilterReason(
+      group.map((item) => item.event),
+      config,
+    );
+    if (!reason) {
+      movement.push(...group);
+      continue;
+    }
+    for (const item of group) {
+      service.acknowledge(item.id, `filtered:${reason}`);
+      result.filtered += 1;
+    }
+  }
+  movement.sort(
+    (left, right) =>
+      left.event.timestamp - right.event.timestamp || left.eventSequence - right.eventSequence,
+  );
+  const extra = auxiliary?.snapshot() ?? [];
+  if (movement.length === 0 && extra.length === 0) return result;
+
+  // Clamp client clocks that run ahead so a skewed timestamp cannot stall delivery.
+  const arrivals = [
+    ...movement.map((item) => Math.min(item.event.timestamp, now)),
+    ...extra.map((item) => item.receivedAt),
+  ];
+  const newest = Math.max(...arrivals);
+  const oldest = Math.min(...arrivals);
+  const readyAt = Math.min(newest + config.debounceMs, oldest + config.maxWaitMs);
+  const retryAt = Math.max(
+    0,
+    ...movement.map((item) => item.nextAttemptAt ?? 0),
+    ...extra.map((item) => item.nextAttemptAt),
+  );
+  const sendAt = Math.max(readyAt, retryAt);
+  if (sendAt > now) {
+    service.deferUntil(
+      movement.map((item) => item.id),
+      sendAt,
+    );
+    result.waiting = true;
+    return result;
+  }
+
+  const extraPayloads = extra.map((item) => item.payload);
+  const extraIds = extraPayloads.map((payload) => payload.eventId);
+  if (movement.length === 0) {
+    const attempt = Math.max(...extra.map((item) => item.attempts)) + 1;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 5_000);
+    let outcome: HostDeliveryResult;
+    try {
+      const latest = extraPayloads.at(-1)!;
+      const enrichment = await enrichQuietly(enrich, latest, controller.signal);
+      outcome = await postWakeWebhook(
+        config,
+        buildBatchWakePayload({ movement: [], extra: extraPayloads, enrichment, attempt }),
+        controller.signal,
+        fetchImpl,
+      );
+    } catch {
+      outcome = {
+        status: "rejected",
+        code: "WAKE_WEBHOOK_UNREACHABLE",
+        message: "Wake webhook request failed.",
+        retryable: true,
+      };
+    } finally {
+      clearTimeout(timer);
+    }
+    result.attempted = 1;
+    if (outcome.status === "acknowledged" || !outcome.retryable) {
+      auxiliary!.complete(extraIds);
+      if (outcome.status === "acknowledged") {
+        result.acknowledged = 1;
+        result.postedGroups = 1;
+        result.auxiliaryDelivered = extraIds.length;
+      } else result.deadLettered = 1;
+    } else {
+      auxiliary!.fail(extraIds, now);
+      result.retryScheduled = 1;
+    }
+    return result;
+  }
+
+  const representative = movement.at(-1)!;
+  const events = movement.map((item) => item.event);
+  const outcome = await service.dispatchDue(
+    {
+      capability: "wake",
+      deliver: async (request, signal) => {
+        const latest = events.at(-1) ?? request.event;
+        let enrichment = emptyWakeEnrichment;
+        try {
+          enrichment = await enrich({
+            userId: latest.userId,
+            sceneId: latest.sceneId,
+            tokenId: latest.tokenId,
+            signal,
+          });
+        } catch (error) {
+          if (signal.aborted || (error instanceof Error && error.name === "AbortError"))
+            throw error;
+        }
+        return postWakeWebhook(
+          config,
+          buildBatchWakePayload({
+            request,
+            movement: events,
+            extra: extraPayloads,
+            enrichment,
+            attempt: request.attempt,
+          }),
+          signal,
+          fetchImpl,
+        );
+      },
+    },
+    1,
+    new Set([representative.id]),
+  );
+  result.attempted += outcome.attempted;
+  result.acknowledged += outcome.acknowledged;
+  result.retryScheduled += outcome.retryScheduled;
+  result.deadLettered += outcome.deadLettered;
+  const state = service.get(representative.id)?.state;
+  if (state === "acknowledged") {
+    result.postedGroups = 1;
+    result.auxiliaryDelivered = extraIds.length;
+    auxiliary?.complete(extraIds);
+    for (const item of movement) {
+      if (item.id === representative.id) continue;
+      try {
+        service.acknowledge(item.id, `coalesced-into:${representative.id}`);
+      } catch {
+        /* The posted item is already durable. A later tick can only retry leftovers. */
+      }
+    }
+  } else if (state === "dead_letter") {
+    // The endpoint refused this wake outright. Do not resend the same chat forever.
+    auxiliary?.complete(extraIds);
+  } else if (outcome.attempted > 0) {
+    auxiliary?.fail(extraIds, now);
+  }
+  return result;
+}
+
+/** One payload for a whole burst. The newest event decides `type` and its headline fields. */
+export function buildBatchWakePayload(input: {
+  request?: HostDeliveryRequest;
+  movement: readonly SequencedMovementEvent[];
+  extra: readonly AiDmWakePayload[];
+  enrichment: WakeEnrichment;
+  attempt: number;
+}): AiDmWakePayload {
+  const timeline: Array<{ at: number; id: string; type: AiDmWakePayload["type"] }> = [
+    ...input.movement.map((event) => ({
+      at: event.timestamp,
+      id: event.eventId,
+      type: "token_movement" as const,
+    })),
+    ...input.extra.map((payload) => ({
+      at: Date.parse(payload.timestamp),
+      id: payload.eventId,
+      type: payload.type,
+    })),
+  ].sort((left, right) => left.at - right.at);
+  const chats = input.extra.filter((payload) => payload.type === "chat_message");
+  const latestExtra = input.extra.at(-1);
+  const latestMove = input.movement.at(-1);
+  const extraIsNewest =
+    latestExtra !== undefined &&
+    (!latestMove || Date.parse(latestExtra.timestamp) >= latestMove.timestamp);
+
+  let payload: AiDmWakePayload;
+  if (input.request && latestMove) {
+    // Path fields describe the most recently moved token only.
+    const sameToken = input.movement.filter(
+      (event) => event.sceneId === latestMove.sceneId && event.tokenId === latestMove.tokenId,
+    );
+    payload = buildMovementWakePayload({
+      request: input.request,
+      events: sameToken,
+      enrichment: input.enrichment,
+    });
+  } else {
+    const latest = latestExtra!;
+    payload = {
+      ...latest,
+      worldId: latest.worldId ?? input.enrichment.worldId,
+      userName: latest.userName ?? input.enrichment.userName,
+      actorId: latest.actorId ?? input.enrichment.actorId,
+    };
+  }
+  if (extraIsNewest && payload.type === "token_movement") {
+    const latest = latestExtra;
+    payload = {
+      ...payload,
+      type: latest.type,
+      sceneId: latest.sceneId ?? payload.sceneId,
+      userId: latest.userId,
+      userName: latest.userName,
+      timestamp: latest.timestamp,
+      eventId: latest.eventId,
+      ...(latest.messageId ? { messageId: latest.messageId } : {}),
+      ...(latest.content ? { content: latest.content } : {}),
+      ...(latest.combatId ? { combatId: latest.combatId } : {}),
+      ...(latest.round !== undefined ? { round: latest.round } : {}),
+      ...(latest.turn !== undefined ? { turn: latest.turn } : {}),
+      ...(latest.combatantId ? { combatantId: latest.combatantId } : {}),
+    };
+  }
+  const latestChat = chats.at(-1);
+  if (latestChat && !payload.messageId) {
+    payload = {
+      ...payload,
+      messageId: latestChat.messageId!,
+      ...(latestChat.content ? { content: latestChat.content } : {}),
+    };
+  }
+  const tokenIds = [...new Set(input.movement.map((event) => event.tokenId))];
+  return {
+    ...payload,
+    attempt: input.attempt,
+    coalescedEventIds: timeline.map((entry) => entry.id).slice(-64),
+    eventTypes: [...new Set(timeline.map((entry) => entry.type))],
+    ...(tokenIds.length ? { tokenIds } : {}),
+    ...(chats.length
+      ? {
+          messageIds: chats.map((chat) => chat.messageId!).slice(-64),
+          chatMessages: chats.slice(-20).map((chat) => ({
+            messageId: chat.messageId!,
+            userId: chat.userId,
+            userName: chat.userName,
+            sceneId: chat.sceneId,
+            timestamp: chat.timestamp,
+            content: chat.content ?? "",
+          })),
+        }
+      : {}),
+  };
+}
+
+async function enrichQuietly(
+  enrich: WakeEnricher,
+  payload: AiDmWakePayload,
+  signal: AbortSignal,
+): Promise<WakeEnrichment> {
+  try {
+    return await enrich({
+      userId: payload.userId ?? "",
+      sceneId: payload.sceneId ?? "",
+      tokenId: payload.tokenId ?? "",
+      signal,
+    });
+  } catch (error) {
+    if (signal.aborted || (error instanceof Error && error.name === "AbortError")) throw error;
+    return emptyWakeEnrichment;
   }
 }
 
@@ -597,6 +949,13 @@ function hookArgs(payload: unknown): unknown[] {
   const args: unknown[] = [];
   for (const value of payload) args.push(value);
   return args;
+}
+
+function documentId(value: unknown): string | undefined {
+  if (typeof value === "string" && value.trim()) return value.trim();
+  const record = asRecord(value);
+  const id = record?.["_id"] ?? record?.["id"];
+  return typeof id === "string" && id.trim() ? id.trim() : undefined;
 }
 
 function lastString(values: readonly unknown[]): string | undefined {

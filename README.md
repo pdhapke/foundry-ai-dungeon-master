@@ -52,14 +52,17 @@ AI_DM_WAKE_WEBHOOK_URL=https://your-dm-host.example/wake
 AI_DM_WAKE_WEBHOOK_SECRET=<receiver secret>
 AI_DM_WAKE_WEBHOOK_HEADER=Authorization
 AI_DM_WAKE_WEBHOOK_SCHEME=Bearer
-AI_DM_WAKE_DEBOUNCE_MS=4000
+AI_DM_WAKE_DEBOUNCE_MS=5000
+AI_DM_WAKE_MAX_WAIT_MS=15000
 AI_DM_WAKE_PLAYERS_ONLY=true
 AI_DM_WAKE_ROOM_CROSSINGS_ONLY=false
-AI_DM_WAKE_CHAT=false
+AI_DM_WAKE_CHAT=true
 AI_DM_WAKE_COMBAT_TURNS=false
 ```
 
-`AI_DM_WAKE_WEBHOOK_HEADER` plus `AI_DM_WAKE_WEBHOOK_SCHEME` build the credential header. The defaults send `Authorization: Bearer <secret>`. For a receiver that wants the raw secret in another header, set `AI_DM_WAKE_WEBHOOK_HEADER=X-Api-Key` and `AI_DM_WAKE_WEBHOOK_SCHEME=` (empty). Leave the URL unset to keep the wake off. `AI_DM_WAKE_PLAYERS_ONLY` defaults to true, so a move is sent when the mover is not the GM client that reported it. `AI_DM_WAKE_ROOM_CROSSINGS_ONLY` defaults to false; set it true to POST movement only when the coalesced path crosses a room Region. Chat and combat turns default off. Chat and combat also need a Local API build that can observe bridge events without consuming them, plus the combat-turn hook from that repo. Movement does not.
+`AI_DM_WAKE_WEBHOOK_HEADER` plus `AI_DM_WAKE_WEBHOOK_SCHEME` build the credential header. The defaults send `Authorization: Bearer <secret>`. For a receiver that wants the raw secret in another header, set `AI_DM_WAKE_WEBHOOK_HEADER=X-Api-Key` and `AI_DM_WAKE_WEBHOOK_SCHEME=` (empty). Leave the URL unset to keep the wake off. `AI_DM_WAKE_PLAYERS_ONLY` defaults to true, so a move is sent when the mover is not the GM client that reported it. `AI_DM_WAKE_ROOM_CROSSINGS_ONLY` defaults to false; set it true to POST movement only when the coalesced path crosses a room Region. Player chat defaults on (`AI_DM_WAKE_CHAT=true`); messages authored by a GM or assistant GM account, including the AI-GM's own narration, never wake. Combat turns default off. Chat and combat need a Local API build whose extension context provides `observeEvent` (non-consuming bridge event observers), plus the combat-turn hook from that repo for combat. Movement does not.
+
+All qualifying events are batched into a single POST: the queue waits until `AI_DM_WAKE_DEBOUNCE_MS` (default 5000) passes with no new movement, chat, or combat event, but never longer than `AI_DM_WAKE_MAX_WAIT_MS` (default 15000) after the oldest pending event. The newest event decides `type` and the headline fields (`messageId`/`userId` for chat, token path fields for movement). `coalescedEventIds` lists every event in the batch in order (chat entries as `chat:<messageId>`), and `eventTypes`, `tokenIds`, `messageIds`, and `chatMessages` summarize it.
 
 Reload steps:
 
